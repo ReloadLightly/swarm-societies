@@ -2,6 +2,10 @@
 
 An experimental platform for interacting societies whose member policies and executable institutions can evolve independently. This first increment implements a resource ecology with individual interests, society welfare, and effects on rival societies measured separately.
 
+## Consumption-focused follow-up
+
+The next experiment is implemented as a separate, resumable comparison: coevolution versus member-only search under fixed initial institutions, with no direct infrastructure reward, variable episode length and drought timing, and exact matched no-drought controls. The first campaign is a 60-minute matched pilot (30 minutes per arm); it is not replicated evidence. [Protocol](docs/protocol-consumption-v2.md), [run/status/resume commands](docs/consumption-v2-run.md), and [current work record](PROGRESS.md) describe its execution. The first experiment and results below remain unchanged.
+
 ## Research question
 
 Can inherited changes to member behavior and institutional programs improve collective outcomes and response to a resource disturbance when collaborators and competitors also change?

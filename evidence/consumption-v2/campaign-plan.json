@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "study": "consumption-v2",
+  "created_utc": "2026-10-05T04:44:41.001166+00:00",
+  "model_route": {
+    "model": "gpt-6-astra",
+    "reasoning_effort": "xhigh",
+    "service_tier": "fast",
+    "authentication": "chatgpt",
+    "shinka_revision": "9912af12d423504b8d580f4179fd15f5f88b8c50",
+    "paid_api_allowed": false,
+    "embedding_model": null,
+    "judging_model": null
+  },
+  "replicates_per_condition": 1,
+  "budget_minutes_per_run": 30.0,
+  "total_search_minutes": 60.0,
+  "interpretation": "Exploratory matched pilot; no replicated search claim",
+  "protocol": "/home/roland/actir/swarm-societies/docs/protocol-consumption-v2.md",
+  "protocol_sha256": "0c639b991c33e07c75139127926c3477353b9f990d2a1125e0800c353fb73de3",
+  "fresh_cases": "/home/roland/actir/swarm-societies/runs/consumption-v2/protected_fresh_cases.json",
+  "fresh_cases_sha256": "cab4c4c4838d7ec8a8eaf45a644d4e1208f1087abfc55158b2d34a3f586235ab",
+  "runs": [
+    {
+      "id": "pair-01-fixed_institution",
+      "condition": "fixed_institution",
+      "replicate": 1,
+      "run_dir": "/home/roland/actir/swarm-societies/runs/consumption-v2/pair-01-fixed_institution",
+      "context": "/home/roland/actir/swarm-societies/runs/consumption-v2/pair-01-fixed_institution/evolution_context.json",
+      "initial_program": "/home/roland/actir/swarm-societies/runs/consumption-v2/pair-01-fixed_institution/programs/8715737f934f9996d1fc9ae138807849cad21b54ee85918bfc2ef0bb1a01625d.py",
+      "task_prompt": "/home/roland/actir/swarm-societies/docs/evolution-prompt-consumption-v2.md",
+      "evaluator": "/home/roland/actir/swarm-societies/scripts/evaluate_consumption_candidate.py",
+      "budget_minutes": 30.0,
+      "search_seed": 1000003
+    },
+    {
+      "id": "pair-01-coevolution",
+      "condition": "coevolution",
+      "replicate": 1,
+      "run_dir": "/home/roland/actir/swarm-societies/runs/consumption-v2/pair-01-coevolution",
+      "context": "/home/roland/actir/swarm-societies/runs/consumption-v2/pair-01-coevolution/evolution_context.json",
+      "initial_program": "/home/roland/actir/swarm-societies/runs/consumption-v2/pair-01-coevolution/programs/8715737f934f9996d1fc9ae138807849cad21b54ee85918bfc2ef0bb1a01625d.py",
+      "task_prompt": "/home/roland/actir/swarm-societies/docs/evolution-prompt-consumption-v2.md",
+      "evaluator": "/home/roland/actir/swarm-societies/scripts/evaluate_consumption_candidate.py",
+      "budget_minutes": 30.0,
+      "search_seed": 1000002
+    }
+  ],
+  "postprocess_command": [
+    "/home/roland/actir/swarm-societies/.venv/bin/python",
+    "/home/roland/actir/swarm-societies/scripts/evaluate_consumption_study.py",
+    "--plan",
+    "/home/roland/actir/swarm-societies/runs/consumption-v2/campaign.json",
+    "--workers",
+    "2"
+  ]
+}

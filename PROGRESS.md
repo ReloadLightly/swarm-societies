@@ -1,30 +1,52 @@
-# Work record
+# Active work record
 
-Objective: implement, execute, analyze, visualize and publish the first complete experimental increment of Swarm Societies. No additional environment or unrelated infrastructure is in scope.
+Active objective: run the consumption-focused follow-up to the completed first
+Swarm Societies experiment. User authorized starting it on 2026-10-05.
 
-Repository: `/home/roland/actir/swarm-societies`, origin `https://github.com/ReloadLightly/swarm-societies.git`. Initially empty unborn `main`, with no existing work or applicable repository instructions.
+**Running:** `runs/consumption-v2/campaign.json`, launched at
+2026-10-05 04:44:57 UTC (06:44:57 Europe/Berlin). This is a matched pilot with
+one run per condition, 30 active search minutes each, 60 minutes total.
+The fixed-institution arm runs first; coevolution is queued next. The initial
+native Shinka evaluation is valid and subscription inference is starting.
+Exact live state is in `campaign_checkpoint.json`, not this static record.
 
-Implementation complete: protected material-accounted ecology; configurable societies and members; private state and shared institutional memory; separately inherited member and institutional programs; actual upstream ShinkaEvolve/native Headless integration; subscription-only execution; protected fresh-case evaluation; source/lineage archive; replay and scientific figures.
+Question: does institutional coevolution improve consumption welfare compared
+with equal-budget member-only search under fixed institutions? V2 removes the
+direct infrastructure bonus, varies horizon (48/60/72 ticks) and drought timing,
+and evaluates exact matched no-drought counterfactuals. Both arms start from the
+same original mixed population. Private utility remains separately selected
+and measured. One paired pilot does not establish a replicated search claim.
 
-Search complete: exactly 3,600 cumulative active seconds, `gpt-6-astra`, `xhigh`, `fast`, ChatGPT authentication. Nine unique evaluator programs: eight valid including the initial program and one invalid mutation. Ten native database rows additionally include one documented infrastructure failure. Six replacements accepted: three members and three institutions. One valid mutation tied. Nine completed model calls reported 257,830 input / 131,185 output tokens; two interrupted calls have unknown usage. Peak sampled process-tree RSS 438.4 MiB. Terminal audit confirms all processes stopped and SQLite integrity passed.
+Frozen protocol: `docs/protocol-consumption-v2.md`. Code, prompt, source and
+scenario definitions are hashed before search. Candidate feedback contains
+aggregate objectives/outcomes; exact schedules and fresh cases are excluded.
+The route remains actual upstream ShinkaEvolve through ChatGPT-authenticated
+Codex, `gpt-6-astra`, `xhigh`, `fast`. No paid API or auxiliary inference.
 
-Fresh results complete: five conditions × 108 common cases. Descendant post-drought welfare .92287 versus initial .86098; individual utility 50.82 versus 56.24; post shortfall 1.162 versus .770; outward harm 0 versus 37.78. The welfare difference decomposes into infrastructure bonus +.06679 and consumption/shortfall contribution −.00490. Higher encoded welfare does not show improved consumption resilience. Evolved institutions collect more tax and enforce raid restrictions; voluntary contributions decline and no intersociety aid emerged. One exploratory search run only.
+Validation: all 46 tests passed; frozen first-experiment evidence still verifies
+and its replay regenerates exactly. V2 material dynamics match v1; no-drought
+pairs preserve exogenous draws. The v2 search benchmark measured 3.63 episodes/s
+and 21.9 MiB peak RSS. Compact launch evidence: `evidence/consumption-v2/`.
 
-Scientific checks: frozen simulator/runtime/protocol hashes, archived source dependencies, common cases, exact means, material conservation, selection objectives and archived-source replay verified. The 20-test repository suite passed; the upstream recovery suite passed 40 tests. Final plots and README report actual outcomes and limitations.
-
-Work package: implementation, search, fresh evaluation, analysis and visual inspection are complete. Publication target is origin/main; the committed repository contains the scientific record and reproduction commands. The next proposed experiment removes the direct infrastructure bonus, randomizes disturbance timing/horizon, and compares multilevel versus fixed-institution search across independent runs. It has not been started.
-
-Full resumable checkpoints remain locally in ignored `runs/first/`: `programs.sqlite`, `evolution_context.json`, `budget_checkpoint.json`, exact settings, program snapshots, prompts and call logs. Upstream checkouts are ignored `.cache/upstream/`. Compact reproducible evidence is in `evidence/experiment/`; publication figures are in `figures/`.
-
-Resume command:
+Next automatic step: after both search budgets finish, the supervisor runs the
+protected fresh panel for the initial population and both final populations
+(108 drought cases plus 108 no-drought counterparts each). Results appear in
+`runs/consumption-v2/fresh/summary.json`. Next interactive step: inspect completed
+search/fresh outcomes, analyze inherited changes, render the follow-up figures
+and publish its scientific results. Do not alter the frozen study mid-run.
 
 ```bash
-.venv/bin/python scripts/run_evolution.py --run-dir runs/first --budget-minutes 60 --resume
+.venv/bin/python scripts/run_consumption_study.py --plan runs/consumption-v2/campaign.json --status
+.venv/bin/python scripts/run_consumption_study.py --plan runs/consumption-v2/campaign.json --resume
 ```
 
-The allowance is exhausted, so this command is now a no-op. Replay needs no inference and no local checkpoints:
+Resume only after interruption; a running campaign holds its lock. Per-arm
+budgets cannot be extended on resume. Full native archives, ecological state,
+source snapshots, model traces and accounting remain in ignored
+`runs/consumption-v2/pair-01-*/`. See `docs/consumption-v2-run.md` for all commands.
 
-```bash
-.venv/bin/python -m swarm_societies.experiment replay --run-dir evidence/experiment --seed 424242 --output /tmp/swarm-replay.json
-.venv/bin/python scripts/verify_evidence.py --require-final
-```
+The first work package was published as commit
+`0073a0d26aeb1e8b40ab65535d47050c42feb72a`. Its evidence/figures remain unchanged.
+Its 60-minute search retained three member and three institutional changes;
+higher welfare came from the infrastructure bonus while consumption shortfall
+worsened. Full original checkpoints remain in ignored `runs/first/`, exhausted.

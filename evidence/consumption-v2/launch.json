@@ -1,0 +1,49 @@
+{
+  "checked_utc": "2026-10-05T04:45:53.941662+00:00",
+  "status_at_check": "running",
+  "active_run_at_check": "pair-01-fixed_institution",
+  "search_budget_minutes": 60.0,
+  "runs": [
+    {
+      "id": "pair-01-fixed_institution",
+      "condition": "fixed_institution",
+      "budget_minutes": 30.0,
+      "search_seed": 1000003
+    },
+    {
+      "id": "pair-01-coevolution",
+      "condition": "coevolution",
+      "budget_minutes": 30.0,
+      "search_seed": 1000002
+    }
+  ],
+  "initial_native_evaluation_valid": true,
+  "actual_route": {
+    "authentication": "chatgpt",
+    "model": "gpt-6-astra",
+    "reasoning_effort": "xhigh",
+    "service_tier": "fast",
+    "shinka_revision": "9912af12d423504b8d580f4179fd15f5f88b8c50",
+    "embedding_model": null,
+    "search_rng_seed": 1000003
+  },
+  "frozen_source_hashes": {
+    "swarm_societies/ecology_consumption_v2.py": "82c3ffe2e9431541e6e0cfbda6c97bccadfe87518bd3d17ff7661434d84e2344",
+    "swarm_societies/consumption_study.py": "e7a11bf67d003606f17090274f2f282a1cff24f6f34ffe162518ac24e3cf972f",
+    "swarm_societies/consumption_evaluation.py": "30e7d268253655d0bd67257dd8861598ab8479d22a27500b00a71bcd3a01db91",
+    "swarm_societies/candidate.py": "0ff988ac0a8b05ca0919bb67267e6645a232fb49530cfbd51122c6b8d1dfa89b",
+    "swarm_societies/evaluation.py": "51878f3e30722a58744f65ac2d03c4fc5f61648d785db7d96a39bcd89ef6a9ee",
+    "docs/protocol-consumption-v2.md": "0c639b991c33e07c75139127926c3477353b9f990d2a1125e0800c353fb73de3",
+    "docs/evolution-prompt-consumption-v2.md": "4215675e4f53283488f83c97a264cdc6bc41ada0d5d2158184c1df88997b36f6",
+    "scripts/evaluate_consumption_candidate.py": "0ed939f164983f11248ba93ede67bf8af0ce8f170b20eef0590ee8dccc42d629"
+  },
+  "campaign_plan_sha256": "8c9d7a5d4afe794c28b8b8e1d79ebcfe784b23dc46f50bf0568802b56897c638",
+  "repository_tests": {
+    "passed": 46,
+    "elapsed_seconds": 8.17
+  },
+  "first_experiment_verification": "passed; archived replay digest remains 7761fb7e2bc24d1bc52149d67b99ce73d5f2687206044778d9b65fa061fd31c3",
+  "checkpoint_location": "runs/consumption-v2/",
+  "automatic_fresh_output": "runs/consumption-v2/fresh/summary.json",
+  "note": "Launch evidence only, not completed evolutionary or fresh results. The full local campaign is detached and resumable."
+}
