@@ -1,0 +1,389 @@
+{
+  "audited_utc": "2026-10-05T04:17:39.300056+00:00",
+  "status": "passed",
+  "budget": {
+    "budget_seconds": 3600.0,
+    "cpu_measurement_note": "Peak sampled sum of live process CPU times; excludes exited children",
+    "elapsed_search_seconds": 3600.0,
+    "evaluated_candidates": 10,
+    "invalid_candidates": 2,
+    "observed_process_tree_cpu_seconds": 33.72,
+    "peak_process_tree_rss_bytes": 459743232,
+    "remaining_search_seconds": 0,
+    "status": "budget_exhausted",
+    "supervisor_create_time": 1791170630.85,
+    "supervisor_pid": 909850,
+    "updated_utc": "2026-10-05T04:17:16.707013+00:00",
+    "valid_candidates": 8,
+    "worker_pid": 909897,
+    "worker_returncode": null
+  },
+  "first_supervisor_utc": "2026-10-05T03:11:57.722070+00:00",
+  "cutoff_utc": "2026-10-05T04:17:16.707013+00:00",
+  "time_basis": "3,600 cumulative active seconds measured using time.monotonic across two search segments. UTC timestamps are also recorded; their longer interval includes restart downtime and observed differences between the clock sources.",
+  "supervisor_process_ids": [
+    905376,
+    909850
+  ],
+  "pre_cutoff_process_group_verified": true,
+  "terminal_process_checks": [
+    {
+      "pid": 909850,
+      "exists": false,
+      "running_executable": false
+    },
+    {
+      "pid": 909897,
+      "exists": false,
+      "running_executable": false
+    },
+    {
+      "pid": 933997,
+      "exists": false,
+      "running_executable": false
+    },
+    {
+      "pid": 934058,
+      "exists": false,
+      "running_executable": false
+    },
+    {
+      "pid": 934065,
+      "exists": false,
+      "running_executable": false
+    }
+  ],
+  "remaining_running_worker_group": [],
+  "sqlite_integrity_check": [
+    "ok"
+  ],
+  "counts": {
+    "shinka_program_rows": 10,
+    "shinka_valid_rows": 8,
+    "shinka_invalid_rows": 2,
+    "actual_evaluator_jobs": 9,
+    "valid_evaluator_jobs": 8,
+    "invalid_evaluator_jobs": 1,
+    "unique_evaluated_programs": 9,
+    "completed_evaluated_mutations": 8,
+    "accepted_member_updates": 3,
+    "accepted_institution_updates": 3,
+    "accepted_ecological_updates": 6
+  },
+  "programs": [
+    {
+      "generation": 0,
+      "program_id": "fc52d94c-c6c9-41fe-a5bf-d7cb4aa75763",
+      "parent_id": null,
+      "shinka_correct": true,
+      "search_score": 1.0,
+      "evaluated_in_ecology": true,
+      "evaluator_valid": true,
+      "retained": false,
+      "unit": "initial",
+      "evaluation_error": null,
+      "classification": "initial",
+      "patch_name": "initial_program"
+    },
+    {
+      "generation": 1,
+      "program_id": "70d2f9b1-d410-4662-b9a0-937cc4a546cd",
+      "parent_id": "fc52d94c-c6c9-41fe-a5bf-d7cb4aa75763",
+      "shinka_correct": false,
+      "search_score": 0.0,
+      "evaluated_in_ecology": false,
+      "evaluator_valid": null,
+      "retained": null,
+      "unit": null,
+      "evaluation_error": null,
+      "classification": "pre-evaluator infrastructure failure",
+      "patch_name": "buffered_capital_controller"
+    },
+    {
+      "generation": 3,
+      "program_id": "6fc7fd36-1ee0-48b7-9595-bf767df8de08",
+      "parent_id": "fc52d94c-c6c9-41fe-a5bf-d7cb4aa75763",
+      "shinka_correct": true,
+      "search_score": 1.1301772885076011,
+      "evaluated_in_ecology": true,
+      "evaluator_valid": true,
+      "retained": true,
+      "unit": "member",
+      "evaluation_error": null,
+      "classification": "valid evaluated proposal",
+      "patch_name": "buffered_growth"
+    },
+    {
+      "generation": 4,
+      "program_id": "f19ae754-709e-4fcf-b698-cd725eb10c6e",
+      "parent_id": "6fc7fd36-1ee0-48b7-9595-bf767df8de08",
+      "shinka_correct": false,
+      "search_score": -1000000.0,
+      "evaluated_in_ecology": true,
+      "evaluator_valid": false,
+      "retained": false,
+      "unit": "institution",
+      "evaluation_error": "CandidateError: candidate execution line budget exhausted",
+      "classification": "invalid evaluated proposal",
+      "patch_name": "runway_scenario_control"
+    },
+    {
+      "generation": 5,
+      "program_id": "ae1ce289-e03f-449f-964b-17c513d53a18",
+      "parent_id": "6fc7fd36-1ee0-48b7-9595-bf767df8de08",
+      "shinka_correct": true,
+      "search_score": 1.2165538673801237,
+      "evaluated_in_ecology": true,
+      "evaluator_valid": true,
+      "retained": true,
+      "unit": "member",
+      "evaluation_error": null,
+      "classification": "valid evaluated proposal",
+      "patch_name": "buffered_growth"
+    },
+    {
+      "generation": 6,
+      "program_id": "f54e7db3-d027-4254-abc0-9551507ffff2",
+      "parent_id": "ae1ce289-e03f-449f-964b-17c513d53a18",
+      "shinka_correct": true,
+      "search_score": 1.0611586664947672,
+      "evaluated_in_ecology": true,
+      "evaluator_valid": true,
+      "retained": true,
+      "unit": "institution",
+      "evaluation_error": null,
+      "classification": "valid evaluated proposal",
+      "patch_name": "risk_scaled_liquidity"
+    },
+    {
+      "generation": 7,
+      "program_id": "1d62418b-ae9d-41ce-a855-1b9b0578d650",
+      "parent_id": "ae1ce289-e03f-449f-964b-17c513d53a18",
+      "shinka_correct": true,
+      "search_score": 1.0596240906798127,
+      "evaluated_in_ecology": true,
+      "evaluator_valid": true,
+      "retained": true,
+      "unit": "member",
+      "evaluation_error": null,
+      "classification": "valid evaluated proposal",
+      "patch_name": "queue_insurance_auction"
+    },
+    {
+      "generation": 8,
+      "program_id": "d90378bb-11ca-41e2-b4af-35ba79f6e669",
+      "parent_id": "ae1ce289-e03f-449f-964b-17c513d53a18",
+      "shinka_correct": true,
+      "search_score": 1.0526385611762599,
+      "evaluated_in_ecology": true,
+      "evaluator_valid": true,
+      "retained": true,
+      "unit": "institution",
+      "evaluation_error": null,
+      "classification": "valid evaluated proposal",
+      "patch_name": "depletion_scenario_control"
+    },
+    {
+      "generation": 9,
+      "program_id": "6ad11409-2ae6-43a7-ab62-4d5d3ee048cc",
+      "parent_id": "1d62418b-ae9d-41ce-a855-1b9b0578d650",
+      "shinka_correct": true,
+      "search_score": 1.0,
+      "evaluated_in_ecology": true,
+      "evaluator_valid": true,
+      "retained": false,
+      "unit": "member",
+      "evaluation_error": null,
+      "classification": "valid evaluated proposal",
+      "patch_name": "learned_patch_opportunity_cost"
+    },
+    {
+      "generation": 10,
+      "program_id": "c45f3233-cc45-4d15-a36e-0172c79b5ded",
+      "parent_id": "6fc7fd36-1ee0-48b7-9595-bf767df8de08",
+      "shinka_correct": true,
+      "search_score": 1.0795811699017328,
+      "evaluated_in_ecology": true,
+      "evaluator_valid": true,
+      "retained": true,
+      "unit": "institution",
+      "evaluation_error": null,
+      "classification": "valid evaluated proposal",
+      "patch_name": "adaptive_surplus_controller"
+    }
+  ],
+  "persisted_generations": [
+    0,
+    1,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "directories_without_persisted_program": [
+    2,
+    11
+  ],
+  "generation_events": [],
+  "attempt_events": [],
+  "inference_usage": {
+    "completed_calls": 9,
+    "input_tokens": 257830,
+    "cached_input_tokens": 22656,
+    "output_tokens": 131185,
+    "reasoning_output_tokens": 99926
+  },
+  "calls": [
+    {
+      "file": "prompt_85d45f2a4d0741e6bf336aff6a291cd3.jsonl",
+      "completed_turns": 1,
+      "partial_or_unknown_usage": false,
+      "event_types": [
+        "thread.started",
+        "item.completed",
+        "turn.started",
+        "item.completed",
+        "turn.completed"
+      ]
+    },
+    {
+      "file": "prompt_8ea948e94a474ff299dda56be3db7178.jsonl",
+      "completed_turns": 0,
+      "partial_or_unknown_usage": true,
+      "event_types": [
+        "thread.started",
+        "item.completed",
+        "turn.started"
+      ]
+    },
+    {
+      "file": "prompt_8f9e688606204645b580123bca0dae8f.jsonl",
+      "completed_turns": 1,
+      "partial_or_unknown_usage": false,
+      "event_types": [
+        "thread.started",
+        "item.completed",
+        "turn.started",
+        "item.completed",
+        "turn.completed"
+      ]
+    },
+    {
+      "file": "prompt_928a1d0799e148fcb082b57189861899.jsonl",
+      "completed_turns": 1,
+      "partial_or_unknown_usage": false,
+      "event_types": [
+        "thread.started",
+        "item.completed",
+        "turn.started",
+        "item.completed",
+        "turn.completed"
+      ]
+    },
+    {
+      "file": "prompt_9cd26944c5fb4b47b08d2d7b3be9d4b6.jsonl",
+      "completed_turns": 1,
+      "partial_or_unknown_usage": false,
+      "event_types": [
+        "thread.started",
+        "item.completed",
+        "turn.started",
+        "item.completed",
+        "turn.completed"
+      ]
+    },
+    {
+      "file": "prompt_a0bb37bdef77417caf1da3e5d280d8f8.jsonl",
+      "completed_turns": 1,
+      "partial_or_unknown_usage": false,
+      "event_types": [
+        "thread.started",
+        "item.completed",
+        "turn.started",
+        "item.completed",
+        "turn.completed"
+      ]
+    },
+    {
+      "file": "prompt_ae17ac8ebd534cfe9ce640475605115a.jsonl",
+      "completed_turns": 1,
+      "partial_or_unknown_usage": false,
+      "event_types": [
+        "thread.started",
+        "item.completed",
+        "turn.started",
+        "item.completed",
+        "turn.completed"
+      ]
+    },
+    {
+      "file": "prompt_b664e9038fce48a09d42ed7cc9bae0be.jsonl",
+      "completed_turns": 0,
+      "partial_or_unknown_usage": true,
+      "event_types": [
+        "thread.started",
+        "item.completed",
+        "turn.started"
+      ]
+    },
+    {
+      "file": "prompt_dd7e7c816616409e9c242dd4908bef39.jsonl",
+      "completed_turns": 1,
+      "partial_or_unknown_usage": false,
+      "event_types": [
+        "thread.started",
+        "item.completed",
+        "turn.started",
+        "item.completed",
+        "turn.completed"
+      ]
+    },
+    {
+      "file": "prompt_e0f788ee391049f1b6f461bd4f961351.jsonl",
+      "completed_turns": 1,
+      "partial_or_unknown_usage": false,
+      "event_types": [
+        "thread.started",
+        "item.completed",
+        "turn.started",
+        "item.completed",
+        "turn.completed"
+      ]
+    },
+    {
+      "file": "prompt_ffe58042785e403a95f2ea0b0bd97e93.jsonl",
+      "completed_turns": 1,
+      "partial_or_unknown_usage": false,
+      "event_types": [
+        "thread.started",
+        "item.completed",
+        "turn.started",
+        "item.completed",
+        "turn.completed"
+      ]
+    }
+  ],
+  "unknown_usage_calls": 2,
+  "usage_note": "Only completed turn events expose usage. Interrupted calls can consume subscription resources; unknown usage is not zero. Probe usage is separately recorded and excluded from evolutionary-search totals.",
+  "selection_changed_by_audit": false,
+  "utc_timestamp_span_seconds": 3918.984943,
+  "observed_mutation_models": [
+    "headless/codex@gpt-6-astra?effort=xhigh"
+  ],
+  "verified_route_settings": {
+    "authentication": "chatgpt",
+    "model": "gpt-6-astra",
+    "reasoning_effort": "xhigh",
+    "service_tier": "fast",
+    "embedding_model": null,
+    "meta_rec_interval": null,
+    "novelty_llm_models": null,
+    "effective_inference_temperature": "not exposed or forwarded by Codex CLI",
+    "search_rng_seed": null
+  },
+  "route_unchanged": true
+}

@@ -1,0 +1,40 @@
+{
+  "incident": "gen1 evaluator killed by pipeline timeout before evaluation",
+  "cause": "Upstream AsyncRunningJob.start_time is proposal_started_at; LocalJobConfig.time therefore includes inference. Inference lasted 326.31 s, exceeding the original 180 s timeout.",
+  "classification": "infrastructure failure, not a scientifically invalid policy",
+  "correction": "Set LocalJobConfig.time=00:20:00; retain evaluator CPU limit120s and cumulative search budget3600s. Preserve original DB record with score0/correctfalse; do not retrofit selection.",
+  "evidence_log_lines": [
+    "2026-10-05 05:17:43 - shinka.launch.scheduler - WARNING - Process 908811 exceeded timeout of 00:03:00. Killing. => Gen. 1",
+    "2026-10-05 05:17:43 - shinka.launch.local - INFO - Process 908811 completed with return code: -9",
+    "2026-10-05 05:17:43 - shinka.utils.general - WARNING - Metrics file not found at /home/roland/actir/swarm-societies/runs/first/gen_1/results/metrics.json"
+  ],
+  "interruption_checkpoint": {
+    "budget_seconds": 3600.0,
+    "cpu_measurement_note": "Peak sampled sum of live process CPU times; excludes exited children",
+    "elapsed_search_seconds": 396.16379325199523,
+    "evaluated_candidates": 0,
+    "invalid_candidates": 0,
+    "observed_process_tree_cpu_seconds": 24.200000000000003,
+    "peak_process_tree_rss_bytes": 456220672,
+    "remaining_search_seconds": 3203.8362067480048,
+    "status": "interrupted",
+    "supervisor_create_time": 1791169950.27,
+    "supervisor_pid": 905376,
+    "updated_utc": "2026-10-05T03:19:06.942616+00:00",
+    "valid_candidates": 0,
+    "worker_pid": 905449,
+    "worker_returncode": null
+  },
+  "first_completed_inference_elapsed_seconds": 300.01976041200396,
+  "diagnostic": "Separate copied-context replay showed gen1 candidate was valid and would improve selected member; diagnostic not admitted to search population or reported as search evidence.",
+  "interrupted_generation": 2,
+  "interrupted_inference_usage": "unknown; no completed turn usage",
+  "upstream_recovery_tests": "40 passed in 12.52 s; offline host-side suite",
+  "seed_only_smoke": "Actual engine completed gen0 without inference; resume cumulative time 21.207 s with ecological evaluation deduplicated. Native engine reinserts the seed when only gen0 exists.",
+  "process_group_verification": {
+    "all_worker_descendants_shared_group": true,
+    "old_worker_and_old_inference_confirmed_dead": true
+  },
+  "resume_progress": "Restored 2 existing database rows; skipped abandoned generation 2 directory; started a new generation 3 proposal.",
+  "bridge_and_budget_tests": "7 passed: completed/failed JSONL accounting, API-key removal, exhausted-resume guard and supervisor file lock"
+}

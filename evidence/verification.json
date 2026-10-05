@@ -1,0 +1,35 @@
+{
+  "checked_utc": "2026-10-05T04:26:40.716133+00:00",
+  "repository_tests": {
+    "command": ".venv/bin/python -m pytest -q",
+    "exit_code": 0,
+    "passed": 20,
+    "elapsed_seconds": 7.05
+  },
+  "evidence_verification": {
+    "command": ".venv/bin/python scripts/verify_evidence.py --require-final",
+    "exit_code": 0,
+    "status": "passed",
+    "python": "3.13.5",
+    "checks": [
+      "all archived source checksums and population dependencies",
+      "frozen protocol, simulator, and candidate runtime hashes",
+      "disjoint seeds, complete common-case crossing, exact treatment means, and member outcomes",
+      "paired differences calculated across environment-seed clusters",
+      "search accounting and archived lineage dependencies",
+      "exact deterministic replay regenerated from archived programs and recorded seed"
+    ],
+    "source_programs": 12,
+    "fresh_cases_per_treatment": 108,
+    "treatments": 5,
+    "replay_digest": "7761fb7e2bc24d1bc52149d67b99ce73d5f2687206044778d9b65fa061fd31c3"
+  },
+  "search_effects_verification": {
+    "command": ".venv/bin/python scripts/analyze_search.py --run-dir evidence/experiment --output evidence/experiment/search-effects.json",
+    "exit_code": 0,
+    "valid_mutant_comparisons_replayed": 7,
+    "accepted": 6,
+    "objectives_match_original_evaluations": true
+  },
+  "visual_review": "See figures/render-review.json for the separate final render audit."
+}

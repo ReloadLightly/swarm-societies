@@ -1,0 +1,70 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-10-05T04:31:36.674758+00:00",
+  "source_hashes": {
+    "evidence/experiment/summary.json": "d0739f9428702e6d1d1804b211a27ded017042499d54ce99074146ffb16b96ea",
+    "swarm_societies/visualize.py": "1cedaca8dbbe70aef2b763b7e4e9b67720c6a3783f6dcfe91971b6a4b141dae0",
+    "evidence/experiment/replay.json": "e5e7f6f1a4573b0cbc2ddfb7174127049b3b0b7c76b8bf422f511ea62209f253"
+  },
+  "source_hashes_verified": true,
+  "experiment_inputs_modified": false,
+  "manifest_sha256": "7bafc561a655d52a272b348fcefc54bcb2f3b55199c2cc507d21785e21203851",
+  "inspected_pngs": {
+    "cooperation-conflict.png": "7fa200cfa3917cbbdd4ca57b710f57f5801f823ad909f9872e2cfc4e7d7bae95",
+    "disturbance-response.png": "fd2504135b4ad0658c4f2f6c7d3821da96a7b3fe8248a9ba790bc455e0fde6c2",
+    "ecology-replay.png": "da6c799ca8d5f89d6d1d348745bf8948e4c5bdb95f1dc4c74c6b7c48f6ae16db",
+    "evolution-performance.png": "79afbe0e040c695a117d8a9156ac7e083811f5be31f222d0a7f00c4727cc133b",
+    "program-lineages.png": "1e48ee0bfaec151f26f7c03b4cabc9801f4188249796fa42f3717f2053c04a66",
+    "results-table.png": "e28d85f6f86013ee0cde1f824b217a9a80d413360360a525c056d89e50cc3737",
+    "welfare-decomposition.png": "72944e38f5cafb8108d4b39a310cfbb83d5d4d91923e300e6c40668f5d175906"
+  },
+  "all_lineage_pages_inspected": [
+    "program-lineages.png"
+  ],
+  "lineage_nodes_shown": 12,
+  "animation": {
+    "sha256": "9e6c5ae3d8128c8916c70cef7fda9088558da3a4d607d819c7c999e08fc5979a",
+    "recorded_frames": 60,
+    "rendered_frames": 60,
+    "dimensions": [
+      990,
+      594
+    ],
+    "frames_inspected": [
+      0,
+      29,
+      30,
+      59
+    ],
+    "disturbance_tick": 30
+  },
+  "deterministic_reproduction": {
+    "passed": true,
+    "compared_file_count": 26,
+    "artifact_count": 24,
+    "temporary_output": "/tmp/swarm-final-figure-reproduction"
+  },
+  "scientific_checks": {
+    "fresh_conditions": 5,
+    "common_cases_per_condition": 108,
+    "valid_search_observations": 8,
+    "retained_update_markers": 6,
+    "max_absolute_welfare_formula_error": 1.1102230246251565e-16
+  },
+  "visual_checks": [
+    "All seven final PNG designs inspected; readable labels and opaque warm-white backgrounds",
+    "Search marker shapes identify update units; colors identify societies; retained updates have outline diamonds",
+    "Search points are unconnected because targets and ecological contexts change",
+    "Infrastructure failures and invalid programs have distinct markers and labels; neither receives a plotted ecological gain",
+    "Full twelve-node donor ancestry is shown; named dashed references distinguish ecological comparison incumbents",
+    "Welfare decomposition exposes the infrastructure bonus and unmet consumption separately",
+    "Pooling explicitly includes voluntary contributions and compulsory tax; material measures are cumulative episode units",
+    "Final ecological population and disturbance boundary are identified in the replay; material arrows follow actual transfers",
+    "Results table retains four welfare decimals and two private-utility decimals; full precision remains in CSV/JSON",
+    "No search, candidate selection, simulator evaluation, or fresh-case inference is performed by rendering"
+  ],
+  "limitations": [
+    "One exploratory evolutionary run; environment cases are not search replications",
+    "Replay positions are schematic; illustrations are not fresh-case population means"
+  ]
+}
