@@ -1,0 +1,54 @@
+{
+  "checked_utc": "2026-10-05T08:40:22.866170+00:00",
+  "campaign_status": "completed",
+  "completed_utc": "2026-10-05T05:51:42.504807+00:00",
+  "active_search_seconds": 3600.0,
+  "fresh_cases_per_population": 108,
+  "fresh_rollouts_total": 648,
+  "replicates_per_condition": 1,
+  "checks": [
+    "frozen campaign and run input contracts match",
+    "both SQLite integrity checks ok",
+    "all fresh means reproduce raw case rows",
+    "108 distinct paired cases per population",
+    "material conservation residual below 1e-7",
+    "drought/no-drought pre-disturbance welfare exactly equal",
+    "host audit found all recorded process IDs and run process groups stopped"
+  ],
+  "arms": {
+    "fixed_institution": {
+      "evaluated_programs_including_seed": 7,
+      "valid": 7,
+      "invalid": 0,
+      "accepted_members": 6,
+      "accepted_institutions": 0,
+      "active_search_seconds": 1800.0,
+      "peak_process_tree_rss_bytes": 448487424
+    },
+    "coevolution": {
+      "evaluated_programs_including_seed": 6,
+      "valid": 6,
+      "invalid": 0,
+      "accepted_members": 3,
+      "accepted_institutions": 2,
+      "active_search_seconds": 1800.0,
+      "peak_process_tree_rss_bytes": 447705088
+    }
+  },
+  "usage": {
+    "completed_calls": 11,
+    "input_tokens": 208730,
+    "cached_input_tokens": 60416,
+    "output_tokens": 144443,
+    "reasoning_output_tokens": 101204,
+    "calls_with_unknown_usage": 2
+  },
+  "interpretation": "One exploratory paired pilot; this receipt is a headline-results update, not a complete follow-up analysis or independent replication.",
+  "full_checkpoints_and_case_data": "runs/consumption-v2/",
+  "fresh_file_sha256": {
+    "initial.json": "5d780a38ebe6358f6cfc4d95b9f50ec7230e4f83c5cf1c72f7dd6d08bd231aa4",
+    "pair-01-coevolution.json": "127b7ae99219858d7f0e42087a2928d819e21b1368d345dffc03fc4b6adac8b3",
+    "pair-01-fixed_institution.json": "d10d5eee5a0e3b0237b39a42f2b64ad57e104124831c7c94d30053d409bb19c6",
+    "summary.json": "68af89da0559653dd8d1b80cee26aeeb44c3c008e0a48bf98e66f6a039d19389"
+  }
+}
