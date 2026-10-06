@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "renderer_version": "world-model-sharing-v1-figures-v1",
+  "style": "Swarm Societies / Chromatic Field",
+  "study": "world-model-sharing-v1",
+  "bank": "evaluation",
+  "sources": {
+    "evidence/world-model-sharing-v1/design.json": "6853aa3a2a29d2f441f997b6ac5b5d31072d598919f57d36b2b0f4436923592c",
+    "evidence/world-model-sharing-v1/design.sha256": "b97b37b5ac6800bf6f0037dfcdf6f247a40ebac2c0f08413de6e9058dc468438",
+    "evidence/world-model-sharing-v1/completion.json": "cc8fc96726818e7c0b58c24a68dcc9579e3a902195888e796634eadb63bde674",
+    "evidence/world-model-sharing-v1/checkpoints.csv": "2c287be6f21e080d59f082f88c7599c0c8631a8a99ec3debfb678dabb714fb2b",
+    "evidence/world-model-sharing-v1/parameters.csv": "29689ac1574494c6d43c3cc865e8d87bfd9374190469c93009ef5762f71bb9ab",
+    "evidence/world-model-sharing-v1/transport.csv": "49011cc8d64f48c4af1d423bd3559599a79fa0696b13e2262214c4cce8cf64fc",
+    "evidence/world-model-sharing-v1/costs.csv": "c531a6354eb026061552312a16602948b9f67185d7de0cc077198ace4b3e123e",
+    "evidence/world-model-sharing-v1/summary.json": "74741c8fdfac76f5f8c9347c2112888d28fcf1da405b47e0ed54875353b43dfd",
+    "scripts/visualize_world_model_sharing.py": "6f6cebdbbd2cef9bef5b9f2f54774f7289f797f2bff904bb0dce1bf4cc55abe3",
+    "swarm_societies/visualize.py": "1cedaca8dbbe70aef2b763b7e4e9b67720c6a3783f6dcfe91971b6a4b141dae0",
+    "docs/visual-reference.md": "58308075d6cabde383126d3ccd6ea5c14da9304f59c8ef8500c36ea398016409"
+  },
+  "captions": {
+    "member-learning": "Member predictive CRPS on the 32 common guaranteed-uncapped probes per arena, averaged over four private models within each society. Top: recorded completed-tick checkpoints. Bottom: exact states immediately after 0, 8, 16, 32, 64, 128, 256 unique-event admissions, before any following event is processed. Curves are means over independent arenas; shading gives pointwise 95% whole-arena bootstrap intervals. Isolated and redundant private states coincide, so their lines overlap. Equal evidence counts need not identify equal examples or orders and therefore do not isolate inference efficiency. The legal-union arm is an unrestricted information reference, not a matched-bandwidth institution. Colors identify societies; markers and dashes identify conditions.",
+    "institutional-learning": "Recorded institutional predictive CRPS, one separately owned institution model per society and condition. Institutions receive no direct private sensor stream in the ordinary conditions; they learn only from authenticated uplink arrivals. Redundant member reports still train the institutional model once per event, while duplicate envelopes add no likelihood. The isolated institution remains at its prior. Legal-union institutions are supplied all legal events directly as an information reference. Curves and pointwise 95% intervals resample complete independent arenas, not societies or forecasts. These models are distinct from members' personal beliefs; institutional performance alone does not establish member learning.",
+    "paired-effects": "Paired arena differences for the prospectively declared report-content contrast (complementary minus redundant), sharing contrast (complementary minus isolated), and delay contrast (delayed minus ordinary complementary). Black diamonds average four members within each society and three societies within each arena. Colored points retain society-specific estimates, each still based on independent arenas. Lines are 95% percentile intervals from 2,000 paired arena bootstrap draws. The primary endpoint is tick-integrated CRPS divided by the 128-tick horizon. Evidence-normalized integration uses the exact common range of 0\u2013256 unique events and remains descriptive because event contents and order differ. The terminal endpoint scores the final physical horizon, without flushing in-flight reports. The report-content contrast matches actual wire bytes; the delay contrast matches channel capacity and origin schedule but may send fewer downlinks before the horizon. Secondary intervals have no familywise multiplicity adjustment.",
+    "member-uncertainty": "Terminal member-model coefficient coverage and marginal 90% credible-interval width, shown separately for each society and supplied law coefficient. Each independent arena contributes an average over its four dependent members before bootstrap resampling; model copies are not treated as independent calibration cases. Dots and lines show means and 95% arena bootstrap intervals. The nominal 0.90 line is descriptive for this interior-law ecological task panel; it is not the full-prior, exogenous-feature calibration control. Particle approximation and conditioning on latent-outcome-dependent ecological features retain the earlier audit's limitations. The unrestricted union and truthful sharing conditions need not have identical numerical trajectories, and narrow uncertainty alone does not establish learning quality. Institution statistics are retained separately in the accompanying parameter table.",
+    "communication-accounting": "Finite-horizon communication and evidence accounting, averaged over independent arenas. Left: bytes sent per society, split into delivered versus still-in-flight frames; each frame is 1,024 charged bytes, including provenance and padding, and every broadcast recipient copy is charged separately. Middle: delivered downlink arrivals per member, distinguished as novel accepted physical events versus duplicates of known events. Right: total unique-event counts in member and institutional models, including legal local sensor inputs. Colored points retain society identity; circle/square/cross meanings are panel-specific and labeled. Redundant and complementary conditions match actual bytes, sender schedule and delay. The longer-delay condition matches origin schedule and channel capacity but can send fewer downlinks within 128 ticks; pending frames are not flushed. The union reference has no charged communication because its legal sensor union is supplied directly as an unrestricted information reference. Its zero channel charge is not evidence of free achievable information transmission."
+  },
+  "independent_arenas": 24,
+  "societies_per_arena": 3,
+  "members_per_society": 4,
+  "bootstrap": {
+    "draws": 2000,
+    "seed": 9301,
+    "unit": "independent arena",
+    "level": 0.95,
+    "curve_intervals": "pointwise",
+    "contrasts": "paired arena differences",
+    "secondary_multiplicity_adjustment": false
+  },
+  "rendering_runs_training": false,
+  "rendering_runs_evaluation": false,
+  "independent_evolutionary_runs": 0,
+  "model_generation_calls": 0,
+  "software": {
+    "python": "3.13.5",
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.3"
+  },
+  "artifacts": {
+    "endpoint-statistics.csv": "44052d610d9313688614aea6476d960e74b24970cff99f0472dd474d6800c329",
+    "paired-contrasts.csv": "2c57bdf27b1906a2b817ea17ec10f9ab792b2cf23db4f88370b85c6538166283",
+    "parameter-statistics.csv": "1f9f437885d6bcc839b262f46339bf9da9e437ef266ec5bcbfbe4f431aa0cf5f",
+    "communication-statistics.csv": "f75842e50547429459b3c53bdd1075d3f2ae5fdda06139a832231c5c0620ab46",
+    "compute-statistics.csv": "0292ac54522043c3b38e0fe4efe78a3ab30bc231437476daba9e454acd780e08",
+    "member-learning.svg": "741499dcf0c20042dda638a4bd1e68631a3ad2cc93df1b28e9cf9cf1cf49d746",
+    "member-learning.pdf": "4cb7151916962ef6fe8edb00376d3e883da47b997573512e78f90747637f03e5",
+    "member-learning.png": "34eca657cacb6164212bab2691fd2f085409d6cc093c6b35f875f50662de7104",
+    "institutional-learning.svg": "d6a07aa3d2f52217e12fd7c51070867594b4ff6e388c5008ae06ff8e5167f9e5",
+    "institutional-learning.pdf": "46f89619415faf483a440619389da6f2e8c28289ccecb385a09acdfa1f279579",
+    "institutional-learning.png": "08f343a8bca80da13fcec1f7922baf760a576a59c6a51914918b063d258d671b",
+    "paired-effects.svg": "11db377b771e19db645d97a970c6d4fa0a5e55a6556710543b92f846d1ec23a2",
+    "paired-effects.pdf": "b8064d44695524a754f40ddde11e2a3d114e46d4781e543dfc14ad6a58f71721",
+    "paired-effects.png": "1a9326f7b2489481bcac299a3c166a566c47a70e9f64124ec50a78788eec95ff",
+    "communication-accounting.svg": "633e70a9fd3c715f7f0509139e9d740644f444c37b8e7926e3e727f12e5221a7",
+    "communication-accounting.pdf": "649e16f8048ab6fc882cf5a49a97803bb5613b681e4f46e28b7ef4661622c6d1",
+    "communication-accounting.png": "03f871fd6f7cf260ffe3728b48217486542765519ac940e30545cef9e68da372",
+    "member-uncertainty.svg": "d520e45188707d6735ccc6b5d6757e1424821109648c8b8e9fe099ed29920580",
+    "member-uncertainty.pdf": "a90bfee09d58a70e02abe05a08f138d4a6b9c0c64f576e53b5aea63f364c6785",
+    "member-uncertainty.png": "b47b470ed1c759eeb95b708484a3c7af12517f56a2b8b8c399a1ae162be85b26",
+    "README.md": "d6d97e92704d89cc8c7c3d7a748f399b1b13b6a2439b0766a5f94f72aea943e8"
+  }
+}

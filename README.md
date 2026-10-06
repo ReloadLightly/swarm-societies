@@ -4,6 +4,8 @@
 
 [Code and reproduction](#6-reproducibility) ·
 [Current results](#4-experiments-and-results) ·
+[Allocation decision study](docs/world-model-decision-v1.md) ·
+[Private-belief sharing study](docs/world-model-sharing-v1.md) ·
 [Research roadmap](docs/research-roadmap.md) ·
 [World-model proposal](docs/world-model-proposal.md) ·
 [Active work record](PROGRESS.md)
@@ -15,7 +17,8 @@ information, and acquire knowledge of a shared environment. The platform
 separates executable member policies, institutional programs, authoritative
 material dynamics, and independent evaluation. We report an initial multilevel
 evolution experiment, a consumption-focused matched search pilot, a factorial
-intervention on saved programs, and a new numerical world-model implementation.
+intervention on saved programs, and numerical world-model studies of learning,
+reporting and allocation decisions.
 The evolutionary pilot produced a small consumption-welfare advantage for
 institutional coevolution alongside greater harm to neighbouring societies.
 The program transplant diagnostic identified a member-dependent institutional
@@ -25,12 +28,20 @@ weather-aware Bayesian particles and explicit observation contracts. Across
 24 independent arenas, private learners reduced final predictive CRPS from
 **0.9422 to 0.2496**; pooling three times the evidence improved the learning
 trajectory further. This instrumented control fixes policies and supplies the
-equation family, establishing measurement before institutional knowledge
-sharing, active experimentation, and rule discovery. A subsequent 192-case audit
+equation family, establishing measurement before decision control. A subsequent 192-case audit
 finds close agreement with an independently implemented posterior reference;
 higher computation produces modest numerical gains at 4–5 times the cost.
 Finite-panel calibration and the ecological observation model remain explicit
-limitations. We distinguish predictive
+limitations. A further 24-arena experiment gives members separate beliefs and
+compares truthful institutional reports at matched communication cost.
+Complementary reports reduce time-averaged member CRPS by **0.68%** relative to
+redundant reports; the terminal difference remains unresolved, and the advantage
+does not hold at equal evidence counts. A final 24-arena control holds the
+allocation planner fixed and changes its beliefs. Learned coefficients improve
+32-tick consumption-plus-wealth utility by **0.0211 per member** relative to the
+prior, with a paired 95% interval of **[0.0090, 0.0337]**. Terminal wealth accounts
+for 86% of this small gain; additional consumption occurs in only one arena.
+Active experimentation and equation discovery remain future stages. We distinguish predictive
 accuracy, identifiable physical knowledge, useful control, and evolutionary
 improvement throughout.
 
@@ -56,8 +67,10 @@ the research program; central institutional hubs and fixed membership describe
 the implemented substrate.
 
 The immediate progression is **parameter learning and information governance →
-active experimentation → structural discovery**. Parameter learning is now an
-executable feature. The later stages remain research objectives, rather than
+useful decisions → active experimentation → structural discovery**. Parameter
+learning, fixed truthful reporting and a fixed-planner allocation control are
+now executable features.
+The later stages remain research objectives, rather than
 capabilities inferred from memory fields or cooperative-looking behavior.
 
 ## 2. Related work and positioning
@@ -242,6 +255,68 @@ CPU is reported separately from the additional diagnostic scoring work.
 The ecological inference target conditions on observed features; it does not
 model the complete process by which latent growth generated those features.
 
+### 3.6 Private beliefs and bounded institutional reports
+
+The [sharing runtime](swarm_societies/world_model_v1/sharing.py) gives all twelve
+members and three institutions independent learner state. Members sense their
+home patch and one rotating other patch. Each physical event has one canonical
+noisy measurement: copying a report does not create another independent
+observation. In the ordinary sharing conditions, institutions learn only from
+admitted reports and forward the
+original event with its provenance. Per-owner deduplication prevents repeated
+evidence and double-counted priors; no posterior averaging is used.
+
+The [prospective sharing protocol](docs/world-model-sharing-protocol.md) compares
+five conditions on 24 fresh arenas. Isolated members receive only private
+measurements. Two fixed senders per society either report the already visible
+home event (redundant) or their different other-patch events (complementary).
+Each report costs 1,024 serialized bytes, including provenance and padding.
+Institutions send a separately charged copy to each of four members. Both
+content conditions have identical traffic and one-tick delays on each hop.
+A delayed condition uses four ticks per hop; an immediate legal-union reference
+supplies all events without a communication budget. Pending messages are not
+flushed after the horizon.
+
+The primary endpoint is member-mean CRPS integrated over world ticks, with a
+paired complementary-minus-redundant contrast. Exact unique-evidence checkpoints
+provide a separate descriptive axis; equal counts do not imply identical
+examples or update order. Bootstrap intervals resample whole arenas, not
+dependent members or message copies. Report content and routing remain fixed,
+truthful interventions; beliefs do not affect the common physical trajectory.
+
+### 3.7 Fixed-planner allocation control
+
+A separately versioned [stepwise engine](swarm_societies/ecology_stepwise_v1.py)
+preserves the frozen simulator's complete episode output, actor observations,
+accounting and random streams. It supports strict phase boundaries and exact
+snapshot restoration. Evaluators can branch complete worlds; the independent
+[planner](swarm_societies/world_model_v1/decision.py) receives only legal
+institution observations and the delivered previous-tick home measurement.
+
+The [frozen decision protocol](docs/world-model-decision-protocol.md) uses 32
+warmup ticks, home-only harvesting and fixed redundant reports. At tick 32,
+one focal institution chooses to invest 0%, 50% or 100% of its eventual budget.
+All subsequent public investment is zero. Tax remains 60%, remaining funds are
+redistributed equally, and the objective is consumption plus 0.2 terminal
+wealth per member over a 32-tick decision window. Consumption welfare is
+reported separately. The same 512-sample planner receives the frozen prior,
+the learned institutional posterior, or the true renewal coefficients.
+
+All conditions forecast current receipts rather than seeing their realized
+value, reconstruct stock from lagged noisy readings, assume unit productivity
+and forecast external infrastructure by decay only. The known-law reference
+retains these approximations. Forecasts and choices are committed before any
+branch runs. Branches preserve the live simulator, beliefs, queues and RNG state.
+
+A six-arena development gate checks robust coefficient-dependent ranking
+switches and material realized action differences before the 24 fresh evaluation
+arenas are prepared. Evaluation rotates three focal societies and reuses each
+of three physical action continuations across belief conditions: **72 dependent
+focal states, 216 physical branches and 216 forecasts**, from **24 independent
+arenas**. Intervals use 2,000 whole-arena bootstrap draws after averaging focal
+societies. The primary contrast is learned-minus-prior utility. Development
+worlds and exploratory grids are excluded from evaluation estimates.
+
 ## 4. Experiments and results
 
 | Study | Independent search runs | Evaluation scale | Main interpretation |
@@ -251,6 +326,8 @@ model the complete process by which latent growth generated those features.
 | Program transplants | 0 new searches; saved coevolution lineage | 864 rollouts | Institutional harm depends on the member program background |
 | World-model-v1 | 0 searches | 24 independent law/environment arenas | Stationary parameter-learning control; fixed policies and free audit sensors |
 | World-model calibration-v1 | 0 searches | 128 prior-predictive datasets and 64 fresh ecological arenas | Independent posterior computation and uncertainty audit |
+| World-model sharing-v1 | 0 searches | 24 fresh arenas, five information conditions, 15 private models per condition | Matched-byte truthful report-content and delay interventions |
+| World-model decision-v1 | 0 searches | 24 fresh arenas and 216 physical branches; separate six-arena development gate | Small allocation-utility benefit from learned beliefs, mainly terminal wealth |
 
 ### 4.1 Initial evolution: distinguish score gains from consumption
 
@@ -438,6 +515,125 @@ coverage, paired differences, failure handling and model scope. The
 [Chromatic Field gallery](figures/world-model-calibration-v1/README.md) includes
 four figures, five derived tables, SVG/PDF/PNG exports and source/output hashes.
 
+### 4.6 Private beliefs and matched-cost institutional reports
+
+Across **24 fresh independent arenas**, complementary reports modestly improve
+member prediction over world time relative to redundant reports at identical
+byte cost and delay. The primary paired CRPS difference is **−0.001778**, with
+95% whole-arena bootstrap interval **[−0.002939, −0.000604]**: a **0.68%**
+reduction relative to the redundant mean. No evolutionary search was run.
+
+| Information condition | Member time-average CRPS | Terminal CRPS | CRPS averaged over 0–256 events | Terminal events/member | KiB sent/society |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Isolated | 0.260293 | 0.235840 | 0.260293 | 256 | 0 |
+| Redundant reports | 0.260293 | 0.235840 | 0.260293 | 256 | 1,272 |
+| Complementary reports | 0.258516 | 0.235725 | 0.263656 | 382 | 1,272 |
+| Delayed complementary | 0.259564 | 0.235773 | 0.262921 | 376 | 1,248 |
+| Legal-union reference | 0.257289 | 0.235693 | 0.263616 | 384 | Unpriced |
+
+Redundant reports leave member posteriors exactly equal to isolation: traffic
+alone supplies no new evidence. Complementary reports add **126 distinct events
+per member** by tick 128. The longer delay reduces this to **120** and increases
+time-average CRPS by **+0.001048 [0.000382, 0.001842]** relative to ordinary
+complementary sharing. Its sender schedule and channel capacity match, but fewer
+downlinks are sent before the horizon; pending messages are not flushed.
+
+![Private member learning under bounded truthful sharing](figures/world-model-sharing-v1/member-learning.png)
+
+*Figure 8. Recorded member learning over world time and unique-event count,
+with pointwise whole-arena bootstrap intervals. Colors identify societies;
+markers identify information conditions. Each member already privately senses
+two of three patches. Equal counts need not contain identical examples or
+update orders.*
+
+At the terminal horizon, complementary minus redundant CRPS is only
+**−0.000114 [−0.000238, +0.000010]**. The equal-evidence difference goes in the
+opposite direction: **+0.003363 [0.001506, 0.005242]**. Thus the time advantage
+does not establish better inference per event. These secondary intervals are
+descriptive and are not multiplicity-adjusted.
+
+![Paired effects of truthful report content and delay](figures/world-model-sharing-v1/paired-effects.png)
+
+*Figure 9. Paired report-content and delay interventions on member CRPS. Black
+diamonds average dependent members and societies within each arena before
+resampling; colored points preserve society-specific estimates. The primary
+contrast is complementary minus redundant on the time axis.*
+
+The archive contains **9,216 distinct physical measurements**, **549,288
+successful owner-specific updates**, and zero failed updates across **1,800
+terminal models**. The **152,568 duplicate attempts** add no likelihood factors.
+Member predictive 90% coverage ranges from **90.27% to 90.59%**. Complementary
+member coefficient coverage is **91.67% / 83.33% / 89.24%** for r/b/g, averaged
+within arenas; the 288 member intervals per condition are dependent. These
+conditional ecological beliefs retain the earlier calibration limitations.
+
+The [complete sharing report](docs/world-model-sharing-v1.md) includes
+institutional learning, communication accounting and limitations. Its
+[Chromatic Field gallery](figures/world-model-sharing-v1/README.md) contains five
+figures, five tables, SVG/PDF/PNG exports and source/output hashes. This passive
+intervention establishes a small effect on learning under fixed reporting rules;
+it does not demonstrate improved decisions, welfare or evolved governance.
+
+### 4.7 Learned beliefs improve a restricted allocation decision
+
+The development gate passed before evaluation: **17/18** legal focal states
+showed robust ranking switches under low versus high infrastructure return.
+Realized branches included **11** states favoring redistribution and **six**
+favoring full investment; seven known-law investment choices improved realized
+utility over redistribution. These designed cases establish task sensitivity,
+not general performance.
+
+On the separate 24-arena evaluation, learned beliefs improved utility relative
+to the prior by **+0.021110 [0.009014, 0.033678] per member**, or **0.0675%** of
+the prior mean. There were no failed plans or learner updates.
+
+| Planner beliefs | Utility/member ↑ | Consumption/member ↑ | Terminal wealth/member ↑ | Realized menu regret ↓ | Choices: 0% / 50% / 100% investment |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Frozen prior | 31.282372 | 26.339709 | 24.713315 | 0.026949 | 72 / 0 / 0 |
+| Learned posterior | 31.303481 | 26.342737 | 24.803725 | 0.005840 | 37 / 3 / 32 |
+| Known coefficients | 31.307353 | 26.341783 | 24.827853 | 0.001968 | 33 / 5 / 34 |
+
+Terminal wealth increased by **0.090409 [0.037642, 0.142692] per member**;
+its weighted contribution accounts for **85.7%** of the utility improvement.
+Consumption increased by only **0.003028 [0, 0.009084]** over the entire
+32-tick window, with all additional consumption in **one of 24 arenas**.
+This does not establish a general consumption-welfare benefit. Outward harm
+is zero by the prescribed no-raid policy, not a learned reduction.
+
+![Paired effects of learned beliefs on allocation outcomes](figures/world-model-decision-v1/paired-decision-effects.png)
+
+*Figure 10. Realized paired differences for the same fixed planner with different
+coefficient beliefs. Diamonds average the three focal societies within each
+arena; intervals resample whole arenas. Utility includes terminal wealth.
+Consumption welfare rescales consumption here and is not an independent endpoint.
+Secondary intervals are descriptive and have no multiplicity adjustment.*
+
+Learning changed **35/72** choices across 15 arenas: 33 improved realized
+utility, two worsened it, and 37 were unchanged. Learned and known-law choices
+agreed in **62/72** states. The known-law condition still had positive regret.
+It retains state approximations and cannot know future weather; this experiment
+does not isolate their contributions to the remaining error. The
+78.3% reduction in realized menu regret is algebraically the same utility
+contrast against a shared best branch, not separate corroborating evidence.
+
+![Allocation choices and regret in the fixed menu](figures/world-model-decision-v1/choices-and-regret.png)
+
+*Figure 11. Public-investment choices and realized regret among three paired
+action branches over the declared window. Conditions use labels and neutral
+fills; society colors retain their identities. This finite-menu hindsight
+benchmark is not a globally optimal controller.*
+
+The archive retains **2,304 distinct warmup measurements**, **20,736 accepted
+owner-specific updates**, **20,160 duplicate attempts**, 360 learner models and
+all 216 committed forecasts. Full semantic verification refits every learner,
+regenerates forecasts and replays branches, including the copied development
+proof. The [complete decision report](docs/world-model-decision-v1.md),
+[evaluation gallery](figures/world-model-decision-v1/README.md) and separate
+[development gallery](figures/world-model-decision-development-v1/README.md)
+contain forecast diagnostics, exact tables, captions and hashed SVG/PDF/PNG
+exports. This result concerns supplied-law learning and one fixed allocation
+task; it does not establish active experimentation or evolved governance.
+
 ## 5. Discussion, limitations, and next experiments
 
 The experiments support a disciplined separation of outcomes. A reward function
@@ -447,31 +643,39 @@ can predict accurately without identifying every coefficient, especially when
 infrastructure features are correlated or growth is consistently capped.
 
 The first numerical learner addresses the measurement problem under explicit
-instrumentation. It does not yet establish collective intelligence, learned
-planning, autonomous experimentation, equation discovery, evolved reporting
+instrumentation. The fixed-planner control now demonstrates a small allocation
+utility benefit from learned coefficients. These studies do not establish
+collective intelligence, autonomous experimentation, equation discovery, evolved reporting
 institutions, or decentralized knowledge formation. Pooled evidence is a
 reference condition, with additional data and no communication price. Posterior
 intervals are numerical approximations whose empirical calibration must be
 reported, not assumed.
 
-The calibration audit supports proceeding with **private member beliefs and
-bounded institutional reports** while retaining the published learner budget.
-Start with truthful, fixed reporting rules, explicit provenance, deduplication,
-delay and bandwidth under the current instrumented observation contract.
-Hold inference fixed while varying information governance; compare no sharing,
-bounded sharing and the pooled information ceiling. Equal-time and equal-evidence
+Private member beliefs and bounded institutional reports now provide an
+executable information-governance control. Equal-time and equal-evidence
 comparisons answer different questions. Keep the shared likelihood-CDF departure
 and ecological-model limitations visible before using uncertainty to suppress
 reports or claiming robust calibration. Later experiments will reduce sensor
-access and independently change
-physical laws, opponent policies, and report reliability to test whether a
-society revises the correct explanation.
+access and independently change physical laws, opponent policies, and report
+reliability to test whether a society revises the correct explanation.
+
+The [completed allocation control](docs/world-model-decision-v1.md) shows why
+decision horizons and outcome definitions matter. Investment occurs after
+current growth and harvesting; delayed returns changed rankings in the
+development gate. Learned coefficients then improved allocation utility on
+fresh worlds, mainly through terminal wealth. A fixed planner, generous sensors,
+nominal productivity and lagged external features limit that result. The next
+controlled stage is **costed active experimentation**, compared with fixed and
+random interventions under matched resource and communication opportunities.
+It must separate information acquired from the direct material effects of an
+intervention and report consumption, scarcity, wealth and outward harm separately.
 
 Stage 2 will first compare supplied mechanism families, then permit terms,
 interactions, and branches to change within a declared expression grammar.
 That transition separates model selection from structural discovery. Active
-experimentation and fixed-planner interventions will test whether improved
-knowledge changes actual welfare and harm. Any model-driven program search
+experimentation will test whether deliberately acquired knowledge improves
+subsequent decisions enough to repay its cost; broader welfare and harm effects
+remain open. Any model-driven program search
 will receive a separately specified budget.
 
 The economic substrate itself remains limited: fixed membership, central
@@ -502,6 +706,11 @@ Audit the completed world-model evidence and regenerate its figures:
 .venv/bin/python scripts/visualize_world_model_study.py
 OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/run_world_model_calibration.py verify
 .venv/bin/python scripts/visualize_world_model_calibration.py
+OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/run_world_model_sharing.py verify
+.venv/bin/python scripts/visualize_world_model_sharing.py
+OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/run_world_model_decision.py verify
+.venv/bin/python scripts/visualize_world_model_decision.py
+.venv/bin/python scripts/visualize_world_model_decision_gate.py
 ```
 
 Reproduce the same deterministic case bank in a new directory, without model
@@ -514,15 +723,34 @@ generation or evolutionary search:
 OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/run_world_model_calibration.py prepare --output runs/calibration-reproduction
 OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/run_world_model_calibration.py run --output runs/calibration-reproduction --workers 4
 OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/run_world_model_calibration.py verify --output runs/calibration-reproduction
+OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/run_world_model_sharing.py prepare --output runs/sharing-reproduction
+OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/run_world_model_sharing.py run --output runs/sharing-reproduction --workers 4
+OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/run_world_model_sharing.py verify --output runs/sharing-reproduction
 ```
+
+The [decision report](docs/world-model-decision-v1.md#5-verification-scope-and-reproduction) gives the
+separate development-gate and evaluation reproduction commands. Evaluation
+preparation requires a verified passing gate and archives its full evidence.
 
 Numerical results are deterministic under the recorded software environment;
 CPU measurements and timestamps depend on the machine. Existing completed
-studies are not overwritten. The current suite passes **126 tests and 35
+studies are not overwritten. To recover an interrupted sharing run while
+preserving complete arenas, use
+`OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/resume_world_model_sharing.py --workers 4`.
+The separate recovery command verifies saved cases, archives partial output and
+computes only unfinished arenas; its elapsed time covers recovery only.
+The current suite passes **282 tests and 102
 subtests**, including exact legacy trajectory preservation, likelihood checks,
 planted and confounded parameter controls, deduplication, snapshot restoration,
 forecast isolation, independent posterior quadrature checks, and failed-reference
-retention with semantic evidence reconstruction.
+retention with semantic evidence reconstruction. Private-report tests cover
+ownership, future events, byte budgets, delivery delays, duplicate invariance,
+direct event-stream replay, and evidence tampering after checksum rewrites.
+Recovery tests check completed-case preservation, partial archives, corrupt-case
+refusal and competing-run guards.
+Decision tests cover phase-by-phase restoration, exact actor and RNG parity,
+analytic planner timing, protected branches, forecast commitment, development
+gate enforcement and full case reconstruction after checksum tampering.
 
 Existing evidence and figures can be checked locally without evolutionary
 inference:
@@ -539,6 +767,10 @@ and source/output hashes. The world-model study additionally records noisy
 measurements, forecasts, parameter estimates, learner snapshots, and computation.
 The calibration audit archives exact datasets, weighted particles, reference
 chains, retried samples and convergence diagnostics.
+The sharing study adds full private learner and transport snapshots, message
+provenance, exact evidence-count checkpoints and paired communication controls.
+The decision study adds compound world/learning/transport checkpoints, committed
+action forecasts, all menu branches and a replayable development-gate proof.
 Every empirical figure follows [Chromatic Field v1](docs/visual-reference.md):
 warm paper, stable cobalt/magenta/orange society identities, explicit condition
 markers, and inspected SVG/PDF/PNG exports. Visuals represent recorded data;

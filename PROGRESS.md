@@ -1,5 +1,166 @@
 # Active work record
 
+## Allocation decision control completed, 6 October 2026
+
+The user authorized proceeding to the next clear step: determine whether learned
+laws improve a consequential allocation. New, separately versioned stepwise
+engine and fixed approximate planner are implemented; earlier frozen simulators
+remain unchanged. Development and the fresh evaluation are complete. **Do not
+restart either completed experiment.** The runner refuses to overwrite them.
+
+Development selected home-only harvesting, 32 warmup ticks using the previous
+staggered investment schedule, then one focal allocation from {0,.5,1} and 32
+ticks of zero-investment continuation. Use existing consumption + .2 terminal
+wealth utility; report consumption welfare separately. Preserve initial wealth
+4 and all physical constants. The six-arena development gate passed before the
+fresh 24-arena evaluation was prepared. Exploratory grids are preserved under
+`runs/decision-development-exploration/`, not final-panel evidence.
+
+- Engine/planner: `swarm_societies/ecology_stepwise_v1.py` and
+  `swarm_societies/world_model_v1/decision.py`, with exact legacy episode,
+  actor-observation, accounting and RNG parity and strict snapshot restoration.
+- Frozen protocol/runner: `docs/world-model-decision-protocol.md` and
+  `scripts/run_world_model_decision.py`. Source snapshots accompany both banks.
+- Report: `docs/world-model-decision-v1.md`; README incorporates the new study
+  while preserving all earlier detailed results.
+- Three evaluation figures and one separate development figure in Chromatic
+  Field v1, each in SVG/PDF/PNG, with five CSV tables, captions and source/output
+  hashes: `figures/world-model-decision-v1/` and
+  `figures/world-model-decision-development-v1/`.
+
+All belief conditions use the same legal institution payload and delivered
+prior-tick home observation. Current growth, actual current tax receipts,
+productivity and simulator/RNG snapshots remain outside the planner. Forecasts
+are committed before protected branches. The known-law reference retains the
+same nominal-productivity, lagged-stock and external-infrastructure approximations.
+
+The six-arena gate completed and passed: 17/18 robust same-state ranking switches,
+11 realized redistribution-favoring states, six full-investment-favoring states,
+and seven known-law investment choices with positive realized benefit. Zero
+failed forecasts. Evidence: `evidence/world-model-decision-development-v1/`.
+Evaluation preparation independently verified these cases and copied their full
+provenance. The evaluation archive is `evidence/world-model-decision-v1/`.
+
+The primary learned-minus-prior utility effect is **+0.021110 per member**, with
+95% whole-arena interval **[0.009014, 0.033678]**, or **0.0675%** of the prior
+mean. Prior / learned / known-law utility is **31.282372 / 31.303481 / 31.307353**.
+Terminal wealth contributes **85.7%** of the gain. The consumption contrast is
+only **+0.003028 [0, 0.009084]** over 32 ticks, and all additional consumption is
+in **one independent arena**. Do not claim a general consumption-welfare gain.
+External harm is zero by the fixed no-raid policy, not a learned reduction.
+
+Learning changes 35/72 focal choices (33 improved utility, two worsened it).
+Prior / learned / known-law realized menu regret is **0.026949 / 0.005840 /
+0.001968**; its contrast algebraically repeats the utility contrast. Learned
+and known-law choices agree in 62/72 states. This is one supplied-law allocation
+task, not autonomous experimentation, structural discovery or evolved governance.
+
+Independent units: **24 law/environment arenas**, with **72 nested focal
+states**, **216 physical continuations** and **216 valid belief-condition
+forecasts**. Six development arenas are separate. There are **2,304 distinct
+warmup measurements**, **20,736 accepted owner-specific updates**, **20,160
+duplicate attempts**, 360 learner models and zero failed updates. All protected
+world, learner, transport and RNG states remain unchanged by evaluation branches.
+
+Full verification independently refitted/replayed all 24 evaluation cases and
+the copied six-case development proof, reconstructed summaries and checked
+41 main artifact hashes. Both 11-source freezes still match the workspace;
+the copied development archive is byte-identical to its original. Full suite:
+**282 tests and 102 subtests passed**. All four PNGs were inspected, and all
+21 gallery files repeat byte-identically. No new evolutionary search or
+experimental model-generation calls were used. No Git commit or external
+publication was performed.
+Replay output, full test log and a hash-linked verification receipt are retained
+under `runs/world-model-decision-verification/`.
+
+```bash
+OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/run_world_model_decision.py verify
+.venv/bin/python scripts/visualize_world_model_decision.py
+.venv/bin/python scripts/visualize_world_model_decision_gate.py
+.venv/bin/python -m pytest -q
+```
+
+Next controlled stage: design costed active experimentation against fixed and
+random interventions with matched resource/communication budgets, separating
+information value from direct material effects. Keep structural discovery and
+any new model-driven search separately specified. Preserve the 1,024-particle,
+four-sweep default, conditional ecological interpretation and calibration
+audit's shared borderline likelihood-CDF departure.
+
+## Private-belief sharing study recovered and completed, 6 October 2026
+
+Resumed after connection loss and completed the frozen 24-arena study. All
+earlier simulator, learner, protocol and evidence files remain unchanged.
+The separately versioned `scripts/resume_world_model_sharing.py` semantically
+verified and reused arenas 000–011 byte-for-byte, archived 14 interrupted files,
+and recomputed unfinished arenas 012–023 using the same frozen sources/seeds.
+Recovery took **920.13 seconds** with four workers; this is recovery time only,
+not the original interrupted study's full wall time. The completion manifest
+is present. **Do not restart this completed experiment.**
+
+- Runtime: `swarm_societies/world_model_v1/sharing.py`; twelve member and three
+  institutional models per arena/condition, canonical event provenance,
+  truthful fixed reporting, per-owner deduplication, charged bytes and delay.
+- Frozen study: `scripts/run_world_model_sharing.py`,
+  `docs/world-model-sharing-protocol.md`, `evidence/world-model-sharing-v1/`.
+- Report: `docs/world-model-sharing-v1.md`; paper-style README updated without
+  removing prior study results. Next-stage plan: `docs/world-model-decision-plan.md`.
+- Five Chromatic Field figures in SVG/PDF/PNG, five tables and source/output
+  hashes: `figures/world-model-sharing-v1/`; renderer
+  `scripts/visualize_world_model_sharing.py`.
+
+Member time-average CRPS: isolated/redundant **0.260293**, complementary
+**0.258516**, delayed **0.259564**, legal union **0.257289**. The primary
+complementary-minus-redundant paired effect is **−0.001778**, with 95% whole-arena
+interval **[−0.002939, −0.000604]**, or **0.68%** lower error. Terminal effect
+**−0.000114 [−0.000238, +0.000010]** remains unresolved. At equal evidence counts
+the contrast reverses: **+0.003363 [0.001506, 0.005242]**. Do not claim improved
+inference per event. Equal counts can contain different examples/order.
+
+Redundant and complementary reports each cost **1,272 KiB per society**.
+Complementary sharing adds 126 unique events per member; redundant copies add
+none. Delayed sharing adds 120, with 1,248 KiB actually sent before the horizon:
+it matches capacity and origin schedule, not finite-horizon delivered bytes.
+Delay increases time-average CRPS by **0.001048 [0.000382, 0.001842]**.
+
+There are **9,216 distinct physical measurements**, **549,288 successful
+owner-specific updates**, **152,568 duplicate attempts**, zero failed updates,
+and **1,800 terminal models**. Independent units are the 24 shared-law arenas,
+not members or reports. No new evolutionary search or model-generation calls.
+Complementary member r/b/g coverage is **91.67% / 83.33% / 89.24%**, averaged
+within arenas. Preserve the conditional ecological model and the calibration
+audit's unresolved shared likelihood-CDF departure.
+
+All 24 arenas passed semantic reconstruction during recovery and a separate
+final verification pass. The latter checks **281 artifact hashes**, **22,680
+checkpoints**, **68,040 parameter rows**, **1,451,520 prediction rows** and
+**115,200 regenerated terminal forecasts**. Original per-arena checks ran in
+four workers before canonical aggregation checks; full evidence hashes remained
+unchanged. Intermediate posterior trajectories were not refitted. All five PNGs
+were inspected, and all 22 figure-directory files repeat byte-identically.
+The complete suite passes **194 tests and 35 subtests**. Original experiment,
+mechanism, world-model and 192-case calibration evidence verifiers pass.
+Recovery records, the final verification receipt and its execution harness
+remain under `runs/world-model-sharing-recovery/`; for future
+interrupted reproductions use the recovery command, since the frozen original
+`run` command recomputes every case in an incomplete study.
+
+```bash
+OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/run_world_model_sharing.py verify
+.venv/bin/python scripts/visualize_world_model_sharing.py
+.venv/bin/python -m pytest -q
+```
+
+Historical next-step note (completed in the decision study above): versioned
+stepwise ecology with exact trajectory/RNG parity, then a development
+action-ranking gate and fixed-planner comparison
+using learned beliefs, the prior and known coefficients. No decision experiment
+had been implemented or run at that checkpoint. Active experimentation and
+structural discovery remain later stages. The sharing report records a nonproduction oversized
+forwarded-frame edge case for future runtime hardening; do not modify frozen v1
+to handle a new identifier contract. No Git commit or external publication was
+performed during this recovery.
+
 ## Independent world-model calibration audit completed, 6 October 2026
 
 The next clear implementation step was to test parameter uncertainty before

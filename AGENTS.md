@@ -4,6 +4,10 @@ Read `PROGRESS.md` for the current experimental state,
 `docs/world-model-calibration-v1.md` for the independent calibration audit and
 implementation decision, and `docs/world-model-v1.md` for the implemented
 stationary identification control.
+The completed private-belief sharing stage is documented in
+`docs/world-model-sharing-v1.md`. The completed stepwise allocation control is
+documented in `docs/world-model-decision-v1.md`; its earlier design rationale
+remains in `docs/world-model-decision-plan.md`.
 The user's current priority remains parameter learning followed by rule
 discovery; `docs/world-model-proposal.md` describes the staged design and
 `docs/research-roadmap.md` preserves the broader research program.
@@ -13,10 +17,30 @@ as the working default. Higher compute is a sensitivity setting, not an adopted
 default. All 192 batch references qualified; close numerical agreement does not
 establish universal calibration. Preserve the shared borderline likelihood-CDF
 departure and the distinction between conditional ecological beliefs and a full
-joint model. Next: private member beliefs and bounded, provenance-preserving
-institutional reports with fixed truthful rules, deduplication and delay under
-the current instrumented observation contract. Compare matched communication
-budgets before adding hidden external features or confidence-based selection.
+joint model. Private member beliefs and bounded, provenance-preserving reports
+are now implemented under fixed truthful rules, deduplication, delay and the
+instrumented observation contract. The 24-arena sharing study found a small
+0.68% time-average prediction benefit at matched bytes; the terminal contrast
+remains unresolved, and equal-evidence scores favor isolated/redundant members.
+Do not infer improved inference efficiency or decisions from sharing alone.
+The separate 24-arena decision control found learned-minus-prior utility of
++0.021110 [0.009014, 0.033678] per member, with 85.7% of the gain attributable
+to weighted terminal wealth and additional consumption in only one arena.
+The known-law reference retains planner/state approximations. Do not claim
+general consumption-welfare improvement, evolved governance or an optimal
+controller. Next: design a costed active-experimentation control, separating
+information value from direct material effects and matching fixed/random
+intervention budgets. Keep hidden external features, confidence-based selection
+and structural discovery as separately controlled stages.
+
+Sharing evidence is complete; do not restart it. For future interrupted sharing
+reproductions, use `scripts/resume_world_model_sharing.py`: the frozen original
+`run` command rewrites every incomplete study's case files. Recovery verifies and
+preserves complete arenas, archives partial work, and reports resumed-only time.
+Decision development and evaluation evidence are also complete; do not restart
+them. `scripts/run_world_model_decision.py verify` refits and replays all saved
+cases and the copied development proof. Its `run` command recovers incomplete
+reproductions by verifying saved cases and refuses to overwrite a completed bank.
 
 Keep the README as an informative living research paper: abstract, methods,
 actual experimental results, tables, figures, limitations and reproduction.
