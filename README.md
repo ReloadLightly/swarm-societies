@@ -4,6 +4,7 @@
 
 [Code and reproduction](#6-reproducibility) ·
 [Current results](#4-experiments-and-results) ·
+[Costed experiment study](docs/world-model-experiment-v1.md) ·
 [Allocation decision study](docs/world-model-decision-v1.md) ·
 [Private-belief sharing study](docs/world-model-sharing-v1.md) ·
 [Research roadmap](docs/research-roadmap.md) ·
@@ -18,7 +19,7 @@ separates executable member policies, institutional programs, authoritative
 material dynamics, and independent evaluation. We report an initial multilevel
 evolution experiment, a consumption-focused matched search pilot, a factorial
 intervention on saved programs, and numerical world-model studies of learning,
-reporting and allocation decisions.
+reporting, allocation decisions and costed experiments.
 The evolutionary pilot produced a small consumption-welfare advantage for
 institutional coevolution alongside greater harm to neighbouring societies.
 The program transplant diagnostic identified a member-dependent institutional
@@ -36,12 +37,18 @@ limitations. A further 24-arena experiment gives members separate beliefs and
 compares truthful institutional reports at matched communication cost.
 Complementary reports reduce time-averaged member CRPS by **0.68%** relative to
 redundant reports; the terminal difference remains unresolved, and the advantage
-does not hold at equal evidence counts. A final 24-arena control holds the
+does not hold at equal evidence counts. A subsequent 24-arena control holds the
 allocation planner fixed and changes its beliefs. Learned coefficients improve
 32-tick consumption-plus-wealth utility by **0.0211 per member** relative to the
 prior, with a paired 95% interval of **[0.0090, 0.0337]**. Terminal wealth accounts
 for 86% of this small gain; additional consumption occurs in only one arena.
-Active experimentation and equation discovery remain future stages. We distinguish predictive
+An additional control compares institution-selected investment experiments
+with fixed and random schedules at matched investment and reporting budgets.
+Across 24 fresh arenas, active selection shows no clear advantage in the value
+of posterior updates: **−0.00097 [−0.00518, 0.00292] per member** versus random.
+A small total-utility gain is already present with frozen coefficients, and
+active selection chooses Early in 71 of 72 states.
+Equation discovery remains a future stage. We distinguish predictive
 accuracy, identifiable physical knowledge, useful control, and evolutionary
 improvement throughout.
 
@@ -68,9 +75,9 @@ the implemented substrate.
 
 The immediate progression is **parameter learning and information governance →
 useful decisions → active experimentation → structural discovery**. Parameter
-learning, fixed truthful reporting and a fixed-planner allocation control are
-now executable features.
-The later stages remain research objectives, rather than
+learning, fixed truthful reporting, allocation control and one-shot costed
+experiment selection are now executable features. Structural discovery and
+adaptive sequences of experiments remain research objectives, rather than
 capabilities inferred from memory fields or cooperative-looking behavior.
 
 ## 2. Related work and positioning
@@ -317,6 +324,44 @@ arenas**. Intervals use 2,000 whole-arena bootstrap draws after averaging focal
 societies. The primary contrast is learned-minus-prior utility. Development
 worlds and exploratory grids are excluded from evaluation estimates.
 
+### 3.8 Costed experiment selection and posterior-update value
+
+The [experiment protocol](docs/world-model-experiment-protocol.md) creates an
+observed escrow B by reserving tax receipts at the end of an eight-tick warmup.
+During an eight-tick probe window, tax and incoming transfers are zero. A focal
+institution invests B immediately, four ticks later, or in two equal tranches.
+Other institutions redistribute their escrow at the start. The three schedules
+have identical investment and report budgets. Realized consumption, harvest and
+wealth-capped effort charges can still differ.
+
+The [active selector](swarm_societies/world_model_v1/experimentation.py) chooses
+the complete schedule once, using current legal observations and 512 posterior
+draws. Its joint Gaussian moment score separates coefficient disagreement from
+weather/sensor variance across the eight future growth measurements. It is an
+information proxy, not exact expected information gain or decision value.
+Fixed selects Split; Random commits a uniform schedule draw. The selector sees
+no simulator snapshot, current growth, hidden law or future outcome.
+
+Each physical probe path is followed by the same 32-tick allocation planner
+with updated, frozen pre-probe or known coefficients. Updated and frozen
+controllers receive the same current state and last delivered measurement.
+Their utility contrast isolates the value of parameter updates on that path;
+it does not remove all newly observed information. The primary endpoint is
+the active-minus-random difference in that update value. Total utility includes
+probe consumption, continuation consumption and .2 terminal wealth per member.
+Its active-minus-random contrast decomposes exactly into the update-value
+contrast plus the contrast under frozen coefficients. Physical state can
+interact with information usefulness across schedules.
+
+A redistribution path returns B without probe investment and measures
+opportunity cost outside the equal-investment comparison. All paths retain
+bounded truthful reports, delayed provenance and the 1,024-particle/four-sweep
+learner. A six-arena development gate tests varied selection and consequential
+updating without requiring positive performance. Only after it passes are
+24 fresh arenas prepared: 72 nested focal states, 288 physical probe paths and
+864 allocation continuations. Forecasts precede outcome branches, protected
+states remain unchanged, and uncertainty resamples whole arenas.
+
 ## 4. Experiments and results
 
 | Study | Independent search runs | Evaluation scale | Main interpretation |
@@ -328,6 +373,7 @@ worlds and exploratory grids are excluded from evaluation estimates.
 | World-model calibration-v1 | 0 searches | 128 prior-predictive datasets and 64 fresh ecological arenas | Independent posterior computation and uncertainty audit |
 | World-model sharing-v1 | 0 searches | 24 fresh arenas, five information conditions, 15 private models per condition | Matched-byte truthful report-content and delay interventions |
 | World-model decision-v1 | 0 searches | 24 fresh arenas and 216 physical branches; separate six-arena development gate | Small allocation-utility benefit from learned beliefs, mainly terminal wealth |
+| World-model experiment-v1 | 0 searches | 24 fresh arenas, 288 probe paths and 864 allocation continuations; separate six-arena development gate | No clear active-selection advantage in posterior-update value; small total gain already present with frozen coefficients |
 
 ### 4.1 Initial evolution: distinguish score gains from consumption
 
@@ -634,6 +680,86 @@ contain forecast diagnostics, exact tables, captions and hashed SVG/PDF/PNG
 exports. This result concerns supplied-law learning and one fixed allocation
 task; it does not establish active experimentation or evolved governance.
 
+### 4.8 Costed experiment selection does not show added update value
+
+The six-arena development gate passed before evaluation. Active selection
+chose two schedules across 18 states, exceeded the Fixed Split information
+proxy in all 18, and passed the nondegeneracy checks. Across all 54 cost-matched
+paths, posterior updating changed 13 downstream allocations. The descriptive active-minus-random
+update-value contrast was negative (−0.006280 per member). The gate requires
+consequential selection and updating, without requiring a favorable result.
+
+The separate **24-arena evaluation** contains **72 nested focal states**,
+**288 physical probe paths** and **864 allocation continuations**. All matched
+schedules invest their state's exact escrow, averaging **3.396947 resource
+units per focal institution**, and receive eight institutional home events
+with **80 KiB sent and delivered per focal society**. No update or forecast
+failed. The number of evolutionary searches is zero.
+
+| Experiment strategy | Updated utility/member ↑ | Consumption/member ↑ | Terminal wealth/member ↑ | Updated−frozen utility | Post-probe CRPS ↓ |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Active proxy selection | 38.148018 | 33.275753 | 24.361322 | +0.002450 | 0.375088 |
+| Fixed Split | 38.143045 | 33.275123 | 24.339611 | +0.003562 | 0.382742 |
+| Random schedule | 38.142296 | 33.273298 | 24.344989 | +0.003420 | 0.374337 |
+| Redistribute, zero probe investment | 38.162703 | 33.294543 | 24.340801 | +0.003475 | 0.386579 |
+
+Utility includes consumption over the eight probe ticks and 32 continuation
+ticks, plus .2 terminal wealth. CRPS scores the updated institutional learner
+on common held-out uncapped queries; it is not a separate predictive score for
+each downstream belief input. Means average focal societies within arenas.
+
+The primary active-minus-random contrast in posterior-update value is
+**−0.000969 [−0.005181, 0.002920] per member**. Total utility improves by
+**+0.005722 [0.000791, 0.010645]**, but the contrast under frozen coefficients
+is already **+0.006691 [0.003687, 0.010896]**. The latter plus the primary
+contrast equals the total effect exactly. This control therefore does not
+attribute the small total gain to improved use of learned parameters.
+Consumption and weighted terminal wealth contribute +0.002455 and +0.003267
+to the mean total gain; their separate intervals each include zero.
+
+![Costed experiment effects and posterior-update ablation](figures/world-model-experiment-v1/experiment-effects.png)
+
+*Figure 12. Active selection against Random and Fixed Split. The primary
+update-value contrast, total utility, frozen-coefficient path contrast and
+consumption are reported separately. Black diamonds average focal societies
+within arenas. Intervals use 2,000 paired whole-arena bootstrap draws; secondary
+intervals have no multiplicity adjustment.*
+
+Active selected **Early in 71 states and Late in one**; Random selected
+Early/Late/Split **25/29/18** times. A post hoc comparison with the already
+recorded always-Early paths finds exactly zero difference in posterior-update
+value throughout the panel and a descriptive −0.000100 total-utility difference.
+This diagnostic does not replace the predeclared Random comparison; it limits
+claims that adapting timing to beliefs improves on fixed schedules generally.
+The active-minus-random post-probe CRPS contrast is also unresolved:
+**+0.000751 [−0.010876, 0.011920]**, from common pre-probe CRPS 0.402211.
+
+Against immediate redistribution, Active's total-utility contrast is
+**−0.014685 [−0.043589, 0.013016]**. Total consumption falls by
+**−0.018790 [−0.037911, −0.002780]**, while weighted terminal wealth has an
+unresolved contrast. Redistribution spends zero on probe investment and is
+outside the matched-budget comparison. This result does not establish that
+probing repays its opportunity cost. Outward harm is zero by fixed policy.
+
+![Experiment opportunity costs relative to redistribution](figures/world-model-experiment-v1/experiment-opportunity-cost.png)
+
+*Figure 13. Active, Fixed Split and Random relative to redistributing the escrow
+without probe investment. All planners use updated beliefs. Utility, uncapped
+CRPS, consumption and wealth retain separate meanings; these comparisons
+include both material and learning effects. Whole-arena intervals are
+unadjusted secondary comparisons.*
+
+The [complete experiment report](docs/world-model-experiment-v1.md),
+[evaluation gallery](figures/world-model-experiment-v1/README.md) and separate
+[development gallery](figures/world-model-experiment-development-v1/README.md)
+retain acquisition diagnostics, exact tables and six SVG/PDF/PNG figures with
+captions and source/output hashes. The information score is an approximation;
+this is one-shot selection within a supplied experiment menu and equation
+family, not structural discovery or evidence of evolved governance.
+Full semantic verification refits and replays all 24 evaluation arenas and
+the copied six-arena development proof; reconstructed tables and all artifact
+hashes match. All six figures were inspected and repeat byte-identically.
+
 ## 5. Discussion, limitations, and next experiments
 
 The experiments support a disciplined separation of outcomes. A reward function
@@ -644,8 +770,11 @@ infrastructure features are correlated or growth is consistently capped.
 
 The first numerical learner addresses the measurement problem under explicit
 instrumentation. The fixed-planner control now demonstrates a small allocation
-utility benefit from learned coefficients. These studies do not establish
-collective intelligence, autonomous experimentation, equation discovery, evolved reporting
+utility benefit from learned coefficients. One-shot experiment selection is
+also implemented, but shows no clear improvement in posterior-update value
+over random selection.
+These studies do not establish collective intelligence, open-ended autonomous
+experimentation, equation discovery, evolved reporting
 institutions, or decentralized knowledge formation. Pooled evidence is a
 reference condition, with additional data and no communication price. Posterior
 intervals are numerical approximations whose empirical calibration must be
@@ -664,19 +793,21 @@ decision horizons and outcome definitions matter. Investment occurs after
 current growth and harvesting; delayed returns changed rankings in the
 development gate. Learned coefficients then improved allocation utility on
 fresh worlds, mainly through terminal wealth. A fixed planner, generous sensors,
-nominal productivity and lagged external features limit that result. The next
-controlled stage is **costed active experimentation**, compared with fixed and
-random interventions under matched resource and communication opportunities.
-It must separate information acquired from the direct material effects of an
-intervention and report consumption, scarcity, wealth and outward harm separately.
+nominal productivity and lagged external features limit that result. The
+[completed costed experiment control](docs/world-model-experiment-v1.md)
+separates posterior-update value from differences under frozen coefficients.
+Its small active-minus-random total-utility gain is already present with
+frozen coefficients. Nearly universal Early selection and the information
+proxy's approximations limit claims about adaptive experiment design. Matching
+investment and report bytes does not match realized consumption costs or
+wealth-capped effort charges.
 
 Stage 2 will first compare supplied mechanism families, then permit terms,
 interactions, and branches to change within a declared expression grammar.
-That transition separates model selection from structural discovery. Active
-experimentation will test whether deliberately acquired knowledge improves
-subsequent decisions enough to repay its cost; broader welfare and harm effects
-remain open. Any model-driven program search
-will receive a separately specified budget.
+That transition separates model selection from structural discovery. Whether
+adaptive sequences of experiments improve decisions enough to repay their
+cost remains open, along with broader welfare and harm effects. Any model-driven
+program search will receive a separately specified budget.
 
 The economic substrate itself remains limited: fixed membership, central
 institutions, no spatial movement, no death or migration, and many regimes
@@ -711,6 +842,9 @@ OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/run_world_model_sharing.py verif
 OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/run_world_model_decision.py verify
 .venv/bin/python scripts/visualize_world_model_decision.py
 .venv/bin/python scripts/visualize_world_model_decision_gate.py
+OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/run_world_model_experiment.py verify --workers 2
+.venv/bin/python scripts/visualize_world_model_experiment.py
+.venv/bin/python scripts/visualize_world_model_experiment.py --source evidence/world-model-experiment-development-v1 --output figures/world-model-experiment-development-v1
 ```
 
 Reproduce the same deterministic case bank in a new directory, without model
@@ -731,6 +865,9 @@ OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/run_world_model_sharing.py verif
 The [decision report](docs/world-model-decision-v1.md#5-verification-scope-and-reproduction) gives the
 separate development-gate and evaluation reproduction commands. Evaluation
 preparation requires a verified passing gate and archives its full evidence.
+The [costed experiment report](docs/world-model-experiment-v1.md#reproduction)
+provides its corresponding commands. Its runner defaults to two workers and
+streams full cases into small scalar projections during aggregation.
 
 Numerical results are deterministic under the recorded software environment;
 CPU measurements and timestamps depend on the machine. Existing completed
@@ -739,7 +876,7 @@ preserving complete arenas, use
 `OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/resume_world_model_sharing.py --workers 4`.
 The separate recovery command verifies saved cases, archives partial output and
 computes only unfinished arenas; its elapsed time covers recovery only.
-The current suite passes **282 tests and 102
+The current suite passes **352 tests and 102
 subtests**, including exact legacy trajectory preservation, likelihood checks,
 planted and confounded parameter controls, deduplication, snapshot restoration,
 forecast isolation, independent posterior quadrature checks, and failed-reference
@@ -751,6 +888,10 @@ refusal and competing-run guards.
 Decision tests cover phase-by-phase restoration, exact actor and RNG parity,
 analytic planner timing, protected branches, forecast commitment, development
 gate enforcement and full case reconstruction after checksum tampering.
+Experiment tests additionally check exact escrow tranches, matched bytes,
+path-specific provenance, the parameter-update ablation, utility decomposition,
+gate readiness without filtering adverse effects, and memory-safe streaming
+with full-case invariant reconstruction.
 
 Existing evidence and figures can be checked locally without evolutionary
 inference:
@@ -771,6 +912,9 @@ The sharing study adds full private learner and transport snapshots, message
 provenance, exact evidence-count checkpoints and paired communication controls.
 The decision study adds compound world/learning/transport checkpoints, committed
 action forecasts, all menu branches and a replayable development-gate proof.
+The costed experiment archive adds committed acquisition scores, isolated
+counterfactual probe paths, experiment receipts and paired posterior-update
+ablations on the same material state.
 Every empirical figure follows [Chromatic Field v1](docs/visual-reference.md):
 warm paper, stable cobalt/magenta/orange society identities, explicit condition
 markers, and inspected SVG/PDF/PNG exports. Visuals represent recorded data;

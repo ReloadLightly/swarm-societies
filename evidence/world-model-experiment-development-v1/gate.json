@@ -1,0 +1,296 @@
+{
+  "action_changes": [
+    {
+      "arena_id": "experiment-development-000",
+      "cost_matched": true,
+      "focal": 0,
+      "frozen_action": 1.0,
+      "schedule": "early",
+      "updated_action": 0.0
+    },
+    {
+      "arena_id": "experiment-development-000",
+      "cost_matched": true,
+      "focal": 0,
+      "frozen_action": 1.0,
+      "schedule": "late",
+      "updated_action": 0.0
+    },
+    {
+      "arena_id": "experiment-development-000",
+      "cost_matched": true,
+      "focal": 0,
+      "frozen_action": 1.0,
+      "schedule": "split",
+      "updated_action": 0.0
+    },
+    {
+      "arena_id": "experiment-development-000",
+      "cost_matched": false,
+      "focal": 0,
+      "frozen_action": 0.5,
+      "schedule": "redistribute",
+      "updated_action": 0.0
+    },
+    {
+      "arena_id": "experiment-development-001",
+      "cost_matched": true,
+      "focal": 0,
+      "frozen_action": 1.0,
+      "schedule": "early",
+      "updated_action": 0.0
+    },
+    {
+      "arena_id": "experiment-development-001",
+      "cost_matched": true,
+      "focal": 0,
+      "frozen_action": 1.0,
+      "schedule": "late",
+      "updated_action": 0.0
+    },
+    {
+      "arena_id": "experiment-development-001",
+      "cost_matched": true,
+      "focal": 0,
+      "frozen_action": 1.0,
+      "schedule": "split",
+      "updated_action": 0.0
+    },
+    {
+      "arena_id": "experiment-development-001",
+      "cost_matched": false,
+      "focal": 0,
+      "frozen_action": 1.0,
+      "schedule": "redistribute",
+      "updated_action": 0.0
+    },
+    {
+      "arena_id": "experiment-development-002",
+      "cost_matched": true,
+      "focal": 1,
+      "frozen_action": 0.0,
+      "schedule": "early",
+      "updated_action": 1.0
+    },
+    {
+      "arena_id": "experiment-development-002",
+      "cost_matched": true,
+      "focal": 1,
+      "frozen_action": 0.0,
+      "schedule": "split",
+      "updated_action": 1.0
+    },
+    {
+      "arena_id": "experiment-development-004",
+      "cost_matched": true,
+      "focal": 2,
+      "frozen_action": 0.0,
+      "schedule": "late",
+      "updated_action": 1.0
+    },
+    {
+      "arena_id": "experiment-development-004",
+      "cost_matched": true,
+      "focal": 2,
+      "frozen_action": 0.0,
+      "schedule": "split",
+      "updated_action": 1.0
+    },
+    {
+      "arena_id": "experiment-development-005",
+      "cost_matched": true,
+      "focal": 1,
+      "frozen_action": 0.0,
+      "schedule": "late",
+      "updated_action": 1.0
+    },
+    {
+      "arena_id": "experiment-development-005",
+      "cost_matched": true,
+      "focal": 1,
+      "frozen_action": 0.0,
+      "schedule": "split",
+      "updated_action": 1.0
+    },
+    {
+      "arena_id": "experiment-development-005",
+      "cost_matched": true,
+      "focal": 2,
+      "frozen_action": 0.0,
+      "schedule": "early",
+      "updated_action": 1.0
+    }
+  ],
+  "bank": "development",
+  "checks": {
+    "all_invariants_valid": true,
+    "all_positive_escrow": true,
+    "all_selections_forecasts_updates_valid": true,
+    "costed_update_action_changes": true,
+    "multiple_active_schedules": true,
+    "nonfixed_proxy_advantages": true
+  },
+  "counts": {
+    "all_update_action_changes": 15,
+    "costed_update_action_changes": 13,
+    "distinct_active_schedules": 2,
+    "nonfixed_proxy_advantages": 18
+  },
+  "failed_operations": 0,
+  "n_arenas": 6,
+  "n_states": 18,
+  "passed": true,
+  "rules": {
+    "minimum_costed_action_changes": 2,
+    "minimum_distinct_active_schedules": 2,
+    "minimum_nonfixed_advantages": 2,
+    "proxy_tolerance": 0.0001
+  },
+  "states": [
+    {
+      "active_schedule": "early",
+      "arena_id": "experiment-development-000",
+      "escrow": 1.5029174667435394,
+      "focal": 0,
+      "proxy_minus_split": 0.01898317901486138,
+      "status": "ok"
+    },
+    {
+      "active_schedule": "early",
+      "arena_id": "experiment-development-000",
+      "escrow": 1.5692475268951283,
+      "focal": 1,
+      "proxy_minus_split": 0.02611767487130573,
+      "status": "ok"
+    },
+    {
+      "active_schedule": "early",
+      "arena_id": "experiment-development-000",
+      "escrow": 1.5666885535247994,
+      "focal": 2,
+      "proxy_minus_split": 0.00883902756807442,
+      "status": "ok"
+    },
+    {
+      "active_schedule": "early",
+      "arena_id": "experiment-development-001",
+      "escrow": 1.670649168424967,
+      "focal": 0,
+      "proxy_minus_split": 0.026271854940041056,
+      "status": "ok"
+    },
+    {
+      "active_schedule": "early",
+      "arena_id": "experiment-development-001",
+      "escrow": 2.1811844970090997,
+      "focal": 1,
+      "proxy_minus_split": 0.021586051078358037,
+      "status": "ok"
+    },
+    {
+      "active_schedule": "early",
+      "arena_id": "experiment-development-001",
+      "escrow": 1.4282716475043282,
+      "focal": 2,
+      "proxy_minus_split": 0.014921240498056737,
+      "status": "ok"
+    },
+    {
+      "active_schedule": "early",
+      "arena_id": "experiment-development-002",
+      "escrow": 2.931447539470274,
+      "focal": 0,
+      "proxy_minus_split": 0.0218930787610966,
+      "status": "ok"
+    },
+    {
+      "active_schedule": "late",
+      "arena_id": "experiment-development-002",
+      "escrow": 2.8549394724807224,
+      "focal": 1,
+      "proxy_minus_split": 0.010036544181463936,
+      "status": "ok"
+    },
+    {
+      "active_schedule": "early",
+      "arena_id": "experiment-development-002",
+      "escrow": 3.283381846142843,
+      "focal": 2,
+      "proxy_minus_split": 0.031913084465123254,
+      "status": "ok"
+    },
+    {
+      "active_schedule": "early",
+      "arena_id": "experiment-development-003",
+      "escrow": 2.8876180341892166,
+      "focal": 0,
+      "proxy_minus_split": 0.017416202428166577,
+      "status": "ok"
+    },
+    {
+      "active_schedule": "early",
+      "arena_id": "experiment-development-003",
+      "escrow": 3.167861237788242,
+      "focal": 1,
+      "proxy_minus_split": 0.030242743946183093,
+      "status": "ok"
+    },
+    {
+      "active_schedule": "early",
+      "arena_id": "experiment-development-003",
+      "escrow": 3.613980497695708,
+      "focal": 2,
+      "proxy_minus_split": 0.005689913072119926,
+      "status": "ok"
+    },
+    {
+      "active_schedule": "early",
+      "arena_id": "experiment-development-004",
+      "escrow": 4.411365553536112,
+      "focal": 0,
+      "proxy_minus_split": 0.028185120559411275,
+      "status": "ok"
+    },
+    {
+      "active_schedule": "early",
+      "arena_id": "experiment-development-004",
+      "escrow": 4.359645655624945,
+      "focal": 1,
+      "proxy_minus_split": 0.012709375933960598,
+      "status": "ok"
+    },
+    {
+      "active_schedule": "early",
+      "arena_id": "experiment-development-004",
+      "escrow": 4.448439837402314,
+      "focal": 2,
+      "proxy_minus_split": 0.02730396430519344,
+      "status": "ok"
+    },
+    {
+      "active_schedule": "early",
+      "arena_id": "experiment-development-005",
+      "escrow": 5.240232222195112,
+      "focal": 0,
+      "proxy_minus_split": 0.03303517653468846,
+      "status": "ok"
+    },
+    {
+      "active_schedule": "early",
+      "arena_id": "experiment-development-005",
+      "escrow": 4.545045881594508,
+      "focal": 1,
+      "proxy_minus_split": 0.01292611371002289,
+      "status": "ok"
+    },
+    {
+      "active_schedule": "early",
+      "arena_id": "experiment-development-005",
+      "escrow": 4.410932181091215,
+      "focal": 2,
+      "proxy_minus_split": 0.03799876336850344,
+      "status": "ok"
+    }
+  ],
+  "study": "world-model-experiment-v1"
+}

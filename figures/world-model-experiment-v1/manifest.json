@@ -1,0 +1,49 @@
+{
+  "arenas": 24,
+  "artifacts": {
+    "README.md": "54c227c3153654baae8217de9f96b930ea11b6412793c568800955ef2501543e",
+    "absolute-endpoints.csv": "e08c4d81268464034379e6233c0df56ac6625d68b619b0a25c6456a22ef7d0f6",
+    "experiment-effects.pdf": "1ac01e6ad7afe0a070e709365f5a21bc63dba3d957748fbbc1ab5b9266364dc5",
+    "experiment-effects.png": "c27eef94485378cfd3cae1aa025f8a951146ab4eb45c091f357951c35249e627",
+    "experiment-effects.svg": "8dcdfca6b6f3f1f49faff62be2f07ba2dd693538c9594fe9ddc187de19d10d7f",
+    "experiment-opportunity-cost.pdf": "36d73790bf3f0464b2769023afa40270fff23cbcaa046d09469ad0cd3042b3b0",
+    "experiment-opportunity-cost.png": "b578414730dec989b27887183a2e47b0a9c170d9947117a94a311f725a016e89",
+    "experiment-opportunity-cost.svg": "50c9c2ec103581d6809e9b59ab441abb563f9cfec1caf0b6e7cd1f9fcec37632",
+    "experiment-selection.pdf": "a8c1d2aa9262e79b9cde303b787584ea203c7a307cbbc42c87c6e0be5b7be11f",
+    "experiment-selection.png": "b79a7dd1e843c2584007f178fa70af7a80d46411195f505f4ddb8c2dd6245551",
+    "experiment-selection.svg": "274a2d3fb06520d7630d1400e7d9a5f5790f1be443e587d47755c2d8707f18b8",
+    "paired-estimates.csv": "a9bb6cbae3916fd67b837d45859bb848d8621bfc16c13ccd748662c7f0fb2007"
+  },
+  "bank": "evaluation",
+  "bootstrap_intervals_displayed": true,
+  "captions": {
+    "experiment-effects": "The primary contrast is active minus random in the value of posterior updating. Within each physical path, the updated and frozen-coefficient planners receive the same latest legal state; their comparison withholds coefficient updates, not all new information. Total updated-policy utility differences decompose exactly into this update-value difference and the difference under frozen coefficients. Across schedules, information value can interact with different material states. Black diamonds average focal societies within arena; society colors preserve identities. Evaluation intervals use 2,000 paired whole-arena bootstrap draws with seed 9501. Development shows descriptive means only. Secondary intervals have no multiplicity adjustment. Consumption and terminal wealth are distinct; utility includes both.",
+    "experiment-opportunity-cost": "Opportunity-cost comparison against redistributing the escrow at the first probe tick without investing it. All displayed planners use updated beliefs. This baseline spends zero on probe investment and is outside the equal-investment Active/Fixed/Random comparison. Contrasts include changes in both material paths and subsequent learning. Held-out CRPS uses the common uncapped queries and lower values indicate better predictions. Utility, consumption and terminal wealth retain distinct meanings. Evaluation intervals resample whole independent arenas after averaging focal societies; designed development cases show descriptive means without intervals. All secondary intervals are unadjusted.",
+    "experiment-selection": "Recorded experiment choices and acquisition diagnostics. Active selection maximizes a joint Gaussian moment information proxy; fixed selects Split; random makes a precommitted uniform choice. These scores are not exact expected information gain or decision value. Early, Late and Split invest the same reserved resources and use identical reporting opportunities. In development, filled markers identify the active choice and the right panel shows downstream updated-minus-frozen utility on each identical physical path. Development cases are designed states and have no population confidence intervals. In evaluation, bars describe dependent focal choices clustered within independent arenas."
+  },
+  "designed_development_cases": false,
+  "renderer_version": "costed-experiment-figures-v1",
+  "rendering_runs_evaluation": false,
+  "rendering_runs_training": false,
+  "software": {
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.3",
+    "python": "3.13.5"
+  },
+  "sources": {
+    "docs/visual-reference.md": "58308075d6cabde383126d3ccd6ea5c14da9304f59c8ef8500c36ea398016409",
+    "evidence/world-model-experiment-v1/acquisition.csv": "f6dc86c38aeae90b40af6967ff9623dc46eaabff6f3c7643a0e28e95c4368583",
+    "evidence/world-model-experiment-v1/completion.json": "e30e847b98c5cd8189a3a3fb728fd3d45bd995af9219b61627cca2adaad89dc2",
+    "evidence/world-model-experiment-v1/contrasts.csv": "a7d8d891b4617c64f26d46a3919635c6061ff35e6b83281dc5d056976d46bd84",
+    "evidence/world-model-experiment-v1/decisions.csv": "07cb6e983359e798a4a77d1ddccfdeb403013a0ae27452de528ec6b01723adb0",
+    "evidence/world-model-experiment-v1/design.json": "1b09d4dd6019dd56340de52b7bb1a7919c5101774a72258ba06cf68199dae601",
+    "evidence/world-model-experiment-v1/design.sha256": "69d60f08836dff6c2ddd26f6fdf8f6cb2c2ee4bd47aabc7b9c924d46f9346552",
+    "evidence/world-model-experiment-v1/paths.csv": "7399e5eb764ae7e114ad24d3d5fabc92166534f795c68687a77efe98d9897417",
+    "evidence/world-model-experiment-v1/scores.csv": "436da911e03679bef305df71c727a426457f948e2632e6ebd4774f257a1aa918",
+    "evidence/world-model-experiment-v1/selections.csv": "cba1ffb4842a5992bf83cf95d43f9780f1d69c9f019572830eec8a12b6882bf4",
+    "evidence/world-model-experiment-v1/summary.json": "efc9befd941d3fe23826a402e4500eaedbfedf0db88fb0301a0408ae0e0bcca7",
+    "scripts/visualize_world_model_experiment.py": "dccf5b236064aaa68670a27475ec028a7ff30731667d068cf1f3d27855103152",
+    "swarm_societies/visualize.py": "1cedaca8dbbe70aef2b763b7e4e9b67720c6a3783f6dcfe91971b6a4b141dae0"
+  },
+  "style": "Swarm Societies / Chromatic Field"
+}

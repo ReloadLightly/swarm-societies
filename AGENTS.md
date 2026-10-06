@@ -8,6 +8,8 @@ The completed private-belief sharing stage is documented in
 `docs/world-model-sharing-v1.md`. The completed stepwise allocation control is
 documented in `docs/world-model-decision-v1.md`; its earlier design rationale
 remains in `docs/world-model-decision-plan.md`.
+The completed costed experiment-selection control is documented in
+`docs/world-model-experiment-v1.md`.
 The user's current priority remains parameter learning followed by rule
 discovery; `docs/world-model-proposal.md` describes the staged design and
 `docs/research-roadmap.md` preserves the broader research program.
@@ -28,10 +30,16 @@ The separate 24-arena decision control found learned-minus-prior utility of
 to weighted terminal wealth and additional consumption in only one arena.
 The known-law reference retains planner/state approximations. Do not claim
 general consumption-welfare improvement, evolved governance or an optimal
-controller. Next: design a costed active-experimentation control, separating
-information value from direct material effects and matching fixed/random
-intervention budgets. Keep hidden external features, confidence-based selection
-and structural discovery as separately controlled stages.
+controller. The separate 24-arena costed experiment control found no clear
+active-minus-random advantage in posterior-update value: −0.000969
+[−0.005181, 0.002920] per member. A small total-utility advantage is already
+present with frozen coefficients. Active selected Early in 71/72 states;
+the Fixed Split control does not establish an advantage over all fixed timing
+schedules. Repayment relative to zero-investment redistribution remains
+unresolved. Next: a separately specified comparison of supplied mechanism
+families before structural discovery. Keep hidden external features,
+confidence-based selection and adaptive sequences of experiments as separately
+controlled stages.
 
 Sharing evidence is complete; do not restart it. For future interrupted sharing
 reproductions, use `scripts/resume_world_model_sharing.py`: the frozen original
@@ -41,6 +49,11 @@ Decision development and evaluation evidence are also complete; do not restart
 them. `scripts/run_world_model_decision.py verify` refits and replays all saved
 cases and the copied development proof. Its `run` command recovers incomplete
 reproductions by verifying saved cases and refuses to overwrite a completed bank.
+Costed experiment development and evaluation evidence are also complete; do not
+restart them. `scripts/run_world_model_experiment.py verify --workers 2` refits
+and replays all saved cases and the copied development proof. Its recovery
+preserves verified cases and refuses to overwrite a completed bank. Aggregation
+checks one full case at a time before retaining scalar projections to limit RAM.
 
 Keep the README as an informative living research paper: abstract, methods,
 actual experimental results, tables, figures, limitations and reproduction.

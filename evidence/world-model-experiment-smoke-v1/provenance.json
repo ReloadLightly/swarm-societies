@@ -1,0 +1,212 @@
+{
+  "case_index": 0,
+  "design": {
+    "bank": "development",
+    "beliefs": [
+      "frozen",
+      "updated",
+      "known"
+    ],
+    "bootstrap": {
+      "draws": 2000,
+      "level": 0.95,
+      "seed": 9501
+    },
+    "cases": [
+      {
+        "arena_id": "experiment-development-000",
+        "environment_seed": 2086980562453168125,
+        "index": 0,
+        "role_rotation": 0,
+        "world_parameters": {
+          "b": 0.7,
+          "g": 0.3,
+          "r": 2.4
+        }
+      },
+      {
+        "arena_id": "experiment-development-001",
+        "environment_seed": 8474542861641778336,
+        "index": 1,
+        "role_rotation": 1,
+        "world_parameters": {
+          "b": 2.7,
+          "g": 0.3,
+          "r": 2.4
+        }
+      },
+      {
+        "arena_id": "experiment-development-002",
+        "environment_seed": 5896507230955196720,
+        "index": 2,
+        "role_rotation": 2,
+        "world_parameters": {
+          "b": 0.7,
+          "g": 0.3,
+          "r": 4.6
+        }
+      },
+      {
+        "arena_id": "experiment-development-003",
+        "environment_seed": 862220917097687030,
+        "index": 3,
+        "role_rotation": 0,
+        "world_parameters": {
+          "b": 2.7,
+          "g": 0.3,
+          "r": 4.6
+        }
+      },
+      {
+        "arena_id": "experiment-development-004",
+        "environment_seed": 6855866428414038932,
+        "index": 4,
+        "role_rotation": 1,
+        "world_parameters": {
+          "b": 0.7,
+          "g": 0.3,
+          "r": 6.8
+        }
+      },
+      {
+        "arena_id": "experiment-development-005",
+        "environment_seed": 2854787981220909518,
+        "index": 5,
+        "role_rotation": 2,
+        "world_parameters": {
+          "b": 2.7,
+          "g": 0.3,
+          "r": 6.8
+        }
+      }
+    ],
+    "config": {
+      "consumption_need": 0.85,
+      "disturbance_tick": 24,
+      "drought_factor": 0.36,
+      "enable_disturbance": false,
+      "initial_patch": 10.0,
+      "initial_wealth": 4.0,
+      "members_per_society": 4,
+      "n_societies": 3,
+      "patch_capacity": 30.0,
+      "regeneration": 5.0,
+      "ticks": 48
+    },
+    "escrow": "All institutions reserve all tax receipts on the final warmup tick. Probe tax is zero, transfers/defense are absent, so pre-probe legal treasury B is the complete experiment budget.",
+    "failure_policy": "Retain failed selections/forecasts/updates and invalidate incomplete means. Failures or violated invariants prevent completion; no replacement or omission of arenas.",
+    "gate": {
+      "minimum_costed_action_changes": 2,
+      "minimum_distinct_active_schedules": 2,
+      "minimum_nonfixed_advantages": 2,
+      "proxy_tolerance": 0.0001
+    },
+    "horizon": 32,
+    "independent_evolutionary_runs": 0,
+    "late_offset": 4,
+    "learner_settings": {
+      "ess_fraction": 0.5,
+      "n_particles": 1024,
+      "rejuvenation_steps": 4
+    },
+    "menu": [
+      0.0,
+      0.5,
+      1.0
+    ],
+    "model_generation_calls": 0,
+    "n_probes": 64,
+    "objective": "(probe consumption + continuation consumption + 0.2 final wealth) / members",
+    "observation_contract": "Same legacy institution allowlist and authenticated previous-tick home growth event as decision-v1. Post-probe frozen and updated controls receive the identical current observation; only coefficient updates differ.",
+    "observation_mode": "full_observation_control",
+    "planner_samples": 512,
+    "prediction_samples": 512,
+    "primary": "(active updated minus frozen utility) minus (random updated minus frozen utility), averaging focal rotations within independent arenas.",
+    "prior": {
+      "b": [
+        0.5,
+        3.0
+      ],
+      "g": [
+        0.0,
+        0.8
+      ],
+      "r": [
+        2.0,
+        8.0
+      ]
+    },
+    "probe_design": "64 independent common held-out same-law queries: even rows uncapped headroom30, odd rows headroom0/2/6; own/external infrastructure uniform[0,2]. Targets never select experiments or update beliefs.",
+    "probe_ticks": 8,
+    "redistribution_control": "Outside the cost-matched comparison: return B on the first probe tick, zero probe investment.",
+    "replication_unit": "Independent shared-law arena; societies, strategies, schedules, belief ablations, members and physical branches are dependent.",
+    "schedules": [
+      "early",
+      "late",
+      "split",
+      "redistribute"
+    ],
+    "schedules_contract": {
+      "early": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "late": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "split": [
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.5,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "schema_version": 1,
+    "selector": "Joint Gaussian moment information proxy, not exact expected information gain. Fixed chooses split; random precommits one uniformly selected schedule.",
+    "selector_samples": 512,
+    "sensor_sigma": 0.05,
+    "sharing_condition": "redundant",
+    "strategies": [
+      "active",
+      "fixed",
+      "random"
+    ],
+    "study": "world-model-experiment-v1",
+    "warmup_ticks": 8
+  },
+  "purpose": "Pre-freeze numerical smoke; outcomes not inspected for gate qualification or tuning",
+  "retained_gate_evidence": false,
+  "source_hashes": {
+    "docs/world-model-decision-protocol.md": "21f86f420050987cc875b24c11e46ae01bfd308cdd07c3df9315c99629ab0143",
+    "docs/world-model-experiment-protocol.md": "b557eb510d3dad2c303e03d1533ee77ea6cff3a884613da31f809f43a4926dab",
+    "requirements-world-model-v1.txt": "9a9ebd5cf3256bb8fe44ce6d8cb6e791201f1ff7295e0149f8ef3a8bbfa778cd",
+    "scripts/run_world_model_decision.py": "6fef78ab9b34d80612847706c658a70f8dcc39a70fb7879643d36d64aa39b10a",
+    "scripts/run_world_model_experiment.py": "fab3baea433bc91c499c47aed72ad3ea3555b61437c70c6d36bbe7d9d4486507",
+    "swarm_societies/candidate.py": "0ff988ac0a8b05ca0919bb67267e6645a232fb49530cfbd51122c6b8d1dfa89b",
+    "swarm_societies/ecology_consumption_v2.py": "82c3ffe2e9431541e6e0cfbda6c97bccadfe87518bd3d17ff7661434d84e2344",
+    "swarm_societies/ecology_stepwise_v1.py": "a9f68dbfb034e9d1550c9c9ebfafe451fb86e0a63cfa811d423c478b1c6968c0",
+    "swarm_societies/ecology_world_model_v1.py": "6b1a84387efd3704efb3c4986cafcb6d9607c344c597e1aa7ec99b084357e8e7",
+    "swarm_societies/world_model_v1/__init__.py": "ef887d652d060bab39cc23090c1197907efebbad6e733aa525b443ca25540970",
+    "swarm_societies/world_model_v1/decision.py": "5b472347535b63ff5a41364f616ad484672ea3cf0a2ebf076e43545783689379",
+    "swarm_societies/world_model_v1/experimentation.py": "d4f13aa5eec8538c1ec64c109594c2767653b69a95c3d95d1ed8c2a667594c2b",
+    "swarm_societies/world_model_v1/learner.py": "0dda816df570d9b813d60a29ad2fbbc2529a29a3cf74b628720b0caa3877bfdc",
+    "swarm_societies/world_model_v1/sharing.py": "ecd86ecdb6c6fe54b6e1de564171f7b76de25ccc59a4bc90feb3e379f5957ac1"
+  }
+}

@@ -1,5 +1,91 @@
 # Active work record
 
+## Costed experiment evaluation completed, 7 October 2026
+
+The user authorized the next implementation and requested GitHub synchronization.
+All completed private-sharing and allocation-decision code, reports, frozen
+evidence and figures were committed and pushed as `7eea67c`; remote `main` was
+independently checked at that hash. Earlier historical notes about uncommitted
+work describe the preceding checkpoints. The costed experiment code, tests,
+evidence, figures and documentation are included in the commit containing this
+checkpoint, following `7eea67c` on `main`.
+
+One-shot selection now chooses Early, Late or Split investment of an exact
+escrow from existing resources, under the unchanged stepwise physical engine.
+Fixed Split and a precommitted uniform Random schedule are controls. A separate
+zero-investment redistribution path measures opportunity cost. Updated and
+frozen-coefficient downstream planners share the same latest legal state;
+their contrast measures posterior-update value on each physical path.
+
+- Selector: `swarm_societies/world_model_v1/experimentation.py`.
+- Frozen runner/protocol: `scripts/run_world_model_experiment.py` and
+  `docs/world-model-experiment-protocol.md`, with 14 archived source files.
+- Completed development and evaluation: `evidence/world-model-experiment-development-v1/`
+  and `evidence/world-model-experiment-v1/`. **Do not restart either bank.**
+- Report: `docs/world-model-experiment-v1.md`; README retains every prior study
+  and adds methods, results, limits and reproduction for this control.
+- Six inspected Chromatic Field figures in SVG/PDF/PNG, four CSV tables,
+  captions and source/output hashes under `figures/world-model-experiment-development-v1/`
+  and `figures/world-model-experiment-v1/`. All 26 gallery files repeat
+  byte-identically. Renderer: `scripts/visualize_world_model_experiment.py`.
+
+The six-arena development gate passed: 18 focal states, 72 probe paths and
+216 continuations. Active selected Early 17 times and Late once, with 18 proxy
+advantages over Split; updating changed 13 of 54 cost-matched allocations.
+No operation failed. Its descriptive active-minus-random update-value effect
+was −0.006280: readiness did not require favorable performance. The full gate
+was independently replayed before the evaluation freeze. A pre-freeze numerical
+smoke case, whose performance outcomes were not inspected for tuning, is
+preserved separately under `evidence/world-model-experiment-smoke-v1/`.
+
+The separate evaluation completed **24 independent arenas**, **72 nested focal
+states**, **288 physical probe paths** and **864 allocation continuations**.
+Its **primary active-minus-random posterior-update-value contrast is −0.000969
+[−0.005181, 0.002920] per member**. There is no clear added update value.
+Total updated-policy utility improves by **+0.005722 [0.000791, 0.010645]**,
+but **+0.006691 [0.003687, 0.010896]** is already present with frozen
+coefficients; the two terms decompose the total contrast exactly.
+
+Active selected Early in **71/72 states**. The post hoc always-Early comparison
+has exactly zero difference in update value and a descriptive −0.000100 total
+utility difference. The Fixed Split control does not establish an advantage
+over fixed timing generally. Active-minus-random post-probe CRPS is unresolved:
++0.000751 [−0.010876, 0.011920]. Against zero-investment redistribution, Active
+has unresolved total utility **−0.014685 [−0.043589, 0.013016]**, with lower
+consumption **−0.018790 [−0.037911, −0.002780]**. All secondary intervals are
+unadjusted. Repayment of the experiment's opportunity cost is not established.
+
+Every cost-matched path spends its exact escrow, averaging 3.396947 resource
+units per focal institution. Every path adds eight institutional home events
+and sends/delivers 80 KiB per focal society. Wealth-capped effort charges differ
+among schedules in five focal states: equal investment and bytes do not match
+all realized costs. All updates and forecasts succeeded. Outward harm is zero
+by prescribed policy, not learned restraint. Measurements and updates on
+counterfactual paths are dependent, not new independent replications.
+
+The full suite passes **352 tests and 102 subtests**, including 31 selector and
+39 runner tests. Aggregation checks one full case at a time and retains a small
+scalar projection to limit RAM; semantic verification still refits full learners
+and replays complete physical branches. Both 14-source freezes match the
+workspace; all 32 development and 49 evaluation artifact hashes pass; all 33
+copied development-proof files match the canonical bank byte-for-byte.
+The final full replay passed for all 24 evaluation and six copied development
+cases, including reconstructed tables, summaries and gate results. Independent
+CSV calculations reproduce all reported means and whole-arena intervals.
+Logs, independent audit outputs and a hash-linked verification receipt are
+retained under `runs/world-model-experiment-verification/`.
+
+Execution logs are retained in `runs/world-model-experiment-development-v1.log`,
+`runs/world-model-experiment-prepare.log`, `runs/world-model-experiment-evaluation-v1.log`
+and `runs/world-model-experiment-tests.log`. No new evolutionary search or
+experimental model-generation calls were used. No source or gate criteria were
+changed after freeze. Preserve the 1,024-particle/four-sweep default, conditional
+ecological interpretation and unresolved shared likelihood-CDF departure.
+
+Next: separately specify a supplied-mechanism-family comparison before
+structural discovery. Adaptive experiment sequences, hidden external features,
+confidence-based reports and any new model-driven search remain separate stages.
+
 ## Allocation decision control completed, 6 October 2026
 
 The user authorized proceeding to the next clear step: determine whether learned
