@@ -26,7 +26,11 @@ weather-aware Bayesian particles and explicit observation contracts. Across
 **0.9422 to 0.2496**; pooling three times the evidence improved the learning
 trajectory further. This instrumented control fixes policies and supplies the
 equation family, establishing measurement before institutional knowledge
-sharing, active experimentation, and rule discovery. We distinguish predictive
+sharing, active experimentation, and rule discovery. A subsequent 192-case audit
+finds close agreement with an independently implemented posterior reference;
+higher computation produces modest numerical gains at 4–5 times the cost.
+Finite-panel calibration and the ecological observation model remain explicit
+limitations. We distinguish predictive
 accuracy, identifiable physical knowledge, useful control, and evolutionary
 improvement throughout.
 
@@ -212,6 +216,32 @@ queries, and pooled references copied across society rows are dependent
 observations. Evolutionary comparisons instead require independent evolutionary
 run pairs. These are different replication units.
 
+### 3.5 Independent calibration audit
+
+The first study's spillover interval covered truth in 18/24 pooled models.
+We therefore froze a separate [calibration protocol](docs/world-model-calibration-protocol.md)
+before extending the learner to institutional reporting. The audit distinguishes
+128 prior-predictive datasets with exogenous features from 64 new ecological
+arenas with endogenous features. Only the first panel is simulation-based
+calibration under the fitted prior and likelihood [11]. The ecological panel
+retains the original interior task-law distribution and pooled observation stream.
+
+Each case compares the published particle budget (1,024 particles, four moves),
+a higher budget (4,096 particles, eight moves), and an independently implemented
+four-chain batch posterior reference. Reference qualification requires
+rank-normalized split/folded R-hat below 1.01 and bulk/tail ESS of at least 400
+for parameters and nonconstant log likelihood [12]. A failed gate triggers one
+predeclared longer run; all cases, attempts and failures remain in the evidence.
+These diagnostics do not prove exact sampling or global convergence.
+
+Parameter CDF checks are supplemented by a data-dependent log-likelihood CDF
+and a frozen-prior negative control [13]. Coverage uses Wilson binomial
+intervals; continuous and paired summaries bootstrap independent cases.
+Reference Monte Carlo error accompanies posterior-mean comparisons. Fitting
+CPU is reported separately from the additional diagnostic scoring work.
+The ecological inference target conditions on observed features; it does not
+model the complete process by which latent growth generated those features.
+
 ## 4. Experiments and results
 
 | Study | Independent search runs | Evaluation scale | Main interpretation |
@@ -220,6 +250,7 @@ run pairs. These are different replication units.
 | Consumption-v2 | 1 matched pair: 1 run per arm | 648 drought/no-drought rollouts | Small consumption advantage with greater external harm |
 | Program transplants | 0 new searches; saved coevolution lineage | 864 rollouts | Institutional harm depends on the member program background |
 | World-model-v1 | 0 searches | 24 independent law/environment arenas | Stationary parameter-learning control; fixed policies and free audit sensors |
+| World-model calibration-v1 | 0 searches | 128 prior-predictive datasets and 64 fresh ecological arenas | Independent posterior computation and uncertainty audit |
 
 ### 4.1 Initial evolution: distinguish score gains from consumption
 
@@ -354,6 +385,59 @@ guarantee under hidden features or changed mechanisms. The
 [frozen design](evidence/world-model-v1/design.json) retain the complete
 comparison and scope.
 
+### 4.5 Independent calibration and compute audit
+
+All **192 final batch references qualified**, with one prescribed retry and
+zero failed SMC updates across **40,960 unique observations**. On the fresh
+ecological panel, published spillover coverage is **57/64 (89.06%)**, with
+95% Wilson interval **[79.10%, 94.60%]**. Higher compute and the reference each
+cover **58/64 (90.63%)**. The earlier 18/24 finding did not recur; neither panel
+alone establishes why that difference occurred.
+
+| Panel | Method | 90% interval coverage: r / b / g | Mean posterior discrepancy / reference SD | Mean fitting CPU seconds |
+| --- | --- | --- | ---: | ---: |
+| Prior-predictive, 128 datasets | Published SMC | 91.41% / 94.53% / 92.19% | 0.0451 | 0.492 |
+| Prior-predictive, 128 datasets | Higher compute | 90.63% / 94.53% / 92.19% | 0.0255 | 2.094 |
+| Prior-predictive, 128 datasets | Batch reference | 89.84% / 95.31% / 92.19% | — | 2.898 |
+| Ecological, 64 arenas | Published SMC | 84.38% / 85.94% / 89.06% | 0.0424 | 2.053 |
+| Ecological, 64 arenas | Higher compute | 82.81% / 87.50% / 90.63% | 0.0284 | 10.082 |
+| Ecological, 64 arenas | Batch reference | 82.81% / 85.94% / 90.63% | — | 3.845 |
+
+Discrepancy averages absolute mean gaps, standardized by reference SD, over
+coefficients within each case and then cases. Published/reference interval-width
+ratios average 0.990–1.002 across panel/parameter combinations. The larger budget
+improves numerical agreement, but its remaining gaps approach the reference's
+own mean Monte Carlo error, about 0.026–0.027 posterior SD. These results support
+keeping the published setting as the working default; they do not show a large
+particle-induced narrowing that more computation must repair.
+
+![Independent calibration coverage and interval widths](figures/world-model-calibration-v1/parameter-coverage.png)
+
+*Figure 6. All-case parameter coverage with Wilson intervals. Controlled
+prior-predictive calibration and coverage on the ecological task are distinct
+questions. The reference's ecological renewal coverage is 53/64 (82.81%).*
+
+![Particle posteriors compared with an independent batch reference](figures/world-model-calibration-v1/posterior-agreement.png)
+
+*Figure 7. Paired posterior agreement, with reference Monte Carlo uncertainty
+shown alongside mean gaps. Higher compute costs 4.26× in the controlled panel
+and 4.91× in ecology. SMC updates sequentially; the batch reference fits the
+final history once, so this is not a matched online-latency comparison.*
+
+The data-dependent calibration check preserves an unresolved qualification.
+Controlled log-likelihood CDF departures are **0.11800**, **0.12100**, and
+**0.12275** for published, higher-compute and reference inference. The declared
+single-ECDF 95% DKW bound is **0.12004**: the latter two slightly exceed it.
+All coefficient CDF curves stay within the band, including the frozen prior,
+whose likelihood-CDF departure is **0.99707**. Parameter checks alone can thus
+accept a learner that ignores data. Related checks were not multiplicity-adjusted;
+this finite panel and an approximate reference do not certify perfect calibration.
+
+The [complete audit](docs/world-model-calibration-v1.md) reports parameter-wise
+coverage, paired differences, failure handling and model scope. The
+[Chromatic Field gallery](figures/world-model-calibration-v1/README.md) includes
+four figures, five derived tables, SVG/PDF/PNG exports and source/output hashes.
+
 ## 5. Discussion, limitations, and next experiments
 
 The experiments support a disciplined separation of outcomes. A reward function
@@ -370,11 +454,16 @@ reference condition, with additional data and no communication price. Posterior
 intervals are numerical approximations whose empirical calibration must be
 reported, not assumed.
 
-The next experiments will first test parameter calibration and compute
-sensitivity on new arenas, then reduce sensor access, introduce bounded and delayed
-reports, compare evidence-selection rules, and hold the learner fixed while
-varying information governance. Equal-time and equal-evidence comparisons
-answer different questions. Later experiments will independently change
+The calibration audit supports proceeding with **private member beliefs and
+bounded institutional reports** while retaining the published learner budget.
+Start with truthful, fixed reporting rules, explicit provenance, deduplication,
+delay and bandwidth under the current instrumented observation contract.
+Hold inference fixed while varying information governance; compare no sharing,
+bounded sharing and the pooled information ceiling. Equal-time and equal-evidence
+comparisons answer different questions. Keep the shared likelihood-CDF departure
+and ecological-model limitations visible before using uncertainty to suppress
+reports or claiming robust calibration. Later experiments will reduce sensor
+access and independently change
 physical laws, opponent policies, and report reliability to test whether a
 society revises the correct explanation.
 
@@ -411,6 +500,8 @@ Audit the completed world-model evidence and regenerate its figures:
 ```bash
 .venv/bin/python scripts/run_world_model_study.py verify
 .venv/bin/python scripts/visualize_world_model_study.py
+OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/run_world_model_calibration.py verify
+.venv/bin/python scripts/visualize_world_model_calibration.py
 ```
 
 Reproduce the same deterministic case bank in a new directory, without model
@@ -420,14 +511,18 @@ generation or evolutionary search:
 .venv/bin/python scripts/run_world_model_study.py prepare --output runs/world-model-reproduction
 .venv/bin/python scripts/run_world_model_study.py run --output runs/world-model-reproduction
 .venv/bin/python scripts/run_world_model_study.py verify --output runs/world-model-reproduction
+OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/run_world_model_calibration.py prepare --output runs/calibration-reproduction
+OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/run_world_model_calibration.py run --output runs/calibration-reproduction --workers 4
+OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/run_world_model_calibration.py verify --output runs/calibration-reproduction
 ```
 
 Numerical results are deterministic under the recorded software environment;
 CPU measurements and timestamps depend on the machine. Existing completed
-studies are not overwritten. The current suite passes **90 tests and 14
+studies are not overwritten. The current suite passes **126 tests and 35
 subtests**, including exact legacy trajectory preservation, likelihood checks,
 planted and confounded parameter controls, deduplication, snapshot restoration,
-and forecast isolation.
+forecast isolation, independent posterior quadrature checks, and failed-reference
+retention with semantic evidence reconstruction.
 
 Existing evidence and figures can be checked locally without evolutionary
 inference:
@@ -442,6 +537,8 @@ inference:
 Evidence includes frozen designs, exact program sources, data tables, accounting,
 and source/output hashes. The world-model study additionally records noisy
 measurements, forecasts, parameter estimates, learner snapshots, and computation.
+The calibration audit archives exact datasets, weighted particles, reference
+chains, retried samples and convergence diagnostics.
 Every empirical figure follows [Chromatic Field v1](docs/visual-reference.md):
 warm paper, stable cobalt/magenta/orange society identities, explicit condition
 markers, and inspected SVG/PDF/PNG exports. Visuals represent recorded data;
@@ -467,6 +564,9 @@ route, not for fitting the numerical world model or rendering recorded results.
 8. Tang, Key & Ellis (2024). [WorldCoder: Building World Models by Writing Code and Interacting with the Environment](https://proceedings.neurips.cc/paper_files/paper/2024/hash/820c61a0cd419163ccbd2c33b268816e-Abstract-Conference.html). NeurIPS.
 9. Cao et al. (2026). [ALDER: Discovering the Laws of a World by Acting in It](https://arxiv.org/abs/2609.33728). September preprint.
 10. Gneiting & Raftery (2007). [Strictly Proper Scoring Rules, Prediction, and Estimation](https://sites.stat.washington.edu/people/raftery/Research/PDF/Gneiting2007jasa.pdf). *JASA*.
+11. Talts et al. (2018). [Validating Bayesian Inference Algorithms with Simulation-Based Calibration](https://arxiv.org/abs/1804.06788). Preprint.
+12. Vehtari et al. (2021). [Rank-Normalization, Folding, and Localization: An Improved R-hat for Assessing Convergence of MCMC](https://doi.org/10.1214/20-BA1221). *Bayesian Analysis*.
+13. Modrák et al. (2025; online 2023). [Simulation-Based Calibration Checking for Bayesian Computation: The Choice of Test Quantities Shapes Sensitivity](https://doi.org/10.1214/23-BA1404). *Bayesian Analysis*.
 
 The [full research review](docs/world-model-literature.md) annotates 30 primary
 sources. Visual conventions derive from the read-only

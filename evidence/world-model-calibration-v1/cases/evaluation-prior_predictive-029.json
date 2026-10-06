@@ -1,0 +1,1897 @@
+{
+  "audit": {
+    "cohort": "prior_predictive",
+    "feature_condition_number": 6.256085934362145,
+    "feature_rank": 3,
+    "n_observations": 128,
+    "own_other_correlation": -0.19524728325475335,
+    "saturated_fraction": 0.4921875
+  },
+  "case": {
+    "case_id": "evaluation-prior_predictive-029",
+    "cohort": "prior_predictive",
+    "index": 29,
+    "role_rotation": 2,
+    "truth": {
+      "b": 0.5356211773834736,
+      "g": 0.5393592902157556,
+      "r": 5.802341696800225
+    }
+  },
+  "cdf": [
+    {
+      "case_id": "evaluation-prior_predictive-029",
+      "cdf": 0.626953125,
+      "cohort": "prior_predictive",
+      "method": "prior",
+      "quantity": "r",
+      "truth": 5.802341696800225
+    },
+    {
+      "case_id": "evaluation-prior_predictive-029",
+      "cdf": 0.0146484375,
+      "cohort": "prior_predictive",
+      "method": "prior",
+      "quantity": "b",
+      "truth": 0.5356211773834736
+    },
+    {
+      "case_id": "evaluation-prior_predictive-029",
+      "cdf": 0.66015625,
+      "cohort": "prior_predictive",
+      "method": "prior",
+      "quantity": "g",
+      "truth": 0.5393592902157556
+    },
+    {
+      "case_id": "evaluation-prior_predictive-029",
+      "cdf": 1.0,
+      "cohort": "prior_predictive",
+      "method": "prior",
+      "quantity": "log_likelihood",
+      "truth": 51.582081559578896
+    },
+    {
+      "case_id": "evaluation-prior_predictive-029",
+      "cdf": 0.13440440778727283,
+      "cohort": "prior_predictive",
+      "method": "published",
+      "quantity": "r",
+      "truth": 5.802341696800225
+    },
+    {
+      "case_id": "evaluation-prior_predictive-029",
+      "cdf": 0.4629907484592489,
+      "cohort": "prior_predictive",
+      "method": "published",
+      "quantity": "b",
+      "truth": 0.5356211773834736
+    },
+    {
+      "case_id": "evaluation-prior_predictive-029",
+      "cdf": 0.9820576991530667,
+      "cohort": "prior_predictive",
+      "method": "published",
+      "quantity": "g",
+      "truth": 0.5393592902157556
+    },
+    {
+      "case_id": "evaluation-prior_predictive-029",
+      "cdf": 0.21439194700531414,
+      "cohort": "prior_predictive",
+      "method": "published",
+      "quantity": "log_likelihood",
+      "truth": 51.582081559578896
+    },
+    {
+      "case_id": "evaluation-prior_predictive-029",
+      "cdf": 0.13656349977324928,
+      "cohort": "prior_predictive",
+      "method": "higher_compute",
+      "quantity": "r",
+      "truth": 5.802341696800225
+    },
+    {
+      "case_id": "evaluation-prior_predictive-029",
+      "cdf": 0.49891424451635447,
+      "cohort": "prior_predictive",
+      "method": "higher_compute",
+      "quantity": "b",
+      "truth": 0.5356211773834736
+    },
+    {
+      "case_id": "evaluation-prior_predictive-029",
+      "cdf": 0.981489869378058,
+      "cohort": "prior_predictive",
+      "method": "higher_compute",
+      "quantity": "g",
+      "truth": 0.5393592902157556
+    },
+    {
+      "case_id": "evaluation-prior_predictive-029",
+      "cdf": 0.2271325305643704,
+      "cohort": "prior_predictive",
+      "method": "higher_compute",
+      "quantity": "log_likelihood",
+      "truth": 51.582081559578896
+    },
+    {
+      "case_id": "evaluation-prior_predictive-029",
+      "cdf": 0.14543750000000003,
+      "cohort": "prior_predictive",
+      "method": "reference",
+      "quantity": "r",
+      "truth": 5.802341696800225
+    },
+    {
+      "case_id": "evaluation-prior_predictive-029",
+      "cdf": 0.5141250000000002,
+      "cohort": "prior_predictive",
+      "method": "reference",
+      "quantity": "b",
+      "truth": 0.5356211773834736
+    },
+    {
+      "case_id": "evaluation-prior_predictive-029",
+      "cdf": 0.9825000000000004,
+      "cohort": "prior_predictive",
+      "method": "reference",
+      "quantity": "g",
+      "truth": 0.5393592902157556
+    },
+    {
+      "case_id": "evaluation-prior_predictive-029",
+      "cdf": 0.22112500000000007,
+      "cohort": "prior_predictive",
+      "method": "reference",
+      "quantity": "log_likelihood",
+      "truth": 51.582081559578896
+    }
+  ],
+  "diagnostics": [
+    {
+      "accepted_observations": 0,
+      "attempts": 1,
+      "bulk_ess_min": null,
+      "case_id": "evaluation-prior_predictive-029",
+      "cohort": "prior_predictive",
+      "cpu_seconds": 0.05760416400000423,
+      "duplicate_events": 0,
+      "failed_updates": 0,
+      "fit_cpu_seconds": 0.000448532000000057,
+      "likelihood_evaluations": 0,
+      "method": "prior",
+      "n_observations": 128,
+      "posterior_correlation": [
+        [
+          1.0,
+          0.011323944096195006,
+          0.017840902960522216
+        ],
+        [
+          0.011323944096195006,
+          0.9999999999999998,
+          -0.007445887798115008
+        ],
+        [
+          0.017840902960522216,
+          -0.007445887798115008,
+          1.0
+        ]
+      ],
+      "rejuvenation_accepts": 0,
+      "rejuvenation_proposals": 0,
+      "resampling_events": 0,
+      "rhat_max": null,
+      "score_cpu_seconds": 0.05566545399999967,
+      "status": "passed",
+      "tail_ess_min": null,
+      "unique_particles": 1024,
+      "weight_ess": 1024.0
+    },
+    {
+      "accepted_observations": 128,
+      "attempts": 1,
+      "bulk_ess_min": null,
+      "case_id": "evaluation-prior_predictive-029",
+      "cohort": "prior_predictive",
+      "cpu_seconds": 0.2692665119999944,
+      "duplicate_events": 0,
+      "failed_updates": 0,
+      "fit_cpu_seconds": 0.23384558699999758,
+      "likelihood_evaluations": 401951,
+      "method": "published",
+      "n_observations": 128,
+      "posterior_correlation": [
+        [
+          1.0,
+          -0.679165640960451,
+          -0.7323977870227114
+        ],
+        [
+          -0.679165640960451,
+          1.0,
+          0.18140146185559122
+        ],
+        [
+          -0.7323977870227114,
+          0.18140146185559122,
+          1.0
+        ]
+      ],
+      "rejuvenation_accepts": 6422,
+      "rejuvenation_proposals": 24576,
+      "resampling_events": 6,
+      "rhat_max": null,
+      "score_cpu_seconds": 0.03403554300000167,
+      "status": "passed",
+      "tail_ess_min": null,
+      "unique_particles": 872,
+      "weight_ess": 629.4233401049639
+    },
+    {
+      "accepted_observations": 128,
+      "attempts": 1,
+      "bulk_ess_min": null,
+      "case_id": "evaluation-prior_predictive-029",
+      "cohort": "prior_predictive",
+      "cpu_seconds": 1.0442937469999976,
+      "duplicate_events": 0,
+      "failed_updates": 0,
+      "fit_cpu_seconds": 0.889059134,
+      "likelihood_evaluations": 2676380,
+      "method": "higher_compute",
+      "n_observations": 128,
+      "posterior_correlation": [
+        [
+          1.0000000000000002,
+          -0.6874794721230666,
+          -0.7398821622023113
+        ],
+        [
+          -0.6874794721230665,
+          0.9999999999999999,
+          0.22218035228044913
+        ],
+        [
+          -0.7398821622023114,
+          0.22218035228044913,
+          1.0
+        ]
+      ],
+      "rejuvenation_accepts": 49522,
+      "rejuvenation_proposals": 196608,
+      "resampling_events": 6,
+      "rhat_max": null,
+      "score_cpu_seconds": 0.14938114200000285,
+      "status": "passed",
+      "tail_ess_min": null,
+      "unique_particles": 3986,
+      "weight_ess": 2434.688970843673
+    },
+    {
+      "acceptance_rate": [
+        0.2425,
+        0.23175,
+        0.2405,
+        0.2435
+      ],
+      "attempt_diagnostics": [
+        {
+          "acceptance_rate": [
+            0.2425,
+            0.23175,
+            0.2405,
+            0.2435
+          ],
+          "bulk_ess": [
+            1075.281395268069,
+            1077.0323108891666,
+            1250.9714866602765
+          ],
+          "curvature_eigenvalues": [
+            134.0886087190425,
+            2307.6856786104727,
+            73699.70897738384
+          ],
+          "draws_per_chain": 4000,
+          "draws_per_split_chain": 2000,
+          "duplicate_events": 0,
+          "elapsed_seconds": 2.843865916998766,
+          "flat_log_likelihood": false,
+          "initial_states": [
+            [
+              6.022086957929561,
+              0.5105452878040172,
+              0.37691349703494326
+            ],
+            [
+              5.860028941095107,
+              0.5440071192215667,
+              0.466253832365493
+            ],
+            [
+              5.904311284135884,
+              0.6219839023239268,
+              0.4177132132224148
+            ],
+            [
+              5.52338402965079,
+              0.7788037292579836,
+              0.3822210795849589
+            ]
+          ],
+          "initialization": "independent prior starts; bounded MAP; overdispersed curvature noise",
+          "initialization_boundary_fallbacks": 0,
+          "likelihood_candidate_evaluations": 15554,
+          "log_likelihood": {
+            "bulk_ess": [
+              1104.36534461839
+            ],
+            "draws_per_split_chain": 2000,
+            "min_ess": 400.0,
+            "passed": true,
+            "rhat": [
+              1.0064242503827379
+            ],
+            "rhat_limit": 1.01,
+            "split_chains": 8,
+            "tail_ess": [
+              1492.999365599173
+            ]
+          },
+          "map_log_likelihood": [
+            53.316960601088624,
+            53.31696060108647,
+            53.31696060108603,
+            53.316960601087224,
+            53.316960601086635
+          ],
+          "map_success": [
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "mean_ess": [
+            1074.2065562217147,
+            1034.6489430663203,
+            1235.0760768898797
+          ],
+          "mean_mcse": [
+            0.0017691798811031944,
+            0.0008770976940297338,
+            0.0013564028298157305
+          ],
+          "min_ess": 400.0,
+          "n_chains": 4,
+          "passed": true,
+          "proposal_covariance_unit_coordinates": [
+            [
+              0.00024333035650309946,
+              -0.00022551100899336979,
+              -0.0010927026134843196
+            ],
+            [
+              -0.00022551100899336979,
+              0.0003753454676019639,
+              0.0005632661436631569
+            ],
+            [
+              -0.0010927026134843196,
+              0.0005632661436631569,
+              0.008499041887016539
+            ]
+          ],
+          "rhat": [
+            1.0031773580116976,
+            1.0044126588166824,
+            1.001470016143077
+          ],
+          "rhat_limit": 1.01,
+          "split_chains": 8,
+          "status": "passed",
+          "tail_ess": [
+            1927.1886033667963,
+            1623.7661015612082,
+            1625.00166323919
+          ],
+          "unique_observations": 128,
+          "warmup": 1000,
+          "warmup_acceptance_rate": [
+            0.249,
+            0.255,
+            0.241,
+            0.256
+          ]
+        }
+      ],
+      "attempts": 1,
+      "bulk_ess": [
+        1075.281395268069,
+        1077.0323108891666,
+        1250.9714866602765
+      ],
+      "bulk_ess_min": 1075.281395268069,
+      "case_id": "evaluation-prior_predictive-029",
+      "cohort": "prior_predictive",
+      "cpu_seconds": 3.057517568999998,
+      "curvature_eigenvalues": [
+        134.0886087190425,
+        2307.6856786104727,
+        73699.70897738384
+      ],
+      "draws_per_chain": 4000,
+      "draws_per_split_chain": 2000,
+      "duplicate_events": 0,
+      "elapsed_seconds": 2.843865916998766,
+      "fit_cpu_seconds": 3.057301269,
+      "flat_log_likelihood": false,
+      "initial_states": [
+        [
+          6.022086957929561,
+          0.5105452878040172,
+          0.37691349703494326
+        ],
+        [
+          5.860028941095107,
+          0.5440071192215667,
+          0.466253832365493
+        ],
+        [
+          5.904311284135884,
+          0.6219839023239268,
+          0.4177132132224148
+        ],
+        [
+          5.52338402965079,
+          0.7788037292579836,
+          0.3822210795849589
+        ]
+      ],
+      "initialization": "independent prior starts; bounded MAP; overdispersed curvature noise",
+      "initialization_boundary_fallbacks": 0,
+      "likelihood_candidate_evaluations": 15554,
+      "log_likelihood": {
+        "bulk_ess": [
+          1104.36534461839
+        ],
+        "draws_per_split_chain": 2000,
+        "min_ess": 400.0,
+        "passed": true,
+        "rhat": [
+          1.0064242503827379
+        ],
+        "rhat_limit": 1.01,
+        "split_chains": 8,
+        "tail_ess": [
+          1492.999365599173
+        ]
+      },
+      "map_log_likelihood": [
+        53.316960601088624,
+        53.31696060108647,
+        53.31696060108603,
+        53.316960601087224,
+        53.316960601086635
+      ],
+      "map_success": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "mean_ess": [
+        1074.2065562217147,
+        1034.6489430663203,
+        1235.0760768898797
+      ],
+      "mean_mcse": [
+        0.0017691798811031944,
+        0.0008770976940297338,
+        0.0013564028298157305
+      ],
+      "method": "reference",
+      "min_ess": 400.0,
+      "n_chains": 4,
+      "n_observations": 128,
+      "passed": true,
+      "posterior_correlation": [
+        [
+          1.0,
+          -0.7107190258990809,
+          -0.7504644881817853
+        ],
+        [
+          -0.7107190258990809,
+          1.0000000000000002,
+          0.2511015737603337
+        ],
+        [
+          -0.7504644881817853,
+          0.2511015737603337,
+          1.0
+        ]
+      ],
+      "proposal_covariance_unit_coordinates": [
+        [
+          0.00024333035650309946,
+          -0.00022551100899336979,
+          -0.0010927026134843196
+        ],
+        [
+          -0.00022551100899336979,
+          0.0003753454676019639,
+          0.0005632661436631569
+        ],
+        [
+          -0.0010927026134843196,
+          0.0005632661436631569,
+          0.008499041887016539
+        ]
+      ],
+      "rhat": [
+        1.0031773580116976,
+        1.0044126588166824,
+        1.001470016143077
+      ],
+      "rhat_limit": 1.01,
+      "rhat_max": 1.0064242503827379,
+      "score_cpu_seconds": 0.0,
+      "split_chains": 8,
+      "status": "passed",
+      "tail_ess": [
+        1927.1886033667963,
+        1623.7661015612082,
+        1625.00166323919
+      ],
+      "tail_ess_min": 1492.999365599173,
+      "unique_observations": 128,
+      "warmup": 1000,
+      "warmup_acceptance_rate": [
+        0.249,
+        0.255,
+        0.241,
+        0.256
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/0",
+      "growth": 6.405167307778124,
+      "other_infrastructure": 1.9016251068612635,
+      "own_infrastructure": 0.5656605575985598,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/1",
+      "growth": 7.3027283509801,
+      "other_infrastructure": 1.4124354010754294,
+      "own_infrastructure": 1.7988806478234478,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/2",
+      "growth": 6.132647635493608,
+      "other_infrastructure": 1.992465093259053,
+      "own_infrastructure": 0.7962069017462967,
+      "sensor_sigma": 0.05,
+      "stock_before": 24.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/3",
+      "growth": 0.05794823572432681,
+      "other_infrastructure": 1.2809037145082605,
+      "own_infrastructure": 1.9092234922383364,
+      "sensor_sigma": 0.05,
+      "stock_before": 30.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/4",
+      "growth": 5.857100768022372,
+      "other_infrastructure": 0.31052712968244744,
+      "own_infrastructure": 1.3855642143647504,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/5",
+      "growth": 7.50960201652449,
+      "other_infrastructure": 0.20600353243451375,
+      "own_infrastructure": 1.4536400979756519,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/6",
+      "growth": 6.073619249095049,
+      "other_infrastructure": 1.6445653272206893,
+      "own_infrastructure": 0.7629307655636204,
+      "sensor_sigma": 0.05,
+      "stock_before": 24.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/7",
+      "growth": -0.1082626488796355,
+      "other_infrastructure": 0.6019648009267207,
+      "own_infrastructure": 0.13059064839413947,
+      "sensor_sigma": 0.05,
+      "stock_before": 30.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/8",
+      "growth": 7.6633525583819555,
+      "other_infrastructure": 0.568954555123198,
+      "own_infrastructure": 1.9932703169193522,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/9",
+      "growth": 7.6617264702131145,
+      "other_infrastructure": 1.4398325262187979,
+      "own_infrastructure": 0.8434341824217004,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/10",
+      "growth": 6.044960091200343,
+      "other_infrastructure": 1.442995174389053,
+      "own_infrastructure": 0.18434806918490176,
+      "sensor_sigma": 0.05,
+      "stock_before": 24.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/11",
+      "growth": -0.0032411155674457906,
+      "other_infrastructure": 1.839371804403581,
+      "own_infrastructure": 0.17063178512853439,
+      "sensor_sigma": 0.05,
+      "stock_before": 30.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/12",
+      "growth": 6.7227101994720195,
+      "other_infrastructure": 0.477621916209215,
+      "own_infrastructure": 1.6570181478681039,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/13",
+      "growth": 7.491621727581277,
+      "other_infrastructure": 0.6524348664537936,
+      "own_infrastructure": 0.989541195285319,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/14",
+      "growth": 5.981450863326216,
+      "other_infrastructure": 1.6470949082835808,
+      "own_infrastructure": 1.6416766839552568,
+      "sensor_sigma": 0.05,
+      "stock_before": 24.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/15",
+      "growth": -0.03827473057707083,
+      "other_infrastructure": 1.4005923107290819,
+      "own_infrastructure": 0.9355816459436281,
+      "sensor_sigma": 0.05,
+      "stock_before": 30.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/16",
+      "growth": 6.8915906692810545,
+      "other_infrastructure": 1.440217283689356,
+      "own_infrastructure": 0.8906190088019661,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/17",
+      "growth": 6.600010254352733,
+      "other_infrastructure": 0.5671404090519585,
+      "own_infrastructure": 0.5176018084913836,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/18",
+      "growth": 5.952405890496201,
+      "other_infrastructure": 0.2456969477226698,
+      "own_infrastructure": 1.7863746641214773,
+      "sensor_sigma": 0.05,
+      "stock_before": 24.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/19",
+      "growth": 0.0026699902402259586,
+      "other_infrastructure": 1.7557258142062127,
+      "own_infrastructure": 0.2661547368122792,
+      "sensor_sigma": 0.05,
+      "stock_before": 30.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/20",
+      "growth": 7.395533792388917,
+      "other_infrastructure": 0.9770991120346371,
+      "own_infrastructure": 0.5221172612394256,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/21",
+      "growth": 6.246327463529025,
+      "other_infrastructure": 0.2296631270746683,
+      "own_infrastructure": 0.5251784204780297,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/22",
+      "growth": 5.986731509173145,
+      "other_infrastructure": 1.007943745947906,
+      "own_infrastructure": 0.19805048720588458,
+      "sensor_sigma": 0.05,
+      "stock_before": 24.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/23",
+      "growth": 0.05266903449057279,
+      "other_infrastructure": 0.9469196620901368,
+      "own_infrastructure": 0.5786612168360248,
+      "sensor_sigma": 0.05,
+      "stock_before": 30.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/24",
+      "growth": 6.379501987676056,
+      "other_infrastructure": 1.3399524454371343,
+      "own_infrastructure": 0.11924380723132377,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/25",
+      "growth": 6.679953649634246,
+      "other_infrastructure": 1.1586834196982592,
+      "own_infrastructure": 0.5965996438680805,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/26",
+      "growth": 5.990293110429224,
+      "other_infrastructure": 1.2817774147448147,
+      "own_infrastructure": 0.88799337926545,
+      "sensor_sigma": 0.05,
+      "stock_before": 24.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/27",
+      "growth": -0.017383485728759026,
+      "other_infrastructure": 1.7112022260177802,
+      "own_infrastructure": 0.028406743259226985,
+      "sensor_sigma": 0.05,
+      "stock_before": 30.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/28",
+      "growth": 7.674053328814108,
+      "other_infrastructure": 1.8563065323597718,
+      "own_infrastructure": 0.4876974983870461,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/29",
+      "growth": 6.952186233485261,
+      "other_infrastructure": 0.35561959370564256,
+      "own_infrastructure": 0.6650457151411524,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/30",
+      "growth": 6.020489193787973,
+      "other_infrastructure": 1.0046150688165039,
+      "own_infrastructure": 1.7612156252630102,
+      "sensor_sigma": 0.05,
+      "stock_before": 24.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/31",
+      "growth": 0.02931686106551499,
+      "other_infrastructure": 1.0080309272099888,
+      "own_infrastructure": 1.6253434536685984,
+      "sensor_sigma": 0.05,
+      "stock_before": 30.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/32",
+      "growth": 7.426999503559714,
+      "other_infrastructure": 0.6026236214556955,
+      "own_infrastructure": 1.065696001208223,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/33",
+      "growth": 6.232027058713925,
+      "other_infrastructure": 0.29253683681362164,
+      "own_infrastructure": 1.9413520979539747,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/34",
+      "growth": 5.968791726966432,
+      "other_infrastructure": 0.21338113428777072,
+      "own_infrastructure": 1.278249641070471,
+      "sensor_sigma": 0.05,
+      "stock_before": 24.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/35",
+      "growth": -0.015189137653453911,
+      "other_infrastructure": 1.4456630704492,
+      "own_infrastructure": 1.5177174511425173,
+      "sensor_sigma": 0.05,
+      "stock_before": 30.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/36",
+      "growth": 6.028516846471309,
+      "other_infrastructure": 0.06417205849843244,
+      "own_infrastructure": 1.5251838806201619,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/37",
+      "growth": 6.15863825091483,
+      "other_infrastructure": 0.12923150024672947,
+      "own_infrastructure": 1.052692153489385,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/38",
+      "growth": 5.9617703088654075,
+      "other_infrastructure": 1.2727509132784143,
+      "own_infrastructure": 1.773741544463182,
+      "sensor_sigma": 0.05,
+      "stock_before": 24.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/39",
+      "growth": -0.05425250314419834,
+      "other_infrastructure": 1.7100376985915529,
+      "own_infrastructure": 0.8984739362382292,
+      "sensor_sigma": 0.05,
+      "stock_before": 30.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/40",
+      "growth": 7.003890398809266,
+      "other_infrastructure": 0.4657750204397024,
+      "own_infrastructure": 1.8521094712884216,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/41",
+      "growth": 7.600450562433461,
+      "other_infrastructure": 1.9354266235992326,
+      "own_infrastructure": 1.1223902872768716,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/42",
+      "growth": 5.995423022110057,
+      "other_infrastructure": 1.6660553398976672,
+      "own_infrastructure": 0.5332766778145643,
+      "sensor_sigma": 0.05,
+      "stock_before": 24.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/43",
+      "growth": -0.02113751869689266,
+      "other_infrastructure": 1.7086206482086754,
+      "own_infrastructure": 0.6256022308326903,
+      "sensor_sigma": 0.05,
+      "stock_before": 30.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/44",
+      "growth": 6.956640698952938,
+      "other_infrastructure": 1.6918545338975002,
+      "own_infrastructure": 1.8022230834946447,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/45",
+      "growth": 7.523311080935898,
+      "other_infrastructure": 0.8443367832791773,
+      "own_infrastructure": 0.7392058158846317,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/46",
+      "growth": 5.662926048820722,
+      "other_infrastructure": 1.3269848061832241,
+      "own_infrastructure": 0.013757849188116733,
+      "sensor_sigma": 0.05,
+      "stock_before": 24.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/47",
+      "growth": -0.021222525675591006,
+      "other_infrastructure": 0.2107465925014096,
+      "own_infrastructure": 1.4896635424254454,
+      "sensor_sigma": 0.05,
+      "stock_before": 30.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/48",
+      "growth": 7.956044357583133,
+      "other_infrastructure": 1.9732643788786217,
+      "own_infrastructure": 1.9619509852213386,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/49",
+      "growth": 7.679264854683974,
+      "other_infrastructure": 0.21380269017922693,
+      "own_infrastructure": 1.6228560998728672,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/50",
+      "growth": 6.081321357091009,
+      "other_infrastructure": 0.6363844430013517,
+      "own_infrastructure": 1.274078206593006,
+      "sensor_sigma": 0.05,
+      "stock_before": 24.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/51",
+      "growth": -0.012733030954889805,
+      "other_infrastructure": 0.403874831484895,
+      "own_infrastructure": 1.2384835936950616,
+      "sensor_sigma": 0.05,
+      "stock_before": 30.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/52",
+      "growth": 6.545614669582986,
+      "other_infrastructure": 0.6377753594165285,
+      "own_infrastructure": 1.3049298469445207,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/53",
+      "growth": 7.2568597845174505,
+      "other_infrastructure": 1.9082897493200763,
+      "own_infrastructure": 1.3958648033476384,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/54",
+      "growth": 6.0542569444688485,
+      "other_infrastructure": 0.9915018286792203,
+      "own_infrastructure": 0.8535917398123563,
+      "sensor_sigma": 0.05,
+      "stock_before": 24.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/55",
+      "growth": -0.037255386703169774,
+      "other_infrastructure": 0.31150009165821735,
+      "own_infrastructure": 1.6624967439911562,
+      "sensor_sigma": 0.05,
+      "stock_before": 30.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/56",
+      "growth": 8.22903899550447,
+      "other_infrastructure": 1.4920768440224716,
+      "own_infrastructure": 1.8841368885666363,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/57",
+      "growth": 6.230394669946844,
+      "other_infrastructure": 0.318904202227549,
+      "own_infrastructure": 1.014410633383904,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/58",
+      "growth": 6.007506362515234,
+      "other_infrastructure": 0.6966424506957467,
+      "own_infrastructure": 0.4395366676967587,
+      "sensor_sigma": 0.05,
+      "stock_before": 24.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/59",
+      "growth": 0.06814239470941148,
+      "other_infrastructure": 0.8492544925665755,
+      "own_infrastructure": 1.6519094813614945,
+      "sensor_sigma": 0.05,
+      "stock_before": 30.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/60",
+      "growth": 6.4995393056052295,
+      "other_infrastructure": 1.744603753488628,
+      "own_infrastructure": 1.0915083448308063,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/61",
+      "growth": 6.672893898565658,
+      "other_infrastructure": 1.5900465475369974,
+      "own_infrastructure": 0.15816487431090387,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/62",
+      "growth": 5.876509466872111,
+      "other_infrastructure": 1.2397068771746858,
+      "own_infrastructure": 0.9864176562558087,
+      "sensor_sigma": 0.05,
+      "stock_before": 24.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/63",
+      "growth": -0.11164347994777171,
+      "other_infrastructure": 0.21943337531829843,
+      "own_infrastructure": 0.5166058191745981,
+      "sensor_sigma": 0.05,
+      "stock_before": 30.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/64",
+      "growth": 5.655879610139642,
+      "other_infrastructure": 0.03335008930879346,
+      "own_infrastructure": 1.0825446535534202,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/65",
+      "growth": 7.361325158789773,
+      "other_infrastructure": 1.8313286501373311,
+      "own_infrastructure": 1.0695638720810645,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/66",
+      "growth": 6.07782345137879,
+      "other_infrastructure": 0.41611309163952237,
+      "own_infrastructure": 1.3341187295575594,
+      "sensor_sigma": 0.05,
+      "stock_before": 24.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/67",
+      "growth": -0.12387249705685965,
+      "other_infrastructure": 1.1145168147733293,
+      "own_infrastructure": 0.6211529127442554,
+      "sensor_sigma": 0.05,
+      "stock_before": 30.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/68",
+      "growth": 6.805431872768818,
+      "other_infrastructure": 1.4882660423641891,
+      "own_infrastructure": 0.44186956853070325,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/69",
+      "growth": 8.334445231888106,
+      "other_infrastructure": 1.6240859498879767,
+      "own_infrastructure": 1.964302471344076,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/70",
+      "growth": 5.9615839397395645,
+      "other_infrastructure": 1.6116422835489275,
+      "own_infrastructure": 0.34921356794419234,
+      "sensor_sigma": 0.05,
+      "stock_before": 24.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/71",
+      "growth": 0.03322725641383981,
+      "other_infrastructure": 1.5534643477279915,
+      "own_infrastructure": 0.3778286204283814,
+      "sensor_sigma": 0.05,
+      "stock_before": 30.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/72",
+      "growth": 6.345237625936856,
+      "other_infrastructure": 0.9237013560068967,
+      "own_infrastructure": 0.006954163972603178,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/73",
+      "growth": 7.19875618938684,
+      "other_infrastructure": 1.249774088278829,
+      "own_infrastructure": 1.4615272337518035,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/74",
+      "growth": 5.983812514094663,
+      "other_infrastructure": 0.7127429176942692,
+      "own_infrastructure": 0.9764945625434185,
+      "sensor_sigma": 0.05,
+      "stock_before": 24.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/75",
+      "growth": 0.025045499229153553,
+      "other_infrastructure": 0.9244860723998163,
+      "own_infrastructure": 1.9574363504590042,
+      "sensor_sigma": 0.05,
+      "stock_before": 30.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/76",
+      "growth": 6.954904010577534,
+      "other_infrastructure": 1.7199794832234998,
+      "own_infrastructure": 1.9935181247646605,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/77",
+      "growth": 6.869469460830848,
+      "other_infrastructure": 1.3239461625320734,
+      "own_infrastructure": 0.06303695467344106,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/78",
+      "growth": 6.005584152038357,
+      "other_infrastructure": 1.5324885723621358,
+      "own_infrastructure": 1.8845385264629841,
+      "sensor_sigma": 0.05,
+      "stock_before": 24.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/79",
+      "growth": -0.05563121805335063,
+      "other_infrastructure": 0.8537313208831245,
+      "own_infrastructure": 0.6789242411307927,
+      "sensor_sigma": 0.05,
+      "stock_before": 30.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/80",
+      "growth": 5.953453425563867,
+      "other_infrastructure": 0.6278841191812099,
+      "own_infrastructure": 1.1700483151421746,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/81",
+      "growth": 7.549442342870181,
+      "other_infrastructure": 1.2597038149114113,
+      "own_infrastructure": 0.6423837283664073,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/82",
+      "growth": 5.945189482384629,
+      "other_infrastructure": 1.4965732559736604,
+      "own_infrastructure": 0.43454821652656217,
+      "sensor_sigma": 0.05,
+      "stock_before": 24.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/83",
+      "growth": -0.023106968765405387,
+      "other_infrastructure": 0.38725340359676297,
+      "own_infrastructure": 0.265129313413194,
+      "sensor_sigma": 0.05,
+      "stock_before": 30.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/84",
+      "growth": 6.416557893193152,
+      "other_infrastructure": 0.2844375307290423,
+      "own_infrastructure": 0.9817530580145528,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/85",
+      "growth": 6.907631101988739,
+      "other_infrastructure": 1.8587063241340265,
+      "own_infrastructure": 0.6540525158708681,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/86",
+      "growth": 5.891580431295151,
+      "other_infrastructure": 0.5291978875979668,
+      "own_infrastructure": 1.6521134360149667,
+      "sensor_sigma": 0.05,
+      "stock_before": 24.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/87",
+      "growth": -0.04275320143690671,
+      "other_infrastructure": 0.6016447557610831,
+      "own_infrastructure": 0.032240529257391515,
+      "sensor_sigma": 0.05,
+      "stock_before": 30.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/88",
+      "growth": 6.077568078371645,
+      "other_infrastructure": 1.1854832002447715,
+      "own_infrastructure": 0.9677055420565464,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/89",
+      "growth": 8.46373030958069,
+      "other_infrastructure": 1.9300453335971124,
+      "own_infrastructure": 1.9875020475378413,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/90",
+      "growth": 6.011631135388445,
+      "other_infrastructure": 0.6182751568860672,
+      "own_infrastructure": 1.2816549088040419,
+      "sensor_sigma": 0.05,
+      "stock_before": 24.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/91",
+      "growth": -0.08424619510890882,
+      "other_infrastructure": 1.2490692777054195,
+      "own_infrastructure": 1.0723865065967304,
+      "sensor_sigma": 0.05,
+      "stock_before": 30.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/92",
+      "growth": 6.459581758550672,
+      "other_infrastructure": 1.3550902683680521,
+      "own_infrastructure": 0.436081817056035,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/93",
+      "growth": 6.801389509999904,
+      "other_infrastructure": 1.2244946113380015,
+      "own_infrastructure": 0.05047582317038568,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/94",
+      "growth": 6.013666474022904,
+      "other_infrastructure": 1.3698028374340847,
+      "own_infrastructure": 0.8308858251608529,
+      "sensor_sigma": 0.05,
+      "stock_before": 24.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/95",
+      "growth": 0.025298667462170805,
+      "other_infrastructure": 0.01967436383446519,
+      "own_infrastructure": 0.5933663317702536,
+      "sensor_sigma": 0.05,
+      "stock_before": 30.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/96",
+      "growth": 6.228944868505489,
+      "other_infrastructure": 0.36690098078754474,
+      "own_infrastructure": 0.7930194011734399,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/97",
+      "growth": 7.5439439320588,
+      "other_infrastructure": 0.7431353655961723,
+      "own_infrastructure": 1.8551017779775145,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/98",
+      "growth": 6.013085664244987,
+      "other_infrastructure": 0.30393967880423656,
+      "own_infrastructure": 0.7557890646776939,
+      "sensor_sigma": 0.05,
+      "stock_before": 24.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/99",
+      "growth": 0.015279953031500836,
+      "other_infrastructure": 0.06581360141641102,
+      "own_infrastructure": 1.2246824609547915,
+      "sensor_sigma": 0.05,
+      "stock_before": 30.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/100",
+      "growth": 7.411645719891578,
+      "other_infrastructure": 1.427896897015456,
+      "own_infrastructure": 1.418894265240866,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/101",
+      "growth": 6.649228315702869,
+      "other_infrastructure": 0.44705671163871896,
+      "own_infrastructure": 1.534111282895379,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/102",
+      "growth": 6.003603572892213,
+      "other_infrastructure": 1.0437524537443166,
+      "own_infrastructure": 0.35991226861308223,
+      "sensor_sigma": 0.05,
+      "stock_before": 24.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/103",
+      "growth": -0.05652396609477709,
+      "other_infrastructure": 0.8866030378418421,
+      "own_infrastructure": 1.7470443100193613,
+      "sensor_sigma": 0.05,
+      "stock_before": 30.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/104",
+      "growth": 6.09986835136522,
+      "other_infrastructure": 0.9049506702919736,
+      "own_infrastructure": 1.1639107489129044,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/105",
+      "growth": 8.05957203835769,
+      "other_infrastructure": 1.4639422743035988,
+      "own_infrastructure": 1.4418290320228604,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/106",
+      "growth": 6.012630778410382,
+      "other_infrastructure": 0.09167341834840914,
+      "own_infrastructure": 1.1714633101504193,
+      "sensor_sigma": 0.05,
+      "stock_before": 24.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/107",
+      "growth": 0.052082524231249344,
+      "other_infrastructure": 0.9967226113438399,
+      "own_infrastructure": 1.0241232504977853,
+      "sensor_sigma": 0.05,
+      "stock_before": 30.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/108",
+      "growth": 7.976547471085693,
+      "other_infrastructure": 1.3876012478889213,
+      "own_infrastructure": 1.7059756142122573,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/109",
+      "growth": 6.642788074803241,
+      "other_infrastructure": 1.1103882075099727,
+      "own_infrastructure": 0.569929789268895,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/110",
+      "growth": 6.036828539362011,
+      "other_infrastructure": 1.3818717463859778,
+      "own_infrastructure": 0.15743680322680476,
+      "sensor_sigma": 0.05,
+      "stock_before": 24.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/111",
+      "growth": -0.03139630975412257,
+      "other_infrastructure": 0.8328443409785737,
+      "own_infrastructure": 0.6628450128231309,
+      "sensor_sigma": 0.05,
+      "stock_before": 30.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/112",
+      "growth": 7.376425140437707,
+      "other_infrastructure": 1.8889768264992322,
+      "own_infrastructure": 0.7822646273139493,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/113",
+      "growth": 6.8259564130533175,
+      "other_infrastructure": 0.6554104346889342,
+      "own_infrastructure": 1.0359287285093268,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/114",
+      "growth": 5.94375504859988,
+      "other_infrastructure": 0.40996364545058683,
+      "own_infrastructure": 0.6080765295346853,
+      "sensor_sigma": 0.05,
+      "stock_before": 24.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/115",
+      "growth": -0.06408276258404562,
+      "other_infrastructure": 0.28092162614140004,
+      "own_infrastructure": 1.968326919442059,
+      "sensor_sigma": 0.05,
+      "stock_before": 30.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/116",
+      "growth": 6.900061969222411,
+      "other_infrastructure": 1.1739055893109767,
+      "own_infrastructure": 0.38126594198992936,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/117",
+      "growth": 6.725681085369776,
+      "other_infrastructure": 0.07862161905262388,
+      "own_infrastructure": 1.3879820161390342,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/118",
+      "growth": 5.971488718504743,
+      "other_infrastructure": 1.022615574726746,
+      "own_infrastructure": 1.420966756328221,
+      "sensor_sigma": 0.05,
+      "stock_before": 24.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/119",
+      "growth": 0.004646799239692091,
+      "other_infrastructure": 1.2015530111746273,
+      "own_infrastructure": 0.8728995654844605,
+      "sensor_sigma": 0.05,
+      "stock_before": 30.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/120",
+      "growth": 7.136834143212125,
+      "other_infrastructure": 0.49562699093893636,
+      "own_infrastructure": 1.8965909258432707,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/121",
+      "growth": 6.878843898349863,
+      "other_infrastructure": 0.7549625792436072,
+      "own_infrastructure": 1.730862555712554,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/122",
+      "growth": 5.982324439617548,
+      "other_infrastructure": 0.0944182047901303,
+      "own_infrastructure": 1.3750339911684617,
+      "sensor_sigma": 0.05,
+      "stock_before": 24.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/123",
+      "growth": -0.0971782868657608,
+      "other_infrastructure": 0.06786127089136706,
+      "own_infrastructure": 1.7182725788467632,
+      "sensor_sigma": 0.05,
+      "stock_before": 30.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/124",
+      "growth": 7.822304533037229,
+      "other_infrastructure": 0.35169559052062693,
+      "own_infrastructure": 1.8834481524063602,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/125",
+      "growth": 7.279556142968254,
+      "other_infrastructure": 1.0353649423745588,
+      "own_infrastructure": 1.5236941562250377,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/126",
+      "growth": 5.992489405975105,
+      "other_infrastructure": 1.8767373996975596,
+      "own_infrastructure": 0.40739630760536505,
+      "sensor_sigma": 0.05,
+      "stock_before": 24.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-prior_predictive-029/127",
+      "growth": -0.04555824126709681,
+      "other_infrastructure": 0.5481763101335297,
+      "own_infrastructure": 0.1314707859984905,
+      "sensor_sigma": 0.05,
+      "stock_before": 30.0
+    }
+  ],
+  "parameters": [
+    {
+      "absolute_error": 0.7834960228816499,
+      "case_id": "evaluation-prior_predictive-029",
+      "cdf": 0.626953125,
+      "cohort": "prior_predictive",
+      "covered90": 1,
+      "mean": 5.018845673918575,
+      "method": "prior",
+      "parameter": "r",
+      "q05": 2.248689794822756,
+      "q95": 7.744562072378495,
+      "sd": 1.7616847031397087,
+      "truth": 5.802341696800225,
+      "width90": 5.495872277555739
+    },
+    {
+      "absolute_error": 1.229607782867874,
+      "case_id": "evaluation-prior_predictive-029",
+      "cdf": 0.0146484375,
+      "cohort": "prior_predictive",
+      "covered90": 0,
+      "mean": 1.7652289602513476,
+      "method": "prior",
+      "parameter": "b",
+      "q05": 0.6143115897984767,
+      "q95": 2.889565105560772,
+      "sd": 0.7264080487274628,
+      "truth": 0.5356211773834736,
+      "width90": 2.2752535157622953
+    },
+    {
+      "absolute_error": 0.13905617104034518,
+      "case_id": "evaluation-prior_predictive-029",
+      "cdf": 0.66015625,
+      "cohort": "prior_predictive",
+      "covered90": 1,
+      "mean": 0.4003031191754104,
+      "method": "prior",
+      "parameter": "g",
+      "q05": 0.03782358450174744,
+      "q95": 0.762742735845208,
+      "sd": 0.23291898098947297,
+      "truth": 0.5393592902157556,
+      "width90": 0.7249191513434605
+    },
+    {
+      "absolute_error": 0.0553666731245519,
+      "case_id": "evaluation-prior_predictive-029",
+      "cdf": 0.13440440778727283,
+      "cohort": "prior_predictive",
+      "covered90": 1,
+      "mean": 5.857708369924777,
+      "method": "published",
+      "parameter": "r",
+      "q05": 5.764349756377268,
+      "q95": 5.9465114810632835,
+      "sd": 0.0542747627804124,
+      "truth": 5.802341696800225,
+      "width90": 0.18216172468601588
+    },
+    {
+      "absolute_error": 0.005316551467535735,
+      "case_id": "evaluation-prior_predictive-029",
+      "cdf": 0.4629907484592489,
+      "cohort": "prior_predictive",
+      "covered90": 1,
+      "mean": 0.5409377288510093,
+      "method": "published",
+      "parameter": "b",
+      "q05": 0.5047129314676706,
+      "q95": 0.5945785898002242,
+      "sd": 0.027349197577885058,
+      "truth": 0.5356211773834736,
+      "width90": 0.08986565833255356
+    },
+    {
+      "absolute_error": 0.08384227215138285,
+      "case_id": "evaluation-prior_predictive-029",
+      "cdf": 0.9820576991530667,
+      "cohort": "prior_predictive",
+      "covered90": 0,
+      "mean": 0.4555170180643727,
+      "method": "published",
+      "parameter": "g",
+      "q05": 0.36958187394892655,
+      "q95": 0.5202972626971469,
+      "sd": 0.0463642050249839,
+      "truth": 0.5393592902157556,
+      "width90": 0.15071538874822038
+    },
+    {
+      "absolute_error": 0.06187059502390291,
+      "case_id": "evaluation-prior_predictive-029",
+      "cdf": 0.13656349977324928,
+      "cohort": "prior_predictive",
+      "covered90": 1,
+      "mean": 5.864212291824128,
+      "method": "higher_compute",
+      "parameter": "r",
+      "q05": 5.772308030750877,
+      "q95": 5.955243596400883,
+      "sd": 0.055982599591118586,
+      "truth": 5.802341696800225,
+      "width90": 0.18293556565000557
+    },
+    {
+      "absolute_error": 0.003823077788759899,
+      "case_id": "evaluation-prior_predictive-029",
+      "cdf": 0.49891424451635447,
+      "cohort": "prior_predictive",
+      "covered90": 1,
+      "mean": 0.5394442551722335,
+      "method": "higher_compute",
+      "parameter": "b",
+      "q05": 0.5040210657092071,
+      "q95": 0.5905861388328982,
+      "sd": 0.02738948162635494,
+      "truth": 0.5356211773834736,
+      "width90": 0.0865650731236911
+    },
+    {
+      "absolute_error": 0.0901191655149775,
+      "case_id": "evaluation-prior_predictive-029",
+      "cdf": 0.981489869378058,
+      "cohort": "prior_predictive",
+      "covered90": 0,
+      "mean": 0.44924012470077807,
+      "method": "higher_compute",
+      "parameter": "g",
+      "q05": 0.366240139150974,
+      "q95": 0.5216681561223907,
+      "sd": 0.047071890812782645,
+      "truth": 0.5393592902157556,
+      "width90": 0.15542801697141673
+    },
+    {
+      "absolute_error": 0.06293247691105641,
+      "case_id": "evaluation-prior_predictive-029",
+      "cdf": 0.14543750000000003,
+      "cohort": "prior_predictive",
+      "covered90": 1,
+      "mean": 5.865274173711281,
+      "method": "reference",
+      "parameter": "r",
+      "q05": 5.768855347895967,
+      "q95": 5.956505043968556,
+      "sd": 0.05798321862476473,
+      "truth": 5.802341696800225,
+      "width90": 0.1876496960725884
+    },
+    {
+      "absolute_error": 0.004106503809960582,
+      "case_id": "evaluation-prior_predictive-029",
+      "cdf": 0.5141250000000002,
+      "cohort": "prior_predictive",
+      "covered90": 1,
+      "mean": 0.5397276811934342,
+      "method": "reference",
+      "parameter": "b",
+      "q05": 0.5037209991646215,
+      "q95": 0.5928362173464734,
+      "sd": 0.028211807141293645,
+      "truth": 0.5356211773834736,
+      "width90": 0.08911521818185186
+    },
+    {
+      "absolute_error": 0.09105462408476661,
+      "case_id": "evaluation-prior_predictive-029",
+      "cdf": 0.9825000000000004,
+      "cohort": "prior_predictive",
+      "covered90": 0,
+      "mean": 0.44830466613098896,
+      "method": "reference",
+      "parameter": "g",
+      "q05": 0.3670332525064139,
+      "q95": 0.522381476240651,
+      "sd": 0.04766745550460858,
+      "truth": 0.5393592902157556,
+      "width90": 0.15534822373423712
+    }
+  ]
+}

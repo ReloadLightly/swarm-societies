@@ -1,0 +1,4203 @@
+{
+  "audit": {
+    "cohort": "ecological",
+    "feature_condition_number": 7.257775030216107,
+    "feature_rank": 3,
+    "ledger_residual": -1.000444171950221e-11,
+    "material_digest": "5edbacde0c70d7eb1cfe426c3461aa00ea08abf2dd0671d9dbeceee66603b3c6",
+    "n_observations": 384,
+    "own_other_correlation": 0.014579388246643281,
+    "saturated_fraction": 0.0
+  },
+  "case": {
+    "case_id": "evaluation-ecological-026",
+    "cohort": "ecological",
+    "index": 26,
+    "role_rotation": 2,
+    "truth": {
+      "b": 1.2162784369182182,
+      "g": 0.07653977725727291,
+      "r": 6.665376656811571
+    }
+  },
+  "cdf": [
+    {
+      "case_id": "evaluation-ecological-026",
+      "cdf": 0.765625,
+      "cohort": "ecological",
+      "method": "prior",
+      "quantity": "r",
+      "truth": 6.665376656811571
+    },
+    {
+      "case_id": "evaluation-ecological-026",
+      "cdf": 0.2646484375,
+      "cohort": "ecological",
+      "method": "prior",
+      "quantity": "b",
+      "truth": 1.2162784369182182
+    },
+    {
+      "case_id": "evaluation-ecological-026",
+      "cdf": 0.091796875,
+      "cohort": "ecological",
+      "method": "prior",
+      "quantity": "g",
+      "truth": 0.07653977725727291
+    },
+    {
+      "case_id": "evaluation-ecological-026",
+      "cdf": 1.0,
+      "cohort": "ecological",
+      "method": "prior",
+      "quantity": "log_likelihood",
+      "truth": -284.61630315007744
+    },
+    {
+      "case_id": "evaluation-ecological-026",
+      "cdf": 0.71102891267895,
+      "cohort": "ecological",
+      "method": "published",
+      "quantity": "r",
+      "truth": 6.665376656811571
+    },
+    {
+      "case_id": "evaluation-ecological-026",
+      "cdf": 0.22057580988438447,
+      "cohort": "ecological",
+      "method": "published",
+      "quantity": "b",
+      "truth": 1.2162784369182182
+    },
+    {
+      "case_id": "evaluation-ecological-026",
+      "cdf": 0.130406923709596,
+      "cohort": "ecological",
+      "method": "published",
+      "quantity": "g",
+      "truth": 0.07653977725727291
+    },
+    {
+      "case_id": "evaluation-ecological-026",
+      "cdf": 0.05030362366659956,
+      "cohort": "ecological",
+      "method": "published",
+      "quantity": "log_likelihood",
+      "truth": -284.61630315007744
+    },
+    {
+      "case_id": "evaluation-ecological-026",
+      "cdf": 0.7138352147095175,
+      "cohort": "ecological",
+      "method": "higher_compute",
+      "quantity": "r",
+      "truth": 6.665376656811571
+    },
+    {
+      "case_id": "evaluation-ecological-026",
+      "cdf": 0.22282235750543047,
+      "cohort": "ecological",
+      "method": "higher_compute",
+      "quantity": "b",
+      "truth": 1.2162784369182182
+    },
+    {
+      "case_id": "evaluation-ecological-026",
+      "cdf": 0.12941818841067937,
+      "cohort": "ecological",
+      "method": "higher_compute",
+      "quantity": "g",
+      "truth": 0.07653977725727291
+    },
+    {
+      "case_id": "evaluation-ecological-026",
+      "cdf": 0.048615540227844756,
+      "cohort": "ecological",
+      "method": "higher_compute",
+      "quantity": "log_likelihood",
+      "truth": -284.61630315007744
+    },
+    {
+      "case_id": "evaluation-ecological-026",
+      "cdf": 0.7158125000000002,
+      "cohort": "ecological",
+      "method": "reference",
+      "quantity": "r",
+      "truth": 6.665376656811571
+    },
+    {
+      "case_id": "evaluation-ecological-026",
+      "cdf": 0.22112500000000007,
+      "cohort": "ecological",
+      "method": "reference",
+      "quantity": "b",
+      "truth": 1.2162784369182182
+    },
+    {
+      "case_id": "evaluation-ecological-026",
+      "cdf": 0.14093750000000002,
+      "cohort": "ecological",
+      "method": "reference",
+      "quantity": "g",
+      "truth": 0.07653977725727291
+    },
+    {
+      "case_id": "evaluation-ecological-026",
+      "cdf": 0.05575000000000002,
+      "cohort": "ecological",
+      "method": "reference",
+      "quantity": "log_likelihood",
+      "truth": -284.61630315007744
+    }
+  ],
+  "diagnostics": [
+    {
+      "accepted_observations": 0,
+      "attempts": 1,
+      "bulk_ess_min": null,
+      "case_id": "evaluation-ecological-026",
+      "cohort": "ecological",
+      "cpu_seconds": 0.10557648600001812,
+      "duplicate_events": 0,
+      "failed_updates": 0,
+      "fit_cpu_seconds": 0.0002679770000213466,
+      "likelihood_evaluations": 0,
+      "method": "prior",
+      "n_observations": 384,
+      "posterior_correlation": [
+        [
+          0.9999999999999999,
+          0.005907285711188115,
+          0.020609438910220743
+        ],
+        [
+          0.005907285711188115,
+          1.0000000000000002,
+          0.04315891392625919
+        ],
+        [
+          0.020609438910220743,
+          0.04315891392625919,
+          1.0
+        ]
+      ],
+      "rejuvenation_accepts": 0,
+      "rejuvenation_proposals": 0,
+      "resampling_events": 0,
+      "rhat_max": null,
+      "score_cpu_seconds": 0.10399367299999085,
+      "status": "passed",
+      "tail_ess_min": null,
+      "unique_particles": 1024,
+      "weight_ess": 1024.0
+    },
+    {
+      "accepted_observations": 384,
+      "attempts": 1,
+      "bulk_ess_min": null,
+      "case_id": "evaluation-ecological-026",
+      "cohort": "ecological",
+      "cpu_seconds": 2.136504821000017,
+      "duplicate_events": 0,
+      "failed_updates": 0,
+      "fit_cpu_seconds": 2.0137129029999983,
+      "likelihood_evaluations": 4037193,
+      "method": "published",
+      "n_observations": 384,
+      "posterior_correlation": [
+        [
+          0.9999999999999999,
+          -0.44371190299750224,
+          -0.7679684316174789
+        ],
+        [
+          -0.44371190299750224,
+          1.0,
+          -0.1231625239146811
+        ],
+        [
+          -0.7679684316174789,
+          -0.12316252391468113,
+          0.9999999999999999
+        ]
+      ],
+      "rejuvenation_accepts": 12762,
+      "rejuvenation_proposals": 49152,
+      "resampling_events": 12,
+      "rhat_max": null,
+      "score_cpu_seconds": 0.12112437600001158,
+      "status": "passed",
+      "tail_ess_min": null,
+      "unique_particles": 855,
+      "weight_ess": 825.3870157655697
+    },
+    {
+      "accepted_observations": 384,
+      "attempts": 1,
+      "bulk_ess_min": null,
+      "case_id": "evaluation-ecological-026",
+      "cohort": "ecological",
+      "cpu_seconds": 9.832339869999998,
+      "duplicate_events": 0,
+      "failed_updates": 0,
+      "fit_cpu_seconds": 9.376320900999985,
+      "likelihood_evaluations": 30790066,
+      "method": "higher_compute",
+      "n_observations": 384,
+      "posterior_correlation": [
+        [
+          1.0,
+          -0.4666563600110458,
+          -0.7574092199355601
+        ],
+        [
+          -0.4666563600110458,
+          1.0,
+          -0.12097703986788663
+        ],
+        [
+          -0.7574092199355601,
+          -0.1209770398678866,
+          1.0
+        ]
+      ],
+      "rejuvenation_accepts": 99846,
+      "rejuvenation_proposals": 393216,
+      "resampling_events": 12,
+      "rhat_max": null,
+      "score_cpu_seconds": 0.45166457599998466,
+      "status": "passed",
+      "tail_ess_min": null,
+      "unique_particles": 3912,
+      "weight_ess": 3256.371056516057
+    },
+    {
+      "acceptance_rate": [
+        0.2345,
+        0.249,
+        0.2445,
+        0.2375
+      ],
+      "attempt_diagnostics": [
+        {
+          "acceptance_rate": [
+            0.2345,
+            0.249,
+            0.2445,
+            0.2375
+          ],
+          "bulk_ess": [
+            1413.112605972637,
+            1240.7072094498799,
+            1496.9369386002018
+          ],
+          "curvature_eigenvalues": [
+            799.7880138742445,
+            13085.51921037385,
+            299109.1240589386
+          ],
+          "draws_per_chain": 4000,
+          "draws_per_split_chain": 2000,
+          "duplicate_events": 0,
+          "elapsed_seconds": 3.315872737002792,
+          "flat_log_likelihood": false,
+          "initial_states": [
+            [
+              6.485895428991811,
+              1.2747095558754495,
+              0.1950365138169665
+            ],
+            [
+              6.611100591979502,
+              1.2804325997878148,
+              0.06458188805944291
+            ],
+            [
+              6.582843382742199,
+              1.2696912843848316,
+              0.12728483802792118
+            ],
+            [
+              6.578796461652463,
+              1.196835524374613,
+              0.20287286493673362
+            ]
+          ],
+          "initialization": "independent prior starts; bounded MAP; overdispersed curvature noise",
+          "initialization_boundary_fallbacks": 0,
+          "likelihood_candidate_evaluations": 20048,
+          "log_likelihood": {
+            "bulk_ess": [
+              888.8418890062356
+            ],
+            "draws_per_split_chain": 2000,
+            "min_ess": 400.0,
+            "passed": true,
+            "rhat": [
+              1.0026809118302251
+            ],
+            "rhat_limit": 1.01,
+            "split_chains": 8,
+            "tail_ess": [
+              1210.0532182816298
+            ]
+          },
+          "map_log_likelihood": [
+            -280.68724708043334,
+            -280.68724708043567,
+            -280.68724708043214,
+            -280.6872470804385,
+            -280.6872470804335
+          ],
+          "map_success": [
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "mean_ess": [
+            1409.1232413784776,
+            1227.126495574578,
+            1493.206724125757
+          ],
+          "mean_mcse": [
+            0.0009866131381486823,
+            0.0006023741976331966,
+            0.0007375773042041234
+          ],
+          "min_ess": 400.0,
+          "n_chains": 4,
+          "passed": true,
+          "proposal_covariance_unit_coordinates": [
+            [
+              0.0001024336180471776,
+              -5.813908343318098e-05,
+              -0.00044847494836344325
+            ],
+            [
+              -5.813908343318098e-05,
+              0.00016976717885393446,
+              -0.00010525129338671706
+            ],
+            [
+              -0.00044847494836344325,
+              -0.00010525129338671706,
+              0.003389211612803856
+            ]
+          ],
+          "rhat": [
+            1.003940047225178,
+            1.0050550043511965,
+            1.00119794849917
+          ],
+          "rhat_limit": 1.01,
+          "split_chains": 8,
+          "status": "passed",
+          "tail_ess": [
+            1771.8311345728605,
+            1453.5862099364854,
+            1806.8589199964522
+          ],
+          "unique_observations": 384,
+          "warmup": 1000,
+          "warmup_acceptance_rate": [
+            0.271,
+            0.281,
+            0.276,
+            0.246
+          ]
+        }
+      ],
+      "attempts": 1,
+      "bulk_ess": [
+        1413.112605972637,
+        1240.7072094498799,
+        1496.9369386002018
+      ],
+      "bulk_ess_min": 888.8418890062356,
+      "case_id": "evaluation-ecological-026",
+      "cohort": "ecological",
+      "cpu_seconds": 3.582006303000014,
+      "curvature_eigenvalues": [
+        799.7880138742445,
+        13085.51921037385,
+        299109.1240589386
+      ],
+      "draws_per_chain": 4000,
+      "draws_per_split_chain": 2000,
+      "duplicate_events": 0,
+      "elapsed_seconds": 3.315872737002792,
+      "fit_cpu_seconds": 3.581449378000002,
+      "flat_log_likelihood": false,
+      "initial_states": [
+        [
+          6.485895428991811,
+          1.2747095558754495,
+          0.1950365138169665
+        ],
+        [
+          6.611100591979502,
+          1.2804325997878148,
+          0.06458188805944291
+        ],
+        [
+          6.582843382742199,
+          1.2696912843848316,
+          0.12728483802792118
+        ],
+        [
+          6.578796461652463,
+          1.196835524374613,
+          0.20287286493673362
+        ]
+      ],
+      "initialization": "independent prior starts; bounded MAP; overdispersed curvature noise",
+      "initialization_boundary_fallbacks": 0,
+      "likelihood_candidate_evaluations": 20048,
+      "log_likelihood": {
+        "bulk_ess": [
+          888.8418890062356
+        ],
+        "draws_per_split_chain": 2000,
+        "min_ess": 400.0,
+        "passed": true,
+        "rhat": [
+          1.0026809118302251
+        ],
+        "rhat_limit": 1.01,
+        "split_chains": 8,
+        "tail_ess": [
+          1210.0532182816298
+        ]
+      },
+      "map_log_likelihood": [
+        -280.68724708043334,
+        -280.68724708043567,
+        -280.68724708043214,
+        -280.6872470804385,
+        -280.6872470804335
+      ],
+      "map_success": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "mean_ess": [
+        1409.1232413784776,
+        1227.126495574578,
+        1493.206724125757
+      ],
+      "mean_mcse": [
+        0.0009866131381486823,
+        0.0006023741976331966,
+        0.0007375773042041234
+      ],
+      "method": "reference",
+      "min_ess": 400.0,
+      "n_chains": 4,
+      "n_observations": 384,
+      "passed": true,
+      "posterior_correlation": [
+        [
+          1.0,
+          -0.46309087688549355,
+          -0.7474713483027049
+        ],
+        [
+          -0.46309087688549355,
+          1.0000000000000002,
+          -0.14453121178951078
+        ],
+        [
+          -0.7474713483027049,
+          -0.14453121178951078,
+          1.0
+        ]
+      ],
+      "proposal_covariance_unit_coordinates": [
+        [
+          0.0001024336180471776,
+          -5.813908343318098e-05,
+          -0.00044847494836344325
+        ],
+        [
+          -5.813908343318098e-05,
+          0.00016976717885393446,
+          -0.00010525129338671706
+        ],
+        [
+          -0.00044847494836344325,
+          -0.00010525129338671706,
+          0.003389211612803856
+        ]
+      ],
+      "rhat": [
+        1.003940047225178,
+        1.0050550043511965,
+        1.00119794849917
+      ],
+      "rhat_limit": 1.01,
+      "rhat_max": 1.0050550043511965,
+      "score_cpu_seconds": 0.0,
+      "split_chains": 8,
+      "status": "passed",
+      "tail_ess": [
+        1771.8311345728605,
+        1453.5862099364854,
+        1806.8589199964522
+      ],
+      "tail_ess_min": 1210.0532182816298,
+      "unique_observations": 384,
+      "warmup": 1000,
+      "warmup_acceptance_rate": [
+        0.271,
+        0.281,
+        0.276,
+        0.246
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:0:0",
+      "growth": 6.815052806588787,
+      "other_infrastructure": 0.0,
+      "own_infrastructure": 0.0,
+      "sensor_sigma": 0.05,
+      "stock_before": 10.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:0:1",
+      "growth": 5.734278558482438,
+      "other_infrastructure": 0.0,
+      "own_infrastructure": 0.0,
+      "sensor_sigma": 0.05,
+      "stock_before": 10.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:0:2",
+      "growth": 6.234769696353096,
+      "other_infrastructure": 0.0,
+      "own_infrastructure": 0.0,
+      "sensor_sigma": 0.05,
+      "stock_before": 10.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:1:0",
+      "growth": 5.8293529867551825,
+      "other_infrastructure": 0.028433230838556152,
+      "own_infrastructure": 0.13657075791215895,
+      "sensor_sigma": 0.05,
+      "stock_before": 6.983417308130657
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:1:1",
+      "growth": 7.304113285930634,
+      "other_infrastructure": 0.09671860979463562,
+      "own_infrastructure": 0.0,
+      "sensor_sigma": 0.05,
+      "stock_before": 6.322641894667634
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:1:2",
+      "growth": 7.30036565408407,
+      "other_infrastructure": 0.06828537895607947,
+      "own_infrastructure": 0.056866461677112304,
+      "sensor_sigma": 0.05,
+      "stock_before": 6.229367839199506
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:2:0",
+      "growth": 6.295911071947053,
+      "other_infrastructure": 0.055729132443570056,
+      "own_infrastructure": 0.2676786855078315,
+      "sensor_sigma": 0.05,
+      "stock_before": 3.359347359093338
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:2:1",
+      "growth": 6.447363635216492,
+      "other_infrastructure": 0.18956847519748582,
+      "own_infrastructure": 0.0,
+      "sensor_sigma": 0.05,
+      "stock_before": 4.319353297276919
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:2:2",
+      "growth": 5.951865173094476,
+      "other_infrastructure": 0.13383934275391576,
+      "own_infrastructure": 0.11145826488714011,
+      "sensor_sigma": 0.05,
+      "stock_before": 2.903554417038879
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:3:0",
+      "growth": 7.212026685030912,
+      "other_infrastructure": 0.0780834894901027,
+      "own_infrastructure": 0.3935422959996772,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.23874367923802264
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:3:1",
+      "growth": 7.623202706334807,
+      "other_infrastructure": 0.2748546374899413,
+      "own_infrastructure": 0.0,
+      "sensor_sigma": 0.05,
+      "stock_before": 1.2732764672312875
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:3:2",
+      "growth": 7.493831406544091,
+      "other_infrastructure": 0.1967711479998386,
+      "own_infrastructure": 0.1561669789802054,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:4:0",
+      "growth": 7.6110099229288934,
+      "other_infrastructure": 0.10222834996000192,
+      "own_infrastructure": 0.45210818866092845,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:4:1",
+      "growth": 7.130413737692,
+      "other_infrastructure": 0.32828244429046616,
+      "own_infrastructure": 0.0,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:4:2",
+      "growth": 6.9292049389512425,
+      "other_infrastructure": 0.22605409433046422,
+      "own_infrastructure": 0.20445669992000384,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:5:0",
+      "growth": 7.891628160038384,
+      "other_infrastructure": 0.12410770329096964,
+      "own_infrastructure": 0.5063378516568083,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:5:1",
+      "growth": 7.485249275505886,
+      "other_infrastructure": 0.3772766291193738,
+      "own_infrastructure": 0.0,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:5:2",
+      "growth": 6.8175396893642315,
+      "other_infrastructure": 0.25316892582840417,
+      "own_infrastructure": 0.24821540658193927,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:6:0",
+      "growth": 7.02512013738305,
+      "other_infrastructure": 0.1386877440903993,
+      "own_infrastructure": 0.6035140317721779,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:6:1",
+      "growth": 6.632461086092461,
+      "other_infrastructure": 0.44044475997648824,
+      "own_infrastructure": 0.0,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:6:2",
+      "growth": 6.509642992780074,
+      "other_infrastructure": 0.30175701588608894,
+      "own_infrastructure": 0.2773754881807986,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:7:0",
+      "growth": 7.656848234540976,
+      "other_infrastructure": 0.1505047761737641,
+      "own_infrastructure": 0.6797880828838488,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:7:1",
+      "growth": 5.864937008132538,
+      "other_infrastructure": 0.4903988176156885,
+      "own_infrastructure": 0.0,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:7:2",
+      "growth": 6.910340499875237,
+      "other_infrastructure": 0.3398940414419244,
+      "own_infrastructure": 0.3010095523475282,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:8:0",
+      "growth": 6.936792219953295,
+      "other_infrastructure": 0.16573328844559157,
+      "own_infrastructure": 0.7249576423698028,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:8:1",
+      "growth": 6.766796794920555,
+      "other_infrastructure": 0.5282121096304929,
+      "own_infrastructure": 0.0,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:8:2",
+      "growth": 7.304835492067098,
+      "other_infrastructure": 0.3624788211849014,
+      "own_infrastructure": 0.33146657689118314,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:9:0",
+      "growth": 7.72040888926815,
+      "other_infrastructure": 0.1794057610976798,
+      "own_infrastructure": 0.7643161132846437,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:9:1",
+      "growth": 7.231120806878838,
+      "other_infrastructure": 0.5615638177400016,
+      "own_infrastructure": 0.0,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:9:2",
+      "growth": 7.783167881215043,
+      "other_infrastructure": 0.38215805664232183,
+      "own_infrastructure": 0.3588115221953596,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:10:0",
+      "growth": 8.06142925511368,
+      "other_infrastructure": 0.18853604359264015,
+      "own_infrastructure": 0.8703142266654168,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:10:1",
+      "growth": 6.670049082427325,
+      "other_infrastructure": 0.6236931569253485,
+      "own_infrastructure": 0.0,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:10:2",
+      "growth": 7.183655529958551,
+      "other_infrastructure": 0.4351571133327084,
+      "own_infrastructure": 0.3770720871852803,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:11:0",
+      "growth": 7.6212550598010855,
+      "other_infrastructure": 0.20759873541374887,
+      "own_infrastructure": 0.9144492280862165,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:11:1",
+      "growth": 5.914746435461232,
+      "other_infrastructure": 0.6648233494568572,
+      "own_infrastructure": 0.0,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:11:2",
+      "growth": 6.693357304243856,
+      "other_infrastructure": 0.45722461404310827,
+      "own_infrastructure": 0.41519747082749775,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:12:0",
+      "growth": 8.774828376628603,
+      "other_infrastructure": 0.2174862619298585,
+      "own_infrastructure": 0.9877544747569788,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:12:1",
+      "growth": 7.281167335910261,
+      "other_infrastructure": 0.7113634993083479,
+      "own_infrastructure": 0.0,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:12:2",
+      "growth": 7.844612729700327,
+      "other_infrastructure": 0.4938772373784894,
+      "own_infrastructure": 0.434972523859717,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:13:0",
+      "growth": 7.997094784771609,
+      "other_infrastructure": 0.23015813618725584,
+      "own_infrastructure": 1.0848150536788583,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:13:1",
+      "growth": 6.515566482422887,
+      "other_infrastructure": 0.7725656630266851,
+      "own_infrastructure": 0.0,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:13:2",
+      "growth": 6.910387152318673,
+      "other_infrastructure": 0.5424075268394292,
+      "own_infrastructure": 0.46031627237451167,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:14:0",
+      "growth": 7.287930793172618,
+      "other_infrastructure": 0.23529785045400148,
+      "own_infrastructure": 1.1475799563031899,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:14:1",
+      "growth": 6.553604996996394,
+      "other_infrastructure": 0.8090878286055965,
+      "own_infrastructure": 0.0,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:14:2",
+      "growth": 7.028001926837457,
+      "other_infrastructure": 0.5737899781515949,
+      "own_infrastructure": 0.47059570090800296,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:15:0",
+      "growth": 7.720622633380807,
+      "other_infrastructure": 0.24520609520819592,
+      "own_infrastructure": 1.2043973145522666,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:15:1",
+      "growth": 6.825082613319482,
+      "other_infrastructure": 0.8474047524843292,
+      "own_infrastructure": 0.0,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:15:2",
+      "growth": 7.084910609004638,
+      "other_infrastructure": 0.6021986572761333,
+      "own_infrastructure": 0.49041219041639184,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:16:0",
+      "growth": 7.350424449544717,
+      "other_infrastructure": 0.2566998099583137,
+      "own_infrastructure": 1.2872614374322888,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:16:1",
+      "growth": 7.53025091862189,
+      "other_infrastructure": 0.9003305286744581,
+      "own_infrastructure": 0.0,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:16:2",
+      "growth": 8.29111447690926,
+      "other_infrastructure": 0.6436307187161444,
+      "own_infrastructure": 0.5133996199166274,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:17:0",
+      "growth": 9.13005347240656,
+      "other_infrastructure": 0.26874935941513467,
+      "own_infrastructure": 1.3401968164129876,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:17:1",
+      "growth": 6.388070047402696,
+      "other_infrastructure": 0.9388477676216285,
+      "own_infrastructure": 0.0,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:17:2",
+      "growth": 6.874538794692682,
+      "other_infrastructure": 0.6700984082064938,
+      "own_infrastructure": 0.5374987188302693,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:18:0",
+      "growth": 7.812118629312585,
+      "other_infrastructure": 0.28393785959315515,
+      "own_infrastructure": 1.4158791846662049,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:18:1",
+      "growth": 7.1316506182836985,
+      "other_infrastructure": 0.9918774519262576,
+      "own_infrastructure": 0.0,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:18:2",
+      "growth": 7.000960543657128,
+      "other_infrastructure": 0.7079395923331024,
+      "own_infrastructure": 0.5678757191863103,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:19:0",
+      "growth": 8.574668966752046,
+      "other_infrastructure": 0.287268470804298,
+      "own_infrastructure": 1.4958147751917157,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:19:1",
+      "growth": 7.450295777700122,
+      "other_infrastructure": 1.0351758584001558,
+      "own_infrastructure": 0.0,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:19:2",
+      "growth": 7.573896360960615,
+      "other_infrastructure": 0.7479073875958578,
+      "own_infrastructure": 0.574536941608596,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:20:0",
+      "growth": 9.332506422507288,
+      "other_infrastructure": 0.2940074564099654,
+      "own_infrastructure": 1.5725529420962059,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:20:1",
+      "growth": 6.750662031756642,
+      "other_infrastructure": 1.0802839274580682,
+      "own_infrastructure": 0.0,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:20:2",
+      "growth": 6.485406718312447,
+      "other_infrastructure": 0.7862764710481029,
+      "own_infrastructure": 0.5880149128199308,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:21:0",
+      "growth": 7.947239689121564,
+      "other_infrastructure": 0.3013114366094984,
+      "own_infrastructure": 1.6341375165224932,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:21:1",
+      "growth": 7.466262715508474,
+      "other_infrastructure": 1.118380194870745,
+      "own_infrastructure": 0.0,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:21:2",
+      "growth": 6.647900650504276,
+      "other_infrastructure": 0.8170687582612466,
+      "own_infrastructure": 0.6026228732189968,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:22:0",
+      "growth": 8.25861798178882,
+      "other_infrastructure": 0.3071678293700192,
+      "own_infrastructure": 1.6832821719273916,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:22:1",
+      "growth": 7.121221606839215,
+      "other_infrastructure": 1.1488089153337149,
+      "own_infrastructure": 0.0,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:22:2",
+      "growth": 7.999925714554309,
+      "other_infrastructure": 0.8416410859636958,
+      "own_infrastructure": 0.6143356587400384,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:23:0",
+      "growth": 8.567394954926204,
+      "other_infrastructure": 0.3170469910201477,
+      "own_infrastructure": 1.701652758953249,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:23:1",
+      "growth": 7.736906489251946,
+      "other_infrastructure": 1.1678733704967723,
+      "own_infrastructure": 0.0,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:23:2",
+      "growth": 8.190322051505289,
+      "other_infrastructure": 0.8508263794766245,
+      "own_infrastructure": 0.6340939820402954,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:24:0",
+      "growth": 8.422135052819753,
+      "other_infrastructure": 0.33279834221789795,
+      "own_infrastructure": 1.7403511459962921,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:24:1",
+      "growth": 6.7362419017367445,
+      "other_infrastructure": 1.202973915216044,
+      "own_infrastructure": 0.0,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:24:2",
+      "growth": 7.451985105595668,
+      "other_infrastructure": 0.8701755729981461,
+      "own_infrastructure": 0.6655966844357959,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:25:0",
+      "growth": 8.677995115485196,
+      "other_infrastructure": 0.3940309307444803,
+      "own_infrastructure": 1.6707371001564404,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:25:1",
+      "growth": 6.123855085089682,
+      "other_infrastructure": 1.2108315335868503,
+      "own_infrastructure": 0.03713589447170047,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:25:2",
+      "growth": 8.631419974708983,
+      "other_infrastructure": 0.8539364973140704,
+      "own_infrastructure": 0.7509259670172601,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:26:0",
+      "growth": 7.935392894227021,
+      "other_infrastructure": 0.4572420500232745,
+      "own_infrastructure": 1.6039076161501826,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:26:1",
+      "growth": 6.042545681674482,
+      "other_infrastructure": 1.2264586013383645,
+      "own_infrastructure": 0.06547451352000253,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:26:2",
+      "growth": 6.8320909259653995,
+      "other_infrastructure": 0.8346910648350926,
+      "own_infrastructure": 0.8490095865265465,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:27:0",
+      "growth": 8.240349871421175,
+      "other_infrastructure": 0.5054771787258207,
+      "own_infrastructure": 1.5397513115041752,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:27:1",
+      "growth": 6.098577559136657,
+      "other_infrastructure": 1.2274164722300824,
+      "own_infrastructure": 0.09587272449565133,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:27:2",
+      "growth": 7.2880322175043055,
+      "other_infrastructure": 0.8178120179999133,
+      "own_infrastructure": 0.9150816329559899,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:28:0",
+      "growth": 9.166121651481632,
+      "other_infrastructure": 0.5726438364237348,
+      "own_infrastructure": 1.478161259044008,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:28:1",
+      "growth": 7.540288431971585,
+      "other_infrastructure": 1.2494391500050646,
+      "own_infrastructure": 0.12457063188134868,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:28:2",
+      "growth": 8.55342922962939,
+      "other_infrastructure": 0.8013659454626784,
+      "own_infrastructure": 1.020717040966121,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:29:0",
+      "growth": 9.148550657860529,
+      "other_infrastructure": 0.641542707821964,
+      "own_infrastructure": 1.4190348086822477,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:29:1",
+      "growth": 7.1589875053239584,
+      "other_infrastructure": 1.2706673498866223,
+      "own_infrastructure": 0.16078552455293088,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:29:2",
+      "growth": 7.9188142416517735,
+      "other_infrastructure": 0.7899101666175893,
+      "own_infrastructure": 1.1222998910909971,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:30:0",
+      "growth": 8.817284637691648,
+      "other_infrastructure": 0.6929860492134504,
+      "own_infrastructure": 1.3622734163349577,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:30:1",
+      "growth": 7.7560452872539924,
+      "other_infrastructure": 1.2772947347315338,
+      "own_infrastructure": 0.19365604529879096,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:30:2",
+      "growth": 8.812766925146406,
+      "other_infrastructure": 0.7779647308168743,
+      "own_infrastructure": 1.1923160531281098,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:31:0",
+      "growth": 7.541333287174902,
+      "other_infrastructure": 0.7584318758405686,
+      "own_infrastructure": 1.3077824796815594,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:31:1",
+      "growth": 6.455072672132925,
+      "other_infrastructure": 1.302024894245089,
+      "own_infrastructure": 0.220596442872519,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:31:2",
+      "growth": 8.59941717969425,
+      "other_infrastructure": 0.7641894612770392,
+      "own_infrastructure": 1.2962673088086183,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:32:0",
+      "growth": 9.022196918850742,
+      "other_infrastructure": 0.8072376622214473,
+      "own_infrastructure": 1.2554711804942968,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:32:1",
+      "growth": 7.1082213111139865,
+      "other_infrastructure": 1.311981408269529,
+      "own_infrastructure": 0.24598368839813364,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:32:2",
+      "growth": 8.861366500919326,
+      "other_infrastructure": 0.7507274344462153,
+      "own_infrastructure": 1.368491636044761,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:33:0",
+      "growth": 8.839145143721009,
+      "other_infrastructure": 0.8577418851765316,
+      "own_infrastructure": 1.2052523332745249,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:33:1",
+      "growth": 6.565187985424495,
+      "other_infrastructure": 1.32465466000623,
+      "own_infrastructure": 0.2714267836151281,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:33:2",
+      "growth": 8.565915028379804,
+      "other_infrastructure": 0.7383395584448265,
+      "own_infrastructure": 1.4440569867379351,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:34:0",
+      "growth": 7.9415398443366545,
+      "other_infrastructure": 0.9005084389104288,
+      "own_infrastructure": 1.1570422399435438,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:34:1",
+      "growth": 7.178188606004406,
+      "other_infrastructure": 1.3324006425408603,
+      "own_infrastructure": 0.2932578326826806,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:34:2",
+      "growth": 8.213758860631723,
+      "other_infrastructure": 0.7251500363131123,
+      "own_infrastructure": 1.507759045138177,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:35:0",
+      "growth": 8.19317261091485,
+      "other_infrastructure": 0.9297677449729772,
+      "own_infrastructure": 1.110760550345802,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:35:1",
+      "growth": 7.411251545954073,
+      "other_infrastructure": 1.3237893129250329,
+      "own_infrastructure": 0.3227174144416906,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:35:2",
+      "growth": 7.773364281227043,
+      "other_infrastructure": 0.7167389823937463,
+      "own_infrastructure": 1.5368180755042637,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:36:0",
+      "growth": 7.185519327771221,
+      "other_infrastructure": 0.9583178407751621,
+      "own_infrastructure": 1.06633012833197,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:36:1",
+      "growth": 7.6328601041302955,
+      "other_infrastructure": 1.3115361684771183,
+      "own_infrastructure": 0.3598934729280576,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:36:2",
+      "growth": 8.956478642244065,
+      "other_infrastructure": 0.7131118006300138,
+      "own_infrastructure": 1.5567422086222666,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:37:0",
+      "growth": 8.63336680047558,
+      "other_infrastructure": 1.0047275467543895,
+      "own_infrastructure": 1.023676923198691,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:37:1",
+      "growth": 6.79945501059481,
+      "other_infrastructure": 1.3231842703039864,
+      "own_infrastructure": 0.38676347609949696,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:37:2",
+      "growth": 8.980504962822486,
+      "other_infrastructure": 0.705220199649094,
+      "own_infrastructure": 1.6226916174092818,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:38:0",
+      "growth": 8.940648893515839,
+      "other_infrastructure": 1.04844254114541,
+      "own_infrastructure": 0.9827298462707434,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:38:1",
+      "growth": 6.608453379075618,
+      "other_infrastructure": 1.3360211264380442,
+      "own_infrastructure": 0.40757267568547484,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:38:2",
+      "growth": 9.126744891200888,
+      "other_infrastructure": 0.6951512609781092,
+      "own_infrastructure": 1.689312406605345,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:39:0",
+      "growth": 8.843786024771058,
+      "other_infrastructure": 1.0932354489260565,
+      "own_infrastructure": 0.9434206524199137,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:39:1",
+      "growth": 7.15928719959805,
+      "other_infrastructure": 1.351535205689131,
+      "own_infrastructure": 0.4268211388937648,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:39:2",
+      "growth": 8.647430945943324,
+      "other_infrastructure": 0.6851208956568392,
+      "own_infrastructure": 1.7596497589583484,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:40:0",
+      "growth": 8.484107551852407,
+      "other_infrastructure": 1.1401159887877936,
+      "own_infrastructure": 0.9056838263231171,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:40:1",
+      "growth": 6.960314151585335,
+      "other_infrastructure": 1.3732957463643822,
+      "own_infrastructure": 0.4393243111699399,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:40:2",
+      "growth": 8.695602425443331,
+      "other_infrastructure": 0.6725040687465285,
+      "own_infrastructure": 1.8409076664056474,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:41:0",
+      "growth": 8.119435616597473,
+      "other_infrastructure": 1.179373282390027,
+      "own_infrastructure": 0.8694564732701924,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:41:1",
+      "growth": 7.044258917680818,
+      "other_infrastructure": 1.3851108172118756,
+      "own_infrastructure": 0.4579814036264949,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:41:2",
+      "growth": 9.480559213724543,
+      "other_infrastructure": 0.6637189384483436,
+      "own_infrastructure": 1.900765161153559,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:42:0",
+      "growth": 8.713933281148218,
+      "other_infrastructure": 1.2189580369146147,
+      "own_infrastructure": 0.8346782143393846,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:42:1",
+      "growth": 7.222208714003646,
+      "other_infrastructure": 1.3974321839897008,
+      "own_infrastructure": 0.4777299201892127,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:42:2",
+      "growth": 8.288535362107872,
+      "other_infrastructure": 0.6562040672642986,
+      "own_infrastructure": 1.960186153640017,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:43:0",
+      "growth": 6.975616264785908,
+      "other_infrastructure": 1.239552366689061,
+      "own_infrastructure": 0.8012910857658092,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:43:1",
+      "growth": 7.7863754832740275,
+      "other_infrastructure": 1.3858451703491264,
+      "own_infrastructure": 0.5087054784456788,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:43:2",
+      "growth": 8.507138741131374,
+      "other_infrastructure": 0.6549982821057441,
+      "own_infrastructure": 1.9703992549324434,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:44:0",
+      "growth": 7.22156079020968,
+      "other_infrastructure": 1.273528909956988,
+      "own_infrastructure": 0.7692394423351768,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:44:1",
+      "growth": 7.179972352714643,
+      "other_infrastructure": 1.3938886033083104,
+      "own_infrastructure": 0.5285200556325318,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:44:2",
+      "growth": 8.29150003954978,
+      "other_infrastructure": 0.6488797489838543,
+      "own_infrastructure": 2.018537764281444,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:45:0",
+      "growth": 7.910378597490717,
+      "other_infrastructure": 1.3076439072024093,
+      "own_infrastructure": 0.7384698646417698,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:45:1",
+      "growth": 7.195614517642182,
+      "other_infrastructure": 1.3981468352876618,
+      "own_infrastructure": 0.5574640084712652,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:45:2",
+      "growth": 9.3329126115312,
+      "other_infrastructure": 0.6479669365565175,
+      "own_infrastructure": 2.0578238059335536,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:46:0",
+      "growth": 8.437533717085675,
+      "other_infrastructure": 1.3415627075974839,
+      "own_infrastructure": 0.708931070056099,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:46:1",
+      "growth": 7.070730713218906,
+      "other_infrastructure": 1.409877571323476,
+      "own_infrastructure": 0.572301342604115,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:46:2",
+      "growth": 9.788126536658062,
+      "other_infrastructure": 0.6406162063301071,
+      "own_infrastructure": 2.110824072590853,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:47:0",
+      "growth": 7.025598801296597,
+      "other_infrastructure": 1.3773775767556369,
+      "own_infrastructure": 0.6805738272538551,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:47:1",
+      "growth": 7.912102924181951,
+      "other_infrastructure": 1.4239529681817902,
+      "own_infrastructure": 0.5874230444015486,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:47:2",
+      "growth": 9.861190117950919,
+      "other_infrastructure": 0.6339984358277018,
+      "own_infrastructure": 2.1673321091097253,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:48:0",
+      "growth": 8.586594255868166,
+      "other_infrastructure": 1.39755952100009,
+      "own_infrastructure": 0.6533508741637009,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:48:1",
+      "growth": 6.7279215444104885,
+      "other_infrastructure": 1.4212073160423722,
+      "own_infrastructure": 0.6060552840791361,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:48:2",
+      "growth": 10.192224934754591,
+      "other_infrastructure": 0.6297030791214184,
+      "own_infrastructure": 2.1890637579210437,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:49:0",
+      "growth": 7.779059019558896,
+      "other_infrastructure": 1.3892920659014834,
+      "own_infrastructure": 0.6784308734142124,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:49:1",
+      "growth": 6.643367735822147,
+      "other_infrastructure": 1.389966040509207,
+      "own_infrastructure": 0.6770829241987649,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:49:2",
+      "growth": 10.286598236646446,
+      "other_infrastructure": 0.6777568988064886,
+      "own_infrastructure": 2.1015012076042017,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.003813301413244652
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:50:0",
+      "growth": 8.122866431425225,
+      "other_infrastructure": 1.382725071367601,
+      "own_infrastructure": 0.7025076726947035,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:50:1",
+      "growth": 7.600993920969084,
+      "other_infrastructure": 1.3599744159973683,
+      "own_infrastructure": 0.7480089834351682,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:50:2",
+      "growth": 9.751208643517773,
+      "other_infrastructure": 0.7252583280649358,
+      "own_infrastructure": 2.0174411593000334,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:51:0",
+      "growth": 7.203945786452804,
+      "other_infrastructure": 1.3941957419316096,
+      "own_infrastructure": 0.7054998233977977,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:51:1",
+      "growth": 7.435253805888887,
+      "other_infrastructure": 1.3211216681629148,
+      "own_infrastructure": 0.8516479709351872,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:51:2",
+      "growth": 9.235636633715252,
+      "other_infrastructure": 0.7785738971664924,
+      "own_infrastructure": 1.936743512928032,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:52:0",
+      "growth": 8.377008118518825,
+      "other_infrastructure": 1.3918340122828252,
+      "own_infrastructure": 0.7163210423113047,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:52:1",
+      "growth": 7.788547445018023,
+      "other_infrastructure": 1.2877974073611076,
+      "own_infrastructure": 0.9243942521547397,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:52:2",
+      "growth": 8.163210468426444,
+      "other_infrastructure": 0.8203576472330222,
+      "own_infrastructure": 1.8592737724109105,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:53:0",
+      "growth": 6.779829656013565,
+      "other_infrastructure": 1.3950500769356582,
+      "own_infrastructure": 0.7388822348359121,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:53:1",
+      "growth": 8.135143420460066,
+      "other_infrastructure": 1.261892528175193,
+      "own_infrastructure": 1.0051973323568426,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:53:2",
+      "growth": 8.922542441152968,
+      "other_infrastructure": 0.8720397835963773,
+      "own_infrastructure": 1.784902821514474,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:54:0",
+      "growth": 7.561719881586916,
+      "other_infrastructure": 1.393271703361634,
+      "own_infrastructure": 0.7472583079617509,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:54:1",
+      "growth": 8.17611117211025,
+      "other_infrastructure": 1.2303825083078228,
+      "own_infrastructure": 1.073036698069373,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:54:2",
+      "growth": 9.670832293686068,
+      "other_infrastructure": 0.9101475030155619,
+      "own_infrastructure": 1.7135067086538949,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:55:0",
+      "growth": 7.703228936248706,
+      "other_infrastructure": 1.3958356511816488,
+      "own_infrastructure": 0.757433485374605,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:55:1",
+      "growth": 8.738743340784257,
+      "other_infrastructure": 1.201199962841172,
+      "own_infrastructure": 1.1467048620555584,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:55:2",
+      "growth": 7.866607606081791,
+      "other_infrastructure": 0.9520691737150817,
+      "own_infrastructure": 1.644966440307739,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:56:0",
+      "growth": 7.08672541570329,
+      "other_infrastructure": 1.398552624842388,
+      "own_infrastructure": 0.7698719945708472,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:56:1",
+      "growth": 7.288680751839834,
+      "other_infrastructure": 1.1745198886331383,
+      "own_infrastructure": 1.2179374669893468,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:56:2",
+      "growth": 9.3836110321639,
+      "other_infrastructure": 0.993904730780097,
+      "own_infrastructure": 1.5791677826954296,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:57:0",
+      "growth": 7.211966532443545,
+      "other_infrastructure": 1.3953022132162736,
+      "own_infrastructure": 0.7777025560392398,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:57:1",
+      "growth": 7.392654213944126,
+      "other_infrastructure": 1.146851813713426,
+      "own_infrastructure": 1.274603355044935,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:57:2",
+      "growth": 8.47851367027524,
+      "other_infrastructure": 1.0261529555420874,
+      "own_infrastructure": 1.5160010713876124,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:58:0",
+      "growth": 8.792466995535152,
+      "other_infrastructure": 1.3787932753645191,
+      "own_infrastructure": 0.7850436014810986,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:58:1",
+      "growth": 8.952351751104223,
+      "other_infrastructure": 1.1202023150066034,
+      "own_infrastructure": 1.3022255221969303,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:58:2",
+      "growth": 8.296997462393001,
+      "other_infrastructure": 1.0436345618390144,
+      "own_infrastructure": 1.455361028532108,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:59:0",
+      "growth": 7.688196131631617,
+      "other_infrastructure": 1.3887842945113218,
+      "own_infrastructure": 0.8048558916389142,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:59:1",
+      "growth": 8.967738646876489,
+      "other_infrastructure": 1.101001239514869,
+      "own_infrastructure": 1.3804220016318203,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:59:2",
+      "growth": 7.710612169161106,
+      "other_infrastructure": 1.0926389466353672,
+      "own_infrastructure": 1.3971465873908235,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:60:0",
+      "growth": 8.07602151744965,
+      "other_infrastructure": 1.3986230169173952,
+      "own_infrastructure": 0.8128402001231135,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:60:1",
+      "growth": 9.153978205072548,
+      "other_infrastructure": 1.077050462009152,
+      "own_infrastructure": 1.4559853099395998,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:60:2",
+      "growth": 8.576109561632345,
+      "other_infrastructure": 1.1344127550313567,
+      "own_infrastructure": 1.3412607238951906,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:61:0",
+      "growth": 7.194387748237907,
+      "other_infrastructure": 1.4073002298454251,
+      "own_infrastructure": 0.821696668644713,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:61:1",
+      "growth": 9.307897942978169,
+      "other_infrastructure": 1.0546534817920479,
+      "own_infrastructure": 1.5269901647514676,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:61:2",
+      "growth": 7.640406505194789,
+      "other_infrastructure": 1.1743434166980904,
+      "own_infrastructure": 1.2876102949393828,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:62:0",
+      "growth": 7.884725015258784,
+      "other_infrastructure": 1.417787894070321,
+      "own_infrastructure": 0.8277522448054866,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:62:1",
+      "growth": 8.840039475138465,
+      "other_infrastructure": 1.0319290639736471,
+      "own_infrastructure": 1.5994699049988346,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.06048922616851771
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:62:2",
+      "growth": 8.87877799151883,
+      "other_infrastructure": 1.2136110749021607,
+      "own_infrastructure": 1.2361058831418075,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:63:0",
+      "growth": 8.08759559998519,
+      "other_infrastructure": 1.4122903514862657,
+      "own_infrastructure": 0.8458561892303267,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:63:1",
+      "growth": 9.687498668187546,
+      "other_infrastructure": 1.016258918523231,
+      "own_infrastructure": 1.6379190551563962,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:63:2",
+      "growth": 9.047201784963816,
+      "other_infrastructure": 1.2418876221933615,
+      "own_infrastructure": 1.1866616478161351,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:64:0",
+      "growth": 7.928101815283321,
+      "other_infrastructure": 1.4129824956561854,
+      "own_infrastructure": 0.8632359758781732,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:64:1",
+      "growth": 9.326841085094175,
+      "other_infrastructure": 1.0012155788908315,
+      "own_infrastructure": 1.6867698094088812,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0740950389402073
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:64:2",
+      "growth": 7.9534329995155515,
+      "other_infrastructure": 1.2750028926435273,
+      "own_infrastructure": 1.1391951819034898,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:65:0",
+      "growth": 7.383693287442287,
+      "other_infrastructure": 1.423242869248651,
+      "own_infrastructure": 0.8711034453280476,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:65:1",
+      "growth": 9.725143207980507,
+      "other_infrastructure": 0.9823654099776988,
+      "own_infrastructure": 1.7528583638699515,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0969432722997996
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:65:2",
+      "growth": 7.422374903936664,
+      "other_infrastructure": 1.3119809045989996,
+      "own_infrastructure": 1.0936273746273502,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:66:0",
+      "growth": 8.5973780787623,
+      "other_infrastructure": 1.4330928278974175,
+      "own_infrastructure": 0.8771885018764527,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:66:1",
+      "growth": 8.236465614584256,
+      "other_infrastructure": 0.9635353907593545,
+      "own_infrastructure": 1.816303376152579,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:66:2",
+      "growth": 8.91427794390894,
+      "other_infrastructure": 1.3467459390145158,
+      "own_infrastructure": 1.0498822796422562,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:67:0",
+      "growth": 7.135837174704041,
+      "other_infrastructure": 1.4359036912820708,
+      "own_infrastructure": 0.8887958466112478,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:67:1",
+      "growth": 8.993060368588402,
+      "other_infrastructure": 0.9483414175339069,
+      "own_infrastructure": 1.8639203941075755,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:67:2",
+      "growth": 9.044873937523782,
+      "other_infrastructure": 1.3763581203594115,
+      "own_infrastructure": 1.007886988456566,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:68:0",
+      "growth": 7.061800723035526,
+      "other_infrastructure": 1.43589086289849,
+      "own_infrastructure": 0.9025281581375699,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:68:1",
+      "growth": 10.062882684941263,
+      "other_infrastructure": 0.9350498335279367,
+      "own_infrastructure": 1.9042102168786768,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:68:2",
+      "growth": 8.668811350332179,
+      "other_infrastructure": 1.4033691875081233,
+      "own_infrastructure": 0.9675715089183033,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:69:0",
+      "growth": 8.62113346605927,
+      "other_infrastructure": 1.4346850482028688,
+      "own_infrastructure": 0.9027598540608431,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:69:1",
+      "growth": 9.001483975349826,
+      "other_infrastructure": 0.9158142513112071,
+      "own_infrastructure": 1.9405014478441664,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.7461492629067141
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:69:2",
+      "growth": 8.273868191032701,
+      "other_infrastructure": 1.4216306509525047,
+      "own_infrastructure": 0.9288686485615711,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:70:0",
+      "growth": 8.634610327493709,
+      "other_infrastructure": 1.4291128984674355,
+      "own_infrastructure": 0.917863494115469,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:70:1",
+      "growth": 8.229697136787719,
+      "other_infrastructure": 0.9047886983672886,
+      "own_infrastructure": 1.9665118943157627,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.607058996561741
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:70:2",
+      "growth": 7.4254173947902125,
+      "other_infrastructure": 1.4421876942156158,
+      "own_infrastructure": 0.8917139026191082,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:71:0",
+      "growth": 6.982119497567957,
+      "other_infrastructure": 1.4337160392832533,
+      "own_infrastructure": 0.9256242030348503,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:71:1",
+      "growth": 8.840626577047038,
+      "other_infrastructure": 0.890834774774597,
+      "own_infrastructure": 2.011386732052163,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:71:2",
+      "growth": 7.202425042282752,
+      "other_infrastructure": 1.4685054675435065,
+      "own_infrastructure": 0.8560453465143438,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:72:0",
+      "growth": 7.6656319671028434,
+      "other_infrastructure": 1.4399081473048265,
+      "own_infrastructure": 0.9266539874079555,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:72:1",
+      "growth": 8.294047095366139,
+      "other_infrastructure": 0.8742287600308627,
+      "own_infrastructure": 2.058012761955883,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:72:2",
+      "growth": 7.701897092427586,
+      "other_infrastructure": 1.4923333746819192,
+      "own_infrastructure": 0.82180353265377,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:73:0",
+      "growth": 8.856658494323424,
+      "other_infrastructure": 1.4005108609420682,
+      "own_infrastructure": 1.0003048367105678,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:73:1",
+      "growth": 8.356359082031469,
+      "other_infrastructure": 0.9128171535585283,
+      "own_infrastructure": 1.9756922514776476,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:73:2",
+      "growth": 8.13755011079574,
+      "other_infrastructure": 1.4879985440941077,
+      "own_infrastructure": 0.8253294704064889,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:74:0",
+      "growth": 8.08980458412408,
+      "other_infrastructure": 1.3694722188644708,
+      "own_infrastructure": 1.0583935259296102,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:74:1",
+      "growth": 8.83572206499724,
+      "other_infrastructure": 0.950336701120005,
+      "own_infrastructure": 1.8966645614185416,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:74:2",
+      "growth": 7.27367231230798,
+      "other_infrastructure": 1.477529043674076,
+      "own_infrastructure": 0.8422798763103999,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:75:0",
+      "growth": 8.039479897892935,
+      "other_infrastructure": 1.3349603653505393,
+      "own_infrastructure": 1.1526285428045848,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:75:1",
+      "growth": 9.578082207415607,
+      "other_infrastructure": 1.0008756472719318,
+      "own_infrastructure": 1.8207979789617998,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:75:2",
+      "growth": 8.120486844293183,
+      "other_infrastructure": 1.4867132608831923,
+      "own_infrastructure": 0.8491227517392788,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:76:0",
+      "growth": 8.5520495463897,
+      "other_infrastructure": 1.3035809971092287,
+      "own_infrastructure": 1.2430941590045603,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:76:1",
+      "growth": 9.918750485804683,
+      "other_infrastructure": 1.051145046709845,
+      "own_infrastructure": 1.7479660598033278,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:76:2",
+      "growth": 7.290705154179694,
+      "other_infrastructure": 1.4955301094039442,
+      "own_infrastructure": 0.8591959344151298,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:77:0",
+      "growth": 7.597371719152766,
+      "other_infrastructure": 1.2710905367197936,
+      "own_infrastructure": 1.3169223320683456,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:77:1",
+      "growth": 8.245851540861885,
+      "other_infrastructure": 1.0905279940483692,
+      "own_infrastructure": 1.6780474174111946,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.5722055158676174
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:77:2",
+      "growth": 8.651052442359289,
+      "other_infrastructure": 1.49748487473977,
+      "own_infrastructure": 0.8641336560283926,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:78:0",
+      "growth": 8.008144736117748,
+      "other_infrastructure": 1.248680146089558,
+      "own_infrastructure": 1.3713415210557993,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:78:1",
+      "growth": 9.26086451688711,
+      "other_infrastructure": 1.1288881462600844,
+      "own_infrastructure": 1.6109255207147468,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:78:2",
+      "growth": 8.574597676599499,
+      "other_infrastructure": 1.4911335208852732,
+      "own_infrastructure": 0.8864347714643692,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:79:0",
+      "growth": 8.860374782248005,
+      "other_infrastructure": 1.22272782257738,
+      "own_infrastructure": 1.4248483351064891,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:79:1",
+      "growth": 8.430036575938368,
+      "other_infrastructure": 1.1619077401875462,
+      "own_infrastructure": 1.546488499886157,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:79:2",
+      "growth": 7.606830936714325,
+      "other_infrastructure": 1.485668417496323,
+      "own_infrastructure": 0.8989671452686031,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:80:0",
+      "growth": 7.818001646003563,
+      "other_infrastructure": 1.1926621447233252,
+      "own_infrastructure": 1.5044251596143885,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:80:1",
+      "growth": 8.213746697730407,
+      "other_infrastructure": 1.202560244585164,
+      "own_infrastructure": 1.4846289598907108,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:80:2",
+      "growth": 8.67991446762933,
+      "other_infrastructure": 1.4945270597525497,
+      "own_infrastructure": 0.9006953295559396,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:81:0",
+      "growth": 8.132798699029749,
+      "other_infrastructure": 1.1733888897729483,
+      "own_infrastructure": 1.533098254393261,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:81:1",
+      "growth": 8.916117019723217,
+      "other_infrastructure": 1.2273161162220376,
+      "own_infrastructure": 1.4252438014950823,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:81:2",
+      "growth": 7.97032103350524,
+      "other_infrastructure": 1.4791710279441717,
+      "own_infrastructure": 0.9215339780508143,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:82:0",
+      "growth": 9.250262051671173,
+      "other_infrastructure": 1.1479906866593201,
+      "own_infrastructure": 1.58832094283044,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:82:1",
+      "growth": 8.501465098332677,
+      "other_infrastructure": 1.2580341333569005,
+      "own_infrastructure": 1.368234049435279,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:82:2",
+      "growth": 8.665030502763198,
+      "other_infrastructure": 1.4782774961328595,
+      "own_infrastructure": 0.9277473238833611,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:83:0",
+      "growth": 8.652645972485846,
+      "other_infrastructure": 1.1278728313927853,
+      "own_infrastructure": 1.633917186633434,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:83:1",
+      "growth": 7.591384790951741,
+      "other_infrastructure": 1.2880790809805687,
+      "own_infrastructure": 1.3135046874578677,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:83:2",
+      "growth": 7.540211060258956,
+      "other_infrastructure": 1.473710937045651,
+      "own_infrastructure": 0.942240975327703,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:84:0",
+      "growth": 9.082780890263308,
+      "other_infrastructure": 1.0985264076654584,
+      "own_infrastructure": 1.6919357526956105,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:84:1",
+      "growth": 7.880300197888452,
+      "other_infrastructure": 1.314012034033487,
+      "own_infrastructure": 1.260964499959553,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:84:2",
+      "growth": 8.097324606256858,
+      "other_infrastructure": 1.4764501263275818,
+      "own_infrastructure": 0.9360883153713637,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:85:0",
+      "growth": 9.542234067892487,
+      "other_infrastructure": 1.0732752606118223,
+      "own_infrastructure": 1.753713683062175,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:85:1",
+      "growth": 9.263006815959304,
+      "other_infrastructure": 1.3448691421623242,
+      "own_infrastructure": 1.2105259199611709,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:85:2",
+      "growth": 8.502569780402823,
+      "other_infrastructure": 1.482119801511673,
+      "own_infrastructure": 0.9360246012624738,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:86:0",
+      "growth": 8.216938736819193,
+      "other_infrastructure": 1.0541882338578308,
+      "own_infrastructure": 1.8201358936518468,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.33974188659651094
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:86:1",
+      "growth": 7.878041107614282,
+      "other_infrastructure": 1.3832037391023921,
+      "own_infrastructure": 1.162104883162724,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:86:2",
+      "growth": 8.703674743413904,
+      "other_infrastructure": 1.4911203884072854,
+      "own_infrastructure": 0.9462715845529377,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:87:0",
+      "growth": 8.55471635497582,
+      "other_infrastructure": 1.035150838731334,
+      "own_infrastructure": 1.8708386122250218,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:87:1",
+      "growth": 8.385709436580203,
+      "other_infrastructure": 1.4127598009257374,
+      "own_infrastructure": 1.1156206878362152,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:87:2",
+      "growth": 8.702377272854044,
+      "other_infrastructure": 1.4932296500306186,
+      "own_infrastructure": 0.9546809896264529,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:88:0",
+      "growth": 8.566199128937614,
+      "other_infrastructure": 1.0178317264104688,
+      "own_infrastructure": 1.916761019260424,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:88:1",
+      "growth": 7.691173479565662,
+      "other_infrastructure": 1.4407143058792977,
+      "own_infrastructure": 1.0709958603227665,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:88:2",
+      "growth": 8.373231837368422,
+      "other_infrastructure": 1.4938784397915952,
+      "own_infrastructure": 0.9646675924981714,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:89:0",
+      "growth": 9.741688896597061,
+      "other_infrastructure": 1.0006627768106824,
+      "own_infrastructure": 1.9596990899968083,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:89:1",
+      "growth": 6.964877909730126,
+      "other_infrastructure": 1.4664343088541587,
+      "own_infrastructure": 1.0281560259098559,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:89:2",
+      "growth": 7.185191549492351,
+      "other_infrastructure": 1.4939275579533322,
+      "own_infrastructure": 0.973169527711509,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:90:0",
+      "growth": 9.189055854257589,
+      "other_infrastructure": 0.9801480533375334,
+      "own_infrastructure": 2.017751326694778,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.08965481257445962
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:90:1",
+      "growth": 8.23878704432885,
+      "other_infrastructure": 1.4955088242481915,
+      "own_infrastructure": 0.9870297848734616,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:90:2",
+      "growth": 7.441082524434209,
+      "other_infrastructure": 1.5023905557841197,
+      "own_infrastructure": 0.9732663218016052,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:91:0",
+      "growth": 9.279370038063156,
+      "other_infrastructure": 0.9627719286078799,
+      "own_infrastructure": 2.065871309469335,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:91:1",
+      "growth": 7.149520314336209,
+      "other_infrastructure": 1.5219332866032858,
+      "own_infrastructure": 0.947548593478523,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:91:2",
+      "growth": 8.704420044810005,
+      "other_infrastructure": 1.506709951473929,
+      "own_infrastructure": 0.9779952637372367,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:92:0",
+      "growth": 10.129244553722474,
+      "other_infrastructure": 0.9476622804109482,
+      "own_infrastructure": 2.1156481839185926,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:92:1",
+      "growth": 7.354525343897267,
+      "other_infrastructure": 1.5506630475005534,
+      "own_infrastructure": 0.9096466497393821,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:92:2",
+      "growth": 7.78759879206664,
+      "other_infrastructure": 1.5126474168289874,
+      "own_infrastructure": 0.9856779110825143,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:93:0",
+      "growth": 8.727576260625048,
+      "other_infrastructure": 0.9312306619373868,
+      "own_infrastructure": 2.1675930144740074,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.6952961687101662
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:93:1",
+      "growth": 8.80896934519585,
+      "other_infrastructure": 1.5783967772994871,
+      "own_infrastructure": 0.8732607837498069,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:93:2",
+      "growth": 7.800693745331088,
+      "other_infrastructure": 1.5204268991119072,
+      "own_infrastructure": 0.9892005401249667,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:94:0",
+      "growth": 8.56049311755788,
+      "other_infrastructure": 0.9159210014261356,
+      "own_infrastructure": 2.217460051807206,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:94:1",
+      "growth": 6.948809861118595,
+      "other_infrastructure": 1.6054858511298313,
+      "own_infrastructure": 0.8383303523998146,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:94:2",
+      "growth": 8.684594328095713,
+      "other_infrastructure": 1.5278952021035104,
+      "own_infrastructure": 0.9935116504524566,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:95:0",
+      "growth": 9.17121870339071,
+      "other_infrastructure": 0.8967003007240053,
+      "own_infrastructure": 2.265332407647077,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:95:1",
+      "growth": 8.240099500348684,
+      "other_infrastructure": 1.6269679353956328,
+      "own_infrastructure": 0.8047971383038219,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:95:2",
+      "growth": 7.67599037519948,
+      "other_infrastructure": 1.5350647729754494,
+      "own_infrastructure": 0.9886034631441887,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:96:0",
+      "growth": 9.443135699166813,
+      "other_infrastructure": 0.8825857353185855,
+      "own_infrastructure": 2.310474224864256,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:96:1",
+      "growth": 7.969214022076741,
+      "other_infrastructure": 1.651520221364879,
+      "own_infrastructure": 0.772605252771669,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:96:2",
+      "growth": 7.574714930597607,
+      "other_infrastructure": 1.5415397388179624,
+      "own_infrastructure": 0.9925662178655021,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:97:0",
+      "growth": 9.316973674092496,
+      "other_infrastructure": 0.9223327464015363,
+      "own_infrastructure": 2.2180552558696855,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.004123276211425164
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:97:1",
+      "growth": 8.774099395955394,
+      "other_infrastructure": 1.6391407831675044,
+      "own_infrastructure": 0.7844391823377492,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:97:2",
+      "growth": 8.148855067919989,
+      "other_infrastructure": 1.5012472191037174,
+      "own_infrastructure": 1.0602263104653233,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:98:0",
+      "growth": 9.189241475681177,
+      "other_infrastructure": 0.9696935452304537,
+      "own_infrastructure": 2.129333045634898,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:98:1",
+      "growth": 8.325038779963869,
+      "other_infrastructure": 1.6344723271921535,
+      "own_infrastructure": 0.7997754817114984,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:98:2",
+      "growth": 7.419933800535682,
+      "other_infrastructure": 1.464554263673198,
+      "own_infrastructure": 1.139611608749409,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:99:0",
+      "growth": 8.971361668422892,
+      "other_infrastructure": 1.0194043502495358,
+      "own_infrastructure": 2.044159723809502,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:99:1",
+      "growth": 8.153535912011256,
+      "other_infrastructure": 1.641292951590776,
+      "own_infrastructure": 0.8003825211270218,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:99:2",
+      "growth": 8.174274252928237,
+      "other_infrastructure": 1.422271122468262,
+      "own_infrastructure": 1.23842617937205,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:100:0",
+      "growth": 8.621370076645116,
+      "other_infrastructure": 1.05990348637896,
+      "own_infrastructure": 1.962393334857122,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:100:1",
+      "growth": 6.854074995401108,
+      "other_infrastructure": 1.6347872702407842,
+      "own_infrastructure": 0.8126257671334742,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:100:2",
+      "growth": 9.306672148590737,
+      "other_infrastructure": 1.3875095509952982,
+      "own_infrastructure": 1.307181205624446,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:101:0",
+      "growth": 9.248324069618372,
+      "other_infrastructure": 1.1097287052129008,
+      "own_infrastructure": 1.883897601462837,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:101:1",
+      "growth": 7.4852444012463355,
+      "other_infrastructure": 1.645217728333969,
+      "own_infrastructure": 0.8129195552207005,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:101:2",
+      "growth": 7.958836445777165,
+      "other_infrastructure": 1.3484085783417687,
+      "own_infrastructure": 1.406537855205101,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:102:0",
+      "growth": 8.281192438032525,
+      "other_infrastructure": 1.143284816131486,
+      "own_infrastructure": 1.8085416974043236,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:102:1",
+      "growth": 8.644807691138306,
+      "other_infrastructure": 1.6368742374563952,
+      "own_infrastructure": 0.8213628547545047,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:102:2",
+      "growth": 9.396301859779982,
+      "other_infrastructure": 1.3149522760794141,
+      "own_infrastructure": 1.465206777508467,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:103:0",
+      "growth": 9.773719774375284,
+      "other_infrastructure": 1.1891283555567649,
+      "own_infrastructure": 1.7362000295081506,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:103:1",
+      "growth": 7.016793555648226,
+      "other_infrastructure": 1.640083846670492,
+      "own_infrastructure": 0.8342890472806965,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:103:2",
+      "growth": 8.72551836651024,
+      "other_infrastructure": 1.2852445383944235,
+      "own_infrastructure": 1.5439676638328332,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:104:0",
+      "growth": 9.344674759502043,
+      "other_infrastructure": 1.2251352577378611,
+      "own_infrastructure": 1.6667520283278245,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.38287294078598233
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:104:1",
+      "growth": 7.293976321768794,
+      "other_infrastructure": 1.6398668409811712,
+      "own_infrastructure": 0.8372888618412044,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:104:2",
+      "growth": 8.784942449954793,
+      "other_infrastructure": 1.2520204450845145,
+      "own_infrastructure": 1.6129816536345178,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:105:0",
+      "growth": 9.25853594514466,
+      "other_infrastructure": 1.2605956704302534,
+      "own_infrastructure": 1.6000819471947114,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0212672554539175
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:105:1",
+      "growth": 8.124199806767047,
+      "other_infrastructure": 1.6393857054965721,
+      "own_infrastructure": 0.842501877062074,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:105:2",
+      "growth": 9.372317018280775,
+      "other_infrastructure": 1.2212919121283927,
+      "own_infrastructure": 1.678689463798433,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:106:0",
+      "growth": 9.081971474319992,
+      "other_infrastructure": 1.291631086036079,
+      "own_infrastructure": 1.5360786693069228,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.04378764412267788
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:106:1",
+      "growth": 8.747569053443108,
+      "other_infrastructure": 1.6302271421677275,
+      "own_infrastructure": 0.8588865570436257,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:106:2",
+      "growth": 8.342708875863762,
+      "other_infrastructure": 1.1974826131752743,
+      "own_infrastructure": 1.7243756150285323,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:107:0",
+      "growth": 8.128008933112916,
+      "other_infrastructure": 1.3232418587585197,
+      "own_infrastructure": 1.474635522534646,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:107:1",
+      "growth": 7.966559833810914,
+      "other_infrastructure": 1.6247987359376306,
+      "own_infrastructure": 0.8715217681764246,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:107:2",
+      "growth": 8.23804563099509,
+      "other_infrastructure": 1.1730786453555353,
+      "own_infrastructure": 1.774961949340615,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:108:0",
+      "growth": 8.573111395789159,
+      "other_infrastructure": 1.352599228080859,
+      "own_infrastructure": 1.41565010163326,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:108:1",
+      "growth": 8.712728747374578,
+      "other_infrastructure": 1.6209490044434531,
+      "own_infrastructure": 0.8789505489080719,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:108:2",
+      "growth": 8.946663146083901,
+      "other_infrastructure": 1.147300325270666,
+      "own_infrastructure": 1.8262479072536462,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:109:0",
+      "growth": 9.145209734524013,
+      "other_infrastructure": 1.394185419073831,
+      "own_infrastructure": 1.3590240975679297,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:109:1",
+      "growth": 7.3822800462040465,
+      "other_infrastructure": 1.6319329931685314,
+      "own_infrastructure": 0.8835289493785289,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:109:2",
+      "growth": 8.336299787690397,
+      "other_infrastructure": 1.1212765234732294,
+      "own_infrastructure": 1.9048418887691332,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:110:0",
+      "growth": 8.214941106946197,
+      "other_infrastructure": 1.4196523301139088,
+      "own_infrastructure": 1.3046631336652126,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:110:1",
+      "growth": 8.632558081520605,
+      "other_infrastructure": 1.627678082453412,
+      "own_infrastructure": 0.8886116289862063,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:110:2",
+      "growth": 8.756387588400354,
+      "other_infrastructure": 1.0966373813257095,
+      "own_infrastructure": 1.9506930312416115,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:111:0",
+      "growth": 8.822608940098466,
+      "other_infrastructure": 1.4532894745409994,
+      "own_infrastructure": 1.252476608318604,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:111:1",
+      "growth": 7.389499215171897,
+      "other_infrastructure": 1.6303001437428832,
+      "own_infrastructure": 0.8984552699148366,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:111:2",
+      "growth": 9.91869403678049,
+      "other_infrastructure": 1.0754659391167203,
+      "own_infrastructure": 2.0081236791671624,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:112:0",
+      "growth": 7.764082838940973,
+      "other_infrastructure": 1.486031091989395,
+      "own_infrastructure": 1.20237754398586,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:112:1",
+      "growth": 7.689275925035192,
+      "other_infrastructure": 1.6363057180606173,
+      "own_infrastructure": 0.9018282918434153,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:112:2",
+      "growth": 10.171191967100494,
+      "other_infrastructure": 1.0521029179146377,
+      "own_infrastructure": 2.070233892135375,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:113:0",
+      "growth": 8.530549329765616,
+      "other_infrastructure": 1.5175534717563488,
+      "own_infrastructure": 1.1542824422264255,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:113:1",
+      "growth": 7.129220463158568,
+      "other_infrastructure": 1.6457651695664117,
+      "own_infrastructure": 0.8978590466062996,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:113:2",
+      "growth": 9.037166969913407,
+      "other_infrastructure": 1.0260707444163626,
+      "own_infrastructure": 2.137247896906398,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:114:0",
+      "growth": 8.564120475023312,
+      "other_infrastructure": 1.5416223972791054,
+      "own_infrastructure": 1.1081111445373684,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:114:1",
+      "growth": 7.484330404411636,
+      "other_infrastructure": 1.6461376799409155,
+      "own_infrastructure": 0.8990805792137481,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:114:2",
+      "growth": 8.771062954783993,
+      "other_infrastructure": 1.0035958618755583,
+      "own_infrastructure": 2.1841642153444627,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:115:0",
+      "growth": 8.766555823619674,
+      "other_infrastructure": 1.5562566488263285,
+      "own_infrastructure": 1.0637866987558735,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:115:1",
+      "growth": 8.05210743148102,
+      "other_infrastructure": 1.6315489426496488,
+      "own_infrastructure": 0.9132021111092328,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:115:2",
+      "growth": 10.191268249712433,
+      "other_infrastructure": 0.9884944049325531,
+      "own_infrastructure": 2.199311186543424,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:116:0",
+      "growth": 8.047602354957302,
+      "other_infrastructure": 1.5880404431114872,
+      "own_infrastructure": 1.0212352308056385,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:116:1",
+      "growth": 8.719399374101265,
+      "other_infrastructure": 1.6415350819814023,
+      "own_infrastructure": 0.9142459530658082,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:116:2",
+      "growth": 9.25098076507673,
+      "other_infrastructure": 0.9677405919357234,
+      "own_infrastructure": 2.261834933157166,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:117:0",
+      "growth": 7.6003038036564465,
+      "other_infrastructure": 1.614714079139667,
+      "own_infrastructure": 0.9803858215734129,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:117:1",
+      "growth": 7.037267585493728,
+      "other_infrastructure": 1.6425309592742727,
+      "own_infrastructure": 0.9247520613042015,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:117:2",
+      "growth": 9.223841446728375,
+      "other_infrastructure": 0.9525689414388072,
+      "own_infrastructure": 2.3046760969751325,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:118:0",
+      "growth": 7.8675885828269045,
+      "other_infrastructure": 1.6441093862357534,
+      "own_infrastructure": 0.9411703887104763,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:118:1",
+      "growth": 8.558641176347901,
+      "other_infrastructure": 1.6457712136329576,
+      "own_infrastructure": 0.9378467339160681,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:118:2",
+      "growth": 8.772980319961365,
+      "other_infrastructure": 0.9395085613132722,
+      "own_infrastructure": 2.350372038555439,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:119:0",
+      "growth": 8.637519801137902,
+      "other_infrastructure": 1.6735971985237565,
+      "own_infrastructure": 0.9035235731620572,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:119:1",
+      "growth": 7.897606294395788,
+      "other_infrastructure": 1.6557623139904556,
+      "own_infrastructure": 0.9391933422286592,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:119:2",
+      "growth": 8.799334047366498,
+      "other_infrastructure": 0.9213584576953582,
+      "own_infrastructure": 2.408001054818854,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:120:0",
+      "growth": 7.783865694257249,
+      "other_infrastructure": 1.6917157559821814,
+      "own_infrastructure": 0.8673826302355749,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:120:1",
+      "growth": 8.220345815898316,
+      "other_infrastructure": 1.6530099139691994,
+      "own_infrastructure": 0.9447943142615389,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:120:2",
+      "growth": 10.060541274812618,
+      "other_infrastructure": 0.9060884722485569,
+      "own_infrastructure": 2.438637197702824,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:121:0",
+      "growth": 7.6416256679618915,
+      "other_infrastructure": 1.681358843033593,
+      "own_infrastructure": 0.8730276678433975,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:121:1",
+      "growth": 8.759683207091998,
+      "other_infrastructure": 1.607059688819054,
+      "own_infrastructure": 1.0216259762724758,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:121:2",
+      "growth": 8.868393086747725,
+      "other_infrastructure": 0.9473268220579366,
+      "own_infrastructure": 2.3410917097947106,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.15307562782892203
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:122:0",
+      "growth": 8.15603429443865,
+      "other_infrastructure": 1.6773457380801644,
+      "own_infrastructure": 0.879424628954916,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:122:1",
+      "growth": 8.014902135216472,
+      "other_infrastructure": 1.563436335178919,
+      "own_infrastructure": 1.1072434347574067,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:122:2",
+      "growth": 8.751549969713102,
+      "other_infrastructure": 0.9933340318561614,
+      "own_infrastructure": 2.247448041402922,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:123:0",
+      "growth": 8.66855846499483,
+      "other_infrastructure": 1.6770315819756707,
+      "own_infrastructure": 0.8798255451691774,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:123:1",
+      "growth": 8.58744392135779,
+      "other_infrastructure": 1.5186878324579913,
+      "own_infrastructure": 1.1965130442045362,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:123:2",
+      "growth": 8.681818165982174,
+      "other_infrastructure": 1.0381692946868568,
+      "own_infrastructure": 2.157550119746805,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:124:0",
+      "growth": 7.160506998414838,
+      "other_infrastructure": 1.6767299921153564,
+      "own_infrastructure": 0.8914010290424197,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:124:1",
+      "growth": 8.838888087197907,
+      "other_infrastructure": 1.4813245719996762,
+      "own_infrastructure": 1.2822118692737803,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:124:2",
+      "growth": 9.18544646998838,
+      "other_infrastructure": 1.0868064491581,
+      "own_infrastructure": 2.0712481149569326,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:125:0",
+      "growth": 8.826104440109606,
+      "other_infrastructure": 1.655091370162764,
+      "own_infrastructure": 0.9069590220977825,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:125:1",
+      "growth": 9.065292906175618,
+      "other_infrastructure": 1.4476786062282188,
+      "own_infrastructure": 1.3217845499668728,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:125:2",
+      "growth": 9.465214486239981,
+      "other_infrastructure": 1.1143717860323277,
+      "own_infrastructure": 1.9883981903586552,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:126:0",
+      "growth": 8.206250036390603,
+      "other_infrastructure": 1.6493886355070662,
+      "own_infrastructure": 0.919488046401038,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:126:1",
+      "growth": 8.828516188781395,
+      "other_infrastructure": 1.4141751545726735,
+      "own_infrastructure": 1.3899150082698233,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:126:2",
+      "growth": 9.964054832050705,
+      "other_infrastructure": 1.1547015273354306,
+      "own_infrastructure": 1.9088622627443088,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:127:0",
+      "growth": 6.985880429028015,
+      "other_infrastructure": 1.6473407761744574,
+      "own_infrastructure": 0.9272491095294638,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:127:1",
+      "growth": 7.842682414179352,
+      "other_infrastructure": 1.3798784408820002,
+      "own_infrastructure": 1.4621737801143784,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    },
+    {
+      "capacity": 30.0,
+      "event_id": "evaluation-ecological-026/growth:127:2",
+      "growth": 8.916476220079252,
+      "other_infrastructure": 1.1947114448219212,
+      "own_infrastructure": 1.8325077722345364,
+      "sensor_sigma": 0.05,
+      "stock_before": 0.0
+    }
+  ],
+  "parameters": [
+    {
+      "absolute_error": 1.638390857804132,
+      "case_id": "evaluation-ecological-026",
+      "cdf": 0.765625,
+      "cohort": "ecological",
+      "covered90": 1,
+      "mean": 5.026985799007439,
+      "method": "prior",
+      "parameter": "r",
+      "q05": 2.2566720035774166,
+      "q95": 7.712259145147893,
+      "sd": 1.7634987529170627,
+      "truth": 6.665376656811571,
+      "width90": 5.455587141570477
+    },
+    {
+      "absolute_error": 0.5414288516388337,
+      "case_id": "evaluation-ecological-026",
+      "cdf": 0.2646484375,
+      "cohort": "ecological",
+      "covered90": 1,
+      "mean": 1.757707288557052,
+      "method": "prior",
+      "parameter": "b",
+      "q05": 0.6139649425766542,
+      "q95": 2.8867094719101196,
+      "sd": 0.7127696862298577,
+      "truth": 1.2162784369182182,
+      "width90": 2.2727445293334654
+    },
+    {
+      "absolute_error": 0.31913178908648304,
+      "case_id": "evaluation-ecological-026",
+      "cdf": 0.091796875,
+      "cohort": "ecological",
+      "covered90": 1,
+      "mean": 0.39567156634375594,
+      "method": "prior",
+      "parameter": "g",
+      "q05": 0.03603220601671968,
+      "q95": 0.7636384360440028,
+      "sd": 0.2275619051684795,
+      "truth": 0.07653977725727291,
+      "width90": 0.7276062300272832
+    },
+    {
+      "absolute_error": 0.019500027854293833,
+      "case_id": "evaluation-ecological-026",
+      "cdf": 0.71102891267895,
+      "cohort": "ecological",
+      "covered90": 1,
+      "mean": 6.645876628957277,
+      "method": "published",
+      "parameter": "r",
+      "q05": 6.5888932718219655,
+      "q95": 6.708465740760675,
+      "sd": 0.03616418729853232,
+      "truth": 6.665376656811571,
+      "width90": 0.11957246893870987
+    },
+    {
+      "absolute_error": 0.014245786740652244,
+      "case_id": "evaluation-ecological-026",
+      "cdf": 0.22057580988438447,
+      "cohort": "ecological",
+      "covered90": 1,
+      "mean": 1.2305242236588705,
+      "method": "published",
+      "parameter": "b",
+      "q05": 1.1984874028045338,
+      "q95": 1.261489634056563,
+      "sd": 0.019716062238361177,
+      "truth": 1.2162784369182182,
+      "width90": 0.06300223125202908
+    },
+    {
+      "absolute_error": 0.031759810890225684,
+      "case_id": "evaluation-ecological-026",
+      "cdf": 0.130406923709596,
+      "cohort": "ecological",
+      "covered90": 1,
+      "mean": 0.1082995881474986,
+      "method": "published",
+      "parameter": "g",
+      "q05": 0.05929462684697485,
+      "q95": 0.15300411493705643,
+      "sd": 0.028072536670210934,
+      "truth": 0.07653977725727291,
+      "width90": 0.09370948809008159
+    },
+    {
+      "absolute_error": 0.021067862336957788,
+      "case_id": "evaluation-ecological-026",
+      "cdf": 0.7138352147095175,
+      "cohort": "ecological",
+      "covered90": 1,
+      "mean": 6.644308794474613,
+      "method": "higher_compute",
+      "parameter": "r",
+      "q05": 6.584372149377555,
+      "q95": 6.706955178621202,
+      "sd": 0.03705362515728589,
+      "truth": 6.665376656811571,
+      "width90": 0.12258302924364717
+    },
+    {
+      "absolute_error": 0.015277921894221835,
+      "case_id": "evaluation-ecological-026",
+      "cdf": 0.22282235750543047,
+      "cohort": "ecological",
+      "covered90": 1,
+      "mean": 1.23155635881244,
+      "method": "higher_compute",
+      "parameter": "b",
+      "q05": 1.198006671977465,
+      "q95": 1.2636511755726993,
+      "sd": 0.02003852285867444,
+      "truth": 1.2162784369182182,
+      "width90": 0.06564450359523444
+    },
+    {
+      "absolute_error": 0.03169765596845141,
+      "case_id": "evaluation-ecological-026",
+      "cdf": 0.12941818841067937,
+      "cohort": "ecological",
+      "covered90": 1,
+      "mean": 0.10823743322572432,
+      "method": "higher_compute",
+      "parameter": "g",
+      "q05": 0.06193557495365359,
+      "q95": 0.15331511768501604,
+      "sd": 0.027937890408225512,
+      "truth": 0.07653977725727291,
+      "width90": 0.09137954273136245
+    },
+    {
+      "absolute_error": 0.021370346254794725,
+      "case_id": "evaluation-ecological-026",
+      "cdf": 0.7158125000000002,
+      "cohort": "ecological",
+      "covered90": 1,
+      "mean": 6.644006310556776,
+      "method": "reference",
+      "parameter": "r",
+      "q05": 6.585110128130214,
+      "q95": 6.705214431402294,
+      "sd": 0.0370346130436034,
+      "truth": 6.665376656811571,
+      "width90": 0.12010430327207988
+    },
+    {
+      "absolute_error": 0.015712592969441275,
+      "case_id": "evaluation-ecological-026",
+      "cdf": 0.22112500000000007,
+      "cohort": "ecological",
+      "covered90": 1,
+      "mean": 1.2319910298876595,
+      "method": "reference",
+      "parameter": "b",
+      "q05": 1.1956120031180535,
+      "q95": 1.2655986433955615,
+      "sd": 0.021100728783393523,
+      "truth": 1.2162784369182182,
+      "width90": 0.069986640277508
+    },
+    {
+      "absolute_error": 0.03192526723679999,
+      "case_id": "evaluation-ecological-026",
+      "cdf": 0.14093750000000002,
+      "cohort": "ecological",
+      "covered90": 1,
+      "mean": 0.1084650444940729,
+      "method": "reference",
+      "parameter": "g",
+      "q05": 0.06140423649483421,
+      "q95": 0.1540081620314319,
+      "sd": 0.028500595936809366,
+      "truth": 0.07653977725727291,
+      "width90": 0.09260392553659769
+    }
+  ]
+}

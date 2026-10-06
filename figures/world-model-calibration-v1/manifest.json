@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "renderer_version": "world-model-calibration-v1-figures-v1",
+  "style": "Swarm Societies / Chromatic Field",
+  "study": "world-model-calibration-v1",
+  "bank": "evaluation",
+  "sources": {
+    "evidence/world-model-calibration-v1/design.json": "38917abefbb4162bee00b2c290ef178c9355a9a0f12d78ef5f59395216d54e98",
+    "evidence/world-model-calibration-v1/design.sha256": "2c3dda03747b62ea783cdadfff1a27bcc22d0b79a08b89cdea8c0803bf770e90",
+    "evidence/world-model-calibration-v1/completion.json": "e33452a0f694afa5004e23b216be67cfd375fcd732dc7bbc95732ebfa2749073",
+    "evidence/world-model-calibration-v1/parameters.csv": "299f6938a779ec3b8b10fa044ce4a7e4f57bc2300701e2022c254a24260be6de",
+    "evidence/world-model-calibration-v1/cdf.csv": "aa3b69803139081183ddbd3fe77cdebea711789f67e56b57ec5ea77be2efd6c5",
+    "evidence/world-model-calibration-v1/agreement.csv": "feb0aa53b6f458a269b5a8f55e0a4a3ff0ebb62d884b44b12e29def4822a91b6",
+    "evidence/world-model-calibration-v1/diagnostics.json": "742c9efbdcbb2c93a15a8b942cf6d7bfd607205d320260257e7a4aeb06a3e682",
+    "evidence/world-model-calibration-v1/summary.json": "0f73cee88b6f8285f7e24ea60b3affed6f90fe519f9430f9589ccd2bb7e8fa1b",
+    "scripts/visualize_world_model_calibration.py": "3458e466e711f476b2685fd93948926c918388efd2031d758e379db10c7793bb",
+    "swarm_societies/visualize.py": "1cedaca8dbbe70aef2b763b7e4e9b67720c6a3783f6dcfe91971b6a4b141dae0",
+    "docs/visual-reference.md": "58308075d6cabde383126d3ccd6ea5c14da9304f59c8ef8500c36ea398016409"
+  },
+  "captions": {
+    "parameter-coverage": "Coverage of terminal 90% marginal credible intervals against simulator coefficients, with mean interval widths printed alongside. Dots and horizontal lines give all-case coverage and 95% Wilson binomial intervals over independent cases, including nonzero uncertainty when all cases cover. Every case is retained, including failed reference outcomes. Prior-predictive controls draw true laws from the learner's full prior and have exogenous features. Ecological cases draw laws from the narrower task distribution and use pooled histories from interacting fixed-policy societies; this is coverage under the fitted conditional likelihood, not a prior-predictive calibration test. The nominal 0.90 line has different inferential meanings in those panels. Method identity uses labels and neutral markers, not society colors.",
+    "posterior-agreement": "Agreement with an independently implemented batch MCMC posterior on cases passing its prespecified rank-normalized R-hat and bulk/tail effective-sample-size checks. Small linked marks pair individual cases across SMC settings; larger marks and horizontal lines show case means and 95% bootstrap intervals. Both SMC settings use the same qualified cases, and the paired-agreement-contrasts CSV reports paired budget effects. Mean discrepancies are divided by reference posterior SD; interval widths are ratios to the reference; endpoint discrepancies are divided by the public prior width. Lower discrepancies and width ratios near one indicate closer numerical agreement. Small vertical ticks in mean panels show mean reference mean-MCSE divided by posterior SD, providing numerical-noise context rather than a hard significance threshold. Passing convergence diagnostics does not prove exact computation, and differences near reference Monte Carlo uncertainty must not be overinterpreted. The failed-reference denominator remains visible; those cases are excluded only from this qualified agreement, not raw coverage or CDF diagnostics. Frozen-prior agreement is retained in the derived CSV but omitted from this scale-focused SMC comparison.",
+    "compute-accuracy": "Top panels report recorded fitting CPU cost for all cases, including unsuccessful references and retry computation. Bottom panels use only the shared qualified-reference cases, plotting fitting CPU seconds against each case's average standardized marginal posterior-mean discrepancy over r, b and g. Small symbols are cases and large symbols show means with 95% case bootstrap intervals on each axis. Chains, particles and coefficients are not independent replications. Fitting CPU includes inference, reference convergence diagnostics and retries; it excludes separately timed full-data CDF scoring and is machine-dependent. SMC processes the observations sequentially, whereas the batch reference fits the complete history once at its terminal point, plus any prescribed retry. These costs describe work to reach a terminal posterior, not matched online latency or a planning benchmark. The batch reference has its own Monte Carlo error; its cost is shown without treating it as an exact zero-error ground truth. Higher computation is a sensitivity comparison, not a changed production default.",
+    "cdf-diagnostics": "Empirical CDF minus uniform CDF for each method's posterior CDF evaluated at simulator truth, separately for coefficients and the data-dependent log-likelihood statistic. One value per independent case is used; failed references remain in the raw curves. Each panel has its own vertical range to retain the unupdated prior's likelihood discrepancy without compressing coefficient diagnostics. In the prior-predictive cohort only, the gray band is the 95% Dvoretzky\u2013Kiefer\u2013Wolfowitz simultaneous bound for one ECDF under an independent uniform null. It is not a multiplicity-adjusted bound over all methods or quantities. Finite weighted particles and correlated reference draws make these approximate CDF diagnostics, not exact exchangeable discrete SBC ranks. Ecological curves are descriptive: narrower law draws and latent-outcome-dependent feature generation prevent interpreting them as the same uniform-null test. Marginal prior-predictive checks alone can accept an unupdated prior, so the data-dependent likelihood check is also shown. A successful CDF check does not establish useful learning or accurate decisions."
+  },
+  "cohort_counts": {
+    "ecological": 64,
+    "prior_predictive": 128
+  },
+  "reference_failures": {
+    "ecological": 0,
+    "prior_predictive": 0
+  },
+  "bootstrap": {
+    "draws": 2000,
+    "seed": 8307,
+    "unit": "independent case",
+    "level": 0.95
+  },
+  "coverage_interval": "95% Wilson binomial interval; one coverage indicator per independent case",
+  "cdf_band": "95% DKW simultaneous within each independent prior-predictive ECDF; no ecological uniform-null band; no familywise correction",
+  "rendering_runs_training": false,
+  "rendering_runs_evaluation": false,
+  "independent_evolutionary_runs": 0,
+  "model_generation_calls": 0,
+  "software": {
+    "python": "3.13.5",
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.3"
+  },
+  "artifacts": {
+    "coverage-statistics.csv": "e106a3b9cf96b4f4b241cdfd12d1e0e7489e73fe46d5e1a1ee230e8be3d32206",
+    "agreement-statistics.csv": "1ea37a1e77df7a836a7269a8475ecc120e06c128875671a4eada4007264c248c",
+    "compute-statistics.csv": "e946f1e080a78d776ee51b3b2d848323333ed941dea5b1acd6c5a375429285e0",
+    "cdf-statistics.csv": "a5ebb7942eec81f90fb53eb2ba5fa6a8e6e284bf6e1ac1c3e101dd674bc0e66b",
+    "paired-agreement-contrasts.csv": "24b1fbb5245dbe793ef8c126ecb2f1d38f8322f49965bdfb144349da5384b7a1",
+    "parameter-coverage.svg": "54c602e8ce87ec4c044440dba79e9b712ef022fea704da48c8783782edb1ee34",
+    "parameter-coverage.pdf": "a3a30d1d41e84dd04276e8493211cbfca4a86568d1fdab8847014931a82e6582",
+    "parameter-coverage.png": "db71f27975c9a97f4e893f45bc60e5f3099ddc8de038140e7ce8c9b2018ad349",
+    "posterior-agreement.svg": "7a9883821168d00489e624938cc15fe989291618306ea2172d8db0ae7204f9a4",
+    "posterior-agreement.pdf": "0462174af875e4e39dd9cf660568bee4891b5bb1e437db7f4e5ecff2e974e775",
+    "posterior-agreement.png": "3da868e24d119e4bd2d04abcfc635b8e25f2747e5c0813ac080e9b5d951d7ec7",
+    "compute-accuracy.svg": "a301d2c067a207b33deee452ca425237e43fb47f2ea16ce847c34f7e49cc675c",
+    "compute-accuracy.pdf": "32cff585afad2c267497eda406009f718e2d77df5ae2b8644b37f2387bbce136",
+    "compute-accuracy.png": "7e536fa9bce845724aa5b40f5de854298c66f693780ef947f9810a01b4f49898",
+    "cdf-diagnostics.svg": "12369f11c898bd2e3a271265fb2e10654320e92547aea040339c16e193aba6e8",
+    "cdf-diagnostics.pdf": "ef60131c08f3622d544338d29fd5fff81ff5c0c94a8a59a241a98b21df65bdd2",
+    "cdf-diagnostics.png": "29045abb0eeb095902b5d28d555ae89f14d0079fb7625a34a08f597e477019fc",
+    "README.md": "0f870b83141429216377fb592d88bc8bbfa911d38f3e88614a627ed0bf525a8e"
+  }
+}

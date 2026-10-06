@@ -1,10 +1,22 @@
 # Swarm Societies working conventions
 
-Read `PROGRESS.md` for the current experimental state and
-`docs/world-model-v1.md` for the implemented stationary identification control.
+Read `PROGRESS.md` for the current experimental state,
+`docs/world-model-calibration-v1.md` for the independent calibration audit and
+implementation decision, and `docs/world-model-v1.md` for the implemented
+stationary identification control.
 The user's current priority remains parameter learning followed by rule
 discovery; `docs/world-model-proposal.md` describes the staged design and
 `docs/research-roadmap.md` preserves the broader research program.
+
+The calibration audit supports retaining 1,024 particles/four rejuvenation sweeps
+as the working default. Higher compute is a sensitivity setting, not an adopted
+default. All 192 batch references qualified; close numerical agreement does not
+establish universal calibration. Preserve the shared borderline likelihood-CDF
+departure and the distinction between conditional ecological beliefs and a full
+joint model. Next: private member beliefs and bounded, provenance-preserving
+institutional reports with fixed truthful rules, deduplication and delay under
+the current instrumented observation contract. Compare matched communication
+budgets before adding hidden external features or confidence-based selection.
 
 Keep the README as an informative living research paper: abstract, methods,
 actual experimental results, tables, figures, limitations and reproduction.

@@ -1,5 +1,62 @@
 # Active work record
 
+## Independent world-model calibration audit completed, 6 October 2026
+
+The next clear implementation step was to test parameter uncertainty before
+using it for institutional information governance. Implemented and ran a new,
+prospective audit without modifying the published learner or earlier evidence.
+
+- Independent batch posterior: `swarm_societies/world_model_v1/reference.py`;
+  four Metropolis chains, separately implemented likelihood, explicit convergence
+  gates, mean Monte Carlo errors, and a prescribed retry with both attempts saved.
+- Frozen design and semantic verifier: `scripts/run_world_model_calibration.py`;
+  `docs/world-model-calibration-protocol.md`; `evidence/world-model-calibration-v1/`.
+- Report and implementation decision: `docs/world-model-calibration-v1.md`;
+  paper-style README updated with the new methods, results and limitations.
+- Four Chromatic Field figures in SVG/PDF/PNG and five statistical tables:
+  `figures/world-model-calibration-v1/`; source/output manifest and deterministic
+  renderer `scripts/visualize_world_model_calibration.py`.
+
+128 independent prior-predictive datasets plus 64 new ecological arenas.
+All **192 final references qualified**, with one prescribed retry. There were
+**40,960 distinct observations**, **81,920 successful SMC updates**, and zero
+failed updates. No new evolutionary search or model-generation calls.
+
+Published SMC/reference mean gaps average **0.0451 posterior SD** in the controlled
+panel and **0.0424 SD** in ecology. Higher compute lowers them to **0.0255/0.0284**,
+near reference Monte Carlo uncertainty, at **4.26×/4.91×** fitting CPU cost.
+Published/reference interval-width ratios average **0.990–1.002** by coefficient
+and panel. Retain the published **1,024 particles/four sweeps** as the default.
+
+Fresh ecological spillover coverage is **57/64 (89.06%)** published and
+**58/64 (90.63%)** higher/reference. The earlier 18/24 result did not recur.
+Do not claim calibration fully solved: reference ecological renewal coverage is
+**53/64 (82.81%)**, and the controlled likelihood-CDF statistic has a shared small
+departure. Maximum ECDF deviation is **0.11800/0.12100/0.12275** for published,
+higher and reference, against a single-ECDF 95% DKW bound of **0.12004**.
+All coefficient CDF curves fall within the band, including the frozen-prior
+negative control; its likelihood-CDF deviation is **0.99707**.
+
+Verification rebuilt all 192 datasets, 2,304 coefficient rows, 3,072 CDF rows,
+1,728 agreement rows and **4,283,648 stored sample likelihoods**, checking 401
+artifact hashes. The complete suite passes **126 tests and 35 subtests**.
+Original experiment, mechanism and first world-model evidence verifiers pass.
+All new figure PNGs were inspected; repeat rendering is byte-identical.
+
+```bash
+OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/run_world_model_calibration.py verify
+.venv/bin/python scripts/visualize_world_model_calibration.py
+.venv/bin/python -m pytest -q
+```
+
+Next implementation: private member belief state and bounded institutional
+reports, with evidence provenance, deduplication, delay and matched bandwidth.
+Begin with fixed truthful report rules and existing instrumented sensing;
+compare no sharing, bounded sharing and the pooled information ceiling.
+Keep uncertainty conditional on the fitted model. Defer confidence-based report
+selection and hidden-feature inference until their observation model and
+calibration diagnostics have separate frozen controls.
+
 ## First learnable world model implemented and evaluated, 6 October 2026
 
 Implemented the next approved stage and completed its frozen local experiment.
