@@ -1,0 +1,183 @@
+{
+  "version": "data-packaging-independent-review-v1",
+  "checked_utc": "2026-10-06T23:25:28.542027+00:00",
+  "reviewed_commit": "72c96736a4de1d6e64747656a57715f0f37726ea",
+  "source_inventory_commit": "069536285a7d0d30f0828fa999b2337d408e9562",
+  "catalog_sha256": "ec62110504fe08c2553f62c4eaca4b9d9a8ad593e5dec15cc0258a972338d808",
+  "status": "passed_local_review_public_restoration_pending",
+  "blocking_findings": [],
+  "checks": {
+    "catalog_and_manifests": {
+      "studies": 8,
+      "metadata_errors": [],
+      "manifests": [
+        {
+          "path": "artifacts/evidence-v1/world-model-calibration-v1.json",
+          "sha256": "eae284eb5b8ae19ed5e0d70f498163bd257e8538738b0890f1386889682e9105",
+          "inventory_matches_audit": true
+        },
+        {
+          "path": "artifacts/evidence-v1/world-model-decision-development-v1.json",
+          "sha256": "bb7a8e452c4af49dd4942cb5b5df4458aaedf2bc9b8f7bf407211ef32d84c85a",
+          "inventory_matches_audit": true
+        },
+        {
+          "path": "artifacts/evidence-v1/world-model-decision-v1.json",
+          "sha256": "5ce21670172cf9c4933d5f5015366339563c89b9d9506a8c8c7287cca09a87d4",
+          "inventory_matches_audit": true
+        },
+        {
+          "path": "artifacts/evidence-v1/world-model-experiment-development-v1.json",
+          "sha256": "e7d046f183d4f7e0070689b874c2d7a2b6e59fb828161c78f60224488ce3a35f",
+          "inventory_matches_audit": true
+        },
+        {
+          "path": "artifacts/evidence-v1/world-model-experiment-smoke-v1.json",
+          "sha256": "53bba2a34e14a60e663890b80f0232334e0fe6b9c21b70af5c96cbb2901fce8c",
+          "inventory_matches_audit": true
+        },
+        {
+          "path": "artifacts/evidence-v1/world-model-experiment-v1.json",
+          "sha256": "efc955edb4dbb65ba4016eb5a92ccf0092cd4dd836bb39d888ae2792aab60d98",
+          "inventory_matches_audit": true
+        },
+        {
+          "path": "artifacts/evidence-v1/world-model-sharing-v1.json",
+          "sha256": "817ae376ca45d163fa5f4c83a0d0cefca076ca9773c4f944389d17a2f79db1dd",
+          "inventory_matches_audit": true
+        },
+        {
+          "path": "artifacts/evidence-v1/world-model-v1.json",
+          "sha256": "144143679395300f9ec7d16f95010db4795c8480d33b26239843eef4b8016073",
+          "inventory_matches_audit": true
+        }
+      ],
+      "payload_files": 844,
+      "unique_paths": 844,
+      "payload_bytes": 750595253,
+      "exact_match_to_audited_migration_inventory": true
+    },
+    "original_evidence_byte_preservation": {
+      "files_checked": 1133,
+      "file_bytes": 768984812,
+      "mismatches": []
+    },
+    "retained_evidence": {
+      "files_checked": 289,
+      "file_bytes": 18389559,
+      "mismatches": [],
+      "all_still_tracked": true
+    },
+    "local_roundtrip_independently_rehashed": {
+      "files_checked": 844,
+      "file_bytes": 750595253,
+      "mismatches": []
+    },
+    "local_archive_hashes": [
+      {
+        "study": "world-model-calibration-v1",
+        "bytes": 66955248,
+        "sha256": "a67838e6e7c45c226f11be16669467f1baf233449dbd335e39414655f8b8747b",
+        "matches": true
+      },
+      {
+        "study": "world-model-decision-development-v1",
+        "bytes": 6135650,
+        "sha256": "68873734ab5539807c57b8f89fe26017dc3b374961b8671342945e6b8732517f",
+        "matches": true
+      },
+      {
+        "study": "world-model-decision-v1",
+        "bytes": 30644134,
+        "sha256": "b2cba78b16fd11a2e85af22beb885e8c10963be9742b47ce8b5708bd951c44a9",
+        "matches": true
+      },
+      {
+        "study": "world-model-experiment-development-v1",
+        "bytes": 62285489,
+        "sha256": "2e4cd26cf82b832a743055b68c833de4fcef1796ee1a3cb2ec2adbba4363155e",
+        "matches": true
+      },
+      {
+        "study": "world-model-experiment-smoke-v1",
+        "bytes": 10271735,
+        "sha256": "9efe116c400a82e0095c726aeeb87bc0d459a756853597bf82057e47b1cc5fa6",
+        "matches": true
+      },
+      {
+        "study": "world-model-experiment-v1",
+        "bytes": 315222084,
+        "sha256": "e1073f0f777e9e711d5292ba751e21d2aa32e7113272fb68a1c8276b2b58f332",
+        "matches": true
+      },
+      {
+        "study": "world-model-sharing-v1",
+        "bytes": 189182944,
+        "sha256": "9238717283181357791ff17c731f644e2bcd9f2a234dedd5e234794376f49dac",
+        "matches": true
+      },
+      {
+        "study": "world-model-v1",
+        "bytes": 9563709,
+        "sha256": "2c1efbd1526ee09d41240a222041568432fb481d4187bdbebc9332e36aea26c1",
+        "matches": true
+      }
+    ],
+    "prior_frozen_declarations": {
+      "checks": 301,
+      "distinct_paths": 158,
+      "mismatches": []
+    },
+    "foundation_repair_sources": {
+      "checks": 11,
+      "mismatches": []
+    },
+    "foundation_receipt_artifacts": {
+      "checks": 9,
+      "mismatches": []
+    },
+    "ignored_restored_bulk": {
+      "all844_covered": true
+    },
+    "clean_checkout": {
+      "path": "/tmp/swarm-evidence-clean-v1-v1ivfelf",
+      "bulk_files_present_at_review": 0,
+      "required_test_fixtures_present": true,
+      "recorded_test_log_sha256": "7880598bf60603740fdab7064080c0813cf807a0d7c680af823bc1994b14c0e1",
+      "recorded_result": "542 passed, 123 subtests passed in 509.47s (0:08:29)",
+      "independently_reran_full_suite": false
+    },
+    "reviewed_sources": {
+      "swarm_societies/evidence_archive_v1.py": "474c53af67b795f88e94393463fa80ea5a3c987e9e5a4f0128c1e6764297eca8",
+      "scripts/evidence_archive_v1.py": "f995df0b09398344156d476fcfce2b6942519567d00cb960876a73ef68e66f58",
+      "scripts/restore_evidence_v1.py": "3fe537dadf7697e1ac8a6bffc605421cd4043d2967cdb472d1a089801779ccca",
+      "tests/test_evidence_archive_v1.py": "0b1df093c2363df351bbef312c3dfad0c2ba56ecb7ac319906a01beede46d87a",
+      "tests/test_restore_evidence_v1.py": "20d62f31da119bc2ebe320f88dd39cb22debda014934b960e583e1a90b98e78b",
+      "docs/evidence-archives-v1.md": "a84530b3f2f44436f4ae4df69fb8da4a31af4e8e7c48ee379e9d90154a34ef15",
+      "artifacts/evidence-v1/README.md": "7d6d6598cdf4332f557571df8e712729e5cf274ffbc749ab9dfe014cd6e410d4"
+    }
+  },
+  "code_review": [
+    "Strict regular-file USTAR inventory; compressed and per-member hashes; no tar extraction helper.",
+    "Full staging and destination preflight before publication, with atomic no-replace publication per file and documented interruption semantics.",
+    "Bounded input/stream handling; malformed DEFLATE errors normalized; mutable partial downloads reject hard links.",
+    "HTTPS and redirect scheme validation; validated range/If-Range resumes; offline cache re-verification.",
+    "Catalog confines payload paths to evidence/; restored local evidence can be checked without network.",
+    "Default-test fixtures including case067 and all mechanism records remain tracked; frozen tests and repairs source hashes unchanged."
+  ],
+  "documentation_review": [
+    "Totals match exact inventories: 844 files / 750,595,253 payload bytes; 289 retained files / 18,389,559 bytes; 690,260,993 archive bytes.",
+    "GitHub administrative asset mutability and hash-pinning distinction disclosed; historical full-clone size limitation disclosed.",
+    "Same-toolchain gzip reproducibility and per-file (not whole-repository) atomic publication correctly scoped.",
+    "Public download/restoration remains an explicit prerequisite before untracking; no public-availability claim independently verified in this review."
+  ],
+  "remaining_acceptance": [
+    "Complete public release upload and clean-checkout download/restoration using committed catalog URLs before untracking bulk files.",
+    "Untrack exactly the 844 audited paths; do not remove the whole calibration cases directory because case067 is retained.",
+    "Update final checkpoint records from local preparation to actual publication/restoration outcomes."
+  ],
+  "scope_limits": [
+    "No full semantic study replay or full test rerun; this review independently hashes original evidence, locally restored payloads, archive files and frozen declarations.",
+    "GitHub immutability setting not changed or independently queried; its disabled state was supplied by parent and documentation accurately distinguishes it from checksums."
+  ]
+}

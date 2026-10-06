@@ -1,5 +1,53 @@
 # Active work record
 
+## Evidence publication and report consolidation completed, 7 October 2026
+
+Stage 0D/0E is complete. The existing public GitHub repository now hosts eight
+versioned evidence archives in release `evidence-v1-2026-10-07`, sourced from
+checkpoint `069536285a7d0d30f0828fa999b2337d408e9562`. The catalog and per-file
+size/SHA-256 manifests remain in `artifacts/evidence-v1/`. Restoration commands
+and limitations are in `docs/evidence-archives-v1.md`; compact validation records
+are in `evidence/data-packaging-v1/`.
+
+The archives contain **844 files / 750,595,253 original bytes**, compressed to
+690,260,993 bytes. All 17 hosted archive/metadata assets match their local
+sizes and SHA-256 digests. Public, unauthenticated download into an empty cache
+restored all 844 files in an actual clean sparse checkout. Offline verification
+then checked every cached archive and payload. Comparing the complete restored
+checkout and the original workspace against the pre-migration inventories found
+all **1,133 original evidence files / 768,984,812 bytes** identical. All 82
+previous implementation, script, test and seed files also remain identical;
+an independent review rechecked 301 frozen source declarations without mismatch.
+
+Only after these checks were the 844 payloads removed from Git tracking.
+The original local files remain present and ignored. The **289 retained evidence
+files / 18,389,559 bytes**, plus new migration receipts, include source snapshots,
+designs, summaries, compact tables and the calibration case-067 test fixture.
+This removes **97.6% of the previous evidence payload from the current tree**.
+An ordinary full clone still downloads historical blobs; use a shallow clone
+for the smaller current checkout. No history rewrite or force-push was used.
+Hosted assets are hash-pinned but remain administratively mutable; no repository
+immutability setting was changed.
+
+The full default suite passed **542 tests and 123 subtests** in 509.47 seconds
+in the clean checkout with all 844 bulk files absent, before public restoration.
+The 72 archive/restoration tests cover corrupt and unsafe archives, size limits,
+conflicting files, partial-download validation, caching and offline operation.
+Final edits after that run only move verified data and update documentation and
+receipts; implementation and test bytes remain unchanged.
+
+The README now has **1,446 words**, down from 7,635. Its question, methods,
+actual results, limitations and reproduction remain prominent. The complete
+previous narrative, tables, captions and references are preserved in
+`docs/living-research-report-2026-10-07.md`, with relative links adjusted;
+`docs/study-index.md` indexes all studies, including null results and controls.
+
+No experimental model calls or evolutionary runs were made. Stage 1's separate
+spatial engine is next: mobile agents, legal local actions, stock-dependent
+renewal, exact accounting and incentive calibration. Optional institutions and
+costed enforcement follow the physical gate; no v3 capability or positive
+institutional result is claimed by this checkpoint.
+
 ## Foundation repairs implemented, 7 October 2026
 
 The user authorized the repair sequence following the scientific review.

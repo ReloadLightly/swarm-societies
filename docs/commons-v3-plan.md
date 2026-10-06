@@ -81,7 +81,14 @@ Implementation checkpoint, 7 October: the
 calibration verifier and bounded execution entry points (0B/0C). Both complete
 192-case checks pass on Python 3.12/3.13 with the pinned numerical stack;
 an older stack's out-of-scope audit drift is retained as a failed check.
-External archive restoration and README consolidation (0D/0E) remain open.
+The [evidence archive guide](evidence-archives-v1.md) and
+[migration validation](../evidence/data-packaging-v1/README.md) complete 0D/0E:
+all eight published archives restore byte-identically into a clean checkout,
+offline verification passes, and the default suite passes without the bulk
+files. The shorter README preserves the full previous report in `docs/`.
+Git history remains unchanged. These are versioned, hash-pinned archives;
+GitHub administrators retain the ability to remove or replace hosted assets.
+The next implementation is Stage 1; v3 physics is not yet implemented.
 
 **0A. Correct the scientific record.** Retain the old results as engineering,
 identification and exploratory controls. Add the reproduced greedy baseline and
@@ -115,12 +122,14 @@ libraries before a policy runs.
 
 **0D. Separate publication data from ordinary source checkout.** Keep compact
 summaries, manifests, source snapshots, environment specifications and small
-test fixtures in Git. Package bulky evidence in immutable release archives
+test fixtures in Git. Package bulky evidence in versioned, hash-pinned release archives
 with checksums, byte sizes, schema versions and stable retrieval identifiers.
 Add download/resume/cache and offline verification. Test complete restoration
 on a clean checkout before removing tracked copies in a new commit. Zenodo or
 a versioned dataset repository are candidate destinations, subject to actual
-access and restoration tests. Merely deleting files in a new commit does not
+access and restoration tests. Preserve published archive identities; distinguish
+byte-integrity verification from provider-enforced retention or immutability.
+Merely deleting files in a new commit does not
 shrink history. Any history rewrite needs a verified backup, preserved release
 mapping, clone migration instructions and explicit authorization.
 

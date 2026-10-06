@@ -129,3 +129,8 @@ the catalog pins the checked-in copies. The migration's verification record
 reports archive hashes, clean-checkout restoration, offline verification and
 the regression suite. Publication and restoration must pass before tracked
 bulk files are removed.
+
+The completed [migration validation](../evidence/data-packaging-v1/README.md)
+records public restoration of all 844 payload files, identity checks over all
+1,133 original evidence files, and 542 tests plus 123 subtests passing in a
+clean checkout before the bulk files were restored.

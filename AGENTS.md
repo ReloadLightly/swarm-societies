@@ -28,8 +28,20 @@ or retry decisions. Use `swarm_societies.execution_v1` or
 including fresh evaluation, replay and checkpoint continuation. Direct frozen
 APIs remain for audited trusted policies. The bounded historical search adapter
 is `scripts/evaluate_search_bounded_v1.py`; it preserves the old acceptance rule
-for parity and does not authorize a new campaign. Data publication/restoration
-and the shorter README remain separate Stage 0 tasks.
+for parity and does not authorize a new campaign.
+
+Stage 0 data publication/restoration and README consolidation are complete.
+See `docs/evidence-archives-v1.md` and `evidence/data-packaging-v1/` for the
+verified public archives, clean-checkout restoration and offline checks.
+Restore full banks with `python3 scripts/restore_evidence_v1.py --study all`
+before semantic replay or figure regeneration. Default tests retain their
+small fixtures and require no evidence download. Keep restored bulk files
+ignored; new evidence versions need new archive identities. Hashes detect
+changed assets, but GitHub hosting is not administratively immutable.
+The complete earlier report remains in
+`docs/living-research-report-2026-10-07.md`; `docs/study-index.md` indexes it.
+The next implementation is Stage 1's separate spatial physics and incentive
+calibration, without experimental model calls or mandatory institutions.
 
 The exploratory reconstructed greedy baseline reproduces the external review's
 mechanism table: focal welfare 0.848654 and private utility 1.038674 exceed the
