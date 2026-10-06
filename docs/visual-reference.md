@@ -51,3 +51,28 @@ Render with:
 The figure manifest records source hashes, export hashes, software versions,
 captions, and exact animation frame selection. Static replay panels show the
 last recorded frame; GIFs retain the disturbance boundary and sampled frames.
+
+## Continuing experiment series
+
+Every new experiment should include Chromatic Field figures derived from its
+saved evidence, with SVG, PDF and PNG exports, a caption explaining the unit of
+comparison, and a manifest connecting inputs to outputs. Inspect the rendered
+images for overlap, clipping and misleading scales. Keep previous experiment
+exports unchanged in their original directories.
+
+Use factorial panels for component swaps, paired-effect plots for interventions,
+payoff matrices for cross-play, and phase diagrams for ecological parameter
+sweeps. Give quantitative plots priority over decorative swarm imagery. Label
+schematic replays explicitly. A new finding should have an appropriate figure
+as part of the same work package.
+
+Show absolute differences alongside relative percentages when endpoints are
+near a ceiling or floor. Distinguish environmental variation conditional on a
+frozen population from uncertainty across independent evolutionary searches.
+For consumption v2, welfare is exactly `0.85 − 1.5 × shortfall/member/tick`;
+plotting both explains the units, but provides only one independent outcome.
+
+Architecture diagrams may illustrate proposed systems when explicitly labeled
+as designs without experimental data. The
+[world-model architecture](../figures/world-model-design/README.md) follows the
+same style and export conventions. It contains no hypothetical learning curves.

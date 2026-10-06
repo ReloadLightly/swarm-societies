@@ -1,0 +1,27 @@
+{
+  "figures": {
+    "factorial-outcomes.png": {
+      "sha256": "3d322d4897c22bf0540cb2055633d21a94d12a433de117bc8bc1515546247d17",
+      "width": 2147,
+      "height": 1787
+    },
+    "institution-effects.png": {
+      "sha256": "a4cf6e933672693e36ac2bd6b7e1f525c331a30bc82d76061fe00511f46e036b",
+      "width": 2287,
+      "height": 1190
+    },
+    "institution-harm-effects.png": {
+      "sha256": "30291bc0c129661c16d2536bf8e5db6d53836dcd3e412e75405161d2a878adc5",
+      "width": 2287,
+      "height": 1190
+    }
+  },
+  "checks": [
+    "Visually inspected all three PNGs: no clipping or overlapping labels; stable society colors",
+    "Nine exports and render manifest reproduce byte-for-byte",
+    "Full expected case coverage, frozen scenario equality, condition labels and manifest hashes checked before rendering",
+    "Validation rejects consistently truncated arms, consistently modified scenarios, and stale manifest references",
+    "Welfare-shortfall identity visible on factorial figure"
+  ],
+  "limitations": "One evolved lineage; environment dots are descriptive, not search replication or confidence intervals."
+}

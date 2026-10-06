@@ -1,0 +1,420 @@
+{
+  "schema_version": 1,
+  "study": "mechanism-v1",
+  "frozen_utc": "2026-10-06T17:07:36.883962+00:00",
+  "design": "Post-hoc 2x2 member/institution transplant, frozen before these outcomes",
+  "interpretation": "Conditional effects of one selected coevolution lineage; not independent search replication",
+  "source_context_sha256": "b5a87b35f88933531c5b41650f04b05d05b8b413424d08a428cdbc1d481b5e53",
+  "source_context_reference": "runs/consumption-v2/pair-01-coevolution/evolution_context.json",
+  "source_replicates": 1,
+  "inference_calls": 0,
+  "source_hashes": {
+    "scripts/run_mechanism_study.py": "e5a304471c89c8889eef0e9b63d3226a575d8c2baf1cca8e775e1457f9443adb",
+    "scripts/evaluate_consumption_study.py": "c284316d84d5db391b50b8ec6a8c837fa5bb05c9af012fca24ef0c0d64c8a383",
+    "swarm_societies/ecology_consumption_v2.py": "82c3ffe2e9431541e6e0cfbda6c97bccadfe87518bd3d17ff7661434d84e2344",
+    "swarm_societies/consumption_study.py": "e7a11bf67d003606f17090274f2f282a1cff24f6f34ffe162518ac24e3cf972f",
+    "swarm_societies/candidate.py": "0ff988ac0a8b05ca0919bb67267e6645a232fb49530cfbd51122c6b8d1dfa89b"
+  },
+  "populations": {
+    "initial": {
+      "institutions": [
+        "programs/8715737f934f9996d1fc9ae138807849cad21b54ee85918bfc2ef0bb1a01625d.py",
+        "programs/755581e958eb8c252ab39d9cbd2b02355c141a3fd8119f704ef0a49f3e1d8d93.py",
+        "programs/8bb66c91f988b44722fc51c54bb4027552c672d18f0f4a4da2ae09744b7971c6.py"
+      ],
+      "members": [
+        [
+          "programs/8715737f934f9996d1fc9ae138807849cad21b54ee85918bfc2ef0bb1a01625d.py",
+          "programs/8715737f934f9996d1fc9ae138807849cad21b54ee85918bfc2ef0bb1a01625d.py",
+          "programs/8715737f934f9996d1fc9ae138807849cad21b54ee85918bfc2ef0bb1a01625d.py",
+          "programs/8715737f934f9996d1fc9ae138807849cad21b54ee85918bfc2ef0bb1a01625d.py"
+        ],
+        [
+          "programs/755581e958eb8c252ab39d9cbd2b02355c141a3fd8119f704ef0a49f3e1d8d93.py",
+          "programs/755581e958eb8c252ab39d9cbd2b02355c141a3fd8119f704ef0a49f3e1d8d93.py",
+          "programs/755581e958eb8c252ab39d9cbd2b02355c141a3fd8119f704ef0a49f3e1d8d93.py",
+          "programs/755581e958eb8c252ab39d9cbd2b02355c141a3fd8119f704ef0a49f3e1d8d93.py"
+        ],
+        [
+          "programs/8bb66c91f988b44722fc51c54bb4027552c672d18f0f4a4da2ae09744b7971c6.py",
+          "programs/8bb66c91f988b44722fc51c54bb4027552c672d18f0f4a4da2ae09744b7971c6.py",
+          "programs/8bb66c91f988b44722fc51c54bb4027552c672d18f0f4a4da2ae09744b7971c6.py",
+          "programs/8bb66c91f988b44722fc51c54bb4027552c672d18f0f4a4da2ae09744b7971c6.py"
+        ]
+      ]
+    },
+    "members_only": {
+      "institutions": [
+        "programs/8715737f934f9996d1fc9ae138807849cad21b54ee85918bfc2ef0bb1a01625d.py",
+        "programs/755581e958eb8c252ab39d9cbd2b02355c141a3fd8119f704ef0a49f3e1d8d93.py",
+        "programs/8bb66c91f988b44722fc51c54bb4027552c672d18f0f4a4da2ae09744b7971c6.py"
+      ],
+      "members": [
+        [
+          "programs/df9e8419fac36f3a85b0ef8aa2ff44bd7845163fc004b944906d2c018c893e0b.py",
+          "programs/8715737f934f9996d1fc9ae138807849cad21b54ee85918bfc2ef0bb1a01625d.py",
+          "programs/8715737f934f9996d1fc9ae138807849cad21b54ee85918bfc2ef0bb1a01625d.py",
+          "programs/8715737f934f9996d1fc9ae138807849cad21b54ee85918bfc2ef0bb1a01625d.py"
+        ],
+        [
+          "programs/27efc99ed50e67c81d69d5d424687318cc3f623e92f2b4c2c7e1cb35805a29c6.py",
+          "programs/755581e958eb8c252ab39d9cbd2b02355c141a3fd8119f704ef0a49f3e1d8d93.py",
+          "programs/755581e958eb8c252ab39d9cbd2b02355c141a3fd8119f704ef0a49f3e1d8d93.py",
+          "programs/755581e958eb8c252ab39d9cbd2b02355c141a3fd8119f704ef0a49f3e1d8d93.py"
+        ],
+        [
+          "programs/fda14dce030cdec720cd9aaeaed81006ca334361834e2d02ac11a97fda4266a7.py",
+          "programs/8bb66c91f988b44722fc51c54bb4027552c672d18f0f4a4da2ae09744b7971c6.py",
+          "programs/8bb66c91f988b44722fc51c54bb4027552c672d18f0f4a4da2ae09744b7971c6.py",
+          "programs/8bb66c91f988b44722fc51c54bb4027552c672d18f0f4a4da2ae09744b7971c6.py"
+        ]
+      ]
+    },
+    "institutions_only": {
+      "institutions": [
+        "programs/b3f7cb92181540c3fad3adc5dc9b63e6afa4a6895e78c63ad9ddcc2799293a32.py",
+        "programs/01195bfea973e9c449048011fc25700acc063fb694ef66b727f0e4dbff243fbf.py",
+        "programs/8bb66c91f988b44722fc51c54bb4027552c672d18f0f4a4da2ae09744b7971c6.py"
+      ],
+      "members": [
+        [
+          "programs/8715737f934f9996d1fc9ae138807849cad21b54ee85918bfc2ef0bb1a01625d.py",
+          "programs/8715737f934f9996d1fc9ae138807849cad21b54ee85918bfc2ef0bb1a01625d.py",
+          "programs/8715737f934f9996d1fc9ae138807849cad21b54ee85918bfc2ef0bb1a01625d.py",
+          "programs/8715737f934f9996d1fc9ae138807849cad21b54ee85918bfc2ef0bb1a01625d.py"
+        ],
+        [
+          "programs/755581e958eb8c252ab39d9cbd2b02355c141a3fd8119f704ef0a49f3e1d8d93.py",
+          "programs/755581e958eb8c252ab39d9cbd2b02355c141a3fd8119f704ef0a49f3e1d8d93.py",
+          "programs/755581e958eb8c252ab39d9cbd2b02355c141a3fd8119f704ef0a49f3e1d8d93.py",
+          "programs/755581e958eb8c252ab39d9cbd2b02355c141a3fd8119f704ef0a49f3e1d8d93.py"
+        ],
+        [
+          "programs/8bb66c91f988b44722fc51c54bb4027552c672d18f0f4a4da2ae09744b7971c6.py",
+          "programs/8bb66c91f988b44722fc51c54bb4027552c672d18f0f4a4da2ae09744b7971c6.py",
+          "programs/8bb66c91f988b44722fc51c54bb4027552c672d18f0f4a4da2ae09744b7971c6.py",
+          "programs/8bb66c91f988b44722fc51c54bb4027552c672d18f0f4a4da2ae09744b7971c6.py"
+        ]
+      ]
+    },
+    "coevolution": {
+      "institutions": [
+        "programs/b3f7cb92181540c3fad3adc5dc9b63e6afa4a6895e78c63ad9ddcc2799293a32.py",
+        "programs/01195bfea973e9c449048011fc25700acc063fb694ef66b727f0e4dbff243fbf.py",
+        "programs/8bb66c91f988b44722fc51c54bb4027552c672d18f0f4a4da2ae09744b7971c6.py"
+      ],
+      "members": [
+        [
+          "programs/df9e8419fac36f3a85b0ef8aa2ff44bd7845163fc004b944906d2c018c893e0b.py",
+          "programs/8715737f934f9996d1fc9ae138807849cad21b54ee85918bfc2ef0bb1a01625d.py",
+          "programs/8715737f934f9996d1fc9ae138807849cad21b54ee85918bfc2ef0bb1a01625d.py",
+          "programs/8715737f934f9996d1fc9ae138807849cad21b54ee85918bfc2ef0bb1a01625d.py"
+        ],
+        [
+          "programs/27efc99ed50e67c81d69d5d424687318cc3f623e92f2b4c2c7e1cb35805a29c6.py",
+          "programs/755581e958eb8c252ab39d9cbd2b02355c141a3fd8119f704ef0a49f3e1d8d93.py",
+          "programs/755581e958eb8c252ab39d9cbd2b02355c141a3fd8119f704ef0a49f3e1d8d93.py",
+          "programs/755581e958eb8c252ab39d9cbd2b02355c141a3fd8119f704ef0a49f3e1d8d93.py"
+        ],
+        [
+          "programs/fda14dce030cdec720cd9aaeaed81006ca334361834e2d02ac11a97fda4266a7.py",
+          "programs/8bb66c91f988b44722fc51c54bb4027552c672d18f0f4a4da2ae09744b7971c6.py",
+          "programs/8bb66c91f988b44722fc51c54bb4027552c672d18f0f4a4da2ae09744b7971c6.py",
+          "programs/8bb66c91f988b44722fc51c54bb4027552c672d18f0f4a4da2ae09744b7971c6.py"
+        ]
+      ]
+    }
+  },
+  "cases": [
+    {
+      "id": "mechanism-v1-00",
+      "bank": "post-hoc-diagnostic",
+      "case_index": 0,
+      "seed": 5577680459385822680,
+      "disturbance_fraction": 0.65,
+      "config": {
+        "n_societies": 3,
+        "members_per_society": 4,
+        "ticks": 60,
+        "disturbance_tick": 39,
+        "initial_wealth": 4.0,
+        "initial_patch": 35.0,
+        "patch_capacity": 60.0,
+        "regeneration": 8.5,
+        "consumption_need": 0.85,
+        "drought_factor": 0.36,
+        "enable_disturbance": true
+      }
+    },
+    {
+      "id": "mechanism-v1-01",
+      "bank": "post-hoc-diagnostic",
+      "case_index": 1,
+      "seed": 5136167118879594441,
+      "disturbance_fraction": 0.5,
+      "config": {
+        "n_societies": 3,
+        "members_per_society": 4,
+        "ticks": 72,
+        "disturbance_tick": 36,
+        "initial_wealth": 4.0,
+        "initial_patch": 35.0,
+        "patch_capacity": 60.0,
+        "regeneration": 8.5,
+        "consumption_need": 0.85,
+        "drought_factor": 0.36,
+        "enable_disturbance": true
+      }
+    },
+    {
+      "id": "mechanism-v1-02",
+      "bank": "post-hoc-diagnostic",
+      "case_index": 2,
+      "seed": 5154658171899199583,
+      "disturbance_fraction": 0.5,
+      "config": {
+        "n_societies": 3,
+        "members_per_society": 4,
+        "ticks": 48,
+        "disturbance_tick": 24,
+        "initial_wealth": 4.0,
+        "initial_patch": 35.0,
+        "patch_capacity": 60.0,
+        "regeneration": 8.5,
+        "consumption_need": 0.85,
+        "drought_factor": 0.36,
+        "enable_disturbance": true
+      }
+    },
+    {
+      "id": "mechanism-v1-03",
+      "bank": "post-hoc-diagnostic",
+      "case_index": 3,
+      "seed": 5480450198504144591,
+      "disturbance_fraction": 0.65,
+      "config": {
+        "n_societies": 3,
+        "members_per_society": 4,
+        "ticks": 48,
+        "disturbance_tick": 31,
+        "initial_wealth": 4.0,
+        "initial_patch": 35.0,
+        "patch_capacity": 60.0,
+        "regeneration": 8.5,
+        "consumption_need": 0.85,
+        "drought_factor": 0.36,
+        "enable_disturbance": true
+      }
+    },
+    {
+      "id": "mechanism-v1-04",
+      "bank": "post-hoc-diagnostic",
+      "case_index": 4,
+      "seed": 4843201173236760087,
+      "disturbance_fraction": 0.5,
+      "config": {
+        "n_societies": 3,
+        "members_per_society": 4,
+        "ticks": 48,
+        "disturbance_tick": 24,
+        "initial_wealth": 4.0,
+        "initial_patch": 35.0,
+        "patch_capacity": 60.0,
+        "regeneration": 8.5,
+        "consumption_need": 0.85,
+        "drought_factor": 0.36,
+        "enable_disturbance": true
+      }
+    },
+    {
+      "id": "mechanism-v1-05",
+      "bank": "post-hoc-diagnostic",
+      "case_index": 5,
+      "seed": 6682448331490869021,
+      "disturbance_fraction": 0.35,
+      "config": {
+        "n_societies": 3,
+        "members_per_society": 4,
+        "ticks": 60,
+        "disturbance_tick": 21,
+        "initial_wealth": 4.0,
+        "initial_patch": 35.0,
+        "patch_capacity": 60.0,
+        "regeneration": 8.5,
+        "consumption_need": 0.85,
+        "drought_factor": 0.36,
+        "enable_disturbance": true
+      }
+    },
+    {
+      "id": "mechanism-v1-06",
+      "bank": "post-hoc-diagnostic",
+      "case_index": 6,
+      "seed": 5120628011008277891,
+      "disturbance_fraction": 0.65,
+      "config": {
+        "n_societies": 3,
+        "members_per_society": 4,
+        "ticks": 72,
+        "disturbance_tick": 46,
+        "initial_wealth": 4.0,
+        "initial_patch": 35.0,
+        "patch_capacity": 60.0,
+        "regeneration": 8.5,
+        "consumption_need": 0.85,
+        "drought_factor": 0.36,
+        "enable_disturbance": true
+      }
+    },
+    {
+      "id": "mechanism-v1-07",
+      "bank": "post-hoc-diagnostic",
+      "case_index": 7,
+      "seed": 6757653154436495059,
+      "disturbance_fraction": 0.35,
+      "config": {
+        "n_societies": 3,
+        "members_per_society": 4,
+        "ticks": 72,
+        "disturbance_tick": 25,
+        "initial_wealth": 4.0,
+        "initial_patch": 35.0,
+        "patch_capacity": 60.0,
+        "regeneration": 8.5,
+        "consumption_need": 0.85,
+        "drought_factor": 0.36,
+        "enable_disturbance": true
+      }
+    },
+    {
+      "id": "mechanism-v1-08",
+      "bank": "post-hoc-diagnostic",
+      "case_index": 8,
+      "seed": 5785240577487877706,
+      "disturbance_fraction": 0.35,
+      "config": {
+        "n_societies": 3,
+        "members_per_society": 4,
+        "ticks": 72,
+        "disturbance_tick": 25,
+        "initial_wealth": 4.0,
+        "initial_patch": 35.0,
+        "patch_capacity": 60.0,
+        "regeneration": 8.5,
+        "consumption_need": 0.85,
+        "drought_factor": 0.36,
+        "enable_disturbance": true
+      }
+    },
+    {
+      "id": "mechanism-v1-09",
+      "bank": "post-hoc-diagnostic",
+      "case_index": 9,
+      "seed": 6447405019709355157,
+      "disturbance_fraction": 0.35,
+      "config": {
+        "n_societies": 3,
+        "members_per_society": 4,
+        "ticks": 60,
+        "disturbance_tick": 21,
+        "initial_wealth": 4.0,
+        "initial_patch": 35.0,
+        "patch_capacity": 60.0,
+        "regeneration": 8.5,
+        "consumption_need": 0.85,
+        "drought_factor": 0.36,
+        "enable_disturbance": true
+      }
+    },
+    {
+      "id": "mechanism-v1-10",
+      "bank": "post-hoc-diagnostic",
+      "case_index": 10,
+      "seed": 6867505124373339992,
+      "disturbance_fraction": 0.65,
+      "config": {
+        "n_societies": 3,
+        "members_per_society": 4,
+        "ticks": 48,
+        "disturbance_tick": 31,
+        "initial_wealth": 4.0,
+        "initial_patch": 35.0,
+        "patch_capacity": 60.0,
+        "regeneration": 8.5,
+        "consumption_need": 0.85,
+        "drought_factor": 0.36,
+        "enable_disturbance": true
+      }
+    },
+    {
+      "id": "mechanism-v1-11",
+      "bank": "post-hoc-diagnostic",
+      "case_index": 11,
+      "seed": 5129678606227893325,
+      "disturbance_fraction": 0.5,
+      "config": {
+        "n_societies": 3,
+        "members_per_society": 4,
+        "ticks": 60,
+        "disturbance_tick": 30,
+        "initial_wealth": 4.0,
+        "initial_patch": 35.0,
+        "patch_capacity": 60.0,
+        "regeneration": 8.5,
+        "consumption_need": 0.85,
+        "drought_factor": 0.36,
+        "enable_disturbance": true
+      }
+    }
+  ],
+  "opponent_panels": [
+    "initial",
+    "cooperative",
+    "selfish"
+  ],
+  "focal_societies": [
+    0,
+    1,
+    2
+  ],
+  "disturbance_interventions": [
+    true,
+    false
+  ],
+  "n_cases_per_population": 108,
+  "n_rollouts_total": 864,
+  "contrasts": {
+    "members_at_initial_institutions": {
+      "members_only": 1,
+      "initial": -1
+    },
+    "members_at_evolved_institutions": {
+      "coevolution": 1,
+      "institutions_only": -1
+    },
+    "institutions_at_initial_members": {
+      "institutions_only": 1,
+      "initial": -1
+    },
+    "institutions_at_evolved_members": {
+      "coevolution": 1,
+      "members_only": -1
+    },
+    "interaction": {
+      "coevolution": 1,
+      "members_only": -1,
+      "institutions_only": -1,
+      "initial": 1
+    }
+  },
+  "bootstrap": {
+    "unit": "environment seed including all panels/focal identities",
+    "resamples": 5000,
+    "seed": 2026100602,
+    "meaning": "Descriptive environmental uncertainty conditional on this lineage"
+  },
+  "unchanged_institution_societies": [
+    2
+  ],
+  "analysis_note": "Consumption welfare equals 0.85 minus 1.5 times shortfall/member/tick; these are not independent endpoints."
+}

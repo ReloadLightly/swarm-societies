@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "renderer_version": "world-model-v1-figures-v1",
+  "style": "Swarm Societies / Chromatic Field",
+  "study": "world-model-v1",
+  "sources": {
+    "evidence/world-model-v1/design.json": "9d1c5351eec870bf15712f4ace69ee6a38754f8caf5514836f8470d72d26ef1a",
+    "evidence/world-model-v1/summary.json": "9ceb5254e025bfc189b8e89498574bc5b8275b81ba7bc7c672d95878b84e3d38",
+    "evidence/world-model-v1/checkpoints.csv": "2328406da7e0caea4921d4b45a7323d9c3f1cdd290f57afb8f85102720e7aa30",
+    "evidence/world-model-v1/parameters.csv": "019de187319da2db2b438f6826d1db1caddc9d1121f3448fb12e590c70101a2a",
+    "scripts/visualize_world_model_study.py": "ca8045f12333e90c52df51792e3d69765488b475eb2aa459a33e192092541b99",
+    "swarm_societies/visualize.py": "1cedaca8dbbe70aef2b763b7e4e9b67720c6a3783f6dcfe91971b6a4b141dae0",
+    "docs/visual-reference.md": "58308075d6cabde383126d3ccd6ea5c14da9304f59c8ef8500c36ea398016409"
+  },
+  "captions": {
+    "learning-curves": "Recorded CRPS on 32 common guaranteed-uncapped same-law probes per arena. Top: completed world ticks. Bottom: the same evaluated checkpoints against unique observations assimilated; dots identify observed points, and gray marks the overlap of observed private/pooled count ranges. No curve is extrapolated beyond its evidence range. The frozen prior assimilates zero observations and is shown only as a horizontal reference in the bottom row. Lower is better. Lines join checkpoints; shading around curves gives pointwise 95% percentile bootstrap intervals resampling independent whole arenas. Prior and pooled references are repeated across society panels for comparison, not counted as independent replicates. Pooled gains per tick can reflect more evidence; neither faster learning nor sample efficiency establishes learned communication. Another 32 limited-headroom probes are recorded but excluded from this prespecified primary endpoint.",
+    "parameter-recovery": "Mean absolute error of each coefficient's posterior mean against hidden simulator truth, by society and checkpoint. Base renewal r is in resource units per tick; returns b and g are in resource units per infrastructure unit per tick. Each column has its own scale; columns must not be ranked by vertical height. The same conditions and arena bootstrap as the predictive curves are used. These are numerical parameters of a supplied renewal mechanism, not recovered equation structures. Predictive accuracy does not imply all coefficients are identified.",
+    "calibration-width": "Final-checkpoint 90% predictive-interval coverage and mean width on 32 common guaranteed-uncapped same-law probes per arena. Dots are means across independent arenas; horizontal lines are 95% percentile arena bootstrap intervals. The nominal coverage reference is 0.90. Width is in renewal resource units and must be considered alongside coverage. Repeated prior and pooled references are not additional independent samples.",
+    "endpoint-comparison": "Each independent arena contributes one mean across its three interacting societies. Time-average CRPS and paired differences from private evidence with 95% arena bootstrap intervals are the primary comparison; final probe CRPS and unique receipts per model provide context. Time-average CRPS is the trapezoidal area divided by the checkpoint time span. Scores use the 32 guaranteed-uncapped common probes per arena. Differences compare fixed estimators with different evidence access, not evolved learning algorithms. All negative and null results are retained.",
+    "parameter-uncertainty": "Terminal coverage and mean width of 90% credible intervals for the hidden renewal coefficients, not predictive intervals for future outcomes. Society colors identify separate private estimates; prior and pooled copies are repeated only for comparison. Lines give 95% percentile bootstrap intervals over independent arenas. The parameter-statistics CSV averages societies within each arena before computing means and intervals, retaining 24 independent arena units. Observed pooled spillover coverage is 75.0% in this panel. Its interval reflects the limited arena sample; this finding calls for additional parameter-calibration validation and does not identify particle approximation as its cause. Approximately nominal forecast coverage does not establish calibrated coefficient beliefs."
+  },
+  "independent_arenas": 24,
+  "societies_per_arena": 3,
+  "independent_evolutionary_runs": 0,
+  "bootstrap": {
+    "method": "percentile; paired whole-arena draws",
+    "seed": 7301,
+    "resamples": 2000,
+    "level": 0.95,
+    "curve_intervals": "pointwise"
+  },
+  "rendering_runs_training": false,
+  "rendering_runs_evaluation": false,
+  "software": {
+    "python": "3.13.5",
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.3"
+  },
+  "artifacts": {
+    "learning-curves.svg": "c71465c5f433bf5d0e05a94aa19217b44ace206177b9354138947b5b795136d4",
+    "learning-curves.pdf": "077c3f9db646f77a08874d94b3aae415c04b145d5cb8728d8cb1d908388d2da4",
+    "learning-curves.png": "7204d5b4b85d889a3c1b911370a60e4aa28a01d08bcbd54fc00d3cab2d3cdc5d",
+    "parameter-recovery.svg": "951b48e9194a196ea16b9ecbf338fb0dad3c31580e2348434b15fc021cd6efae",
+    "parameter-recovery.pdf": "e8b529f934f72aa1d8061aaa89b740e5e362afcd85cd8a01cf9f08e727fdaabe",
+    "parameter-recovery.png": "fee11584244a01fb5fd37dc9475d443601848affc9bc1abfc6ce329d0a75e41f",
+    "calibration-width.svg": "90925aa2a3d5c14dc5a46399bba8b63a72ce977cad182000d818f319f7c8b1a3",
+    "calibration-width.pdf": "5ca4140b4757228c2219ed9ceed08817316ea0367c7e0beaa2c43a1dda36c7be",
+    "calibration-width.png": "44983e84183e909782b3e8c67552d742cfb14fb5b085a6ff99d672e1c8174c2c",
+    "endpoint-comparison.svg": "668c7e76fa2ab9f3045cbe6fe60f0a2a935456a3feebd4b1f37801a576a9f0bf",
+    "endpoint-comparison.pdf": "58ce7f48ad3cd4534f282417041d5ddc34adcbd3cc8ba46a5f0b337623c60182",
+    "endpoint-comparison.png": "f5586801dfed42f3ce2039b10f28732029a3b67fff692f0dc4a2b601a33aade1",
+    "endpoint-contrasts.csv": "784f766c55796890c14c5e36b1cc80a6a4b5298511e9136d8daa3413ffa3b28a",
+    "parameter-uncertainty.svg": "55d0bbede4742b5a28d66f5baa6b50fb1995b134659754a67b618d681c935a91",
+    "parameter-uncertainty.pdf": "750764552684fbb06348538a69618e15a52db3cac7d6e74e43e78a93f9da0c8c",
+    "parameter-uncertainty.png": "a672a819c363f4c6efbd3c7ffd32107769b3bb32ff0fec0bed4b84dcae8c26d2",
+    "parameter-statistics.csv": "593c7d79e9688393a051a7b1609cb70bf90dee5e70a75ef95d6c2c7e35a460a0",
+    "README.md": "454d65db2ad91a6b6557ae535a8f55ccee002f9c16edb789d73e2b6bc82cdbd9"
+  }
+}

@@ -1,172 +1,474 @@
-# Swarm Societies: Multilevel Coevolution of Collective Intelligence
+# Swarm Societies: Coevolving Institutions and Learning Shared World Dynamics
 
-An experimental platform for interacting societies whose member policies and executable institutions can evolve independently. This first increment implements a resource ecology with individual interests, society welfare, and effects on rival societies measured separately.
+**Living research report · 6 October 2026**
 
-## Consumption-focused follow-up
+[Code and reproduction](#6-reproducibility) ·
+[Current results](#4-experiments-and-results) ·
+[Research roadmap](docs/research-roadmap.md) ·
+[World-model proposal](docs/world-model-proposal.md) ·
+[Active work record](PROGRESS.md)
 
-The next experiment is implemented as a separate, resumable comparison: coevolution versus member-only search under fixed initial institutions, with no direct infrastructure reward, variable episode length and drought timing, and exact matched no-drought controls. The first campaign is a 60-minute matched pilot (30 minutes per arm); it is not replicated evidence. [Protocol](docs/protocol-consumption-v2.md), [run/status/resume commands](docs/consumption-v2-run.md), and [current work record](PROGRESS.md) describe its execution. The first experiment and results below remain unchanged.
+## Abstract
 
-## Research question
+Swarm Societies studies how interacting societies allocate resources, govern
+information, and acquire knowledge of a shared environment. The platform
+separates executable member policies, institutional programs, authoritative
+material dynamics, and independent evaluation. We report an initial multilevel
+evolution experiment, a consumption-focused matched search pilot, a factorial
+intervention on saved programs, and a new numerical world-model implementation.
+The evolutionary pilot produced a small consumption-welfare advantage for
+institutional coevolution alongside greater harm to neighbouring societies.
+The program transplant diagnostic identified a member-dependent institutional
+effect on harm; beneficial welfare complementarity remained unresolved.
+The world-model feature estimates hidden renewal coefficients online using
+weather-aware Bayesian particles and explicit observation contracts. Across
+24 independent arenas, private learners reduced final predictive CRPS from
+**0.9422 to 0.2496**; pooling three times the evidence improved the learning
+trajectory further. This instrumented control fixes policies and supplies the
+equation family, establishing measurement before institutional knowledge
+sharing, active experimentation, and rule discovery. We distinguish predictive
+accuracy, identifiable physical knowledge, useful control, and evolutionary
+improvement throughout.
 
-Can inherited changes to member behavior and institutional programs improve collective outcomes and response to a resource disturbance when collaborators and competitors also change?
+## 1. Introduction
 
-The broader project concerns societies with collective memory, institutions, governance, beliefs, world models, orchestration, and self-organization. This increment establishes the executable ecology and multilevel selection boundary. It implements private state, shared institutional memory, information routing, resource allocation, and program inheritance. General belief systems, general-purpose world models, demographic group reproduction, and additional environments remain future work.
+A society can prosper without understanding its environment, and it can learn
+useful facts without distributing their benefits fairly. Our research question
+is therefore broader than whether many agents achieve a high shared reward:
+**which institutions help interacting societies acquire accurate, transferable
+knowledge and use it effectively, at what cost to members and neighbours?**
 
-## Model
+The repository provides a small economic ecology in which those questions can
+be tested separately. Members pursue private utility. Institutions govern
+taxation, investment, redistribution, permissions, and reporting. Societies
+compete for renewable resources and can assist or harm one another. Executable
+member and institutional programs can evolve independently, while a trusted
+simulator determines every material consequence.
 
-Three societies of four members share finite renewable resource patches for 60 ticks. At tick 30, exogenous regeneration falls to approximately 36% of its previous rate. Member productivity, weather, initiative, raid success, and disturbance severity vary with the environment seed. Members observe their own state and two local patches; institutions observe their society's wealth and delayed member reports. Executing policies receive no future environmental draws, opponents’ private state, simulator runtime objects, or fresh evaluation cases. The mutation model receives the public dynamics, fitness equations and search feedback, including search seeds; it cannot inspect evaluator code or the fresh panel.
+The current world contains three societies and shared resource patches. It
+does not implement spatial motion, physical proximity, demographic group
+reproduction, or a decentralized peer network. Here, “swarm societies” names
+the research program; central institutional hubs and fixed membership describe
+the implemented substrate.
 
-Members can harvest, contribute to a treasury, share resources with another society, guard, rest, or raid members of their own or another society. Institutions execute Python programs that set harvest taxes, infrastructure investment, defensive spending, reserve retention, redistribution weights, raid permissions, and shared broadcasts. Private and shared state persist within episodes and reset between episodes. Source programs persist across evolutionary updates.
+The immediate progression is **parameter learning and information governance →
+active experimentation → structural discovery**. Parameter learning is now an
+executable feature. The later stages remain research objectives, rather than
+capabilities inferred from memory fields or cooperative-looking behavior.
 
-Every material transfer is applied by the simulator. A conservation ledger checks resources entering through regeneration and leaving through consumption, action costs, destructive conflict, infrastructure investment, and defense spending. Resource pooling includes compulsory taxes and voluntary contributions; it is not an automatic measure of altruism.
+## 2. Related work and positioning
 
-Individual utility is cumulative consumption plus 0.2 times terminal personal wealth. Society welfare is mean per-tick consumption minus half the consumption shortfall, divided by member count, plus 0.03 times infrastructure. This direct infrastructure bonus is deliberate and consequential: welfare can rise without reducing unmet consumption. Outward harm, inward harm, other societies' welfare, inequality, voluntary contribution, and compulsory tax remain separate measurements. Full equations, observations, and action semantics are in [the model specification](docs/model.md).
+SwarmWorld motivates the separation of local decisions from authoritative
+consequences and reusable artifacts [1]. This repository uses an independently
+authored compact simulator; it is not a SwarmWorld fork or a reproduction of
+its material-physics results. The AI Economist provides prior art for joint
+adaptation of individual behavior and institutional economic rules [2]. Our
+evolution experiments use the actual upstream ShinkaEvolve engine [3], with
+separate ecological acceptance criteria for members and institutions.
 
-## Methods
+Probabilistic ensembles and recurrent world models show how learned dynamics
+can support prediction and planning [4,5]. Their control results do not by
+themselves establish recovery of interpretable laws. Multiagent world-model
+research highlights the problems of hidden interactions, shared representations,
+and communication budgets [6]. These motivate explicit knowledge ownership and
+information controls here.
 
-### Actual evolutionary engine and subscription route
+Sparse equation discovery, executable world models, and active law-discovery
+systems supply complementary methods for the next stage [7–9]. A useful
+prospective contribution is a benchmark of **how institutions produce, test,
+communicate, and retain causal knowledge in a shared resource world**. The
+present implementation establishes part of that benchmark; it does not claim
+priority for world models, multiagent learning, or hierarchical governance.
+The [30-source review](docs/world-model-literature.md) distinguishes verified
+conference/journal work from recent preprints and records applicability limits.
 
-The experiment uses upstream [ShinkaEvolve](https://github.com/SakanaAI/ShinkaEvolve/tree/9912af12d423504b8d580f4179fd15f5f88b8c50), revision `9912af12d423504b8d580f4179fd15f5f88b8c50`. Its native Headless provider calls an audited adapter to the local Codex CLI. Shinka supplies mutation generation, parsing, archive sampling, and its SQLite lineage database. This project supplies ecological selection and evaluation. One Shinka search island contains an archive of eight programs; it is distinct from the three simulated societies.
+## 3. Environment and methods
 
-The verified configuration is Codex CLI `0.160.0`, `gpt-6-astra`, `xhigh` reasoning, `fast` service tier, and ChatGPT subscription authentication. API-key fallbacks, embeddings, novelty judging, meta-model calls, prompt evolution, and external logging are disabled. Direct and native-provider probes completed successfully. [Route documentation and exact evidence](docs/subscription-route.md) explain the settings and the corrected upstream timeout incident. Subscription token counts are not a per-call monetary estimate.
+### 3.1 Resource ecology and incentives
 
-The search has a resumable **3,600-second cumulative active wall-clock budget**, including initialization. It runs one proposal and one evaluator at a time. The local benchmark measured 1.84 episodes/s with one process and 3.81 with two, with roughly 21 MiB peak simulator RSS. Fresh panels can run in two processes; ecological replacements remain serialized. The evaluator has an outer memory/CPU limit and candidates execute only through a bounded Python interface.
+Each society has members with personal wealth and productivity, a treasury,
+infrastructure, defense, institutional memory, and delayed member reports.
+Members can harvest, contribute, share, guard, rest, or raid. Institutions set
+taxes, expenditure fractions, reserves, redistribution weights, raid permission,
+and broadcasts. Private and institutional state reset between episodes;
+inherited program source persists across evolutionary updates.
 
-### Variation, inheritance, and selection
+Patches renew before actions, all intentions are collected before resolution,
+and a seeded initiative order determines access to scarce stock. Weather,
+conflict randomness, and order are drawn independently of chosen actions to
+support matched comparisons. A ledger enforces
 
-Shinka proposes substantive Python edits, including new helpers, branches, loops, memory algorithms, and allocation logic. The three seed programs are initial conditions, not a closed catalogue. Member and institution functions can change in the same proposal, but only the scheduled unit enters the ecology.
+$$
+L_{\mathrm{final}}=L_{\mathrm{initial}}+R-C-A-D-V-F,
+$$
 
-Candidate evaluations alternate a member replacement and an institution replacement, rotating across societies and member slots. A member replacement is accepted only when it improves that member's utility. An institution replacement is accepted only when it improves its society's welfare. Both sides face identical environmental seeds and an identical frozen population of partners and opponents. Accepted replacements change future contexts. Program snapshots, component hashes, proposal donors, and ecological comparison incumbents are preserved separately; an incumbent is not necessarily the source-code parent.
+where liquid resources include patches, wealth, and treasuries; the right-hand
+terms are renewal, consumption, action costs, raid destruction, infrastructure
+investment, and defense spending. Transfers do not create resources.
 
-The Shinka archive score is `1 + (candidate objective − incumbent objective) / max(1, abs(incumbent objective))`. It is a proposal heuristic under changing contexts, not a stationary ranking. Final evaluation uses the final ecological population specified by the acceptance rule, without choosing a winner on fresh results. The [protocol](docs/protocol.md) was recorded before fresh-case results were inspected.
+Private utility is cumulative consumption plus $0.2$ times terminal wealth.
+The consumption-v2 society objective is
 
-This machinery permits within-society policy coevolution, institution–member coevolution, and intersociety coevolution through changing collaborators and competitors. Their empirical extent depends on which units actually receive and retain changes. Cooperative actions alone do not establish cooperative coevolution. No neural model weights are updated.
+$$
+W=\frac{\sum_t(C_t-0.5S_t)}{MT}
+ =0.85-1.5\frac{\sum_t S_t}{MT},
+$$
 
-### Fresh evaluation and references
+with $M$ members, $T$ ticks, and unmet consumption $S_t$. Thus welfare and
+shortfall are algebraically linked. The first experiment additionally rewarded
+infrastructure directly; its scores must not be compared numerically with v2
+as if the objectives were identical. Taxes, voluntary transfers, private
+utility, inequality, and outward harm remain separate measurements.
+[Full environment specification](docs/model.md).
 
-The initial population contains one initial, one cooperative, and one selfish society. The fixed reference attaches the cooperative institution to the same initial member policies. Each treatment faces **108 common cases**: 12 fresh environment seeds crossed with three immutable opponent panels and three focal society identities. The panels use initial, cooperative, or selfish programs. Each focal society keeps the treatment's own member composition; all nonfocal opponents are held constant across treatments.
+### 3.2 Program evolution and causal interventions
 
-Final descendants are evaluated with the same cases. Crossed interventions combine descendant members with initial institutions and initial members with descendant institutions. These diagnose component effects conditional on this trajectory; they are not independently evolved fixed-institution controls. Descriptive paired intervals resample environment-seed clusters. An independent evolutionary run, not a rollout, member, or society, is the replication unit for claims about the search procedure.
+ShinkaEvolve proposes restricted Python programs. A scheduled member replacement
+must improve that member's utility; an institution replacement must improve
+its society's welfare. Each acceptance comparison holds environmental draws,
+partners, and opponents fixed. Later accepted replacements change the context
+for subsequent proposals. Source inheritance, ecological incumbency, and
+evaluation provenance are recorded separately.
 
-## Results
+The verified inference route is ChatGPT-authenticated Codex, `gpt-6-astra`,
+`xhigh`, `fast`, through the pinned upstream Shinka Headless adapter. Previous
+allowances are exhausted. Local evaluation, numerical learning, and figure
+generation do not extend those allowances; another model-driven evolution
+campaign requires a new declared budget. [Route and evidence](docs/subscription-route.md).
 
-One **exploratory evolutionary run** completed its 3,600-second allowance and retained **six replacements: three member policies and all three institutions**. Fresh evaluation then completed 540 episodes, with 108 identical cases per condition. No fresh result influenced selection.
+Frozen-program transplants independently exchange member and institutional
+components. They identify effects conditional on the saved lineage and chosen
+environment panel. They are not independent replications of evolutionary
+search, and a whole-program intervention does not isolate one permission,
+memory field, or reporting rule.
 
-| Population | Welfare before drought | Welfare after drought | Member utility | Post-drought shortfall ↓ | Outward harm ↓ |
-|---|---:|---:|---:|---:|---:|
-| Initial | 0.8602 | 0.8610 | 56.24 | 0.770 | 37.78 |
-| Fixed cooperative institution | 0.8630 | 0.8599 | 53.66 | 1.641 | 0.00 |
-| Final descendants | **0.8908** | **0.9229** | 50.82 | 1.162 | 0.00 |
-| Descendant members only | 0.8591 | 0.8580 | **57.85** | 0.798 | 28.07 |
-| Descendant institutions only | 0.8779 | 0.9075 | 50.47 | 1.923 | 0.00 |
+### 3.3 Learnable renewal model
 
-Welfare is a per-tick, per-member score with an infrastructure bonus. Utility is per member over the complete episode. Shortfall is the focal society's cumulative unmet consumption over the 30 post-drought ticks; harm is cumulative resources lost by other societies through raids over all 60 ticks. Means average the same 12 seeds × 3 opponent panels × 3 focal identities. The two component-only conditions are post-search interventions.
+The separately versioned
+[world-model ecology](swarm_societies/ecology_world_model_v1.py) exposes explicit
+measurements while preserving the older simulators. The first learner estimates
+three hidden coefficients: baseline renewal $r$, local infrastructure return
+$b$, and spillover return $g$. The supplied mechanism is
 
-![Fresh-case results](figures/results-table.png)
+$$
+X_{s,t}=\min\!\left(K-P^{\mathrm{end}}_{s,t-1},\;
+r\omega_{s,t}+bI_{s,t}+g\overline I_{-s,t}\right),
+\qquad Y_{s,t}=X_{s,t}+\epsilon_{s,t},
+$$
 
-### What improved—and what did not
+where $I$ is infrastructure after depreciation,
+$\omega\sim\mathcal U(0.85,1.15)$ is hidden weather, and
+$\epsilon\sim\mathcal N(0,0.05^2)$ is independent measurement noise added
+after capacity clipping. Noisy readings can be slightly negative or above
+headroom; the underlying material growth remains bounded.
 
-Descendants' post-drought welfare exceeded the initial population by **0.06189 (+7.19%)**, with a descriptive paired seed-cluster bootstrap interval of [0.05775, 0.06661]. The decomposition is decisive: **+0.06679** came from the explicit infrastructure bonus, while the consumption/shortfall term changed by **−0.00490**. Mean post-drought infrastructure rose from 0.687 to 2.913, but shortfall increased from 0.770 to 1.162. Member utility fell **9.65%**, and terminal personal wealth fell from 27.21 to 1.36. This run therefore does **not** demonstrate improved consumption resilience relative to the initial population.
+[RenewalSMC](swarm_societies/world_model_v1/learner.py) uses a bounded uniform
+prior, 1,024 parameter particles, and sequential likelihood updates. Resampling
+below half the particle count is followed by four Metropolis rejuvenation
+steps targeting the complete accepted evidence history. The likelihood
+integrates hidden weather and the capacity point mass; saturated observations
+are retained. Future forecasts use a separate RNG and do not mutate learning
+state. Snapshots include posterior particles, accepted evidence, diagnostics,
+and RNG state.
 
-The fixed cooperative institution had approximately flat overall welfare relative to the initial population: +0.00086, interval [−0.00048, 0.00239]. Descendants exceeded this reference in post-drought welfare by 0.06298 and reduced its post-drought shortfall by 0.479; total-episode shortfall was approximately unchanged (difference −0.043, interval [−0.486, 0.349]). All intervals describe variation across these environment seeds, not uncertainty across independent evolutionary runs. [Exact paired comparisons](evidence/experiment/comparisons.json) retain every metric.
+| Coefficient | Public uniform prior | Evaluation law distribution |
+| --- | --- | --- |
+| Baseline renewal $r$ | $[2,8]$ | $[2.4,6.8]$ |
+| Local infrastructure return $b$ | $[0.5,3]$ | $[0.7,2.7]$ |
+| External spillover $g$ | $[0,0.8]$ | $[0.05,0.7]$ |
 
-Frozen opponent identity materially changed outcomes: descendants averaged overall welfare 0.9299 against cooperative opponents, 0.9171 against initial opponents, and 0.8735 against selfish opponents (36 matched cases per panel). Their total shortfall rose from 0.145 against cooperative opponents to 4.843 against selfish opponents. The fitness landscape therefore depends on the interacting population.
+Evaluation ranges are a fixed task distribution, not information supplied to
+the learner. Every society in an arena faces the same sampled physical laws.
 
-The member-only intervention increased private utility to 57.85 while slightly reducing society welfare. Institutions account for most of the full population's welfare gain. Full descendants also had less total shortfall than the institutions-only intervention (1.823 versus 3.353), suggesting conditional complementarity along this trajectory. This is not evidence that the search procedure outperforms independently evolved fixed-institution controls.
+This is **parameter identification in a supplied equation**. It does not
+discover the equation, the observation model, or conservation. The present
+experiment grants full infrastructure features through free audit sensors.
+Each private society learner receives its own patch's renewal measurements;
+a pooled reference receives all three patches. This instrumentation is richer
+than the legacy member API and is explicitly a control, not evidence that
+unmodified actors could infer these laws from stock differences alone.
 
-![Separate infrastructure and unmet consumption](figures/welfare-decomposition.png)
+### 3.4 Evaluation and replication
 
-### Inherited programs and within-episode learning
+The renewal study compares a frozen prior, private learners, and a pooled
+reference on 24 independently sampled law/environment arenas, each lasting
+128 ticks with three interacting societies and four members per society.
+Fixed policies vary investment by role and time; learned beliefs do not change
+actions. The pooled reference receives three times as many unique observations
+per tick. Its advantage therefore measures access to evidence, not algorithmic
+superiority or successful institutional governance.
 
-| Shinka generation | Retained unit | Executed change | Matched search outcome |
-|---|---|---|---|
-| G3 | Society 0, member 0 | Replaced contributions with harvesting and private buffer accumulation | Utility 50.64 → 57.23 |
-| G5 | Society 1, member 0 | Stopped voluntary contributions; retained more private wealth | Utility 51.82 → 63.04 |
-| G6 | Society 1 institution | Tax rose from 28% to 78%; persistent income/risk estimates, deficit-based redistribution and investment | Welfare 0.87852 → 0.93968 |
-| G7 | Society 2, member 0 | Replaced raiding with harvesting; updated a private crowding model used in patch choice | Utility 62.61 → 66.34 |
-| G8 | Society 2 institution | Introduced high taxation, short-horizon supply projections, redistribution/investment and outward-raid prohibition | Welfare 0.85000 → 0.90264 |
-| G10 | Society 0 institution | Introduced high taxation, cash-flow/volatility estimates and deficit-based allocation | Welfare 0.86469 → 0.94427 |
+At seven checkpoints, each model predicts 64 common queries generated under
+its arena's own hidden law with independent weather and measurement noise.
+The primary endpoint uses 32 queries guaranteed uncapped across the entire
+public prior support. The other 32 are capacity controls. Primary learning
+quality is CRPS integrated over ticks and divided by the horizon; terminal
+CRPS, parameter error, 90% interval coverage and width are secondary. CRPS
+scores equally weighted empirical forecasts with 512 samples [10]. Query
+outcomes never update the learner.
 
-These search comparisons use the incumbent and partner snapshot at each update, not the fresh panel. [Replayed search effects](evidence/experiment/search-effects.json) reproduce the stored selection objectives and expose effects on peers and rival societies. Exact inherited sources and both kinds of ancestry are in [the evidence archive](evidence/experiment/) and the lineage graph.
+Uncertainty intervals resample whole arenas. Societies, ticks, repeated probe
+queries, and pooled references copied across society rows are dependent
+observations. Evolutionary comparisons instead require independent evolutionary
+run pairs. These are different replication units.
 
-Institutions evolved operational shared memory and allocation programs beyond the seed designs. Member and institutional estimates update during an episode; their algorithms, not their learned state, are inherited. Some proposed code paths were never exercised, and memory/model benefits have not been isolated by ablation. Several descendants explicitly use the known 60-tick horizon, limiting claims of general adaptation.
+## 4. Experiments and results
 
-Only one member lineage per society changed; reciprocal evolution among multiple member lineages within the same society was not observed. Members across three societies and institutions changed in a shared, successively updated ecology, implementing contextual member–institution and intersociety coevolution. Cooperative coevolution, understood as reciprocally evolving voluntary cooperation, was not demonstrated.
+| Study | Independent search runs | Evaluation scale | Main interpretation |
+| --- | ---: | --- | --- |
+| First multilevel experiment | 1 | 540 fresh rollouts | Infrastructure reward raised welfare without improving consumption resilience |
+| Consumption-v2 | 1 matched pair: 1 run per arm | 648 drought/no-drought rollouts | Small consumption advantage with greater external harm |
+| Program transplants | 0 new searches; saved coevolution lineage | 864 rollouts | Institutional harm depends on the member program background |
+| World-model-v1 | 0 searches | 24 independent law/environment arenas | Stationary parameter-learning control; fixed policies and free audit sensors |
 
-Across fresh cases, compulsory tax increased from 62.29 to 410.79 material units per episode while voluntary contributions fell from 54.72 to 0.30. No between-society aid or within-society theft occurred in any treatment. Descendants imposed zero outward harm, but members still attempted an average of 20 outward raids per episode: institutional enforcement prevented the transfers. Other societies' welfare increased slightly, from 0.86395 to 0.86551. Reduced conflict and increased compulsory pooling should not be described as learned altruism.
+### 4.1 Initial evolution: distinguish score gains from consumption
 
-![Contextual evolutionary performance](figures/evolution-performance.png)
+The first 60-minute search retained three member and three institutional
+replacements. Descendants' post-drought welfare rose from **0.8610 to 0.9229**.
+The gain decomposed into **+0.06679** from the direct infrastructure reward
+and **−0.00490** from the consumption/shortfall term. Cumulative post-drought
+shortfall increased from **0.770 to 1.162**, and member utility fell **9.65%**.
+These outcomes motivated removal of the infrastructure bonus.
 
-![Proposal inheritance and ecological replacement](figures/program-lineages.png)
+The [archived first-study report](docs/first-study-report.md) preserves the
+complete results, lineage descriptions, execution accounting, figures, source
+attribution, and historical reproduction commands. Its historical status
+statements are not the current project status.
 
-### Execution and scientific evidence
+### 4.2 Consumption-focused matched pilot
 
-The native Shinka database contains **10 program rows: 8 valid and 2 invalid**. Nine unique programs reached the ecological evaluator: the valid initial program plus **8 mutations (7 valid, 1 invalid)**. Six mutations were retained and one valid mutation tied its incumbent. The other invalid database row was a pre-evaluator infrastructure timeout, preserved separately from candidate failure. Nine noninitial generation records were archived; two additional inference calls were interrupted. The timeout repair and terminal process/database audit are recorded in [recovery evidence](evidence/engine-recovery.json) and [terminal evidence](evidence/engine-terminal.json).
+Each arm received 30 minutes of search from the same initial population.
+Fresh cases varied environment, drought timing, episode length, opponent panel,
+and focal society; each drought case had a matched no-drought counterpart.
 
-The active budget was exactly 3,600 monotonic seconds across two segments. Recorded UTC start-to-cutoff spans about 65.3 minutes, including restart downtime and differences between clock sources. Peak sampled search process-tree RSS was **438.4 MiB**. The live-process CPU sample peaked at 33.72 seconds and excludes exited children; it is not total CPU consumption. The final fresh-evaluation invocation used two workers and took 162.7 seconds.
+| Population | Consumption welfare ↑ | Unmet need/member/tick ↓ | Outward harm/tick ↓ | Private utility/tick ↑ |
+| --- | ---: | ---: | ---: | ---: |
+| Initial | 0.843162 | 0.004559 | 0.619992 | 0.931941 |
+| Evolved members, fixed institutions | 0.846405 | 0.002396 | 0.332363 | 0.978720 |
+| Member–institution coevolution | 0.847238 | 0.001841 | 0.549101 | 0.961051 |
 
-Nine completed subscription calls reported **257,830 input tokens** (22,656 cached) and **131,185 output tokens** (99,926 reasoning). Cached and reasoning counts are subsets, not additions. Two interrupted calls have unknown usage. Route probes are recorded separately and excluded from those search totals. No paid API, embedding or judging calls were used.
+Coevolution improved welfare by **0.000833** over the fixed-institution arm,
+with **23.2% less unmet consumption**, **65.2% more outward harm**, and **1.8%
+lower private utility**. One paired pilot cannot establish a reliable advantage
+for the search procedure. The schedule ended before members could evolve again
+under their changed institutions.
 
-The [compact evidence](evidence/experiment/) contains fresh case outcomes including individual members, frozen opponent definitions, exact source snapshots, search comparisons, resource accounting, and the replay. Verification checks material conservation, common cases, source/protocol hashes, exact aggregates, and deterministic replay from the published sources. The repository test suite has 20 passing tests; the upstream recovery suite passed 40 tests.
+![Consumption welfare and separate private/external tradeoffs](figures/consumption-v2/outcome-tradeoffs.png)
 
-![Recorded final-population ecology](figures/ecology-replay.gif)
+*Figure 1. Recorded fresh-case means from the consumption pilot. Welfare and
+shortfall represent the same primitive consumption outcome; private utility
+and harm expose distinct tradeoffs. [Captions, data and exports](figures/consumption-v2/README.md).*
 
-The animation shows one recorded final-population episode at seed `424242`, including the drought boundary, stable society identities, member actions, and material flows. It is an illustration, not an extra evolutionary replicate. [Figure captions, vector/PDF exports, data tables and provenance](figures/README.md) accompany every panel; [render inspection](figures/render-review.json) records the visual checks.
+### 4.3 Frozen-program transplants
 
-## Reproduction
+Crossing original/evolved members and institutions on a new environmental
+panel yielded welfare **0.844263** for the original combination,
+**0.845106** for evolved members alone, **0.845648** for evolved institutions
+alone, and **0.846926** for both. The additive welfare interaction was
+**+0.000434**, with an environmental cluster interval of
+**[−0.000550, +0.001612]**. Positive welfare complementarity remains unresolved.
 
-Use Python 3.13 to match the recorded runtime. Install the local experiment and pinned upstream engine:
+Swapping evolved institutions onto evolved members increased outward harm by
+**0.076462 units/tick**, interval **[0.041531, 0.113561]**. The same swap onto
+original members added exactly zero harm. The extra harm was concentrated in
+society 1. This identifies a conditional effect of complete institutional
+programs, not its internal cause. [Study and portable evidence](docs/mechanism-study.md).
+
+![Institutional harm effects depend on member programs](figures/mechanism-v1/institution-harm-effects.png)
+
+*Figure 2. Institutional transplant effects by society and member background.
+Points show conditional environmental variation within one lineage, not
+independent search replications. [Figure provenance](figures/mechanism-v1/README.md).*
+
+### 4.4 Learning unknown renewal coefficients
+
+The completed study contains **24 independent arenas**, **9,216 unique
+environmental observations**, and **18,432 learner updates** across private
+and pooled conditions. No update failed. The experiment used no evolutionary
+inference. The following means and 95% whole-arena bootstrap intervals come
+from the [recorded summary](evidence/world-model-v1/summary.json).
+
+| Condition | Observations/model at tick 128 | Time-averaged CRPS ↓ [95% interval] | Final CRPS ↓ | Final 90% predictive coverage |
+| --- | ---: | ---: | ---: | ---: |
+| Frozen prior | 0 | 0.9422 [0.7683, 1.1577] | 0.9422 | 94.4% |
+| Private society learner | 128 | 0.3088 [0.2844, 0.3340] | 0.2496 | 89.0% |
+| Pooled reference | 384 | 0.2703 [0.2454, 0.2967] | 0.2481 | 89.1% |
+
+Private learning substantially improved prediction over the frozen prior.
+Pooling lowered time-averaged CRPS by **0.038445**, paired interval
+**[0.030612, 0.047006]** for the improvement, or **12.5%** relative to private
+learning. Its terminal advantage was much smaller: **0.001595**, paired
+interval **[0.000590, 0.002651]**. The principal difference is earlier useful
+prediction with more evidence per tick; equal-evidence efficiency has not
+been established.
+
+![Recorded predictive learning curves for the three societies](figures/world-model-v1/learning-curves.png)
+
+*Figure 3. Common-probe CRPS by completed tick and society. Lines distinguish
+conditions; society colors remain fixed. Bands resample independent arenas.
+Prior and pooled references repeat across panels for comparison, not as
+additional replicates. The primary probe subset excludes capacity-dominated
+queries. [Data, captions and vector exports](figures/world-model-v1/README.md).*
+
+Mean normalized parameter error fell from **0.2319** under the prior to
+**0.0405** privately and **0.0203** with pooling. This metric averages each
+model's root-mean-square coefficient error after scaling each coefficient by
+its public prior width; it is not an equation-discovery score. Separate
+coefficient trajectories remain necessary because accurate aggregate forecasts
+can conceal a weakly identified spillover coefficient.
+
+![Recovery of baseline renewal, local return and external spillover](figures/world-model-v1/parameter-recovery.png)
+
+*Figure 4. Mean absolute coefficient error by society and checkpoint, in each
+coefficient's own units. Columns use different scales. Hidden simulator truth
+is used by the evaluator only, never as learner input.*
+
+| Parameter | Private mean absolute error | Pooled mean absolute error | Private 90% parameter-interval coverage | Pooled 90% parameter-interval coverage |
+| --- | ---: | ---: | ---: | ---: |
+| Baseline renewal $r$ | 0.04557 | 0.02359 | 87.5% | 91.7% |
+| Local return $b$ | 0.03247 | 0.01561 | 93.1% | 95.8% |
+| Spillover $g$ | 0.05367 | 0.02725 | 83.3% | **75.0%** |
+
+Parameter uncertainty needs further work. The pooled spillover interval
+contained the true coefficient in only **18 of 24 arenas**, despite lower
+point-estimate error. Good predictive coverage does not establish calibrated
+parameter beliefs. Private coverage averages 72 society models nested within
+24 arenas; pooled coverage uses 24 models, not their repeated plotting rows.
+Finite-particle accuracy and weak excitation of particular coefficients are
+possible explanations to test, not established causes. The evaluation panel
+has not been reused to tune away this result.
+
+![Parameter interval coverage and width](figures/world-model-v1/parameter-uncertainty.png)
+
+*Figure 5. Coverage and width of 90% parameter credible intervals, distinct
+from predictive intervals for future outcomes. The spillover result motivates
+further calibration tests. Intervals resample whole arenas.*
+
+Final predictive interval widths were **6.398** resource units for the prior,
+**1.319** privately, and **1.309** with pooling. Learned intervals retained
+approximately nominal 90% coverage while becoming much narrower. This is
+empirical calibration on the declared stationary task distribution, not a
+guarantee under hidden features or changed mechanisms. The
+[calibration and endpoint panels](figures/world-model-v1/README.md),
+[full study report](docs/world-model-v1.md), and
+[frozen design](evidence/world-model-v1/design.json) retain the complete
+comparison and scope.
+
+## 5. Discussion, limitations, and next experiments
+
+The experiments support a disciplined separation of outcomes. A reward function
+can favor infrastructure accumulation while consumption worsens. Institutional
+changes can improve local consumption while increasing harm. A learned model
+can predict accurately without identifying every coefficient, especially when
+infrastructure features are correlated or growth is consistently capped.
+
+The first numerical learner addresses the measurement problem under explicit
+instrumentation. It does not yet establish collective intelligence, learned
+planning, autonomous experimentation, equation discovery, evolved reporting
+institutions, or decentralized knowledge formation. Pooled evidence is a
+reference condition, with additional data and no communication price. Posterior
+intervals are numerical approximations whose empirical calibration must be
+reported, not assumed.
+
+The next experiments will first test parameter calibration and compute
+sensitivity on new arenas, then reduce sensor access, introduce bounded and delayed
+reports, compare evidence-selection rules, and hold the learner fixed while
+varying information governance. Equal-time and equal-evidence comparisons
+answer different questions. Later experiments will independently change
+physical laws, opponent policies, and report reliability to test whether a
+society revises the correct explanation.
+
+Stage 2 will first compare supplied mechanism families, then permit terms,
+interactions, and branches to change within a declared expression grammar.
+That transition separates model selection from structural discovery. Active
+experimentation and fixed-planner interventions will test whether improved
+knowledge changes actual welfare and harm. Any model-driven program search
+will receive a separately specified budget.
+
+The economic substrate itself remains limited: fixed membership, central
+institutions, no spatial movement, no death or migration, and many regimes
+near the consumption ceiling. Results about evolutionary search remain based
+on individual pilot lineages. The [roadmap](docs/research-roadmap.md) prioritizes
+scarcity maps, targeted mechanism interventions, cross-play, invasion, and
+independent search replications alongside the new learning program.
+
+## 6. Reproducibility
+
+Use Python 3.13 to match the recorded environment. The current package includes
+the numerical learner and its dependencies; the historical requirements lock
+belongs to the first experiment and is retained unchanged. The new
+[world-model environment](requirements-world-model-v1.txt) pins the versions
+used for numerical inference, plotting and tests.
 
 ```bash
 uv venv --python 3.13 .venv
-uv pip install --python .venv/bin/python -r requirements-lock.txt
+uv pip install --python .venv/bin/python -r requirements-world-model-v1.txt -e '.[test]'
 .venv/bin/python -m pytest -q
 ```
 
-The portable [requirements-lock.txt](requirements-lock.txt) pins the recorded environment; [environment-freeze.txt](evidence/environment-freeze.txt) preserves the original local installation record. The simulator itself uses the standard library; plotting and Shinka have separate dependencies. Inference requires the verified model to be available through `codex login` using ChatGPT. The runner refuses API-key authentication and does not switch models.
-
-Start a new independent run:
+Audit the completed world-model evidence and regenerate its figures:
 
 ```bash
-.venv/bin/python -m swarm_societies.experiment prepare --run-dir runs/reproduction
-.venv/bin/python scripts/run_evolution.py --run-dir runs/reproduction --budget-minutes 60
-.venv/bin/python -m swarm_societies.experiment fresh --run-dir runs/reproduction --workers 2
-.venv/bin/python -m swarm_societies.experiment export --run-dir runs/reproduction --output evidence/reproduction
-.venv/bin/python -m swarm_societies.experiment replay --run-dir runs/reproduction --seed 424242 --output evidence/reproduction/replay.json
-.venv/bin/python -m swarm_societies.visualize --summary evidence/reproduction/summary.json --replay evidence/reproduction/replay.json --output figures/reproduction
+.venv/bin/python scripts/run_world_model_study.py verify
+.venv/bin/python scripts/visualize_world_model_study.py
 ```
 
-Replay the published population without new inference:
+Reproduce the same deterministic case bank in a new directory, without model
+generation or evolutionary search:
 
 ```bash
-.venv/bin/python -m swarm_societies.experiment replay --run-dir evidence/experiment --seed 424242 --output /tmp/swarm-replay.json
-.venv/bin/python -m swarm_societies.visualize --summary evidence/experiment/summary.json --replay /tmp/swarm-replay.json --output /tmp/swarm-figures
-.venv/bin/python scripts/analyze_search.py --run-dir evidence/experiment --output /tmp/swarm-search-effects.json
+.venv/bin/python scripts/run_world_model_study.py prepare --output runs/world-model-reproduction
+.venv/bin/python scripts/run_world_model_study.py run --output runs/world-model-reproduction
+.venv/bin/python scripts/run_world_model_study.py verify --output runs/world-model-reproduction
+```
+
+Numerical results are deterministic under the recorded software environment;
+CPU measurements and timestamps depend on the machine. Existing completed
+studies are not overwritten. The current suite passes **90 tests and 14
+subtests**, including exact legacy trajectory preservation, likelihood checks,
+planted and confounded parameter controls, deduplication, snapshot restoration,
+and forecast isolation.
+
+Existing evidence and figures can be checked locally without evolutionary
+inference:
+
+```bash
 .venv/bin/python scripts/verify_evidence.py --require-final
+.venv/bin/python scripts/verify_mechanism_evidence.py
+.venv/bin/python -m swarm_societies.visualize_consumption
+.venv/bin/python scripts/visualize_mechanism_study.py
 ```
 
-Resume the original local search after an interruption:
+Evidence includes frozen designs, exact program sources, data tables, accounting,
+and source/output hashes. The world-model study additionally records noisy
+measurements, forecasts, parameter estimates, learner snapshots, and computation.
+Every empirical figure follows [Chromatic Field v1](docs/visual-reference.md):
+warm paper, stable cobalt/magenta/orange society identities, explicit condition
+markers, and inspected SVG/PDF/PNG exports. Visuals represent recorded data;
+design illustrations are labeled separately.
 
-```bash
-.venv/bin/python scripts/run_evolution.py --run-dir runs/first --budget-minutes 60 --resume
-```
+The [first-study archive](docs/first-study-report.md),
+[consumption protocol](docs/protocol-consumption-v2.md),
+[mechanism diagnostic](docs/mechanism-study.md), and
+[world-model implementation plan](docs/world-model-implementation-plan.md)
+retain detailed methods. [PROGRESS.md](PROGRESS.md) records active work and
+verification status. Upstream Shinka is required only for its evolutionary
+route, not for fitting the numerical world model or rendering recorded results.
 
-Only unused allowance is consumed; an exhausted budget is a no-op. Full native checkpoints, ecological state, source snapshots, prompts, response logs, and budget accounting are retained locally in ignored `runs/first/`. Compact evidence and source snapshots are committed under `evidence/experiment/`. Large run data, dependencies, and upstream checkouts stay outside ordinary Git. [PROGRESS.md](PROGRESS.md) records the active objective and resumption point.
+## 7. References
 
-## Limitations and next experiment
+1. Pal, Wang & Buehler (2026). [SwarmWorld: Stigmergic technological evolution in societies of language-model agents](https://arxiv.org/abs/2608.26081). Preprint. [Repository integration decision](docs/upstream.md).
+2. Zheng et al. (2022). [The AI Economist: Taxation policy design via two-level deep multiagent reinforcement learning](https://www.science.org/doi/10.1126/sciadv.abk2607). *Science Advances*.
+3. Lange, Imajuku & Cetin (2025/2026). [ShinkaEvolve](https://arxiv.org/abs/2509.19349). ICLR 2026. Actual engine pinned to [revision 9912af1](https://github.com/SakanaAI/ShinkaEvolve/tree/9912af12d423504b8d580f4179fd15f5f88b8c50).
+4. Chua et al. (2018). [Deep Reinforcement Learning in a Handful of Trials using Probabilistic Dynamics Models](https://proceedings.neurips.cc/paper_files/paper/2018/hash/3de568f8597b94bda53149c7d7f5958c-Abstract.html). NeurIPS.
+5. Hafner et al. (2019). [Learning Latent Dynamics for Planning from Pixels](https://proceedings.mlr.press/v97/hafner19a.html). ICML.
+6. Zeng & Zhang (2025). [Efficient Information Sharing for Training Decentralized Multi-Agent World Models](https://rlj.cs.umass.edu/2025/papers/Paper103.html). *Reinforcement Learning Journal*.
+7. Brunton, Proctor & Kutz (2016). [Discovering governing equations from data by sparse identification of nonlinear dynamical systems](https://doi.org/10.1073/pnas.1517384113). *PNAS*.
+8. Tang, Key & Ellis (2024). [WorldCoder: Building World Models by Writing Code and Interacting with the Environment](https://proceedings.neurips.cc/paper_files/paper/2024/hash/820c61a0cd419163ccbd2c33b268816e-Abstract-Conference.html). NeurIPS.
+9. Cao et al. (2026). [ALDER: Discovering the Laws of a World by Acting in It](https://arxiv.org/abs/2609.33728). September preprint.
+10. Gneiting & Raftery (2007). [Strictly Proper Scoring Rules, Prediction, and Estimation](https://sites.stat.washington.edu/people/raftery/Research/PDF/Gneiting2007jasa.pdf). *JASA*.
 
-This is one exploratory run in a small abstract economy, not evidence that multilevel search reliably improves cooperation or adaptation. Society membership is fixed; institutions are replaced in place rather than through demographic group reproduction. There is no death, migration, population growth, or persistence of episode memories across generations. The candidate language is intentionally bounded and is not a general hostile-code sandbox.
-
-The disturbance always occurs at the same time, infrastructure is drought-independent, and consumption can saturate. These design choices can favor stockpiling or infrastructure construction without demonstrating general environmental adaptation. A post-minus-pre welfare increase also confounds disturbance response with infrastructure accumulating over time; there is no matched no-disturbance counterfactual in this increment. Fresh seeds test stochastic generalization, while frozen opponents do not cover every possible evolving ecology. The fixed reference and crossed interventions do not replace independently replicated, budget-matched evolutionary controls. Search fitness comparisons across changing populations are contextual.
-
-The next justified experiment should remove the direct infrastructure reward and select institutions on consumption and unmet needs, while randomizing disturbance timing and episode length. Compare multilevel coevolution with a budget-matched fixed-institution search across independent evolutionary runs. This directly tests whether the observed allocation programs improve resilience when construction and a known terminal horizon cannot raise the score by themselves. Memory ablations can then test whether the evolved estimates causally improve decisions. These experiments are proposed, not performed here.
-
-## Foundations and attribution
-
-[SwarmWorld](https://github.com/lamm-mit/SwarmWorld/tree/6af7ae9fa36d98b07b0492cf139658e8af1f6eab), revision `6af7ae9fa36d98b07b0492cf139658e8af1f6eab`, informed the separation of local policies, authoritative material consequences, persistent state, event logs, replay, and analysis. A focused source inspection found direct embedding unnecessarily coupled this first selection experiment to its broader artifact physics. This increment therefore uses an independently authored compact simulator; it is not a SwarmWorld fork or a reproduction of its results. [The integration record](docs/upstream.md) lists inspected files and the rationale.
-
-Pal, S., Wang, F. Y., and Buehler, M. J. (2026). [*SwarmWorld: Stigmergic technological evolution in societies of language-model agents*](https://arxiv.org/abs/2608.26081). arXiv:2608.26081. Its fixed model weights do not demonstrate the multilevel selection studied here.
-
-Sakana AI. [*ShinkaEvolve: Towards Open-Ended and Sample-Efficient Program Evolution*](https://github.com/SakanaAI/ShinkaEvolve). Actual upstream evolutionary engine, pinned above; Apache-2.0.
-
-[actir-backprop-neat](https://github.com/ReloadLightly/actir-backprop-neat/tree/9472743f1cb7ea12eafcf489126b1a43b8f5735f) was used read-only as the visual reference. Warm paper, cobalt/magenta/orange society colors, restrained typography, and vector exports follow its Chromatic Field conventions. Its numerical results are not reused. [Visual inspection and provenance](docs/visual-reference.md) record the relevant README and figure code.
+The [full research review](docs/world-model-literature.md) annotates 30 primary
+sources. Visual conventions derive from the read-only
+[actir-backprop-neat reference](https://github.com/ReloadLightly/actir-backprop-neat/tree/9472743f1cb7ea12eafcf489126b1a43b8f5735f);
+its numerical results are not reused.

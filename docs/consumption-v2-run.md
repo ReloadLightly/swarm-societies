@@ -12,6 +12,14 @@ The initial campaign is a **matched pilot: one independent run per condition,
 replicated claim about the search procedure. The implementation supports
 independent paired replications through a separate campaign manifest.
 
+**Completed on 5 October 2026.** Both search allowances are exhausted and all
+648 fresh evaluation rollouts finished. Coevolution welfare was 0.847238,
+compared with 0.846405 for fixed institutions. The small consumption benefit
+came alongside higher outward harm and lower private utility. The
+[figure gallery](../figures/consumption-v2/README.md) contains the complete
+endpoint comparison, paired drought effects and society breakdowns. Resuming
+this campaign does not start another search or grant additional time.
+
 The [prospective protocol](protocol-consumption-v2.md) fixes selection and
 analysis before fresh outcomes. The original simulator, protocol, sources,
 figures and evidence remain reproducible. V2 uses its own simulator module,
@@ -73,6 +81,9 @@ paired differences. Manually retry only that stage if needed:
 | `fresh/` | Common-case outcomes and paired no-drought comparisons after search |
 
 Full checkpoints and logs stay outside Git. The code, frozen scientific
-protocol, tests and compact launch evidence are published. New figures and a
-scientific interpretation require completed fresh results; none are asserted
-at launch.
+protocol, tests and compact launch evidence are preserved. The completed
+pilot's scalar case data, CSV tables, figures and render provenance now live
+in `figures/consumption-v2/`; full member rows and original search traces remain
+in the local checkpoints. A separate [program-swap diagnostic](mechanism-study.md)
+uses portable frozen sources and a new environment bank, without changing the
+original pilot or feeding its outcomes into search.

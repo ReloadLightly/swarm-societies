@@ -1,0 +1,88 @@
+{
+  "captions": {
+    "matched-drought-effects": "Left: observed welfare under drought and its exact matched no-drought counterfactual, averaged over the same 108 cases. Right: twelve environment/schedule tuple means of the paired drought effect, each averaging all three focal societies and all three opponent panels. Large diamonds are the full panel means; dots are conditional environmental variation, not search-level replicates or confidence intervals. The effect contrast is coevolution minus fixed institutions. A positive contrast means less modeled drought damage.",
+    "outcome-tradeoffs": "Equal-weight means over 108 common disturbed fresh cases per population. The one matched run pair has higher welfare and less shortfall under coevolution, but lower private utility and more outward harm than under fixed institutions. Welfare and utility axes are explicitly zoomed. Welfare equals consumption minus half the consumption shortfall, both per member-tick. With consumption need fixed at 0.85, welfare equals 0.85 minus 1.5 times shortfall per member-tick; welfare and shortfall are therefore not independent endpoints. Private utility also includes terminal wealth. No independent search replication.",
+    "society-tradeoffs": "Coevolution minus fixed-institution means under drought, conditional on the single saved run pair. Each society mean averages 36 matched fresh cases. Persistent society colors identify focal societies, not search conditions. Welfare improvement is concentrated in society 0; the other two societies have small negative welfare contrasts. Private utility decreases in all three societies, while outward harm increases in societies 1 and 2. These descriptive contrasts do not isolate causal effects of institutional changes."
+  },
+  "command": ".venv/bin/python -m swarm_societies.visualize_consumption --data figures/consumption-v2/plot-data.json --output figures/consumption-v2",
+  "files": {
+    "matched-drought-effects.pdf": {
+      "bytes": 38185,
+      "sha256": "c0540a4114752be0b74c428b7a60f63c25baac91d113baa41c198c491cc83314"
+    },
+    "matched-drought-effects.png": {
+      "bytes": 180808,
+      "sha256": "95dba4aa11224a6d5449deea2eb4257ee7a0a27d33aaf09a85409454617ee2b9"
+    },
+    "matched-drought-effects.svg": {
+      "bytes": 24479,
+      "sha256": "a1edc8ee769fa2dac9132c3cec3cdb6fd19f878983451ffa5bf73940b7968748"
+    },
+    "outcome-tradeoffs.pdf": {
+      "bytes": 37970,
+      "sha256": "bb03d3369d79bb5e37524fefd03746026252ee54187c74a221912f9f8062269c"
+    },
+    "outcome-tradeoffs.png": {
+      "bytes": 234169,
+      "sha256": "c480129142597b70dbb5ade59062a90904990b9d9fe461b85b73495c1555c87e"
+    },
+    "outcome-tradeoffs.svg": {
+      "bytes": 26992,
+      "sha256": "4b708ee87dacc77c5fa13687a112f43f60a83f7f643f48a608662860c0e86f38"
+    },
+    "plot-data.json": {
+      "bytes": 132692,
+      "sha256": "5704255f6b8d06efdde656e2a32a38294f046af12557828d576adf9cf049a58f"
+    },
+    "results.csv": {
+      "bytes": 2157,
+      "sha256": "c5d23f65e8ae2ca3218aa90100f70c77ea4eefa7afa2aa29543cf6a2a1ddb148"
+    },
+    "society-opponent-means.csv": {
+      "bytes": 12683,
+      "sha256": "d73ce5dc852fa2626bd39d90298ff6fa8f8bc298ed7208da531cb3fe6be8b8fd"
+    },
+    "society-tradeoffs.pdf": {
+      "bytes": 31402,
+      "sha256": "b897acdecbeea52d9573913e2a8a6d1f09d650998ac465190309f7c25d410d48"
+    },
+    "society-tradeoffs.png": {
+      "bytes": 160995,
+      "sha256": "9a2fa0303ebfaa0906dce3e45fa4483a7078f564e940401d526ddc3baaf3c545"
+    },
+    "society-tradeoffs.svg": {
+      "bytes": 26485,
+      "sha256": "228f77cf3721c6fff738d51439e791a4cc5a1fd45352f21898bf31c85ac751ea"
+    }
+  },
+  "interpretation": "Exploratory matched pilot; no replicated search claim",
+  "n_common_cases_per_population": 108,
+  "n_independent_run_pairs": 1,
+  "n_rollouts_per_population": 216,
+  "render_source_sha256": {
+    "swarm_societies/visualize.py": "1cedaca8dbbe70aef2b763b7e4e9b67720c6a3783f6dcfe91971b6a4b141dae0",
+    "swarm_societies/visualize_consumption.py": "f44061aed300d128e0b0ed4fc8868a9794ecfd2f7f1befe6e3b3b1663777cb9d"
+  },
+  "replication_unit": "Independent evolutionary run",
+  "schema_version": 1,
+  "software": {
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.3",
+    "python": "3.13.5"
+  },
+  "source_sha256": {
+    "docs/protocol-consumption-v2.md": "0c639b991c33e07c75139127926c3477353b9f990d2a1125e0800c353fb73de3",
+    "runs/consumption-v2/campaign.json": "d037be06545486585dd62ed0870b8ae76b00826b9dc33b561ca92c376b2181e8",
+    "runs/consumption-v2/fresh/initial.json": "5d780a38ebe6358f6cfc4d95b9f50ec7230e4f83c5cf1c72f7dd6d08bd231aa4",
+    "runs/consumption-v2/fresh/pair-01-coevolution.json": "127b7ae99219858d7f0e42087a2928d819e21b1368d345dffc03fc4b6adac8b3",
+    "runs/consumption-v2/fresh/pair-01-fixed_institution.json": "d10d5eee5a0e3b0237b39a42f2b64ad57e104124831c7c94d30053d409bb19c6",
+    "runs/consumption-v2/fresh/summary.json": "68af89da0559653dd8d1b80cee26aeeb44c3c008e0a48bf98e66f6a039d19389",
+    "runs/consumption-v2/protected_fresh_cases.json": "cab4c4c4838d7ec8a8eaf45a644d4e1208f1087abfc55158b2d34a3f586235ab",
+    "scripts/evaluate_consumption_study.py": "c284316d84d5db391b50b8ec6a8c837fa5bb05c9af012fca24ef0c0d64c8a383",
+    "swarm_societies/consumption_study.py": "e7a11bf67d003606f17090274f2f282a1cff24f6f34ffe162518ac24e3cf972f",
+    "swarm_societies/ecology_consumption_v2.py": "82c3ffe2e9431541e6e0cfbda6c97bccadfe87518bd3d17ff7661434d84e2344"
+  },
+  "study": "consumption-v2",
+  "style": "Chromatic Field v1",
+  "validation": "All 324 case pairs checked against published summaries; matched case identities, finite outcomes, pre-shock equality, welfare definitions and run contrasts verified."
+}

@@ -1,3 +1,6 @@
-# Preserve exact, reproducible Matplotlib and CSV export bytes.
-figures/*.svg -text whitespace=-blank-at-eol
-figures/*.csv -text whitespace=cr-at-eol
+# Frozen evidence and exports must retain their recorded bytes on every platform.
+evidence/** -text
+figures/** -text
+# Standard CSV CRLF records and Matplotlib SVG paths are generated artifacts.
+*.csv whitespace=cr-at-eol
+*.svg -whitespace
