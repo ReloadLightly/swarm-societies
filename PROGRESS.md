@@ -1,5 +1,60 @@
 # Active work record
 
+## Scientific review and spatial commons plan, 7 October 2026
+
+The user supplied a critical external review and requested a thorough assessment
+and an ordered implementation plan. The user clarified the target: **mobile
+individuals in an anarchic international system; institutions can emerge, be
+absent, change and disappear**. This supersedes the immediate plan to advance
+straight to supplied-mechanism model selection. Existing world-model components
+remain tools; the first priority is a qualified ecology and strong baselines.
+
+- Review: `docs/research-review-2026-10-07.md`.
+- Proposed implementation and spending gates: `docs/commons-v3-plan.md`.
+- Reconstructed baseline evidence: `evidence/baseline-review-v1/`.
+- Recorded-data figure, SVG/PDF/PNG, table and hashes:
+  `figures/baseline-review-v1/`; renderer `scripts/visualize_baseline_review.py`.
+
+The reviewer did not supply policy source. A reconstruction of fullest-visible
+harvesting, full effort, zero contributions/tax/investment and no raids exactly
+reproduces the reported mechanism-panel means. Drought welfare/shortfall/raid
+harm/private utility are **0.848654 / 0.000897 / 0 / 1.038674**, compared with
+coevolved **0.846926 / 0.002050 / 0.534878 / 0.965109**. The private utility gain
+is 7.6225%. This confirms a serious missing-baseline problem.
+
+There are **12 existing environment tuples, 108 focal scenarios and 216 paired
+rollouts**, not independent search replications. Greedy welfare improves/ties/
+worsens in 23/84/1 cases against coevolution. Other societies' mean welfare is
+**0.001030 lower**, and whole-world mean welfare is descriptively 0.000110 lower.
+Zero raid losses do not imply no externalities. The policy bundle comparison
+does not isolate raid removal; evolved society 1 also enabled new raid behavior.
+
+The engineering review confirmed exact diagnostic-float comparisons in the
+calibration verifier; it did not reproduce the external 72/576 last-bit count.
+The mentioned tolerance patch was absent. Plan a separate portable verifier,
+preserving exact bytes and qualification decisions. Search evaluators already
+enforce 1 GiB memory and 120 CPU-second limits; consistent protection is needed
+for the other untrusted paths. The v2 pilot used 13 started calls, 11 completed
+proposals and two budget interruptions. Selection exists, but the negligible
+margin, single runs and absence of reciprocal revisits limit inference.
+
+The proposed sequence is: portability and execution hardening; new local
+spatial physics; verified unilateral temptation and collective losses; optional
+institutional formation and costed enforcement; strong fixed/numerical baselines;
+then a separately budgeted pilot and replicated search. Do not make favorable
+institutional emergence or a positive coevolution effect a completion gate.
+Keep position, membership and jurisdiction distinct and track outsiders' costs.
+No new experimental model spending is authorized by this planning request.
+
+Independent scientific and engineering reviews passed after correcting two
+document links. All six archived diagnostic artifact hashes, eight frozen
+external-input hashes, 17 figure source hashes and five figure output hashes
+pass. The five original diagnostic copies remain byte-identical. The PNG was
+inspected; all six gallery files rerender byte-identically. No frozen simulator,
+protocol or earlier evidence was changed. No new model calls or searches were
+made; no v3 implementation is claimed. Verification receipt:
+`runs/review-v3/archive-render-verification.json`.
+
 ## Costed experiment evaluation completed, 7 October 2026
 
 The user authorized the next implementation and requested GitHub synchronization.

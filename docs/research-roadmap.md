@@ -1,6 +1,13 @@
 # Research roadmap: interacting, evolving societies
 
-**Current priority:** the user has selected learnable world models, first
+**Current priority, updated 7 October 2026:** the
+[scientific review](research-review-2026-10-07.md) and
+[spatial commons implementation plan](commons-v3-plan.md) now govern the next
+stage: mobile individuals, optional changeable institutions, and no higher
+authority between societies. Ecological incentive and baseline gates precede
+new model spending. World models remain tools and a later research track.
+
+The earlier priority selected learnable world models, first
 parameter inference and then rule discovery. The
 [world-model proposal](world-model-proposal.md),
 [dedicated literature review](world-model-literature.md), and
@@ -8,7 +15,7 @@ parameter inference and then rule discovery. The
 The first [stationary parameter-learning control](world-model-v1.md) is now
 implemented and evaluated on 24 independent arenas.
 The broader experiments below remain relevant; their earlier ranking does
-not supersede this new priority.
+not supersede the new spatial-commons plan.
 
 Research reviewed **6 October 2026**. This is a technical synthesis and a
 proposed research program, not a new preregistration or authorization for

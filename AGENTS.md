@@ -10,9 +10,23 @@ documented in `docs/world-model-decision-v1.md`; its earlier design rationale
 remains in `docs/world-model-decision-plan.md`.
 The completed costed experiment-selection control is documented in
 `docs/world-model-experiment-v1.md`.
-The user's current priority remains parameter learning followed by rule
-discovery; `docs/world-model-proposal.md` describes the staged design and
-`docs/research-roadmap.md` preserves the broader research program.
+The current priority is the scientific redesign in `docs/commons-v3-plan.md`,
+following `docs/research-review-2026-10-07.md`. The user specified mobile
+individuals in an anarchic international system: institutions can emerge,
+be absent, change and disappear, with no supranational government. Qualify the
+ecology, incentives and strong baselines before further experimental model
+spending. Preserve parameter learning and rule discovery as tools and later
+research stages; their earlier design remains in `docs/world-model-proposal.md`.
+The broader research program remains in `docs/research-roadmap.md`.
+
+The exploratory reconstructed greedy baseline reproduces the external review's
+mechanism table: focal welfare 0.848654 and private utility 1.038674 exceed the
+saved coevolved means 0.846926 and 0.965109. This does not establish universal
+dominance or zero external cost: other societies' mean welfare is 0.001030 lower.
+Evidence is separate in `evidence/baseline-review-v1/`; preserve the original
+mechanism study. No new evolution or model calls were used. Distinguish
+raid-victim losses from ecological externalities and bundle substitutions from
+mechanism-specific interventions.
 
 The calibration audit supports retaining 1,024 particles/four rejuvenation sweeps
 as the working default. Higher compute is a sensitivity setting, not an adopted
@@ -36,8 +50,8 @@ active-minus-random advantage in posterior-update value: −0.000969
 present with frozen coefficients. Active selected Early in 71/72 states;
 the Fixed Split control does not establish an advantage over all fixed timing
 schedules. Repayment relative to zero-investment redistribution remains
-unresolved. Next: a separately specified comparison of supplied mechanism
-families before structural discovery. Keep hidden external features,
+unresolved. A later supplied-mechanism-family comparison remains distinct from
+structural discovery, after the new ecology is qualified. Keep hidden external features,
 confidence-based selection and adaptive sequences of experiments as separately
 controlled stages.
 

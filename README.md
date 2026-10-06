@@ -1,6 +1,15 @@
-# Swarm Societies: Coevolving Institutions and Learning Shared World Dynamics
+# Swarm Societies: A Research Testbed for Resources and Institutions
 
-**Living research report · 6 October 2026**
+**Living research report · 7 October 2026**
+
+**Current status:** the existing platform is a small, nonspatial institutional
+ecology. A newly reproduced greedy baseline outperforms the saved evolved
+population on the four reported focal averages, while slightly lowering
+outsiders' welfare. The next stage is a calibrated spatial commons with mobile
+individuals and optional, changeable institutions under no higher government.
+Read the [scientific review](docs/research-review-2026-10-07.md) and
+[staged implementation plan](docs/commons-v3-plan.md). New search spending waits
+for the ecological and baseline gates.
 
 [Code and reproduction](#6-reproducibility) ·
 [Current results](#4-experiments-and-results) ·
@@ -24,6 +33,11 @@ The evolutionary pilot produced a small consumption-welfare advantage for
 institutional coevolution alongside greater harm to neighbouring societies.
 The program transplant diagnostic identified a member-dependent institutional
 effect on harm; beneficial welfare complementarity remained unresolved.
+An exploratory baseline audit now reproduces a stronger simple harvesting
+policy: focal welfare 0.848654 and private utility 1.038674, versus 0.846926
+and 0.965109 for coevolution on the same mechanism panel. It has zero raid losses
+but lowers outsiders' mean welfare. The pilot therefore does not establish
+competitive evolutionary governance.
 The world-model feature estimates hidden renewal coefficients online using
 weather-aware Bayesian particles and explicit observation contracts. Across
 24 independent arenas, private learners reduced final predictive CRPS from
@@ -73,12 +87,13 @@ reproduction, or a decentralized peer network. Here, “swarm societies” names
 the research program; central institutional hubs and fixed membership describe
 the implemented substrate.
 
-The immediate progression is **parameter learning and information governance →
-useful decisions → active experimentation → structural discovery**. Parameter
-learning, fixed truthful reporting, allocation control and one-shot costed
-experiment selection are now executable features. Structural discovery and
-adaptive sequences of experiments remain research objectives, rather than
-capabilities inferred from memory fields or cooperative-looking behavior.
+Parameter learning, fixed truthful reporting, allocation control and one-shot
+costed experiment selection are executable identification and integration
+controls. The immediate priority is now a **qualified spatial commons → strong
+baselines → optional institutions → replicated adaptation experiments**.
+World models remain tools for consequential decisions; structural discovery
+and adaptive experiment sequences remain later objectives. The new political
+world is a design, not a capability already present in these studies.
 
 ## 2. Related work and positioning
 
@@ -433,6 +448,18 @@ programs, not its internal cause. [Study and portable evidence](docs/mechanism-s
 *Figure 2. Institutional transplant effects by society and member background.
 Points show conditional environmental variation within one lineage, not
 independent search replications. [Figure provenance](figures/mechanism-v1/README.md).*
+
+A later [exploratory baseline audit](docs/research-review-2026-10-07.md) reconstructs
+the reviewer's fullest-visible-patch policy and reproduces its reported table.
+On the same 108 drought cases, its welfare is **0.848654**, unmet need
+**0.000897**, private utility **1.038674** and outward raid loss **zero**.
+These improve the four focal means over the saved coevolved programs. However,
+other societies' mean welfare falls by **0.001030**, and focal welfare worsens
+in one case. The result exposes a missing strong baseline and a limited harm
+metric; it does not isolate the effect of removing raids or prove no externality.
+There are 12 environment tuples, no new search runs and no new model calls.
+[Evidence](evidence/baseline-review-v1/README.md) ·
+[Recorded-data figure](figures/baseline-review-v1/README.md).
 
 ### 4.4 Learning unknown renewal coefficients
 
@@ -802,7 +829,8 @@ proxy's approximations limit claims about adaptive experiment design. Matching
 investment and report bytes does not match realized consumption costs or
 wealth-capped effort charges.
 
-Stage 2 will first compare supplied mechanism families, then permit terms,
+After the new spatial ecology and baseline gates pass, the world-model track
+can first compare supplied mechanism families, then permit terms,
 interactions, and branches to change within a declared expression grammar.
 That transition separates model selection from structural discovery. Whether
 adaptive sequences of experiments improve decisions enough to repay their
