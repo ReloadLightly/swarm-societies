@@ -19,6 +19,18 @@ spending. Preserve parameter learning and rule discovery as tools and later
 research stages; their earlier design remains in `docs/world-model-proposal.md`.
 The broader research program remains in `docs/research-roadmap.md`.
 
+Foundation repairs are documented in `docs/foundation-repairs-v1.md`.
+Use `scripts/verify_calibration_portable_v1.py` for supplemental calibration
+verification; keep the frozen original verifier unchanged. Its float tolerance
+is limited to enumerated reference diagnostics and never changes qualification
+or retry decisions. Use `swarm_societies.execution_v1` or
+`python -m swarm_societies.run_bounded_v1` for new/untrusted policy execution,
+including fresh evaluation, replay and checkpoint continuation. Direct frozen
+APIs remain for audited trusted policies. The bounded historical search adapter
+is `scripts/evaluate_search_bounded_v1.py`; it preserves the old acceptance rule
+for parity and does not authorize a new campaign. Data publication/restoration
+and the shorter README remain separate Stage 0 tasks.
+
 The exploratory reconstructed greedy baseline reproduces the external review's
 mechanism table: focal welfare 0.848654 and private utility 1.038674 exceed the
 saved coevolved means 0.846926 and 0.965109. This does not establish universal

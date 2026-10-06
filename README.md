@@ -11,6 +11,11 @@ Read the [scientific review](docs/research-review-2026-10-07.md) and
 [staged implementation plan](docs/commons-v3-plan.md). New search spending waits
 for the ecological and baseline gates.
 
+The [foundation repairs](docs/foundation-repairs-v1.md) add a portable calibration
+verifier and bounded subprocess entry points for supplied policies, fresh
+episodes, replay, checkpoints and historical search evaluation. Frozen studies
+remain intact. New or untrusted policies should use these bounded entry points.
+
 [Code and reproduction](#6-reproducibility) ·
 [Current results](#4-experiments-and-results) ·
 [Costed experiment study](docs/world-model-experiment-v1.md) ·
@@ -863,7 +868,7 @@ Audit the completed world-model evidence and regenerate its figures:
 ```bash
 .venv/bin/python scripts/run_world_model_study.py verify
 .venv/bin/python scripts/visualize_world_model_study.py
-OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/run_world_model_calibration.py verify
+OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/verify_calibration_portable_v1.py --receipt runs/calibration-portable-v1/receipt.json
 .venv/bin/python scripts/visualize_world_model_calibration.py
 OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/run_world_model_sharing.py verify
 .venv/bin/python scripts/visualize_world_model_sharing.py
@@ -884,7 +889,7 @@ generation or evolutionary search:
 .venv/bin/python scripts/run_world_model_study.py verify --output runs/world-model-reproduction
 OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/run_world_model_calibration.py prepare --output runs/calibration-reproduction
 OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/run_world_model_calibration.py run --output runs/calibration-reproduction --workers 4
-OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/run_world_model_calibration.py verify --output runs/calibration-reproduction
+OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/verify_calibration_portable_v1.py --source runs/calibration-reproduction --receipt runs/calibration-reproduction-receipt.json
 OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/run_world_model_sharing.py prepare --output runs/sharing-reproduction
 OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/run_world_model_sharing.py run --output runs/sharing-reproduction --workers 4
 OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/run_world_model_sharing.py verify --output runs/sharing-reproduction

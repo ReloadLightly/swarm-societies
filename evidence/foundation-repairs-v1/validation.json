@@ -1,0 +1,50 @@
+{
+  "calibration": {
+    "artifacts_each": 401,
+    "cases_each": 192,
+    "compared_diagnostic_scalars_each": 4620,
+    "drift_each": 0,
+    "known_compatibility_rejection": "calibration-py311-rejected.json",
+    "passing_receipts": [
+      "calibration-py313.json",
+      "calibration-py312.json"
+    ],
+    "sample_likelihoods_each": 4283648
+  },
+  "experimental_model_calls": 0,
+  "frozen_sources": {
+    "checks": 301,
+    "distinct_checked_paths": 158,
+    "inventories": 28,
+    "receipt": "frozen-sources.json"
+  },
+  "new_evolutionary_runs": 0,
+  "replay": {
+    "command": ".venv/bin/python -m swarm_societies.run_bounded_v1 episode --engine consumption-v2 --programs seeds/initial.py seeds/cooperative.py seeds/selfish.py --seed 101 --replay --receipt runs/new-replay/receipt.json",
+    "receipt": "default-replay-parity.json"
+  },
+  "scope": "Additive numerical verification and bounded candidate execution; no new physical world or search campaign",
+  "source_sha256": {
+    "docs/foundation-repairs-v1.md": "92a8927126f9049ac271d1a5e2be94bda1bbbbeaa9497486dc19a1a5ec1b76a9",
+    "scripts/evaluate_search_bounded_v1.py": "df3e1d178d2d3e25a33e0b2bf160d4cf8d7286ff3a0d379aa34266462c660ce4",
+    "scripts/verify_calibration_portable_v1.py": "f95d70fa5ebc396393ea939357c209e34ab17dd8d1b7e67364e5e9b5f8b518da",
+    "swarm_societies/execution_v1.py": "b9bc517e39685aa8ad8133c6f169a638d6f8a8f222f2aadad55f7fda9e708408",
+    "swarm_societies/execution_worker_v1.py": "9aa27c6052894a7ac823812ae747e2cd24b5a04a149ef3f0fa2233fa8d3e1d67",
+    "swarm_societies/run_bounded_v1.py": "2bf2b30a3ef45486a25c91347e40123da249b4c9c667492421eefea16a2a2408",
+    "swarm_societies/search_execution_v1.py": "7f0d237bca5ebd8ab258b3dc2068952138075a1876ff341380167e7fd3603400",
+    "tests/test_bounded_cli_v1.py": "dcd709db0dcd4b4cd7dab139c031ea4123183803bec4a3e032ef9913e9c21373",
+    "tests/test_calibration_portable_verification.py": "a986dc3a608e953d2730f7f3bcd422bb6ec74bbeb3193fd0f4e8c3ed83fcc149",
+    "tests/test_execution_v1.py": "42033420e67ce7a458db8c763eae2980106b5a16d74abdb49f23341440a8c7c4",
+    "tests/test_search_execution_v1.py": "057c5e1f12b995f9755c326410921aea611c377a31415161ab901dcba3b2112a"
+  },
+  "tests": {
+    "command": "OPENBLAS_NUM_THREADS=1 .venv/bin/python -m pytest -q",
+    "log": "full-tests.log",
+    "passed": 470,
+    "seconds": 230.39,
+    "sha256": "7f57fa9432875732f8a191fdd96a628e8a17265831feee20d26c5d0f37ff79c5",
+    "subtests_passed": 123
+  },
+  "verified": true,
+  "version": "foundation-repairs-v1"
+}

@@ -1,0 +1,81 @@
+{
+  "error": {
+    "message": "Exact value mismatch at /cases/evaluation-prior_predictive-000.json/audit/feature_condition_number",
+    "type": "ValueError"
+  },
+  "finished_utc": "2026-10-06T22:47:34.688538+00:00",
+  "input_hashes": {
+    "completion.json": "e33452a0f694afa5004e23b216be67cfd375fcd732dc7bbc95732ebfa2749073",
+    "design.json": "38917abefbb4162bee00b2c290ef178c9355a9a0f12d78ef5f59395216d54e98",
+    "design.sha256": "2c3dda03747b62ea783cdadfff1a27bcc22d0b79a08b89cdea8c0803bf770e90"
+  },
+  "numerical_drift": {
+    "compared_float_values": 0,
+    "drift_count": 0,
+    "drifts": [],
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0,
+    "relative_error_definition": "abs(recorded-recomputed)/abs(recomputed); null at zero or overflow"
+  },
+  "original_source_hashes": {
+    "docs/world-model-calibration-protocol.md": "5a0cad50c7cb52ce951418aa6d2dd1b01a2e0b6f52a86dd96a66564ce649287a",
+    "requirements-world-model-v1.txt": "9a9ebd5cf3256bb8fe44ce6d8cb6e791201f1ff7295e0149f8ef3a8bbfa778cd",
+    "scripts/run_world_model_calibration.py": "30cdf91ec084f66cf0320b9c0e701b00aaf1f25daf48a3b434b723d8a09c1a1c",
+    "scripts/run_world_model_study.py": "0434d6d512e875dfda87e0218e5230423937dbac825d65aaf4049bb8160c0f88",
+    "swarm_societies/candidate.py": "0ff988ac0a8b05ca0919bb67267e6645a232fb49530cfbd51122c6b8d1dfa89b",
+    "swarm_societies/ecology_consumption_v2.py": "82c3ffe2e9431541e6e0cfbda6c97bccadfe87518bd3d17ff7661434d84e2344",
+    "swarm_societies/ecology_world_model_v1.py": "6b1a84387efd3704efb3c4986cafcb6d9607c344c597e1aa7ec99b084357e8e7",
+    "swarm_societies/world_model_v1/__init__.py": "ef887d652d060bab39cc23090c1197907efebbad6e733aa525b443ca25540970",
+    "swarm_societies/world_model_v1/learner.py": "0dda816df570d9b813d60a29ad2fbbc2529a29a3cf74b628720b0caa3877bfdc",
+    "swarm_societies/world_model_v1/reference.py": "597bb03ec3a720b1a052647fd20fee82f9b3956a852c4f7bd4e6b3d8aee9b831"
+  },
+  "pointer_root": "Virtual archive tree: /cases/<filename>.json/... addresses that retained JSON document",
+  "recipe": {
+    "command": [
+      "/tmp/swarm-portable-py311-v1/bin/python",
+      "/home/roland/actir/swarm-societies/scripts/verify_calibration_portable_v1.py",
+      "--source",
+      "/home/roland/actir/swarm-societies/evidence/world-model-calibration-v1",
+      "--receipt",
+      "/home/roland/actir/swarm-societies/runs/foundation-repairs-v1/calibration-py311-final.json"
+    ],
+    "method": "Pinned original data generation, retained-chain diagnostics and likelihood reconstruction; no posterior refit"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "machine": "x86_64",
+    "numpy": "2.4.6",
+    "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+    "python": "3.11.15",
+    "scipy": "1.17.1",
+    "thread_environment": {
+      "MKL_NUM_THREADS": null,
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  },
+  "source_directory": "/home/roland/actir/swarm-societies/evidence/world-model-calibration-v1",
+  "started_utc": "2026-10-06T22:47:34.311863+00:00",
+  "tolerances": {
+    "other_comparisons": "Exact, with JSON scalar types preserved; no qualification or retry tolerance",
+    "reference_diagnostics": {
+      "atol": 1e-12,
+      "fields": [
+        "rhat",
+        "bulk_ess",
+        "tail_ess"
+      ],
+      "locations": "reference top level, every retained attempt, and their log_likelihood diagnostics",
+      "rtol": 1e-12,
+      "rule": "abs(recorded-recomputed) <= atol + rtol*abs(recomputed)"
+    },
+    "sample_log_likelihood": {
+      "atol": 1e-10,
+      "rtol": 1e-09,
+      "scope": "Unchanged original verifier rule for reconstructed retained likelihood arrays"
+    }
+  },
+  "verified": false,
+  "verifier": "calibration-portable-verification-v1",
+  "verifier_source_sha256": "f95d70fa5ebc396393ea939357c209e34ab17dd8d1b7e67364e5e9b5f8b518da"
+}

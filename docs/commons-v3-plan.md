@@ -76,6 +76,13 @@ not a desired result for the proposed method.
 
 ## Stage 0 Repair the foundation
 
+Implementation checkpoint, 7 October: the
+[foundation repair report](foundation-repairs-v1.md) records the supplemental
+calibration verifier and bounded execution entry points (0B/0C). Both complete
+192-case checks pass on Python 3.12/3.13 with the pinned numerical stack;
+an older stack's out-of-scope audit drift is retained as a failed check.
+External archive restoration and README consolidation (0D/0E) remain open.
+
 **0A. Correct the scientific record.** Retain the old results as engineering,
 identification and exploratory controls. Add the reproduced greedy baseline and
 outsider outcomes prominently. Replace any suggestion of established search

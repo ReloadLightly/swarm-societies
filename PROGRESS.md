@@ -1,5 +1,57 @@
 # Active work record
 
+## Foundation repairs implemented, 7 October 2026
+
+The user authorized the repair sequence following the scientific review.
+The numerical verifier and candidate-execution repairs are additive; no frozen
+simulator, source dependency, original verifier, protocol or earlier evidence
+was changed. No experimental model calls or evolutionary search were made.
+
+- Report and commands: `docs/foundation-repairs-v1.md`.
+- Supplemental verifier: `scripts/verify_calibration_portable_v1.py`.
+- Bounded execution: `swarm_societies/execution_v1.py`,
+  `swarm_societies/execution_worker_v1.py` and the
+  `python -m swarm_societies.run_bounded_v1` CLI.
+- Bounded historical search adapter: `swarm_societies/search_execution_v1.py`
+  and `scripts/evaluate_search_bounded_v1.py`.
+- Compact verification records: `evidence/foundation-repairs-v1/`.
+
+All **192 cases, 401 artifacts and 4,283,648 retained sample likelihoods** pass
+on Python 3.13.5 and Python 3.12.13 with NumPy 2.5.3/SciPy 1.18.1. Each replay
+compares 4,620 diagnostic scalar locations with zero drift; one-ULP behavior is
+covered separately by focused regressions. The reviewer's 72/576 last-bit count
+was not reproduced. Tolerance is restricted to reference R-hat/ESS diagnostics,
+including retained attempts and likelihood diagnostics. Qualification, retries,
+thresholds, exact observations and source hashes remain strict. Full-bank
+testing caught and fixed the distinction between the fitter's joint `passed`
+flag and its coefficient-only gate (case 067's first attempt).
+
+A Python 3.11.15/NumPy 2.4.6/SciPy 1.17.1 check fails at the first case's
+feature-condition-number audit, which differs by 1.776e-15 and is outside the
+tolerance whitelist. Preserve this failed receipt and the pinned numerical
+requirements; do not claim universal cross-stack portability.
+
+Fresh bounded workers apply memory/CPU limits before policy compilation; the
+parent enforces wall/output limits and process-group cleanup. All four episode
+engines, normalized consumption cases and stepwise continuation are supported.
+JSON insertion order and hash-seed-zero execution preserve observable ordering.
+This is resource containment, not an OS security sandbox. Frozen direct APIs
+remain trusted-only. Failed search jobs retain receipts and leave incumbents
+unchanged; the new adapter preserves the old 1e-9 acceptance rule for parity,
+not as the future scientific admission rule. Old search budgets stay exhausted.
+
+The default 80-tick replay matches the entire frozen result; the worker used
+1.23 seconds and peaked at 23,808 KiB RSS here. All **301 declared source/input
+hashes from 28 inventories** match, covering 158 distinct checked paths.
+The full suite passes **470 tests and 123 subtests** in 230.39 seconds,
+including 118 new repair tests and 21 additional subtests. Independent
+execution, integration and source-freeze reviews passed. The checkpoint's
+validation record pins all new implementation and test sources.
+External data publication/restoration and README consolidation remain open
+Stage 0 tasks. The next scientific implementation is the separate spatial
+physics and calibration gate, then optional institutions and strong baselines;
+none of those v3 capabilities is claimed by this repair checkpoint.
+
 ## Scientific review and spatial commons plan, 7 October 2026
 
 The user supplied a critical external review and requested a thorough assessment
