@@ -31,6 +31,7 @@ come next; emergence and welfare benefits remain untested. No model calls.
 [Institutional development results](docs/commons-v3-institutions-development-v1.md) ·
 [Coordination and membership v2](docs/commons-v3-coordination-membership-v2.md) ·
 [Evening steering and exclusion extension](docs/commons-v3-exclusion-conventions-v1.md) ·
+[Proposed paper experiment](docs/commons-v3-exclusion-experimental-plan-v1.md) ·
 [Physical commons](docs/commons-v3-foundation-v1.md) ·
 [Need-targeted baselines](docs/commons-v3-need-v1.md) ·
 [Local navigation and numerical baselines](docs/commons-v3-navigation-v1.md) ·
@@ -110,6 +111,13 @@ A claim alone does nothing. The active sequence is physical exclusion, local
 numerical imitation, then starvation/capability consequences under shocks.
 The target is an eight-page ALIFE 2027 paper; it is not a claim of completed
 research or publication. The completed bank remains closed.
+
+The [proposed experimental design](docs/commons-v3-exclusion-experimental-plan-v1.md)
+crosses storage and scarcity with adaptive exclusion, adaptive open access,
+neutral copying and fixed-parameter controls. Paired continuations from a
+common state will estimate member gains and outsider costs using identities
+fixed before the intervention. It proposes 4–8 development seeds and 32 fresh
+evaluation seeds after one complete freeze. No such panel has been run.
 
 ## 2. Related work
 

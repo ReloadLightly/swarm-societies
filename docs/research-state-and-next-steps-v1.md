@@ -38,6 +38,16 @@ emerge, what they gain members and what they cost outsiders across storage and
 scarcity**. This is the question the next experiment must answer, not a finding
 of the old banks or the new engineering fixtures.
 
+The [revised experimental design](commons-v3-exclusion-experimental-plan-v1.md)
+now specifies a proposed four-cell/four-arm paper study: storage 8/80 crossed
+with two renewal levels; payoff-biased copying with/without exclusion, neutral
+copying and fixed parameters. It separates population effects from focal-claim
+continuation effects on fixed member/outsider cohorts. Complete scored epochs
+include communication costs; the first design uses standing variation without
+mutation. Development starts with four seeds and is capped at eight; independent
+evaluation proposes 32 fresh seeds, 512 full runs and at most 128 short branches.
+These are prospective design choices, not an executed panel or the final freeze.
+
 ## Position in the research program
 
 | Area | What is established | Boundary of the evidence |
@@ -147,7 +157,7 @@ to orient future work; earlier plans remain historical references.
 | Engineering complete | Implement consequential decentralized coordination and responsive membership decisions. | V2 paid messages change routes/material outcomes in constructed fixtures; own receipts and local forecasts govern refusal/exit. Strong population performance and binding commitment parity remain unqualified. |
 | Paused by evening review | Comparator refinement and separation of charter response, collateral, timing and monitoring. | Preserve completed code and results; these controls cannot repair fixed types or unreachable outsiders. |
 | Engineering complete | (a) Add costly physical exclusion and resistance in a new version. | Paid local guards forgo harvest, outsider resistance costs resources, rival force is finite, and member/outsider outcomes and material accounting are separate. Fixtures are not emergence. |
-| Next | (b) Add local numerical adaptation. | Bounded policy parameters, explicit local payoff information, synchronous imitation/mutation, full state/memory continuation and no model calls. |
+| Next | (b) Add local numerical adaptation. | Bounded parameters, paid local performance information, synchronous copying from standing variation, full state/memory continuation and no model calls; mutation is deferred in the proposed first paper design. |
 | Then | (c) Give storage endogenous value. | Shocks cause starvation/capability loss that actual stores can buffer; demonstrate the physical consequence without terminal-weight tuning. |
 | Development | Small storage × scarcity comparison on 4–8 seeds. | Retain null formation, failures, member losses and outsider costs; fixed-policy and no-force controls; no extra archive/receipt/audit layer yet. |
 | After development | One complete freeze before independent evaluation. | Fresh seeds, fixed source/design/analysis and effect criteria; all development attempts remain development. |

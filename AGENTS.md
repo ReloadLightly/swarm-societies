@@ -19,6 +19,16 @@ and continuous Git synchronization continue. Target: an eight-page ALIFE 2027
 paper on convention emergence, member gains and outsider costs across storage
 and scarcity; this is a question, not an established finding.
 
+The proposed paper design is now in
+`docs/commons-v3-exclusion-experimental-plan-v1.md`. It is not the final source/
+evaluation freeze. It proposes four storage/scarcity cells and four arms,
+complete delayed payoff epochs, no mutation in the first standing-variation
+study, a capability-loss extension, and focal-claim checkpoint branches with
+fixed pre-branch cohorts. Development starts with four seeds (maximum eight);
+32 fresh evaluation seeds are proposed. Preserve the distinction between
+population effects and conditional member/outsider continuation effects.
+Do not launch an independent panel merely because seed ranges are listed there.
+
 Read `PROGRESS.md` for the current experimental state,
 `docs/world-model-calibration-v1.md` for the independent calibration audit and
 implementation decision, and `docs/world-model-v1.md` for the implemented

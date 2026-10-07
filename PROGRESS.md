@@ -1,5 +1,37 @@
 # Active work record
 
+## Revised paper experimental design proposed, 7 October 2026
+
+The [new design plan](docs/commons-v3-exclusion-experimental-plan-v1.md) translates
+the evening review into a bounded ALIFE study. Four environmental cells
+(storage 8/80 × two renewal levels) share four arms: adaptive exclusion,
+adaptive open access, neutral copying and fixed parameters. The plan narrows
+the initial adaptive stage to spread of standing variation without mutation,
+uses paid local reports of complete scored epochs, and proposes actual
+capability loss/recovery under supply shocks to give storage a physical role.
+
+The central identification change is a fixed-time focal-claim branch. Members
+and all outsiders, including rival-group members, are defined before the
+intervention and retained through later entry/exit. The branch estimates the
+conditional continuation value/cost of established exclusion; it does not
+estimate the benefit of joining. Whole-population effects use paired full runs.
+Missing claims remain outcomes, and outsider non-inferiority is not inferred
+from a nonsignificant loss. The proposed primary family has 20 comparisons.
+
+Initial development proposes four seeds, 64 full runs and up to 16 short
+branches; at most eight development seeds across two recorded passes. The
+independent proposal uses 32 fresh seeds, 512 full runs plus at most 128 short
+branches: **557,056 physical ticks / 13,369,344 individual decisions** before
+replay. One complete source/design/analysis freeze must precede evaluation.
+No episode was executed, no scientific code changed, and no archive, receipt
+or audit layer was added for this planning increment. Completed banks stay closed.
+
+The official ALIFE 2027 pages confirm the July event; the pages checked do not
+yet establish submission dates or a 2027 page limit. Eight pages remains the
+user's working target. The plan links the official pages and selected primary
+literature, defines three intended figures and records the next implementation
+tickets. Numerical adaptation remains the next code change.
+
 ## Evening steering adopted; costly physical exclusion implemented, 7 October 2026
 
 The [new active extension and sequence](docs/commons-v3-exclusion-conventions-v1.md)
