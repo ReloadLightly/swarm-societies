@@ -1,5 +1,17 @@
 # Active work record
 
+## Ecological archive publicly verified, 7 October 2026
+
+The new `artifacts/commons-v3-ecology-qualification-v1/catalog.json` restores
+all **144 raw files / 58,201,356 bytes** from public release
+`commons-v3-qualification-2026-10-07`, targeted at ecological completion
+`ead7cfc`. All three hosted assets match local hashes. Unauthenticated
+empty-cache download and a second offline restoration both reproduce every
+payload byte. Publication receipts are separate in
+`evidence/commons-v3-qualification-validation-v1/publication/ecology/`.
+Later incentive assets will retain separate identities and preserve these files.
+The incentive bank, exact ecological replay and independent audit continue.
+
 ## Ecological qualification bank complete, 7 October 2026
 
 All **144 configurations / 288 episodes** are sealed under the prospective
