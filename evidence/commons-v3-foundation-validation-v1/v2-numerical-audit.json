@@ -1,0 +1,1574 @@
+{
+  "source_bank": "evidence/commons-v3-foundation-v2",
+  "previous_bank": "evidence/commons-v3-foundation-v1",
+  "manifest_sha256": "efc863872d0872ca3089628980c20cfacf1efe2eb2cca05c260d8a3906800947",
+  "unchanged_physics_sha256": "3086b3f10c6e8b2cfbfc107caeb72c6598d464f7e0537971bd1d9264833fa9ac",
+  "identical_cases_to_v1": true,
+  "identical_weather_to_v1": true,
+  "configurations": 56,
+  "episodes": 224,
+  "trajectory_rows_checked": 61440,
+  "actor_ticks_represented": 1474560,
+  "saved_fuel_invariant_violations": 0,
+  "all_manifest_hashes_match": true,
+  "all_live_and_archived_source_hashes_match": true,
+  "max_aggregate_error": 5.773159728050814e-15,
+  "max_independent_trajectory_accounting_residual": 8.526512829121202e-13,
+  "cells": [
+    {
+      "panel": "grid",
+      "rate": 0.12,
+      "need": 0.8,
+      "conditions": {
+        "restraint": {
+          "consumption_per_agent_tick": 0.6931330234438497,
+          "late_consumption_per_agent_tick": 0.6653614376605181,
+          "terminal_inventory_per_agent": 26.453333338666667,
+          "terminal_stock_fraction": 0.6707653125967201,
+          "depleted_patch_time_fraction": 0.0,
+          "movement_steps_per_agent": 0.3333333333333333
+        },
+        "greedy": {
+          "consumption_per_agent_tick": 0.14877537190186385,
+          "late_consumption_per_agent_tick": 0.0333333333333333,
+          "terminal_inventory_per_agent": 3.270022905214172,
+          "terminal_stock_fraction": 0.47417791042798735,
+          "depleted_patch_time_fraction": 0.66766357421875,
+          "movement_steps_per_agent": 110.05208333333334
+        },
+        "focal_greedy": {
+          "consumption_per_agent_tick": 0.6278706876828464,
+          "late_consumption_per_agent_tick": 0.593140354437023,
+          "terminal_inventory_per_agent": 22.099564627580335,
+          "terminal_stock_fraction": 0.6741196339154064,
+          "depleted_patch_time_fraction": 0.03985595703125,
+          "movement_steps_per_agent": 32.53125
+        },
+        "half_greedy": {
+          "consumption_per_agent_tick": 0.2638653095667064,
+          "late_consumption_per_agent_tick": 0.2426808801703024,
+          "terminal_inventory_per_agent": 7.573116570092022,
+          "terminal_stock_fraction": 0.4653066235773704,
+          "depleted_patch_time_fraction": 0.635498046875,
+          "movement_steps_per_agent": 80.0625
+        }
+      },
+      "paired_differences": {
+        "focal_consumption": {
+          "mean": 0.12163187918296128,
+          "range": [
+            0.0,
+            0.16946201259566762
+          ],
+          "positive": 3,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_late_consumption": {
+          "mean": 0.15032603558884158,
+          "range": [
+            0.0,
+            0.20525543344320496
+          ],
+          "positive": 3,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_utility_w005": {
+          "mean": 0.1332217229317894,
+          "range": [
+            0.0,
+            0.18491513759410513
+          ],
+          "positive": 3,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_utility_w02": {
+          "mean": 0.16799125417827376,
+          "range": [
+            0.0,
+            0.2312745125894176
+          ],
+          "positive": 3,
+          "negative": 0,
+          "n": 4
+        },
+        "peer_consumption": {
+          "mean": -0.07338817119334974,
+          "range": [
+            -0.09532258702842972,
+            -0.05102824429967574
+          ],
+          "positive": 0,
+          "negative": 4,
+          "n": 4
+        },
+        "all_greedy_minus_restraint": {
+          "mean": -0.5443576515419859,
+          "range": [
+            -0.5613263776906906,
+            -0.5305666224586435
+          ],
+          "positive": 0,
+          "negative": 4,
+          "n": 4
+        },
+        "all_greedy_v2_minus_v1": {
+          "mean": 0.0023945996824198054,
+          "range": [
+            -0.006058515022223376,
+            0.01137555744871055
+          ],
+          "positive": 2,
+          "negative": 2,
+          "n": 4
+        }
+      }
+    },
+    {
+      "panel": "grid",
+      "rate": 0.12,
+      "need": 1.2,
+      "conditions": {
+        "restraint": {
+          "consumption_per_agent_tick": 0.8169691341877913,
+          "late_consumption_per_agent_tick": 0.7919213143789903,
+          "terminal_inventory_per_agent": 6.117521797690875,
+          "terminal_stock_fraction": 0.538053750086184,
+          "depleted_patch_time_fraction": 0.0,
+          "movement_steps_per_agent": 85.6875
+        },
+        "greedy": {
+          "consumption_per_agent_tick": 0.1490422644760179,
+          "late_consumption_per_agent_tick": 0.03235273245055084,
+          "terminal_inventory_per_agent": 1.719613725844868,
+          "terminal_stock_fraction": 0.5506029565912195,
+          "depleted_patch_time_fraction": 0.56500244140625,
+          "movement_steps_per_agent": 88.3125
+        },
+        "focal_greedy": {
+          "consumption_per_agent_tick": 0.6760027661542747,
+          "late_consumption_per_agent_tick": 0.6427468929448179,
+          "terminal_inventory_per_agent": 5.9834014608276,
+          "terminal_stock_fraction": 0.5860642304282064,
+          "depleted_patch_time_fraction": 0.07269287109375,
+          "movement_steps_per_agent": 91.5625
+        },
+        "half_greedy": {
+          "consumption_per_agent_tick": 0.32245340812394757,
+          "late_consumption_per_agent_tick": 0.3171966189393209,
+          "terminal_inventory_per_agent": 4.1849394195149365,
+          "terminal_stock_fraction": 0.4249138958901466,
+          "depleted_patch_time_fraction": 0.5452880859375,
+          "movement_steps_per_agent": 80.08333333333333
+        }
+      },
+      "paired_differences": {
+        "focal_consumption": {
+          "mean": 0.4324805068613012,
+          "range": [
+            0.0,
+            0.5873278895760302
+          ],
+          "positive": 3,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_late_consumption": {
+          "mean": 0.46034524066743404,
+          "range": [
+            0.0,
+            0.6292335332406707
+          ],
+          "positive": 3,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_utility_w005": {
+          "mean": 0.44684119964352265,
+          "range": [
+            0.01143886488357342,
+            0.6025778895744677
+          ],
+          "positive": 4,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_utility_w02": {
+          "mean": 0.4899232779901871,
+          "range": [
+            0.04575545953429368,
+            0.6483278895697802
+          ],
+          "positive": 4,
+          "negative": 0,
+          "n": 4
+        },
+        "peer_consumption": {
+          "mean": -0.16589884085503043,
+          "range": [
+            -0.21363474481989475,
+            -0.12353847642668628
+          ],
+          "positive": 0,
+          "negative": 4,
+          "n": 4
+        },
+        "all_greedy_minus_restraint": {
+          "mean": -0.6679268697117734,
+          "range": [
+            -0.679594469132752,
+            -0.640729654447555
+          ],
+          "positive": 0,
+          "negative": 4,
+          "n": 4
+        },
+        "all_greedy_v2_minus_v1": {
+          "mean": 0.013979752677371636,
+          "range": [
+            -0.001228294269760316,
+            0.04250888144895448
+          ],
+          "positive": 3,
+          "negative": 1,
+          "n": 4
+        }
+      }
+    },
+    {
+      "panel": "grid",
+      "rate": 0.12,
+      "need": 1.6,
+      "conditions": {
+        "restraint": {
+          "consumption_per_agent_tick": 0.8380839621120263,
+          "late_consumption_per_agent_tick": 0.7969728598652116,
+          "terminal_inventory_per_agent": 0.19053787467462086,
+          "terminal_stock_fraction": 0.5309903891639445,
+          "depleted_patch_time_fraction": 0.0,
+          "movement_steps_per_agent": 112.33333333333333
+        },
+        "greedy": {
+          "consumption_per_agent_tick": 0.16841688832811963,
+          "late_consumption_per_agent_tick": 0.0501214233103729,
+          "terminal_inventory_per_agent": 1.5365701028279715,
+          "terminal_stock_fraction": 0.5381748956723016,
+          "depleted_patch_time_fraction": 0.56781005859375,
+          "movement_steps_per_agent": 83.1875
+        },
+        "focal_greedy": {
+          "consumption_per_agent_tick": 0.7047930189893907,
+          "late_consumption_per_agent_tick": 0.6487875918683619,
+          "terminal_inventory_per_agent": 2.6541920124150113,
+          "terminal_stock_fraction": 0.47868856455144065,
+          "depleted_patch_time_fraction": 0.1217041015625,
+          "movement_steps_per_agent": 100.47916666666666
+        },
+        "half_greedy": {
+          "consumption_per_agent_tick": 0.3317740984513061,
+          "late_consumption_per_agent_tick": 0.2983674717747054,
+          "terminal_inventory_per_agent": 1.0981672878289033,
+          "terminal_stock_fraction": 0.4846145812962752,
+          "depleted_patch_time_fraction": 0.5111083984375,
+          "movement_steps_per_agent": 76.65625
+        }
+      },
+      "paired_differences": {
+        "focal_consumption": {
+          "mean": 0.8140016113333435,
+          "range": [
+            0.3212772977027256,
+            0.9868225330178807
+          ],
+          "positive": 4,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_late_consumption": {
+          "mean": 0.8532464201468772,
+          "range": [
+            0.4050077959385858,
+            1.006632751926579
+          ],
+          "positive": 4,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_utility_w005": {
+          "mean": 0.8260131620546558,
+          "range": [
+            0.33363513562460145,
+            0.9979867039534058
+          ],
+          "positive": 4,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_utility_w02": {
+          "mean": 0.8620478142185931,
+          "range": [
+            0.37070864939022885,
+            1.0374241834630396
+          ],
+          "positive": 4,
+          "negative": 0,
+          "n": 4
+        },
+        "peer_consumption": {
+          "mean": -0.17447757592506938,
+          "range": [
+            -0.2084191359795963,
+            -0.15562749637262246
+          ],
+          "positive": 0,
+          "negative": 4,
+          "n": 4
+        },
+        "all_greedy_minus_restraint": {
+          "mean": -0.6696670737839067,
+          "range": [
+            -0.7042430298399891,
+            -0.6558668888417027
+          ],
+          "positive": 0,
+          "negative": 4,
+          "n": 4
+        },
+        "all_greedy_v2_minus_v1": {
+          "mean": 0.025470349629639948,
+          "range": [
+            -0.00026226266031886825,
+            0.05142137729105392
+          ],
+          "positive": 3,
+          "negative": 1,
+          "n": 4
+        }
+      }
+    },
+    {
+      "panel": "grid",
+      "rate": 0.24,
+      "need": 0.8,
+      "conditions": {
+        "restraint": {
+          "consumption_per_agent_tick": 0.8000000000000029,
+          "late_consumption_per_agent_tick": 0.7999999999999992,
+          "terminal_inventory_per_agent": 79.2,
+          "terminal_stock_fraction": 0.8786065905389931,
+          "depleted_patch_time_fraction": 0.0,
+          "movement_steps_per_agent": 0.3333333333333333
+        },
+        "greedy": {
+          "consumption_per_agent_tick": 0.2114256567062906,
+          "late_consumption_per_agent_tick": 0.08444266783805406,
+          "terminal_inventory_per_agent": 8.922130336927545,
+          "terminal_stock_fraction": 0.5768649594428429,
+          "depleted_patch_time_fraction": 0.6138916015625,
+          "movement_steps_per_agent": 108.65625
+        },
+        "focal_greedy": {
+          "consumption_per_agent_tick": 0.7966016726842998,
+          "late_consumption_per_agent_tick": 0.7934084455777569,
+          "terminal_inventory_per_agent": 65.23423849043617,
+          "terminal_stock_fraction": 0.856200391922974,
+          "depleted_patch_time_fraction": 0.0118408203125,
+          "movement_steps_per_agent": 2.0
+        },
+        "half_greedy": {
+          "consumption_per_agent_tick": 0.40618602357932687,
+          "late_consumption_per_agent_tick": 0.3516077987994974,
+          "terminal_inventory_per_agent": 23.989389574157357,
+          "terminal_stock_fraction": 0.3815967091254511,
+          "depleted_patch_time_fraction": 0.6649169921875,
+          "movement_steps_per_agent": 100.96875
+        }
+      },
+      "paired_differences": {
+        "focal_consumption": {
+          "mean": 0.0,
+          "range": [
+            0.0,
+            0.0
+          ],
+          "positive": 0,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_late_consumption": {
+          "mean": 0.0,
+          "range": [
+            0.0,
+            0.0
+          ],
+          "positive": 0,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_utility_w005": {
+          "mean": 0.0,
+          "range": [
+            0.0,
+            0.0
+          ],
+          "positive": 0,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_utility_w02": {
+          "mean": 0.0,
+          "range": [
+            0.0,
+            0.0
+          ],
+          "positive": 0,
+          "negative": 0,
+          "n": 4
+        },
+        "peer_consumption": {
+          "mean": -0.003546080677255407,
+          "range": [
+            -0.012679491701173207,
+            0.0
+          ],
+          "positive": 0,
+          "negative": 2,
+          "n": 4
+        },
+        "all_greedy_minus_restraint": {
+          "mean": -0.5885743432937123,
+          "range": [
+            -0.6231800867905017,
+            -0.5583023049561574
+          ],
+          "positive": 0,
+          "negative": 4,
+          "n": 4
+        },
+        "all_greedy_v2_minus_v1": {
+          "mean": -0.027510602826936417,
+          "range": [
+            -0.04089035321370066,
+            -0.009207021047133473
+          ],
+          "positive": 0,
+          "negative": 4,
+          "n": 4
+        }
+      }
+    },
+    {
+      "panel": "grid",
+      "rate": 0.24,
+      "need": 1.2,
+      "conditions": {
+        "restraint": {
+          "consumption_per_agent_tick": 1.1999999999999942,
+          "late_consumption_per_agent_tick": 1.2000000000000015,
+          "terminal_inventory_per_agent": 30.370764630731685,
+          "terminal_stock_fraction": 0.7225664239424947,
+          "depleted_patch_time_fraction": 0.0,
+          "movement_steps_per_agent": 0.3333333333333333
+        },
+        "greedy": {
+          "consumption_per_agent_tick": 0.2297686764461987,
+          "late_consumption_per_agent_tick": 0.10000000000000013,
+          "terminal_inventory_per_agent": 6.586906617145015,
+          "terminal_stock_fraction": 0.6670408765579706,
+          "depleted_patch_time_fraction": 0.51910400390625,
+          "movement_steps_per_agent": 87.5625
+        },
+        "focal_greedy": {
+          "consumption_per_agent_tick": 1.1034296242290362,
+          "late_consumption_per_agent_tick": 1.075889526652518,
+          "terminal_inventory_per_agent": 24.957725876108743,
+          "terminal_stock_fraction": 0.7489907673129669,
+          "depleted_patch_time_fraction": 0.01873779296875,
+          "movement_steps_per_agent": 7.645833333333333
+        },
+        "half_greedy": {
+          "consumption_per_agent_tick": 0.5378277406078809,
+          "late_consumption_per_agent_tick": 0.5399994300183174,
+          "terminal_inventory_per_agent": 18.669383999471286,
+          "terminal_stock_fraction": 0.37538636949362925,
+          "depleted_patch_time_fraction": 0.57659912109375,
+          "movement_steps_per_agent": 86.13541666666667
+        }
+      },
+      "paired_differences": {
+        "focal_consumption": {
+          "mean": 0.0,
+          "range": [
+            0.0,
+            0.0
+          ],
+          "positive": 0,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_late_consumption": {
+          "mean": 0.0,
+          "range": [
+            0.0,
+            0.0
+          ],
+          "positive": 0,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_utility_w005": {
+          "mean": 0.010685375179960667,
+          "range": [
+            0.0,
+            0.014717047449429694
+          ],
+          "positive": 3,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_utility_w02": {
+          "mean": 0.042741500719842666,
+          "range": [
+            0.0,
+            0.058868189797718774
+          ],
+          "positive": 3,
+          "negative": 0,
+          "n": 4
+        },
+        "peer_consumption": {
+          "mean": -0.10076908776099966,
+          "range": [
+            -0.14282604967067836,
+            -0.05103445538385594
+          ],
+          "positive": 0,
+          "negative": 4,
+          "n": 4
+        },
+        "all_greedy_minus_restraint": {
+          "mean": -0.9702313235537955,
+          "range": [
+            -0.9878101031616815,
+            -0.9514875432760532
+          ],
+          "positive": 0,
+          "negative": 4,
+          "n": 4
+        },
+        "all_greedy_v2_minus_v1": {
+          "mean": -0.011272085083033193,
+          "range": [
+            -0.05284144633646279,
+            0.010687383305991116
+          ],
+          "positive": 2,
+          "negative": 2,
+          "n": 4
+        }
+      }
+    },
+    {
+      "panel": "grid",
+      "rate": 0.24,
+      "need": 1.6,
+      "conditions": {
+        "restraint": {
+          "consumption_per_agent_tick": 1.3491566326512974,
+          "late_consumption_per_agent_tick": 1.324186895468678,
+          "terminal_inventory_per_agent": 26.186666672,
+          "terminal_stock_fraction": 0.6944367943349561,
+          "depleted_patch_time_fraction": 0.0,
+          "movement_steps_per_agent": 0.3333333333333333
+        },
+        "greedy": {
+          "consumption_per_agent_tick": 0.18026589341276864,
+          "late_consumption_per_agent_tick": 0.01666666666666665,
+          "terminal_inventory_per_agent": 0.8424036674771936,
+          "terminal_stock_fraction": 0.5288018444017463,
+          "depleted_patch_time_fraction": 0.56292724609375,
+          "movement_steps_per_agent": 96.92708333333334
+        },
+        "focal_greedy": {
+          "consumption_per_agent_tick": 1.2497762235704308,
+          "late_consumption_per_agent_tick": 1.2230128846089339,
+          "terminal_inventory_per_agent": 23.33281773999759,
+          "terminal_stock_fraction": 0.7168753458077407,
+          "depleted_patch_time_fraction": 0.02471923828125,
+          "movement_steps_per_agent": 23.78125
+        },
+        "half_greedy": {
+          "consumption_per_agent_tick": 0.5843474592503541,
+          "late_consumption_per_agent_tick": 0.5451352491867981,
+          "terminal_inventory_per_agent": 10.28419665000927,
+          "terminal_stock_fraction": 0.4344372124861524,
+          "depleted_patch_time_fraction": 0.5103759765625,
+          "movement_steps_per_agent": 77.67708333333334
+        }
+      },
+      "paired_differences": {
+        "focal_consumption": {
+          "mean": 0.28308250362265475,
+          "range": [
+            0.0,
+            0.3868409490198481
+          ],
+          "positive": 3,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_late_consumption": {
+          "mean": 0.30802377551229265,
+          "range": [
+            0.0,
+            0.42026077781357074
+          ],
+          "positive": 3,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_utility_w005": {
+          "mean": 0.2945551598714829,
+          "range": [
+            0.0,
+            0.40213782401828563
+          ],
+          "positive": 3,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_utility_w02": {
+          "mean": 0.32897312861796724,
+          "range": [
+            0.0,
+            0.4480284490135981
+          ],
+          "positive": 3,
+          "negative": 0,
+          "n": 4
+        },
+        "peer_consumption": {
+          "mean": -0.11600923137232415,
+          "range": [
+            -0.14286955859892012,
+            -0.052160186440675625
+          ],
+          "positive": 0,
+          "negative": 4,
+          "n": 4
+        },
+        "all_greedy_minus_restraint": {
+          "mean": -1.1688907392385288,
+          "range": [
+            -1.1894568269845194,
+            -1.1210189048539625
+          ],
+          "positive": 0,
+          "negative": 4,
+          "n": 4
+        },
+        "all_greedy_v2_minus_v1": {
+          "mean": -0.007401556193421921,
+          "range": [
+            -0.04795517863016169,
+            0.06173857263372021
+          ],
+          "positive": 1,
+          "negative": 3,
+          "n": 4
+        }
+      }
+    },
+    {
+      "panel": "grid",
+      "rate": 0.36,
+      "need": 0.8,
+      "conditions": {
+        "restraint": {
+          "consumption_per_agent_tick": 0.8000000000000029,
+          "late_consumption_per_agent_tick": 0.7999999999999992,
+          "terminal_inventory_per_agent": 79.2,
+          "terminal_stock_fraction": 0.9374710667794595,
+          "depleted_patch_time_fraction": 0.0,
+          "movement_steps_per_agent": 0.3333333333333333
+        },
+        "greedy": {
+          "consumption_per_agent_tick": 0.3506940044162471,
+          "late_consumption_per_agent_tick": 0.21666666666666645,
+          "terminal_inventory_per_agent": 21.1525847051617,
+          "terminal_stock_fraction": 0.716843922972437,
+          "depleted_patch_time_fraction": 0.5806884765625,
+          "movement_steps_per_agent": 112.07291666666666
+        },
+        "focal_greedy": {
+          "consumption_per_agent_tick": 0.8000000000000029,
+          "late_consumption_per_agent_tick": 0.7999999999999992,
+          "terminal_inventory_per_agent": 79.2,
+          "terminal_stock_fraction": 0.9361955695582397,
+          "depleted_patch_time_fraction": 0.00244140625,
+          "movement_steps_per_agent": 0.875
+        },
+        "half_greedy": {
+          "consumption_per_agent_tick": 0.7724917991225551,
+          "late_consumption_per_agent_tick": 0.7783976537386689,
+          "terminal_inventory_per_agent": 69.60592410836202,
+          "terminal_stock_fraction": 0.9131598833469634,
+          "depleted_patch_time_fraction": 0.110595703125,
+          "movement_steps_per_agent": 24.927083333333332
+        }
+      },
+      "paired_differences": {
+        "focal_consumption": {
+          "mean": 0.0,
+          "range": [
+            0.0,
+            0.0
+          ],
+          "positive": 0,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_late_consumption": {
+          "mean": 0.0,
+          "range": [
+            0.0,
+            0.0
+          ],
+          "positive": 0,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_utility_w005": {
+          "mean": 0.0,
+          "range": [
+            0.0,
+            0.0
+          ],
+          "positive": 0,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_utility_w02": {
+          "mean": 0.0,
+          "range": [
+            0.0,
+            0.0
+          ],
+          "positive": 0,
+          "negative": 0,
+          "n": 4
+        },
+        "peer_consumption": {
+          "mean": 0.0,
+          "range": [
+            0.0,
+            0.0
+          ],
+          "positive": 0,
+          "negative": 0,
+          "n": 4
+        },
+        "all_greedy_minus_restraint": {
+          "mean": -0.44930599558375584,
+          "range": [
+            -0.47066450663594944,
+            -0.41109471350667337
+          ],
+          "positive": 0,
+          "negative": 4,
+          "n": 4
+        },
+        "all_greedy_v2_minus_v1": {
+          "mean": -0.001820840665809842,
+          "range": [
+            -0.0503001533712546,
+            0.07472618408935972
+          ],
+          "positive": 2,
+          "negative": 2,
+          "n": 4
+        }
+      }
+    },
+    {
+      "panel": "grid",
+      "rate": 0.36,
+      "need": 1.2,
+      "conditions": {
+        "restraint": {
+          "consumption_per_agent_tick": 1.1999999999999942,
+          "late_consumption_per_agent_tick": 1.2000000000000015,
+          "terminal_inventory_per_agent": 78.8,
+          "terminal_stock_fraction": 0.893115833173401,
+          "depleted_patch_time_fraction": 0.0,
+          "movement_steps_per_agent": 0.3333333333333333
+        },
+        "greedy": {
+          "consumption_per_agent_tick": 0.34937014570059843,
+          "late_consumption_per_agent_tick": 0.20000000000000026,
+          "terminal_inventory_per_agent": 13.150313565612112,
+          "terminal_stock_fraction": 0.6912923153308907,
+          "depleted_patch_time_fraction": 0.49365234375,
+          "movement_steps_per_agent": 90.90625
+        },
+        "focal_greedy": {
+          "consumption_per_agent_tick": 1.1999999999999942,
+          "late_consumption_per_agent_tick": 1.2000000000000015,
+          "terminal_inventory_per_agent": 74.27390108598337,
+          "terminal_stock_fraction": 0.883818913352938,
+          "depleted_patch_time_fraction": 0.00244140625,
+          "movement_steps_per_agent": 0.8645833333333334
+        },
+        "half_greedy": {
+          "consumption_per_agent_tick": 1.0376354012319084,
+          "late_consumption_per_agent_tick": 1.0827831396888137,
+          "terminal_inventory_per_agent": 57.266568246087,
+          "terminal_stock_fraction": 0.7364043506164311,
+          "depleted_patch_time_fraction": 0.262939453125,
+          "movement_steps_per_agent": 57.70833333333333
+        }
+      },
+      "paired_differences": {
+        "focal_consumption": {
+          "mean": 0.0,
+          "range": [
+            0.0,
+            0.0
+          ],
+          "positive": 0,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_late_consumption": {
+          "mean": 0.0,
+          "range": [
+            0.0,
+            0.0
+          ],
+          "positive": 0,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_utility_w005": {
+          "mean": 0.0,
+          "range": [
+            0.0,
+            0.0
+          ],
+          "positive": 0,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_utility_w02": {
+          "mean": 0.0,
+          "range": [
+            0.0,
+            0.0
+          ],
+          "positive": 0,
+          "negative": 0,
+          "n": 4
+        },
+        "peer_consumption": {
+          "mean": 0.0,
+          "range": [
+            0.0,
+            0.0
+          ],
+          "positive": 0,
+          "negative": 0,
+          "n": 4
+        },
+        "all_greedy_minus_restraint": {
+          "mean": -0.8506298542993957,
+          "range": [
+            -0.9190379443349981,
+            -0.739054582150023
+          ],
+          "positive": 0,
+          "negative": 4,
+          "n": 4
+        },
+        "all_greedy_v2_minus_v1": {
+          "mean": -0.0297851783881031,
+          "range": [
+            -0.09881606651955482,
+            0.05920957104218039
+          ],
+          "positive": 1,
+          "negative": 3,
+          "n": 4
+        }
+      }
+    },
+    {
+      "panel": "grid",
+      "rate": 0.36,
+      "need": 1.6,
+      "conditions": {
+        "restraint": {
+          "consumption_per_agent_tick": 1.6000000000000059,
+          "late_consumption_per_agent_tick": 1.5999999999999983,
+          "terminal_inventory_per_agent": 61.60894577299172,
+          "terminal_stock_fraction": 0.7522789919977237,
+          "depleted_patch_time_fraction": 0.0,
+          "movement_steps_per_agent": 0.3333333333333333
+        },
+        "greedy": {
+          "consumption_per_agent_tick": 0.38992484802868643,
+          "late_consumption_per_agent_tick": 0.2666666666666664,
+          "terminal_inventory_per_agent": 13.084423687160712,
+          "terminal_stock_fraction": 0.6958218500873709,
+          "depleted_patch_time_fraction": 0.4725341796875,
+          "movement_steps_per_agent": 81.58333333333334
+        },
+        "focal_greedy": {
+          "consumption_per_agent_tick": 1.557075232165229,
+          "late_consumption_per_agent_tick": 1.5437498531792921,
+          "terminal_inventory_per_agent": 57.222533033871755,
+          "terminal_stock_fraction": 0.7618641985363516,
+          "depleted_patch_time_fraction": 0.0042724609375,
+          "movement_steps_per_agent": 1.375
+        },
+        "half_greedy": {
+          "consumption_per_agent_tick": 1.0254658386652549,
+          "late_consumption_per_agent_tick": 0.9636389911631724,
+          "terminal_inventory_per_agent": 27.711018271899317,
+          "terminal_stock_fraction": 0.49325684700188444,
+          "depleted_patch_time_fraction": 0.4134521484375,
+          "movement_steps_per_agent": 88.02083333333334
+        }
+      },
+      "paired_differences": {
+        "focal_consumption": {
+          "mean": 0.0,
+          "range": [
+            0.0,
+            0.0
+          ],
+          "positive": 0,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_late_consumption": {
+          "mean": 0.0,
+          "range": [
+            0.0,
+            0.0
+          ],
+          "positive": 0,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_utility_w005": {
+          "mean": 0.0037066446873949355,
+          "range": [
+            0.0,
+            0.005517099520767052
+          ],
+          "positive": 3,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_utility_w02": {
+          "mean": 0.014826578749579742,
+          "range": [
+            0.0,
+            0.022068398083068208
+          ],
+          "positive": 3,
+          "negative": 0,
+          "n": 4
+        },
+        "peer_consumption": {
+          "mean": -0.044791062088462896,
+          "range": [
+            -0.13581216609981647,
+            0.0
+          ],
+          "positive": 0,
+          "negative": 3,
+          "n": 4
+        },
+        "all_greedy_minus_restraint": {
+          "mean": -1.2100751519713193,
+          "range": [
+            -1.2954218477807995,
+            -1.1206862579426065
+          ],
+          "positive": 0,
+          "negative": 4,
+          "n": 4
+        },
+        "all_greedy_v2_minus_v1": {
+          "mean": 0.001679971119109197,
+          "range": [
+            -0.07528688775702808,
+            0.048460657300732235
+          ],
+          "positive": 2,
+          "negative": 2,
+          "n": 4
+        }
+      }
+    },
+    {
+      "panel": "long_horizon",
+      "rate": 0.24,
+      "need": 1.2,
+      "conditions": {
+        "restraint": {
+          "consumption_per_agent_tick": 1.199747080607024,
+          "late_consumption_per_agent_tick": 1.1989883224280933,
+          "terminal_inventory_per_agent": 28.127333497407292,
+          "terminal_stock_fraction": 0.7228117846126272,
+          "depleted_patch_time_fraction": 0.0,
+          "movement_steps_per_agent": 0.3333333333333333
+        },
+        "greedy": {
+          "consumption_per_agent_tick": 0.16488433822309922,
+          "late_consumption_per_agent_tick": 0.09999999999999998,
+          "terminal_inventory_per_agent": 6.588663441716895,
+          "terminal_stock_fraction": 0.6730377183567094,
+          "depleted_patch_time_fraction": 0.415802001953125,
+          "movement_steps_per_agent": 141.4375
+        },
+        "focal_greedy": {
+          "consumption_per_agent_tick": 1.0807654000278284,
+          "late_consumption_per_agent_tick": 1.057175956357888,
+          "terminal_inventory_per_agent": 23.49342767432234,
+          "terminal_stock_fraction": 0.7504775711895103,
+          "depleted_patch_time_fraction": 0.009368896484375,
+          "movement_steps_per_agent": 13.729166666666668
+        },
+        "half_greedy": {
+          "consumption_per_agent_tick": 0.56384516858357,
+          "late_consumption_per_agent_tick": 0.6123315289712372,
+          "terminal_inventory_per_agent": 27.166803110054744,
+          "terminal_stock_fraction": 0.6981712643889963,
+          "depleted_patch_time_fraction": 0.41082763671875,
+          "movement_steps_per_agent": 130.47916666666666
+        }
+      },
+      "paired_differences": {
+        "focal_consumption": {
+          "mean": 0.0,
+          "range": [
+            0.0,
+            0.0
+          ],
+          "positive": 0,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_late_consumption": {
+          "mean": 0.0,
+          "range": [
+            0.0,
+            0.0
+          ],
+          "positive": 0,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_utility_w005": {
+          "mean": 0.005596402207107207,
+          "range": [
+            0.0,
+            0.007642521439396734
+          ],
+          "positive": 3,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_utility_w02": {
+          "mean": 0.022385608828428827,
+          "range": [
+            0.0,
+            0.030570085757586934
+          ],
+          "positive": 3,
+          "negative": 0,
+          "n": 4
+        },
+        "peer_consumption": {
+          "mean": -0.12415479712611724,
+          "range": [
+            -0.18024352854930611,
+            -0.05224075713509766
+          ],
+          "positive": 0,
+          "negative": 4,
+          "n": 4
+        },
+        "all_greedy_minus_restraint": {
+          "mean": -1.0348627423839247,
+          "range": [
+            -1.0688640046262643,
+            -1.0090846417322152
+          ],
+          "positive": 0,
+          "negative": 4,
+          "n": 4
+        },
+        "all_greedy_v2_minus_v1": {
+          "mean": -0.005636042541516957,
+          "range": [
+            -0.05142072316823182,
+            0.020889388759538774
+          ],
+          "positive": 3,
+          "negative": 1,
+          "n": 4
+        }
+      }
+    },
+    {
+      "panel": "keyed_priority",
+      "rate": 0.24,
+      "need": 1.2,
+      "conditions": {
+        "restraint": {
+          "consumption_per_agent_tick": 1.1999999999999942,
+          "late_consumption_per_agent_tick": 1.2000000000000015,
+          "terminal_inventory_per_agent": 30.370764630731685,
+          "terminal_stock_fraction": 0.7225664239424947,
+          "depleted_patch_time_fraction": 0.0,
+          "movement_steps_per_agent": 0.3333333333333333
+        },
+        "greedy": {
+          "consumption_per_agent_tick": 0.25111547364504877,
+          "late_consumption_per_agent_tick": 0.1580624844735618,
+          "terminal_inventory_per_agent": 10.8338590486006,
+          "terminal_stock_fraction": 0.4898936884824948,
+          "depleted_patch_time_fraction": 0.573974609375,
+          "movement_steps_per_agent": 95.26041666666667
+        },
+        "focal_greedy": {
+          "consumption_per_agent_tick": 1.1034296242290362,
+          "late_consumption_per_agent_tick": 1.075889526652518,
+          "terminal_inventory_per_agent": 24.957725876108743,
+          "terminal_stock_fraction": 0.7489907673129669,
+          "depleted_patch_time_fraction": 0.01873779296875,
+          "movement_steps_per_agent": 7.645833333333333
+        },
+        "half_greedy": {
+          "consumption_per_agent_tick": 0.5486919970495161,
+          "late_consumption_per_agent_tick": 0.5776920258262739,
+          "terminal_inventory_per_agent": 17.839347976149277,
+          "terminal_stock_fraction": 0.45376129228802736,
+          "depleted_patch_time_fraction": 0.54132080078125,
+          "movement_steps_per_agent": 79.95833333333334
+        }
+      },
+      "paired_differences": {
+        "focal_consumption": {
+          "mean": 0.0,
+          "range": [
+            0.0,
+            0.0
+          ],
+          "positive": 0,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_late_consumption": {
+          "mean": 0.0,
+          "range": [
+            0.0,
+            0.0
+          ],
+          "positive": 0,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_utility_w005": {
+          "mean": 0.010685375179960667,
+          "range": [
+            0.0,
+            0.014717047449429694
+          ],
+          "positive": 3,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_utility_w02": {
+          "mean": 0.042741500719842666,
+          "range": [
+            0.0,
+            0.058868189797718774
+          ],
+          "positive": 3,
+          "negative": 0,
+          "n": 4
+        },
+        "peer_consumption": {
+          "mean": -0.10076908776099966,
+          "range": [
+            -0.14282604967067836,
+            -0.05103445538385594
+          ],
+          "positive": 0,
+          "negative": 4,
+          "n": 4
+        },
+        "all_greedy_minus_restraint": {
+          "mean": -0.9488845263549454,
+          "range": [
+            -1.0000419336554685,
+            -0.8871877876401889
+          ],
+          "positive": 0,
+          "negative": 4,
+          "n": 4
+        },
+        "all_greedy_v2_minus_v1": {
+          "mean": 0.020609172867734046,
+          "range": [
+            -0.09662976754369818,
+            0.10883856170415371
+          ],
+          "positive": 3,
+          "negative": 1,
+          "n": 4
+        }
+      }
+    },
+    {
+      "panel": "lower_stock",
+      "rate": 0.24,
+      "need": 1.2,
+      "conditions": {
+        "restraint": {
+          "consumption_per_agent_tick": 1.1950130757363644,
+          "late_consumption_per_agent_tick": 1.1920399328121185,
+          "terminal_inventory_per_agent": 26.443015159893196,
+          "terminal_stock_fraction": 0.7225664239424946,
+          "depleted_patch_time_fraction": 0.0,
+          "movement_steps_per_agent": 0.3333333333333333
+        },
+        "greedy": {
+          "consumption_per_agent_tick": 0.1381112728128583,
+          "late_consumption_per_agent_tick": 0.050000000000000065,
+          "terminal_inventory_per_agent": 3.308698394722293,
+          "terminal_stock_fraction": 0.5865172113884894,
+          "depleted_patch_time_fraction": 0.5445556640625,
+          "movement_steps_per_agent": 90.80208333333334
+        },
+        "focal_greedy": {
+          "consumption_per_agent_tick": 1.0883830714372618,
+          "late_consumption_per_agent_tick": 1.083226937112256,
+          "terminal_inventory_per_agent": 29.736540146832212,
+          "terminal_stock_fraction": 0.7549432058572185,
+          "depleted_patch_time_fraction": 0.017578125,
+          "movement_steps_per_agent": 12.895833333333334
+        },
+        "half_greedy": {
+          "consumption_per_agent_tick": 0.5135287198002446,
+          "late_consumption_per_agent_tick": 0.5260884398149782,
+          "terminal_inventory_per_agent": 21.796211050919947,
+          "terminal_stock_fraction": 0.5145544404645712,
+          "depleted_patch_time_fraction": 0.48809814453125,
+          "movement_steps_per_agent": 75.85416666666667
+        }
+      },
+      "paired_differences": {
+        "focal_consumption": {
+          "mean": 0.006362775488847339,
+          "range": [
+            0.0,
+            0.014265318651966119
+          ],
+          "positive": 2,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_late_consumption": {
+          "mean": 0.007045329716115989,
+          "range": [
+            0.0,
+            0.020845005184092047
+          ],
+          "positive": 2,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_utility_w005": {
+          "mean": 0.017835984607272332,
+          "range": [
+            0.0,
+            0.029622624580234822
+          ],
+          "positive": 3,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_utility_w02": {
+          "mean": 0.05225561196254731,
+          "range": [
+            0.0,
+            0.07569454236504093
+          ],
+          "positive": 3,
+          "negative": 0,
+          "n": 4
+        },
+        "peer_consumption": {
+          "mean": -0.11154273385510058,
+          "range": [
+            -0.17899557334700064,
+            -0.06075723442690315
+          ],
+          "positive": 0,
+          "negative": 4,
+          "n": 4
+        },
+        "all_greedy_minus_restraint": {
+          "mean": -1.0569018029235062,
+          "range": [
+            -1.0883802081416074,
+            -1.0171244386683311
+          ],
+          "positive": 0,
+          "negative": 4,
+          "n": 4
+        },
+        "all_greedy_v2_minus_v1": {
+          "mean": 0.021489349301963764,
+          "range": [
+            -0.0020517952637254255,
+            0.04119717934265829
+          ],
+          "positive": 3,
+          "negative": 1,
+          "n": 4
+        }
+      }
+    },
+    {
+      "panel": "additive",
+      "rate": 0.24,
+      "need": 1.2,
+      "conditions": {
+        "restraint": {
+          "consumption_per_agent_tick": 1.1999999999999942,
+          "late_consumption_per_agent_tick": 1.2000000000000015,
+          "terminal_inventory_per_agent": 31.046362548403856,
+          "terminal_stock_fraction": 0.7808189131803132,
+          "depleted_patch_time_fraction": 0.0,
+          "movement_steps_per_agent": 0.3333333333333333
+        },
+        "greedy": {
+          "consumption_per_agent_tick": 1.1999999999999942,
+          "late_consumption_per_agent_tick": 1.2000000000000015,
+          "terminal_inventory_per_agent": 37.57969588173725,
+          "terminal_stock_fraction": 0.5308189131803132,
+          "depleted_patch_time_fraction": 0.51092529296875,
+          "movement_steps_per_agent": 0.3333333333333333
+        },
+        "focal_greedy": {
+          "consumption_per_agent_tick": 1.1999999999999942,
+          "late_consumption_per_agent_tick": 1.2000000000000015,
+          "terminal_inventory_per_agent": 31.555984225907856,
+          "terminal_stock_fraction": 0.7806890778861537,
+          "depleted_patch_time_fraction": 0.00701904296875,
+          "movement_steps_per_agent": 0.46875
+        },
+        "half_greedy": {
+          "consumption_per_agent_tick": 1.1111501417921845,
+          "late_consumption_per_agent_tick": 1.1084469787756208,
+          "terminal_inventory_per_agent": 39.99196402620944,
+          "terminal_stock_fraction": 0.7896252607601326,
+          "depleted_patch_time_fraction": 0.13275146484375,
+          "movement_steps_per_agent": 2.2291666666666665
+        }
+      },
+      "paired_differences": {
+        "focal_consumption": {
+          "mean": 0.0,
+          "range": [
+            0.0,
+            0.0
+          ],
+          "positive": 0,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_late_consumption": {
+          "mean": 0.0,
+          "range": [
+            0.0,
+            0.0
+          ],
+          "positive": 0,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_utility_w005": {
+          "mean": 0.010547207267867386,
+          "range": [
+            0.0,
+            0.014539321860867083
+          ],
+          "positive": 3,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_utility_w02": {
+          "mean": 0.04218882907146954,
+          "range": [
+            0.0,
+            0.05815728744346833
+          ],
+          "positive": 3,
+          "negative": 0,
+          "n": 4
+        },
+        "peer_consumption": {
+          "mean": 0.0,
+          "range": [
+            0.0,
+            0.0
+          ],
+          "positive": 0,
+          "negative": 0,
+          "n": 4
+        },
+        "all_greedy_minus_restraint": {
+          "mean": 0.0,
+          "range": [
+            0.0,
+            0.0
+          ],
+          "positive": 0,
+          "negative": 0,
+          "n": 4
+        },
+        "all_greedy_v2_minus_v1": {
+          "mean": 0.0,
+          "range": [
+            0.0,
+            0.0
+          ],
+          "positive": 0,
+          "negative": 0,
+          "n": 4
+        }
+      }
+    },
+    {
+      "panel": "small_inventory",
+      "rate": 0.24,
+      "need": 1.2,
+      "conditions": {
+        "restraint": {
+          "consumption_per_agent_tick": 1.1999999999999942,
+          "late_consumption_per_agent_tick": 1.2000000000000015,
+          "terminal_inventory_per_agent": 5.272385898788408,
+          "terminal_stock_fraction": 0.7225664239424952,
+          "depleted_patch_time_fraction": 0.0,
+          "movement_steps_per_agent": 0.3333333333333333
+        },
+        "greedy": {
+          "consumption_per_agent_tick": 1.0931968388186786,
+          "late_consumption_per_agent_tick": 0.7998905539575589,
+          "terminal_inventory_per_agent": 2.445814383513673,
+          "terminal_stock_fraction": 0.33490692667360794,
+          "depleted_patch_time_fraction": 0.1204833984375,
+          "movement_steps_per_agent": 21.6875
+        },
+        "focal_greedy": {
+          "consumption_per_agent_tick": 1.1999999999999942,
+          "late_consumption_per_agent_tick": 1.2000000000000015,
+          "terminal_inventory_per_agent": 5.271488860989808,
+          "terminal_stock_fraction": 0.7225931022814771,
+          "depleted_patch_time_fraction": 0.0,
+          "movement_steps_per_agent": 0.3333333333333333
+        },
+        "half_greedy": {
+          "consumption_per_agent_tick": 1.196663598850374,
+          "late_consumption_per_agent_tick": 1.186786543610181,
+          "terminal_inventory_per_agent": 5.249698645923706,
+          "terminal_stock_fraction": 0.6849694770162431,
+          "depleted_patch_time_fraction": 0.0078125,
+          "movement_steps_per_agent": 1.6666666666666667
+        }
+      },
+      "paired_differences": {
+        "focal_consumption": {
+          "mean": 0.0,
+          "range": [
+            0.0,
+            0.0
+          ],
+          "positive": 0,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_late_consumption": {
+          "mean": 0.0,
+          "range": [
+            0.0,
+            0.0
+          ],
+          "positive": 0,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_utility_w005": {
+          "mean": 0.0002518026629890461,
+          "range": [
+            0.0,
+            0.0005345906410018389
+          ],
+          "positive": 3,
+          "negative": 0,
+          "n": 4
+        },
+        "focal_utility_w02": {
+          "mean": 0.0010072106519561845,
+          "range": [
+            0.0,
+            0.0021383625640073556
+          ],
+          "positive": 3,
+          "negative": 0,
+          "n": 4
+        },
+        "peer_consumption": {
+          "mean": 0.0,
+          "range": [
+            0.0,
+            0.0
+          ],
+          "positive": 0,
+          "negative": 0,
+          "n": 4
+        },
+        "all_greedy_minus_restraint": {
+          "mean": -0.10680316118131555,
+          "range": [
+            -0.17622110727775375,
+            -0.03273733860474426
+          ],
+          "positive": 0,
+          "negative": 4,
+          "n": 4
+        },
+        "all_greedy_v2_minus_v1": {
+          "mean": -0.007673566828527489,
+          "range": [
+            -0.03304844515777572,
+            0.0026381810082687362
+          ],
+          "positive": 1,
+          "negative": 3,
+          "n": 4
+        }
+      }
+    }
+  ],
+  "scope": "Independent recomputation from saved v2 primitives, plus paired v1 comparison. Not a separate policy replay or fresh qualification panel. Ranges span four reused seed/focal configurations, not confidence intervals."
+}

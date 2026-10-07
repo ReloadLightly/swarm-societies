@@ -2,15 +2,16 @@
 
 **Living research report · 7 October 2026**
 
-The implemented world has three societies, fixed membership and central
-institutions, without spatial movement. The next version is being designed
-around mobile individuals and institutions that can form, change or disappear
-with no supranational government. Its ecology and baselines must qualify
-before further experimental model spending.
+The new physical commons implements mobile individuals, local sensing and
+stock-dependent renewal, with no institutions or supranational government.
+The earlier nonspatial studies remain frozen. Optional institutional formation
+and change are still planned; ecological qualification and strong baselines
+must precede further experimental model spending.
 
 [Study index](docs/study-index.md) ·
 [Detailed archived report](docs/living-research-report-2026-10-07.md) ·
 [Scientific review](docs/research-review-2026-10-07.md) ·
+[Physical commons](docs/commons-v3-foundation-v1.md) ·
 [Implementation plan](docs/commons-v3-plan.md) ·
 [Current checkpoint](PROGRESS.md)
 
@@ -27,12 +28,14 @@ reported focal averages over the saved coevolved population, while slightly
 reducing outsiders' welfare. Separate numerical controls demonstrate learning
 within a supplied equation, a small allocation benefit dominated by terminal
 wealth, and no clear benefit from active experiment selection in the value of
-posterior updates. The next scientific requirement is a spatial commons with
-measured individual temptation, collective losses and strong fixed baselines.
+posterior updates. The new spatial prototype supports consequential local
+depletion, but its development comparisons remain sensitive to navigation,
+storage and terminal inventory. A qualified social dilemma and strong fixed
+baselines remain scientific requirements.
 
 ## 1. Research question and present scope
 
-Members pursue private utility; institutions are selected for their own society's
+In the legacy studies, members pursue private utility; institutions are selected for their own society's
 welfare. No higher-level objective governs relations between societies. This
 separation permits local gains and external harm to coexist, but does not by
 itself create a consequential social dilemma or demonstrate collective
@@ -41,8 +44,8 @@ intelligence.
 The proposed world separates **physical location, political membership and
 claimed jurisdiction**. Membership will be optional; claims will require
 material means to enforce. Zero institutions and failed cooperation remain
-valid outcomes. Movement, institutional formation and these political transitions
-are planned capabilities, not features of the completed studies.
+valid outcomes. Movement is implemented in the separate physical prototype;
+institutional formation and political transitions remain future capabilities.
 
 ## 2. Related work
 
@@ -56,7 +59,7 @@ retains the full reference list.
 
 ## 3. Environment and methods
 
-Members harvest, transfer resources, guard, rest or raid. Institutions control
+Legacy members harvest, transfer resources, guard, rest or raid. Institutions control
 taxation, investment, redistribution, raid permission and reporting. A trusted
 simulator resolves actions and accounts for renewal, consumption, transfers,
 destruction and investment. Private utility is consumption plus 0.2 times
@@ -64,6 +67,13 @@ terminal wealth. Consumption-v2 welfare is
 `0.85 − 1.5 × unmet need/member/tick` at the default consumption need of 0.85;
 welfare and shortfall therefore measure the same primitive outcome.
 [Environment specification](docs/model.md).
+
+The [new physical engine](docs/commons-v3-foundation-protocol.md) has 24 mobile
+individuals and 16 sites on a 12×12 grid. It implements local extraction,
+consumption, transfers, costly messages and stock-dependent renewal with
+recovery. Actions commit simultaneously; ledgers record every material flow.
+Its development policies are audited local heuristics. There are no institutions,
+affiliations, mortality or evolutionary searches in these banks.
 
 The historical search accepts member replacements for private gains and
 institution replacements for society gains on fixed comparison cases. Its
@@ -82,7 +92,7 @@ are dependent observations. [Methods and protocols by study](docs/study-index.md
 
 ## 4. Experiments and results
 
-The strongest current finding is the missing-baseline problem. A reconstructed
+The legacy studies' strongest diagnostic is the missing-baseline problem. A reconstructed
 policy harvests the fullest visible patch with no tax, investment or raids.
 On the existing mechanism panel:
 
@@ -127,9 +137,25 @@ world-model studies used zero evolutionary searches. Separate development gates,
 negative controls, secondary endpoints and complete tables remain in the
 [study index](docs/study-index.md) and linked reports.
 
+The separate [spatial development study](docs/commons-v3-foundation-v1.md)
+contains two preserved banks of 56 configurations and 224 episodes each, using
+the same four seeds. The first exposed a floating-point return-fuel trap in the
+navigation policy. The repaired second version recorded zero unaffordable-return
+violations; it remains development data, not fresh qualification.
+
+At the reference cell, restrained agents consume **1.200000** per agent-tick
+versus **0.229769** for the greedy heuristic. A single greedy replacement gains
+**zero consumption**; its **0.010685** utility gain at terminal-wealth weight
+0.05 comes entirely from inventory, while peers lose **0.100769** consumption
+per agent-tick. Reducing carrying capacity from 80 to 8 shrinks that private gain
+to **0.000252** and removes peer consumption losses. Greedy terminal ecological
+stock remains **66.70%** of capacity: local depletion and access failures coexist
+with unused resources. These are descriptive means, not confidence claims.
+[Recorded figures, tables and provenance](figures/commons-v3-foundation-v2/README.md).
+
 ## 5. Limitations and next experiments
 
-The present ecology uses additive renewal, often operates near the consumption
+The legacy ecology uses additive renewal, often operates near the consumption
 ceiling and has no mobility or endogenous institution formation. Raiding and
 ecological appropriation impose different costs. Few accepted proposals and
 one lineage per search condition cannot establish reliable evolutionary gains.
@@ -142,9 +168,10 @@ decisions. Additional allocation consumption occurred in only one arena;
 experiment selection chose Early in 71/72 states and did not establish repayment
 of its opportunity cost. These are integration and identification controls.
 
-The [ordered plan](docs/commons-v3-plan.md) next qualifies local movement,
-stock-dependent renewal, sustainable scarcity, profitable unilateral deviation
-and collective losses. Optional institutions and costed enforcement then face
+The [ordered plan](docs/commons-v3-plan.md) next tests stronger local baselines,
+including harvesting to meet need with modest reserves under the same capacity
+80. Sustainable scarcity, robust private temptation and collective losses still
+need a separate qualification panel. Optional institutions and costed enforcement then face
 hand-designed and numerical baselines. Replicated adaptation, cross-play,
 invasion and unfamiliar scarcity follow a new protocol and explicitly authorized
 inference budget. No gate requires institutions or coevolution to win.
@@ -182,7 +209,7 @@ all 192 cases on Python 3.12/3.13 with the pinned numerical libraries. An older
 stack's out-of-scope drift remains a documented compatibility limit. Use a new
 receipt path each time. [Foundation repairs and validation](docs/foundation-repairs-v1.md).
 
-Execute new or untrusted policies through bounded workers:
+Execute new or untrusted policies in the supported legacy engines through bounded workers:
 
 ```bash
 .venv/bin/python -m swarm_societies.run_bounded_v1 episode \
@@ -193,7 +220,9 @@ Execute new or untrusted policies through bounded workers:
 
 Workers enforce memory, CPU, wall and output limits; this is resource containment,
 not an OS security sandbox. Frozen direct runners remain for audited trusted
-policies. The [study index](docs/study-index.md) links full verification,
+policies. V3 currently runs audited built-in heuristics only; generated-policy
+integration is still pending. Its [report](docs/commons-v3-foundation-v1.md#reproduction-and-engineering-scope)
+gives separate restoration and replay commands. The [study index](docs/study-index.md) links full verification,
 reproduction and interruption-recovery commands. Completed evidence, protocols
 and simulators are preserved. The [inference route](docs/subscription-route.md)
 and old budgets remain unchanged and exhausted. Local numerical checks and

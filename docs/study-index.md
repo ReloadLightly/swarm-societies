@@ -22,6 +22,36 @@ or select one study ID. `--offline` uses verified cached archives. Repository
 history remains intact; removing bulky files from the current tree does not
 shrink a full historical clone.
 
+## Spatial physical foundation
+
+The [physical foundation report](commons-v3-foundation-v1.md) documents the
+implemented mobile-agent engine and both development banks. There are no
+institutions or political memberships in these worlds. Development repeats four
+seeds across a scarcity grid, fixed sensitivities and four population conditions;
+each bank has **56 configurations and 224 episodes**, with zero evolutionary
+runs and zero experimental model calls.
+
+| Bank | Design and interpretation | Evidence and reproduction |
+| --- | --- | --- |
+| Original development v1 | [Frozen protocol](commons-v3-foundation-protocol.md). A floating-point return-fuel boundary trapped some scouting agents despite recovering resources. Its complete results remain visible as a failed navigation control. | [Evidence inventory](../evidence/commons-v3-foundation-v1/manifest.json), [recorded gallery](../figures/commons-v3-foundation-v1/README.md), [original runner](../scripts/run_commons_v3_development.py). |
+| Repaired development v2 | [Repair protocol](commons-v3-foundation-protocol-v2.md). Prospective fuel margins fix the identified invariant without changing physics or scientific thresholds. All 224 episodes record zero unaffordable-return violations. The same cases were reused after inspecting v1; this is development, not fresh qualification. | [Evidence inventory](../evidence/commons-v3-foundation-v2/manifest.json), [recorded gallery](../figures/commons-v3-foundation-v2/README.md), [repaired runner](../scripts/run_commons_v3_development_v2.py), [restoration and replay commands](commons-v3-foundation-v1.md#reproduction-and-engineering-scope). |
+
+At the v2 reference cell, mean restrained/greedy consumption is
+**1.200000/0.229769 per agent-tick**. Focal greedy replacement gains no
+consumption; its **0.010685** private gain at terminal-wealth weight 0.05 comes
+from inventory. Peer consumption falls **0.100769**. Capacity 8 shrinks the
+private gain to **0.000252** and eliminates peer consumption losses. Greedy
+terminal ecological stock remains **66.70%** of capacity, so low consumption
+cannot be equated with collapse of the entire commons. The report retains every
+grid cell, null contrast and sensitivity. Four-seed ranges are descriptive,
+not confidence intervals.
+
+Ecological qualification and the strong-baseline gate remain open. The next
+local control is need-targeted harvest with modest reserves under the same
+capacity 80; institutions and enforcement follow later. V3 presently runs
+audited built-in policies only. Generated-policy execution has not yet been
+integrated with its new action and observation interface.
+
 ## Evolution, interventions and the missing baseline
 
 | Study | Design and replication | Result and interpretation | Evidence, figures and reproduction |

@@ -40,8 +40,39 @@ ignored; new evidence versions need new archive identities. Hashes detect
 changed assets, but GitHub hosting is not administratively immutable.
 The complete earlier report remains in
 `docs/living-research-report-2026-10-07.md`; `docs/study-index.md` indexes it.
-The next implementation is Stage 1's separate spatial physics and incentive
-calibration, without experimental model calls or mandatory institutions.
+
+Stage 1's physical foundation is implemented in `swarm_societies/commons_v3/`;
+read `docs/commons-v3-foundation-v1.md` and both separately frozen development
+protocols. The engine has mobile individuals, local information, stock-dependent
+renewal, accounting and physical snapshots, with no institutions, memberships
+or supranational authority. Optional political transitions remain unimplemented.
+The old world-model learner has not been transferred to this different renewal
+law. V3 runners currently execute only audited built-in policies; the existing
+bounded candidate adapters support the historical engines, not v3 yet.
+
+Both 56-configuration/224-episode development banks are complete. Preserve
+`evidence/commons-v3-foundation-v1/`, whose policy revealed a numerical
+return-fuel trap, and `evidence/commons-v3-foundation-v2/`, which applies a
+prospective fuel margin with unchanged physics, cases and scientific thresholds.
+V2 records zero unaffordable known-return violations. This fixes one diagnostic
+policy failure; it does not establish strong navigation or scientific qualification.
+The same four seeds were reused after inspecting v1, so neither bank is an
+untouched qualification test. No experimental model calls or search runs occurred.
+
+At the v2 reference cell, restraint consumes 1.200000 versus greedy 0.229769
+per agent-tick. Focal greedy replacement gains zero consumption; utility gain
+0.010685 at wealth weight 0.05 is entirely terminal inventory. Peer consumption
+falls 0.100769. Carrying capacity 8 reduces that utility gain to 0.000252 and
+eliminates peer consumption losses. Greedy terminal ecological stock is 66.70%
+of capacity: distinguish local depletion, access failures and unused resources
+from collapse of the entire commons. These are descriptive four-seed results,
+not confidence intervals or cross-border institutional outcomes.
+
+Next: stronger local baselines, beginning with need-targeted harvesting and
+modest reserves under the same capacity 80, followed by separate ecological and
+incentive qualification. Keep institutions, their lifecycle and paid enforcement
+as later work. Do not start model spending or tune utility weights to manufacture
+a dilemma; preserve all adverse development outcomes and version future changes.
 
 The exploratory reconstructed greedy baseline reproduces the external review's
 mechanism table: focal welfare 0.848654 and private utility 1.038674 exceed the

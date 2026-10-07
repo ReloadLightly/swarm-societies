@@ -1,5 +1,51 @@
 # Active work record
 
+## Spatial v3 physical foundation implemented, 7 October 2026
+
+The separate `commons-v3-physical-v1` engine now implements mobile individuals,
+local observations and actions, stock-dependent renewable sites, finite
+inventories, costed movement/extraction/messages, optional gifts, simultaneous
+commitment and resource-flow accounting. There are no mandatory institutions,
+memberships or supranational authority. Snapshot continuation covers physical
+state under the same future actions; private policy-memory recovery and bounded
+execution of generated v3 programs remain separate work.
+
+Report: `docs/commons-v3-foundation-v1.md`. Two separately frozen development
+banks and protocols each contain **56 configurations / 224 episodes**, with
+61,440 physical ticks and 1,474,560 individual decisions per bank. V2 reuses the
+same four seeds and cases after inspecting v1: neither bank is an untouched
+qualification panel. There were **zero evolutionary runs and zero experimental
+model calls**.
+
+V1 revealed a floating-point return-fuel trap. Its failed control and results
+remain preserved. V2 adds a prospective numerical fuel margin without changing
+physics; all 224 episodes record zero underfunded known-site returns. Full v2
+semantic replay passes. A verifier-only canonical-JSON equality repair also
+preserves all 56 v1 case files, its design and summary byte for byte; its earlier
+source and metadata are retained in the validation directory. An externally
+interrupted v2 run resumed through the official replay-and-compare path,
+preserving all 33 already complete case hashes.
+
+The scientific gate remains **open**. At the reference cell, all-restraint
+consumption is 1.200000 per agent-tick versus greedy 0.229769, but 66.70% of
+global stock remains. The illustrated run contains nine full unused sites
+alongside hungry agents. This is local depletion plus access/navigation failure,
+not demonstrated global ecological collapse. A focal greedy replacement gains
+zero consumption; its +0.010685 private utility at wealth weight 0.05 comes
+entirely from terminal inventory. Smaller carrying capacity nearly eliminates
+that gain and removes peer consumption loss. The next implementation is
+need-targeted harvesting with modest reserves under the same capacity, plus
+purposeful local foraging and numerical baselines, before qualification or
+institution experiments.
+
+Both recorded-data galleries include SVG/PDF/PNG, CSV inputs and source/output
+hashes. All four PNGs were inspected; all 24 gallery files rerender identically.
+Independent numerical audits confirm accounting residuals below 8.6e-13. Raw
+cases are packaged separately in `artifacts/commons-v3-foundation-v1/`; publication
+and clean-checkout validation are being finalized at this checkpoint. Earlier
+frozen implementations and study records remain unchanged.
+
+
 ## Evidence publication and report consolidation completed, 7 October 2026
 
 Stage 0D/0E is complete. The existing public GitHub repository now hosts eight

@@ -1,0 +1,117 @@
+"""Package frozen foundation case files; this script does not publish assets."""
+import hashlib
+import json
+from pathlib import Path
+import platform
+import sys
+import zlib
+
+ROOT = Path(__file__).resolve().parents[3]
+sys.path.insert(0, str(ROOT))
+from swarm_societies.evidence_archive_v1 import package, restore, verify
+
+OUTPUT = ROOT / "runs/commons-v3-foundation-v2/archive-build"
+CATALOG = ROOT / "artifacts/commons-v3-foundation-v1"
+RELEASE = "https://github.com/ReloadLightly/swarm-societies/releases"
+TAG = "commons-v3-foundation-2026-10-07"
+
+
+def digest(path):
+    result = hashlib.sha256()
+    with path.open("rb") as stream:
+        while block := stream.read(1024 * 1024):
+            result.update(block)
+    return result.hexdigest()
+
+
+def read(path):
+    return json.loads(path.read_text())
+
+
+def write_new(path, value):
+    encoded = (json.dumps(value, indent=2, sort_keys=True) + "\n").encode()
+    if path.exists():
+        if path.read_bytes() != encoded:
+            raise ValueError("existing output differs: " + str(path))
+        return
+    with path.open("xb") as stream:
+        stream.write(encoded)
+
+
+studies = []
+validation = []
+for version in (1, 2):
+    study = f"commons-v3-foundation-v{version}"
+    bank = ROOT / "evidence" / study
+    manifest_path = bank / "manifest.json"
+    if not manifest_path.exists():
+        raise RuntimeError("bank is not complete: " + study)
+    completed = read(manifest_path)
+    design = read(bank / "design.json")
+    if (completed.get("complete") is not True or type(completed.get("cases")) is not int
+            or completed["cases"] != 56 or len(design["cases"]) != 56):
+        raise ValueError("incorrect completed case count: " + study)
+    if completed["version"] != f"commons-v3-foundation-development-v{version}":
+        raise ValueError("unexpected bank version")
+    expected = {"cases/" + case["id"] + ".json.gz" for case in design["cases"]}
+    actual = {str(path.relative_to(bank)) for path in (bank / "cases").iterdir()}
+    declared = {name for name in completed["artifacts_sha256"] if name.startswith("cases/")}
+    if len(expected) != 56 or expected != actual or expected != declared:
+        raise ValueError("case design / filesystem / completion inventory mismatch")
+    for name, expected_hash in completed["artifacts_sha256"].items():
+        if digest(bank / name) != expected_hash:
+            raise ValueError("completed bank artifact changed: " + name)
+    for name, expected_hash in read(bank / "sources.json").items():
+        if digest(bank / "sources" / name) != expected_hash:
+            raise ValueError("source snapshot changed: " + name)
+
+    files = [{"path": str((bank / name).relative_to(ROOT)),
+              "size": (bank / name).stat().st_size, "sha256": digest(bank / name)}
+             for name in sorted(expected)]
+    inventory_path = OUTPUT / (study + "-inventory.json")
+    write_new(inventory_path, {"version": "evidence-inventory-v1", "files": files})
+    archive_path = OUTPUT / (study + ".tar.gz")
+    archive_manifest_path = CATALOG / (study + ".json")
+    if archive_manifest_path.exists():
+        archive_manifest = read(archive_manifest_path)
+        if archive_manifest["files"] != files:
+            raise ValueError("prepared archive inventory changed")
+    else:
+        archive_manifest = package(ROOT, inventory_path, archive_path, archive_manifest_path,
+                                   source_url=f"{RELEASE}/download/{TAG}/{study}.tar.gz")
+    receipt = verify(archive_manifest_path, archive_path)
+    (OUTPUT / (study + "-restored")).mkdir(exist_ok=True)
+    restored = restore(archive_manifest_path, archive_path, OUTPUT / (study + "-restored"))
+    for entry in files:
+        if digest(OUTPUT / (study + "-restored") / entry["path"]) != entry["sha256"]:
+            raise ValueError("round-trip restored file differs")
+    retained = {name: expected_hash for name, expected_hash in completed["artifacts_sha256"].items()
+                if not name.startswith("cases/")}
+    retained["manifest.json"] = digest(manifest_path)
+    studies.append({"id": study, "manifest": archive_manifest_path.name,
+                    "manifest_sha256": digest(archive_manifest_path),
+                    "files": len(files), "file_bytes": sum(row["size"] for row in files),
+                    "archive_bytes": archive_manifest["archive"]["size"],
+                    "source_provenance": {
+                        "bank": str(bank.relative_to(ROOT)),
+                        "design_sha256": digest(bank / "design.json"),
+                        "completion_manifest_sha256": digest(manifest_path),
+                        "sources_manifest_sha256": digest(bank / "sources.json")}})
+    validation.append({"study": study, "verify": receipt, "local_round_trip": restored,
+                       "design_cases": len(expected), "matched_completion_cases": len(declared),
+                       "retained_metadata_sha256": retained})
+
+catalog = {"version": "evidence-catalog-v1", "release_url": f"{RELEASE}/tag/{TAG}",
+           "payload": "Only the 56 cases/*.json.gz files from each completed foundation development bank; designs, summaries, completion manifests and source snapshots remain in Git.",
+           "provenance": "Each study pins its frozen bank design, completion manifest and sources manifest; no source commit is asserted for these newly prepared banks.",
+           "packager_runtime": {"python": platform.python_version(), "zlib": zlib.ZLIB_VERSION},
+           "studies": studies}
+write_new(CATALOG / "catalog.json", catalog)
+write_new(OUTPUT / "validation.json", {
+    "version": "commons-v3-foundation-archive-validation-v1", "status": "ok",
+    "scope": "Local inventory, archive verification and empty-target restoration; does not attest public publication.",
+    "catalog_sha256": digest(CATALOG / "catalog.json"), "studies": validation,
+    "total_files": sum(row["files"] for row in studies),
+    "total_file_bytes": sum(row["file_bytes"] for row in studies),
+    "total_archive_bytes": sum(row["archive_bytes"] for row in studies)})
+print(json.dumps({"status": "ok", "studies": studies}, indent=2))

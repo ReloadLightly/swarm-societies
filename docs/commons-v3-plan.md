@@ -25,6 +25,14 @@ may fail to form, a fixed rule may outperform coevolution, and successful local
 governance may increase outsiders' losses. None of these outcomes should trigger
 unreported retuning of the environment or replacement of evaluation cases.
 
+**Current checkpoint:** the [physical foundation](commons-v3-foundation-v1.md)
+implements movement, local access, renewable stocks, accounting and physical
+snapshots. Two development banks preserve a failed navigation control and its
+separate numerical repair. Stage 1's scientific qualification remains open;
+the next work is stronger local baselines, starting with need-targeted harvest
+and modest reserves under the same carrying capacity. Optional institutions
+and political transitions have not yet been implemented.
+
 ## What the target world must implement
 
 | Component | Required behavior | Evidence needed before claiming it works |
@@ -44,10 +52,10 @@ membership; leaving an institution does not move the agent. Initially permit
 one primary membership per agent, while permitting nonmembers and overlapping
 claims over resource sites. Claims alone confer no enforcement power.
 
-For the first physical implementation, use a small grid with roughly 24 agents,
-16 resource sites and a 256-tick horizon; a 12×12 grid and radius-one sensing
-are starting development settings. These numbers are not frozen scientific
-parameters. Validate smaller exact cases first and later examine 12, 24 and 48
+The first physical implementation uses 24 agents, 16 resource sites, a
+256-tick horizon, a 12×12 grid and radius-one sensing. These settings are frozen
+for the recorded development banks, not adopted as qualified scientific
+parameters. Smaller exact cases check the implementation; later examine 12, 24 and 48
 agents with density, resource supply and communication opportunities controlled.
 Do not extrapolate from 24 agents to large swarms without those checks.
 
@@ -88,7 +96,8 @@ offline verification passes, and the default suite passes without the bulk
 files. The shorter README preserves the full previous report in `docs/`.
 Git history remains unchanged. These are versioned, hash-pinned archives;
 GitHub administrators retain the ability to remove or replace hosted assets.
-The next implementation is Stage 1; v3 physics is not yet implemented.
+Stage 1's physical implementation and development panels are now complete;
+its ecological and incentive qualification is still open.
 
 **0A. Correct the scientific record.** Retain the old results as engineering,
 identification and exploratory controls. Add the reproduced greedy baseline and
@@ -143,7 +152,31 @@ itself evidence that institutions or swarms are useful.
 
 ## Stage 1 Establish the physical dilemma
 
-Create a separate `swarm_societies/commons_v3/` implementation. Reuse accounting,
+The separate `swarm_societies/commons_v3/` physical implementation is complete.
+The [v1 protocol](commons-v3-foundation-protocol.md) and
+[v2 repair protocol](commons-v3-foundation-protocol-v2.md) each retain a complete
+56-configuration, 224-episode bank. V1 exposed a floating-point return-fuel
+trap; v2 changes prospective fuel margins while preserving physical laws,
+parameters and the case bank. Its zero recorded fuel violations establish that
+specific invariant, not a qualified social dilemma or a strong baseline.
+
+At the reference cell, v2 restraint consumes 1.200000 versus greedy 0.229769
+per agent-tick. Focal consumption gain is zero. The private gain of 0.010685
+at terminal-wealth weight 0.05 falls to 0.005596 with twice the horizon and
+0.000252 with carrying capacity 8. Peer consumption losses disappear in the
+capacity-8 condition. Greedy terminal ecological stock remains 66.70% of capacity,
+so local depletion and access failures must be distinguished from global
+resource collapse. These development outcomes come from four reused seeds;
+neither bank substitutes for the disjoint qualification gate below.
+
+**Immediate next step:** add need-targeted harvesting with a modest reserve
+under the same physical capacity 80, then stronger navigation and decentralized
+controls. This tests whether a simple private rule resolves the large current
+gap without institutional enforcement. Preserve the current two banks and
+freeze every new development comparison before execution. Do not adjust wealth
+weights or weaken baselines to obtain a preferred incentive pattern.
+
+The remaining Stage 1 contract follows. Reuse accounting,
 observation validation, event provenance and checkpoint patterns; do not alter
 the frozen ecology files. Keep the engine independent of the proposal model.
 
