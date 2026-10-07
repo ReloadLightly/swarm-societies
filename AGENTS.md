@@ -113,8 +113,18 @@ Raw navigation evidence uses separate catalogs in
 `artifacts/commons-v3-navigation-evaluation-v1/`; restore both for full replay
 or figures. Do not restart completed banks or revise their frozen sources.
 
-Next: separate ecological and incentive qualification, retaining the fixed
-and selected baselines and their limitations. Keep institutions, their lifecycle and paid enforcement
+Separate ecological and incentive qualification protocols are frozen and pushed
+at `b44ee25`, before any new qualification episodes. Read
+`docs/commons-v3-ecology-qualification-protocol-v1.md`,
+`docs/commons-v3-incentive-qualification-protocol-v1.md` and
+`docs/commons-v3-feasibility-v1.md`. The prepared banks are
+`evidence/commons-v3-{ecology,incentive}-qualification-v1/`; use
+`scripts/run_commons_v3_qualification_v1.py` for execution, recovery and replay.
+Both controls are mandatory, with 16 fresh seeds per grid cell in separate
+ecological/incentive sets, 3,648 episodes and a fixed 194-interval family.
+Do not edit their source closure, seeds, thresholds or selection after execution.
+A permissive consumption upper bound does not establish feasible control.
+Keep institutions, their lifecycle and paid enforcement
 as later work. Do not start model spending or tune utility weights to manufacture
 a dilemma; preserve all adverse development outcomes and version future changes.
 

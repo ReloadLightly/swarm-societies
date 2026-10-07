@@ -61,8 +61,14 @@ consumption and **1.193929** over 512 ticks on fresh comparison seeds. The
 fixed-floor anchor is nearly as strong. Reference focal utility gain remains
 **67.93%** terminal wealth; capacity 8 removes mean peer consumption losses,
 and one high-need focal case loses **0.567094** consumption per tick.
-Separate ecological and incentive qualification remain open;
-institutions and enforcement follow later. V3 presently runs
+Separate [ecological](commons-v3-ecology-qualification-protocol-v1.md) and
+[incentive](commons-v3-incentive-qualification-protocol-v1.md) protocols are
+frozen at `b44ee25`, with 16 new seeds per cell in each bank, both strong
+controls, intermediate aggressive-peer fractions and reference sensitivities.
+Execution is underway; these protocols alone do not establish qualification.
+The [physical-bound derivation](commons-v3-feasibility-v1.md) distinguishes
+certified insufficient supply from unresolved feasible control.
+Institutions and enforcement follow later. V3 presently runs
 audited built-in policies only. Generated-policy execution has not yet been
 integrated with its new action and observation interface.
 

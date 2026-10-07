@@ -35,7 +35,10 @@ reference consumption but retains long-horizon failures. The later
 [local-forager and finite numerical comparison](commons-v3-navigation-v1.md)
 now sustains near-reference demand over 512 ticks. Its fixed-floor anchor is
 almost as strong as the selected policy, and incentive sensitivities remain
-substantial. Ecological and incentive qualification are next. Optional institutions
+substantial. Separate [ecological](commons-v3-ecology-qualification-protocol-v1.md)
+and [incentive](commons-v3-incentive-qualification-protocol-v1.md) protocols
+were frozen and pushed at `b44ee25` before their fresh-seed execution.
+Their results must determine the next scientific step. Optional institutions
 and political transitions have not yet been implemented.
 
 ## What the target world must implement
@@ -193,12 +196,18 @@ loses consumption. The finite population selection is not a private optimum.
 All-aggressive reference stock falls to 0.173% of capacity, but this outcome
 does not establish universal depletion or a qualified robust dilemma.
 
-**Immediate next step:** separate ecological and incentive qualification,
-retaining both fixed and selected baseline controls and their limitations.
-Retain the complete new bank, the need-targeted bank and both earlier banks;
-freeze every
-new comparison before execution. Do not adjust wealth weights or weaken
-baselines to obtain a preferred incentive pattern.
+**Qualification checkpoint:** separate ecological and incentive protocols are
+now frozen, retaining both fixed and selected baseline controls. They use
+16 new seeds per cell in each of two disjoint sets, matched focal replacements
+at 0/6/12/18/23 aggressive peers, and prespecified reference sensitivities.
+There are 3,648 episodes, with a shared family of 194 simultaneous scalar
+intervals. The executable protocols finalize the proposed gates below; they
+require the same adjacent reference-containing pair to pass for both controls,
+and report reference robustness separately. Their conservative physical
+certificates distinguish insufficient supply from unresolved feasibility;
+they need not assign every cell to a proposed ecological category. Preserve
+all older banks and every adverse qualification outcome. Do not adjust wealth
+weights or weaken baselines to obtain a preferred incentive pattern.
 
 The remaining Stage 1 contract follows. Reuse accounting,
 observation validation, event provenance and checkpoint patterns; do not alter
