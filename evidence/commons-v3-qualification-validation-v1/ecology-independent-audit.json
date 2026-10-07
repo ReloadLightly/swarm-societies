@@ -1,0 +1,37 @@
+{
+  "banks": [
+    {
+      "counts": {
+        "agent_decisions": 3538944,
+        "cases": 144,
+        "episodes": 288,
+        "physical_ticks": 147456
+      },
+      "manifest_sha256": "49016be8278b8da9f2e97e1001f73bd87d933009f2a43b236e7fa5d0ccaef92d",
+      "path": "evidence/commons-v3-ecology-qualification-v1",
+      "qualification_status": "ecology_only",
+      "stage": "ecology",
+      "summary_sha256": "887856296441859fe9c0c0198dbf6fdd2da4821014b975d41e91387e1513d51a"
+    }
+  ],
+  "checks": {
+    "exact": 42769556,
+    "inequalities": 17994052,
+    "intervals": 882,
+    "numerical": 1506078,
+    "simultaneous_intervals": 90,
+    "unique_resource_certificates": 54
+  },
+  "elapsed_seconds": 492.86339748800674,
+  "limitations": "Final full physical-snapshot hashes and exact policy/private-memory behavior are left to the separately recorded semantic replay; the audit rebuilds supplied raw states and material flows. Frozen t critical constants are checked against their design binding, not re-estimated.",
+  "numerical_diagnostics_only": {
+    "absolute_tolerance": 2e-10,
+    "maximum_observed_absolute_difference": 8.881784197001252e-16,
+    "relative_tolerance": 2e-12
+  },
+  "qualification_decisions": "strict comparisons, independently reconstructed intervals and exact rational resource decisions; no tolerance changes gates",
+  "scope": "Raw material/movement/renewal/weather/discovery/cumulative/cohort/utility/quarter summaries, saved-source/hash/input bindings, intervals, paired interventions and verdicts. No policy execution, model calls, or engine replay.",
+  "script_sha256": "63eff1f6c911e77e27f09ad3de7635085f7b607ae8bccd8406d081136ce3d864",
+  "verified": true,
+  "version": "commons-v3-independent-qualification-audit-v1"
+}
