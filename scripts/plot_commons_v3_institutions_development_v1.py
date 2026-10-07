@@ -49,8 +49,11 @@ def _manifest_hash(manifest, name):
 def load(source):
     """Require a complete, manifest-bound saved summary; never execute policies."""
     manifest, design, summary = (read(source / name) for name in ("manifest.json", "design.json", "summary.json"))
-    if _manifest_hash(manifest, "summary.json") != digest(source / "summary.json"):
-        raise ValueError("saved summary hash differs from the completed bank manifest")
+    if manifest.get("completed") is not True:
+        raise ValueError("figures require a completed sealed development bank")
+    for name in ("design.json", "summary.json", "sources.json"):
+        if _manifest_hash(manifest, name) != digest(source / name):
+            raise ValueError(f"saved {name} hash differs from the completed bank manifest")
     if design["version"] != DESIGN_VERSION or design["counts"]["episodes"] != 144:
         raise ValueError("unsupported institutional development design")
     if design["arms"] != list(ARMS) or design["seeds"] != [93001, 93002, 93003, 93004]:
@@ -195,7 +198,8 @@ def mechanism_figure(index, output):
     b.set_xlim(-.15 if max_events < 10 else -.8, max_events * 1.15)
     if max_events > 30:
         b.set_xscale("symlog", linthresh=1)
-    b.set_xlabel("Violations / paid settlements per episode")
+    b.set_xlabel("Events per episode · logarithmic above 1" if max_events > 30
+                 else "Violations / paid settlements per episode")
     c.set_title("C  Political fees plus forfeited collateral", loc="left")
     c.xaxis.set_major_formatter(PercentFormatter(1, decimals=2))
     c.set_xlabel("Resource cost / population need over 256 ticks")
@@ -239,12 +243,14 @@ def write_tables(index, summary, output):
     for episode in index.values():
         case, saved = episode["case"], episode["summary"]
         row = {key: case[key] for key in ("id", "control", "capacity", "stubborn_count", "seed", "arm", "horizon")}
-        row.update({"political_cost": saved["political_cost"], "forfeited": saved["forfeited"],
+        row.update({"need": case["config"]["need"], "individuals": case["config"]["n_agents"],
+                    "political_cost": saved["political_cost"], "forfeited": saved["forfeited"],
                     "institution_activations": saved["institution_activations"],
                     "institution_free_ticks": saved["institution_free_ticks"]})
         for cohort in ("population", "eligible", "stubborn"):
             data = saved["cohorts"][cohort]
-            for key in ("n", "consumption_per_tick", "late_consumption_per_tick", "shortfall_per_tick",
+            for key in ("n", "consumption_per_tick", "late_consumption_per_tick", "consumption_need_fraction",
+                        "late_consumption_need_fraction", "shortfall_per_tick",
                         "shortfall_gini", "shortfall_per_tick_p90", "shortfall_per_tick_max", "message_cost",
                         "ever_members", "terminal_members", "entry_count", "exit_count", "actual_violations", "observed_violations"):
                 row[cohort + "_" + key] = data[key]
@@ -264,7 +270,7 @@ def write_tables(index, summary, output):
 
 CAPTIONS = {
     "consumption-and-paired-effects": "All 144 declared episodes retain both frozen navigation backgrounds, carrying capacities 8 and 80, and original stubborn cohorts of 0 or 6 individuals, with 24-stubborn anchors. The four active-arm comparisons use identical physical starts and cohort identities within seed. Filled circles show all-256-tick consumption and open diamonds the final 64 ticks, both divided by need. Small points are individual environmental seeds; larger symbols are arithmetic means; horizontal lines are observed four-seed minima and maxima, not confidence intervals. The lower row pairs seed outcomes before averaging. These are supplied-policy bundle contrasts, not isolated effects of formal organization, qualification tests, or evidence of deterrence against stubborn outsiders.",
-    "institutions-costs-and-custody": "Panels A and C compare both charter arms in every background, capacity and original stubborn cohort. Panel B shows actual charter violations, violations measured through purchased audits, successful settlements, and mean successful monitor purchases (M) in the enforcement arm; actual and observed violation counts deduplicate witnesses. In A–C, each cell has four paired seeds, shown individually with their mean and observed range. Political costs in C include fees and destroyed collateral and have already affected available resources. Panel D displays equally weighted terminal material components across the 32 episodes of each declared arm: carried inventory, personal caches, active collateral plus released claims, and treasury. Mature claims are a subset of released claims and are not counted twice. This cross-cell material summary is descriptive; its 32 episodes reuse four seeds. Assigned custody ownership does not imply physical redemption, accessible consumption, or freedom from pending collateral liability. Secure custody and truthful paid audits are supplied affordances."
+    "institutions-costs-and-custody": "Panels A and C compare both charter arms in every background, capacity and original stubborn cohort. Panel B shows actual charter violations, violations measured through purchased audits, successful settlements, and mean successful monitor purchases (M) in the enforcement arm; actual and observed violation counts deduplicate witnesses. Its count scale is linear from zero to one and logarithmic above one when the observed maximum exceeds 30. In A–C, each cell has four paired seeds, shown individually with their mean and observed range. Political costs in C include fees and destroyed collateral and have already affected available resources. Panel D displays equally weighted terminal material components across the 32 episodes of each declared arm: carried inventory, personal caches, active collateral plus released claims, and treasury. Mature claims are a subset of released claims and are not counted twice. This cross-cell material summary is descriptive; its 32 episodes reuse four seeds. Assigned custody ownership does not imply physical redemption, accessible consumption, or freedom from pending collateral liability. Secure custody and truthful paid audits are supplied affordances."
 }
 
 

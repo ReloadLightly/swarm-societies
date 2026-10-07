@@ -5,12 +5,15 @@
 The new commons implements mobile individuals, local sensing and stock-dependent
 renewal. A separate political extension now supplies optional local institutions,
 voluntary collateral and paid monitoring, with no supranational government.
-Its lifecycle is engineering-tested; institutional benefit remains untested.
+Its first 144-episode development comparison finds no robust advantage for the
+supplied enforced charter. Gains under high storage and mixed aggression vary
+by seed and cohort; the decentralized comparator scarcely communicates.
 The earlier studies remain frozen. Both fresh qualification banks
 are complete: ecological viability is witnessed in five of nine cells, but
 the primary joint verdict is unresolved and robust incentive qualification
-fails. The next development priority is a fair institutional comparison for a
-clearly stated coordination problem; no new model spending is authorized.
+fails. The next development priority is consequential decentralized coordination,
+responsive membership and identified enforcement controls; no new model spending
+is authorized.
 
 [Study index](docs/study-index.md) ·
 [Detailed archived report](docs/living-research-report-2026-10-07.md) ·
@@ -19,6 +22,7 @@ clearly stated coordination problem; no new model spending is authorized.
 [Latest review response](docs/commons-v3-review-2026-10-07.md) ·
 [Research state and next steps](docs/research-state-and-next-steps-v1.md) ·
 [Political capability contract](docs/commons-v3-institutions-contract-v1.md) ·
+[Institutional development results](docs/commons-v3-institutions-development-v1.md) ·
 [Physical commons](docs/commons-v3-foundation-v1.md) ·
 [Need-targeted baselines](docs/commons-v3-need-v1.md) ·
 [Local navigation and numerical baselines](docs/commons-v3-navigation-v1.md) ·
@@ -52,6 +56,13 @@ reference, 89.83% of the fixed-floor control's mean private gain at weight
 negative. Consumption incentives depend on aggressive-peer prevalence.
 These findings motivate an assurance/tipping-point hypothesis; they establish
 neither a robust consumption temptation nor a strict stag-hunt classification.
+The first prospective optional-charter comparison adds 144 episodes on four
+fresh seeds. The enforced-charter bundle lowers consumption relative to the
+decentralized controller in every seed of six of eight contexts. The two
+positive context means have adverse seeds, and one lowers
+consumption for the original eligible cohort. Rare decentralized communication,
+absent exits and limited external monitoring leave institutional superiority
+and its mechanism unresolved.
 
 ## 1. Research question and present scope
 
@@ -280,6 +291,36 @@ joining segments do not identify an interpolated tipping point. These are
 separate from the simultaneous qualification gates.
 [Complete curves, storage decomposition and export hashes](figures/commons-v3-incentive-review-v1/README.md).*
 
+The first [optional-charter development bank](docs/commons-v3-institutions-development-v1.md)
+is complete: **144 episodes, four fresh seeds, zero model calls or evolutionary
+runs**, with complete replay and policy-memory continuation. Both navigation
+backgrounds, capacities 8/80 and original stubborn cohorts 0/6 compare frozen
+foraging, decentralized reporting, unmonitored charters and enforced charters;
+all-stubborn anchors remain separate.
+
+| Capacity 80, six stubborn agents | Decentralized consumption / need | Unmonitored | Enforced | Enforced−decentralized, four-seed range |
+| --- | ---: | ---: | ---: | ---: |
+| Fixed-floor navigation | 0.570273 | 0.654568 | 0.591890 | −0.077964 to +0.096685 |
+| Selected navigation | 0.559340 | 0.549374 | 0.600614 | −0.056614 to +0.208948 |
+
+In every other context the enforced-charter bundle lowers consumption relative
+to the decentralized controller in all four seeds.
+For fixed-floor navigation in the displayed context, its mean population gain
+of **0.021617 of need** combines an eligible-cohort loss of **0.024235** with
+a stubborn-cohort gain of **0.159173**; no violation is observed or sanctioned
+there. Across all enforcement episodes, 20,453 paid monitors produce 54 observed
+violations (34 self-only) and 13 sanctions. The decentralized arm sends just five
+paid reports, and no arm uses caches or exits. These are supplied-policy bundle
+results with an almost inactive coordination comparator, not evidence of
+robust institutional superiority, optimal membership or deterrence.
+
+![Optional-charter development consumption and paired effects](figures/commons-v3-institutions-development-v1/consumption-and-paired-effects.png)
+
+*All contexts, original cohorts and anchors remain in the
+[report](docs/commons-v3-institutions-development-v1.md); plotted ranges are
+observed seed minima/maxima, not confidence intervals.
+[Recorded tables, captions and SVG/PDF/PNG provenance](figures/commons-v3-institutions-development-v1/README.md).*
+
 ## 5. Limitations and next experiments
 
 The legacy ecology uses additive renewal, often operates near the consumption
@@ -306,7 +347,11 @@ development under a coordination/resilience question:
 optional institutional formation, exit, change and dissolution with local,
 paid enforcement and no supranational authority. The full tipping panel need
 not block political interface development; institutional claims require their
-own prospective comparison. Hand-designed institutions,
+own prospective comparison. The first development bank now identifies the next
+requirements: consequential decentralized coordination, separate controls for
+charter response/collateral/monitoring, and locally payoff-responsive refusal
+and exit. A new version must precede revised development and fresh independent
+evaluation; this completed bank must not be extended. Hand-designed institutions,
 no-institution controls and strong decentralized coordination remain mandatory.
 Model-driven adaptation still needs a separate protocol and inference budget.
 No gate requires institutions or coevolution to win.
@@ -327,6 +372,9 @@ aggregate and [complete 3,360-episode semantic replay](evidence/commons-v3-quali
 checks pass. The frozen bank and its qualification verdicts are unchanged.
 The supplied review probe has a [separate public catalog](artifacts/commons-v3-temptation-review-v1/README.md)
 for all 64 raw episodes, with exact replay and public/offline restoration verified.
+The [institutional development archive](artifacts/commons-v3-institutions-development-v1/README.md)
+contains all 144 raw episodes. The [study report](docs/commons-v3-institutions-development-v1.md#verification-and-reproduction)
+gives restoration, exact replay, figure and saved-frame diagnostic commands.
 Git history is unchanged, so use `git clone --depth 1` for a smaller initial
 checkout; an ordinary full clone still downloads historical evidence blobs.
 

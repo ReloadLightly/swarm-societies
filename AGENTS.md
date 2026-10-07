@@ -31,8 +31,17 @@ gates. The full incentive semantic replay is complete; its receipt is
 `evidence/commons-v3-qualification-validation-v1/incentive-replay-v1.json`.
 All 224 configurations / 3,360 episodes, exact aggregate reconstruction,
 17 frozen sources and 245 sealed artifacts verify unchanged. The original
-ecology bank was not replayed again. Proceed from the implemented Stage 2
-lifecycle/controllers to a fair, declared development comparison. The unexecuted
+ecology bank was not replayed again. The first Stage 2 development comparison
+is complete; read `docs/commons-v3-institutions-development-v1.md` and preserve
+`evidence/commons-v3-institutions-development-v1/` and its frozen source closure.
+All 144 episodes fully replay, including policy-memory midpoint continuation.
+Enforced charters lose consumption in every seed of six of eight contexts;
+capacity-80/six-stubborn gains are seed- and cohort-dependent. Decentralized
+coordination is almost inactive (five paid reports); no caches or exits occur.
+Next develop consequential decentralized/commitment comparators, identified
+charter/enforcement controls and locally payoff-responsive refusal/exit under
+a new version before independent evaluation. Do not extend or tune this bank.
+The unexecuted
 tipping v1 panel need not block that engineering. Preserve the distinction between scripted lifecycle validation,
 behavior within supplied decision rules, and evidence of useful institutions.
 

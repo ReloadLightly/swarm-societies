@@ -1,27 +1,29 @@
 # Research state and next steps
 
-**Implementation update:** the initial political lifecycle and explicit custody
-extension, audited controllers and full policy-memory continuation are now
-implemented and tested under the
-[Stage 2 capability contract](commons-v3-institutions-contract-v1.md). The
-existing [incentive replay obligation](../evidence/commons-v3-qualification-validation-v1/incentive-replay-v1.json)
-is closed: all 3,360 episodes and saved aggregates reproduce exactly. The
-assessment below records the pre-implementation checkpoint; its scientific
-limitations and evaluation priorities remain in force. Follow `PROGRESS.md`
-for current validation status and the next declared development comparison.
+**Current checkpoint:** the initial political lifecycle, explicit custody,
+audited controllers and full policy-memory continuation are implemented under
+the [Stage 2 capability contract](commons-v3-institutions-contract-v1.md).
+The [incentive replay obligation](../evidence/commons-v3-qualification-validation-v1/incentive-replay-v1.json)
+is closed, and the [first institutional development comparison](commons-v3-institutions-development-v1.md)
+has completed all 144 episodes and exact replay. It finds no robust advantage
+for enforced charters: six of eight contexts lose consumption in every seed;
+the two positive context means vary by seed and can conceal eligible-cohort
+losses. Decentralized communication is almost inactive, with no cache use or
+exits. This does not qualify useful governance or a strong coordination baseline.
 
-Assessment of the repository after the 7 October 2026 review response, against
-checkpoint `773a299`. The project now has a credible physical testbed, strong
-simple controllers and substantially better evidence discipline. Its central
-question about useful, optional and changing institutions remains open: the
-current v3 world has no political institutions to evaluate.
+This assessment follows the 7 October 2026 review response and the initial
+assessment at `773a299`. The project now has a credible physical testbed,
+strong simple foragers, an executable political system and a first substantive
+political development result. Its central question about useful, optional and
+changing institutions remains open.
 
-The next development priority is a small, materially explicit institutional
-system and a fair comparison against decentralized coordination. The proposed
-storage/prevalence study can refine that comparison, but its full execution or
-a strict game classification should not block political interface development.
-The earlier qualification verdicts remain unchanged. This plan starts no
-experiments, changes no frozen protocol and authorizes no model spending.
+The next priority is consequential decentralized coordination and commitment
+controls, mechanism separation, and locally payoff-responsive refusal/exit.
+Use a new protocol version before revised development, then fresh independent
+evaluation. The proposed storage/prevalence study remains conditional on a
+specific design need; no strict game label is required to improve these
+comparators. Earlier qualification verdicts and completed banks stay unchanged.
+This plan starts no experiments and authorizes no model spending.
 
 ## Position in the research program
 
@@ -34,16 +36,17 @@ experiments, changes no frozen protocol and authorizes no model spending.
 | Navigation | Strong floor-bearing local foragers sustain near-reference need over longer horizons. | The finite numerical winner is only slightly better than a fixed anchor and is not a private optimum. |
 | Ecological qualification | Both controls pass the finite-horizon criteria in five of nine cells. Two cells have insufficient-supply certificates; two remain unresolved. | Neither indefinite sustainability nor universal solvability is established. |
 | Incentive qualification | The complete bank measures focal substitutions, collective losses and storage/peer sensitivities. | The primary joint verdict is unresolved; broader qualification and reference robustness at every declared weight fail. |
-| Preservation | The completed banks and probe have separately identified public archives with exact public/offline restoration. The 64-episode probe replays exactly. | Complete semantic replay of the 3,360 incentive episodes remains pending. Byte restoration is not semantic validation. |
-| Institutions and adaptation in v3 | A political-world objective and prospective design requirements exist. | Membership, charters, treasury custody, monitoring, sanctions and formation are not implemented. Generated-policy containment has not been ported to v3. |
+| Preservation | Completed banks and probe have separately identified archives. All 3,360 incentive episodes and all 144 new institutional episodes replay exactly; the latter also restore policy-memory continuation. | Byte restoration alone is not semantic validation. Archive receipts record publication status separately. |
+| Institutions and adaptation in v3 | Optional lifecycle, custody, paid auditing and collateral settlement are implemented. The first prospective four-seed development bank is complete. | No robust charter advantage; the coordination comparator scarcely communicates and never uses caches. No exits occur. Useful membership, causal enforcement and generated-policy containment remain unestablished. |
 
 The [study index](study-index.md), [scientific review](research-review-2026-10-07.md),
 [qualification report](commons-v3-qualification-v1.md) and
 [latest review response](commons-v3-review-2026-10-07.md) contain the underlying
 records. Stage 0's portability, historical execution and evidence repairs are
 complete. Stage 1's physical foundation is implemented and its qualification
-experiments have returned substantive mixed and negative results. Stage 2 has
-not yet been implemented. An overall percentage-complete estimate would obscure
+experiments have returned substantive mixed and negative results. Stage 2 now
+has its first implementation and development comparison; independent evaluation
+and consequential adaptation remain ahead. An overall percentage-complete estimate would obscure
 these very different kinds of progress.
 
 ## What the repairs changed scientifically
@@ -124,17 +127,18 @@ to orient future work; earlier plans remain historical references.
 
 | Order | Work package | Completion criterion |
 | --- | --- | --- |
-| 1 | Close the existing incentive replay obligation. | The existing verifier reproduces every saved episode and aggregate, with a new receipt outside the bank. Any discrepancy is preserved and investigated. |
-| 2 | Specify the political and physical capability contract. | Custody, consent, observation, timing, authority and absence of institutions have executable meanings, with a bounded first implementation. |
-| 3 | Implement the smallest complete political lifecycle. | Deterministic fixtures exercise all required transitions, full checkpoints and resource/information limits, including failure and zero-institution outcomes. |
-| 4 | Build one strong decentralized coordinator and simple voluntary charters. | Comparable generic capabilities, resources and information; responsive member choices are explicit and stubborn opportunists remain a separate stress control. |
-| 5 | Develop and freeze the first institutional comparison. | A small declared development menu, then independent evaluation, meaningful consumption/cost/outsider endpoints and identified mechanism interventions. |
+| Complete | Close the existing incentive replay obligation. | All 3,360 saved episodes and exact aggregates verify; receipt outside the bank. |
+| Complete | Specify and implement the political capability contract. | Lifecycle, custody, consent, local observation, paid enforcement and complete continuation are implemented and fixture-tested. |
+| Complete | Run the first declared institutional development comparison. | All 144 episodes and comparisons retained, including losses, near-inactive reporting and absent exits; exact replay passes. |
+| Next | Strengthen consequential decentralized coordination and membership decisions. | Legal local decisions actually exercise useful information/commitment opportunities; refusal and exit respond to a declared payoff/cost rule. Preserve competent foraging and stubborn controls. |
+| Next | Separate mechanism bundles prospectively. | Charter response, collateral locking, timing and monitoring have explicit controls and evidence-access checks; no outcome-fitted terminal weight. Freeze a new version before revised development. |
+| After development | Freeze independent institutional evaluation. | Fresh seeds, absolute consumption/cost/original-cohort/outsider endpoints and identified interventions; the current four seeds do not become evaluation. |
 | Conditional | Implement and execute tipping v1 if its full surface changes the empirical design. | Separate executable/source freeze, unchanged panel, complete results including unresolved regions. Political implementation can proceed in parallel. |
 | Later | Add bounded adaptation and consequential learning. | Strong baseline headroom, an appropriate v3 execution/model contract, and a separate budget for any model-driven campaign. |
 
-The replay is a bounded closure task, not a new scientific panel or a reason
-to repeat ecological auditing. Use the existing verifier without an ecology
-argument, since the incentive bank contains its bound ecological input:
+The incentive replay is complete. For future reproduction, use the existing
+verifier without an ecology argument, since the bank contains its bound
+ecological input; no further ecology audit is needed:
 
 ```bash
 .venv/bin/python scripts/run_commons_v3_qualification_v1.py verify \
@@ -328,7 +332,8 @@ whether the declared response model or costs explain it without relabeling a
 scripted adoption schedule as emergence. Certified insufficient-supply cells
 remain physical limits, not challenges any government must be able to solve.
 
-The next concrete milestone is a complete optional political lifecycle and one
-credible decentralized comparator under the same material and information
-constraints. That would move the repository directly toward its original
-question while preserving what the repair program has learned.
+The political lifecycle and first development comparison are complete. The
+next concrete milestone is a credible, consequential decentralized comparator
+and responsive membership decisions under explicit material and information
+constraints, with prospective controls for the mechanisms that the first bank
+cannot separate. Preserve the mixed first results while addressing those gaps.

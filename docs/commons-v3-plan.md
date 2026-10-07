@@ -12,8 +12,12 @@ historical design rationale, not evidence that qualification passed.
 **Stage 2 implementation:** the initial optional lifecycle, explicit local
 custody and paid monitoring/settlement are implemented in the
 [versioned capability contract](commons-v3-institutions-contract-v1.md).
-Deterministic fixtures verify these capabilities; a fair institutional-benefit
-comparison and generated-policy execution remain future work.
+Deterministic fixtures verify these capabilities. The first
+[144-episode development comparison](commons-v3-institutions-development-v1.md)
+is complete, with mixed/adverse outcomes and an almost inactive decentralized
+comparator. Consequential coordination, responsive exit and separate mechanism
+controls are the next priorities; independent institutional evaluation and
+generated-policy execution remain future work.
 
 ## Research objective
 

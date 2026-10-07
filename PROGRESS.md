@@ -1,5 +1,44 @@
 # Active work record
 
+## First institutional development comparison complete, 7 October 2026
+
+The [full report](docs/commons-v3-institutions-development-v1.md) retains all
+**144 episodes / four environment seeds / 36,864 ticks / 884,736 decisions**.
+The protocol, executable design and source closure were pushed and remotely
+verified at `a4c84e67cc7d6d05ef4d05c13e75c7fafe90e6c2` before the first episode.
+Execution took 192.95 seconds; full semantic replay and all midpoint
+policy-memory continuations passed in 244.83 seconds. Relevant checks passed
+230 tests. Zero model calls, evolution or policy selection occurred.
+
+**No robust enforced-charter advantage:** E−D consumption is negative in every
+seed of six of eight contexts. At capacity 80 with six stubborn agents the
+fixed/selected means are +0.021617/+0.041273 of need, with adverse seeds. The
+fixed-floor population gain combines eligible-cohort loss −0.024235 with
+stubborn-cohort gain +0.159173; its unmonitored arm performs better than its
+enforced arm in every seed. Absolute enforced consumption reaches only
+59.19%/60.06% of need in these two contexts.
+
+Decentralized coordination sends just five paid reports in three of 32
+episodes; no caches or exits occur in any episode. Enforced policies purchase
+20,453 monitors but observe 54 violations (34 self-only, 20 externally observed)
+and make 13 sanctions. Fixed-floor/capacity-80/six-stubborn enforcement has no
+observed violation or sanction. Formation under static supplied rules and
+positive bundle means do not establish useful governance or deterrence.
+All consumption/cohort/late contrasts, nulls, losses and weights 0/0.05/0.2
+remain in the summary and recorded-data figures. A separate read-only diagnostic
+checks every raw hash; it does not execute policies or alter the bank.
+
+The [new archive](artifacts/commons-v3-institutions-development-v1/README.md)
+packages all 144 raw files (17,133,617 bytes) into a 15,473,215-byte archive.
+Local archive verification passes; public publication/restoration is the final
+closure step. Earlier archive identities and frozen sources remain unchanged.
+
+**Next scientific work:** consequential decentralized coordination/commitment
+controls, locally payoff-responsive refusal/exit, and prospective separation
+of charter response, collateral, timing and paid monitoring. Use a new version
+before revised development and independent evaluation; do not extend or tune
+this completed bank. No new ecology layer, tipping panel or model spending.
+
 ## First institutional development panel prepared, 7 October 2026
 
 The [prospective development protocol](docs/commons-v3-institutions-development-protocol-v1.md)

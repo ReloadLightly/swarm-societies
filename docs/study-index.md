@@ -30,6 +30,17 @@ coordination/charter controllers and complete political/policy checkpoints.
 Its deterministic fixtures are implementation checks, not a scientific study
 of institutional benefit. The physical banks indexed below remain unchanged.
 
+The separate [first institutional development comparison](commons-v3-institutions-development-v1.md)
+is now complete: 144 episodes on four fresh seeds, four arms, both navigation
+backgrounds, capacities 8/80 and original stubborn cohorts 0/6, plus anchors.
+Enforcement has no robust advantage; gains in the two high-storage mixed
+contexts are seed- and cohort-dependent. Decentralized reporting is almost
+inactive, with no cache use or exits. All episodes and midpoint policy-memory
+continuations replay exactly. See the [frozen protocol](commons-v3-institutions-development-protocol-v1.md),
+[complete summary](../evidence/commons-v3-institutions-development-v1/summary.json),
+[figures and tables](../figures/commons-v3-institutions-development-v1/README.md)
+and [separate raw archive](../artifacts/commons-v3-institutions-development-v1/README.md).
+
 The [physical foundation report](commons-v3-foundation-v1.md) documents the
 implemented mobile-agent engine and both development banks. There are no
 institutions or political memberships in these worlds. The two foundation banks
@@ -84,7 +95,7 @@ and audit layers are deferred; Stage 2 optional institutions is the next
 scientific priority after incentive framing.
 The [physical-bound derivation](commons-v3-feasibility-v1.md) distinguishes
 certified insufficient supply from unresolved feasible control.
-Institutional benefit remains untested. V3 presently runs
+Robust institutional benefit remains unestablished. V3 presently runs
 audited built-in policies only. Generated-policy execution has not yet been
 integrated with its new action and observation interface.
 
