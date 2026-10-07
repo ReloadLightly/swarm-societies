@@ -25,9 +25,10 @@ consumption is **87.10% of need**, versus **82.28%** for the oracle reference.
 Substantial capacity-estimation error remains. This establishes a limitation
 of the consumption benchmark, not accurate complete-map learning or a general
 verdict about sharing. The oracle is an informed heuristic rather than a
-consumption ceiling. Sharing cases were not run. The prescribed unknown-rate
-fallback awaits approval of its unspecified rate prior; independent evaluation
-remains unstarted. [Results and paired gate values](PROGRESS.md).
+consumption ceiling. All 32 records and their aggregate replay exactly. Sharing
+cases were not run. The prescribed unknown-rate fallback is held for review
+before choosing a rate prior; independent evaluation remains unstarted.
+[Results and paired gate values](PROGRESS.md).
 
 Earlier studies remain frozen. Ecological qualification witnesses viability in
 five of nine cells; robust incentive qualification fails, and the first optional
@@ -134,8 +135,8 @@ extraction receipts can identify growth transitions without global knowledge;
 incomplete shared extraction remains confounded. The frozen forager receives
 capacity beliefs through a wrapper. Its known-capacity reference is an informed
 heuristic, which the asocial learner exceeds in the current development means.
-Tickets A–C are complete. D's base design triggers G3 before sharing, and the
-unknown-rate fallback is next, subject to approval of its missing prior.
+Tickets A–C are complete. D's base design triggers G3 before sharing. At Roland's
+request, the unknown-rate fallback is held for review before choosing its prior.
 [Progress and gate evidence](PROGRESS.md).
 ALIFE 2027 remains the paper target.
 

@@ -34,15 +34,43 @@ The known-capacity heuristic is therefore an **oracle reference, not an
 established consumption ceiling**. These runs do not test a benefit or harm
 from sharing. No L1–L3, biased-arm or independent-evaluation cases have run.
 
-Full 32-case exact verification is in progress. Contract §8 prescribes the
-single unknown-global-r fallback, but supplies no prior for r. Proposed
+**G3 review.** In the wide/high-demand condition, by tick64 agents have directly
+observed only 90.75 of 384 agent/site pairs on average (23.63%). All-pair
+absolute log-median error is still 0.570393, and seen-pair error is 0.216107.
+Strong consumption therefore coexists with incomplete, imperfect private maps.
+The gate's operational stop is clear; the stronger phrase “sharing cannot
+matter” is not established by a comparison to an informed heuristic that L0
+already exceeds. The wrapper changes both local harvest floors and site-service
+scores through belief quantiles. Existing records do not isolate whether the
+consumption advantage comes from transition learning, stock bounds or the
+resulting control choices. No new ablation has been run.
+
+Before choosing the fallback prior, review the oracle benchmark and the link
+between map accuracy and consumption. Making r unknown adds an inference
+challenge but does not itself make the supplied oracle a consumption ceiling.
+This is a review finding, not authorization to retune the controller or replace
+the contracted design.
+
+**Verification complete.** All 32 full scientific records replay exactly, and
+the aggregate summary reconstructs exactly with canonical SHA-256
+`72b22a10d5f9222608623c6122da867a0238cfb7cef8b5f5b23bb9cd62f21400`.
+The implemented tickets have 433 passing checks. The evidence checkpoint
+`2c57d1ff653f196d695be0e082468cffe72a6ea3` was pushed and remotely verified;
+all 33 evidence files (32 cases and the summary) restore byte-identically from
+that public commit into a separate checkout. An unauthenticated fetch of the
+pinned summary also matches its saved bytes. These checks use existing replay
+and Git tooling; no new archive or audit layer was introduced.
+
+Contract §8 prescribes the single unknown-global-r fallback, but supplies no
+prior for r. Proposed
 clarification for Roland's approval under §16: a common log-uniform prior
 r∈[0.12,0.48], one shared rate across all sites within each agent's joint
 posterior, with physical r=0.24, φ=0.375 and selected q=0.25 unchanged.
 Recalibrate the joint learner before one fallback L0 pass on the same four
 development seeds, then apply the same G3 criterion. This proposal is not
 approved, recorded in §17 or executed. No new protocol or evaluation freeze
-has been added.
+has been added. Roland has requested **review of the G3 result before choosing
+a prior**. Verification is complete; hold the fallback at this review checkpoint.
 
 ## Ticket D resumed: four complete records replay exactly, 8 October 2026
 
