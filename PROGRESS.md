@@ -1,5 +1,30 @@
 # Active work record
 
+## Ticket A: site-capacity physics and observation v2, 8 October 2026
+
+The separate `engine_sites_v1.py` copies the frozen transition with immutable
+per-site capacities/initial stocks. It retains the frozen event namespace,
+weather IDs, physical costs, contention and `Action` type. The new snapshot
+schema retains both capacity and initial-stock vectors for exact continuation.
+Legal observation v2 omits capacities and declares only the common law, weather
+range, initial-fraction distribution and capacity prior.
+
+`worlds_sites_v1.py` constructs the contracted moderate/wide multisets (640 total
+capacity each), seed-shuffled independently of keyed per-site U(0.3,0.9) initial
+fractions. Agent positions and weather remain paired across arms and conditions.
+No learning, exclusion, shocks or messages beyond frozen physical support are
+added. The approved literature checkpoint `18fe0ec57ff99d4d6537adfac27008091df02f85`
+was pushed and independently verified on `origin/main`.
+
+**G4 passes.** The four stored seeds 90001–90004 match the frozen engine for
+512 ticks: actions, policy memories, physical state, ledgers, metrics and pinned
+trajectory digests are exact. New snapshot envelopes carry the new version and
+site vectors; their common v1 physical payload hashes match after removing only
+those added configuration fields. Snapshot continuation and hidden-capacity
+noninterference also pass. Validation: 54 new engine tests, 14 world tests and
+136 existing engine/navigation tests pass (204 total). Frozen sources and banks
+are unchanged. Ticket B has not started.
+
 ## World-model contract resumed with approved literature scope, 8 October 2026
 
 Roland authorized using abstracts and publicly available information for the
