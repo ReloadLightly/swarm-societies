@@ -1,5 +1,59 @@
 # Active work record
 
+## Ticket D: approved communication design before development, 8 October 2026
+
+Roland authorized Ticket D after completed G2, then explicitly approved the
+99%/1% full-support biased prior and the finite lognormal reconstruction of
+median/IQR messages. Both amendments are in contract §7 and §17; their values
+will not be selected from development outcomes. Ticket C checkpoint
+`3c2b02fc60be4a503bb1a9516e9257807ab11829` was pushed and remotely verified.
+
+The new observation adapter exposes only each agent's own exact previous-tick
+harvest, equally in every arm. It changes no physics or frozen observations.
+This implements the private information needed to send truthful receipts;
+others' realized harvest remains hidden until delivered by the paid engine.
+Harvest at t is observed at t+1 and can first reach another agent at t+2.
+Receipt qualification retains the locally observed extraction-cohort identities
+and requires every member's contribution, including zeros. Incomplete exchange
+remains confounded. Canonical evidence is (site,tick,z,S_next), independent of
+who observed or relayed it; actual own/cohort harvest stays separately labeled.
+
+Receipt frames are 30 ASCII bytes carrying lossless binary64 harvest values.
+Social frames are exactly 96 bytes, once every four ticks: raw evidence for L2,
+median/IQR for L3, or padding when no content is available. Combined frames are
+126 bytes, within the unchanged 128-byte engine limit. L1–L3 use at most four
+unique recipients, with identical deterministic recipient scheduling and
+receipt priority; co-located groups can exceed that delivery budget. Social
+traffic reserves one recipient slot and combines with its receipt if applicable.
+L2 sends the oldest event not yet attempted for that recipient; L3 cycles known
+site summaries for that recipient. Neither message acknowledgments nor free
+peer receipts are invented. Equal schedules and payload budgets do not force
+equal realized paid bytes when positions or affordability differ; all attempted,
+paid and delivered bytes/costs are measured explicitly.
+
+Before outcomes, declare 32 L0 development episodes: q in {0.25,0.5} × four
+conditions × the existing four seeds 90001–90004. Choose one q using equal-weight
+whole-run consumption over 16 cases, then final-quarter consumption, then the
+smaller q. This intentionally strengthens the asocial comparator; it is not
+balanced tuning across arms. Transfer that q unchanged to 80 sharing episodes
+(L1, L2, L3, L2-biased, L3-biased × 16 cases). The four biased identities are
+fixed at 0,6,12,18. φ remains 0.375. Reuse the 48 selected frozen Ticket B
+reference episodes without extending or rewriting that bank.
+
+Evaluate G3 after L0 selection and before the sharing panel. If mean cumulative
+first-64-tick oracle-minus-L0 share of need is at most 0.02 in **all four cells**,
+use the contracted fallback before any sharing episodes. Retain both q
+candidates' diagnostics. Otherwise complete the 80 sharing episodes, for
+112 learner episodes in total. There are still only four development arena
+seeds; no new seeds, independent evaluation or design freeze is authorized here.
+
+Epistemic measurements include all 24×16 agent/site pairs, assigning untouched
+priors to unseen sites in the evaluator only. Belief tick128 means evidence has
+been processed from observation128; terminal512 receives an observation-only
+update. Seen-only summaries and own/receipt/relay evidence counts are separate.
+The implementation and its tests are in progress; no development episodes have
+started. Ticket E remains unstarted.
+
 ## Ticket C complete: site learning and Gate G2, 8 October 2026
 
 Implementation and G2 criteria were pushed before the panel at

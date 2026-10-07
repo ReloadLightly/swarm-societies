@@ -148,8 +148,17 @@ Do reuse two principles from `world_model_v1`:
 | L0 asocial | Own clean transitions, saturation and maximum-stock bounds only. |
 | L1 receipts | Co-located agents message their realized harvest each tick, which makes shared-site transitions clean. No relaying. |
 | L2 evidence relay | L1, plus agents relay site-indexed clean transition records (site, tick, z, S_{t+1}) to visible neighbours. Receivers deduplicate by (site, tick) and update exactly. Evidence spreads only through local encounters. |
-| L3 belief exchange | L1, plus agents send site-indexed posterior summaries (median and interquartile range). Receivers multiply them into their own posterior without removing shared components: the common double-counting choice. |
-| L2-biased, L3-biased | 4 of 24 agents start with a prior log-uniform on [50, 100]. They act on and share their beliefs truthfully. |
+| L3 belief exchange | L1, plus agents send site-indexed posterior summaries (median and interquartile range). Receivers reconstruct the approved truncated lognormal density below and multiply it into their own posterior without removing shared components: the common double-counting choice. |
+| L2-biased, L3-biased | 4 of 24 agents start with the approved mixture: 99% log-uniform on [50, 100] plus 1% log-uniform on [8, 100]. They act on and share their beliefs truthfully. |
+
+**Approved Ticket D clarification (see §17).** For reported median m and IQR d,
+L3 uses a lognormal density restricted to [8,100], with log-location log(m)
+and log-standard-deviation
+max(asinh(d / (2m)) / Φ⁻¹(0.75), log(100/8) / 400).
+The minimum width also applies when the reported IQR is zero; a zero IQR is
+not treated as proof of a point mass. Multiplication reweights both the
+receiver's continuous posterior and its existing atoms. Both this width and
+the biased-prior mixture weight are fixed before development outcomes.
 
 - **Message settings.** All communicating arms use `max_messages = 4` (declared). The engine's default byte cost of 0.001 per byte is unchanged.
 - **Matched bytes.** L2 and L3 share one message schedule and byte budget, e.g. at most one message of at most 96 bytes every 4 ticks, plus receipts.
@@ -252,6 +261,19 @@ Possible follow-up after this paper: ShinkaEvolve over fusion and communication 
 - Any deviation from this contract needs Roland's approval and an entry in §17.
 
 ## 17. Contract change log
+
+- **Roland, Ticket D continuation, 8 October 2026:** approved replacing the
+  dogmatic biased prior with 99% log-uniform [50,100] plus 1% log-uniform [8,100].
+  The original prior could have zero marginal likelihood for valid low-capacity
+  evidence, leaving no defined posterior. The approved mixture preserves a
+  strong bias while permitting correction. No reset or discarded evidence is
+  substituted for this rule.
+- **Roland, Ticket D continuation, 8 October 2026:** approved L3's truncated
+  lognormal reconstruction from median/IQR, with minimum log-standard-deviation
+  log(100/8)/400 (about 0.63%). Median/IQR do not determine a unique density, and
+  zero IQR can coexist with a nonzero posterior tail. The explicit rule above
+  makes naive multiplicative fusion defined without treating every zero-IQR
+  report as certain capacity knowledge.
 
 - **Roland, resumption after the full-text access pause:** approved proceeding
   with the abstracts and publicly available information for Aishwaryaprajna &
