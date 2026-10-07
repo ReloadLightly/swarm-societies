@@ -32,6 +32,11 @@ user's working target. The plan links the official pages and selected primary
 literature, defines three intended figures and records the next implementation
 tickets. Numerical adaptation remains the next code change.
 
+Design commit `b4e82495022edb450b9678a5a4f65f73544d278b` was pushed and
+independently verified with `git ls-remote origin refs/heads/main`. Local
+document links, episode/decision arithmetic and the 20-comparison count checked;
+scientific source and evidence paths have no changes in this increment.
+
 ## Evening steering adopted; costly physical exclusion implemented, 7 October 2026
 
 The [new active extension and sequence](docs/commons-v3-exclusion-conventions-v1.md)
