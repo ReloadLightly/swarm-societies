@@ -17,8 +17,15 @@ The first paper question is:
 This is a proposed research program, not a claimed finding or authorization
 for another model-driven campaign. The [review and reproduced baseline](research-review-2026-10-07.md)
 explain why the previous sequence must change. Existing world-model work remains
-an instrument for later experiments. The immediate priority is a qualified
-ecology and social dilemma, followed by strong baselines and political mechanisms.
+an instrument for later experiments. The completed qualification banks now
+require an explicit incentive interpretation: the primary joint verdict is
+unresolved and broader robustness fails. The
+[latest review response](commons-v3-review-2026-10-07.md) selects a prospective
+[storage × aggressive-peer protocol](commons-v3-tipping-protocol-v1.md), with
+consumption as the primary payoff and no reward-weight retuning. Stage 2's
+optional institutions are the next scientific priority after that framing
+decision. A strict tragedy-of-the-commons verdict is not required to study
+coordination, and is not established by the current evidence.
 
 The project should be able to produce a useful negative result. Institutions
 may fail to form, a fixed rule may outperform coevolution, and successful local

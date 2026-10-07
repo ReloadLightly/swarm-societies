@@ -25,6 +25,20 @@ spending. Preserve parameter learning and rule discovery as tools and later
 research stages; their earlier design remains in `docs/world-model-proposal.md`.
 The broader research program remains in `docs/research-roadmap.md`.
 
+The latest incentive-framing review is implemented in
+`docs/commons-v3-review-2026-10-07.md`. The original incentive bank is complete:
+3,360 episodes, primary joint verdict unresolved, broader qualification failed.
+Do not alter, restart or extend it. Report every frozen weight, storage and
+0/6/12/18/23 peer result; these five counts are not all 24 integer mixtures.
+The user supplied `scripts/v3_temptation_probe.py` with seeds 90001–90008,
+fixed-floor control and focal 0; its separate reproduction is exploratory.
+Do not retune terminal weights or infer a strict stag hunt from near-zero
+consumption gains. `docs/commons-v3-tipping-protocol-v1.md` specifies review
+option (b), storage × aggressor share; implementation/source freeze and future
+execution remain separate. Defer further ecology publication, figure and audit
+layers while framing is decided. Stage 2 optional institutions in v3 is the next
+scientific priority; keep paid local enforcement and no supranational authority.
+
 Foundation repairs are documented in `docs/foundation-repairs-v1.md`.
 Use `scripts/verify_calibration_portable_v1.py` for supplemental calibration
 verification; keep the frozen original verifier unchanged. Its float tolerance

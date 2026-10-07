@@ -1,5 +1,34 @@
 # Active work record
 
+## Latest external review: probe reproduced and incentive framing revised, 7 October 2026
+
+The supplied `scripts/v3_temptation_probe.py` reproduces on seeds 90001–90008:
+fixed-floor restraint meets **99.8529% of need**; reference aggression gains
+**0.001471** of need in consumption and **0.013893** at weight 0.05, with
+**89.41%** of the latter from terminal inventory. Capacity 8 reduces canonical
+gain to **0.002174**. Against 23 aggressive peers, reference consumption gain
+is **0.070589 [0.049163, 0.092015]** of need, while the capacity-8 contrast is
+**−0.001681 [−0.075374, 0.072012]**. These ordinary eight-seed descriptive
+intervals do not amend frozen qualification gates. All **64 probe episodes**
+replay exactly; original stdout and per-seed records are retained separately in
+`evidence/commons-v3-temptation-review-v1/`. No model calls or evolution.
+
+The [complete incentive report](docs/commons-v3-incentive-qualification-results-v1.md)
+retains all original verdicts, weights, sensitivities and the five recorded
+peer counts 0/6/12/18/23. The bank was already complete and was not altered,
+restarted or extended. Primary joint qualification is unresolved; broader
+qualification and reference robustness at all three weights fail.
+
+The [review response](docs/commons-v3-review-2026-10-07.md) selects option (b):
+the new [storage × peer-share protocol](docs/commons-v3-tipping-protocol-v1.md).
+Its numerical design is specified, but implementation/source freeze and future
+execution remain separate; **zero** tipping-panel episodes have run. Terminal
+weights are unchanged. The README distinguishes a plausible assurance/tipping
+problem from a demonstrated strict stag hunt. Further ecology publication,
+figure and audit layers are deferred. Stage 2 optional institutions, their
+lifecycle and paid local enforcement without supranational authority remains
+the next scientific priority after framing. No new inference budget is implied.
+
 ## Complete qualification bank: primary unresolved, robustness fails, 7 October 2026
 
 Both prospectively frozen banks are recorded: **3,648 episodes / 1,032,192

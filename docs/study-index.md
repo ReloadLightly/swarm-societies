@@ -65,7 +65,15 @@ Separate [ecological](commons-v3-ecology-qualification-protocol-v1.md) and
 [incentive](commons-v3-incentive-qualification-protocol-v1.md) protocols are
 frozen at `b44ee25`, with 16 new seeds per cell in each bank, both strong
 controls, intermediate aggressive-peer fractions and reference sensitivities.
-Execution is underway; these protocols alone do not establish qualification.
+Both banks are complete: 288 ecological and 3,360 incentive episodes.
+The [full incentive results](commons-v3-incentive-qualification-results-v1.md)
+retain primary unresolved and broader failed verdicts, all weights and peer
+curves. The [latest review response](commons-v3-review-2026-10-07.md) records
+the supplied eight-seed diagnostic and selects a separate prospective
+[storage × aggressive-peer protocol](commons-v3-tipping-protocol-v1.md).
+No tipping-panel episodes have been run. Further ecology publication, figures
+and audit layers are deferred; Stage 2 optional institutions is the next
+scientific priority after incentive framing.
 The [physical-bound derivation](commons-v3-feasibility-v1.md) distinguishes
 certified insufficient supply from unresolved feasible control.
 Institutions and enforcement follow later. V3 presently runs

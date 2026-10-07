@@ -4,13 +4,17 @@
 
 The new physical commons implements mobile individuals, local sensing and
 stock-dependent renewal, with no institutions or supranational government.
-The earlier nonspatial studies remain frozen. Optional institutional formation
-and change are still planned; ecological qualification and strong baselines
-must precede further experimental model spending.
+The earlier nonspatial studies remain frozen. Both fresh qualification banks
+are complete: ecological viability is witnessed in five of nine cells, but
+the primary joint verdict is unresolved and robust incentive qualification
+fails. Optional institutions are the next scientific stage after resolving
+the incentive framing; no new model spending is authorized.
 
 [Study index](docs/study-index.md) ·
 [Detailed archived report](docs/living-research-report-2026-10-07.md) ·
 [Scientific review](docs/research-review-2026-10-07.md) ·
+[Incentive results](docs/commons-v3-incentive-qualification-results-v1.md) ·
+[Latest review response](docs/commons-v3-review-2026-10-07.md) ·
 [Physical commons](docs/commons-v3-foundation-v1.md) ·
 [Need-targeted baselines](docs/commons-v3-need-v1.md) ·
 [Local navigation and numerical baselines](docs/commons-v3-navigation-v1.md) ·
@@ -37,7 +41,13 @@ improves only slightly over the fixed-floor baseline. Private gains remain
 sensitive to storage, terminal inventory and environment. A separately frozen,
 16-seed ecological panel now witnesses finite-horizon viability in five of
 nine cells, certifies insufficient supply in two and leaves two unresolved.
-Incentive qualification is being evaluated on its own fresh seed set.
+The separate 3,360-episode incentive bank leaves the common adjacent-region
+verdict unresolved and fails the broader robustness criterion. At the
+reference, 89.83% of the fixed-floor control's mean private gain at weight
+0.05 is terminal inventory; the selected control's mean consumption gain is
+negative. Consumption incentives depend on aggressive-peer prevalence.
+These findings motivate an assurance/tipping-point hypothesis; they establish
+neither a robust consumption temptation nor a strict stag-hunt classification.
 
 ## 1. Research question and present scope
 
@@ -234,8 +244,26 @@ capacity, with no depleted-site time. For the two certified cells, the
 conservative 512-tick supply ceiling meets at most **77.50%/58.13%** of need,
 below the 95% target even under relaxed access assumptions. The other two
 failed cells remain unresolved: policy failure is not an impossibility proof.
-These are finite-horizon ecological findings. The separately frozen incentive
-bank is in progress; ecological success alone does not qualify a social dilemma.
+These are finite-horizon ecological findings. The separate incentive bank is
+complete, with 16 different seeds and **3,360 episodes**. Its primary
+common-adjacent-pair verdict is **unresolved** and broader qualification
+**fails**. Every preregistered cell, sensitivity and peer curve is retained in
+the [incentive results](docs/commons-v3-incentive-qualification-results-v1.md).
+
+| Reference focal contrast per tick | Fixed floor | Selected |
+| --- | ---: | ---: |
+| Consumption gain, zero aggressive peers | +0.001687 | −0.013786 |
+| Private gain, weight 0.05, zero aggressive peers | +0.016593 | +0.000712 |
+| Consumption gain / need, 23 aggressive peers | +0.092202 | +0.081452 |
+
+These are means of paired focal substitutions. Inventory accounts for
+**89.83%** of fixed-floor reference utility gain. Reference robustness fails
+at **all three weights (0, 0.05, 0.2)**; capacity 8 fails the private-gain
+threshold for both controls at every weight. The strong gain against aggressive
+peers motivates a prevalence-dependent coordination question. Tiny or uncertain
+gains among restrained peers do not establish strict preference for restraint,
+so the stronger stag-hunt label remains a hypothesis. The frozen gate verdicts
+are preserved regardless of the later interpretation.
 
 ## 5. Limitations and next experiments
 
@@ -252,14 +280,17 @@ decisions. Additional allocation consumption occurred in only one arena;
 experiment selection chose Early in 71/72 states and did not establish repayment
 of its opportunity cost. These are integration and identification controls.
 
-The [ordered plan](docs/commons-v3-plan.md) now has separately frozen ecological
-and incentive qualification protocols. The ecological bank is complete; the
-incentive bank is running on its own new seeds. Baseline limitations and adverse
-cases remain visible, and ecological viability alone does not establish robust
-private temptation or collective harm. Optional institutions and costed enforcement then face
-hand-designed and numerical baselines. Replicated adaptation, cross-play,
-invasion and unfamiliar scarcity follow a new protocol and explicitly authorized
-inference budget. No gate requires institutions or coevolution to win.
+The [latest review response](docs/commons-v3-review-2026-10-07.md) chooses a
+separately versioned [storage × aggressive-peer protocol](docs/commons-v3-tipping-protocol-v1.md),
+with consumption-only primary endpoints and unchanged terminal weights.
+It is a prospective specification, with no new panel executed. Further ecology
+publication, figure and audit layers are deferred. After framing is settled,
+the next scientific priority is [Stage 2](docs/commons-v3-plan.md#stage-2-make-institutions-optional-and-baselines-strong):
+optional institutional formation, exit, change and dissolution with local,
+paid enforcement and no supranational authority. Hand-designed institutions,
+no-institution controls and strong decentralized coordination remain mandatory.
+Model-driven adaptation still needs a separate protocol and inference budget.
+No gate requires institutions or coevolution to win.
 
 ## 6. Reproducibility
 

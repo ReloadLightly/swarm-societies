@@ -1,7 +1,7 @@
 # Commons v3: separate ecological and incentive qualification
 
-**Ecological recording, validation and publication are complete; incentive
-qualification is in progress.**
+**Both frozen banks are complete. The primary joint verdict is unresolved;
+broader incentive qualification fails.**
 Both protocols, designs and source closures were pushed before any qualification
 episode ran. Both frozen controls pass the ecological criteria in five of nine
 cells, including the reference. Two other cells are certified insufficient for
@@ -9,8 +9,11 @@ the stated consumption target, and two remain physically unresolved. Two
 reference-containing adjacent pairs pass ecology. All 288 ecological episodes
 replay exactly, the independent audit passes, and all 144 ecological case files
 restore byte-identically from the public archive and offline cache. These
-results alone do not establish incentive qualification; combined verdicts
-remain pending.
+results alone do not establish incentive qualification. The complete
+[incentive report](commons-v3-incentive-qualification-results-v1.md) retains
+all preregistered verdicts, weights, storage sensitivities and peer curves.
+Further ecology publication, figure and audit layers are deferred under the
+[latest review response](commons-v3-review-2026-10-07.md).
 
 This study tests the two strongest retained local controls from the
 [navigation stage](commons-v3-navigation-v1.md) on new seed banks. It asks
@@ -49,10 +52,9 @@ repetitions, individual agents and ticks are not additional independent samples.
 | Incentive total | 224 | 3,360 | 884,736 | 21,233,664 |
 | Both stages | 368 | 3,648 | 1,032,192 | 24,772,608 |
 
-Ecological recording has completed its full design counts; incentive counts
-remain the prospective design totals until that bank completes. All counts
-exclude replays. Independent evolutionary runs and experimental model calls
-are both zero.
+Both banks have completed their full design counts. All counts exclude
+replays. Independent evolutionary runs and experimental model calls are both
+zero. Neither bank was restarted or extended during the review response.
 
 ## Physical world and frozen local controls
 
@@ -257,19 +259,16 @@ it is not an additional independent horizon experiment.
 
 ## Incentive results and recorded-data figures
 
-Incentive results will be added from the completed, verified summary. The
-report will retain all nine primary cells, all four eligible adjacent pairs,
-every intermediate peer contrast, and all six reference panels. Separate
-tables will report primary and broader verdicts, utility decomposition,
-peer/world consumption, and late stock/access diagnostics.
+The separate [complete incentive report](commons-v3-incentive-qualification-results-v1.md)
+reports all nine primary cells, all four eligible adjacent pairs, every frozen
+peer count and all six reference panels. The primary adjacent-region verdict
+is unresolved; reference robustness fails at weights 0, 0.05 and 0.2, and the
+broader canonical-weight verdict fails. These are the original frozen gates,
+not revised classifications chosen in response to the review.
 
-The renderer is
-[visualize_commons_v3_qualification_v1.py](../scripts/visualize_commons_v3_qualification_v1.py).
-It requires both completed verified banks and produces four Chromatic Field
-figure sets: ecological map/bounds, primary simultaneous margins, fixed-reference
-peer curves and all reference sensitivities. SVG/PDF/PNG exports, full tables,
-captions and source/output hashes will be inspected and checked by a deterministic
-rerender before the gallery is described as complete.
+The existing combined renderer is retained, but further ecology figure work
+is deferred. Review figures use a separate incentive-only gallery; they do
+not revise any frozen scientific source or threshold.
 
 ## Validation, preservation and reproduction
 
