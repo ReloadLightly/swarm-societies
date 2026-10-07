@@ -36,6 +36,7 @@ Their separate archive catalog and restoration command are linked in the report.
 | --- | --- | --- |
 | Original development v1 | [Frozen protocol](commons-v3-foundation-protocol.md). A floating-point return-fuel boundary trapped some scouting agents despite recovering resources. Its complete results remain visible as a failed navigation control. | [Evidence inventory](../evidence/commons-v3-foundation-v1/manifest.json), [recorded gallery](../figures/commons-v3-foundation-v1/README.md), [original runner](../scripts/run_commons_v3_development.py). |
 | Repaired development v2 | [Repair protocol](commons-v3-foundation-protocol-v2.md). Prospective fuel margins fix the identified invariant without changing physics or scientific thresholds. All 224 episodes record zero unaffordable-return violations. The same cases were reused after inspecting v1; this is development, not fresh qualification. | [Evidence inventory](../evidence/commons-v3-foundation-v2/manifest.json), [recorded gallery](../figures/commons-v3-foundation-v2/README.md), [repaired runner](../scripts/run_commons_v3_development_v2.py), [restoration and replay commands](commons-v3-foundation-v1.md#reproduction-and-engineering-scope). |
+| Need-targeted development v1 | [Frozen protocol](commons-v3-need-protocol-v1.md). Zero/two-tick usable buffers and matching focal greedy replacements; 224 new episodes on the same 56 cases. Reference consumption improves, but longer horizons deteriorate and larger buffers hurt under lower starting stock. | [Report](commons-v3-need-v1.md), [evidence inventory](../evidence/commons-v3-need-v1/manifest.json), [gallery](../figures/commons-v3-need-v1/README.md), [runner](../scripts/run_commons_v3_need_v1.py), [local-only archive and regeneration](../artifacts/commons-v3-need-v1/README.md). |
 
 At the v2 reference cell, mean restrained/greedy consumption is
 **1.200000/0.229769 per agent-tick**. Focal greedy replacement gains no
@@ -47,9 +48,16 @@ cannot be equated with collapse of the entire commons. The report retains every
 grid cell, null contrast and sensitivity. Four-seed ranges are descriptive,
 not confidence intervals.
 
+The new need-targeted comparison produces reference consumption of
+**1.123083/1.137248** for zero/two-tick buffers, under capacity 80. Greedy
+focal replacements gain **0.105842/0.095690** consumption per tick while
+peers lose **0.336463/0.287450**. At 512 ticks, baseline consumption falls to
+**0.798804/0.804615**; lower initial stock makes the two-tick buffer worse by
+**0.254884**. Every sensitivity and adverse outcome remains in the new report.
+
 Ecological qualification and the strong-baseline gate remain open. The next
-local control is need-targeted harvest with modest reserves under the same
-capacity 80; institutions and enforcement follow later. V3 presently runs
+local controls are purposeful foraging and numerical baselines;
+institutions and enforcement follow later. V3 presently runs
 audited built-in policies only. Generated-policy execution has not yet been
 integrated with its new action and observation interface.
 

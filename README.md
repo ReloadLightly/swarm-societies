@@ -12,6 +12,7 @@ must precede further experimental model spending.
 [Detailed archived report](docs/living-research-report-2026-10-07.md) ·
 [Scientific review](docs/research-review-2026-10-07.md) ·
 [Physical commons](docs/commons-v3-foundation-v1.md) ·
+[Need-targeted baselines](docs/commons-v3-need-v1.md) ·
 [Implementation plan](docs/commons-v3-plan.md) ·
 [Current checkpoint](PROGRESS.md)
 
@@ -29,8 +30,9 @@ reducing outsiders' welfare. Numerical controls show supplied-law learning,
 a small allocation benefit dominated by wealth, and no clear active-selection
 benefit in posterior-update value. The new spatial prototype supports local
 depletion, but its development comparisons remain sensitive to navigation,
-storage and terminal inventory. A qualified social dilemma and strong fixed
-baselines remain scientific requirements.
+storage and terminal inventory. Need-targeted harvesting raises reference
+consumption relative to greedy, but longer runs still deteriorate. A qualified social
+dilemma and stronger navigation baselines remain scientific requirements.
 
 ## 1. Research question and present scope
 
@@ -149,6 +151,21 @@ stock remains **66.70%** of capacity: local depletion and access failures coexis
 with unused resources. These are descriptive means, not confidence claims.
 [Recorded figures, tables and provenance](figures/commons-v3-foundation-v2/README.md).
 
+The separate [need-targeted baseline study](docs/commons-v3-need-v1.md) adds
+224 episodes on the same 56 development configurations. At capacity 80,
+targeting current need with zero/two ticks of usable buffer raises reference
+consumption to **1.123083/1.137248**. Greedy focal replacements now gain
+**0.105842/0.095690** consumption per tick while peers lose
+**0.336463/0.287450**. However, population consumption falls to
+**0.798804/0.804615** at 512 ticks, and two-tick reserves reduce consumption
+by **0.254884** relative to zero reserves with lower initial stock. These
+reused-seed policy comparisons leave navigation and qualification unresolved.
+
+![Need-targeted consumption and ecological stock](figures/commons-v3-need-v1/baseline-comparison.png)
+
+*Recorded four-seed development means, with saved v2 controls and unsmoothed
+reference trajectories. [Complete effects, sensitivities and provenance](figures/commons-v3-need-v1/README.md).*
+
 ## 5. Limitations and next experiments
 
 The legacy ecology uses additive renewal, often operates near the consumption
@@ -164,9 +181,9 @@ decisions. Additional allocation consumption occurred in only one arena;
 experiment selection chose Early in 71/72 states and did not establish repayment
 of its opportunity cost. These are integration and identification controls.
 
-The [ordered plan](docs/commons-v3-plan.md) next tests stronger local baselines,
-including harvesting to meet need with modest reserves under the same capacity
-80. Sustainable scarcity, robust private temptation and collective losses still
+The [ordered plan](docs/commons-v3-plan.md) next tests purposeful local foraging
+and numerical baselines, following the completed need-targeted comparison.
+Sustainable scarcity, robust private temptation and collective losses still
 need a separate qualification panel. Optional institutions and costed enforcement then face
 hand-designed and numerical baselines. Replicated adaptation, cross-play,
 invasion and unfamiliar scarcity follow a new protocol and explicitly authorized
@@ -176,6 +193,9 @@ inference budget. No gate requires institutions or coevolution to win.
 
 Compact records, source snapshots and figures stay in Git; full numerical
 evidence is restored from [checksummed release archives](docs/evidence-archives-v1.md).
+The newest [need-targeted archive](artifacts/commons-v3-need-v1/README.md) is
+verified locally and not yet published; its report gives offline restoration
+and full regeneration commands.
 Git history is unchanged, so use `git clone --depth 1` for a smaller initial
 checkout; an ordinary full clone still downloads historical evidence blobs.
 

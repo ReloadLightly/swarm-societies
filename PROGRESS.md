@@ -1,5 +1,74 @@
 # Active work record
 
+## Need-targeted local baseline checkpoint completed, 7 October 2026
+
+Resumed from the completed physical-foundation checkpoint. The separate
+`commons-v3-need-development-v1` study implements fixed zero/two-tick desired
+consumption buffers under the same primary carrying capacity 80. Only travel
+fuel is withheld from consumption; usable reserves, target caps and waiting
+guards are explicit. The engine and both earlier banks remain unchanged.
+Report: `docs/commons-v3-need-v1.md`; frozen protocol:
+`docs/commons-v3-need-protocol-v1.md`.
+
+The completed new bank has **56 reused development configurations / 224
+episodes**, **61,440 physical ticks / 1,474,560 individual decisions**, and
+**zero evolutionary runs or experimental model calls**. All need-0 and need-2
+populations each have a paired greedy focal replacement. The four seeds,
+physical cases, five sensitivities and utility weights match foundation v2;
+the saved v2 comparisons were read without restarting the old banks. Source
+and protocol copies were frozen before panel execution; no panel outcomes
+were used to tune the controls.
+
+At the reference cell, consumption is **1.123083/1.137248** for zero/two-tick
+buffers, versus saved v2 greedy **0.229769** and restraint **1.200000**.
+Focal greedy consumption gains are **+0.105842/+0.095690**; private utility
+gains at wealth weight 0.05 are **+0.121224/+0.110419**. Peers lose
+**0.336463/0.287450** consumption per peer-tick. These focal gains include
+consumption, unlike the earlier restraint comparison's wealth-only reference
+gain. They are conditional policy-bundle effects, not pure extraction effects
+or cross-border institutional outcomes. The reference mean benefit of the
+two-tick buffer is **0.014165**, with two positive and two negative seed pairs.
+
+Adverse results remain visible. At 512 ticks, need-0/need-2 consumption falls
+to **0.798804/0.804615** and final-quarter consumption to
+**0.383088/0.385710**, with **56.95%/52.13%** of ecological stock remaining.
+Lower initial stock makes the two-tick buffer worse by **0.254884** per
+agent-tick across all four pairs. Capacity 8 retains focal consumption gains
+and reduces, without eliminating, mean peer losses. All means/ranges describe
+four reused seed/focal configurations; neither qualification nor robust
+navigation has been established.
+
+All **224 episodes replay exactly**, with zero recorded extraction waste or
+unaffordable known returns. Maximum recorded accounting residual is
+**2.15e-13**. A separate standard-library audit passes **29,055 numeric checks**
+with maximum accumulation-order discrepancy **1.08e-12**. Its diagnostic
+tolerance does not affect the engine or exact semantic replay. Both Chromatic
+Field figures were inspected; all **12 gallery files** rerender identically.
+SVG/PDF/PNG, four CSV tables, captions and hashes are in
+`figures/commons-v3-need-v1/`.
+
+The full test invocation returned **769 passed / 123 subtests passed**, with
+eight existing archive tests blocked while creating their localhost HTTP
+server under the network sandbox. A targeted rerun with loopback access passed
+all eight: **777 unique tests and 123 subtests pass across the two invocations**.
+Both logs are retained; no implementation or test changes were needed. The
+targeted commons suite also passed 235 tests. Compact receipts and the audit
+script are in `evidence/commons-v3-need-validation-v1/`.
+
+The new local-only archive has **56 files / 3,647,037 payload bytes** and a
+3,657,256-byte archive. Empty-directory offline restoration and independent
+byte comparison pass. Its separate catalog is
+`artifacts/commons-v3-need-v1/catalog.json`; a verified copy is in the local
+cache. It has **not been publicly published or synchronized to GitHub**.
+Raw cases remain ignored; a fresh checkout can regenerate the bank with the
+report's commands. Earlier public archive identities and all frozen sources,
+protocols and evidence are preserved.
+
+**Next:** purposeful local foraging and numerical baselines, followed by
+separate ecological and incentive qualification. Preserve all three completed
+development banks. Institutions, their lifecycle and paid enforcement remain
+later work; no new inference budget or evolutionary campaign is authorized.
+
 ## Spatial v3 physical foundation implemented, 7 October 2026
 
 The separate `commons-v3-physical-v1` engine now implements mobile individuals,

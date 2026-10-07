@@ -1,0 +1,4562 @@
+{
+  "agent_decisions": 1474560,
+  "cases": 56,
+  "cells": [
+    {
+      "conditions": {
+        "focal_greedy_need_0": {
+          "consumption_per_agent_tick": 0.2893143040975452,
+          "depleted_patch_time_fraction": 0.4517822265625,
+          "late_consumption_per_agent_tick": 0.09705721723812571,
+          "max_ledger_residual": 1.1095638297042854e-13,
+          "max_relative_ledger_residual": 1.1972092455327601e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 67.52083333333333,
+          "shortfall_per_agent_tick": 0.5106856959024548,
+          "terminal_inventory_per_agent": 3.329596753876364,
+          "terminal_stock_fraction": 0.5135220625033373,
+          "total_harvest_cost": 37.58913074425206,
+          "total_movement_cost": 32.41000000000002,
+          "total_waste": 0.0
+        },
+        "focal_greedy_need_2": {
+          "consumption_per_agent_tick": 0.2862004730310348,
+          "depleted_patch_time_fraction": 0.468017578125,
+          "late_consumption_per_agent_tick": 0.0724338621346738,
+          "max_ledger_residual": 1.2573622698575093e-13,
+          "max_relative_ledger_residual": 1.5105535525037447e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 67.29166666666667,
+          "shortfall_per_agent_tick": 0.513799526968965,
+          "terminal_inventory_per_agent": 3.4118161657190145,
+          "terminal_stock_fraction": 0.517497403363196,
+          "total_harvest_cost": 37.23672029142723,
+          "total_movement_cost": 32.30000000000002,
+          "total_waste": 0.0
+        },
+        "need_0": {
+          "consumption_per_agent_tick": 0.3430834994673321,
+          "depleted_patch_time_fraction": 0.40655517578125,
+          "late_consumption_per_agent_tick": 0.10833333333333323,
+          "max_ledger_residual": 9.801014166921362e-14,
+          "max_relative_ledger_residual": 1.0306092016233409e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 65.46875,
+          "shortfall_per_agent_tick": 0.4569165005326674,
+          "terminal_inventory_per_agent": 0.03490350218180919,
+          "terminal_stock_fraction": 0.47772129928158724,
+          "total_harvest_cost": 42.69730009754396,
+          "total_movement_cost": 31.42500000000002,
+          "total_waste": 0.0
+        },
+        "need_2": {
+          "consumption_per_agent_tick": 0.3571144269979446,
+          "depleted_patch_time_fraction": 0.43231201171875,
+          "late_consumption_per_agent_tick": 0.1217569383524046,
+          "max_ledger_residual": 9.57012247226885e-14,
+          "max_relative_ledger_residual": 1.1432805053918932e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 61.135416666666664,
+          "shortfall_per_agent_tick": 0.4428855730020549,
+          "terminal_inventory_per_agent": 0.2831211724178742,
+          "terminal_stock_fraction": 0.4945668189411142,
+          "total_harvest_cost": 44.53573362476334,
+          "total_movement_cost": 29.345000000000017,
+          "total_waste": 0.0
+        }
+      },
+      "focal_deviation": {
+        "need_0": {
+          "consumption": {
+            "max": 0.57920584133768,
+            "mean": 0.3087953354513388,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 3
+          },
+          "late_consumption": {
+            "max": 0.7999999999999992,
+            "mean": 0.3999999999999996,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 2
+          },
+          "peer_consumption": {
+            "max": -0.04995059064190806,
+            "mean": -0.06953287062287929,
+            "min": -0.09853082514963206,
+            "n": 4,
+            "negative": 4,
+            "positive": 0
+          },
+          "terminal_inventory": {
+            "max": 79.17810625828277,
+            "mean": 79.14655156269475,
+            "min": 79.119999992,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.0": {
+            "max": 0.57920584133768,
+            "mean": 0.3087953354513388,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 3
+          },
+          "utility_0.05": {
+            "max": 0.5946703152162509,
+            "mean": 0.3242536463034276,
+            "min": 0.015453124998437501,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.2": {
+            "max": 0.6410637368519635,
+            "mean": 0.3706285788596941,
+            "min": 0.061812499993750006,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "world_consumption": {
+            "max": -0.02396707387776971,
+            "mean": -0.05376919536978686,
+            "min": -0.09034594023197982,
+            "n": 4,
+            "negative": 4,
+            "positive": 0
+          }
+        },
+        "need_2": {
+          "consumption": {
+            "max": 0.6097081882173991,
+            "mean": 0.5778676160658167,
+            "min": 0.5109844618742646,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "late_consumption": {
+            "max": 0.7999999999999992,
+            "mean": 0.7999999999999992,
+            "min": 0.7999999999999992,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "peer_consumption": {
+            "max": -0.08052512854672358,
+            "mean": -0.09912184831615879,
+            "min": -0.12919631024968645,
+            "n": 4,
+            "negative": 4,
+            "positive": 0
+          },
+          "terminal_inventory": {
+            "max": 79.1989093289024,
+            "mean": 79.18223256765262,
+            "min": 79.15843439625324,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.0": {
+            "max": 0.6097081882173991,
+            "mean": 0.5778676160658167,
+            "min": 0.5109844618742646,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.05": {
+            "max": 0.625176717517482,
+            "mean": 0.5933328958641865,
+            "min": 0.5264478830713409,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.2": {
+            "max": 0.6715823054177306,
+            "mean": 0.6397287352592953,
+            "min": 0.5728381466625697,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "world_consumption": {
+            "max": -0.05201116974690004,
+            "mean": -0.07091395396690982,
+            "min": -0.0993561335091761,
+            "n": 4,
+            "negative": 4,
+            "positive": 0
+          }
+        }
+      },
+      "need": 0.8,
+      "pairs": 4,
+      "panel": "grid",
+      "renewal_rate": 0.12,
+      "reserve_comparison": {
+        "consumption_per_agent_tick": {
+          "max": 0.03301956392236677,
+          "mean": 0.01403092753061251,
+          "min": -0.003760401395223212,
+          "n": 4,
+          "negative": 1,
+          "positive": 3
+        },
+        "depleted_patch_time_fraction": {
+          "max": 0.06201171875,
+          "mean": 0.0257568359375,
+          "min": -0.007080078125,
+          "n": 4,
+          "negative": 1,
+          "positive": 3
+        },
+        "late_consumption_per_agent_tick": {
+          "max": 0.02959641337167654,
+          "mean": 0.013423605019071378,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 3
+        },
+        "max_ledger_residual": {
+          "max": 1.530026105811544e-14,
+          "mean": -2.3089169465251302e-15,
+          "min": -1.7430501486614958e-14,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "max_relative_ledger_residual": {
+          "max": 3.4650689641658275e-17,
+          "mean": 1.1267130376855231e-17,
+          "min": -9.906480372869e-19,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "max_unaffordable_known_returns": {
+          "max": 0,
+          "mean": 0.0,
+          "min": 0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "movement_steps_per_agent": {
+          "max": 3.0833333333333286,
+          "mean": -4.333333333333336,
+          "min": -12.333333333333329,
+          "n": 4,
+          "negative": 3,
+          "positive": 1
+        },
+        "shortfall_per_agent_tick": {
+          "max": 0.003760401395223101,
+          "mean": -0.014030927530612525,
+          "min": -0.033019563922366824,
+          "n": 4,
+          "negative": 3,
+          "positive": 1
+        },
+        "terminal_inventory_per_agent": {
+          "max": 0.33764012808182176,
+          "mean": 0.248217670236065,
+          "min": 0.13030295977639578,
+          "n": 4,
+          "negative": 0,
+          "positive": 4
+        },
+        "terminal_stock_fraction": {
+          "max": 0.124357244263127,
+          "mean": 0.016845519659526978,
+          "min": -0.11066486034191908,
+          "n": 4,
+          "negative": 1,
+          "positive": 3
+        },
+        "total_harvest_cost": {
+          "max": 4.231746200265029,
+          "mean": 1.8384335272193812,
+          "min": -0.5285027579105659,
+          "n": 4,
+          "negative": 1,
+          "positive": 3
+        },
+        "total_movement_cost": {
+          "max": 1.480000000000004,
+          "mean": -2.080000000000001,
+          "min": -5.920000000000002,
+          "n": 4,
+          "negative": 3,
+          "positive": 1
+        },
+        "total_waste": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        }
+      }
+    },
+    {
+      "conditions": {
+        "focal_greedy_need_0": {
+          "consumption_per_agent_tick": 0.2388663263923878,
+          "depleted_patch_time_fraction": 0.51629638671875,
+          "late_consumption_per_agent_tick": 0.0750000000000001,
+          "max_ledger_residual": 1.2406742300186124e-13,
+          "max_relative_ledger_residual": 1.5080670506820327e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 84.01041666666667,
+          "shortfall_per_agent_tick": 0.9611336736076082,
+          "terminal_inventory_per_agent": 0.02698360720391934,
+          "terminal_stock_fraction": 0.4749419492537976,
+          "total_harvest_cost": 29.807496243423,
+          "total_movement_cost": 40.325000000000024,
+          "total_waste": 0.0
+        },
+        "focal_greedy_need_2": {
+          "consumption_per_agent_tick": 0.1922836173766777,
+          "depleted_patch_time_fraction": 0.5472412109375,
+          "late_consumption_per_agent_tick": 0.0,
+          "max_ledger_residual": 1.2848055952474624e-13,
+          "max_relative_ledger_residual": 1.4386840476059445e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 83.89583333333333,
+          "shortfall_per_agent_tick": 1.0077163826233184,
+          "terminal_inventory_per_agent": 0.02458273517296951,
+          "terminal_stock_fraction": 0.5315413604626469,
+          "total_harvest_cost": 23.964296547070568,
+          "total_movement_cost": 40.270000000000024,
+          "total_waste": 0.0
+        },
+        "need_0": {
+          "consumption_per_agent_tick": 0.33616861582308655,
+          "depleted_patch_time_fraction": 0.49884033203125,
+          "late_consumption_per_agent_tick": 0.20000000000000023,
+          "max_ledger_residual": 1.0400014183176154e-13,
+          "max_relative_ledger_residual": 1.2859572291282557e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 87.59375,
+          "shortfall_per_agent_tick": 0.8638313841769091,
+          "terminal_inventory_per_agent": 0.032198148283636,
+          "terminal_stock_fraction": 0.359539125530187,
+          "total_harvest_cost": 42.04566798318081,
+          "total_movement_cost": 42.04500000000003,
+          "total_waste": 0.0
+        },
+        "need_2": {
+          "consumption_per_agent_tick": 0.2439676523738342,
+          "depleted_patch_time_fraction": 0.49700927734375,
+          "late_consumption_per_agent_tick": 0.06250000000000008,
+          "max_ledger_residual": 1.1907141939104804e-13,
+          "max_relative_ledger_residual": 1.5086167301840783e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 75.9375,
+          "shortfall_per_agent_tick": 0.956032347626162,
+          "terminal_inventory_per_agent": 0.15250384979407766,
+          "terminal_stock_fraction": 0.5284935312564799,
+          "total_harvest_cost": 30.42953772612032,
+          "total_movement_cost": 36.450000000000024,
+          "total_waste": 0.0
+        }
+      },
+      "focal_deviation": {
+        "need_0": {
+          "consumption": {
+            "max": 0.3500180388830389,
+            "mean": 0.021682264659337626,
+            "min": -0.7234610193483859,
+            "n": 4,
+            "negative": 1,
+            "positive": 3
+          },
+          "late_consumption": {
+            "max": 0.0,
+            "mean": -0.3000000000000004,
+            "min": -1.2000000000000015,
+            "n": 4,
+            "negative": 1,
+            "positive": 0
+          },
+          "peer_consumption": {
+            "max": -0.052503436800330754,
+            "mean": -0.1024755309128743,
+            "min": -0.2010284078885406,
+            "n": 4,
+            "negative": 4,
+            "positive": 0
+          },
+          "terminal_inventory": {
+            "max": 0.03362035614449503,
+            "mean": -0.007288271412637059,
+            "min": -0.046214612106158216,
+            "n": 4,
+            "negative": 3,
+            "positive": 1
+          },
+          "utility_0.0": {
+            "max": 0.3500180388830389,
+            "mean": 0.021682264659337626,
+            "min": -0.7234610193483859,
+            "n": 4,
+            "negative": 1,
+            "positive": 3
+          },
+          "utility_0.05": {
+            "max": 0.3500152898393052,
+            "mean": 0.021680841168827347,
+            "min": -0.7234700456398129,
+            "n": 4,
+            "negative": 1,
+            "positive": 3
+          },
+          "utility_0.2": {
+            "max": 0.35000704270810395,
+            "mean": 0.021676570697296497,
+            "min": -0.7234971245140939,
+            "n": 4,
+            "negative": 1,
+            "positive": 3
+          },
+          "world_consumption": {
+            "max": -0.04355756244998832,
+            "mean": -0.0973022894306988,
+            "min": -0.17806813927305812,
+            "n": 4,
+            "negative": 4,
+            "positive": 0
+          }
+        },
+        "need_2": {
+          "consumption": {
+            "max": 0.3076800035337959,
+            "mean": 0.19157470664512513,
+            "min": 0.09091749142725358,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "late_consumption": {
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 0
+          },
+          "peer_consumption": {
+            "max": -0.022195902165319695,
+            "mean": -0.06226050202508175,
+            "min": -0.12166159520939833,
+            "n": 4,
+            "negative": 4,
+            "positive": 0
+          },
+          "terminal_inventory": {
+            "max": 0.03549638426742223,
+            "mean": 0.0008908559292153933,
+            "min": -0.021744101695980924,
+            "n": 4,
+            "negative": 2,
+            "positive": 2
+          },
+          "utility_0.0": {
+            "max": 0.3076800035337959,
+            "mean": 0.19157470664512513,
+            "min": 0.09091749142725358,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.05": {
+            "max": 0.3076869364213481,
+            "mean": 0.1915748806404238,
+            "min": 0.09091839666521272,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.2": {
+            "max": 0.3077077350840048,
+            "mean": 0.19157540262631984,
+            "min": 0.09092111237909012,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "world_consumption": {
+            "max": -0.015189222657132151,
+            "mean": -0.051684034997156465,
+            "min": -0.10377236192843191,
+            "n": 4,
+            "negative": 4,
+            "positive": 0
+          }
+        }
+      },
+      "need": 1.2,
+      "pairs": 4,
+      "panel": "grid",
+      "renewal_rate": 0.12,
+      "reserve_comparison": {
+        "consumption_per_agent_tick": {
+          "max": -0.05193202593247476,
+          "mean": -0.09220096344925238,
+          "min": -0.15342395177471965,
+          "n": 4,
+          "negative": 4,
+          "positive": 0
+        },
+        "depleted_patch_time_fraction": {
+          "max": 0.011962890625,
+          "mean": -0.0018310546875,
+          "min": -0.02001953125,
+          "n": 4,
+          "negative": 1,
+          "positive": 3
+        },
+        "late_consumption_per_agent_tick": {
+          "max": -0.05000000000000007,
+          "mean": -0.13750000000000018,
+          "min": -0.2500000000000003,
+          "n": 4,
+          "negative": 4,
+          "positive": 0
+        },
+        "max_ledger_residual": {
+          "max": 7.938094626069869e-14,
+          "mean": 1.50712775592865e-14,
+          "min": -2.8754776337791554e-14,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "max_relative_ledger_residual": {
+          "max": 1.2139378309359391e-16,
+          "mean": 2.226595010558224e-17,
+          "min": -5.846195878216468e-17,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "max_unaffordable_known_returns": {
+          "max": 0,
+          "mean": 0.0,
+          "min": 0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "movement_steps_per_agent": {
+          "max": -1.875,
+          "mean": -11.65625,
+          "min": -22.0,
+          "n": 4,
+          "negative": 4,
+          "positive": 0
+        },
+        "shortfall_per_agent_tick": {
+          "max": 0.15342395177472057,
+          "mean": 0.09220096344925291,
+          "min": 0.051932025932475256,
+          "n": 4,
+          "negative": 0,
+          "positive": 4
+        },
+        "terminal_inventory_per_agent": {
+          "max": 0.3052460397067998,
+          "mean": 0.12030570151044168,
+          "min": -0.014548706700951163,
+          "n": 4,
+          "negative": 1,
+          "positive": 3
+        },
+        "terminal_stock_fraction": {
+          "max": 0.3237061663512667,
+          "mean": 0.16895440572629286,
+          "min": 0.028358858762639383,
+          "n": 4,
+          "negative": 0,
+          "positive": 4
+        },
+        "total_harvest_cost": {
+          "max": -6.380499232166692,
+          "mean": -11.616130257060494,
+          "min": -19.46012099315743,
+          "n": 4,
+          "negative": 4,
+          "positive": 0
+        },
+        "total_movement_cost": {
+          "max": -0.8999999999999986,
+          "mean": -5.595000000000006,
+          "min": -10.560000000000016,
+          "n": 4,
+          "negative": 4,
+          "positive": 0
+        },
+        "total_waste": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        }
+      }
+    },
+    {
+      "conditions": {
+        "focal_greedy_need_0": {
+          "consumption_per_agent_tick": 0.18110248569099238,
+          "depleted_patch_time_fraction": 0.5513916015625,
+          "late_consumption_per_agent_tick": 0.01902504268692215,
+          "max_ledger_residual": 1.0892241969484573e-13,
+          "max_relative_ledger_residual": 1.0869684764535312e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 86.27083333333333,
+          "shortfall_per_agent_tick": 1.4188975143090112,
+          "terminal_inventory_per_agent": 0.8135186422705629,
+          "terminal_stock_fraction": 0.48677417580215215,
+          "total_harvest_cost": 22.972002438774496,
+          "total_movement_cost": 41.410000000000025,
+          "total_waste": 0.0
+        },
+        "focal_greedy_need_2": {
+          "consumption_per_agent_tick": 0.18719042521951845,
+          "depleted_patch_time_fraction": 0.52899169921875,
+          "late_consumption_per_agent_tick": 0.03790890831306465,
+          "max_ledger_residual": 9.225346181418459e-14,
+          "max_relative_ledger_residual": 9.431126006618338e-17,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 79.95833333333333,
+          "shortfall_per_agent_tick": 1.412809574780485,
+          "terminal_inventory_per_agent": 0.09112283406389657,
+          "terminal_stock_fraction": 0.5261518707880419,
+          "total_harvest_cost": 23.319692256454196,
+          "total_movement_cost": 38.380000000000024,
+          "total_waste": 0.0
+        },
+        "need_0": {
+          "consumption_per_agent_tick": 0.19079296894187225,
+          "depleted_patch_time_fraction": 0.564697265625,
+          "late_consumption_per_agent_tick": 0.028124999999999983,
+          "max_ledger_residual": 9.762893618536772e-14,
+          "max_relative_ledger_residual": 9.884676528662219e-17,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 91.52083333333333,
+          "shortfall_per_agent_tick": 1.409207031058131,
+          "terminal_inventory_per_agent": 0.031239854428504597,
+          "terminal_stock_fraction": 0.4605725377909389,
+          "total_harvest_cost": 23.855341993574424,
+          "total_movement_cost": 43.93000000000003,
+          "total_waste": 0.0
+        },
+        "need_2": {
+          "consumption_per_agent_tick": 0.18418756311599288,
+          "depleted_patch_time_fraction": 0.51947021484375,
+          "late_consumption_per_agent_tick": 0.02249573224589454,
+          "max_ledger_residual": 1.1273967870373269e-13,
+          "max_relative_ledger_residual": 1.2611332597221492e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 79.47916666666667,
+          "shortfall_per_agent_tick": 1.4158124368840106,
+          "terminal_inventory_per_agent": 0.05889700022191398,
+          "terminal_stock_fraction": 0.5269116463896198,
+          "total_harvest_cost": 22.92269215897932,
+          "total_movement_cost": 38.15000000000002,
+          "total_waste": 0.0
+        }
+      },
+      "focal_deviation": {
+        "need_0": {
+          "consumption": {
+            "max": 0.7067657214846752,
+            "mean": 0.3147021532781729,
+            "min": 0.17049660387829188,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "late_consumption": {
+            "max": 1.5999999999999983,
+            "mean": 0.3999999999999996,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 1
+          },
+          "peer_consumption": {
+            "max": -0.016875667209907665,
+            "mean": -0.02379451092605612,
+            "min": -0.034378603768406686,
+            "n": 4,
+            "negative": 4,
+            "positive": 0
+          },
+          "terminal_inventory": {
+            "max": 75.2777657253309,
+            "mean": 18.812228373269548,
+            "min": -0.012588551899468267,
+            "n": 4,
+            "negative": 3,
+            "positive": 1
+          },
+          "utility_0.0": {
+            "max": 0.7067657214846752,
+            "mean": 0.3147021532781729,
+            "min": 0.17049660387829188,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.05": {
+            "max": 0.7214684101029039,
+            "mean": 0.3183764166323271,
+            "min": 0.17049414517674902,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.2": {
+            "max": 0.7655764759575899,
+            "mean": 0.3293992066947897,
+            "min": 0.17048676907212043,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "world_consumption": {
+            "max": 0.013276057319033288,
+            "mean": -0.009690483250879909,
+            "min": -0.024927023628263146,
+            "n": 4,
+            "negative": 3,
+            "positive": 1
+          }
+        },
+        "need_2": {
+          "consumption": {
+            "max": 0.13757073343562704,
+            "mean": 0.08049177124577729,
+            "min": 0.041538204844626975,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "late_consumption": {
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 0
+          },
+          "peer_consumption": {
+            "max": 0.012086009516339992,
+            "mean": -0.00036622090265926927,
+            "min": -0.005377233631588244,
+            "n": 4,
+            "negative": 3,
+            "positive": 1
+          },
+          "terminal_inventory": {
+            "max": 0.022258534743195762,
+            "mean": 0.008089691102857562,
+            "min": -0.0031005876910622718,
+            "n": 4,
+            "negative": 2,
+            "positive": 2
+          },
+          "utility_0.0": {
+            "max": 0.13757073343562704,
+            "mean": 0.08049177124577729,
+            "min": 0.041538204844626975,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.05": {
+            "max": 0.13757508080569406,
+            "mean": 0.08049335126357081,
+            "min": 0.041537599261093565,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.2": {
+            "max": 0.13758812291589514,
+            "mean": 0.08049809131695139,
+            "min": 0.041535782510493335,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "world_consumption": {
+            "max": 0.01731453967964362,
+            "mean": 0.0030028621035255876,
+            "min": -0.0022410852699095486,
+            "n": 4,
+            "negative": 3,
+            "positive": 1
+          }
+        }
+      },
+      "need": 1.6,
+      "pairs": 4,
+      "panel": "grid",
+      "renewal_rate": 0.12,
+      "reserve_comparison": {
+        "consumption_per_agent_tick": {
+          "max": 0.011486748176234296,
+          "mean": -0.006605405825879387,
+          "min": -0.033546758120294506,
+          "n": 4,
+          "negative": 3,
+          "positive": 1
+        },
+        "depleted_patch_time_fraction": {
+          "max": -0.0146484375,
+          "mean": -0.04522705078125,
+          "min": -0.08056640625,
+          "n": 4,
+          "negative": 4,
+          "positive": 0
+        },
+        "late_consumption_per_agent_tick": {
+          "max": 0.055208333333333304,
+          "mean": -0.005629267754105443,
+          "min": -0.06354166666666661,
+          "n": 4,
+          "negative": 2,
+          "positive": 2
+        },
+        "max_ledger_residual": {
+          "max": 3.019806626980426e-14,
+          "mean": 1.5110742518364972e-14,
+          "min": -1.0130785099704553e-15,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "max_relative_ledger_residual": {
+          "max": 8.135545429601583e-17,
+          "mean": 2.726656068559274e-17,
+          "min": -3.301854292246787e-17,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "max_unaffordable_known_returns": {
+          "max": 0,
+          "mean": 0.0,
+          "min": 0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "movement_steps_per_agent": {
+          "max": -2.875,
+          "mean": -12.041666666666664,
+          "min": -19.916666666666657,
+          "n": 4,
+          "negative": 4,
+          "positive": 0
+        },
+        "shortfall_per_agent_tick": {
+          "max": 0.03354675812029484,
+          "mean": 0.006605405825879429,
+          "min": -0.011486748176234851,
+          "n": 4,
+          "negative": 1,
+          "positive": 3
+        },
+        "terminal_inventory_per_agent": {
+          "max": 0.13074177401080517,
+          "mean": 0.027657145793409384,
+          "min": -0.014310939129292315,
+          "n": 4,
+          "negative": 3,
+          "positive": 1
+        },
+        "terminal_stock_fraction": {
+          "max": 0.16711475772995188,
+          "mean": 0.06633910859868092,
+          "min": 0.005952458709300612,
+          "n": 4,
+          "negative": 0,
+          "positive": 4
+        },
+        "total_harvest_cost": {
+          "max": 1.4120894565519215,
+          "mean": -0.9326498345951046,
+          "min": -4.235809550982815,
+          "n": 4,
+          "negative": 3,
+          "positive": 1
+        },
+        "total_movement_cost": {
+          "max": -1.3800000000000026,
+          "mean": -5.780000000000005,
+          "min": -9.56000000000001,
+          "n": 4,
+          "negative": 4,
+          "positive": 0
+        },
+        "total_waste": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        }
+      }
+    },
+    {
+      "conditions": {
+        "focal_greedy_need_0": {
+          "consumption_per_agent_tick": 0.764108025702644,
+          "depleted_patch_time_fraction": 0.041259765625,
+          "late_consumption_per_agent_tick": 0.7583333333333326,
+          "max_ledger_residual": 1.8841872506669688e-13,
+          "max_relative_ledger_residual": 1.385394184719907e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 7.4375,
+          "shortfall_per_agent_tick": 0.03589197429735873,
+          "terminal_inventory_per_agent": 3.373494163710276,
+          "terminal_stock_fraction": 0.8399731102164986,
+          "total_harvest_cost": 96.55537897645098,
+          "total_movement_cost": 3.570000000000002,
+          "total_waste": 0.0
+        },
+        "focal_greedy_need_2": {
+          "consumption_per_agent_tick": 0.7952807277203283,
+          "depleted_patch_time_fraction": 0.01861572265625,
+          "late_consumption_per_agent_tick": 0.7948662888974212,
+          "max_ledger_residual": 1.5515366769136563e-13,
+          "max_relative_ledger_residual": 1.480231535659844e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 2.5,
+          "shortfall_per_agent_tick": 0.0047192722796746064,
+          "terminal_inventory_per_agent": 4.816041674333333,
+          "terminal_stock_fraction": 0.8238707886788661,
+          "total_harvest_cost": 101.12224063872867,
+          "total_movement_cost": 1.2000000000000002,
+          "total_waste": 0.0
+        },
+        "need_0": {
+          "consumption_per_agent_tick": 0.7993489583229195,
+          "depleted_patch_time_fraction": 0.0,
+          "late_consumption_per_agent_tick": 0.7999999999999993,
+          "max_ledger_residual": 1.3566925360919413e-13,
+          "max_relative_ledger_residual": 1.0467950981346137e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 0.3333333333333333,
+          "shortfall_per_agent_tick": 0.0006510416770833336,
+          "terminal_inventory_per_agent": 0.08000000799999996,
+          "terminal_stock_fraction": 0.8786103924964895,
+          "total_harvest_cost": 99.29142857404136,
+          "total_movement_cost": 0.16,
+          "total_waste": 0.0
+        },
+        "need_2": {
+          "consumption_per_agent_tick": 0.8000000000000029,
+          "depleted_patch_time_fraction": 0.0,
+          "late_consumption_per_agent_tick": 0.7999999999999993,
+          "max_ledger_residual": 1.3922196728799463e-13,
+          "max_relative_ledger_residual": 1.1084883857113109e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 0.3333333333333333,
+          "shortfall_per_agent_tick": 0.0,
+          "terminal_inventory_per_agent": 1.6800000080000002,
+          "terminal_stock_fraction": 0.8786103924964895,
+          "total_harvest_cost": 100.15673469779648,
+          "total_movement_cost": 0.16,
+          "total_waste": 0.0
+        }
+      },
+      "focal_deviation": {
+        "need_0": {
+          "consumption": {
+            "max": 0.0019531250312498916,
+            "mean": 0.0009765625156249458,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 2
+          },
+          "late_consumption": {
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 0
+          },
+          "peer_consumption": {
+            "max": -0.005681490454553505,
+            "mean": -0.036815606321836516,
+            "min": -0.07078040083985962,
+            "n": 4,
+            "negative": 4,
+            "positive": 0
+          },
+          "terminal_inventory": {
+            "max": 79.119999992,
+            "mean": 79.119999992,
+            "min": 79.119999992,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.0": {
+            "max": 0.0019531250312498916,
+            "mean": 0.0009765625156249458,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 2
+          },
+          "utility_0.05": {
+            "max": 0.017406250029687393,
+            "mean": 0.016429687514062447,
+            "min": 0.015453124998437501,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.2": {
+            "max": 0.0637656250249999,
+            "mean": 0.06278906250937495,
+            "min": 0.061812499993750006,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "world_consumption": {
+            "max": -0.005444761685613776,
+            "mean": -0.03524093262027562,
+            "min": -0.06774983726189672,
+            "n": 4,
+            "negative": 4,
+            "positive": 0
+          }
+        },
+        "need_2": {
+          "consumption": {
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 0
+          },
+          "late_consumption": {
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 0
+          },
+          "peer_consumption": {
+            "max": -0.00231392927450285,
+            "mean": -0.004924458030964871,
+            "min": -0.006363208445474207,
+            "n": 4,
+            "negative": 4,
+            "positive": 0
+          },
+          "terminal_inventory": {
+            "max": 77.51999999200001,
+            "mean": 76.49499999200002,
+            "min": 73.41999999200004,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.0": {
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 0
+          },
+          "utility_0.05": {
+            "max": 0.015140624998437503,
+            "mean": 0.014940429685937505,
+            "min": 0.01433984374843751,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.2": {
+            "max": 0.06056249999375001,
+            "mean": 0.05976171874375002,
+            "min": 0.05735937499375004,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "world_consumption": {
+            "max": -0.0022175155547318978,
+            "mean": -0.004719272279674668,
+            "min": -0.006098074760246115,
+            "n": 4,
+            "negative": 4,
+            "positive": 0
+          }
+        }
+      },
+      "need": 0.8,
+      "pairs": 4,
+      "panel": "grid",
+      "renewal_rate": 0.24,
+      "reserve_comparison": {
+        "consumption_per_agent_tick": {
+          "max": 0.0006510416770834082,
+          "mean": 0.0006510416770834082,
+          "min": 0.0006510416770834082,
+          "n": 4,
+          "negative": 0,
+          "positive": 4
+        },
+        "depleted_patch_time_fraction": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "late_consumption_per_agent_tick": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "max_ledger_residual": {
+          "max": 1.4210854715202004e-14,
+          "mean": 3.552713678800501e-15,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "max_relative_ledger_residual": {
+          "max": 3.464785441767666e-17,
+          "mean": 6.1693287576697196e-18,
+          "min": -7.243159248399774e-18,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "max_unaffordable_known_returns": {
+          "max": 0,
+          "mean": 0.0,
+          "min": 0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "movement_steps_per_agent": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "shortfall_per_agent_tick": {
+          "max": -0.0006510416770833336,
+          "mean": -0.0006510416770833336,
+          "min": -0.0006510416770833336,
+          "n": 4,
+          "negative": 4,
+          "positive": 0
+        },
+        "terminal_inventory_per_agent": {
+          "max": 1.6,
+          "mean": 1.6,
+          "min": 1.6,
+          "n": 4,
+          "negative": 0,
+          "positive": 4
+        },
+        "terminal_stock_fraction": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "total_harvest_cost": {
+          "max": 0.8653061237551185,
+          "mean": 0.8653061237551185,
+          "min": 0.8653061237551185,
+          "n": 4,
+          "negative": 0,
+          "positive": 4
+        },
+        "total_movement_cost": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "total_waste": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        }
+      }
+    },
+    {
+      "conditions": {
+        "focal_greedy_need_0": {
+          "consumption_per_agent_tick": 0.8050490099836873,
+          "depleted_patch_time_fraction": 0.22662353515625,
+          "late_consumption_per_agent_tick": 0.5021684186444912,
+          "max_ledger_residual": 1.1228518115302677e-13,
+          "max_relative_ledger_residual": 1.339935118324019e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 41.0625,
+          "shortfall_per_agent_tick": 0.39495099001630934,
+          "terminal_inventory_per_agent": 3.3255655840625273,
+          "terminal_stock_fraction": 0.5345097155305023,
+          "total_harvest_cost": 101.9947896195367,
+          "total_movement_cost": 19.71000000000001,
+          "total_waste": 0.0
+        },
+        "focal_greedy_need_2": {
+          "consumption_per_agent_tick": 0.8657620662477333,
+          "depleted_patch_time_fraction": 0.2098388671875,
+          "late_consumption_per_agent_tick": 0.6043744349471344,
+          "max_ledger_residual": 1.327549181695531e-13,
+          "max_relative_ledger_residual": 1.323059848768858e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 34.42708333333333,
+          "shortfall_per_agent_tick": 0.33423793375226263,
+          "terminal_inventory_per_agent": 4.015945540236527,
+          "terminal_stock_fraction": 0.48051987181851147,
+          "total_harvest_cost": 109.8806087345261,
+          "total_movement_cost": 16.525000000000006,
+          "total_waste": 0.0
+        },
+        "need_0": {
+          "consumption_per_agent_tick": 1.1230826091031623,
+          "depleted_patch_time_fraction": 0.05938720703125,
+          "late_consumption_per_agent_tick": 0.9101575895546569,
+          "max_ledger_residual": 9.77273817426294e-14,
+          "max_relative_ledger_residual": 1.0402744137630378e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 11.177083333333334,
+          "shortfall_per_agent_tick": 0.07691739089683267,
+          "terminal_inventory_per_agent": 0.06214116683690076,
+          "terminal_stock_fraction": 0.5018017153777523,
+          "total_harvest_cost": 139.98114159865224,
+          "total_movement_cost": 5.365000000000002,
+          "total_waste": 0.0
+        },
+        "need_2": {
+          "consumption_per_agent_tick": 1.1372478978478893,
+          "depleted_patch_time_fraction": 0.06591796875,
+          "late_consumption_per_agent_tick": 0.9594618305794752,
+          "max_ledger_residual": 1.3072876114961218e-13,
+          "max_relative_ledger_residual": 1.3197477506237736e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 10.322916666666668,
+          "shortfall_per_agent_tick": 0.0627521021521055,
+          "terminal_inventory_per_agent": 1.5776934551937432,
+          "terminal_stock_fraction": 0.4495601834783368,
+          "total_harvest_cost": 142.49123933269647,
+          "total_movement_cost": 4.955000000000001,
+          "total_waste": 0.0
+        }
+      },
+      "focal_deviation": {
+        "need_0": {
+          "consumption": {
+            "max": 0.24580533862921294,
+            "mean": 0.10584199503196806,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 3
+          },
+          "late_consumption": {
+            "max": 0.9754088543918629,
+            "mean": 0.4194617300653771,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 3
+          },
+          "peer_consumption": {
+            "max": -0.23219291326090175,
+            "mean": -0.33646297277823345,
+            "min": -0.4998300844012825,
+            "n": 4,
+            "negative": 4,
+            "positive": 0
+          },
+          "terminal_inventory": {
+            "max": 78.79334899832692,
+            "mean": 78.75424956433423,
+            "min": 78.719999992,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.0": {
+            "max": 0.24580533862921294,
+            "mean": 0.10584199503196806,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 3
+          },
+          "utility_0.05": {
+            "max": 0.26119466460544866,
+            "mean": 0.12122368440000209,
+            "min": 0.0153749999984375,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.2": {
+            "max": 0.30736264253415585,
+            "mean": 0.16736875250410418,
+            "min": 0.06149999999375,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "world_consumption": {
+            "max": -0.21578708285555545,
+            "mean": -0.31803359911947504,
+            "min": -0.4790038308845624,
+            "n": 4,
+            "negative": 4,
+            "positive": 0
+          }
+        },
+        "need_2": {
+          "consumption": {
+            "max": 0.25701271359230826,
+            "mean": 0.09568986263649795,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 2
+          },
+          "late_consumption": {
+            "max": 1.0280508543692444,
+            "mean": 0.38275945054599625,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 2
+          },
+          "peer_consumption": {
+            "max": -0.15674293029509173,
+            "mean": -0.28744999221914097,
+            "min": -0.39760255246902393,
+            "n": 4,
+            "negative": 4,
+            "positive": 0
+          },
+          "terminal_inventory": {
+            "max": 76.31999999199999,
+            "mean": 75.41410836157885,
+            "min": 73.879999992,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.0": {
+            "max": 0.25701271359230826,
+            "mean": 0.09568986263649795,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 2
+          },
+          "utility_0.05": {
+            "max": 0.27168779825447925,
+            "mean": 0.11041918067586882,
+            "min": 0.0144296874984375,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.2": {
+            "max": 0.3157130522409922,
+            "mean": 0.15460713479398144,
+            "min": 0.05771874999375,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "world_consumption": {
+            "max": -0.1395031117997834,
+            "mean": -0.27148583160015605,
+            "min": -0.3757963320764111,
+            "n": 4,
+            "negative": 4,
+            "positive": 0
+          }
+        }
+      },
+      "need": 1.2,
+      "pairs": 4,
+      "panel": "grid",
+      "renewal_rate": 0.24,
+      "reserve_comparison": {
+        "consumption_per_agent_tick": {
+          "max": 0.05937534458015903,
+          "mean": 0.014165288744726945,
+          "min": -0.0022184045361783866,
+          "n": 4,
+          "negative": 2,
+          "positive": 2
+        },
+        "depleted_patch_time_fraction": {
+          "max": 0.01220703125,
+          "mean": 0.00653076171875,
+          "min": -0.0068359375,
+          "n": 4,
+          "negative": 1,
+          "positive": 3
+        },
+        "late_consumption_per_agent_tick": {
+          "max": 0.23808562409703726,
+          "mean": 0.04930424102481834,
+          "min": -0.02112770921143048,
+          "n": 4,
+          "negative": 3,
+          "positive": 1
+        },
+        "max_ledger_residual": {
+          "max": 5.0959236830294685e-14,
+          "mean": 3.300137940698278e-14,
+          "min": 2.120525977034049e-14,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "max_relative_ledger_residual": {
+          "max": 9.632516871374362e-17,
+          "mean": 2.794733368607357e-17,
+          "min": -2.863110992181006e-17,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "max_unaffordable_known_returns": {
+          "max": 0,
+          "mean": 0.0,
+          "min": 0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "movement_steps_per_agent": {
+          "max": 1.208333333333333,
+          "mean": -0.8541666666666663,
+          "min": -5.291666666666666,
+          "n": 4,
+          "negative": 2,
+          "positive": 2
+        },
+        "shortfall_per_agent_tick": {
+          "max": 0.002218404536178352,
+          "mean": -0.014165288744727169,
+          "min": -0.05937534458015955,
+          "n": 4,
+          "negative": 2,
+          "positive": 2
+        },
+        "terminal_inventory_per_agent": {
+          "max": 1.7808106758180964,
+          "mean": 1.5155522883568424,
+          "min": 1.1875533703060106,
+          "n": 4,
+          "negative": 0,
+          "positive": 4
+        },
+        "terminal_stock_fraction": {
+          "max": -0.022030923799556124,
+          "mean": -0.05224153189941548,
+          "min": -0.08263451544875866,
+          "n": 4,
+          "negative": 4,
+          "positive": 0
+        },
+        "total_harvest_cost": {
+          "max": 8.265338231023208,
+          "mean": 2.5100977340442228,
+          "min": 0.467246400699878,
+          "n": 4,
+          "negative": 0,
+          "positive": 4
+        },
+        "total_movement_cost": {
+          "max": 0.5800000000000005,
+          "mean": -0.41000000000000036,
+          "min": -2.540000000000001,
+          "n": 4,
+          "negative": 2,
+          "positive": 2
+        },
+        "total_waste": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        }
+      }
+    },
+    {
+      "conditions": {
+        "focal_greedy_need_0": {
+          "consumption_per_agent_tick": 0.41568179396596033,
+          "depleted_patch_time_fraction": 0.44427490234375,
+          "late_consumption_per_agent_tick": 0.18333333333333313,
+          "max_ledger_residual": 1.2245759961615477e-13,
+          "max_relative_ledger_residual": 1.4484721772176957e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 73.42708333333333,
+          "shortfall_per_agent_tick": 1.1843182060340418,
+          "terminal_inventory_per_agent": 2.4771040795195254,
+          "terminal_stock_fraction": 0.5846585362405701,
+          "total_harvest_cost": 53.07437632725161,
+          "total_movement_cost": 35.24500000000002,
+          "total_waste": 0.0
+        },
+        "focal_greedy_need_2": {
+          "consumption_per_agent_tick": 0.36981435467696444,
+          "depleted_patch_time_fraction": 0.44525146484375,
+          "late_consumption_per_agent_tick": 0.1333333333333332,
+          "max_ledger_residual": 1.2635378854319868e-13,
+          "max_relative_ledger_residual": 1.3545799853710296e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 73.26041666666666,
+          "shortfall_per_agent_tick": 1.230185645323038,
+          "terminal_inventory_per_agent": 1.0759368040455448,
+          "terminal_stock_fraction": 0.5726768167737424,
+          "total_harvest_cost": 46.63524241698704,
+          "total_movement_cost": 35.16500000000002,
+          "total_waste": 0.0
+        },
+        "need_0": {
+          "consumption_per_agent_tick": 0.4828936199910686,
+          "depleted_patch_time_fraction": 0.41595458984375,
+          "late_consumption_per_agent_tick": 0.2551377043789901,
+          "max_ledger_residual": 9.318934512947408e-14,
+          "max_relative_ledger_residual": 8.510103006438603e-17,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 69.59375,
+          "shortfall_per_agent_tick": 1.1171063800089338,
+          "terminal_inventory_per_agent": 0.03554819357081495,
+          "terminal_stock_fraction": 0.5701893771199488,
+          "total_harvest_cost": 60.26850118103729,
+          "total_movement_cost": 33.40500000000002,
+          "total_waste": 0.0
+        },
+        "need_2": {
+          "consumption_per_agent_tick": 0.40368045196717384,
+          "depleted_patch_time_fraction": 0.42218017578125,
+          "late_consumption_per_agent_tick": 0.16874999999999984,
+          "max_ledger_residual": 1.2650297476213268e-13,
+          "max_relative_ledger_residual": 1.3487366194765268e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 69.76041666666667,
+          "shortfall_per_agent_tick": 1.1963195480328284,
+          "terminal_inventory_per_agent": 0.39878648798798977,
+          "terminal_stock_fraction": 0.5803506960776984,
+          "total_harvest_cost": 50.51568515506186,
+          "total_movement_cost": 33.48500000000002,
+          "total_waste": 0.0
+        }
+      },
+      "focal_deviation": {
+        "need_0": {
+          "consumption": {
+            "max": 1.2631032392973842,
+            "mean": 0.880183733843748,
+            "min": 0.21038274389861986,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "late_consumption": {
+            "max": 1.5999999999999983,
+            "mean": 1.1990783416449275,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 3
+          },
+          "peer_consumption": {
+            "max": 0.01619370830166189,
+            "mean": -0.10840293732375415,
+            "min": -0.17377407315438997,
+            "n": 4,
+            "negative": 3,
+            "positive": 1
+          },
+          "terminal_inventory": {
+            "max": 78.37459288151797,
+            "mean": 58.77924945188924,
+            "min": 0.009841298718614673,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.0": {
+            "max": 1.2631032392973842,
+            "mean": 0.880183733843748,
+            "min": 0.21038274389861986,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.05": {
+            "max": 1.2784083774267603,
+            "mean": 0.8916640560023201,
+            "min": 0.21038466602727585,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.2": {
+            "max": 1.3243237918148887,
+            "mean": 0.9261050224780365,
+            "min": 0.21039043241324376,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "world_consumption": {
+            "max": 0.04967684620867472,
+            "mean": -0.06721182602510824,
+            "min": -0.15776753911051458,
+            "n": 4,
+            "negative": 3,
+            "positive": 1
+          }
+        },
+        "need_2": {
+          "consumption": {
+            "max": 1.3953304764295247,
+            "mean": 0.18083008378605564,
+            "min": -1.2380945072591862,
+            "n": 4,
+            "negative": 1,
+            "positive": 3
+          },
+          "late_consumption": {
+            "max": 1.5999999999999983,
+            "mean": 0.0,
+            "min": -1.5999999999999983,
+            "n": 4,
+            "negative": 1,
+            "positive": 1
+          },
+          "peer_consumption": {
+            "max": 0.09285843608079258,
+            "mean": -0.04320071385874265,
+            "min": -0.16523770085318337,
+            "n": 4,
+            "negative": 2,
+            "positive": 2
+          },
+          "terminal_inventory": {
+            "max": 78.35846551183315,
+            "mean": 18.780323510666346,
+            "min": -3.244526391445485,
+            "n": 4,
+            "negative": 2,
+            "positive": 2
+          },
+          "utility_0.0": {
+            "max": 1.3953304764295247,
+            "mean": 0.18083008378605564,
+            "min": -1.2380945072591862,
+            "n": 4,
+            "negative": 1,
+            "positive": 3
+          },
+          "utility_0.05": {
+            "max": 1.4106348642248046,
+            "mean": 0.18449811572173266,
+            "min": -1.2387282038200154,
+            "n": 4,
+            "negative": 1,
+            "positive": 3
+          },
+          "utility_0.2": {
+            "max": 1.4565480276106444,
+            "mean": 0.19550221152876374,
+            "min": -1.240629293502503,
+            "n": 4,
+            "negative": 1,
+            "positive": 3
+          },
+          "world_consumption": {
+            "max": 0.07016673938196534,
+            "mean": -0.03386609729020938,
+            "min": -0.14281916518469248,
+            "n": 4,
+            "negative": 2,
+            "positive": 2
+          }
+        }
+      },
+      "need": 1.6,
+      "pairs": 4,
+      "panel": "grid",
+      "renewal_rate": 0.24,
+      "reserve_comparison": {
+        "consumption_per_agent_tick": {
+          "max": -0.05132228939041461,
+          "mean": -0.07921316802389472,
+          "min": -0.12499579886811218,
+          "n": 4,
+          "negative": 4,
+          "positive": 0
+        },
+        "depleted_patch_time_fraction": {
+          "max": 0.0751953125,
+          "mean": 0.0062255859375,
+          "min": -0.057373046875,
+          "n": 4,
+          "negative": 2,
+          "positive": 2
+        },
+        "late_consumption_per_agent_tick": {
+          "max": -0.0001536097258451885,
+          "mean": -0.08638770437899022,
+          "min": -0.19999999999999982,
+          "n": 4,
+          "negative": 4,
+          "positive": 0
+        },
+        "max_ledger_residual": {
+          "max": 6.378231276471524e-14,
+          "mean": 3.3313629632658603e-14,
+          "min": 3.4139358007223564e-15,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "max_relative_ledger_residual": {
+          "max": 9.691466218928403e-17,
+          "mean": 4.9772631883266646e-17,
+          "min": -1.843276049469415e-17,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "max_unaffordable_known_returns": {
+          "max": 0,
+          "mean": 0.0,
+          "min": 0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "movement_steps_per_agent": {
+          "max": 15.0,
+          "mean": 0.16666666666666785,
+          "min": -17.416666666666664,
+          "n": 4,
+          "negative": 2,
+          "positive": 2
+        },
+        "shortfall_per_agent_tick": {
+          "max": 0.12499579886811074,
+          "mean": 0.07921316802389466,
+          "min": 0.05132228939041528,
+          "n": 4,
+          "negative": 0,
+          "positive": 4
+        },
+        "terminal_inventory_per_agent": {
+          "max": 0.5309384851826477,
+          "mean": 0.3632382944171748,
+          "min": 0.2567372402981358,
+          "n": 4,
+          "negative": 0,
+          "positive": 4
+        },
+        "terminal_stock_fraction": {
+          "max": 0.15689583963658082,
+          "mean": 0.01016131895774966,
+          "min": -0.11279879925653524,
+          "n": 4,
+          "negative": 2,
+          "positive": 2
+        },
+        "total_harvest_cost": {
+          "max": -6.02819637490456,
+          "mean": -9.75281602597543,
+          "min": -15.64749070544714,
+          "n": 4,
+          "negative": 4,
+          "positive": 0
+        },
+        "total_movement_cost": {
+          "max": 7.20000000000001,
+          "mean": 0.08000000000000007,
+          "min": -8.360000000000007,
+          "n": 4,
+          "negative": 2,
+          "positive": 2
+        },
+        "total_waste": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        }
+      }
+    },
+    {
+      "conditions": {
+        "focal_greedy_need_0": {
+          "consumption_per_agent_tick": 0.7979651000147154,
+          "depleted_patch_time_fraction": 0.00482177734375,
+          "late_consumption_per_agent_tick": 0.7999999999999993,
+          "max_ledger_residual": 1.799810300795457e-13,
+          "max_relative_ledger_residual": 1.4814289029307627e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 0.8541666666666666,
+          "shortfall_per_agent_tick": 0.0020348999852874846,
+          "terminal_inventory_per_agent": 3.376666674333334,
+          "terminal_stock_fraction": 0.9364053835525162,
+          "total_harvest_cost": 100.73770560560038,
+          "total_movement_cost": 0.41000000000000003,
+          "total_waste": 0.0
+        },
+        "focal_greedy_need_2": {
+          "consumption_per_agent_tick": 0.7985216182340772,
+          "depleted_patch_time_fraction": 0.0052490234375,
+          "late_consumption_per_agent_tick": 0.7999999999999993,
+          "max_ledger_residual": 1.5018541965616805e-13,
+          "max_relative_ledger_residual": 1.3431947502178565e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 0.9166666666666666,
+          "shortfall_per_agent_tick": 0.0014783817659257373,
+          "terminal_inventory_per_agent": 4.9100000076666666,
+          "terminal_stock_fraction": 0.9367546355071416,
+          "total_harvest_cost": 101.55911882886078,
+          "total_movement_cost": 0.44,
+          "total_waste": 0.0
+        },
+        "need_0": {
+          "consumption_per_agent_tick": 0.7993489583229195,
+          "depleted_patch_time_fraction": 0.0,
+          "late_consumption_per_agent_tick": 0.7999999999999993,
+          "max_ledger_residual": 1.3922196728799463e-13,
+          "max_relative_ledger_residual": 1.0686179091939092e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 0.3333333333333333,
+          "shortfall_per_agent_tick": 0.0006510416770833336,
+          "terminal_inventory_per_agent": 0.08000000799999996,
+          "terminal_stock_fraction": 0.9374710667794591,
+          "total_harvest_cost": 99.29142857404136,
+          "total_movement_cost": 0.16,
+          "total_waste": 0.0
+        },
+        "need_2": {
+          "consumption_per_agent_tick": 0.8000000000000029,
+          "depleted_patch_time_fraction": 0.0,
+          "late_consumption_per_agent_tick": 0.7999999999999993,
+          "max_ledger_residual": 1.3922196728799463e-13,
+          "max_relative_ledger_residual": 1.1279723199869567e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 0.3333333333333333,
+          "shortfall_per_agent_tick": 0.0,
+          "terminal_inventory_per_agent": 1.6800000080000002,
+          "terminal_stock_fraction": 0.9374710667794591,
+          "total_harvest_cost": 100.15673469779648,
+          "total_movement_cost": 0.16,
+          "total_waste": 0.0
+        }
+      },
+      "focal_deviation": {
+        "need_0": {
+          "consumption": {
+            "max": 0.0019531250312498916,
+            "mean": 0.0009765625156249458,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 2
+          },
+          "late_consumption": {
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 0
+          },
+          "peer_consumption": {
+            "max": 0.0,
+            "mean": -0.0014864853005445687,
+            "min": -0.0024381484610426023,
+            "n": 4,
+            "negative": 3,
+            "positive": 0
+          },
+          "terminal_inventory": {
+            "max": 79.119999992,
+            "mean": 79.119999992,
+            "min": 79.119999992,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.0": {
+            "max": 0.0019531250312498916,
+            "mean": 0.0009765625156249458,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 2
+          },
+          "utility_0.05": {
+            "max": 0.017406250029687393,
+            "mean": 0.016429687514062447,
+            "min": 0.015453124998437501,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.2": {
+            "max": 0.0637656250249999,
+            "mean": 0.06278906250937495,
+            "min": 0.061812499993750006,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "world_consumption": {
+            "max": 0.0,
+            "mean": -0.0013838583082041722,
+            "min": -0.0022551787321970817,
+            "n": 4,
+            "negative": 3,
+            "positive": 0
+          }
+        },
+        "need_2": {
+          "consumption": {
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 0
+          },
+          "late_consumption": {
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 0
+          },
+          "peer_consumption": {
+            "max": 0.0,
+            "mean": -0.0015426592340094826,
+            "min": -0.002298064300172547,
+            "n": 4,
+            "negative": 3,
+            "positive": 0
+          },
+          "terminal_inventory": {
+            "max": 77.51999999200001,
+            "mean": 77.51999999200001,
+            "min": 77.51999999200001,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.0": {
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 0
+          },
+          "utility_0.05": {
+            "max": 0.015140624998437503,
+            "mean": 0.015140624998437503,
+            "min": 0.015140624998437503,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.2": {
+            "max": 0.06056249999375001,
+            "mean": 0.06056249999375001,
+            "min": 0.06056249999375001,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "world_consumption": {
+            "max": 0.0,
+            "mean": -0.0014783817659257542,
+            "min": -0.0022023116209986906,
+            "n": 4,
+            "negative": 3,
+            "positive": 0
+          }
+        }
+      },
+      "need": 0.8,
+      "pairs": 4,
+      "panel": "grid",
+      "renewal_rate": 0.36,
+      "reserve_comparison": {
+        "consumption_per_agent_tick": {
+          "max": 0.0006510416770834082,
+          "mean": 0.0006510416770834082,
+          "min": 0.0006510416770834082,
+          "n": 4,
+          "negative": 0,
+          "positive": 4
+        },
+        "depleted_patch_time_fraction": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "late_consumption_per_agent_tick": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "max_ledger_residual": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "max_relative_ledger_residual": {
+          "max": 4.0304854396336405e-17,
+          "mean": 5.9354410793047384e-18,
+          "min": -1.9335597939085096e-17,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "max_unaffordable_known_returns": {
+          "max": 0,
+          "mean": 0.0,
+          "min": 0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "movement_steps_per_agent": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "shortfall_per_agent_tick": {
+          "max": -0.0006510416770833336,
+          "mean": -0.0006510416770833336,
+          "min": -0.0006510416770833336,
+          "n": 4,
+          "negative": 4,
+          "positive": 0
+        },
+        "terminal_inventory_per_agent": {
+          "max": 1.6,
+          "mean": 1.6,
+          "min": 1.6,
+          "n": 4,
+          "negative": 0,
+          "positive": 4
+        },
+        "terminal_stock_fraction": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "total_harvest_cost": {
+          "max": 0.8653061237551185,
+          "mean": 0.8653061237551185,
+          "min": 0.8653061237551185,
+          "n": 4,
+          "negative": 0,
+          "positive": 4
+        },
+        "total_movement_cost": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "total_waste": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        }
+      }
+    },
+    {
+      "conditions": {
+        "focal_greedy_need_0": {
+          "consumption_per_agent_tick": 1.1695242857883454,
+          "depleted_patch_time_fraction": 0.03076171875,
+          "late_consumption_per_agent_tick": 1.1310889063100111,
+          "max_ledger_residual": 1.5508427875232655e-13,
+          "max_relative_ledger_residual": 1.0777378168214649e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 5.552083333333333,
+          "shortfall_per_agent_tick": 0.030475714211649175,
+          "terminal_inventory_per_agent": 3.3569802520441203,
+          "terminal_stock_fraction": 0.8625818682948758,
+          "total_harvest_cost": 147.36305587617767,
+          "total_movement_cost": 2.6650000000000005,
+          "total_waste": 0.0
+        },
+        "focal_greedy_need_2": {
+          "consumption_per_agent_tick": 1.1828373143717814,
+          "depleted_patch_time_fraction": 0.0225830078125,
+          "late_consumption_per_agent_tick": 1.1713773845837423,
+          "max_ledger_residual": 1.685596107137144e-13,
+          "max_relative_ledger_residual": 1.3039266902771685e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 3.8125,
+          "shortfall_per_agent_tick": 0.017162685628212847,
+          "terminal_inventory_per_agent": 5.55852976729359,
+          "terminal_stock_fraction": 0.8779875207548347,
+          "total_harvest_cost": 150.09361579419033,
+          "total_movement_cost": 1.8300000000000003,
+          "total_waste": 0.0
+        },
+        "need_0": {
+          "consumption_per_agent_tick": 1.1993489583229109,
+          "depleted_patch_time_fraction": 0.0,
+          "late_consumption_per_agent_tick": 1.2000000000000015,
+          "max_ledger_residual": 1.1812772982011666e-13,
+          "max_relative_ledger_residual": 9.547291356429453e-17,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 0.3333333333333333,
+          "shortfall_per_agent_tick": 0.0006510416770833332,
+          "terminal_inventory_per_agent": 0.08000000800000007,
+          "terminal_stock_fraction": 0.8931158331734148,
+          "total_harvest_cost": 149.44653061485755,
+          "total_movement_cost": 0.16,
+          "total_waste": 0.0
+        },
+        "need_2": {
+          "consumption_per_agent_tick": 1.1999999999999942,
+          "depleted_patch_time_fraction": 0.0,
+          "late_consumption_per_agent_tick": 1.2000000000000015,
+          "max_ledger_residual": 1.4011014570769476e-13,
+          "max_relative_ledger_residual": 1.0851918365475201e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 0.3333333333333333,
+          "shortfall_per_agent_tick": 0.0,
+          "terminal_inventory_per_agent": 2.480000008,
+          "terminal_stock_fraction": 0.8931158331734149,
+          "total_harvest_cost": 150.70367347330654,
+          "total_movement_cost": 0.16,
+          "total_waste": 0.0
+        }
+      },
+      "focal_deviation": {
+        "need_0": {
+          "consumption": {
+            "max": 0.0019531250312498916,
+            "mean": 0.0009765625156249458,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 2
+          },
+          "late_consumption": {
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 0
+          },
+          "peer_consumption": {
+            "max": 0.0,
+            "mean": -0.031163856667182507,
+            "min": -0.06113653600598172,
+            "n": 4,
+            "negative": 3,
+            "positive": 0
+          },
+          "terminal_inventory": {
+            "max": 78.719999992,
+            "mean": 78.719999992,
+            "min": 78.719999992,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.0": {
+            "max": 0.0019531250312498916,
+            "mean": 0.0009765625156249458,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 2
+          },
+          "utility_0.05": {
+            "max": 0.01732812502968739,
+            "mean": 0.016351562514062445,
+            "min": 0.0153749999984375,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.2": {
+            "max": 0.06345312502499989,
+            "mean": 0.062476562509374944,
+            "min": 0.06149999999375,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "world_consumption": {
+            "max": 0.0,
+            "mean": -0.02982467253456553,
+            "min": -0.0585078001294304,
+            "n": 4,
+            "negative": 3,
+            "positive": 0
+          }
+        },
+        "need_2": {
+          "consumption": {
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 0
+          },
+          "late_consumption": {
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 0
+          },
+          "peer_consumption": {
+            "max": 0.0,
+            "mean": -0.01790888935117843,
+            "min": -0.04082177615601779,
+            "n": 4,
+            "negative": 3,
+            "positive": 0
+          },
+          "terminal_inventory": {
+            "max": 76.31999999199999,
+            "mean": 76.31999999199999,
+            "min": 76.31999999199999,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.0": {
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 0
+          },
+          "utility_0.05": {
+            "max": 0.0149062499984375,
+            "mean": 0.0149062499984375,
+            "min": 0.0149062499984375,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.2": {
+            "max": 0.05962499999375,
+            "mean": 0.05962499999375,
+            "min": 0.05962499999375,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "world_consumption": {
+            "max": 0.0,
+            "mean": -0.01716268562821266,
+            "min": -0.039120868816183714,
+            "n": 4,
+            "negative": 3,
+            "positive": 0
+          }
+        }
+      },
+      "need": 1.2,
+      "pairs": 4,
+      "panel": "grid",
+      "renewal_rate": 0.36,
+      "reserve_comparison": {
+        "consumption_per_agent_tick": {
+          "max": 0.0006510416770832972,
+          "mean": 0.0006510416770832972,
+          "min": 0.0006510416770832972,
+          "n": 4,
+          "negative": 0,
+          "positive": 4
+        },
+        "depleted_patch_time_fraction": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "late_consumption_per_agent_tick": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "max_ledger_residual": {
+          "max": 3.5416114485542494e-14,
+          "mean": 2.19824158875781e-14,
+          "min": 1.3877787807814457e-14,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "max_relative_ledger_residual": {
+          "max": 4.1793867310233584e-17,
+          "mean": 1.304627009045747e-17,
+          "min": -3.387603302452128e-17,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "max_unaffordable_known_returns": {
+          "max": 0,
+          "mean": 0.0,
+          "min": 0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "movement_steps_per_agent": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "shortfall_per_agent_tick": {
+          "max": -0.0006510416770833332,
+          "mean": -0.0006510416770833332,
+          "min": -0.0006510416770833332,
+          "n": 4,
+          "negative": 4,
+          "positive": 0
+        },
+        "terminal_inventory_per_agent": {
+          "max": 2.4000000000000004,
+          "mean": 2.4000000000000004,
+          "min": 2.4000000000000004,
+          "n": 4,
+          "negative": 0,
+          "positive": 4
+        },
+        "terminal_stock_fraction": {
+          "max": 2.220446049250313e-16,
+          "mean": 1.942890293094024e-16,
+          "min": 1.1102230246251565e-16,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "total_harvest_cost": {
+          "max": 1.2571428584489865,
+          "mean": 1.2571428584489865,
+          "min": 1.2571428584489865,
+          "n": 4,
+          "negative": 0,
+          "positive": 4
+        },
+        "total_movement_cost": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "total_waste": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        }
+      }
+    },
+    {
+      "conditions": {
+        "focal_greedy_need_0": {
+          "consumption_per_agent_tick": 1.1352798569804254,
+          "depleted_patch_time_fraction": 0.1673583984375,
+          "late_consumption_per_agent_tick": 0.8130388656258852,
+          "max_ledger_residual": 1.314087727521951e-13,
+          "max_relative_ledger_residual": 1.331127413770611e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 32.8125,
+          "shortfall_per_agent_tick": 0.46472014301957626,
+          "terminal_inventory_per_agent": 3.3179825193029515,
+          "terminal_stock_fraction": 0.7111255360211346,
+          "total_harvest_cost": 143.3171637092044,
+          "total_movement_cost": 15.750000000000007,
+          "total_waste": 0.0
+        },
+        "focal_greedy_need_2": {
+          "consumption_per_agent_tick": 1.2794249922593572,
+          "depleted_patch_time_fraction": 0.12774658203125,
+          "late_consumption_per_agent_tick": 1.1666666666666656,
+          "max_ledger_residual": 1.3494760864318778e-13,
+          "max_relative_ledger_residual": 1.2041978249057223e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 22.96875,
+          "shortfall_per_agent_tick": 0.3205750077406463,
+          "terminal_inventory_per_agent": 5.529905513585175,
+          "terminal_stock_fraction": 0.7611218588973929,
+          "total_harvest_cost": 162.37816091362342,
+          "total_movement_cost": 11.025000000000006,
+          "total_waste": 0.0
+        },
+        "need_0": {
+          "consumption_per_agent_tick": 1.598307291656256,
+          "depleted_patch_time_fraction": 0.0,
+          "late_consumption_per_agent_tick": 1.5999999999999985,
+          "max_ledger_residual": 1.3455903058456897e-13,
+          "max_relative_ledger_residual": 1.0373620783912152e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 0.3333333333333333,
+          "shortfall_per_agent_tick": 0.0016927083437500003,
+          "terminal_inventory_per_agent": 0.08000000800000007,
+          "terminal_stock_fraction": 0.8263028792752428,
+          "total_harvest_cost": 199.47102041077662,
+          "total_movement_cost": 0.16,
+          "total_waste": 0.0
+        },
+        "need_2": {
+          "consumption_per_agent_tick": 1.6000000000000059,
+          "depleted_patch_time_fraction": 0.0,
+          "late_consumption_per_agent_tick": 1.5999999999999985,
+          "max_ledger_residual": 2.0616841567289157e-13,
+          "max_relative_ledger_residual": 1.5112123200440928e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 0.3333333333333333,
+          "shortfall_per_agent_tick": 0.0,
+          "terminal_inventory_per_agent": 3.2800000079999996,
+          "terminal_stock_fraction": 0.826302879275241,
+          "total_harvest_cost": 201.2506122488175,
+          "total_movement_cost": 0.16,
+          "total_waste": 0.0
+        }
+      },
+      "focal_deviation": {
+        "need_0": {
+          "consumption": {
+            "max": 0.005078125031249936,
+            "mean": 0.002539062515624968,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 2
+          },
+          "late_consumption": {
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 0
+          },
+          "peer_consumption": {
+            "max": 0.0,
+            "mean": -0.4832694562928503,
+            "min": -0.7000646481557083,
+            "n": 4,
+            "negative": 3,
+            "positive": 0
+          },
+          "terminal_inventory": {
+            "max": 78.319999992,
+            "mean": 78.319999992,
+            "min": 78.319999992,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.0": {
+            "max": 0.005078125031249936,
+            "mean": 0.002539062515624968,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 2
+          },
+          "utility_0.05": {
+            "max": 0.020375000029687437,
+            "mean": 0.01783593751406247,
+            "min": 0.015296874998437501,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.2": {
+            "max": 0.06626562502499994,
+            "mean": 0.06372656250937497,
+            "min": 0.061187499993750005,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "world_consumption": {
+            "max": 0.0,
+            "mean": -0.4630274346758305,
+            "min": -0.6706836992729185,
+            "n": 4,
+            "negative": 3,
+            "positive": 0
+          }
+        },
+        "need_2": {
+          "consumption": {
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 0
+          },
+          "late_consumption": {
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 0
+          },
+          "peer_consumption": {
+            "max": 0.0,
+            "mean": -0.3345130515554594,
+            "min": -0.4841356323118812,
+            "n": 4,
+            "negative": 3,
+            "positive": 0
+          },
+          "terminal_inventory": {
+            "max": 75.119999992,
+            "mean": 75.119999992,
+            "min": 75.119999992,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.0": {
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 0
+          },
+          "utility_0.05": {
+            "max": 0.0146718749984375,
+            "mean": 0.0146718749984375,
+            "min": 0.0146718749984375,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.2": {
+            "max": 0.05868749999375,
+            "mean": 0.05868749999375,
+            "min": 0.05868749999375,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "world_consumption": {
+            "max": 0.0,
+            "mean": -0.3205750077406486,
+            "min": -0.46396331429888615,
+            "n": 4,
+            "negative": 3,
+            "positive": 0
+          }
+        }
+      },
+      "need": 1.6,
+      "pairs": 4,
+      "panel": "grid",
+      "renewal_rate": 0.36,
+      "reserve_comparison": {
+        "consumption_per_agent_tick": {
+          "max": 0.0016927083437499046,
+          "mean": 0.0016927083437499046,
+          "min": 0.0016927083437499046,
+          "n": 4,
+          "negative": 0,
+          "positive": 4
+        },
+        "depleted_patch_time_fraction": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "late_consumption_per_agent_tick": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "max_ledger_residual": {
+          "max": 8.22675261247241e-14,
+          "mean": 7.16093850883226e-14,
+          "min": 6.80566714095221e-14,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "max_relative_ledger_residual": {
+          "max": 7.955382588553519e-17,
+          "mean": 4.738502416528777e-17,
+          "min": 1.0588782598935225e-17,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "max_unaffordable_known_returns": {
+          "max": 0,
+          "mean": 0.0,
+          "min": 0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "movement_steps_per_agent": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "shortfall_per_agent_tick": {
+          "max": -0.0016927083437500003,
+          "mean": -0.0016927083437500003,
+          "min": -0.0016927083437500003,
+          "n": 4,
+          "negative": 4,
+          "positive": 0
+        },
+        "terminal_inventory_per_agent": {
+          "max": 3.1999999999999993,
+          "mean": 3.1999999999999993,
+          "min": 3.1999999999999993,
+          "n": 4,
+          "negative": 0,
+          "positive": 4
+        },
+        "terminal_stock_fraction": {
+          "max": -1.2212453270876722e-15,
+          "mean": -1.8041124150158794e-15,
+          "min": -2.220446049250313e-15,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "total_harvest_cost": {
+          "max": 1.7795918380408864,
+          "mean": 1.7795918380408864,
+          "min": 1.7795918380408864,
+          "n": 4,
+          "negative": 0,
+          "positive": 4
+        },
+        "total_movement_cost": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "total_waste": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        }
+      }
+    },
+    {
+      "conditions": {
+        "focal_greedy_need_0": {
+          "consumption_per_agent_tick": 0.5665884411732686,
+          "depleted_patch_time_fraction": 0.30682373046875,
+          "late_consumption_per_agent_tick": 0.3104930897484792,
+          "max_ledger_residual": 1.1379786002407855e-13,
+          "max_relative_ledger_residual": 1.339935118324019e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 114.02083333333333,
+          "shortfall_per_agent_tick": 0.6334115588267274,
+          "terminal_inventory_per_agent": 3.3199087988341245,
+          "terminal_stock_fraction": 0.5726432612840487,
+          "total_harvest_cost": 143.84993012875793,
+          "total_movement_cost": 54.73000000000002,
+          "total_waste": 0.0
+        },
+        "focal_greedy_need_2": {
+          "consumption_per_agent_tick": 0.6126648120565189,
+          "depleted_patch_time_fraction": 0.280853271484375,
+          "late_consumption_per_agent_tick": 0.3241063017293204,
+          "max_ledger_residual": 1.327549181695531e-13,
+          "max_relative_ledger_residual": 1.323059848768858e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 93.63541666666667,
+          "shortfall_per_agent_tick": 0.5873351879434769,
+          "terminal_inventory_per_agent": 3.870464510103014,
+          "terminal_stock_fraction": 0.6223001346821447,
+          "total_harvest_cost": 155.47472160802,
+          "total_movement_cost": 44.94500000000003,
+          "total_waste": 0.0
+        },
+        "need_0": {
+          "consumption_per_agent_tick": 0.798804163310604,
+          "depleted_patch_time_fraction": 0.2069091796875,
+          "late_consumption_per_agent_tick": 0.3830880781571003,
+          "max_ledger_residual": 9.899026043314052e-14,
+          "max_relative_ledger_residual": 1.0402744137630378e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 74.51041666666667,
+          "shortfall_per_agent_tick": 0.40119583668939185,
+          "terminal_inventory_per_agent": 0.0396255810940832,
+          "terminal_stock_fraction": 0.5694690143127032,
+          "total_harvest_cost": 200.09023617769336,
+          "total_movement_cost": 35.76500000000002,
+          "total_waste": 0.0
+        },
+        "need_2": {
+          "consumption_per_agent_tick": 0.8046150793549616,
+          "depleted_patch_time_fraction": 0.2135009765625,
+          "late_consumption_per_agent_tick": 0.3857097702310323,
+          "max_ledger_residual": 1.3072876114961218e-13,
+          "max_relative_ledger_residual": 1.3197477506237736e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 71.85416666666667,
+          "shortfall_per_agent_tick": 0.39538492064503405,
+          "terminal_inventory_per_agent": 0.6146510809098151,
+          "terminal_stock_fraction": 0.521295111780494,
+          "total_harvest_cost": 201.80309634807392,
+          "total_movement_cost": 34.49000000000002,
+          "total_waste": 0.0
+        }
+      },
+      "focal_deviation": {
+        "need_0": {
+          "consumption": {
+            "max": 0.7229026693146102,
+            "mean": 0.5051797173709419,
+            "min": 0.028822312705292452,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "late_consumption": {
+            "max": 1.1999999999999997,
+            "mean": 0.8999999999999998,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 3
+          },
+          "peer_consumption": {
+            "max": -0.14554224130874807,
+            "mean": -0.264276393420304,
+            "min": -0.3659585535758322,
+            "n": 4,
+            "negative": 4,
+            "positive": 0
+          },
+          "terminal_inventory": {
+            "max": 78.77735026905593,
+            "mean": 78.751551803428,
+            "min": 78.719999992,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.0": {
+            "max": 0.7229026693146102,
+            "mean": 0.5051797173709419,
+            "min": 0.028822312705292452,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.05": {
+            "max": 0.7305937297200382,
+            "mean": 0.5128702986017454,
+            "min": 0.0365098127045112,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.2": {
+            "max": 0.7536669109363221,
+            "mean": 0.5359420422941559,
+            "min": 0.05957231270216745,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "world_consumption": {
+            "max": -0.11111241841114572,
+            "mean": -0.23221572213733543,
+            "min": -0.34950935081411866,
+            "n": 4,
+            "negative": 4,
+            "positive": 0
+          }
+        },
+        "need_2": {
+          "consumption": {
+            "max": 0.7285063567961578,
+            "mean": 0.25377581468566385,
+            "min": 0.03984152680179465,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "late_consumption": {
+            "max": 1.1999999999999997,
+            "mean": 0.5170285182604595,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 3
+          },
+          "peer_consumption": {
+            "max": -0.13681369917619804,
+            "mean": -0.21132966216731697,
+            "min": -0.25112808590854735,
+            "n": 4,
+            "negative": 4,
+            "positive": 0
+          },
+          "terminal_inventory": {
+            "max": 78.78174533354701,
+            "mean": 77.54918850480757,
+            "min": 76.31999999199999,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.0": {
+            "max": 0.7285063567961578,
+            "mean": 0.25377581468566385,
+            "min": 0.03984152680179465,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.05": {
+            "max": 0.7361992287396816,
+            "mean": 0.26134897762558645,
+            "min": 0.047294651801013395,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.2": {
+            "max": 0.7592778445702528,
+            "mean": 0.2840684664453543,
+            "min": 0.06965402679866964,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "world_consumption": {
+            "max": -0.10075869684401655,
+            "mean": -0.19195026729844275,
+            "min": -0.23900435204561643,
+            "n": 4,
+            "negative": 4,
+            "positive": 0
+          }
+        }
+      },
+      "need": 1.2,
+      "pairs": 4,
+      "panel": "long_horizon",
+      "renewal_rate": 0.24,
+      "reserve_comparison": {
+        "consumption_per_agent_tick": {
+          "max": 0.05819860407243571,
+          "mean": 0.0058109160443576,
+          "min": -0.07168881821632156,
+          "n": 4,
+          "negative": 2,
+          "positive": 2
+        },
+        "depleted_patch_time_fraction": {
+          "max": 0.030029296875,
+          "mean": 0.006591796875,
+          "min": -0.0242919921875,
+          "n": 4,
+          "negative": 1,
+          "positive": 3
+        },
+        "late_consumption_per_agent_tick": {
+          "max": 0.10665608431933826,
+          "mean": 0.002621692073932036,
+          "min": -0.14431545353671205,
+          "n": 4,
+          "negative": 1,
+          "positive": 3
+        },
+        "max_ledger_residual": {
+          "max": 4.590772206825022e-14,
+          "mean": 3.173850071647166e-14,
+          "min": 2.120525977034049e-14,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "max_relative_ledger_residual": {
+          "max": 9.632516871374362e-17,
+          "mean": 2.794733368607357e-17,
+          "min": -2.863110992181006e-17,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "max_unaffordable_known_returns": {
+          "max": 0,
+          "mean": 0.0,
+          "min": 0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "movement_steps_per_agent": {
+          "max": 2.625,
+          "mean": -2.65625,
+          "min": -12.375,
+          "n": 4,
+          "negative": 2,
+          "positive": 2
+        },
+        "shortfall_per_agent_tick": {
+          "max": 0.07168881821632062,
+          "mean": -0.005810916044357767,
+          "min": -0.058198604072435045,
+          "n": 4,
+          "negative": 2,
+          "positive": 2
+        },
+        "terminal_inventory_per_agent": {
+          "max": 0.6012604569368374,
+          "mean": 0.5750254998157319,
+          "min": 0.5130035370441911,
+          "n": 4,
+          "negative": 0,
+          "positive": 4
+        },
+        "terminal_stock_fraction": {
+          "max": 0.030007893273800712,
+          "mean": -0.048173902532209226,
+          "min": -0.13772435741066807,
+          "n": 4,
+          "negative": 3,
+          "positive": 1
+        },
+        "total_harvest_cost": {
+          "max": 14.724827178186501,
+          "mean": 1.7128601703805728,
+          "min": -17.665346743267946,
+          "n": 4,
+          "negative": 2,
+          "positive": 2
+        },
+        "total_movement_cost": {
+          "max": 1.259999999999998,
+          "mean": -1.2750000000000004,
+          "min": -5.940000000000005,
+          "n": 4,
+          "negative": 2,
+          "positive": 2
+        },
+        "total_waste": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        }
+      }
+    },
+    {
+      "conditions": {
+        "focal_greedy_need_0": {
+          "consumption_per_agent_tick": 0.8599855581901009,
+          "depleted_patch_time_fraction": 0.21197509765625,
+          "late_consumption_per_agent_tick": 0.5845817171235503,
+          "max_ledger_residual": 1.1460277171693178e-13,
+          "max_relative_ledger_residual": 1.339935118324019e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 33.645833333333336,
+          "shortfall_per_agent_tick": 0.3400144418098951,
+          "terminal_inventory_per_agent": 3.088323207339112,
+          "terminal_stock_fraction": 0.4447916514211092,
+          "total_harvest_cost": 108.6943066631867,
+          "total_movement_cost": 16.150000000000006,
+          "total_waste": 0.0
+        },
+        "focal_greedy_need_2": {
+          "consumption_per_agent_tick": 0.7822420411600185,
+          "depleted_patch_time_fraction": 0.25372314453125,
+          "late_consumption_per_agent_tick": 0.4799691582823118,
+          "max_ledger_residual": 1.2866097076624783e-13,
+          "max_relative_ledger_residual": 1.323059848768858e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 40.010416666666664,
+          "shortfall_per_agent_tick": 0.41775795883997824,
+          "terminal_inventory_per_agent": 4.102426142992511,
+          "terminal_stock_fraction": 0.5090167992834247,
+          "total_harvest_cost": 99.50527200651011,
+          "total_movement_cost": 19.20500000000001,
+          "total_waste": 0.0
+        },
+        "need_0": {
+          "consumption_per_agent_tick": 1.1213740407147275,
+          "depleted_patch_time_fraction": 0.06268310546875,
+          "late_consumption_per_agent_tick": 0.903300181154614,
+          "max_ledger_residual": 9.77273817426294e-14,
+          "max_relative_ledger_residual": 1.0402744137630378e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 9.989583333333334,
+          "shortfall_per_agent_tick": 0.07862595928526742,
+          "terminal_inventory_per_agent": 0.06048296733880929,
+          "terminal_stock_fraction": 0.48325270762896433,
+          "total_harvest_cost": 139.75446321158088,
+          "total_movement_cost": 4.795000000000001,
+          "total_waste": 0.0
+        },
+        "need_2": {
+          "consumption_per_agent_tick": 1.1128355758227295,
+          "depleted_patch_time_fraction": 0.0692138671875,
+          "late_consumption_per_agent_tick": 0.8631839271435823,
+          "max_ledger_residual": 1.3072876114961218e-13,
+          "max_relative_ledger_residual": 1.3197477506237736e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 10.739583333333334,
+          "shortfall_per_agent_tick": 0.08716442417726562,
+          "terminal_inventory_per_agent": 1.4261831026342526,
+          "terminal_stock_fraction": 0.48192905560410604,
+          "total_harvest_cost": 139.36010555751255,
+          "total_movement_cost": 5.155000000000001,
+          "total_waste": 0.0
+        }
+      },
+      "focal_deviation": {
+        "need_0": {
+          "consumption": {
+            "max": 0.24559505222717826,
+            "mean": 0.10624656078201763,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 3
+          },
+          "late_consumption": {
+            "max": 0.9745677087837241,
+            "mean": 0.42107999306557553,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 3
+          },
+          "peer_consumption": {
+            "max": -0.19159584013576186,
+            "mean": -0.27737261484230685,
+            "min": -0.3693993764858073,
+            "n": 4,
+            "negative": 4,
+            "positive": 0
+          },
+          "terminal_inventory": {
+            "max": 78.744038138324,
+            "mean": 72.94502697141571,
+            "min": 55.59606976333886,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.0": {
+            "max": 0.24559505222717826,
+            "mean": 0.10624656078201763,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 3
+          },
+          "utility_0.05": {
+            "max": 0.26097474717606967,
+            "mean": 0.12049363636237226,
+            "min": 0.0153749999984375,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.2": {
+            "max": 0.3071138320227439,
+            "mean": 0.16323486310343616,
+            "min": 0.06149999999375,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "world_consumption": {
+            "max": -0.18361268013010512,
+            "mean": -0.26138848252462665,
+            "min": -0.35334041808926325,
+            "n": 4,
+            "negative": 4,
+            "positive": 0
+          }
+        },
+        "need_2": {
+          "consumption": {
+            "max": 0.25743422941611793,
+            "mean": 0.08227692864876454,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 2
+          },
+          "late_consumption": {
+            "max": 1.0297369176644833,
+            "mean": 0.32910771459506194,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 2
+          },
+          "peer_consumption": {
+            "max": -0.26055897390966687,
+            "mean": -0.3485444243719055,
+            "min": -0.3959535634406271,
+            "n": 4,
+            "negative": 4,
+            "positive": 0
+          },
+          "terminal_inventory": {
+            "max": 78.79281011281137,
+            "mean": 76.93820252220283,
+            "min": 76.31999999199999,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.0": {
+            "max": 0.25743422941611793,
+            "mean": 0.08227692864876454,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 2
+          },
+          "utility_0.05": {
+            "max": 0.2728234501412764,
+            "mean": 0.09730392132888228,
+            "min": 0.0149062499984375,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.2": {
+            "max": 0.3189911123167518,
+            "mean": 0.1423848993692355,
+            "min": 0.05962499999375,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "world_consumption": {
+            "max": -0.24970234999676408,
+            "mean": -0.33059353466271096,
+            "min": -0.36872907207159605,
+            "n": 4,
+            "negative": 4,
+            "positive": 0
+          }
+        }
+      },
+      "need": 1.2,
+      "pairs": 4,
+      "panel": "keyed_priority",
+      "renewal_rate": 0.24,
+      "reserve_comparison": {
+        "consumption_per_agent_tick": {
+          "max": 0.009137039091155597,
+          "mean": -0.008538464891998054,
+          "min": -0.024217802926894905,
+          "n": 4,
+          "negative": 3,
+          "positive": 1
+        },
+        "depleted_patch_time_fraction": {
+          "max": 0.014892578125,
+          "mean": 0.00653076171875,
+          "min": -0.00830078125,
+          "n": 4,
+          "negative": 1,
+          "positive": 3
+        },
+        "late_consumption_per_agent_tick": {
+          "max": 0.03709333964102213,
+          "mean": -0.04011625401103172,
+          "min": -0.1217131025233571,
+          "n": 4,
+          "negative": 3,
+          "positive": 1
+        },
+        "max_ledger_residual": {
+          "max": 5.0959236830294685e-14,
+          "mean": 3.300137940698278e-14,
+          "min": 2.120525977034049e-14,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "max_relative_ledger_residual": {
+          "max": 9.632516871374362e-17,
+          "mean": 2.794733368607357e-17,
+          "min": -2.863110992181006e-17,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "max_unaffordable_known_returns": {
+          "max": 0,
+          "mean": 0.0,
+          "min": 0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "movement_steps_per_agent": {
+          "max": 1.9583333333333321,
+          "mean": 0.7499999999999998,
+          "min": -1.375,
+          "n": 4,
+          "negative": 1,
+          "positive": 3
+        },
+        "shortfall_per_agent_tick": {
+          "max": 0.024217802926895307,
+          "mean": 0.00853846489199821,
+          "min": -0.009137039091155708,
+          "n": 4,
+          "negative": 1,
+          "positive": 3
+        },
+        "terminal_inventory_per_agent": {
+          "max": 1.9057048712947848,
+          "mean": 1.3657001352954432,
+          "min": 0.8903657495854511,
+          "n": 4,
+          "negative": 0,
+          "positive": 4
+        },
+        "terminal_stock_fraction": {
+          "max": 0.0683717423058573,
+          "mean": -0.0013236520248583322,
+          "min": -0.057188193977315005,
+          "n": 4,
+          "negative": 2,
+          "positive": 2
+        },
+        "total_harvest_cost": {
+          "max": 1.755263942615585,
+          "mean": -0.39435765406833667,
+          "min": -2.581334759036679,
+          "n": 4,
+          "negative": 3,
+          "positive": 1
+        },
+        "total_movement_cost": {
+          "max": 0.9399999999999995,
+          "mean": 0.3600000000000003,
+          "min": -0.6599999999999993,
+          "n": 4,
+          "negative": 1,
+          "positive": 3
+        },
+        "total_waste": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        }
+      }
+    },
+    {
+      "conditions": {
+        "focal_greedy_need_0": {
+          "consumption_per_agent_tick": 0.8451677531656379,
+          "depleted_patch_time_fraction": 0.228271484375,
+          "late_consumption_per_agent_tick": 0.5845623424073852,
+          "max_ledger_residual": 9.767187059139815e-14,
+          "max_relative_ledger_residual": 7.12782342032277e-17,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 39.03125,
+          "shortfall_per_agent_tick": 0.35483224683435866,
+          "terminal_inventory_per_agent": 3.33127944960977,
+          "terminal_stock_fraction": 0.5168803063679012,
+          "total_harvest_cost": 107.0080894334763,
+          "total_movement_cost": 18.73500000000001,
+          "total_waste": 0.0
+        },
+        "focal_greedy_need_2": {
+          "consumption_per_agent_tick": 0.5846436888700488,
+          "depleted_patch_time_fraction": 0.36199951171875,
+          "late_consumption_per_agent_tick": 0.292783664459677,
+          "max_ledger_residual": 1.0275634509948617e-13,
+          "max_relative_ledger_residual": 1.1195609670784295e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 61.25,
+          "shortfall_per_agent_tick": 0.6153563111299485,
+          "terminal_inventory_per_agent": 3.823515782747321,
+          "terminal_stock_fraction": 0.5221458920266263,
+          "total_harvest_cost": 74.80031026945973,
+          "total_movement_cost": 29.400000000000016,
+          "total_waste": 0.0
+        },
+        "need_0": {
+          "consumption_per_agent_tick": 1.06356981725277,
+          "depleted_patch_time_fraction": 0.09954833984375,
+          "late_consumption_per_agent_tick": 0.7652726233777729,
+          "max_ledger_residual": 8.948397578478762e-14,
+          "max_relative_ledger_residual": 5.262936771728075e-17,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 18.520833333333332,
+          "shortfall_per_agent_tick": 0.1364301827472258,
+          "terminal_inventory_per_agent": 0.05749242473067705,
+          "terminal_stock_fraction": 0.5117153808873975,
+          "total_harvest_cost": 132.5886280692774,
+          "total_movement_cost": 8.890000000000004,
+          "total_waste": 0.0
+        },
+        "need_2": {
+          "consumption_per_agent_tick": 0.8086857340119828,
+          "depleted_patch_time_fraction": 0.2740478515625,
+          "late_consumption_per_agent_tick": 0.5441155672505851,
+          "max_ledger_residual": 1.0073886169692514e-13,
+          "max_relative_ledger_residual": 8.240416947487866e-17,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 43.53125,
+          "shortfall_per_agent_tick": 0.39131426598801394,
+          "terminal_inventory_per_agent": 1.0244152099962058,
+          "terminal_stock_fraction": 0.5640307664270444,
+          "total_harvest_cost": 101.3478798940725,
+          "total_movement_cost": 20.89500000000001,
+          "total_waste": 0.0
+        }
+      },
+      "focal_deviation": {
+        "need_0": {
+          "consumption": {
+            "max": 0.46255397399119735,
+            "mean": 0.18648636213709985,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 2
+          },
+          "late_consumption": {
+            "max": 1.2000000000000015,
+            "mean": 0.543889130610127,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 2
+          },
+          "peer_consumption": {
+            "max": -0.1688080759906007,
+            "mean": -0.23600590870557692,
+            "min": -0.310869136184475,
+            "n": 4,
+            "negative": 4,
+            "positive": 0
+          },
+          "terminal_inventory": {
+            "max": 78.77878985138791,
+            "mean": 78.74247943884674,
+            "min": 78.719999992,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.0": {
+            "max": 0.46255397399119735,
+            "mean": 0.18648636213709985,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 2
+          },
+          "utility_0.05": {
+            "max": 0.47793505366307215,
+            "mean": 0.2018657526524996,
+            "min": 0.0153749999984375,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.2": {
+            "max": 0.5240782926786967,
+            "mean": 0.24800392419869888,
+            "min": 0.06149999999375,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "world_consumption": {
+            "max": -0.161774406157659,
+            "mean": -0.21840206408713203,
+            "min": -0.29791625551012185,
+            "n": 4,
+            "negative": 4,
+            "positive": 0
+          }
+        },
+        "need_2": {
+          "consumption": {
+            "max": 0.540832781113982,
+            "mean": 0.2460372792939351,
+            "min": 0.020876178944696067,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "late_consumption": {
+            "max": 1.2000000000000015,
+            "mean": 0.6718484352274232,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 3
+          },
+          "peer_consumption": {
+            "max": -0.08190515920947379,
+            "mean": -0.2444802766391458,
+            "min": -0.30983911105021944,
+            "n": 4,
+            "negative": 4,
+            "positive": 0
+          },
+          "terminal_inventory": {
+            "max": 78.779999992,
+            "mean": 78.16060969001234,
+            "min": 76.31999999199999,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.0": {
+            "max": 0.540832781113982,
+            "mean": 0.2460372792939351,
+            "min": 0.020876178944696067,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.05": {
+            "max": 0.5562180578038377,
+            "mean": 0.2613030233740156,
+            "min": 0.03578242894313356,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.2": {
+            "max": 0.6023738878734048,
+            "mean": 0.30710025561425724,
+            "min": 0.08050117893844606,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "world_consumption": {
+            "max": -0.07137488059907167,
+            "mean": -0.22404204514193407,
+            "min": -0.2858874398036713,
+            "n": 4,
+            "negative": 4,
+            "positive": 0
+          }
+        }
+      },
+      "need": 1.2,
+      "pairs": 4,
+      "panel": "lower_stock",
+      "renewal_rate": 0.24,
+      "reserve_comparison": {
+        "consumption_per_agent_tick": {
+          "max": -0.17031245819726992,
+          "mean": -0.25488408324078704,
+          "min": -0.33387868544630694,
+          "n": 4,
+          "negative": 4,
+          "positive": 0
+        },
+        "depleted_patch_time_fraction": {
+          "max": 0.239013671875,
+          "mean": 0.17449951171875,
+          "min": 0.133544921875,
+          "n": 4,
+          "negative": 0,
+          "positive": 4
+        },
+        "late_consumption_per_agent_tick": {
+          "max": -0.004495361589451297,
+          "mean": -0.2211570561271878,
+          "min": -0.4900964218590947,
+          "n": 4,
+          "negative": 4,
+          "positive": 0
+        },
+        "max_ledger_residual": {
+          "max": 3.552713678800501e-14,
+          "mean": 1.1254885912137524e-14,
+          "min": -1.1102230246251565e-14,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "max_relative_ledger_residual": {
+          "max": 7.045963078144476e-17,
+          "mean": 2.977480175759791e-17,
+          "min": 1.460543775868169e-17,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "max_unaffordable_known_returns": {
+          "max": 0,
+          "mean": 0.0,
+          "min": 0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "movement_steps_per_agent": {
+          "max": 30.5,
+          "mean": 25.010416666666664,
+          "min": 21.083333333333332,
+          "n": 4,
+          "negative": 0,
+          "positive": 4
+        },
+        "shortfall_per_agent_tick": {
+          "max": 0.3338786854463087,
+          "mean": 0.25488408324078815,
+          "min": 0.17031245819727026,
+          "n": 4,
+          "negative": 0,
+          "positive": 4
+        },
+        "terminal_inventory_per_agent": {
+          "max": 1.3971215538917423,
+          "mean": 0.9669227852655289,
+          "min": 0.5942637684979076,
+          "n": 4,
+          "negative": 0,
+          "positive": 4
+        },
+        "terminal_stock_fraction": {
+          "max": 0.12824404844228565,
+          "mean": 0.05231538553964696,
+          "min": -0.05909016462395367,
+          "n": 4,
+          "negative": 1,
+          "positive": 3
+        },
+        "total_harvest_cost": {
+          "max": -20.444669915727218,
+          "mean": -31.240748175204896,
+          "min": -41.28682487678812,
+          "n": 4,
+          "negative": 4,
+          "positive": 0
+        },
+        "total_movement_cost": {
+          "max": 14.640000000000008,
+          "mean": 12.005000000000006,
+          "min": 10.120000000000006,
+          "n": 4,
+          "negative": 0,
+          "positive": 4
+        },
+        "total_waste": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        }
+      }
+    },
+    {
+      "conditions": {
+        "focal_greedy_need_0": {
+          "consumption_per_agent_tick": 1.1937661177929009,
+          "depleted_patch_time_fraction": 0.045166015625,
+          "late_consumption_per_agent_tick": 1.1992763415983438,
+          "max_ledger_residual": 1.7380541450506826e-13,
+          "max_relative_ledger_residual": 1.409246307963226e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 0.3333333333333333,
+          "shortfall_per_agent_tick": 0.0062338822070933195,
+          "terminal_inventory_per_agent": 3.3593760984979464,
+          "terminal_stock_fraction": 0.8732107956775638,
+          "total_harvest_cost": 150.3527357976243,
+          "total_movement_cost": 0.16,
+          "total_waste": 0.0
+        },
+        "focal_greedy_need_2": {
+          "consumption_per_agent_tick": 1.1997841828085893,
+          "depleted_patch_time_fraction": 0.04534912109375,
+          "late_consumption_per_agent_tick": 1.1996374095436924,
+          "max_ledger_residual": 1.763311718860905e-13,
+          "max_relative_ledger_residual": 1.1235043315303536e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 0.3333333333333333,
+          "shortfall_per_agent_tick": 0.00021581719140494873,
+          "terminal_inventory_per_agent": 4.242066809000569,
+          "terminal_stock_fraction": 0.8566346982695712,
+          "total_harvest_cost": 151.53966576718452,
+          "total_movement_cost": 0.16,
+          "total_waste": 0.0
+        },
+        "need_0": {
+          "consumption_per_agent_tick": 1.1993489583229109,
+          "depleted_patch_time_fraction": 0.0,
+          "late_consumption_per_agent_tick": 1.2000000000000015,
+          "max_ledger_residual": 1.3777867735598193e-13,
+          "max_relative_ledger_residual": 8.755905656758016e-17,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 0.3333333333333333,
+          "shortfall_per_agent_tick": 0.0006510416770833332,
+          "terminal_inventory_per_agent": 0.08000000800000007,
+          "terminal_stock_fraction": 0.9094997079046396,
+          "total_harvest_cost": 149.44653061485755,
+          "total_movement_cost": 0.16,
+          "total_waste": 0.0
+        },
+        "need_2": {
+          "consumption_per_agent_tick": 1.1999999999999942,
+          "depleted_patch_time_fraction": 0.0,
+          "late_consumption_per_agent_tick": 1.2000000000000015,
+          "max_ledger_residual": 1.3922196728799463e-13,
+          "max_relative_ledger_residual": 1.2398864813242201e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 0.3333333333333333,
+          "shortfall_per_agent_tick": 0.0,
+          "terminal_inventory_per_agent": 2.480000008,
+          "terminal_stock_fraction": 0.8913223694695241,
+          "total_harvest_cost": 150.70367347330654,
+          "total_movement_cost": 0.16,
+          "total_waste": 0.0
+        }
+      },
+      "focal_deviation": {
+        "need_0": {
+          "consumption": {
+            "max": 0.0019531250312498916,
+            "mean": 0.0009765625156249458,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 2
+          },
+          "late_consumption": {
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 0
+          },
+          "peer_consumption": {
+            "max": 0.0,
+            "mean": -0.0058680319667766545,
+            "min": -0.00829970601679494,
+            "n": 4,
+            "negative": 3,
+            "positive": 0
+          },
+          "terminal_inventory": {
+            "max": 78.719999992,
+            "mean": 78.70502617195072,
+            "min": 78.66010471180286,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.0": {
+            "max": 0.0019531250312498916,
+            "mean": 0.0009765625156249458,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 2
+          },
+          "utility_0.05": {
+            "max": 0.01732812502968739,
+            "mean": 0.01634863793983407,
+            "min": 0.015363301701523996,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.2": {
+            "max": 0.06345312502499989,
+            "mean": 0.06246486421246144,
+            "min": 0.061453206806095985,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "world_consumption": {
+            "max": 0.0,
+            "mean": -0.005582840530009922,
+            "min": -0.007872504723126405,
+            "n": 4,
+            "negative": 3,
+            "positive": 0
+          }
+        },
+        "need_2": {
+          "consumption": {
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 0
+          },
+          "late_consumption": {
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 0
+          },
+          "peer_consumption": {
+            "max": 0.0,
+            "mean": -0.0002252005475529477,
+            "min": -0.00045161314045848107,
+            "n": 4,
+            "negative": 3,
+            "positive": 0
+          },
+          "terminal_inventory": {
+            "max": 76.31999999199999,
+            "mean": 43.91753725982471,
+            "min": 31.79840629196134,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.0": {
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 0
+          },
+          "utility_0.05": {
+            "max": 0.0149062499984375,
+            "mean": 0.008577643996059514,
+            "min": 0.006210626228898699,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.2": {
+            "max": 0.05962499999375,
+            "mean": 0.034310575984238055,
+            "min": 0.024842504915594796,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "world_consumption": {
+            "max": 0.0,
+            "mean": -0.00021581719140490824,
+            "min": -0.000432795926272711,
+            "n": 4,
+            "negative": 3,
+            "positive": 0
+          }
+        }
+      },
+      "need": 1.2,
+      "pairs": 4,
+      "panel": "additive",
+      "renewal_rate": 0.24,
+      "reserve_comparison": {
+        "consumption_per_agent_tick": {
+          "max": 0.0006510416770832972,
+          "mean": 0.0006510416770832972,
+          "min": 0.0006510416770832972,
+          "n": 4,
+          "negative": 0,
+          "positive": 4
+        },
+        "depleted_patch_time_fraction": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "late_consumption_per_agent_tick": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "max_ledger_residual": {
+          "max": 1.7430501486614958e-14,
+          "mean": 1.4432899320127035e-15,
+          "min": -1.099120794378905e-14,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "max_relative_ledger_residual": {
+          "max": 5.108113860014872e-17,
+          "mean": 3.642959156484184e-17,
+          "min": 3.512420762984261e-19,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "max_unaffordable_known_returns": {
+          "max": 0,
+          "mean": 0.0,
+          "min": 0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "movement_steps_per_agent": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "shortfall_per_agent_tick": {
+          "max": -0.0006510416770833332,
+          "mean": -0.0006510416770833332,
+          "min": -0.0006510416770833332,
+          "n": 4,
+          "negative": 4,
+          "positive": 0
+        },
+        "terminal_inventory_per_agent": {
+          "max": 2.4000000000000004,
+          "mean": 2.4000000000000004,
+          "min": 2.4000000000000004,
+          "n": 4,
+          "negative": 0,
+          "positive": 4
+        },
+        "terminal_stock_fraction": {
+          "max": -0.01698280355820181,
+          "mean": -0.018177338435115403,
+          "min": -0.01935555996429006,
+          "n": 4,
+          "negative": 4,
+          "positive": 0
+        },
+        "total_harvest_cost": {
+          "max": 1.2571428584489865,
+          "mean": 1.2571428584489865,
+          "min": 1.2571428584489865,
+          "n": 4,
+          "negative": 0,
+          "positive": 4
+        },
+        "total_movement_cost": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "total_waste": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        }
+      }
+    },
+    {
+      "conditions": {
+        "focal_greedy_need_0": {
+          "consumption_per_agent_tick": 1.1214398274122057,
+          "depleted_patch_time_fraction": 0.064453125,
+          "late_consumption_per_agent_tick": 0.903423702371559,
+          "max_ledger_residual": 1.0542955397596643e-13,
+          "max_relative_ledger_residual": 1.1905932931131346e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 12.0625,
+          "shortfall_per_agent_tick": 0.0785601725877894,
+          "terminal_inventory_per_agent": 0.2733915381487506,
+          "terminal_stock_fraction": 0.4787967272290302,
+          "total_harvest_cost": 139.88729992931036,
+          "total_movement_cost": 5.790000000000002,
+          "total_waste": 0.0
+        },
+        "focal_greedy_need_2": {
+          "consumption_per_agent_tick": 1.1363527275810925,
+          "depleted_patch_time_fraction": 0.0726318359375,
+          "late_consumption_per_agent_tick": 0.9559376317774645,
+          "max_ledger_residual": 1.2159717677207027e-13,
+          "max_relative_ledger_residual": 1.3453549513857536e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 10.552083333333334,
+          "shortfall_per_agent_tick": 0.0636472724189023,
+          "terminal_inventory_per_agent": 1.7148050676766284,
+          "terminal_stock_fraction": 0.4126378780600565,
+          "total_harvest_cost": 142.4483975486228,
+          "total_movement_cost": 5.065000000000001,
+          "total_waste": 0.0
+        },
+        "need_0": {
+          "consumption_per_agent_tick": 1.1230826091031623,
+          "depleted_patch_time_fraction": 0.05938720703125,
+          "late_consumption_per_agent_tick": 0.9101575895546569,
+          "max_ledger_residual": 9.77273817426294e-14,
+          "max_relative_ledger_residual": 1.0402744137630378e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 11.177083333333334,
+          "shortfall_per_agent_tick": 0.07691739089683267,
+          "terminal_inventory_per_agent": 0.06214116683690076,
+          "terminal_stock_fraction": 0.5018017153777523,
+          "total_harvest_cost": 139.98114159865224,
+          "total_movement_cost": 5.365000000000002,
+          "total_waste": 0.0
+        },
+        "need_2": {
+          "consumption_per_agent_tick": 1.1372478978478893,
+          "depleted_patch_time_fraction": 0.06591796875,
+          "late_consumption_per_agent_tick": 0.9594618305794752,
+          "max_ledger_residual": 1.3072876114961218e-13,
+          "max_relative_ledger_residual": 1.3197477506237736e-16,
+          "max_unaffordable_known_returns": 0.0,
+          "movement_steps_per_agent": 10.322916666666668,
+          "shortfall_per_agent_tick": 0.0627521021521055,
+          "terminal_inventory_per_agent": 1.5776934551937432,
+          "terminal_stock_fraction": 0.4495601834783368,
+          "total_harvest_cost": 142.49123933269647,
+          "total_movement_cost": 4.955000000000001,
+          "total_waste": 0.0
+        }
+      },
+      "focal_deviation": {
+        "need_0": {
+          "consumption": {
+            "max": 0.13772744027492423,
+            "mean": 0.05594178847603465,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 3
+          },
+          "late_consumption": {
+            "max": 0.5509097610997028,
+            "mean": 0.21986090384164103,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 3
+          },
+          "peer_consumption": {
+            "max": 0.008048152864816782,
+            "mean": -0.004146458654738961,
+            "min": -0.018592181597116016,
+            "n": 4,
+            "negative": 2,
+            "positive": 1
+          },
+          "terminal_inventory": {
+            "max": 6.783649275009998,
+            "mean": 5.062222226014793,
+            "min": 0.02523964504917639,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.0": {
+            "max": 0.13772744027492423,
+            "mean": 0.05594178847603465,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 3
+          },
+          "utility_0.05": {
+            "max": 0.1390523717739496,
+            "mean": 0.056930503754553156,
+            "min": 0.0013124999984375,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.2": {
+            "max": 0.1430271662710258,
+            "mean": 0.05989664959010871,
+            "min": 0.00524999999375,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "world_consumption": {
+            "max": 0.008380130871751488,
+            "mean": -0.001642781690956728,
+            "min": -0.014899837005654323,
+            "n": 4,
+            "negative": 2,
+            "positive": 1
+          }
+        },
+        "need_2": {
+          "consumption": {
+            "max": 0.12574673695368355,
+            "mean": 0.052012009709109436,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 2
+          },
+          "late_consumption": {
+            "max": 0.5029869478147406,
+            "mean": 0.20804803883644007,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 2
+          },
+          "peer_consumption": {
+            "max": 0.0,
+            "mean": -0.0031954824396622857,
+            "min": -0.012521930959297623,
+            "n": 4,
+            "negative": 2,
+            "positive": 0
+          },
+          "terminal_inventory": {
+            "max": 4.319999991999999,
+            "mean": 3.2473548868416704,
+            "min": 0.029419571366685097,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.0": {
+            "max": 0.12574673695368355,
+            "mean": 0.052012009709109436,
+            "min": 0.0,
+            "n": 4,
+            "negative": 0,
+            "positive": 2
+          },
+          "utility_0.05": {
+            "max": 0.12659048695212105,
+            "mean": 0.052646258710445704,
+            "min": 0.0008437499984374998,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "utility_0.2": {
+            "max": 0.12912173694743354,
+            "mean": 0.054549005714454486,
+            "min": 0.003374999993749999,
+            "n": 4,
+            "negative": 0,
+            "positive": 4
+          },
+          "world_consumption": {
+            "max": 0.003180055395736218,
+            "mean": -0.0008951702667967973,
+            "min": -0.006760736462923407,
+            "n": 4,
+            "negative": 1,
+            "positive": 1
+          }
+        }
+      },
+      "need": 1.2,
+      "pairs": 4,
+      "panel": "small_inventory",
+      "renewal_rate": 0.24,
+      "reserve_comparison": {
+        "consumption_per_agent_tick": {
+          "max": 0.05937534458015903,
+          "mean": 0.014165288744726945,
+          "min": -0.0022184045361783866,
+          "n": 4,
+          "negative": 2,
+          "positive": 2
+        },
+        "depleted_patch_time_fraction": {
+          "max": 0.01220703125,
+          "mean": 0.00653076171875,
+          "min": -0.0068359375,
+          "n": 4,
+          "negative": 1,
+          "positive": 3
+        },
+        "late_consumption_per_agent_tick": {
+          "max": 0.23808562409703726,
+          "mean": 0.04930424102481834,
+          "min": -0.02112770921143048,
+          "n": 4,
+          "negative": 3,
+          "positive": 1
+        },
+        "max_ledger_residual": {
+          "max": 5.0959236830294685e-14,
+          "mean": 3.300137940698278e-14,
+          "min": 2.120525977034049e-14,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "max_relative_ledger_residual": {
+          "max": 9.632516871374362e-17,
+          "mean": 2.794733368607357e-17,
+          "min": -2.863110992181006e-17,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "max_unaffordable_known_returns": {
+          "max": 0,
+          "mean": 0.0,
+          "min": 0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        },
+        "movement_steps_per_agent": {
+          "max": 1.208333333333333,
+          "mean": -0.8541666666666663,
+          "min": -5.291666666666666,
+          "n": 4,
+          "negative": 2,
+          "positive": 2
+        },
+        "shortfall_per_agent_tick": {
+          "max": 0.002218404536178352,
+          "mean": -0.014165288744727169,
+          "min": -0.05937534458015955,
+          "n": 4,
+          "negative": 2,
+          "positive": 2
+        },
+        "terminal_inventory_per_agent": {
+          "max": 1.7808106758180964,
+          "mean": 1.5155522883568424,
+          "min": 1.1875533703060106,
+          "n": 4,
+          "negative": 0,
+          "positive": 4
+        },
+        "terminal_stock_fraction": {
+          "max": -0.022030923799556124,
+          "mean": -0.05224153189941548,
+          "min": -0.08263451544875866,
+          "n": 4,
+          "negative": 4,
+          "positive": 0
+        },
+        "total_harvest_cost": {
+          "max": 8.265338231023208,
+          "mean": 2.5100977340442228,
+          "min": 0.467246400699878,
+          "n": 4,
+          "negative": 0,
+          "positive": 4
+        },
+        "total_movement_cost": {
+          "max": 0.5800000000000005,
+          "mean": -0.41000000000000036,
+          "min": -2.540000000000001,
+          "n": 4,
+          "negative": 2,
+          "positive": 2
+        },
+        "total_waste": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 4,
+          "negative": 0,
+          "positive": 0
+        }
+      }
+    }
+  ],
+  "episodes": 224,
+  "evolutionary_runs": 0,
+  "experimental_model_calls": 0,
+  "limitations": [
+    "Recorded primitive fields are inputs, not independently replayed physical states.",
+    "Residual maxima are saved diagnostics, not reconstructible per-agent/patch primitives."
+  ],
+  "manifest_sha256": "5753d2a29b2d63a572a11f1e9a56015bb76a41e782707ed40add3ef5f0d0524b",
+  "max_absolute_numeric_difference": 1.0800249583553523e-12,
+  "numeric_checks": 29055,
+  "physical_ticks": 61440,
+  "qualification_status": "not_run",
+  "reference_case": "grid-r0.24-n1.2-s61001",
+  "scope": "Independent standard-library aggregation of saved primitives; no simulation or qualification.",
+  "script_sha256": "9ac4ee40a3a084daf2282f61f6476af7d13a3a157f2edc7c3ecf10e45bc5accb",
+  "sources": [
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.12-n0.8-s61001.json.gz",
+      "sha256": "0b20d9aae4cd7723dc32c2ecf2f975c266a3d94ee1e61ef32eb7ec40d6fa99c1"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.12-n0.8-s61002.json.gz",
+      "sha256": "b682d6935b24605a172371ee707ddc9ea19b7bc4228f3be8b24374efba0e2448"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.12-n0.8-s61003.json.gz",
+      "sha256": "6e03793f1d8ed8e74166f2f7f150ef3d6411f791dd41b58358c3a49f1a8dbf14"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.12-n0.8-s61004.json.gz",
+      "sha256": "607ff8ec33d61d6c4bc97640b122e54a628b813e9a9b2e1bc74e0a53b8c5162a"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.12-n1.2-s61001.json.gz",
+      "sha256": "520b88e16c18ddc34d3f690e02f081504039565e56842081f5fa79557b449a33"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.12-n1.2-s61002.json.gz",
+      "sha256": "59ca33d7f021dcca0a6acaf743801d2507fc61cbc63d905dcede5933b1a7be07"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.12-n1.2-s61003.json.gz",
+      "sha256": "49ec2ebbeb7001d513af8a09ecc011fc1ede1cbde25fd378616ac86627c72492"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.12-n1.2-s61004.json.gz",
+      "sha256": "74d67ba61234660bd6d711176c23b439acc709ba90953ab45e6dc9cd354c5ed0"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.12-n1.6-s61001.json.gz",
+      "sha256": "5cab62c2f67ce304ecc05215aa55966d444e595103a46859800a9501d2d0e595"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.12-n1.6-s61002.json.gz",
+      "sha256": "fa3d7994de4e1c35794d8ea3485cf83650c155e8d7090039aecf69aa17384664"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.12-n1.6-s61003.json.gz",
+      "sha256": "e4377378fbe058894b1aafb4414b4fbd50b4930e71b0ab6ffffd321bac9fec9d"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.12-n1.6-s61004.json.gz",
+      "sha256": "442075bad5b3e81929d4d1cade198a3ed6b6bef15576fd7bb0057291d888c964"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.24-n0.8-s61001.json.gz",
+      "sha256": "8bdfc77c6f096d88c93836b31e7f52a7923def4eb6aff46e9932385952165fd1"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.24-n0.8-s61002.json.gz",
+      "sha256": "8282b77a415e16fe4599b61223e33450d39d79bee92339981ac8643fda101f8a"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.24-n0.8-s61003.json.gz",
+      "sha256": "6efc74d0be6e95c67ba51a50dc42c0b1394621b15b9b50c8d7113791bd5f7523"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.24-n0.8-s61004.json.gz",
+      "sha256": "16f71e0b6caaf3a668743b53a957569aef989d25694ef5bb1a4fbe50530a010e"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.24-n1.2-s61001.json.gz",
+      "sha256": "7a21e815428782fffbda0993b20b57f9db99bc5b7956e67defaf5a9874c2fdf2"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.24-n1.2-s61002.json.gz",
+      "sha256": "4290a457c66a48fe67967b4747edd88297ca513cd89a974acf5e322460168a5e"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.24-n1.2-s61003.json.gz",
+      "sha256": "3095222a75aff47f68bc29e8bda60a164a2b95d23bb51a090059c9413df3c342"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.24-n1.2-s61004.json.gz",
+      "sha256": "69299c5915a79bc457164a388b52fa72c23bdc279afef64ac703080c8cd7ab9a"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.24-n1.6-s61001.json.gz",
+      "sha256": "c1af89ddee9d4f347f7bf59031774d1d254298611f607e513b620a2fb2dd9fd0"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.24-n1.6-s61002.json.gz",
+      "sha256": "fd17b69b6b76be1323452bb3386b7dfc8ea97279cd8cc9a3d3635e62dfb6f7a3"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.24-n1.6-s61003.json.gz",
+      "sha256": "6ec3852a7d09590fe3e3f7d3187330c2c2512d9bf6d1ad97b1bff6e448baa4f4"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.24-n1.6-s61004.json.gz",
+      "sha256": "f3584fbd4897f6fbbb56b2a0a2e3a2eabe6c78f1f6687cf55e8777c1ea856b30"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.36-n0.8-s61001.json.gz",
+      "sha256": "9de6da870f9c1a479221d3fc35ac2a2248fc1181700033a01ef2b94cd1923041"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.36-n0.8-s61002.json.gz",
+      "sha256": "6b161127c142cb102c10cdc507369138d275fe215137118ab2f317ed62c044be"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.36-n0.8-s61003.json.gz",
+      "sha256": "3fe4dcafe3396034c42140f3c7f2dcb9708cd7bf7b10b19cd5ac90fba5065765"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.36-n0.8-s61004.json.gz",
+      "sha256": "a2de206f6118042c046ffbb1a2139114a48dc81146cc9b75ba562d9d1a25e72d"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.36-n1.2-s61001.json.gz",
+      "sha256": "60ccc1852c7589752af3d74571680956122a9058eb7064d50e49fa9e62ee0c09"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.36-n1.2-s61002.json.gz",
+      "sha256": "9b0f9953a173a0e04c24cc428f002b75e8f57a0d91fba733374f48202f2aafa1"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.36-n1.2-s61003.json.gz",
+      "sha256": "2479cb8636d09943f2123b93c5c98c292bc180b1be3e544f89b2cceeba57b72e"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.36-n1.2-s61004.json.gz",
+      "sha256": "4bb32d3bbf7aa82b2b6e0d323c6edf820af823e1fa0ce25569505e9f3dcfe089"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.36-n1.6-s61001.json.gz",
+      "sha256": "e031ce71e26acd024eb591b7d3b9d4c6cacfb56cec08e6cb744d2ca16cbe79ca"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.36-n1.6-s61002.json.gz",
+      "sha256": "8dbd1b6c489afd924131e381cdde4f5f723884a7716bf99cb0f93f391bda4863"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.36-n1.6-s61003.json.gz",
+      "sha256": "7d73b5a162c0b98e6f00478c6f439c1da4d053be966173adaf068233ab3efba8"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/grid-r0.36-n1.6-s61004.json.gz",
+      "sha256": "da96877b4433e29729e54a1343348d43016efbcde9382ddb6edce96c060e10b1"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/long_horizon-s61001.json.gz",
+      "sha256": "015f7ea92727dc660e8125dfb3ee14d1ce317d4b2ca035ed6bb906e0888fe79d"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/long_horizon-s61002.json.gz",
+      "sha256": "fc7d053e1da3fcc736ef1f3c41bf7036a2d701b8087a001d93e3d1cfe0c40166"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/long_horizon-s61003.json.gz",
+      "sha256": "b3495ad55537b5f46622b1bff9e07813e0d69d7186e1958655d5daa70dd37991"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/long_horizon-s61004.json.gz",
+      "sha256": "3dd7ed3469a8463aab2bf7e611d00faae20c46375b278d0014b670f2d1f27b35"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/keyed_priority-s61001.json.gz",
+      "sha256": "e8659fbaf9296c46fb0d6ee152b87e008a43857e7be24b8d7fac75b9d4e92264"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/keyed_priority-s61002.json.gz",
+      "sha256": "aae4fe40abd6115cca28bbef8527275977f56e4261ee4e71480e0eeb4bfd8216"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/keyed_priority-s61003.json.gz",
+      "sha256": "767330817f8cc7cf6f696dd03cd35250d76301791c5d6f76fab2ff0bd74fe69b"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/keyed_priority-s61004.json.gz",
+      "sha256": "a5f119839976a55f9647639ed1b96e99f515207091b20118ea12a3db907f081c"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/lower_stock-s61001.json.gz",
+      "sha256": "8494bc0a7c96442e17c219f71847ac69bf4849aea3ba2291d9a840de7f169d4e"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/lower_stock-s61002.json.gz",
+      "sha256": "b72e29ffbb2c5cca9141c61b172bc5ff12ee599a5880e56eaba37810768f855c"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/lower_stock-s61003.json.gz",
+      "sha256": "3ff8935725532a8764dabde3899e7adc2a5c392fa00dfa8fce61117e5c406766"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/lower_stock-s61004.json.gz",
+      "sha256": "96f6c30c4b0b797af4075e4777c1eea18e590b34ad4347eaf27432f4b707c9b0"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/additive-s61001.json.gz",
+      "sha256": "d8a4335fed9030a4fb72d546748be202e7158ba414bab7f62ed74bbe1ec3dc9c"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/additive-s61002.json.gz",
+      "sha256": "076c2ea7a3eb838a6f3b034353e2614d11a31773ac3329d6490164c141135d65"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/additive-s61003.json.gz",
+      "sha256": "f5d9a62a6116a8bf647ec954f0025a7c17fe32b6251725921dba49650dcf7f3a"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/additive-s61004.json.gz",
+      "sha256": "4ea82c80bbf0a5bf783df70198949e639afa1b7f147275ca88edecd4380aa6a3"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/small_inventory-s61001.json.gz",
+      "sha256": "eca476af077162b80b3d6e92cb937486e635581044885f81c1af7e4ab4318f82"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/small_inventory-s61002.json.gz",
+      "sha256": "a233500a4bffb7fae38be6f3efc6d4729d960775e5e009391dd87f349eb00ca6"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/small_inventory-s61003.json.gz",
+      "sha256": "f612d6e2c206dd7bfc6e46b045a276150838eaf37e0b9a839c1415c9621964a9"
+    },
+    {
+      "path": "evidence/commons-v3-need-v1/cases/small_inventory-s61004.json.gz",
+      "sha256": "c2386188bebc740449e6e8ffc9086ed89aaa309ce84dcf97afc74b4153076498"
+    }
+  ],
+  "tolerance_relative_to_max_one": 2e-12,
+  "verified": true,
+  "version": "commons-v3-need-independent-primitive-audit-v1"
+}

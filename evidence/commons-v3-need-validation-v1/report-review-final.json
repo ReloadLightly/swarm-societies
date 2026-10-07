@@ -1,0 +1,63 @@
+{
+  "checks_passed": [
+    "Reference population means, final-quarter consumption and terminal ecological stock match to stated precision.",
+    "Focal consumption and private utility differences, inventory contribution, peer/world effects, ranges and sign counts match.",
+    "All five sensitivity table values and adverse-outcome statements match.",
+    "Reserve-two minus reserve-zero consumption has six positive and three negative primary grid-cell means.",
+    "Audit count, numerical discrepancy and maximum accounting residual match.",
+    "Reports distinguish reused development from qualification, descriptive ranges from confidence intervals, and whole-policy substitutions from mechanism-specific interventions.",
+    "Capacity-eight mean peer losses remain nonzero; additive need-two focal utility gain is terminal inventory only.",
+    "Final report and top PROGRESS section describe 769 passed tests plus 123 passed subtests and eight sandbox socket failures; the separate loopback rerun passes eight tests.",
+    "The combined 777 unique tests claim clearly spans two invocations and does not conceal the first invocation failures.",
+    "The full replay receipt verifies 56 cases and 224 episodes against the current completion manifest.",
+    "Targeted commons tests report 235 passes.",
+    "Figure verification records identical hashes for all 12 gallery files and inspection of both PNGs.",
+    "Local packaging and offline restoration receipts support the 56-file, 3647037-payload-byte and 3657256-archive-byte claims; publication remains explicitly absent."
+  ],
+  "evidence_sha256": {
+    "evidence/commons-v3-foundation-v2/summary.json": "3f77c1ee1d20aaf2999be2392fb62cdf4c49140dd017e426c29342ee27a4a9e3",
+    "evidence/commons-v3-need-v1/manifest.json": "5753d2a29b2d63a572a11f1e9a56015bb76a41e782707ed40add3ef5f0d0524b",
+    "runs/commons-v3-need-v1-validation/commons-tests.log": "334148578eaf5edcf4d105c7f7536183b62fcac216aa9674f1274add9d971e15",
+    "runs/commons-v3-need-v1-validation/figure-verification.json": "041f3bab26cd03621c8e19568265b26750dbdae52b852e6c6dcec5d10728e7a0",
+    "runs/commons-v3-need-v1-validation/full-tests.log": "1dd0ad0b97f6e1419642a4964a8765b372e60a6bb421fe9305a7dd98a67d6458",
+    "runs/commons-v3-need-v1-validation/independent-audit.json": "2fa63dbab011137b4607a8da74632849b791c13dfe0800c914b055082419d83a",
+    "runs/commons-v3-need-v1-validation/local-packaging.json": "96d129921ae873b0f5588fbe1609485e935e1e0c554f47bd23e0c6fa6131444b",
+    "runs/commons-v3-need-v1-validation/loopback-tests.log": "80824809587d26201a3f62ce0beb089362868460c1f8d445083e9164acfa0568",
+    "runs/commons-v3-need-v1-validation/offline-restoration.json": "4440787dea2b451c2b21eda4301253c7df8b84e3ec992173988e2ef689b18ca0",
+    "runs/commons-v3-need-v1-validation/replay.json": "0cec728c452afb3082e9b4c1903bb659447b2711121e188a071694be50940fbb",
+    "runs/commons-v3-need-v1-validation/report-review.json": "76e84efe7c09bdd94588ee3ae5c34aa80c55f24243de3f79d21aca559c513af1",
+    "runs/commons-v3-need-v1-validation/restored-byte-comparison.json": "e49ade8f485df435a0106de5d3d54eff491091d345b8f8536f4e49bbbca96311"
+  },
+  "findings": [],
+  "full_test_socket_failure_nodes": [
+    "tests/test_evidence_archive_v1.py::test_download_resumes_with_validated_range_or_restarts_complete_response[interrupt]",
+    "tests/test_evidence_archive_v1.py::test_download_resumes_with_validated_range_or_restarts_complete_response[ignore_range]",
+    "tests/test_evidence_archive_v1.py::test_invalid_resume_does_not_append_or_publish[bad_range]",
+    "tests/test_evidence_archive_v1.py::test_invalid_resume_does_not_append_or_publish[bad_etag]",
+    "tests/test_evidence_archive_v1.py::test_download_requires_exact_content_length_before_writing[no_length]",
+    "tests/test_evidence_archive_v1.py::test_download_requires_exact_content_length_before_writing[bad_length]",
+    "tests/test_evidence_archive_v1.py::test_http_requires_explicit_loopback_test_permission",
+    "tests/test_evidence_archive_v1.py::test_bad_download_hash_never_publishes_verified_cache_name"
+  ],
+  "limitations": [
+    "This receipt binds the exact reviewed file hashes; later edits fall outside this snapshot.",
+    "Review checked saved verification receipts and logs; it did not rerun the full test suite, simulation or packaging.",
+    "The loopback log is concise (eight passes, 35 deselections); selection of the eight matching failure nodes is confirmed by the root task execution context."
+  ],
+  "prior_scope_suggestion": {
+    "change": "README now limits the consumption improvement to the reference relative to greedy.",
+    "resolved": true
+  },
+  "read_only_review": true,
+  "review_scope": "Scientific claims, rounding and recorded verification status in the final new report, PROGRESS top checkpoint section and new additions to README, study index, plan and AGENTS.",
+  "reviewed_paths_sha256": {
+    "AGENTS.md": "c2a7585d4b8d98749d9dc9665445228dc3ddfc60460b4de08013d24d11c96026",
+    "PROGRESS.md": "dfe4996d792d6a4b8b3521149b5295e8287b0f7c13ea49dbeabd4c5f1656f6e8",
+    "README.md": "b6934e5db093c132f065a05ac7f2b56cf66d4e6f3607b681618da46eaf516e05",
+    "docs/commons-v3-need-v1.md": "059ea848e4ec3ab95ba9fbc4ba6b756b8f7850d53328ef00d856f4219983bf48",
+    "docs/commons-v3-plan.md": "b2020acf4f5f8c375de06d64901aafacde5ebed556ec2cefdf4d9a738942ac16",
+    "docs/study-index.md": "1689d84a765affc129c8794180b5c978ddf6d74771a3e111266de53314fc0979"
+  },
+  "status": "passed",
+  "version": "commons-v3-need-report-final-review-v1"
+}

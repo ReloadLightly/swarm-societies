@@ -71,9 +71,20 @@ of capacity: distinguish local depletion, access failures and unused resources
 from collapse of the entire commons. These are descriptive four-seed results,
 not confidence intervals or cross-border institutional outcomes.
 
-Next: stronger local baselines, beginning with need-targeted harvesting and
-modest reserves under the same capacity 80, followed by separate ecological and
-incentive qualification. Keep institutions, their lifecycle and paid enforcement
+The separately frozen need-targeted stage is complete; see
+`docs/commons-v3-need-v1.md` and `docs/commons-v3-need-protocol-v1.md`.
+Preserve `evidence/commons-v3-need-v1/`: 56 reused configurations / 224 episodes,
+zero model calls or evolution. Zero/two-tick buffers at capacity 80 give reference
+consumption 1.123083/1.137248. Focal greedy consumption gains are
+0.105842/0.095690, with peer losses 0.336463/0.287450. At 512 ticks population
+consumption falls to 0.798804/0.804615; lower initial stock makes the two-tick
+buffer worse by 0.254884. These policy-bundle development results do not qualify
+the ecology or establish robust navigation. Its separate archive catalog is
+`artifacts/commons-v3-need-v1/catalog.json`: verified locally with offline
+restoration, not yet publicly published. Do not claim a remote download exists.
+
+Next: purposeful local foraging and numerical baselines, followed by separate
+ecological and incentive qualification. Keep institutions, their lifecycle and paid enforcement
 as later work. Do not start model spending or tune utility weights to manufacture
 a dilemma; preserve all adverse development outcomes and version future changes.
 

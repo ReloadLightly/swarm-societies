@@ -1,0 +1,40 @@
+{
+  "checks_passed": [
+    "Reference population means, final-quarter consumption and terminal ecological stock match to stated precision.",
+    "Focal consumption and private utility differences, inventory contribution, peer/world effects, ranges and sign counts match.",
+    "All five sensitivity table values and adverse-outcome statements match.",
+    "Reserve-two minus reserve-zero consumption has six positive and three negative primary grid-cell means.",
+    "Audit count, numerical discrepancy and maximum accounting residual match.",
+    "Reports distinguish reused development from qualification, descriptive ranges from confidence intervals, and whole-policy substitutions from mechanism-specific interventions.",
+    "Capacity-eight mean peer losses remain nonzero; additive need-two focal utility gain is terminal inventory only."
+  ],
+  "evidence": {
+    "independent_audit_sha256": "2fa63dbab011137b4607a8da74632849b791c13dfe0800c914b055082419d83a",
+    "new_manifest_sha256": "5753d2a29b2d63a572a11f1e9a56015bb76a41e782707ed40add3ef5f0d0524b",
+    "previous_v2_summary_sha256": "3f77c1ee1d20aaf2999be2392fb62cdf4c49140dd017e426c29342ee27a4a9e3"
+  },
+  "findings": [
+    {
+      "path": "README.md",
+      "reason": "This holds for both policies at every primary grid-cell mean, but in additive sensitivity need-zero consumption is 1.199349 versus saved greedy 1.200000 and need-two ties greedy.",
+      "severity": "nonblocking_scope_precision",
+      "suggestion": "Qualify the abstract claim as across the nine primary grid-cell means, or as reference consumption relative to greedy.",
+      "text": "Need-targeted harvesting improves on the greedy development control"
+    }
+  ],
+  "limitations": [
+    "This receipt binds the exact reviewed file hashes; later edits are outside this snapshot.",
+    "Final full-suite/replay status and PROGRESS were left to the root task and were not certified by this review."
+  ],
+  "read_only_review": true,
+  "review_scope": "Scientific claims and rounding in the new report and additions to the other four paths, using the independently audited saved primitives and hash-bound v2 summary.",
+  "reviewed_paths_sha256": {
+    "AGENTS.md": "c2a7585d4b8d98749d9dc9665445228dc3ddfc60460b4de08013d24d11c96026",
+    "README.md": "b6934e5db093c132f065a05ac7f2b56cf66d4e6f3607b681618da46eaf516e05",
+    "docs/commons-v3-need-v1.md": "3c89d9ba34ac7f912f83414fcc621bad6932913b26754a485263c21849ba3a52",
+    "docs/commons-v3-plan.md": "b2020acf4f5f8c375de06d64901aafacde5ebed556ec2cefdf4d9a738942ac16",
+    "docs/study-index.md": "1689d84a765affc129c8794180b5c978ddf6d74771a3e111266de53314fc0979"
+  },
+  "status": "no_numerical_errors_one_nonblocking_scope_suggestion",
+  "version": "commons-v3-need-report-review-v1"
+}

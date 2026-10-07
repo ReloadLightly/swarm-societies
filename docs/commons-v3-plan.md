@@ -29,8 +29,10 @@ unreported retuning of the environment or replacement of evaluation cases.
 implements movement, local access, renewable stocks, accounting and physical
 snapshots. Two development banks preserve a failed navigation control and its
 separate numerical repair. Stage 1's scientific qualification remains open;
-the next work is stronger local baselines, starting with need-targeted harvest
-and modest reserves under the same carrying capacity. Optional institutions
+the separately frozen [need-targeted comparison](commons-v3-need-v1.md) now
+adds zero/two-tick usable buffers under the same carrying capacity. It improves
+reference consumption but retains long-horizon failures; purposeful local
+foraging and numerical baselines are next. Optional institutions
 and political transitions have not yet been implemented.
 
 ## What the target world must implement
@@ -169,12 +171,19 @@ so local depletion and access failures must be distinguished from global
 resource collapse. These development outcomes come from four reused seeds;
 neither bank substitutes for the disjoint qualification gate below.
 
-**Immediate next step:** add need-targeted harvesting with a modest reserve
-under the same physical capacity 80, then stronger navigation and decentralized
-controls. This tests whether a simple private rule resolves the large current
-gap without institutional enforcement. Preserve the current two banks and
-freeze every new development comparison before execution. Do not adjust wealth
-weights or weaken baselines to obtain a preferred incentive pattern.
+**Need-targeted checkpoint:** the separately frozen
+[development study](commons-v3-need-v1.md) completes the fixed zero/two-tick
+buffer comparison under capacity 80, preserving the preceding banks. Reference
+consumption improves to 1.123083/1.137248, with positive mean focal greedy
+consumption gains and peer losses. However, 512-tick mean consumption falls to
+0.798804/0.804615, and larger reserves are worse at lower starting stock.
+The reused four-seed development panel does not qualify the environment.
+
+**Immediate next step:** purposeful local foraging and numerical baselines,
+then separate ecological and incentive qualification. Retain the complete
+need-targeted bank, its adverse outcomes and both earlier banks; freeze every
+new comparison before execution. Do not adjust wealth weights or weaken
+baselines to obtain a preferred incentive pattern.
 
 The remaining Stage 1 contract follows. Reuse accounting,
 observation validation, event provenance and checkpoint patterns; do not alter

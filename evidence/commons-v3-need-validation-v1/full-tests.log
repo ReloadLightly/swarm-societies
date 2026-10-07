@@ -1,0 +1,371 @@
+........................................................................ [  9%]
+........................................................................ [ 18%]
+........................................................................ [ 27%]
+........................................................................ [ 37%]
+............................................................................. [ 46%]
+..................FFFFFFF......F............................... [ 55%]
+...................................................... [ 62%]
+........................................................................ [ 71%]
+................................................................ [ 79%]
+........................................................................................................................... [ 95%]
+....................................                                     [100%]
+=================================== FAILURES ===================================
+_ test_download_resumes_with_validated_range_or_restarts_complete_response[interrupt] _
+
+tmp_path = PosixPath('/tmp/pytest-of-roland/pytest-101/test_download_resumes_with_val0')
+mode = 'interrupt'
+
+    @pytest.mark.parametrize('mode', ['interrupt', 'ignore_range'])
+    def test_download_resumes_with_validated_range_or_restarts_complete_response(tmp_path, mode):
+        _, _, archive, manifest = http_fixture(tmp_path)
+        body, cache = archive.read_bytes(), tmp_path / 'cache'
+>       with server(body, mode) as (url, requests):
+             ^^^^^^^^^^^^^^^^^^
+
+tests/test_evidence_archive_v1.py:348: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../.local/share/uv/python/cpython-3.13-linux-x86_64-gnu/lib/python3.13/contextlib.py:141: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+tests/test_evidence_archive_v1.py:322: in server
+    httpd = http.server.ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../.local/share/uv/python/cpython-3.13-linux-x86_64-gnu/lib/python3.13/socketserver.py:453: in __init__
+    self.socket = socket.socket(self.address_family,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <socket.socket fd=-1, family=0, type=0, proto=0>
+family = <AddressFamily.AF_INET: 2>, type = <SocketKind.SOCK_STREAM: 1>
+proto = 0, fileno = None
+
+    def __init__(self, family=-1, type=-1, proto=-1, fileno=None):
+        # For user code address family and type values are IntEnum members, but
+        # for the underlying _socket.socket they're just integers. The
+        # constructor of _socket.socket converts the given argument to an
+        # integer automatically.
+        if fileno is None:
+            if family == -1:
+                family = AF_INET
+            if type == -1:
+                type = SOCK_STREAM
+            if proto == -1:
+                proto = 0
+>       _socket.socket.__init__(self, family, type, proto, fileno)
+E       PermissionError: [Errno 1] Operation not permitted
+
+../../.local/share/uv/python/cpython-3.13-linux-x86_64-gnu/lib/python3.13/socket.py:233: PermissionError
+_ test_download_resumes_with_validated_range_or_restarts_complete_response[ignore_range] _
+
+tmp_path = PosixPath('/tmp/pytest-of-roland/pytest-101/test_download_resumes_with_val1')
+mode = 'ignore_range'
+
+    @pytest.mark.parametrize('mode', ['interrupt', 'ignore_range'])
+    def test_download_resumes_with_validated_range_or_restarts_complete_response(tmp_path, mode):
+        _, _, archive, manifest = http_fixture(tmp_path)
+        body, cache = archive.read_bytes(), tmp_path / 'cache'
+>       with server(body, mode) as (url, requests):
+             ^^^^^^^^^^^^^^^^^^
+
+tests/test_evidence_archive_v1.py:348: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../.local/share/uv/python/cpython-3.13-linux-x86_64-gnu/lib/python3.13/contextlib.py:141: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+tests/test_evidence_archive_v1.py:322: in server
+    httpd = http.server.ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../.local/share/uv/python/cpython-3.13-linux-x86_64-gnu/lib/python3.13/socketserver.py:453: in __init__
+    self.socket = socket.socket(self.address_family,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <socket.socket fd=-1, family=0, type=0, proto=0>
+family = <AddressFamily.AF_INET: 2>, type = <SocketKind.SOCK_STREAM: 1>
+proto = 0, fileno = None
+
+    def __init__(self, family=-1, type=-1, proto=-1, fileno=None):
+        # For user code address family and type values are IntEnum members, but
+        # for the underlying _socket.socket they're just integers. The
+        # constructor of _socket.socket converts the given argument to an
+        # integer automatically.
+        if fileno is None:
+            if family == -1:
+                family = AF_INET
+            if type == -1:
+                type = SOCK_STREAM
+            if proto == -1:
+                proto = 0
+>       _socket.socket.__init__(self, family, type, proto, fileno)
+E       PermissionError: [Errno 1] Operation not permitted
+
+../../.local/share/uv/python/cpython-3.13-linux-x86_64-gnu/lib/python3.13/socket.py:233: PermissionError
+__________ test_invalid_resume_does_not_append_or_publish[bad_range] ___________
+
+tmp_path = PosixPath('/tmp/pytest-of-roland/pytest-101/test_invalid_resume_does_not_a0')
+mode = 'bad_range'
+
+    @pytest.mark.parametrize('mode', ['bad_range', 'bad_etag'])
+    def test_invalid_resume_does_not_append_or_publish(tmp_path, mode):
+        _, _, archive, manifest = http_fixture(tmp_path)
+        cache = tmp_path / 'cache'
+>       with server(archive.read_bytes(), mode) as (url, _):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_evidence_archive_v1.py:370: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../.local/share/uv/python/cpython-3.13-linux-x86_64-gnu/lib/python3.13/contextlib.py:141: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+tests/test_evidence_archive_v1.py:322: in server
+    httpd = http.server.ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../.local/share/uv/python/cpython-3.13-linux-x86_64-gnu/lib/python3.13/socketserver.py:453: in __init__
+    self.socket = socket.socket(self.address_family,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <socket.socket fd=-1, family=0, type=0, proto=0>
+family = <AddressFamily.AF_INET: 2>, type = <SocketKind.SOCK_STREAM: 1>
+proto = 0, fileno = None
+
+    def __init__(self, family=-1, type=-1, proto=-1, fileno=None):
+        # For user code address family and type values are IntEnum members, but
+        # for the underlying _socket.socket they're just integers. The
+        # constructor of _socket.socket converts the given argument to an
+        # integer automatically.
+        if fileno is None:
+            if family == -1:
+                family = AF_INET
+            if type == -1:
+                type = SOCK_STREAM
+            if proto == -1:
+                proto = 0
+>       _socket.socket.__init__(self, family, type, proto, fileno)
+E       PermissionError: [Errno 1] Operation not permitted
+
+../../.local/share/uv/python/cpython-3.13-linux-x86_64-gnu/lib/python3.13/socket.py:233: PermissionError
+___________ test_invalid_resume_does_not_append_or_publish[bad_etag] ___________
+
+tmp_path = PosixPath('/tmp/pytest-of-roland/pytest-101/test_invalid_resume_does_not_a1')
+mode = 'bad_etag'
+
+    @pytest.mark.parametrize('mode', ['bad_range', 'bad_etag'])
+    def test_invalid_resume_does_not_append_or_publish(tmp_path, mode):
+        _, _, archive, manifest = http_fixture(tmp_path)
+        cache = tmp_path / 'cache'
+>       with server(archive.read_bytes(), mode) as (url, _):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_evidence_archive_v1.py:370: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../.local/share/uv/python/cpython-3.13-linux-x86_64-gnu/lib/python3.13/contextlib.py:141: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+tests/test_evidence_archive_v1.py:322: in server
+    httpd = http.server.ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../.local/share/uv/python/cpython-3.13-linux-x86_64-gnu/lib/python3.13/socketserver.py:453: in __init__
+    self.socket = socket.socket(self.address_family,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <socket.socket fd=-1, family=0, type=0, proto=0>
+family = <AddressFamily.AF_INET: 2>, type = <SocketKind.SOCK_STREAM: 1>
+proto = 0, fileno = None
+
+    def __init__(self, family=-1, type=-1, proto=-1, fileno=None):
+        # For user code address family and type values are IntEnum members, but
+        # for the underlying _socket.socket they're just integers. The
+        # constructor of _socket.socket converts the given argument to an
+        # integer automatically.
+        if fileno is None:
+            if family == -1:
+                family = AF_INET
+            if type == -1:
+                type = SOCK_STREAM
+            if proto == -1:
+                proto = 0
+>       _socket.socket.__init__(self, family, type, proto, fileno)
+E       PermissionError: [Errno 1] Operation not permitted
+
+../../.local/share/uv/python/cpython-3.13-linux-x86_64-gnu/lib/python3.13/socket.py:233: PermissionError
+____ test_download_requires_exact_content_length_before_writing[no_length] _____
+
+tmp_path = PosixPath('/tmp/pytest-of-roland/pytest-101/test_download_requires_exact_c0')
+mode = 'no_length'
+
+    @pytest.mark.parametrize('mode', ['no_length', 'bad_length'])
+    def test_download_requires_exact_content_length_before_writing(tmp_path, mode):
+        _, _, archive, manifest = http_fixture(tmp_path)
+        cache = tmp_path / 'cache'
+>       with server(archive.read_bytes(), mode) as (url, _):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_evidence_archive_v1.py:386: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../.local/share/uv/python/cpython-3.13-linux-x86_64-gnu/lib/python3.13/contextlib.py:141: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+tests/test_evidence_archive_v1.py:322: in server
+    httpd = http.server.ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../.local/share/uv/python/cpython-3.13-linux-x86_64-gnu/lib/python3.13/socketserver.py:453: in __init__
+    self.socket = socket.socket(self.address_family,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <socket.socket fd=-1, family=0, type=0, proto=0>
+family = <AddressFamily.AF_INET: 2>, type = <SocketKind.SOCK_STREAM: 1>
+proto = 0, fileno = None
+
+    def __init__(self, family=-1, type=-1, proto=-1, fileno=None):
+        # For user code address family and type values are IntEnum members, but
+        # for the underlying _socket.socket they're just integers. The
+        # constructor of _socket.socket converts the given argument to an
+        # integer automatically.
+        if fileno is None:
+            if family == -1:
+                family = AF_INET
+            if type == -1:
+                type = SOCK_STREAM
+            if proto == -1:
+                proto = 0
+>       _socket.socket.__init__(self, family, type, proto, fileno)
+E       PermissionError: [Errno 1] Operation not permitted
+
+../../.local/share/uv/python/cpython-3.13-linux-x86_64-gnu/lib/python3.13/socket.py:233: PermissionError
+____ test_download_requires_exact_content_length_before_writing[bad_length] ____
+
+tmp_path = PosixPath('/tmp/pytest-of-roland/pytest-101/test_download_requires_exact_c1')
+mode = 'bad_length'
+
+    @pytest.mark.parametrize('mode', ['no_length', 'bad_length'])
+    def test_download_requires_exact_content_length_before_writing(tmp_path, mode):
+        _, _, archive, manifest = http_fixture(tmp_path)
+        cache = tmp_path / 'cache'
+>       with server(archive.read_bytes(), mode) as (url, _):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_evidence_archive_v1.py:386: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../.local/share/uv/python/cpython-3.13-linux-x86_64-gnu/lib/python3.13/contextlib.py:141: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+tests/test_evidence_archive_v1.py:322: in server
+    httpd = http.server.ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../.local/share/uv/python/cpython-3.13-linux-x86_64-gnu/lib/python3.13/socketserver.py:453: in __init__
+    self.socket = socket.socket(self.address_family,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <socket.socket fd=-1, family=0, type=0, proto=0>
+family = <AddressFamily.AF_INET: 2>, type = <SocketKind.SOCK_STREAM: 1>
+proto = 0, fileno = None
+
+    def __init__(self, family=-1, type=-1, proto=-1, fileno=None):
+        # For user code address family and type values are IntEnum members, but
+        # for the underlying _socket.socket they're just integers. The
+        # constructor of _socket.socket converts the given argument to an
+        # integer automatically.
+        if fileno is None:
+            if family == -1:
+                family = AF_INET
+            if type == -1:
+                type = SOCK_STREAM
+            if proto == -1:
+                proto = 0
+>       _socket.socket.__init__(self, family, type, proto, fileno)
+E       PermissionError: [Errno 1] Operation not permitted
+
+../../.local/share/uv/python/cpython-3.13-linux-x86_64-gnu/lib/python3.13/socket.py:233: PermissionError
+_____________ test_http_requires_explicit_loopback_test_permission _____________
+
+tmp_path = PosixPath('/tmp/pytest-of-roland/pytest-101/test_http_requires_explicit_lo0')
+
+    def test_http_requires_explicit_loopback_test_permission(tmp_path):
+        _, _, archive, manifest = fixture(tmp_path)
+>       with server(archive.read_bytes()) as (url, requests):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_evidence_archive_v1.py:396: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../.local/share/uv/python/cpython-3.13-linux-x86_64-gnu/lib/python3.13/contextlib.py:141: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+tests/test_evidence_archive_v1.py:322: in server
+    httpd = http.server.ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../.local/share/uv/python/cpython-3.13-linux-x86_64-gnu/lib/python3.13/socketserver.py:453: in __init__
+    self.socket = socket.socket(self.address_family,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <socket.socket fd=-1, family=0, type=0, proto=0>
+family = <AddressFamily.AF_INET: 2>, type = <SocketKind.SOCK_STREAM: 1>
+proto = 0, fileno = None
+
+    def __init__(self, family=-1, type=-1, proto=-1, fileno=None):
+        # For user code address family and type values are IntEnum members, but
+        # for the underlying _socket.socket they're just integers. The
+        # constructor of _socket.socket converts the given argument to an
+        # integer automatically.
+        if fileno is None:
+            if family == -1:
+                family = AF_INET
+            if type == -1:
+                type = SOCK_STREAM
+            if proto == -1:
+                proto = 0
+>       _socket.socket.__init__(self, family, type, proto, fileno)
+E       PermissionError: [Errno 1] Operation not permitted
+
+../../.local/share/uv/python/cpython-3.13-linux-x86_64-gnu/lib/python3.13/socket.py:233: PermissionError
+__________ test_bad_download_hash_never_publishes_verified_cache_name __________
+
+tmp_path = PosixPath('/tmp/pytest-of-roland/pytest-101/test_bad_download_hash_never_p0')
+
+    def test_bad_download_hash_never_publishes_verified_cache_name(tmp_path):
+        _, _, archive, manifest = http_fixture(tmp_path)
+        wrong = bytearray(archive.read_bytes())
+        wrong[50] ^= 1
+        cache = tmp_path / 'cache'
+>       with server(wrong) as (url, _):
+             ^^^^^^^^^^^^^
+
+tests/test_evidence_archive_v1.py:462: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../.local/share/uv/python/cpython-3.13-linux-x86_64-gnu/lib/python3.13/contextlib.py:141: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+tests/test_evidence_archive_v1.py:322: in server
+    httpd = http.server.ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../.local/share/uv/python/cpython-3.13-linux-x86_64-gnu/lib/python3.13/socketserver.py:453: in __init__
+    self.socket = socket.socket(self.address_family,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <socket.socket fd=-1, family=0, type=0, proto=0>
+family = <AddressFamily.AF_INET: 2>, type = <SocketKind.SOCK_STREAM: 1>
+proto = 0, fileno = None
+
+    def __init__(self, family=-1, type=-1, proto=-1, fileno=None):
+        # For user code address family and type values are IntEnum members, but
+        # for the underlying _socket.socket they're just integers. The
+        # constructor of _socket.socket converts the given argument to an
+        # integer automatically.
+        if fileno is None:
+            if family == -1:
+                family = AF_INET
+            if type == -1:
+                type = SOCK_STREAM
+            if proto == -1:
+                proto = 0
+>       _socket.socket.__init__(self, family, type, proto, fileno)
+E       PermissionError: [Errno 1] Operation not permitted
+
+../../.local/share/uv/python/cpython-3.13-linux-x86_64-gnu/lib/python3.13/socket.py:233: PermissionError
+=========================== short test summary info ============================
+FAILED tests/test_evidence_archive_v1.py::test_download_resumes_with_validated_range_or_restarts_complete_response[interrupt]
+FAILED tests/test_evidence_archive_v1.py::test_download_resumes_with_validated_range_or_restarts_complete_response[ignore_range]
+FAILED tests/test_evidence_archive_v1.py::test_invalid_resume_does_not_append_or_publish[bad_range]
+FAILED tests/test_evidence_archive_v1.py::test_invalid_resume_does_not_append_or_publish[bad_etag]
+FAILED tests/test_evidence_archive_v1.py::test_download_requires_exact_content_length_before_writing[no_length]
+FAILED tests/test_evidence_archive_v1.py::test_download_requires_exact_content_length_before_writing[bad_length]
+FAILED tests/test_evidence_archive_v1.py::test_http_requires_explicit_loopback_test_permission
+FAILED tests/test_evidence_archive_v1.py::test_bad_download_hash_never_publishes_verified_cache_name
+8 failed, 769 passed, 123 subtests passed in 626.90s (0:10:26)
