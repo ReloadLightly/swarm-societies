@@ -1,5 +1,37 @@
 # Active work record
 
+## Consequential coordination and responsive membership v2 implemented, 7 October 2026
+
+The [new engineering contract and checked fixtures](docs/commons-v3-coordination-membership-v2.md)
+implement the next planned controller increment in separate modules. Paid,
+dated remembered-site reports and revocable route intentions can change physical
+decisions. Shared navigation uses only directly observed sites as return anchors;
+disabled coordination retains exact frozen-forager behavior. False assertions
+remain bounded beliefs, not secretly verified world facts.
+
+The v2 runtime supplies the same explicit private previous-tick receipt to every
+registered controller. Optional membership uses local service/liquidity entry
+rules, voluntary quota promises, persistent own shortfall/private cost/outside
+advantage for exit, and an eight-decision cooldown. Exit creates no spendable
+refund; mature claims remain local and delayed. Binding bilateral commitment
+parity and identified enforcement effects are still unresolved.
+
+The [source-bound compact fixture](evidence/commons-v3-coordination-membership-v2/fixture.json)
+records real paid message delivery changing a recipient's route/extraction,
+exit at tick 4 under unchanged terms, local withdrawal at tick 6, optional
+formation and liquidity-based refusal. **18 continuation ticks** regenerate
+exact decisions/receipts/flows; maximum material residual **1.10e-14**.
+The full v3 suite passes **680 tests**, and all **110 new focused checks** pass
+against the final source files. No sampled bank, policy selection, model calls
+or evolution occurred. This validates engineering, not general welfare benefit.
+
+The first 144-episode bank and qualification sources remain unchanged. **Next:**
+declare separate response, collateral, timing and paid-monitoring interventions
+with explicit decentralized commitment/information parity, then freeze revised
+development and fresh independent evaluation. Do not retune terminal weights,
+extend completed banks or restart ecology work. The small engineering fixture
+is kept in Git and needs no raw-bank download.
+
 ## First institutional development comparison complete, 7 October 2026
 
 The [full report](docs/commons-v3-institutions-development-v1.md) retains all

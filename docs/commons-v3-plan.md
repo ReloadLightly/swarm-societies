@@ -15,8 +15,10 @@ custody and paid monitoring/settlement are implemented in the
 Deterministic fixtures verify these capabilities. The first
 [144-episode development comparison](commons-v3-institutions-development-v1.md)
 is complete, with mixed/adverse outcomes and an almost inactive decentralized
-comparator. Consequential coordination, responsive exit and separate mechanism
-controls are the next priorities; independent institutional evaluation and
+comparator. [Coordination and responsive membership v2](commons-v3-coordination-membership-v2.md)
+now implements consequential messages and refusal/exit decisions with private
+receipts and synthetic continuation checks. Commitment parity and separate
+mechanism controls are next; independent institutional evaluation and
 generated-policy execution remain future work.
 
 ## Research objective

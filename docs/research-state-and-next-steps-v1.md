@@ -17,8 +17,12 @@ strong simple foragers, an executable political system and a first substantive
 political development result. Its central question about useful, optional and
 changing institutions remains open.
 
-The next priority is consequential decentralized coordination and commitment
-controls, mechanism separation, and locally payoff-responsive refusal/exit.
+The subsequent [coordination/membership v2 increment](commons-v3-coordination-membership-v2.md)
+now implements paid route intentions, equally supplied private outcome receipts,
+and local entry/refusal/exit rules. Its constructed fixtures verify consequential
+physical decisions and full continuation; they do not establish superior welfare.
+The next priority is commitment/information parity and prospective separation
+of charter response, collateral, timing and paid monitoring.
 Use a new protocol version before revised development, then fresh independent
 evaluation. The proposed storage/prevalence study remains conditional on a
 specific design need; no strict game label is required to improve these
@@ -37,7 +41,7 @@ This plan starts no experiments and authorizes no model spending.
 | Ecological qualification | Both controls pass the finite-horizon criteria in five of nine cells. Two cells have insufficient-supply certificates; two remain unresolved. | Neither indefinite sustainability nor universal solvability is established. |
 | Incentive qualification | The complete bank measures focal substitutions, collective losses and storage/peer sensitivities. | The primary joint verdict is unresolved; broader qualification and reference robustness at every declared weight fail. |
 | Preservation | Completed banks and probe have separately identified archives. All 3,360 incentive episodes and all 144 new institutional episodes replay exactly; the latter also restore policy-memory continuation. | Byte restoration alone is not semantic validation. Archive receipts record publication status separately. |
-| Institutions and adaptation in v3 | Optional lifecycle, custody, paid auditing and collateral settlement are implemented. The first prospective four-seed development bank is complete. | No robust charter advantage; the coordination comparator scarcely communicates and never uses caches. No exits occur. Useful membership, causal enforcement and generated-policy containment remain unestablished. |
+| Institutions and adaptation in v3 | Optional lifecycle, custody, paid auditing and collateral settlement are implemented. The first four-seed development bank is complete. V2 controllers and private feedback now exercise consequential coordination and responsive exit in constructed fixtures. | The first bank finds no robust charter advantage and an almost inactive comparator, with no exits. V2 has no sampled evaluation; useful membership, causal enforcement, full commitment parity and generated-policy containment remain unestablished. |
 
 The [study index](study-index.md), [scientific review](research-review-2026-10-07.md),
 [qualification report](commons-v3-qualification-v1.md) and
@@ -130,7 +134,7 @@ to orient future work; earlier plans remain historical references.
 | Complete | Close the existing incentive replay obligation. | All 3,360 saved episodes and exact aggregates verify; receipt outside the bank. |
 | Complete | Specify and implement the political capability contract. | Lifecycle, custody, consent, local observation, paid enforcement and complete continuation are implemented and fixture-tested. |
 | Complete | Run the first declared institutional development comparison. | All 144 episodes and comparisons retained, including losses, near-inactive reporting and absent exits; exact replay passes. |
-| Next | Strengthen consequential decentralized coordination and membership decisions. | Legal local decisions actually exercise useful information/commitment opportunities; refusal and exit respond to a declared payoff/cost rule. Preserve competent foraging and stubborn controls. |
+| Engineering complete | Implement consequential decentralized coordination and responsive membership decisions. | V2 paid messages change routes/material outcomes in constructed fixtures; own receipts and local forecasts govern refusal/exit. Strong population performance and binding commitment parity remain unqualified. |
 | Next | Separate mechanism bundles prospectively. | Charter response, collateral locking, timing and monitoring have explicit controls and evidence-access checks; no outcome-fitted terminal weight. Freeze a new version before revised development. |
 | After development | Freeze independent institutional evaluation. | Fresh seeds, absolute consumption/cost/original-cohort/outsider endpoints and identified interventions; the current four seeds do not become evaluation. |
 | Conditional | Implement and execute tipping v1 if its full surface changes the empirical design. | Separate executable/source freeze, unchanged panel, complete results including unresolved regions. Political implementation can proceed in parallel. |
@@ -333,8 +337,8 @@ whether the declared response model or costs explain it without relabeling a
 scripted adoption schedule as emergence. Certified insufficient-supply cells
 remain physical limits, not challenges any government must be able to solve.
 
-The political lifecycle and first development comparison are complete. The
-next concrete milestone is a credible, consequential decentralized comparator
-and responsive membership decisions under explicit material and information
-constraints, with prospective controls for the mechanisms that the first bank
-cannot separate. Preserve the mixed first results while addressing those gaps.
+The political lifecycle, first development comparison and subsequent controller
+engineering are complete. The next concrete milestone is a prospectively
+declared comparison with commitment/information parity and separate controls
+for the mechanisms that the first bank cannot identify. Preserve its mixed
+results; do not present v2's constructed fixtures as a new welfare estimate.

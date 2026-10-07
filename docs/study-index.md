@@ -41,6 +41,13 @@ continuations replay exactly. See the [frozen protocol](commons-v3-institutions-
 [figures and tables](../figures/commons-v3-institutions-development-v1/README.md)
 and [separate raw archive](../artifacts/commons-v3-institutions-development-v1/README.md).
 
+The subsequent [coordination/membership v2 engineering increment](commons-v3-coordination-membership-v2.md)
+adds consequential paid route intentions, equally supplied private receipts,
+and local refusal/exit rules. Its [constructed fixture](../evidence/commons-v3-coordination-membership-v2/fixture.json)
+verifies 18 continuation ticks and real material costs; all 110 new checks pass
+within a 680-test v3 suite. It is not a sampled study or a replacement for the
+first bank's results. A separate prospective mechanism comparison remains next.
+
 The [physical foundation report](commons-v3-foundation-v1.md) documents the
 implemented mobile-agent engine and both development banks. There are no
 institutions or political memberships in these worlds. The two foundation banks

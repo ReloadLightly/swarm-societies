@@ -11,9 +11,10 @@ by seed and cohort; the decentralized comparator scarcely communicates.
 The earlier studies remain frozen. Both fresh qualification banks
 are complete: ecological viability is witnessed in five of nine cells, but
 the primary joint verdict is unresolved and robust incentive qualification
-fails. The next development priority is consequential decentralized coordination,
-responsive membership and identified enforcement controls; no new model spending
-is authorized.
+fails. A new controller version now implements paid route coordination and
+payoff-responsive membership, checked on constructed fixtures. Prospective
+mechanism controls and independent institutional evaluation remain ahead;
+no new model spending is authorized.
 
 [Study index](docs/study-index.md) ·
 [Detailed archived report](docs/living-research-report-2026-10-07.md) ·
@@ -23,6 +24,7 @@ is authorized.
 [Research state and next steps](docs/research-state-and-next-steps-v1.md) ·
 [Political capability contract](docs/commons-v3-institutions-contract-v1.md) ·
 [Institutional development results](docs/commons-v3-institutions-development-v1.md) ·
+[Coordination and membership v2](docs/commons-v3-coordination-membership-v2.md) ·
 [Physical commons](docs/commons-v3-foundation-v1.md) ·
 [Need-targeted baselines](docs/commons-v3-need-v1.md) ·
 [Local navigation and numerical baselines](docs/commons-v3-navigation-v1.md) ·
@@ -80,6 +82,15 @@ no extraction priority or power over outsiders. Paid monitoring and settlement
 can reach only voluntarily pledged collateral under supplied secure-custody
 rules. These are implemented capabilities, not evidence of spontaneous formation
 or useful governance. [Contract and limitations](docs/commons-v3-institutions-contract-v1.md).
+
+The separate [v2 controller/runtime](docs/commons-v3-coordination-membership-v2.md)
+adds paid remembered-site and route-intention messages, directly observed return
+anchors, and an explicit own-outcome receipt supplied equally to every controller.
+Local forecast/liquidity rules govern entry; repeated own shortfall, private
+charges or a better outside forecast can trigger exit. The constructed demo
+checks consequential route changes, actual exit and delayed refunds with full
+continuation. It does not measure a population welfare improvement or establish
+binding nonmembership commitment parity.
 
 ## 2. Related work
 
@@ -348,9 +359,11 @@ optional institutional formation, exit, change and dissolution with local,
 paid enforcement and no supranational authority. The full tipping panel need
 not block political interface development; institutional claims require their
 own prospective comparison. The first development bank now identifies the next
-requirements: consequential decentralized coordination, separate controls for
-charter response/collateral/monitoring, and locally payoff-responsive refusal
-and exit. A new version must precede revised development and fresh independent
+requirements. Consequential coordination and locally responsive membership now
+have a separately versioned engineering implementation. The next item is to
+define matched commitment/information opportunities and separate controls for
+charter response, collateral, timing and monitoring. A new prospective protocol
+must precede revised development and fresh independent
 evaluation; this completed bank must not be extended. Hand-designed institutions,
 no-institution controls and strong decentralized coordination remain mandatory.
 Model-driven adaptation still needs a separate protocol and inference budget.
@@ -393,9 +406,12 @@ without an evidence download or experimental study:
 ```bash
 .venv/bin/python scripts/demo_commons_v3_institutions_v1.py
 # Add --full-trace for every commitment, transition and material ledger.
+.venv/bin/python scripts/demo_commons_v3_coordination_v2.py --full-trace \
+  --output /tmp/commons-v3-coordination-v2-fixture.json
 ```
 
-This is a scripted engineering fixture. The
+These are constructed engineering fixtures, including explicit scripted
+controls. The
 [political contract](docs/commons-v3-institutions-contract-v1.md) gives the
 assumptions, audited policy interfaces and scientific limitations.
 

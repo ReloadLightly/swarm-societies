@@ -1,0 +1,47 @@
+{
+  "contract_sha256": "dd333fedd5cf2adc93c646785ddccdeb21695f30363292f16b06ead0b898429c",
+  "evolutionary_runs": 0,
+  "experimental_model_calls": 0,
+  "fixture_sha256": "d505b0577c23d18bd7d3c9ffacf84e5f9142fe81549b67c10efbef9549f0d8e9",
+  "fixture_source_hashes_match": true,
+  "max_accounting_residual": 1.1018963519404679e-14,
+  "new_test_sources": {
+    "tests/test_commons_v3_policies_coordination_v2.py": "38bfd39f01ee17b3c083794a30a80d7fa1a726b0919752303592559e114f9415",
+    "tests/test_commons_v3_policies_membership_v2.py": "6e2c17d1a860ba9338cbc177ac29f6b0f2c002ca95a2e225c80c0f42de2bc6b0",
+    "tests/test_commons_v3_political_episode_v2.py": "bbb7a7fed7108e0f5fee4444840336558c25e292c1e13f74af6ecf26fb561fb9"
+  },
+  "preserved_banks": [
+    {
+      "bank": "evidence/commons-v3-institutions-development-v1",
+      "completion_manifest_sha256": "f06884dc2cb893b3b387f350ee6fbca4749bc7da128bca6d24cd89c49ac7fec6",
+      "source_files": 14,
+      "sources_manifest_sha256": "4e07a353cca57de420e522ecbc2648df2bb09c21791f89bdcde46dc9e078dd18",
+      "sources_unchanged": true
+    },
+    {
+      "bank": "evidence/commons-v3-incentive-qualification-v1",
+      "completion_manifest_sha256": "a2d858cb15bf34860566d49bbb7c2d3115fecbd9dfa2fb88e23eb42203830c05",
+      "source_files": 17,
+      "sources_manifest_sha256": "40a302a3cc28e5941f7d25675e852f2c3a1560eaed8ccf08757dec4e2e789d2b",
+      "sources_unchanged": true
+    }
+  ],
+  "replayed_continuation_ticks": 18,
+  "sampled_bank_episodes": 0,
+  "scope": "Constructed engineering fixtures only; no sampled bank or welfare qualification.",
+  "source_files": 12,
+  "tests": [
+    {
+      "command": ".venv/bin/python -m pytest -q tests/test_commons_v3*.py",
+      "elapsed_seconds": 54.65,
+      "passed": 680
+    },
+    {
+      "command": ".venv/bin/python -m pytest -q tests/test_commons_v3_policies_coordination_v2.py tests/test_commons_v3_policies_membership_v2.py tests/test_commons_v3_political_episode_v2.py",
+      "elapsed_seconds": 2.06,
+      "passed": 110,
+      "purpose": "Final focused validation after all new source edits stopped."
+    }
+  ],
+  "version": "commons-v3-coordination-membership-engineering-validation-v2"
+}

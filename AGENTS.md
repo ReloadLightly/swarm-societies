@@ -38,9 +38,17 @@ All 144 episodes fully replay, including policy-memory midpoint continuation.
 Enforced charters lose consumption in every seed of six of eight contexts;
 capacity-80/six-stubborn gains are seed- and cohort-dependent. Decentralized
 coordination is almost inactive (five paid reports); no caches or exits occur.
-Next develop consequential decentralized/commitment comparators, identified
-charter/enforcement controls and locally payoff-responsive refusal/exit under
-a new version before independent evaluation. Do not extend or tune this bank.
+Consequential coordination and locally responsive membership are now implemented
+separately; read `docs/commons-v3-coordination-membership-v2.md`. The v2 runtime
+supplies explicit private own-outcome receipts equally to its audited policies
+and checkpoints all receipts/memories. Paid route intentions are unverified soft
+commitments, not bilateral escrow. Shared route fuel uses directly observed
+return anchors; initial exploration still lacks an established return route.
+The compact synthetic fixture and 110 new tests establish engineering, not
+general welfare improvement; the complete v3 suite passes 680 tests. Next define
+commitment/information parity and separate charter response, collateral, timing
+and paid enforcement controls before revised development/independent evaluation.
+Do not extend or tune the completed first bank or change its frozen sources.
 The unexecuted
 tipping v1 panel need not block that engineering. Preserve the distinction between scripted lifecycle validation,
 behavior within supplied decision rules, and evidence of useful institutions.
