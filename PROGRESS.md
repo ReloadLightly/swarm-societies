@@ -1,5 +1,28 @@
 # Active work record
 
+## Binding world-model contract adopted; literature access limit, 8 October 2026
+
+Roland's supplied shell block was run unchanged. Each scratch probe ran once;
+all §2 figures reproduce to printed precision (96 + 80 episode rows). The
+unchanged contract/probes, retained JSON/text outputs and three requested top
+pointers were committed as `e4bf3c75c12f2acef39ebeee702618fe36aee214`
+(`Adopt world-model paper contract v1`), pushed, and independently verified by
+`git ls-remote origin refs/heads/main`.
+
+The requested [one-page related-work draft](docs/paper-related-work-world-models-v1.md)
+records the bounded §3 pass. Wu and Farr full texts do not run the contracted
+regenerative-capacity comparison. Kuusela–Laiho manuscript methods and one
+targeted decentralized-foraging search supply additional distinctions. The
+primary full texts of Aishwaryaprajna–Lewis 2023 and Mills–Lewis 2025 remain
+inaccessible despite publisher, author and repository searches; their primary
+abstracts are identified explicitly. G0 is not declared cleared on that basis.
+
+Approval was requested to record this access limitation in contract §17 and
+continue only through Tickets A–B/G1. No approval is assumed; Ticket A has not
+started, and §17 remains unchanged pending Roland's response. The contract,
+probes, frozen engines and completed banks remain unchanged.
+
+
 ## Exclusion plan paused; world-model question restored, 7 October 2026
 
 The user's subsequent review rejects the exclusion-first paper framing.
