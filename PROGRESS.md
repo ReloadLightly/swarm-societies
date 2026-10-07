@@ -1,5 +1,31 @@
 # Active work record
 
+## Navigation evaluation complete; exact replay underway, 7 October 2026
+
+The frozen 18-candidate tuning and four-fresh-seed evaluation are complete:
+**660 episodes / 175,104 physical ticks / 4,202,496 individual decisions**,
+with zero experimental model calls or evolutionary runs. All 324 tuning
+episodes replay exactly. The independent standard-library audit passes
+163,114 exact and 93,983 numerical checks across the complete bank. The
+336-episode evaluation replay and recorded-data figures are underway.
+
+On fresh reference seeds, selected consumption is **1.199410** versus legacy
+need-2 **1.083741**, fixed no-floor forager **1.097344**, and fixed-floor
+forager **1.197891**. At 512 ticks selected consumption stays **1.193929**
+(final quarter **1.182944**), compared with legacy **0.731003**. This is
+substantial development progress, but the selected controller is slightly
+worse than the fixed floor at 512 ticks (**1.195943**).
+
+Reference focal aggression gains **0.006815** consumption and **0.021253**
+private utility at wealth weight 0.05; the remaining gain is terminal inventory.
+Peers lose **0.017507** consumption per tick. All-aggressive consumption falls
+to **0.163314** with terminal ecological stock **0.173%** of capacity.
+Capacity 8 reduces the private gain to **0.007190** and changes mean peer loss
+to a tiny gain (**0.000098**), while all-aggressive consumption is **1.054347**.
+Preserve these sensitivities: four-seed comparisons are descriptive and do
+not pass ecological or incentive qualification. The engine, weights, source
+freeze and pre-evaluation selection are unchanged.
+
 ## Navigation tuning archive publicly verified, 7 October 2026
 
 The pre-evaluation selection checkpoint is pushed as `cc9c2fe`; its release
