@@ -2,13 +2,15 @@
 
 **Living research report · 7 October 2026**
 
-The new physical commons implements mobile individuals, local sensing and
-stock-dependent renewal, with no institutions or supranational government.
-The earlier nonspatial studies remain frozen. Both fresh qualification banks
+The new commons implements mobile individuals, local sensing and stock-dependent
+renewal. A separate political extension now supplies optional local institutions,
+voluntary collateral and paid monitoring, with no supranational government.
+Its lifecycle is engineering-tested; institutional benefit remains untested.
+The earlier studies remain frozen. Both fresh qualification banks
 are complete: ecological viability is witnessed in five of nine cells, but
 the primary joint verdict is unresolved and robust incentive qualification
-fails. The next development priority is optional institutions for a clearly
-stated coordination problem; no new model spending is authorized.
+fails. The next development priority is a fair institutional comparison for a
+clearly stated coordination problem; no new model spending is authorized.
 
 [Study index](docs/study-index.md) ·
 [Detailed archived report](docs/living-research-report-2026-10-07.md) ·
@@ -16,6 +18,7 @@ stated coordination problem; no new model spending is authorized.
 [Incentive results](docs/commons-v3-incentive-qualification-results-v1.md) ·
 [Latest review response](docs/commons-v3-review-2026-10-07.md) ·
 [Research state and next steps](docs/research-state-and-next-steps-v1.md) ·
+[Political capability contract](docs/commons-v3-institutions-contract-v1.md) ·
 [Physical commons](docs/commons-v3-foundation-v1.md) ·
 [Need-targeted baselines](docs/commons-v3-need-v1.md) ·
 [Local navigation and numerical baselines](docs/commons-v3-navigation-v1.md) ·
@@ -58,11 +61,14 @@ separation permits local gains and external harm to coexist, but does not by
 itself create a consequential social dilemma or demonstrate collective
 intelligence.
 
-The proposed world separates **physical location, political membership and
-claimed jurisdiction**. Membership will be optional; claims will require
-material means to enforce. Zero institutions and failed cooperation remain
-valid outcomes. Movement is implemented in the separate physical prototype;
-institutional formation and political transitions remain future capabilities.
+The world separates **physical location, political membership and claimed
+jurisdiction**. The separately versioned political extension implements optional
+founding, refusal, joining, exit, amendment, replacement and dissolution. Zero
+institutions and failed cooperation remain valid outcomes. Local claims grant
+no extraction priority or power over outsiders. Paid monitoring and settlement
+can reach only voluntarily pledged collateral under supplied secure-custody
+rules. These are implemented capabilities, not evidence of spontaneous formation
+or useful governance. [Contract and limitations](docs/commons-v3-institutions-contract-v1.md).
 
 ## 2. Related work
 

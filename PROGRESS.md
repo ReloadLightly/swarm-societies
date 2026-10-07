@@ -1,5 +1,28 @@
 # Active work record
 
+## Stage 2 political capabilities implemented, 7 October 2026
+
+The first [political capability contract](docs/commons-v3-institutions-contract-v1.md)
+and `commons_v3/politics_v1.py` implement optional local founding, refusal,
+joining, exit, amendment, replacement and dissolution. Explicit custody covers
+finite shared site storage, generic personal caches, voluntary bonds and dues,
+delayed local refunds, paid extraction monitoring and bounded collateral
+forfeiture. Quotas do not clamp harvest; outsiders' private inventories cannot
+be seized. Secure custody and truthful paid audits are supplied assumptions,
+not an explanation of enforcement emerging without infrastructure.
+
+The core's 25 independent tests plus 97 frozen physical tests pass (122 total).
+They include exact absence-of-politics parity, material conservation, observation
+limits, concurrent exit/charter/replacement races, one fine per witnessed event,
+and JSON snapshots. Frozen physics and qualification sources remain unchanged.
+Full policy-memory continuation and the audited coordination/charter policies
+are the next verified increment. No institutional experiment, tipping panel,
+generated policy or model-driven campaign has been launched. Institutional
+benefit remains untested; original qualification verdicts are unchanged.
+
+The existing incentive semantic replay is progressing independently through the
+saved bank, without restarting or extending it. Its final receipt remains pending.
+
 ## Overall assessment and Stage 2 execution plan, 7 October 2026
 
 The [current assessment](docs/research-state-and-next-steps-v1.md) distinguishes

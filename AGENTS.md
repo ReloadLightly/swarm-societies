@@ -33,6 +33,18 @@ coordination comparator. The unexecuted tipping v1 panel need not block that
 engineering. Preserve the distinction between scripted lifecycle validation,
 behavior within supplied decision rules, and evidence of useful institutions.
 
+Stage 2's first political extension is now implemented separately in
+`swarm_societies/commons_v3/politics_v1.py`; read
+`docs/commons-v3-institutions-contract-v1.md`. It adds optional local lifecycle,
+explicit finite custody, generic caches, paid monitoring and bounded voluntary
+collateral forfeiture. Secure custody and truthful paid audit are supplied
+affordances. No quota clamps harvest, no nonmember inventory can be seized, and
+no supranational actor exists. Distinguish the outer political ledger/final world
+from the frozen physical substep, especially for custody and post-step refunds.
+Lifecycle fixtures establish implementation, not emergence or institutional
+benefit. Preserve the frozen engine and both package initializers; importing
+new modules directly avoids changing the qualification source closure.
+
 The latest incentive-framing review is implemented in
 `docs/commons-v3-review-2026-10-07.md`. The original incentive bank is complete:
 3,360 episodes, primary joint verdict unresolved, broader qualification failed.

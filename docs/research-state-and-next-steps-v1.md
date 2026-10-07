@@ -1,5 +1,12 @@
 # Research state and next steps
 
+**Implementation update:** the initial political lifecycle and explicit custody
+extension are now implemented and tested under the
+[Stage 2 capability contract](commons-v3-institutions-contract-v1.md). The
+assessment below records the pre-implementation checkpoint; its scientific
+limitations and evaluation priorities remain in force. Follow `PROGRESS.md`
+for continuation and validation status.
+
 Assessment of the repository after the 7 October 2026 review response, against
 checkpoint `773a299`. The project now has a credible physical testbed, strong
 simple controllers and substantially better evidence discipline. Its central
