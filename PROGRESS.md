@@ -1,5 +1,27 @@
 # Active work record
 
+## Navigation and numerical-baseline design frozen, 7 October 2026
+
+The new observed-map forager and staged numerical runner are implemented in
+`policies_navigation_v1.py` and `development_navigation_v1.py`. The forager
+uses legal local memory, purposeful routes, sensing frontiers, stale-site
+reinspection, simultaneous move/harvest and paid route-fuel provisioning.
+An exact small-world regression checks saving enough fuel to reach a known
+productive site instead of consuming every small harvest. Food buffers remain
+available for consumption. The physical engine and earlier policies are frozen.
+
+All **300 commons tests** pass, including 39 new policy and 26 new runner tests.
+The [prospective protocol](docs/commons-v3-navigation-protocol-v1.md), full
+design and copied source hashes are recorded in `evidence/commons-v3-navigation-v1/`
+before any tuning/evaluation execution. The finite grid has 18 combinations
+of buffer, voluntary stock floor and route rule. Its 324 tuning episodes use
+two seeds; 336 evaluation episodes use four disjoint seeds and six conditions.
+Selection maximizes normalized homogeneous-population consumption, with fixed
+late-consumption and candidate-ID tie rules. It is not a private optimum or
+ecological/incentive qualification. The source/design freeze is pushed before
+the panel starts, and the selected tuning checkpoint will be pushed before
+evaluation. No experimental model calls or evolutionary campaign occur.
+
 ## GitHub synchronization and need-bank publication, 7 October 2026
 
 The user explicitly requested prompt GitHub updates throughout subsequent
