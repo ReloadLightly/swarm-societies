@@ -1,5 +1,20 @@
 # Active work record
 
+## Navigation tuning archive publicly verified, 7 October 2026
+
+The pre-evaluation selection checkpoint is pushed as `cc9c2fe`; its release
+`commons-v3-navigation-2026-10-07` now publishes the complete tuning bank.
+The separate `artifacts/commons-v3-navigation-tuning-v1/catalog.json` restores
+**324 raw files / 5,334,049 bytes**. All three public assets match local hashes;
+unauthenticated empty-cache restoration and a second offline restoration are
+byte-identical. Publication receipts are in
+`evidence/commons-v3-navigation-tuning-v1-publication/`. Tuning and evaluation
+have separate archive identities; later evaluation assets will not replace
+this catalog. Hashes do not make GitHub hosting administratively immutable.
+
+The four-fresh-seed evaluation and exact tuning replay are in progress.
+The selected parameters and source freeze remain unchanged.
+
 ## Navigation tuning sealed before evaluation, 7 October 2026
 
 All **324 tuning episodes** completed with no failed cases. The predeclared
