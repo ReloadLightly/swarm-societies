@@ -383,7 +383,11 @@ semantic replay of all 3,360 episodes and is a separate, substantial verificatio
 operation. The [incentive-only figure gallery](../figures/commons-v3-incentive-review-v1/README.md)
 contains inspected SVG/PDF/PNG exports and a manifest of source and output hashes.
 Its separately versioned renderer reads recorded incentive scalars without
-running a simulator or reading the ecological bank. No new public archive,
-restoration receipt, ecological audit or exact replay is claimed by this report.
-The finished bank remains
-preserved, including all null and adverse outcomes.
+running a simulator or reading the ecological bank. The
+[separate public archive](../artifacts/commons-v3-incentive-qualification-v1/README.md)
+now restores all **224 raw files / 453,051,247 bytes** byte-identically from
+an empty cache and through offline restoration. Its
+[publication receipts](../evidence/commons-v3-qualification-validation-v1/publication/incentive/README.md)
+bind source checkpoint `e895b72` and preserve earlier ecology asset identities.
+No new ecological audit or complete incentive semantic replay is claimed.
+The finished bank remains preserved, including all null and adverse outcomes.

@@ -298,7 +298,9 @@ recover unrecorded policy requests, reserves or every allocation choice.
 Exact policy execution and full physical-state continuation remain the
 separate semantic replay's responsibility. The certificate is conditional
 on its explicit arithmetic assumptions; neither audit is a formal hardware
-proof. Incentive replay/audit and figure inspection remain pending.
+proof. Complete incentive semantic replay and independent raw auditing remain
+pending. The separate incentive review gallery has been inspected and repeats
+byte-identically; further ecology figure and audit layers remain deferred.
 
 Only audited built-in policies execute. Material residuals use the fixed
 relative tolerance 1e-9, per-tick extraction waste above 1e-9 halts the run,
@@ -334,8 +336,8 @@ python3 scripts/restore_evidence_v1.py \
 ~~~
 
 Add --offline to use an already verified archive cache without network access.
-The incentive archive will have a separate catalog after completion; do not
-expect this ecological catalog to restore it. Once each bank is complete and
+The incentive archive has a [separate verified public catalog](../artifacts/commons-v3-incentive-qualification-v1/README.md);
+the ecological catalog does not restore it. Once each bank is complete and
 its raw cases are present, verify saved artifacts and recomputed aggregates
 without executing episodes:
 
@@ -358,7 +360,11 @@ ecological dependency to the original bank. Render only completed evidence:
   --output figures/commons-v3-qualification-v1
 ~~~
 
-Incentive publication and its restoration receipts remain pending. Ecological
-publication preserves earlier archive identities. Hashes detect changed assets,
-but GitHub hosting is not administratively immutable. This study neither
-establishes useful governance nor authorizes model spending.
+Incentive publication and public/offline restoration are complete: all 224 raw
+files reproduce byte-identically, with source checkpoint `e895b72`. Earlier
+ecology archive identities and bytes remain unchanged. The combined renderer
+above remains available for reproduction; the current review defers further
+ecology figure work and uses the separate incentive-only gallery instead.
+Hashes detect changed assets, but GitHub hosting is not administratively
+immutable. This study neither establishes useful governance nor authorizes
+model spending.

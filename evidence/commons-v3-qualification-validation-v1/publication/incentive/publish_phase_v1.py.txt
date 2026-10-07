@@ -1,0 +1,475 @@
+#!/usr/bin/env python3
+"""Package, publish and independently restore one completed qualification bank.
+
+Each command is explicit. Packaging requires a complete, committed bank;
+upload never replaces assets. Verification uses unauthenticated HTTP and fresh
+restore/cache directories. Failed verification attempts remain in runs/.
+"""
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+from pathlib import Path
+import platform
+import shutil
+import subprocess
+import sys
+import urllib.error
+import urllib.request
+import zlib
+
+ROOT = Path(__file__).resolve().parents[3]
+sys.path.insert(0, str(ROOT))
+from swarm_societies import evidence_archive_v1 as archive
+
+TAG = "commons-v3-qualification-2026-10-07"
+REPOSITORY = "ReloadLightly/swarm-societies"
+RELEASE_URL = f"https://github.com/{REPOSITORY}/releases/tag/{TAG}"
+WORK = ROOT / "runs/commons-v3-qualification-v1-validation/publication"
+VALIDATION = ROOT / "evidence/commons-v3-qualification-validation-v1/publication"
+CHUNK = 1024 * 1024
+
+
+def sha(path):
+    digest = hashlib.sha256()
+    with Path(path).open("rb") as stream:
+        while block := stream.read(CHUNK):
+            digest.update(block)
+    return digest.hexdigest()
+
+
+def same_bytes(left, right):
+    with Path(left).open("rb") as first, Path(right).open("rb") as second:
+        while True:
+            a, b = first.read(CHUNK), second.read(CHUNK)
+            if a != b:
+                return False
+            if not a:
+                return True
+
+
+def save_bytes(path, payload):
+    path = Path(path)
+    if path.exists():
+        if path.is_symlink() or path.read_bytes() != payload:
+            raise FileExistsError(f"Preserved output differs: {path}")
+        return
+    with path.open("xb") as stream:
+        stream.write(payload)
+
+
+def save_json(path, value):
+    save_bytes(path, (json.dumps(value, sort_keys=True, indent=2, allow_nan=False) + "\n").encode())
+
+
+def read_json(path):
+    return json.loads(Path(path).read_text())
+
+
+def command(arguments):
+    return subprocess.run(arguments, cwd=ROOT, capture_output=True, text=True, check=True).stdout
+
+
+def locations(stage):
+    identity = f"commons-v3-{stage}-qualification-v1"
+    return {"stage": stage, "identity": identity, "bank": ROOT / "evidence" / identity,
+            "artifacts": ROOT / "artifacts" / identity, "scratch": WORK / stage,
+            "receipts": VALIDATION / stage}
+
+
+def expected_assets(paths):
+    identity = paths["identity"]
+    return {identity + ".tar.gz": paths["scratch"] / (identity + ".tar.gz"),
+            identity + ".json": paths["artifacts"] / (identity + ".json"),
+            identity + "-catalog.json": paths["scratch"] / (identity + "-catalog.json")}
+
+
+def package(stage, source_commit):
+    from swarm_societies.commons_v3 import qualification_v1 as study
+
+    paths = locations(stage)
+    bank, artifacts, scratch, receipts = (paths[key] for key in ("bank", "artifacts", "scratch", "receipts"))
+    identity = paths["identity"]
+    if not (bank / "manifest.json").is_file():
+        raise ValueError("Only a completed qualification bank may be packaged")
+    completion = read_json(bank / "manifest.json")
+    if completion.get("complete") is not True or completion["stage"] != stage:
+        raise ValueError("Completion manifest has the wrong stage or is incomplete")
+    if (scratch / "packaging.json").exists():
+        saved = read_json(scratch / "packaging.json")
+        if saved["source_commit"] != source_commit:
+            raise ValueError("Existing package has a different source commit")
+        if sha(bank / "manifest.json") != saved["source_provenance"]["completion_manifest_sha256"]:
+            raise ValueError("Completed source bank changed after packaging")
+        for name, expected in saved["asset_sha256"].items():
+            if sha(expected_assets(paths)[name]) != expected:
+                raise ValueError("Existing package differs")
+        return saved
+    # Read-only aggregate/source verification; this path never replays physics.
+    integrity = study.verify(bank, replay=False,
+                             ecology=locations("ecology")["bank"] if stage == "incentive" else None)
+    compact = ["design.json", "sources.json", "summary.json", "manifest.json"]
+    if stage == "incentive":
+        compact.append("ecology-input.json")
+    for name in compact:
+        repository_path = str((bank / name).relative_to(ROOT))
+        committed = subprocess.run(["git", "show", source_commit + ":" + repository_path], cwd=ROOT,
+                                   capture_output=True, check=True).stdout
+        if committed != (bank / name).read_bytes():
+            raise ValueError("Source commit does not bind compact evidence: " + repository_path)
+    files = sorted((bank / "cases").glob("*.json.gz"))
+    if len(files) != completion["configurations"]:
+        raise ValueError("Raw-case count differs from the completion manifest")
+    inventory = []
+    for path in files:
+        digest = sha(path)
+        if digest != completion["artifacts_sha256"][str(path.relative_to(bank))]:
+            raise ValueError("Raw case differs from completed bank: " + str(path))
+        inventory.append({"path": str(path.relative_to(ROOT)), "size": path.stat().st_size, "sha256": digest})
+    if sum(item["size"] for item in inventory) > archive.DEFAULT_MAX_BYTES:
+        raise ValueError("Payload exceeds the existing restore helper's 1 GiB limit; preserve bank and specify a new packaging version")
+    for directory in (artifacts, scratch, receipts):
+        directory.mkdir(parents=True, exist_ok=False)
+    save_json(artifacts / "inventory.json", {"version": archive.INVENTORY_VERSION, "files": inventory})
+    archive_path = scratch / (identity + ".tar.gz")
+    manifest_path = artifacts / (identity + ".json")
+    manifest = archive.package(ROOT, artifacts / "inventory.json", archive_path, manifest_path,
+                               source_url=f"https://github.com/{REPOSITORY}/releases/download/{TAG}/{archive_path.name}")
+    save_json(receipts / "local-archive-verification.json", archive.verify(manifest_path, archive_path))
+    save_json(receipts / "bank-integrity-before-publication.json", integrity)
+    save_bytes(receipts / "publish_phase_v1.py.txt", Path(__file__).read_bytes())
+    provenance = {"bank": str(bank.relative_to(ROOT)), "stage": stage, "source_commit": source_commit,
+                  "completion_manifest": "manifest.json", "completion_manifest_sha256": sha(bank / "manifest.json"),
+                  "design_sha256": sha(bank / "design.json"), "sources_manifest_sha256": sha(bank / "sources.json"),
+                  "summary_sha256": sha(bank / "summary.json")}
+    if stage == "incentive":
+        provenance["ecology_input_sha256"] = sha(bank / "ecology-input.json")
+    catalog = {"version": "evidence-catalog-v1", "release_url": RELEASE_URL,
+               "payload": f"Only complete {stage} qualification raw case files. Compact designs, source freezes, summaries and completion manifests remain in Git.",
+               "packager_runtime": {"python": platform.python_version(), "zlib": zlib.ZLIB_VERSION},
+               "packager_source_sha256": sha(ROOT / "swarm_societies/evidence_archive_v1.py"),
+               "studies": [{"id": identity, "manifest": manifest_path.name, "manifest_sha256": sha(manifest_path),
+                            "files": len(files), "file_bytes": manifest["total_file_bytes"],
+                            "archive_bytes": manifest["archive"]["size"], "source_provenance": provenance}]}
+    save_json(artifacts / "catalog.json", catalog)
+    save_bytes(scratch / (identity + "-catalog.json"), (artifacts / "catalog.json").read_bytes())
+    result = {"version": "commons-v3-qualification-package-v1", "status": "ok", "stage": stage,
+              "identity": identity, "source_commit": source_commit, "source_provenance": provenance,
+              "files": len(files), "file_bytes": manifest["total_file_bytes"], "episodes": completion["episodes"],
+              "archive_bytes": manifest["archive"]["size"], "archive_sha256": manifest["archive"]["sha256"],
+              "asset_sha256": {name: sha(path) for name, path in expected_assets(paths).items()},
+              "publication_script_sha256": sha(Path(__file__)),
+              "simulation_replayed": False, "experimental_model_calls": 0}
+    save_json(scratch / "packaging.json", result)
+    return result
+
+
+def public_request(url):
+    request = urllib.request.Request(url, headers={"User-Agent": "swarm-societies-qualification-publication-v1",
+                                                  "Cache-Control": "no-cache"})
+    if request.has_header("Authorization"):
+        raise ValueError("Public verification must not authenticate")
+    return urllib.request.urlopen(request, timeout=60)
+
+
+def public_release():
+    with public_request(f"https://api.github.com/repos/{REPOSITORY}/releases/tags/{TAG}") as stream:
+        return json.load(stream)
+
+
+def download(url, destination, expected_size):
+    written = 0
+    with public_request(url) as response, destination.open("xb") as output:
+        while block := response.read(CHUNK):
+            written += len(block)
+            if written > expected_size:
+                raise ValueError("Hosted asset exceeds its declared size")
+            output.write(block)
+    if written != expected_size:
+        raise ValueError("Hosted asset is truncated")
+
+
+def upload(stage, source_commit, release_commit):
+    paths = locations(stage)
+    packaged = read_json(paths["scratch"] / "packaging.json")
+    if sha(Path(__file__)) != packaged["publication_script_sha256"]:
+        raise ValueError("Publication machinery changed after packaging")
+    if packaged["source_commit"] != source_commit:
+        raise ValueError("Upload source commit differs from packaging")
+    expected = expected_assets(paths)
+    for name, path in expected.items():
+        if sha(path) != packaged["asset_sha256"][name]:
+            raise ValueError("Upload asset changed after packaging")
+    try:
+        release = public_release()
+    except urllib.error.HTTPError as error:
+        if error.code != 404 or stage != "ecology" or source_commit != release_commit:
+            raise
+        notes = paths["scratch"] / "release-notes.md"
+        save_bytes(notes, ("Frozen commons v3 ecological and incentive qualification evidence.\n\n"
+                           "Each separately versioned catalog covers a completed bank. Later phase assets are added without replacing earlier identities. "
+                           "All raw outcomes are retained, including adverse or unresolved qualification outcomes. "
+                           "The banks contain no experimental model calls or evolutionary runs.\n\n"
+                           "Committed manifests pin source designs, decisions and per-file hashes. Hashes detect changes; GitHub hosting is not administratively immutable.\n").encode())
+        command(["gh", "release", "create", TAG, "--repo", REPOSITORY, "--target", release_commit,
+                 "--title", "Commons v3 ecological and incentive qualification evidence", "--notes-file", str(notes),
+                 *map(str, expected.values())])
+        return {"status": "uploaded", "stage": stage, "release_url": RELEASE_URL, "created_release": True}
+    if release["draft"] or release["target_commitish"] != release_commit:
+        raise ValueError("Existing release is draft or has a different target")
+    if stage == "incentive":
+        prior = read_json(locations("ecology")["receipts"] / "publication.json")
+        if prior["release_id"] != release["id"] or prior["release_target_commit"] != release_commit:
+            raise ValueError("Ecology publication belongs to a different release")
+    assets = {asset["name"]: asset for asset in release["assets"]}
+    present = set(expected) & set(assets)
+    # Interrupted uploads may be continued, but existing names are verified,
+    # never clobbered. No --clobber option is used anywhere.
+    if present:
+        retry = next_attempt(paths["scratch"], "upload-existing")
+        for name in sorted(present):
+            download(assets[name]["browser_download_url"], retry / name, assets[name]["size"])
+            if not same_bytes(retry / name, expected[name]):
+                raise ValueError("Existing hosted asset conflicts: " + name)
+    missing = [str(path) for name, path in expected.items() if name not in present]
+    if missing:
+        command(["gh", "release", "upload", TAG, "--repo", REPOSITORY, *missing])
+    return {"status": "uploaded", "stage": stage, "release_url": RELEASE_URL,
+            "created_release": False, "preserved_existing_asset_names": sorted(present)}
+
+
+def next_attempt(directory, prefix):
+    index = 1
+    while True:
+        candidate = directory / f"{prefix}-{index:03d}"
+        try:
+            candidate.mkdir()
+            return candidate
+        except FileExistsError:
+            index += 1
+
+
+def restore(arguments):
+    return command([sys.executable, "scripts/restore_evidence_v1.py", *map(str, arguments)])
+
+
+def verify_prior(release, attempt):
+    prior = locations("ecology")["receipts"]
+    manifest = read_json(prior / "manifest.json")
+    for name, expected in manifest["artifacts_sha256"].items():
+        if sha(ROOT / name) != expected:
+            raise ValueError("Previously frozen ecology publication file changed: " + name)
+    previous = read_json(prior / "release-assets-public.json")
+    publication = read_json(prior / "publication.json")
+    if release["id"] != previous["release_id"] or release["target_commitish"] != publication["release_target_commit"]:
+        raise ValueError("Earlier release identity changed")
+    assets = {asset["name"]: asset for asset in release["assets"]}
+    rows = []
+    directory = attempt / "preserved-ecology-downloads"
+    directory.mkdir()
+    for previous_asset in previous["assets"]:
+        asset = assets[previous_asset["name"]]
+        target = directory / asset["name"]
+        download(asset["browser_download_url"], target, asset["size"])
+        if (asset["id"] != previous_asset["id"] or asset["size"] != previous_asset["size"]
+                or sha(target) != previous_asset["sha256"]):
+            raise ValueError("Previously published ecology asset changed")
+        rows.append({"id": asset["id"], "name": asset["name"], "size": asset["size"],
+                     "sha256": sha(target), "asset_identity_preserved": True, "original_bytes_preserved": True})
+    return {"version": "commons-v3-qualification-ecology-preservation-v1", "status": "ok",
+            "release_id": release["id"], "release_target_unchanged": True,
+            "local_frozen_artifact_count": len(manifest["artifacts_sha256"]),
+            "all_local_frozen_hashes_unchanged": True, "authenticated_download": False,
+            "all_original_hosted_assets_byte_identical": True, "assets": rows}
+
+
+def verify(stage, source_commit, release_commit):
+    paths = locations(stage)
+    packaged = read_json(paths["scratch"] / "packaging.json")
+    if sha(Path(__file__)) != packaged["publication_script_sha256"]:
+        raise ValueError("Publication machinery changed after packaging")
+    if packaged["source_commit"] != source_commit:
+        raise ValueError("Verification source commit differs from packaging")
+    if (paths["receipts"] / "publication.json").exists():
+        previous = read_json(paths["receipts"] / "publication.json")
+        if previous["source_commit"] != source_commit or previous["release_target_commit"] != release_commit:
+            raise ValueError("Existing publication has different source or release bindings")
+        return previous
+    release = public_release()
+    if release["draft"] or release["target_commitish"] != release_commit:
+        raise ValueError("Public release identity differs")
+    attempt = next_attempt(paths["scratch"], "verification")
+    receipts, downloads = attempt / "receipts", attempt / "public-downloads"
+    receipts.mkdir()
+    downloads.mkdir()
+    assets = {asset["name"]: asset for asset in release["assets"]}
+    rows = []
+    for name, local in sorted(expected_assets(paths).items()):
+        asset = assets[name]
+        target = downloads / name
+        download(asset["browser_download_url"], target, asset["size"])
+        if not same_bytes(target, local) or sha(target) != packaged["asset_sha256"][name]:
+            raise ValueError("Public asset differs from original: " + name)
+        rows.append({"id": asset["id"], "name": name, "size": asset["size"], "sha256": sha(target),
+                     "browser_download_url": asset["browser_download_url"], "matches_local_bytes": True})
+    save_json(receipts / "release-assets-public.json", {"version": "commons-v3-qualification-public-assets-v1",
+              "stage": stage, "release_id": release["id"], "release_url": release["html_url"],
+              "authenticated_download": False, "assets": rows})
+    restored, cache, offline = attempt / "public-restored", attempt / "public-cache", attempt / "offline-restored"
+    for directory in (restored, cache, offline):
+        directory.mkdir()
+        if any(directory.iterdir()):
+            raise ValueError("Restoration requires empty initial directories")
+    identity = paths["identity"]
+    downloaded_catalog = downloads / (identity + "-catalog.json")
+    args = ["--catalog", downloaded_catalog, "--study", identity, "--root", restored, "--cache", cache]
+    restore([*args, "--receipt", receipts / "public-restoration.json"])
+    manifest = read_json(paths["artifacts"] / (identity + ".json"))
+    comparisons = []
+    for item in manifest["files"]:
+        target, original = restored / item["path"], ROOT / item["path"]
+        if not same_bytes(target, original) or target.stat().st_size != item["size"] or sha(target) != item["sha256"]:
+            raise ValueError("Restored raw bytes differ: " + item["path"])
+        comparisons.append({**item, "byte_identical": True})
+    save_json(receipts / "restored-byte-comparison.json", {"version": "commons-v3-qualification-restored-identity-v1",
+              "status": "ok", "stage": stage, "files": len(comparisons), "bytes": manifest["total_file_bytes"],
+              "all_byte_identical": True, "payload": comparisons})
+    restore([*args, "--offline", "--verify-only", "--receipt", receipts / "offline-verification.json"])
+    restore(["--catalog", downloaded_catalog, "--study", identity, "--root", offline,
+             "--cache", cache, "--offline", "--receipt", receipts / "offline-restoration.json"])
+    for item in manifest["files"]:
+        if not same_bytes(offline / item["path"], ROOT / item["path"]):
+            raise ValueError("Offline restored raw bytes differ: " + item["path"])
+    if stage == "incentive":
+        save_json(receipts / "ecology-assets-preserved.json", verify_prior(release, attempt))
+    default_cache = ROOT / ".cache/evidence-v1" / (manifest["archive"]["sha256"] + ".tar.gz")
+    default_cache.parent.mkdir(parents=True, exist_ok=True)
+    if default_cache.exists():
+        if not same_bytes(default_cache, cache / default_cache.name):
+            raise ValueError("Existing default cache differs")
+    else:
+        with (cache / default_cache.name).open("rb") as source, default_cache.open("xb") as destination:
+            shutil.copyfileobj(source, destination, CHUNK)
+    result = {"version": "commons-v3-qualification-publication-verification-v1", "status": "ok",
+              "stage": stage, "source_commit": source_commit, "release_target_commit": release_commit,
+              "release_url": release["html_url"], "release_id": release["id"], "published_at": release["published_at"],
+              "draft": release["draft"], "release_immutable": release.get("immutable"),
+              "phase_hosted_asset_count": len(rows), "hosted_sizes_and_sha256_match": True,
+              "authenticated_download": False, "initial_cache_empty": True, "initial_restore_root_empty": True,
+              "public_restored_files": len(comparisons), "public_restored_bytes": manifest["total_file_bytes"],
+              "all_restored_bytes_match_original": True, "offline_archive_verification_passed": True,
+              "offline_restoration_into_second_empty_root_passed": True,
+              "archive_sha256": manifest["archive"]["sha256"], "archive_bytes": manifest["archive"]["size"],
+              "public_catalog_sha256": sha(paths["artifacts"] / "catalog.json"),
+              "public_manifest_sha256": sha(paths["artifacts"] / (identity + ".json")),
+              "publication_runs_simulation": False, "experimental_model_calls": 0}
+    save_json(receipts / "publication.json", result)
+    for path in sorted(receipts.iterdir()):
+        save_bytes(paths["receipts"] / path.name, path.read_bytes())
+    return result
+
+
+def finalize(stage):
+    paths = locations(stage)
+    receipts, artifacts, identity = paths["receipts"], paths["artifacts"], paths["identity"]
+    publication = read_json(receipts / "publication.json")
+    packaged = read_json(paths["scratch"] / "packaging.json")
+    if sha(Path(__file__)) != packaged["publication_script_sha256"]:
+        raise ValueError("Publication machinery changed after packaging")
+    if publication["status"] != "ok" or not publication["all_restored_bytes_match_original"]:
+        raise ValueError("Documentation requires successful public verification")
+    if stage == "incentive" and not (receipts / "ecology-assets-preserved.json").is_file():
+        raise ValueError("Ecology asset preservation has not been verified")
+    artifact_readme = f"""# Commons v3 {stage} qualification archive
+
+This [catalog](catalog.json) restores the completed {stage} qualification bank:
+**{packaged['files']:,} raw case files / {packaged['episodes']:,} episodes**. It retains
+every case, including failed or unresolved scientific gates. Compact designs,
+source freezes, summaries and completion manifests remain in Git.
+There are zero evolutionary runs or experimental model calls.
+
+| Files | Original bytes | Archive bytes | Per-file SHA-256 manifest |
+| ---: | ---: | ---: | --- |
+| {packaged['files']:,} | {packaged['file_bytes']:,} | {packaged['archive_bytes']:,} | [manifest]({identity}.json) |
+
+The archive, manifest and unique phase catalog are published in
+[`{TAG}`]({RELEASE_URL}). This bank is bound to source checkpoint
+`{publication['source_commit']}`; the release target remains
+`{publication['release_target_commit']}`. The [inventory](inventory.json) pins every raw file.
+The [publication receipts](../../evidence/commons-v3-qualification-validation-v1/publication/{stage}/README.md)
+record unauthenticated public downloads, empty-cache restoration and offline
+restoration into a second empty directory, all byte-identical to the originals.
+
+```bash
+python3 scripts/restore_evidence_v1.py --catalog artifacts/{identity}/catalog.json --study {identity}
+python3 scripts/restore_evidence_v1.py --catalog artifacts/{identity}/catalog.json --study {identity} --check
+```
+
+Use `--offline` when the SHA-named archive is cached, or `--offline --verify-only`
+to verify the cached archive. Ecology and incentive catalogs have separate
+identities; adding later assets never replaces earlier files. Hosting is
+hash-pinned, not administratively immutable. Reproducing archive bytes is scoped
+to the recorded Python/zlib runtime; restored payload hashes are exact.
+"""
+    save_bytes(artifacts / "README.md", artifact_readme.encode())
+    publication_readme = f"""# {stage.capitalize()} qualification publication verification
+
+The [catalog](../../../../artifacts/{identity}/catalog.json) restores
+**{packaged['files']:,} files / {packaged['file_bytes']:,} bytes** from the
+[qualification evidence release]({RELEASE_URL}). All three public assets match
+their local bytes and hashes. Public verification used no authentication.
+
+An empty cache and empty destination restored every original file. Offline
+archive verification and restoration into a second empty destination also
+passed. These operations did not run simulations or model calls.
+
+- [Publication receipt](publication.json)
+- [Completed bank verification](bank-integrity-before-publication.json)
+- [Local archive verification](local-archive-verification.json)
+- [Public asset identity and hashes](release-assets-public.json)
+- [Empty-cache restoration](public-restoration.json)
+- [Per-file byte comparisons](restored-byte-comparison.json)
+- [Offline verification](offline-verification.json)
+- [Offline restoration](offline-restoration.json)
+- [Exact publication script](publish_phase_v1.py.txt)
+
+The source checkpoint is `{publication['source_commit']}`; the release target is
+`{publication['release_target_commit']}`. GitHub reports
+`immutable: {str(publication['release_immutable']).lower()}`. Hashes detect altered
+assets without claiming that administrators cannot change the release.
+"""
+    if stage == "incentive":
+        publication_readme += "\n[Ecology preservation checks](ecology-assets-preserved.json) confirm unchanged earlier asset IDs, sizes, downloaded bytes and all frozen local publication files.\n"
+    save_bytes(receipts / "README.md", publication_readme.encode())
+    save_bytes(receipts / "publish_phase_v1.py.txt", Path(__file__).read_bytes())
+    files = sorted(path for directory in (receipts, artifacts) for path in directory.iterdir()
+                   if path.is_file() and path != receipts / "manifest.json")
+    result = {"version": "commons-v3-qualification-publication-records-v1", "stage": stage,
+              "source_commit": publication["source_commit"], "status": "ok",
+              "artifacts_sha256": {str(path.relative_to(ROOT)): sha(path) for path in files}}
+    save_json(receipts / "manifest.json", result)
+    return {"status": "ok", "stage": stage, "files": packaged["files"], "file_bytes": packaged["file_bytes"],
+            "artifacts": str(artifacts.relative_to(ROOT)), "receipts": str(receipts.relative_to(ROOT))}
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("command", choices=("package", "upload", "verify", "finalize"))
+    parser.add_argument("stage", choices=("ecology", "incentive"))
+    parser.add_argument("--source-commit")
+    parser.add_argument("--release-commit")
+    args = parser.parse_args()
+    if args.command != "finalize" and (not args.source_commit or len(args.source_commit) != 40):
+        parser.error("a complete 40-character --source-commit is required")
+    if args.command in ("upload", "verify") and (not args.release_commit or len(args.release_commit) != 40):
+        parser.error("a complete 40-character --release-commit is required")
+    if args.command == "package": result = package(args.stage, args.source_commit)
+    elif args.command == "upload": result = upload(args.stage, args.source_commit, args.release_commit)
+    elif args.command == "verify": result = verify(args.stage, args.source_commit, args.release_commit)
+    else: result = finalize(args.stage)
+    print(json.dumps(result, sort_keys=True, indent=2))
+
+
+if __name__ == "__main__":
+    main()

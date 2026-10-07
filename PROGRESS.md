@@ -17,6 +17,12 @@ restores all **64 raw files / 6,664,398 bytes** byte-identically through an
 unauthenticated empty-cache download and offline restoration. The release
 targets the remotely verified review/probe commit `5676088`; the earlier
 incentive-completion checkpoint `e895b72` is also pushed and remote-verified.
+The separate incentive catalog in
+`artifacts/commons-v3-incentive-qualification-v1/` now restores all
+**224 raw files / 453,051,247 bytes** through public empty-cache and offline
+restoration. It retains the existing qualification release target and all
+earlier ecology asset identities/bytes. Full incentive semantic replay remains
+pending; the source, raw artifact and aggregate checks pass.
 
 The [complete incentive report](docs/commons-v3-incentive-qualification-results-v1.md)
 retains all original verdicts, weights, sensitivities and the five recorded

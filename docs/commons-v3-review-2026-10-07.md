@@ -16,6 +16,10 @@ source/artifact checks and exact reconstruction of saved-case aggregates pass;
 full semantic replay of the incentive episodes remains pending. The ecological
 bank's replay, independent audit and public restoration had already completed.
 No additional ecological publication, figure or audit layer is started here.
+The [separate incentive archive](../artifacts/commons-v3-incentive-qualification-v1/README.md)
+restores all 224 raw files byte-identically through public empty-cache and
+offline restoration. The prior ecology release and asset identities remain
+unchanged. Archive restoration verifies bytes, not semantic replay.
 
 The [complete incentive report](commons-v3-incentive-qualification-results-v1.md)
 retains every original gate, all nine cells and four adjacent pairs, weights

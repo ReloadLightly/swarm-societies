@@ -265,6 +265,14 @@ gains among restrained peers do not establish strict preference for restraint,
 so the stronger stag-hunt label remains a hypothesis. The frozen gate verdicts
 are preserved regardless of the later interpretation.
 
+![Reference focal gains across the five frozen aggressive-peer counts](figures/commons-v3-incentive-review-v1/reference-peer-curves.png)
+
+*Both frozen controls and all three utility weights, with ordinary descriptive
+95% intervals over 16 paired seeds. Only 0/6/12/18/23 peers were simulated;
+joining segments do not identify an interpolated tipping point. These are
+separate from the simultaneous qualification gates.
+[Complete curves, storage decomposition and export hashes](figures/commons-v3-incentive-review-v1/README.md).*
+
 ## 5. Limitations and next experiments
 
 The legacy ecology uses additive renewal, often operates near the consumption
@@ -302,6 +310,9 @@ restoration and full regeneration commands.
 The navigation bank uses separate [tuning](artifacts/commons-v3-navigation-tuning-v1/README.md)
 and [evaluation](artifacts/commons-v3-navigation-evaluation-v1/README.md)
 catalogs; restore both before its exact 660-episode replay or figure regeneration.
+The [incentive qualification catalog](artifacts/commons-v3-incentive-qualification-v1/README.md)
+restores all 224 raw files separately from ecology. Source, artifact and exact
+aggregate checks pass; full incentive semantic replay remains pending.
 The supplied review probe has a [separate public catalog](artifacts/commons-v3-temptation-review-v1/README.md)
 for all 64 raw episodes, with exact replay and public/offline restoration verified.
 Git history is unchanged, so use `git clone --depth 1` for a smaller initial
