@@ -34,6 +34,11 @@ no simulator, policy, protocol source closure or evidence file changes.
 All 259 local document-link targets resolve, and `git diff --check` passes.
 Scientific tests were not rerun for this prose-only change.
 
+Review checkpoint `ba19d530a35cd360aaa93cd671c4bdc24b167f5b` was pushed to
+`origin/main` and independently confirmed with
+`git ls-remote origin refs/heads/main`. This records synchronization in the
+existing progress log without adding a receipt layer.
+
 ## Superseded exclusion paper design proposed, 7 October 2026
 
 The [new design plan](docs/commons-v3-exclusion-experimental-plan-v1.md) translates
