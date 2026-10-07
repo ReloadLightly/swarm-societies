@@ -7,6 +7,11 @@ optional-institution development is next; the complete tipping experiment is
 a separate empirical work package, not a prerequisite for every political
 implementation task. No existing qualification verdict or model budget changes.
 
+The first [political capability extension](commons-v3-institutions-contract-v1.md)
+is now implemented and engineering-tested. Stage 2 next requires a declared
+development comparison and independent institutional evaluation. Implemented
+consent and escrow do not establish emergence or useful governance.
+
 **Current priority, updated 7 October 2026:** the
 [scientific review](research-review-2026-10-07.md) and
 [spatial commons implementation plan](commons-v3-plan.md) now govern the next

@@ -1,5 +1,41 @@
 # Active work record
 
+## Audited political controllers and full continuation verified, 7 October 2026
+
+`commons_v3/policies_institutions_v1.py` retains the competent frozen forager,
+adds bounded paid local reports with preserved observation times/provenance,
+and supplies optional-charter decision rules. Cooperative, explicitly responsive
+and stubborn behaviors remain distinct. Local affordable entry, refusal,
+voluntary funding, monitoring, collateral settlement, exit and mature claim
+retrieval use legal observations. These are candidate comparison policies, not
+qualified private optima or evidence of institutional advantage.
+
+`commons_v3/political_episode_v1.py` binds the audited source closure and restores
+every physical/political state field and policy memory. It accepts only its
+fixed built-in registry; generated v3 policy execution remains unimplemented.
+The [lifecycle demo](scripts/demo_commons_v3_institutions_v1.py) exercises the
+complete declared transition/failure sequence over 17 ticks and regenerates
+61 continuation ticks from six JSON checkpoints. It ends with no active
+institutions or custody, 0.52 operating cost, 0.5 forfeiture and maximum material
+residual 1.42e-14. A separate nonscripted, nonzero-need fixture forms a charter
+through supplied local rules and reproduces eight subsequent decision rounds
+after restoring membership and audit evidence. These are engineering fixtures.
+
+Validation: **76 new political/core/controller/runner tests**, within a full
+**1,055-test / 123-subtest** check. The sandbox run passed 1,047 tests and all
+123 subtests; eight existing archive tests failed because the sandbox forbids
+their 127.0.0.1 server. Those exact eight passed with loopback networking allowed.
+No implementation failure remains. Added logical-state checks reject duplicate
+identities, inconsistent memberships/custody, boolean identity links and replayed
+or expired consent. Frozen engine and qualification source files are unchanged.
+
+The first implementation increment `a2a2482fdb62358b29f2f32afb0d71ac38c12247`
+was pushed and independently confirmed by `git ls-remote origin refs/heads/main`.
+Next scientific work is a small declared development comparison with matched
+generic capabilities and a specified treatment of terminal custody, followed by
+a separately frozen independent evaluation. No new research bank, tipping
+episodes, model calls or evolutionary campaign were launched.
+
 ## Stage 2 political capabilities implemented, 7 October 2026
 
 The first [political capability contract](docs/commons-v3-institutions-contract-v1.md)

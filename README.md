@@ -337,6 +337,18 @@ uv pip install --python .venv/bin/python -r requirements-world-model-v1.txt -e '
 .venv/bin/python -m pytest -q
 ```
 
+Exercise the optional political lifecycle and full policy-memory continuation
+without an evidence download or experimental study:
+
+```bash
+.venv/bin/python scripts/demo_commons_v3_institutions_v1.py
+# Add --full-trace for every commitment, transition and material ledger.
+```
+
+This is a scripted engineering fixture. The
+[political contract](docs/commons-v3-institutions-contract-v1.md) gives the
+assumptions, audited policy interfaces and scientific limitations.
+
 Restore calibration evidence, verify it and regenerate the recorded baseline figure:
 
 ```bash

@@ -2,6 +2,8 @@
 
 from copy import deepcopy
 from dataclasses import replace
+import hashlib
+import json
 
 import pytest
 
@@ -512,3 +514,105 @@ def test_refunds_wait_in_custody_when_private_inventory_is_full():
     assert room_created.ledger.custody_after == 0.
     for result in (deposited, full, room_created):
         assert_conserved(result)
+
+
+def checkpoint_with_live_proposal_and_receipt():
+    state, identity = found()
+    charter = replace(institution(state, identity).charter, quota=1.)
+    actions = list(idle(state))
+    actions[1] = physical.Action(harvest=3.)
+    state = advance(state,
+        {0: politics.Intent('monitor', target=0),
+         1: politics.Intent('amend', target=identity, charter=charter)}, actions).state
+    return politics.snapshot(state)
+
+
+def resign(checkpoint):
+    """A recomputed public digest cannot make a malformed state admissible."""
+    content = {key: checkpoint[key] for key in ('version', 'state')}
+    checkpoint['sha256'] = hashlib.sha256(json.dumps(
+        content, sort_keys=True, separators=(',', ':'), allow_nan=False).encode()).hexdigest()
+    return checkpoint
+
+
+def test_actual_json_round_trip_preserves_pending_political_state():
+    saved = checkpoint_with_live_proposal_and_receipt()
+    serialized = json.dumps(saved, allow_nan=False)
+    restored = politics.restore(json.loads(serialized))
+    assert politics.snapshot(restored) == saved
+    assert restored.proposals and restored.evidence
+
+
+@pytest.mark.parametrize('mutation', [
+    'boolean_member', 'boolean_bond_owner', 'boolean_proposal_link',
+    'boolean_evidence_link', 'duplicate_institution', 'cross_collection_id',
+    'multiple_memberships', 'excess_active_pledge', 'missing_member_bond',
+    'active_bond_marked_released', 'nonmember_fine', 'custody_over_capacity',
+    'duplicate_cache',
+])
+def test_recomputed_digest_does_not_admit_malformed_political_state(mutation):
+    changed = checkpoint_with_live_proposal_and_receipt()
+    data = changed['state']
+    charter = data['institutions'][0]
+    if mutation == 'boolean_member':
+        charter['members'][0] = False
+    elif mutation == 'boolean_bond_owner':
+        charter['bonds'][0]['owner'] = False
+    elif mutation == 'boolean_proposal_link':
+        data['proposals'][0]['institution'] = False
+    elif mutation == 'boolean_evidence_link':
+        data['evidence'][0]['institution'] = False
+    elif mutation == 'duplicate_institution':
+        data['institutions'].append(deepcopy(charter))
+    elif mutation == 'cross_collection_id':
+        data['proposals'][0]['id'] = charter['id']
+    elif mutation == 'multiple_memberships':
+        duplicate = deepcopy(charter)
+        duplicate['id'] = data['next_id']
+        data['next_id'] += 1
+        data['institutions'].append(duplicate)
+    elif mutation == 'excess_active_pledge':
+        charter['bonds'][0]['amount'] = charter['charter']['bond'] + .5
+    elif mutation == 'missing_member_bond':
+        charter['bonds'].pop(0)
+    elif mutation == 'active_bond_marked_released':
+        charter['bonds'][0]['release_tick'] = 0
+    elif mutation == 'nonmember_fine':
+        data['evidence'][0]['institution'] = None
+        data['evidence'][0]['fine'] = 1.
+    elif mutation == 'custody_over_capacity':
+        charter['treasury'] = data['config']['treasury_capacity'] + 1.
+    elif mutation == 'duplicate_cache':
+        row = {'owner': 2, 'site_id': 0, 'amount': .25}
+        data['caches'] = [row, deepcopy(row)]
+    with pytest.raises(ValueError):
+        politics.restore(resign(changed))
+
+
+def test_successful_foundation_endorsements_cannot_be_replayed_as_a_new_organization():
+    state = world()
+    proposal = advance(state, {0: politics.Intent('propose', target=0, charter=politics.Charter())})
+    identity = proposal.state.proposals[0].id
+    votes = {0: politics.Intent('endorse', target=identity),
+             1: politics.Intent('endorse', target=identity)}
+    established = advance(proposal.state, votes)
+    before = politics.snapshot(established.state)
+    replayed = advance(established.state, votes)
+    assert len(replayed.state.institutions) == 1
+    assert replayed.ledger.custody_before == replayed.ledger.custody_after
+    assert replayed.ledger.political_cost == 0.
+    assert all(not event['ok'] for event in replayed.events)
+    assert politics.snapshot(established.state) == before
+
+
+def test_expired_foundation_proposal_cannot_reuse_stale_consent():
+    state = world()
+    state = replace(state, config=replace(state.config, proposal_lifetime=1))
+    proposed = advance(state, {0: politics.Intent('propose', target=0, charter=politics.Charter())})
+    identity = proposed.state.proposals[0].id
+    expired = advance(proposed.state,
+        {0: politics.Intent('endorse', target=identity),
+         1: politics.Intent('endorse', target=identity)})
+    assert expired.state.institutions == ()
+    assert expired.ledger.custody_after == 0.
+    assert all(not event['ok'] for event in expired.events)

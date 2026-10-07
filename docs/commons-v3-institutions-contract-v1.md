@@ -150,6 +150,14 @@ includes post-physical refunds. Report the outer ledger when custody is active.
 With no political intents or prior political state, physical results and
 trajectories are exactly identical to the original engine.
 
+The physical engine's terminal-wealth metric counts private carried inventory.
+It does not value caches, pledged collateral, outstanding refunds or an active
+treasury. It must not be reported as complete political private utility. Before
+evaluation, specify terminal ownership/settlement and report these components
+separately, without retuning the frozen wealth weights. Population consumption
+and realized material costs are already well defined; a rule for allocating
+terminal pooled property is a remaining experimental-design decision.
+
 ## Observation and continuation
 
 The legal observation retains the original physical packet and adds a
@@ -174,7 +182,7 @@ An explicitly scripted fixture binds its entire future schedule in its memory.
 Deterministic tests cover institution absence, refusal, founding, entry,
 nonpayment, paid activity, detected/undetected extraction, outsider immunity,
 failed settlement, exit, amendment, replacement, dissolution, local refunds,
-conservation and full checkpoint continuation. They should include concurrent
+conservation and full checkpoint continuation. They include concurrent
 actions, JSON file round trips and changes to hidden remote state. Test traces
 establish executable capabilities, not empirical formation or institutional
 benefit.
@@ -193,3 +201,51 @@ maintenance/recovery, original cohorts including exiters, outsider effects,
 all operation costs, and mechanism controls. The old qualification verdicts
 and terminal utility weights remain unchanged. The tipping protocol remains
 unexecuted and is not a prerequisite for this engineering implementation.
+
+## Reproduce the implementation checks
+
+Run the complete, scripted engineering fixture without downloading evidence:
+
+```bash
+.venv/bin/python scripts/demo_commons_v3_institutions_v1.py
+.venv/bin/python scripts/demo_commons_v3_institutions_v1.py --full-trace
+.venv/bin/python -m pytest -q tests/test_commons_v3_politics_v1.py \
+  tests/test_commons_v3_policies_institutions_v1.py \
+  tests/test_commons_v3_political_episode_v1.py
+```
+
+The fixture uses three individuals for 17 ticks, with no consumption requirement
+so custody transitions can be inspected directly. It exercises refusal followed
+by entry, nonpayment, detected and undetected violations, failed local
+settlement, exit, amendment, replacement, dissolution and generic storage. Six
+JSON checkpoints regenerate 61 continuation ticks exactly. The fixture ends
+with zero active institutions and zero outstanding custody, operating costs
+0.52 and forfeiture 0.5; maximum combined accounting residual is approximately
+1.42e-14. Those values describe a deliberately scripted engineering example,
+not a welfare result or an ecological scenario.
+
+The [episode runner](../swarm_societies/commons_v3/political_episode_v1.py)
+supports only the explicit audited registry. For example, an in-memory episode
+with supplied voluntary decision rules can be advanced and checkpointed:
+
+```python
+import json
+from swarm_societies.commons_v3.engine import Config
+from swarm_societies.commons_v3 import politics_v1 as politics
+from swarm_societies.commons_v3.policies_institutions_v1 import VoluntaryCharterPolicy
+from swarm_societies.commons_v3.political_episode_v1 import Episode, restore_checkpoint
+
+state = politics.initialize(Config(), seed=0)
+episode = Episode(state, [VoluntaryCharterPolicy() for _ in state.world.agents])
+episode.advance()
+saved = json.loads(json.dumps(episode.checkpoint()))
+resumed = restore_checkpoint(saved)
+assert episode.advance() == resumed.advance()
+```
+
+The checkpoint binds all imported local runtime sources, including both package
+initializers, and refuses a changed source closure. Keep these initializers
+unchanged because they also belong to the frozen qualification closure.
+No import string, executable source, arbitrary subclass or candidate loader is
+accepted. This is an audited-policy runner, not the future bounded v3 runtime
+for model-generated policies.

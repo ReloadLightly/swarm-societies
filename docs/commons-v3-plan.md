@@ -9,6 +9,12 @@ a strict game label need not gate political implementation. Frozen protocols
 and their thresholds remain unchanged; the older proposed gates below are
 historical design rationale, not evidence that qualification passed.
 
+**Stage 2 implementation:** the initial optional lifecycle, explicit local
+custody and paid monitoring/settlement are implemented in the
+[versioned capability contract](commons-v3-institutions-contract-v1.md).
+Deterministic fixtures verify these capabilities; a fair institutional-benefit
+comparison and generated-policy execution remain future work.
+
 ## Research objective
 
 Build a world of mobile individuals with local information, consequential

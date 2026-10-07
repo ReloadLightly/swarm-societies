@@ -24,6 +24,12 @@ shrink a full historical clone.
 
 ## Spatial physical foundation
 
+Stage 2 engineering now adds a separately versioned
+[optional political lifecycle](commons-v3-institutions-contract-v1.md), audited
+coordination/charter controllers and complete political/policy checkpoints.
+Its deterministic fixtures are implementation checks, not a scientific study
+of institutional benefit. The physical banks indexed below remain unchanged.
+
 The [physical foundation report](commons-v3-foundation-v1.md) documents the
 implemented mobile-agent engine and both development banks. There are no
 institutions or political memberships in these worlds. The two foundation banks

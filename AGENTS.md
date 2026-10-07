@@ -85,10 +85,16 @@ Stage 1's physical foundation is implemented in `swarm_societies/commons_v3/`;
 read `docs/commons-v3-foundation-v1.md` and both separately frozen development
 protocols. The engine has mobile individuals, local information, stock-dependent
 renewal, accounting and physical snapshots, with no institutions, memberships
-or supranational authority. Optional political transitions remain unimplemented.
+or supranational authority. Political transitions now exist in the separate
+extension described above; they remain absent from these frozen banks.
 The old world-model learner has not been transferred to this different renewal
 law. V3 runners currently execute only audited built-in policies; the existing
 bounded candidate adapters support the historical engines, not v3 yet.
+The new audited `political_episode_v1.py` runner restores complete policy
+memories and political state, and binds its runtime source closure. Its scripted
+lifecycle demo is `scripts/demo_commons_v3_institutions_v1.py`. The reporting
+coordinator and voluntary-charter heuristics in `policies_institutions_v1.py`
+are candidate comparators, not empirically qualified private optima.
 
 Both 56-configuration/224-episode development banks are complete. Preserve
 `evidence/commons-v3-foundation-v1/`, whose policy revealed a numerical
