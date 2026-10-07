@@ -1,5 +1,15 @@
 # Active work record
 
+## Ticket D resumed: four complete records replay exactly, 8 October 2026
+
+Recovery implementation `9609ebe9b1e1b3a7d83ca3356cfc4c056c7881a9` was pushed
+and remotely verified before resumption. All four previously saved episodes
+now reproduce their complete scientific records exactly under the accelerated
+implementation. Their gzip bytes are unchanged. These four verified cases
+are synchronized as an intermediate checkpoint; the declared bank remains
+incomplete, with q selection and G3 still pending. No sharing or independent
+evaluation has started. The same runner continues the remaining L0 cases.
+
 ## Ticket D recovery checkpoint, 8 October 2026
 
 Four complete L0 cases (moderate, need 1.2, q=0.25, seeds 90001–90004)
