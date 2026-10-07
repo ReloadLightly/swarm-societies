@@ -1,5 +1,19 @@
 # Active work record
 
+## World-model contract resumed with approved literature scope, 8 October 2026
+
+Roland authorized using abstracts and publicly available information for the
+two unavailable full texts and will supply the articles later. This is recorded
+in [contract §17](docs/paper-contract-world-models-v1.md#17-contract-change-log).
+The [bounded related-work draft](docs/paper-related-work-world-models-v1.md)
+closes §3 under that approval: no identical coupled design was found in the
+inspected material; full methods of those two papers remain unchecked. No
+additional search or protocol is introduced. Proceed A/G4, then B/G1, and stop
+at G1. No learner or communication-arm implementation is authorized in this run.
+
+The previous wait checkpoint `3b819a8fd12344ea6e99eb57b6e78488df481634`
+was pushed and independently confirmed on `origin/main`.
+
 ## Binding world-model contract adopted; literature access limit, 8 October 2026
 
 Roland's supplied shell block was run unchanged. Each scratch probe ran once;

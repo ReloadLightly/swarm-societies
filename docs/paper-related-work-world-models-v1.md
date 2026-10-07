@@ -48,11 +48,14 @@ under regenerative extraction coupling, with separate capacity accuracy,
 calibration and material outcomes. No identical comparison was identified in
 the inspected sources; this is a bounded search result, not proof of priority.
 
-Full-text closure remains incomplete for two requested sources. The
+Roland approved closing this bounded pass using abstracts and public information
+for the two unavailable full texts (contract §17). The
 [official ALIFE 2023 abstract](https://2023.alife.org/programme/) describes
 reflective governance of renewable resources; the
 [Mills–Lewis author abstract](https://www.trustworthyai.ca/publication/think-before-you-act-popperian-expectations-for-adaptive-agents/)
 describes causal expectations from internal simulation. Their detailed
 experiments remain unchecked. Wu, Farr and the accessible Kuusela–Laiho
 manuscript sections support the distinctions above; inaccessible texts are not
-counted as negative evidence for overlap.
+counted as negative evidence for overlap. The bounded G0 search found no
+identical design in the inspected material; the two full texts remain pending
+for later checking when supplied.

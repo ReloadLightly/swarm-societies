@@ -253,4 +253,10 @@ Possible follow-up after this paper: ShinkaEvolve over fusion and communication 
 
 ## 17. Contract change log
 
-(none)
+- **Roland, resumption after the full-text access pause:** approved proceeding
+  with the abstracts and publicly available information for Aishwaryaprajna &
+  Lewis (2023) and Mills & Lewis (2025); he will supply both full articles later.
+  The bounded §3 closure uses these access-qualified sources. Their detailed
+  methods are not represented as checked. Resume Ticket A/G4, then Ticket B/G1,
+  and stop at G1 as originally instructed. All other contract decisions remain
+  unchanged.
