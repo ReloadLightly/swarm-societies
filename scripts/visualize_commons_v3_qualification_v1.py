@@ -544,7 +544,7 @@ the table. Shading and * identify the fixed reference.
 gain at wealth weight 0.05, all-restrained minus all-aggressive population mean
 consumption, and the same loss during the final quarter, each divided by need.
 Points are 16-seed paired means; whiskers are simultaneous approximate Student-t
-intervals from the frozen 194-interval Bonferroni family, not descriptive
+intervals from the frozen 194-named-interval Bonferroni family, not descriptive
 intervals. Required lower-bound margins are 0.01, 0.05 and 0.05. Qualification
 requires one common adjacent pair containing the reference to pass every
 ecological and incentive criterion for both controls. All cells and adverse
@@ -600,6 +600,9 @@ and do not enter policy packets. Consumption and shortfall are complementary,
 not independent welfare outcomes.
 
 Intervals use fixed Student-t critical values from the prospective registry.
+Six primary-reference entries recur in the robustness family: 194 named
+interval slots cover 188 distinct designated estimand intervals. The frozen
+Bonferroni denominator stays 194.
 Coverage is approximate and model-based; Bonferroni does not make it
 distribution-free. Empty or zero-variance samples do not establish universal
 invariance. Exact saved comparisons determine every gate, without tolerance.
@@ -616,7 +619,7 @@ software versions.
 .venv/bin/python scripts/visualize_commons_v3_qualification_v1.py \\
   --ecology {path_label(ecology)} \\
   --incentive {path_label(incentive)} \\
-  --output {path_label(output)}
+  --output figures/commons-v3-qualification-v1
 ```
 """)
     outputs.append(readme)
