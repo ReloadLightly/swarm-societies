@@ -302,6 +302,8 @@ restoration and full regeneration commands.
 The navigation bank uses separate [tuning](artifacts/commons-v3-navigation-tuning-v1/README.md)
 and [evaluation](artifacts/commons-v3-navigation-evaluation-v1/README.md)
 catalogs; restore both before its exact 660-episode replay or figure regeneration.
+The supplied review probe has a [separate public catalog](artifacts/commons-v3-temptation-review-v1/README.md)
+for all 64 raw episodes, with exact replay and public/offline restoration verified.
 Git history is unchanged, so use `git clone --depth 1` for a smaller initial
 checkout; an ordinary full clone still downloads historical evidence blobs.
 

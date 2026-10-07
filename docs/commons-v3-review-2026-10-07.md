@@ -52,6 +52,9 @@ panels. It is still a review-driven exploratory probe of supplied policies,
 with a fixed focal identity, not a new general qualification or private-optimum
 test. Its [separate evidence record](../evidence/commons-v3-temptation-review-v1/README.md)
 records exact execution, per-seed outcomes and source provenance.
+The [separate probe catalog](../artifacts/commons-v3-temptation-review-v1/README.md)
+restores all 64 raw files byte-identically from its public release and offline
+cache. This does not change the earlier qualification archives.
 
 The supplied numbers reproduce. At capacity 80 the restrained focal consumes
 **99.8529% of need**; aggression against zero aggressive peers gains

@@ -12,6 +12,11 @@ is **0.070589 [0.049163, 0.092015]** of need, while the capacity-8 contrast is
 intervals do not amend frozen qualification gates. All **64 probe episodes**
 replay exactly; original stdout and per-seed records are retained separately in
 `evidence/commons-v3-temptation-review-v1/`. No model calls or evolution.
+Its separate public catalog in `artifacts/commons-v3-temptation-review-v1/`
+restores all **64 raw files / 6,664,398 bytes** byte-identically through an
+unauthenticated empty-cache download and offline restoration. The release
+targets the remotely verified review/probe commit `5676088`; the earlier
+incentive-completion checkpoint `e895b72` is also pushed and remote-verified.
 
 The [complete incentive report](docs/commons-v3-incentive-qualification-results-v1.md)
 retains all original verdicts, weights, sensitivities and the five recorded
