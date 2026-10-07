@@ -1,0 +1,76 @@
+"""Package one complete navigation phase without changing a prior identity."""
+from pathlib import Path
+import hashlib
+import json
+import platform
+import subprocess
+import sys
+import zlib
+
+ROOT = Path.cwd()
+sys.path.insert(0, str(ROOT))
+from swarm_societies import evidence_archive_v1 as archive
+from swarm_societies.commons_v3 import development_navigation_v1 as study
+
+phase, source_commit = sys.argv[1:]
+assert phase in ('tuning', 'evaluation') and len(source_commit) == 40
+identity = 'commons-v3-navigation-' + phase + '-v1'
+release = 'commons-v3-navigation-2026-10-07'
+artifacts = ROOT / 'artifacts' / identity
+scratch = ROOT / 'runs/commons-v3-navigation-v1-validation/publication' / phase
+receipts = ROOT / 'evidence' / (identity + '-publication')
+bank = ROOT / 'evidence/commons-v3-navigation-v1'
+sha = lambda path: hashlib.sha256(path.read_bytes()).hexdigest()
+def write(path, value):
+    with path.open('x') as stream:
+        json.dump(value, stream, sort_keys=True, indent=2, allow_nan=False)
+        stream.write('\n')
+
+manifest_relative = phase + '/manifest.json' if phase == 'tuning' else 'manifest.json'
+# Read-only evidence verification; publication does not replay the simulator.
+check = study.verify(bank, phase=phase, replay=False)
+for relative in ('design.json', 'sources.json', 'selection.json', manifest_relative):
+    repository_path = str((bank / relative).relative_to(ROOT))
+    committed = subprocess.run(['git', 'show', source_commit + ':' + repository_path],
+                               check=True, capture_output=True).stdout
+    assert committed == (bank / relative).read_bytes(), repository_path
+completed = json.loads((bank / manifest_relative).read_text())
+paths = sorted(p for p in (bank / phase / 'cases').glob('*.json.gz'))
+expected_count = 324 if phase == 'tuning' else 56
+assert len(paths) == expected_count
+for path in paths:
+    assert completed['artifacts_sha256'][str(path.relative_to(bank))] == sha(path)
+for directory in (artifacts, scratch, receipts):
+    directory.mkdir(parents=True, exist_ok=False)
+files = [{'path': str(path.relative_to(ROOT)), 'size': path.stat().st_size, 'sha256': sha(path)} for path in paths]
+inventory = artifacts / 'inventory.json'
+write(inventory, {'version': archive.INVENTORY_VERSION, 'files': files})
+archive_path = scratch / (identity + '.tar.gz')
+manifest_path = artifacts / (identity + '.json')
+source_url = 'https://github.com/ReloadLightly/swarm-societies/releases/download/' + release + '/' + archive_path.name
+manifest = archive.package(ROOT, inventory, archive_path, manifest_path, source_url=source_url)
+local_check = archive.verify(manifest_path, archive_path)
+write(receipts / 'local-archive-verification.json', local_check)
+write(receipts / 'bank-integrity-before-publication.json', check)
+provenance = {'bank': str(bank.relative_to(ROOT)), 'phase': phase,
+              'source_commit': source_commit, 'completion_manifest': manifest_relative,
+              'completion_manifest_sha256': sha(bank / manifest_relative),
+              'design_sha256': sha(bank / 'design.json'), 'sources_manifest_sha256': sha(bank / 'sources.json'),
+              'selection_sha256': sha(bank / 'selection.json')}
+catalog = {'version': 'evidence-catalog-v1',
+           'release_url': 'https://github.com/ReloadLightly/swarm-societies/releases/tag/' + release,
+           'payload': 'Only complete ' + phase + ' raw case files; compact source freezes, designs, selection and completion records remain in Git.',
+           'packager_runtime': {'python': platform.python_version(), 'zlib': zlib.ZLIB_VERSION},
+           'packager_source_sha256': sha(ROOT / 'swarm_societies/evidence_archive_v1.py'),
+           'studies': [{'id': identity, 'manifest': manifest_path.name, 'manifest_sha256': sha(manifest_path),
+                        'files': len(files), 'file_bytes': manifest['total_file_bytes'],
+                        'archive_bytes': manifest['archive']['size'], 'source_provenance': provenance}]}
+write(artifacts / 'catalog.json', catalog)
+(scratch / (identity + '-catalog.json')).write_bytes((artifacts / 'catalog.json').read_bytes())
+write(scratch / 'packaging.json', {'status': 'ok', 'identity': identity, 'phase': phase,
+     'source_commit': source_commit, 'archive_sha256': manifest['archive']['sha256'],
+     'archive_bytes': manifest['archive']['size'], 'files': len(files), 'file_bytes': manifest['total_file_bytes'],
+     'manifest_sha256': sha(manifest_path), 'catalog_sha256': sha(artifacts / 'catalog.json'),
+     'source_provenance': provenance, 'simulation_replayed': False})
+print(json.dumps({'identity': identity, 'files': len(files), 'file_bytes': manifest['total_file_bytes'],
+                  'archive_bytes': manifest['archive']['size'], 'archive_sha256': manifest['archive']['sha256']}, indent=2))

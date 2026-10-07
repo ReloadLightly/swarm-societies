@@ -1,0 +1,103 @@
+"""Unauthenticated public asset and empty-cache restoration audit for one phase."""
+from pathlib import Path
+import hashlib
+import json
+import shutil
+import subprocess
+import sys
+import urllib.request
+
+ROOT = Path.cwd()
+phase, source_commit, release_commit = sys.argv[1:]
+assert phase in ('tuning', 'evaluation')
+identity = 'commons-v3-navigation-' + phase + '-v1'
+TAG = 'commons-v3-navigation-2026-10-07'
+SCRATCH = ROOT / 'runs/commons-v3-navigation-v1-validation/publication' / phase
+PUBLIC = ROOT / 'artifacts' / identity
+RECEIPTS = ROOT / 'evidence' / (identity + '-publication')
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+def write(path, value):
+    with path.open('x') as stream:
+        json.dump(value, stream, sort_keys=True, indent=2, allow_nan=False)
+        stream.write('\n')
+def public_read(url):
+    request = urllib.request.Request(url, headers={'User-Agent': 'swarm-societies-evidence-publication-verifier-v1'})
+    assert not request.has_header('Authorization')
+    with urllib.request.urlopen(request, timeout=60) as stream:
+        return stream.read()
+def restore_command(arguments):
+    result = subprocess.run([sys.executable, 'scripts/restore_evidence_v1.py', *arguments],
+                            cwd=ROOT, text=True, capture_output=True)
+    assert result.returncode == 0, result.stderr
+    return json.loads(result.stdout)
+
+release = json.loads(public_read('https://api.github.com/repos/ReloadLightly/swarm-societies/releases/tags/' + TAG))
+assert release['draft'] is False
+assert release['target_commitish'] == release_commit
+expected = {identity + '.tar.gz': SCRATCH / (identity + '.tar.gz'),
+            identity + '.json': PUBLIC / (identity + '.json'),
+            identity + '-catalog.json': PUBLIC / 'catalog.json'}
+assets = {row['name']: row for row in release['assets']}
+assert set(expected) <= set(assets)
+downloads = SCRATCH / 'public-downloads'
+downloads.mkdir(exist_ok=False)
+rows = []
+for name in sorted(expected):
+    asset, local = assets[name], expected[name]
+    downloaded = downloads / name
+    downloaded.write_bytes(public_read(asset['browser_download_url']))
+    assert downloaded.read_bytes() == local.read_bytes()
+    assert downloaded.stat().st_size == asset['size'] == local.stat().st_size
+    rows.append({'id': asset['id'], 'name': name, 'size': asset['size'], 'sha256': sha(downloaded),
+                 'browser_download_url': asset['browser_download_url'], 'matches_local_bytes': True})
+write(RECEIPTS / 'release-assets-public.json', {'version': 'commons-v3-navigation-public-assets-v1',
+      'phase': phase, 'release_id': release['id'], 'release_url': release['html_url'],
+      'authenticated_download': False, 'assets': rows})
+restored, cache = SCRATCH / 'public-restored', SCRATCH / 'public-cache'
+restored.mkdir(exist_ok=False)
+cache.mkdir(exist_ok=False)
+assert not any(restored.iterdir()) and not any(cache.iterdir())
+args = ['--catalog', str(downloads / (identity + '-catalog.json')), '--study', identity,
+        '--root', str(restored), '--cache', str(cache)]
+restore_command([*args, '--receipt', str(RECEIPTS / 'public-restoration.json')])
+manifest = json.loads((PUBLIC / (identity + '.json')).read_text())
+comparisons = []
+for item in manifest['files']:
+    target, original = restored / item['path'], ROOT / item['path']
+    assert target.read_bytes() == original.read_bytes()
+    assert target.stat().st_size == item['size'] and sha(target) == item['sha256']
+    comparisons.append({**item, 'byte_identical': True})
+write(RECEIPTS / 'restored-byte-comparison.json', {'version': 'commons-v3-navigation-restored-identity-v1',
+      'status': 'ok', 'phase': phase, 'files': len(comparisons), 'bytes': manifest['total_file_bytes'],
+      'all_byte_identical': True, 'payload': comparisons})
+restore_command([*args, '--offline', '--verify-only', '--receipt', str(RECEIPTS / 'offline-verification.json')])
+offline_root = SCRATCH / 'offline-restored'
+offline_root.mkdir(exist_ok=False)
+restore_command(['--catalog', str(downloads / (identity + '-catalog.json')), '--study', identity,
+                 '--root', str(offline_root), '--cache', str(cache), '--offline',
+                 '--receipt', str(RECEIPTS / 'offline-restoration.json')])
+for item in manifest['files']:
+    assert (offline_root / item['path']).read_bytes() == (ROOT / item['path']).read_bytes()
+default_cache = ROOT / '.cache/evidence-v1' / (manifest['archive']['sha256'] + '.tar.gz')
+default_cache.parent.mkdir(parents=True, exist_ok=True)
+if default_cache.exists():
+    assert default_cache.read_bytes() == (cache / default_cache.name).read_bytes()
+else:
+    with (cache / default_cache.name).open('rb') as source, default_cache.open('xb') as destination:
+        shutil.copyfileobj(source, destination)
+receipt = {'version': 'commons-v3-navigation-publication-verification-v1', 'status': 'ok',
+           'phase': phase, 'source_commit': source_commit, 'release_target_commit': release_commit,
+           'release_url': release['html_url'], 'release_id': release['id'], 'published_at': release['published_at'],
+           'draft': release['draft'], 'release_immutable': release.get('immutable'),
+           'phase_hosted_asset_count': len(rows), 'hosted_sizes_and_sha256_match': True,
+           'authenticated_download': False, 'initial_cache_empty': True, 'initial_restore_root_empty': True,
+           'public_restored_files': len(comparisons), 'public_restored_bytes': manifest['total_file_bytes'],
+           'all_restored_bytes_match_original': True, 'offline_archive_verification_passed': True,
+           'offline_restoration_into_second_empty_root_passed': True,
+           'archive_sha256': manifest['archive']['sha256'], 'archive_bytes': manifest['archive']['size'],
+           'public_catalog_sha256': sha(PUBLIC / 'catalog.json'),
+           'public_manifest_sha256': sha(PUBLIC / (identity + '.json')),
+           'publication_runs_simulation': False, 'experimental_model_calls': 0}
+write(RECEIPTS / 'publication.json', receipt)
+print(json.dumps(receipt, sort_keys=True, indent=2))
