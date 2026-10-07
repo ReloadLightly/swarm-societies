@@ -1,5 +1,35 @@
 # Active work record
 
+## First institutional development panel prepared, 7 October 2026
+
+The [prospective development protocol](docs/commons-v3-institutions-development-protocol-v1.md)
+declares 144 episodes: both frozen navigation backgrounds, capacities 8/80,
+0/6 stubborn agents, four policy arms and four fresh seeds 93001–93004, plus
+all-stubborn anchors. Each episode has 256 ticks; total 36,864 physical ticks /
+884,736 individual decisions. There is no policy selection, confirmatory gate,
+model call or evolutionary run. The complete code/design/source closure is
+prepared in `evidence/commons-v3-institutions-development-v1/` before execution.
+
+All nonstubborn arms retain competent restrained navigation. The active arms
+share paid reports and conservative local cache management. Optional charters
+use the existing quota/bond/dues/fine defaults; the unmonitored arm anticipates
+no enforcement and withholds funds for unused operations. These are declared
+policy-bundle comparisons, not an isolated or cost-matched governance effect.
+Formal boards and escrow still lack a full nonmembership contract analogue.
+
+Measurement retains original cohorts, consumption, shortfall, costs, actual and
+observed violations, membership, stock and custody. Terminal book ownership
+allocates treasury equally among current members without redeeming it; carried
+and book utility remain separate at weights 0/0.05/0.2. All source/controller,
+measurement, recovery and relevant physical/political checks pass: **230 tests**.
+The earlier incentive source closure is unchanged. Unit tests used synthetic
+seed 42 cases; no declared development episode had run at preparation.
+The seed-disjointness and preparation receipts are in
+`evidence/commons-v3-institutions-development-validation-v1/`.
+
+Execution must follow remote verification of this prepared source/design
+increment. Retain nonformation, nulls and losses; do not tune or extend the panel.
+
 ## Incentive replay obligation closed; political implementation synchronized, 7 October 2026
 
 The unchanged verifier exactly reproduces all **224 configurations / 3,360
