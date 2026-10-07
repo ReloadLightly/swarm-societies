@@ -17,10 +17,14 @@ primary full texts of Aishwaryaprajna–Lewis 2023 and Mills–Lewis 2025 remain
 inaccessible despite publisher, author and repository searches; their primary
 abstracts are identified explicitly. G0 is not declared cleared on that basis.
 
-Approval was requested to record this access limitation in contract §17 and
-continue only through Tickets A–B/G1. No approval is assumed; Ticket A has not
-started, and §17 remains unchanged pending Roland's response. The contract,
-probes, frozen engines and completed banks remain unchanged.
+Roland explicitly selected **“Wait until both full texts are available.”**
+Ticket A and Ticket B remain unstarted; G4 and G1 have not been evaluated.
+Resume §3 only when the two full texts can be read, then continue A/G4 and B/G1
+in order and stop at G1. No deviation was approved, so contract §17 remains
+unchanged. The contract, probes, frozen engines and completed banks are unchanged.
+
+The literature-draft checkpoint `b60abcccae85b98eb9c553f1526babf8d9919ecc`
+was pushed and independently verified with `git ls-remote origin refs/heads/main`.
 
 
 ## Exclusion plan paused; world-model question restored, 7 October 2026
