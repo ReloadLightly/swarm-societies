@@ -1,5 +1,49 @@
 # Active work record
 
+## Ticket D base design: G3 triggers the fallback, 8 October 2026
+
+All **32 declared L0 development episodes** are complete on the four reused
+seeds. Selection chooses **q=0.25**: whole-run mean share of need is 0.930779,
+versus 0.909743 at q=0.5. The final-quarter means are 0.934040 and 0.901251.
+φ remains 0.375. The [saved summary](evidence/commons-v3-learning-development-v1/summary.json)
+contains both candidates, every paired gate value, epistemic trajectories and
+material measurements. The 48 selected Ticket B references are reused unchanged.
+
+**G3's nontriviality condition fails.** Selected L0 exceeds the oracle
+reference's mean first-64-tick consumption in every condition. Both candidate
+quantiles independently trigger G3; the verdict is not rescued by choosing
+q=0.5. Every selected-q seed also individually meets the one-sided 0.02
+boundary. Independent recomputation from all 32 raw records reproduces the
+selection and both quantiles' gate values exactly. The runner correctly stops
+before the 80 sharing episodes.
+
+| World | Need | Oracle, first 64 ticks | L0, first 64 ticks | Oracle − L0 | Oracle, whole run | L0, whole run |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Moderate | 1.2 | 0.980191 | 0.984493 | −0.004302 | 0.994007 | 0.994932 |
+| Moderate | 1.6 | 0.866392 | 0.875280 | −0.008888 | 0.842439 | 0.870312 |
+| Wide | 1.2 | 0.943480 | 0.950817 | −0.007336 | 0.976038 | 0.986909 |
+| Wide | 1.6 | 0.839958 | 0.881552 | −0.041594 | 0.822794 | 0.870962 |
+
+These are descriptive four-seed means after development selection. G3 uses
+cumulative consumption through tick64 and the fixed 0.02 cell-mean boundary,
+not confidence intervals. This is a consumption-gate result, not proof that
+the capacity maps are accurate: terminal all-agent/all-site absolute log-median
+errors are 0.363581, 0.147557, 0.509261 and 0.228550 in table order. Their
+seen-site counterparts are 0.201472, 0.115504, 0.205239 and 0.132847.
+The known-capacity heuristic is therefore an **oracle reference, not an
+established consumption ceiling**. These runs do not test a benefit or harm
+from sharing. No L1–L3, biased-arm or independent-evaluation cases have run.
+
+Full 32-case exact verification is in progress. Contract §8 prescribes the
+single unknown-global-r fallback, but supplies no prior for r. Proposed
+clarification for Roland's approval under §16: a common log-uniform prior
+r∈[0.12,0.48], one shared rate across all sites within each agent's joint
+posterior, with physical r=0.24, φ=0.375 and selected q=0.25 unchanged.
+Recalibrate the joint learner before one fallback L0 pass on the same four
+development seeds, then apply the same G3 criterion. This proposal is not
+approved, recorded in §17 or executed. No new protocol or evaluation freeze
+has been added.
+
 ## Ticket D resumed: four complete records replay exactly, 8 October 2026
 
 Recovery implementation `9609ebe9b1e1b3a7d83ca3356cfc4c056c7881a9` was pushed

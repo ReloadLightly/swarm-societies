@@ -1,4 +1,4 @@
-**Current plan:** [Paper contract v1](docs/paper-contract-world-models-v1.md) replaces the reframing review’s “Next decision” section and is the current binding plan. Tickets A/G4, B/G1 and C/G2 are complete; Ticket D is running. [Current checkpoint](PROGRESS.md).
+**Current plan:** [Paper contract v1](docs/paper-contract-world-models-v1.md) replaces the reframing review’s “Next decision” section and is the current binding plan. Tickets A/G4, B/G1 and C/G2 are complete; Ticket D's base design triggers the G3 fallback. [Current checkpoint](PROGRESS.md).
 
 # Swarm Societies: A Research Testbed for Resources and Institutions
 
@@ -16,9 +16,18 @@ oracle exceeds the globally selected fixed belief by **0.203677 of need** on
 four reused development seeds. This establishes consequential knowledge for
 the supplied controller, not useful sharing. The site posterior passes C/G2 on
 1,024 synthetic clean-transition sequences; that qualification does not extend
-to inference in the coupled harvesting arenas. Ticket D's bounded learning and
-communication development is now running. Its results and G3 verdict are not
-yet reported here; independent evaluation remains unstarted.
+to inference in the coupled harvesting arenas.
+
+Ticket D's 32 asocial development episodes trigger **G3's fallback**. Selected
+q=0.25 matches or exceeds the oracle reference's first-64-tick consumption in
+all four conditions. In the wide-capacity, high-demand cell, whole-run L0
+consumption is **87.10% of need**, versus **82.28%** for the oracle reference.
+Substantial capacity-estimation error remains. This establishes a limitation
+of the consumption benchmark, not accurate complete-map learning or a general
+verdict about sharing. The oracle is an informed heuristic rather than a
+consumption ceiling. Sharing cases were not run. The prescribed unknown-rate
+fallback awaits approval of its unspecified rate prior; independent evaluation
+remains unstarted. [Results and paired gate values](PROGRESS.md).
 
 Earlier studies remain frozen. Ecological qualification witnesses viability in
 five of nine cells; robust incentive qualification fails, and the first optional
@@ -123,10 +132,11 @@ hides site capacities while declaring the common logistic law, weather
 distribution and initial-stock rule. Local stock observations and complete
 extraction receipts can identify growth transitions without global knowledge;
 incomplete shared extraction remains confounded. The frozen forager receives
-capacity beliefs through a wrapper; its known-capacity reference is a knowledge
-ceiling for that decision rule, not an optimal planner. Tickets A–C are complete,
-and D now compares the learning regimes before the contracted freeze and
-independent evaluation. [Progress and gate evidence](PROGRESS.md).
+capacity beliefs through a wrapper. Its known-capacity reference is an informed
+heuristic, which the asocial learner exceeds in the current development means.
+Tickets A–C are complete. D's base design triggers G3 before sharing, and the
+unknown-rate fallback is next, subject to approval of its missing prior.
+[Progress and gate evidence](PROGRESS.md).
 ALIFE 2027 remains the paper target.
 
 ## 2. Related work
@@ -398,12 +408,13 @@ That panel remains unexecuted and is parked by the
 institutions, exclusion, storage/capability shocks, evolution and learning the
 law family. Further ecology publication, figure and audit layers remain deferred.
 
-The active sequence is to complete Ticket D, report G3 and the learning-regime
-results, then follow the contracted gates and one freeze before independent
-evaluation. G1 uses reused development seeds, and G2 qualifies the synthetic
-clean-transition model only; neither establishes a benefit from sharing or
-nominal coverage in the coupled arenas. The current run's outcomes remain
-pending in this README; [PROGRESS.md](PROGRESS.md) records the execution state.
+The known-rate L0 comparison now triggers G3; the single unknown-rate fallback
+requires a specified prior and recalibration before a new arm pass. G1 uses
+reused development seeds, and G2 qualifies the synthetic clean-transition model
+only. No benefit or harm from sharing has been tested in the new site-capacity
+study. The current evidence does not establish the oracle reference as a
+consumption ceiling or complete-map learning as trivial.
+[PROGRESS.md](PROGRESS.md) records the results and pending prior clarification.
 No completed bank is extended. Model-driven program search remains outside this
 paper and would require a separate protocol and budget.
 
