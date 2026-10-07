@@ -6,6 +6,19 @@ do not defer all updates until the end of a research stage. Publish new raw
 evidence through separately versioned archives and verify public restoration.
 Preserve earlier archive identities and record remote commit verification.
 
+The user's evening steering review on 7 October 2026 overrides the earlier
+archive-first and comparator-refinement ordering for the new extension. Read
+`docs/commons-v3-exclusion-conventions-v1.md`: pause charter response/collateral/
+timing/monitoring splitting. Implement costly physical exclusion with resistance,
+then local numerical adaptation without model calls, then endogenous storage
+value through starvation/capability loss under shocks (or reproduction in a
+separate version). Use 4–8 development seeds and one complete freeze before
+independent evaluation. Do not extend completed banks. Add no new archive,
+receipt or audit layer until a decisive result exists. Ordinary software tests
+and continuous Git synchronization continue. Target: an eight-page ALIFE 2027
+paper on convention emergence, member gains and outsider costs across storage
+and scarcity; this is a question, not an established finding.
+
 Read `PROGRESS.md` for the current experimental state,
 `docs/world-model-calibration-v1.md` for the independent calibration audit and
 implementation decision, and `docs/world-model-v1.md` for the implemented
@@ -45,9 +58,13 @@ and checkpoints all receipts/memories. Paid route intentions are unverified soft
 commitments, not bilateral escrow. Shared route fuel uses directly observed
 return anchors; initial exploration still lacks an established return route.
 The compact synthetic fixture and 110 new tests establish engineering, not
-general welfare improvement; the complete v3 suite passes 680 tests. Next define
-commitment/information parity and separate charter response, collateral, timing
-and paid enforcement controls before revised development/independent evaluation.
+general welfare improvement; the complete v3 suite passed 680 tests at that
+checkpoint. The subsequent evening review pauses comparator refinement and
+mechanism splitting. The separate `exclusion_v1.py` extension adds generic paid
+stationary guarding, harvest opportunity cost, costly resistance, crowd-diluted
+force, opening-affiliation protection and an explicit outer material ledger.
+Its constructed fixtures do not establish emergence. Local numerical adaptation
+is next, followed by endogenous storage value and a small development design.
 Do not extend or tune the completed first bank or change its frozen sources.
 The unexecuted
 tipping v1 panel need not block that engineering. Preserve the distinction between scripted lifecycle validation,

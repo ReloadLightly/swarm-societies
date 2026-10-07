@@ -21,13 +21,22 @@ The subsequent [coordination/membership v2 increment](commons-v3-coordination-me
 now implements paid route intentions, equally supplied private outcome receipts,
 and local entry/refusal/exit rules. Its constructed fixtures verify consequential
 physical decisions and full continuation; they do not establish superior welfare.
-The next priority is commitment/information parity and prospective separation
-of charter response, collateral, timing and paid monitoring.
-Use a new protocol version before revised development, then fresh independent
-evaluation. The proposed storage/prevalence study remains conditional on a
-specific design need; no strict game label is required to improve these
-comparators. Earlier qualification verdicts and completed banks stay unchanged.
-This plan starts no experiments and authorizes no model spending.
+The [7 October evening steering](commons-v3-exclusion-conventions-v1.md) now
+**pauses comparator refinement and mechanism splitting**. The first design has
+already-restrained members, harmful outsiders beyond its sanction reach and no
+adaptation. Better comparison controls cannot supply those missing mechanisms.
+The new sequence is costly physical exclusion with resistance, local numerical
+adaptation, then endogenous storage value through shocks and starvation/capability
+loss. The first physical extension is implemented in separate files with
+constructed fixtures; the latter two steps remain ahead. Use 4–8 development
+seeds and one complete freeze before independent evaluation. No new archive,
+receipt or audit layer before a decisive result. Earlier verdicts and completed
+banks remain unchanged; no model spending is authorized.
+
+The paper target is ALIFE 2027, eight pages, on **when local exclusion conventions
+emerge, what they gain members and what they cost outsiders across storage and
+scarcity**. This is the question the next experiment must answer, not a finding
+of the old banks or the new engineering fixtures.
 
 ## Position in the research program
 
@@ -93,9 +102,10 @@ that membership is attractive.
 Inventory has legitimate physical uses, including financing movement and
 buffering consumption. The unsupported inference is that a prescribed reward
 for inventory at the terminal tick demonstrates consequential welfare. Preserve
-the weight and report its contribution separately. Adding mortality, new shocks
-or reproduction could create endogenous storage value, but would be a new
-physical model and is unnecessary for the next institutional implementation.
+the weight and report its contribution separately. The evening review now puts
+a new shock/starvation-capability extension after physical exclusion and numerical
+adaptation, precisely to test consequential storage value. It is a new physical
+model, and the old incentive qualification does not transfer automatically.
 
 ## What is reusable and what is missing
 
@@ -135,10 +145,14 @@ to orient future work; earlier plans remain historical references.
 | Complete | Specify and implement the political capability contract. | Lifecycle, custody, consent, local observation, paid enforcement and complete continuation are implemented and fixture-tested. |
 | Complete | Run the first declared institutional development comparison. | All 144 episodes and comparisons retained, including losses, near-inactive reporting and absent exits; exact replay passes. |
 | Engineering complete | Implement consequential decentralized coordination and responsive membership decisions. | V2 paid messages change routes/material outcomes in constructed fixtures; own receipts and local forecasts govern refusal/exit. Strong population performance and binding commitment parity remain unqualified. |
-| Next | Separate mechanism bundles prospectively. | Charter response, collateral locking, timing and monitoring have explicit controls and evidence-access checks; no outcome-fitted terminal weight. Freeze a new version before revised development. |
-| After development | Freeze independent institutional evaluation. | Fresh seeds, absolute consumption/cost/original-cohort/outsider endpoints and identified interventions; the current four seeds do not become evaluation. |
+| Paused by evening review | Comparator refinement and separation of charter response, collateral, timing and monitoring. | Preserve completed code and results; these controls cannot repair fixed types or unreachable outsiders. |
+| Engineering complete | (a) Add costly physical exclusion and resistance in a new version. | Paid local guards forgo harvest, outsider resistance costs resources, rival force is finite, and member/outsider outcomes and material accounting are separate. Fixtures are not emergence. |
+| Next | (b) Add local numerical adaptation. | Bounded policy parameters, explicit local payoff information, synchronous imitation/mutation, full state/memory continuation and no model calls. |
+| Then | (c) Give storage endogenous value. | Shocks cause starvation/capability loss that actual stores can buffer; demonstrate the physical consequence without terminal-weight tuning. |
+| Development | Small storage × scarcity comparison on 4–8 seeds. | Retain null formation, failures, member losses and outsider costs; fixed-policy and no-force controls; no extra archive/receipt/audit layer yet. |
+| After development | One complete freeze before independent evaluation. | Fresh seeds, fixed source/design/analysis and effect criteria; all development attempts remain development. |
 | Conditional | Implement and execute tipping v1 if its full surface changes the empirical design. | Separate executable/source freeze, unchanged panel, complete results including unresolved regions. Political implementation can proceed in parallel. |
-| Later | Add bounded adaptation and consequential learning. | Strong baseline headroom, an appropriate v3 execution/model contract, and a separate budget for any model-driven campaign. |
+| Later | Model-driven adaptation and consequential learning. | Appropriate v3 execution/model contract and a separately authorized inference budget; distinct from the next numerical imitation stage. |
 
 The incentive replay is complete. For future reproduction, use the existing
 verifier without an ecology argument, since the bank contains its bound
@@ -199,7 +213,10 @@ stability. This split is now implemented in `politics_v1.py`,
 [capability contract](commons-v3-institutions-contract-v1.md) records the exact
 semantics and engineering validation. The requirements above remain the rationale.
 
-## The first institutional question and fair controls
+## Historical rationale for the completed first institutional comparison
+
+The following motivated the first bank. Its proposed comparator refinement is
+paused by the evening review; use the new sequence above for active work.
 
 The next scientific question is whether optional, materially funded local
 agreements can preserve or recover consumption under harmful peer behavior
@@ -306,6 +323,10 @@ decision.
 
 ## When to return to adaptation and learning
 
+Local numerical imitation is now the immediate next implementation after
+physical exclusion. It requires no model spending. The requirements below
+refer to later model-generated programs and the historical learning track.
+
 Model-driven evolution needs three things beyond a working political simulator:
 a consequential gap beyond strong simple and numerical baselines, a fair
 prospective admission/evaluation design, and v3-compatible bounded candidate
@@ -337,8 +358,9 @@ whether the declared response model or costs explain it without relabeling a
 scripted adoption schedule as emergence. Certified insufficient-supply cells
 remain physical limits, not challenges any government must be able to solve.
 
-The political lifecycle, first development comparison and subsequent controller
-engineering are complete. The next concrete milestone is a prospectively
-declared comparison with commitment/information parity and separate controls
-for the mechanisms that the first bank cannot identify. Preserve its mixed
-results; do not present v2's constructed fixtures as a new welfare estimate.
+The political lifecycle, first development comparison, controller engineering
+and new physical-exclusion primitive are implemented. The next concrete milestone
+is local numerical adaptation, followed by endogenous storage consequences.
+Preserve the mixed first-bank results; neither v2 nor exclusion fixtures are
+new welfare estimates. The active question concerns adaptive local conventions
+and their member/outsider tradeoffs, not a better score for the old charter.

@@ -12,9 +12,14 @@ The earlier studies remain frozen. Both fresh qualification banks
 are complete: ecological viability is witnessed in five of nine cells, but
 the primary joint verdict is unresolved and robust incentive qualification
 fails. A new controller version now implements paid route coordination and
-payoff-responsive membership, checked on constructed fixtures. Prospective
-mechanism controls and independent institutional evaluation remain ahead;
-no new model spending is authorized.
+payoff-responsive membership, checked on constructed fixtures. The evening
+review pauses comparator refinement: restrained members lack a qualified
+consumption temptation, harmful outsiders are beyond charter sanctions, and
+no agent adapts. The new research question is **when local exclusion conventions
+emerge, what they gain members, and what they cost outsiders across storage and
+scarcity**. A separate costly guarding/resistance extension now implements the
+physical mechanism. Local numerical adaptation and endogenous storage value
+come next; emergence and welfare benefits remain untested. No model calls.
 
 [Study index](docs/study-index.md) ·
 [Detailed archived report](docs/living-research-report-2026-10-07.md) ·
@@ -25,6 +30,7 @@ no new model spending is authorized.
 [Political capability contract](docs/commons-v3-institutions-contract-v1.md) ·
 [Institutional development results](docs/commons-v3-institutions-development-v1.md) ·
 [Coordination and membership v2](docs/commons-v3-coordination-membership-v2.md) ·
+[Evening steering and exclusion extension](docs/commons-v3-exclusion-conventions-v1.md) ·
 [Physical commons](docs/commons-v3-foundation-v1.md) ·
 [Need-targeted baselines](docs/commons-v3-need-v1.md) ·
 [Local navigation and numerical baselines](docs/commons-v3-navigation-v1.md) ·
@@ -34,9 +40,8 @@ no new model spending is authorized.
 
 ## Abstract
 
-Under what conditions do locally formed institutions improve their members'
-welfare without exporting costs to outsiders, and how does the relative rate
-of member and institutional adaptation change that outcome? Swarm Societies
+When do local exclusion conventions emerge, what do they gain members and
+what do they cost outsiders, as storage and scarcity change? Swarm Societies
 develops executable environments for this question. Its current experiments
 establish accounting, program replacement, parameter learning and controlled
 information sharing. **They do not establish an advantage for evolved
@@ -64,7 +69,11 @@ decentralized controller in every seed of six of eight contexts. The two
 positive context means have adverse seeds, and one lowers
 consumption for the original eligible cohort. Rare decentralized communication,
 absent exits and limited external monitoring leave institutional superiority
-and its mechanism unresolved.
+and its mechanism unresolved. The tested members are already restrained,
+outsiders cannot be physically excluded and neither type adapts. A new versioned
+extension supplies costly local guarding with costly resistance and separate
+member/outsider accounting. Its constructed fixtures verify physical effects,
+including harmful guarding; adaptive convention formation has not been tested.
 
 ## 1. Research question and present scope
 
@@ -77,7 +86,7 @@ intelligence.
 The world separates **physical location, political membership and claimed
 jurisdiction**. The separately versioned political extension implements optional
 founding, refusal, joining, exit, amendment, replacement and dissolution. Zero
-institutions and failed cooperation remain valid outcomes. Local claims grant
+institutions and failed cooperation remain valid outcomes. In that first version, local claims grant
 no extraction priority or power over outsiders. Paid monitoring and settlement
 can reach only voluntarily pledged collateral under supplied secure-custody
 rules. These are implemented capabilities, not evidence of spontaneous formation
@@ -91,6 +100,16 @@ charges or a better outside forecast can trigger exit. The constructed demo
 checks consequential route changes, actual exit and delayed refunds with full
 continuation. It does not measure a population welfare improvement or establish
 binding nonmembership commitment parity.
+
+The [evening steering and new extension](docs/commons-v3-exclusion-conventions-v1.md)
+pause further comparator/mechanism splitting. Physical exclusion now requires
+paid, stationary guarding that forgoes harvest; resistance costs resources and
+finite guard effort is divided across competing outsiders. Any individual can
+guard, while opening affiliation determines shared protection at a claimed site.
+A claim alone does nothing. The active sequence is physical exclusion, local
+numerical imitation, then starvation/capability consequences under shocks.
+The target is an eight-page ALIFE 2027 paper; it is not a claim of completed
+research or publication. The completed bank remains closed.
 
 ## 2. Related work
 
@@ -360,14 +379,15 @@ paid enforcement and no supranational authority. The full tipping panel need
 not block political interface development; institutional claims require their
 own prospective comparison. The first development bank now identifies the next
 requirements. Consequential coordination and locally responsive membership now
-have a separately versioned engineering implementation. The next item is to
-define matched commitment/information opportunities and separate controls for
-charter response, collateral, timing and monitoring. A new prospective protocol
-must precede revised development and fresh independent
-evaluation; this completed bank must not be extended. Hand-designed institutions,
-no-institution controls and strong decentralized coordination remain mandatory.
-Model-driven adaptation still needs a separate protocol and inference budget.
-No gate requires institutions or coevolution to win.
+have a separately versioned engineering implementation. The evening review
+supersedes that comparator work package with costly physical exclusion,
+numerical local adaptation and endogenous storage value, in that order. Use
+four to eight development seeds and one complete freeze before fresh independent
+evaluation. Do not extend the completed bank or add archives, receipts or audit
+layers before a decisive result. Separate member gains from outsider costs;
+retain failure to form and harmful conventions. Numerical imitation needs no
+model calls; model-driven adaptation still needs a separate protocol and
+inference budget. No gate requires institutions to win.
 
 ## 6. Reproducibility
 

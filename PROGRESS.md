@@ -1,5 +1,42 @@
 # Active work record
 
+## Evening steering adopted; costly physical exclusion implemented, 7 October 2026
+
+The [new active extension and sequence](docs/commons-v3-exclusion-conventions-v1.md)
+pause comparator refinement and charter response/collateral/timing/monitoring
+splitting. The completed first design has restrained members without qualified
+member temptation, harmful outsiders beyond charter sanctions, and no adaptation.
+The 144-episode bank remains closed. Its adverse/cohort-specific results and
+all earlier incentive verdicts remain unchanged.
+
+Step (a) is implemented separately in `exclusion_v1.py`: any individual can
+pay for stationary guarding and forgo harvesting; outsiders can pay to resist.
+Opening affiliation determines shared protection at a claimed site. Claims
+alone do nothing, finite guard effort is divided across outside harvesters,
+and rival claims can contest each other. Actual movement is resolved before
+contests. There is no seizure of outsider inventory or automatic member quota
+enforcement. The outer ledger accounts for every material cost; no-force
+transitions exactly preserve the old political result.
+
+The evaluator separates fixed reference cohorts from opening membership and
+outsiders. Constructed, paired action fixtures retain member gains with outsider
+losses, member losses under abundance, costly resistance and rival-guard losses.
+These are engineering checks, not sampled welfare estimates or emergence.
+Four physical continuation ticks match after a JSON state round trip; maximum
+demo material residual is **3.03e-15**. The v3 regression run passed **738 tests**;
+the final focused run passed **60 new tests**, including two additional checks
+of final-harvest monitoring and the limits of coercion. No frozen sources,
+completed evidence banks or archive identities changed.
+
+**Next:** (b) local payoff-biased numerical imitation over a few policy parameters,
+with an explicit legal local performance signal; then (c) physical storage value
+through shocks and starvation/capability loss. No model calls. Use 4–8 development
+seeds and one complete freeze before independent evaluation. The ALIFE 2027
+eight-page target asks when local exclusion conventions emerge, what they gain
+members and what they cost outsiders across storage and scarcity. No sampled
+panel, new archive, receipt or audit layer was created; defer those layers until
+a decisive result. Ordinary tests and Git synchronization continue.
+
 ## Consequential coordination and responsive membership v2 implemented, 7 October 2026
 
 The [new engineering contract and checked fixtures](docs/commons-v3-coordination-membership-v2.md)
