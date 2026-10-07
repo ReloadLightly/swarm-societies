@@ -1,5 +1,38 @@
 # Active work record
 
+## Ticket B implementation before the development panel, 8 October 2026
+
+G4 checkpoint `65354fcfebd94dcdcea30ab4c2b252aa83ac7947` was pushed and verified
+on `origin/main`. Ticket B uses the same four scratch development seeds
+90001–90004, with the contracted equal-total-capacity worlds and independent
+U(0.3,0.9) initial fractions; these are not fresh evaluation seeds.
+
+Choose one oracle floor fraction from {0.375, 0.5} using equal-weight mean
+consumption over all 16 development cases. At that fraction, choose one fixed
+capacity from {20, 30, 40} across the same 16 cases. Final-quarter consumption,
+then the smaller parameter, break ties, following the existing navigation
+selection ordering. Retain all 32 oracle, 48 fixed and 16 greedy episodes;
+the selected reference map contains 48 of these 96 episodes. This is a finite
+development choice, not the later design freeze or independent evaluation.
+
+The wrapper injects capacity beliefs and refreshes remembered capacities without
+editing the frozen forager. Greedy retains its native zero-floor branch,
+reserve 2 and `net_yield`, with no aggressive inventory target. The consequence
+runner reuses existing compressed case storage, immutable writes and exact
+replay comparisons. It records whole-run/final-quarter consumption, per-agent
+spread, communication costs, post-regrowth local collapse and starvation beside
+food remaining after extraction and before regrowth. The last diagnostic does
+not assert feasible unilateral access under simultaneous competition.
+
+G1 uses the four paired wide-world/need-1.6 differences and the contracted
+mean threshold of 0.08, independently of its descriptive 95% t-interval. All
+intervals are descriptive after development selection. Stop at G1 regardless
+of its result. All 91 controller/runner tests pass, including exact threshold
+boundaries, global selection, paired worlds/weather, finite inputs and short
+replays of all three references. The scientific panel has not started.
+No learner, communication arm, new
+protocol or archive layer is added.
+
 ## Ticket A: site-capacity physics and observation v2, 8 October 2026
 
 The separate `engine_sites_v1.py` copies the frozen transition with immutable
