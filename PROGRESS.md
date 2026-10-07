@@ -1,5 +1,31 @@
 # Active work record
 
+## Complete qualification bank: primary unresolved, robustness fails, 7 October 2026
+
+Both prospectively frozen banks are recorded: **3,648 episodes / 1,032,192
+physical ticks / 24,772,608 individual decisions**, with 16 disjoint fresh
+seeds per stage and zero model calls or evolutionary runs. Ecological replay,
+independent audit and public restoration were already complete at resumption.
+The incentive source/artifact checks and exact saved-case aggregate reconstruction
+now pass; full incentive semantic replay remains pending. Neither bank was
+restarted or extended. The new external review prioritizes incentive framing;
+further ecology publication, figures and audit layers are deferred.
+
+The primary common-adjacent-pair verdict is **unresolved**. Both ecological
+candidate pairs are blocked by the selected control's uncertain reference
+focal gain. The broader qualification **fails**, including reference robustness
+at every declared weight. Capacity 8 fails the private-gain threshold for both
+controls at weights 0, 0.05 and 0.2; its population mean harm is unresolved even
+though final-quarter harm passes. These are scientific outcomes, not retry
+conditions. Preserve the complete bank and every adverse seed.
+
+At the reference, fixed-floor focal consumption/utility gains are
+**+0.001687/+0.016593** per tick at weight 0.05; **89.83%** of the utility gain
+is terminal inventory. Selected focal consumption instead falls **0.013786**;
+inventory contributes **+0.014497**, leaving only **+0.000712** mean utility.
+Mean peer consumption falls **0.015443/0.020560** under fixed/selected controls.
+This does not qualify a robust private temptation or authorize model spending.
+
 ## Ecological replay and independent audit complete, 7 October 2026
 
 All **288 ecological episodes replay exactly**, including source/artifact
