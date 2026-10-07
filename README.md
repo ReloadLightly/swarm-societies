@@ -1,30 +1,30 @@
-**Current plan:** [Paper contract v1](docs/paper-contract-world-models-v1.md) replaces the reframing review’s “Next decision” section and is the current binding plan.
+**Current plan:** [Paper contract v1](docs/paper-contract-world-models-v1.md) replaces the reframing review’s “Next decision” section and is the current binding plan. Tickets A/G4, B/G1 and C/G2 are complete; Ticket D is running. [Current checkpoint](PROGRESS.md).
 
 # Swarm Societies: A Research Testbed for Resources and Institutions
 
-**Living research report · 7 October 2026**
+**Living research report · 8 October 2026**
 
-The new commons implements mobile individuals, local sensing and stock-dependent
-renewal. A separate political extension now supplies optional local institutions,
-voluntary collateral and paid monitoring, with no supranational government.
-Its first 144-episode development comparison finds no robust advantage for the
-supplied enforced charter. Gains under high storage and mixed aggression vary
-by seed and cohort; the decentralized comparator scarcely communicates.
-The earlier studies remain frozen. Both fresh qualification banks
-are complete: ecological viability is witnessed in five of nine cells, but
-the primary joint verdict is unresolved and robust incentive qualification
-fails. A new controller version now implements paid route coordination and
-payoff-responsive membership, checked on constructed fixtures. The evening
-review pauses comparator refinement: restrained members lack a qualified
-consumption temptation, harmful outsiders are beyond charter sanctions, and
-no agent adapts. Costly guarding and resistance are implemented separately,
-but their fixtures establish neither emergence nor welfare benefits.
-The subsequent literature review **pauses adaptive exclusion and supersedes
-its paper plan**. The research focus returns to learning useful ecological
-world models and collective inference: when does paid local evidence sharing
-improve decisions in a commons that agents themselves change? This is a
-candidate question, not an established novelty claim or an executed experiment.
-No new model spending or experimental runs accompanied this reframing.
+The active study asks how swarms learn site capacities while their own harvesting
+depletes resources and confounds regrowth evidence. The binding
+[world-model contract](docs/paper-contract-world-models-v1.md) compares asocial
+learning, paid extraction receipts, relayed evidence and belief exchange, using
+the same local foraging controller.
+
+The separately versioned capacity engine passes physical parity (A/G4).
+The consequence map passes B/G1: in the wide-capacity, high-demand cell, the
+oracle exceeds the globally selected fixed belief by **0.203677 of need** on
+four reused development seeds. This establishes consequential knowledge for
+the supplied controller, not useful sharing. The site posterior passes C/G2 on
+1,024 synthetic clean-transition sequences; that qualification does not extend
+to inference in the coupled harvesting arenas. Ticket D's bounded learning and
+communication development is now running. Its results and G3 verdict are not
+yet reported here; independent evaluation remains unstarted.
+
+Earlier studies remain frozen. Ecological qualification witnesses viability in
+five of nine cells; robust incentive qualification fails, and the first optional
+institution comparison finds no robust charter advantage. Those results and the
+political engineering remain below. Institutions and adaptive exclusion are
+parked under the current paper contract. No experimental model calls are used.
 
 [Study index](docs/study-index.md) ·
 [Detailed archived report](docs/living-research-report-2026-10-07.md) ·
@@ -117,15 +117,17 @@ guard, while opening affiliation determines shared protection at a claimed site.
 A claim alone does nothing. This machinery is preserved as an optional extension.
 The completed bank remains closed, and adaptive-exclusion ticket 1 is paused.
 
-The [world-model reframing review](docs/commons-v3-world-model-reframing-review-v1.md)
-compares close commons, sustainable-foraging and collective-inference work.
-The existing half-capacity forager receives capacity and encodes a useful
-logistic prior; it is not a known-law planning oracle. Learning hidden dynamics
-requires a new legal observation contract and likelihood, particularly because
-unobserved peer extraction confounds measured stock changes. Existing paid
-local monitoring may supply identifiable transitions without global knowledge.
-The next deliverable is that scientific design decision, before implementation
-or a new experimental freeze. ALIFE 2027 remains the paper target.
+The [binding world-model contract](docs/paper-contract-world-models-v1.md)
+supersedes the reframing review's open design decision. The implemented version
+hides site capacities while declaring the common logistic law, weather
+distribution and initial-stock rule. Local stock observations and complete
+extraction receipts can identify growth transitions without global knowledge;
+incomplete shared extraction remains confounded. The frozen forager receives
+capacity beliefs through a wrapper; its known-capacity reference is a knowledge
+ceiling for that decision rule, not an optimal planner. Tickets A–C are complete,
+and D now compares the learning regimes before the contracted freeze and
+independent evaluation. [Progress and gate evidence](PROGRESS.md).
+ALIFE 2027 remains the paper target.
 
 ## 2. Related work
 
@@ -137,9 +139,9 @@ world models. The [literature review](docs/world-model-literature.md),
 record attribution and scope. The subsequent
 [scoped primary-source review](docs/commons-v3-world-model-reframing-review-v1.md)
 finds established territorial exclusion, scarcity-driven aggression, distributed
-inference and model-based sustainable harvesting. The candidate contribution
-must distinguish how costly local evidence affects inference and material
-outcomes under harvesting feedback; none of those broad topics is novel alone.
+inference and model-based sustainable harvesting. The contracted comparison
+measures how costly local evidence affects inference and material outcomes
+under harvesting feedback; none of those broad topics is novel alone.
 This is not a SwarmWorld reproduction.
 
 ## 3. Environment and methods
@@ -388,23 +390,22 @@ decisions. Additional allocation consumption occurred in only one arena;
 experiment selection chose Early in 71/72 states and did not establish repayment
 of its opportunity cost. These are integration and identification controls.
 
-The [latest review response](docs/commons-v3-review-2026-10-07.md) chooses a
+The [earlier review response](docs/commons-v3-review-2026-10-07.md) specified a
 separately versioned [storage × aggressive-peer protocol](docs/commons-v3-tipping-protocol-v1.md),
 with consumption-only primary endpoints and unchanged terminal weights.
-It is a prospective specification, with no new panel executed. Further ecology
-publication, figure and audit layers are deferred. The
-[current assessment](docs/research-state-and-next-steps-v1.md) preserves completed
-political engineering and the adverse first institutional comparison. The
-subsequent [literature/world-model review](docs/commons-v3-world-model-reframing-review-v1.md)
-pauses both comparator refinement and adaptive exclusion. It restores explicit,
-consequential ecological learning as the active objective, with paid local
-sharing as a candidate mechanism. Resolve the novelty and observation model
-before specifying a replacement experiment. Retain bounded development, one
-freeze before independent evaluation, physical storage value, matched controls
-and complete-state paired branches. No completed bank is extended; no archive,
-receipt or audit layer is added before a decisive result. Model-driven program
-search still requires a separate protocol and budget. Bayesian numerical
-learning does not require model API calls.
+That panel remains unexecuted and is parked by the
+[binding paper contract](docs/paper-contract-world-models-v1.md), alongside
+institutions, exclusion, storage/capability shocks, evolution and learning the
+law family. Further ecology publication, figure and audit layers remain deferred.
+
+The active sequence is to complete Ticket D, report G3 and the learning-regime
+results, then follow the contracted gates and one freeze before independent
+evaluation. G1 uses reused development seeds, and G2 qualifies the synthetic
+clean-transition model only; neither establishes a benefit from sharing or
+nominal coverage in the coupled arenas. The current run's outcomes remain
+pending in this README; [PROGRESS.md](PROGRESS.md) records the execution state.
+No completed bank is extended. Model-driven program search remains outside this
+paper and would require a separate protocol and budget.
 
 ## 6. Reproducibility
 

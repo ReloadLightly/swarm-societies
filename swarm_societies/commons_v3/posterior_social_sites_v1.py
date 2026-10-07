@@ -53,8 +53,21 @@ class SocialSitePosterior(physical.SitePosterior):
         super().__init__(site=site, grid_size=grid_size)
 
     def _logpdf(self, points):
-        result = super()._logpdf(points)
         points = np.asarray(points, dtype=float)
+        result = (-np.log(points) - math.log(math.log(physical.HIGH / physical.LOW))
+                  + self._log_scale)
+        # Each row uses C's identical elementary operations. Ordered subtraction
+        # retains C's left-to-right floating-point arithmetic; a sum/reduction
+        # would not. Bound temporary arrays for wide quadrature calls while
+        # evaluating narrow CDF calls without a Python loop over every event.
+        block_size = max(1, 65536 // max(1, points.size))
+        for start in range(0, len(self._terms), block_size):
+            z = np.asarray(self._terms[start:start + block_size], dtype=float)
+            z = z.reshape((-1,) + (1,) * points.ndim)
+            rows = np.log(physical.WIDTH * (physical.RATE * z * (1. - z / points)
+                                            + physical.RECOVERY))
+            ordered = np.concatenate((result[None, ...], rows), axis=0)
+            result = np.subtract.accumulate(ordered, axis=0)[-1]
         if self.biased:
             multiplier = np.where(points < 50., .01,
                                   .01 + .99 * math.log(100. / 8.) / math.log(2.))
@@ -113,7 +126,19 @@ class SocialSitePosterior(physical.SitePosterior):
             self._base_edges = self._edges.copy()
         self._edges = self._integration_edges()
         super()._refresh()
+        self._cdf_cache = {}
         self.revision += 1
+
+    def cdf(self, value, left=False):
+        # Repeated quantile bisections share many exact query points. Cache only
+        # unchanged-revision results; all misses use the frozen CDF itself.
+        physical._number(value, "value")
+        if type(left) is not bool:
+            return super().cdf(value, left=left)
+        key = (value, left)
+        if key not in self._cdf_cache:
+            self._cdf_cache[key] = super().cdf(value, left=left)
+        return self._cdf_cache[key]
 
     def update_event(self, event):
         """Apply/deduplicate canonical (site,tick,z,next-stock) evidence only."""

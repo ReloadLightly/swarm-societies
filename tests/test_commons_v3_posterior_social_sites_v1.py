@@ -4,6 +4,7 @@ from dataclasses import replace
 import json
 import math
 
+import numpy as np
 import pytest
 from scipy.integrate import quad
 from scipy.special import ndtri
@@ -260,3 +261,83 @@ def test_restore_rejects_noncanonical_operation_history():
                     {**saved, "version": "unknown"}, {**saved, "operations": [{}]}):
         with pytest.raises(ValueError):
             SocialSitePosterior.restore(invalid)
+
+
+@pytest.mark.parametrize("count", [100, 300, 500])
+@pytest.mark.parametrize("mixed", [False, True])
+def test_long_synthetic_density_history_is_bit_identical_to_frozen_c(count, mixed):
+    """Synthetic likelihood stress check, without simulating an arena.
+
+    Extend an admissible support with repeated smooth likelihood factors. This
+    directly exercises long history arithmetic, including a surviving off-grid
+    atom, without spending hundreds of physical experimental transitions.
+    """
+    original, social = SitePosterior(), SocialSitePosterior()
+    z, y = (99.95, 99.976) if mixed else (20., 22.42)
+    repeated_z = 98.976 if mixed else 20.
+    for posterior in (original, social):
+        posterior.update(CleanTransition(0, 0, z, y, z, 0.))
+        posterior._terms.extend([repeated_z] * (count - 1))
+        for capacity in posterior._atoms_log:
+            increment = math.log((1.1 - .9) * (.24 * repeated_z * (1. - repeated_z / capacity) + .02))
+            for _ in range(count - 1):
+                posterior._atoms_log[capacity] -= increment
+        posterior._refresh()
+    assert original._log_scale == social._log_scale
+    assert np.array_equal(original._mass, social._mass)
+    assert original.atoms == social.atoms
+    assert original.continuous_mass == social.continuous_mass
+    for shape in ((8,), (1, 8), (20, 8), (400, 8)):
+        points = np.linspace(original._lo, original._hi, math.prod(shape)).reshape(shape)
+        assert np.array_equal(original._logpdf(points), social._logpdf(points))
+    span = original._hi - original._lo
+    probes = [8., y, 100., original._lo, original._hi,
+              *(original._lo + fraction * span for fraction in (1e-6, .001, .01, .1, .5, .9))]
+    for value in probes:
+        for left in (False, True):
+            assert original.cdf(value, left=left) == social.cdf(value, left=left)
+    for q in (.001, .05, .25, .5, .75, .95, .999):
+        assert original.quantile(q) == social.quantile(q)
+
+
+@pytest.mark.parametrize("biased", [False, True])
+def test_ordered_vectorization_preserves_preoptimization_fused_density_bits(biased):
+    posterior = SocialSitePosterior(biased=biased)
+    posterior.update_event(GrowthEvidence(0, 0, 99.95, 99.976))
+    posterior._terms.extend([98.976] * 299)
+    posterior.fuse(80., 20.)
+    posterior.fuse(99.985, 0.)
+    points = np.linspace(posterior._lo, posterior._hi, 160).reshape(20, 8)
+    # This is the former implementation: frozen C first, then the unchanged
+    # biased-prior and completed-square fusion factors.
+    expected = SitePosterior._logpdf(posterior, points)
+    if biased:
+        expected += np.log(np.where(points < 50., .01,
+                                    .01 + .99 * math.log(12.5) / math.log(2.)))
+    expected = (expected - posterior._fusion_count * np.log(points)
+                - .5 * posterior._fusion_precision * (np.log(points) - posterior._fusion_mu) ** 2)
+    assert np.array_equal(expected, posterior._logpdf(points))
+
+
+def test_cdf_memoization_uses_exact_frozen_results_and_is_revision_private(monkeypatch):
+    posterior = SocialSitePosterior()
+    saved = posterior.memory()
+    frozen_cdf = SitePosterior.cdf
+    calls = []
+
+    def counted(self, value, left=False):
+        calls.append((value, left))
+        return frozen_cdf(self, value, left=left)
+
+    monkeypatch.setattr(SitePosterior, "cdf", counted)
+    expected = frozen_cdf(posterior, 50.)
+    assert posterior.cdf(50.) == posterior.cdf(50.) == expected
+    assert calls == [(50., False)]
+    assert posterior.cdf(50., left=True) == expected
+    assert calls == [(50., False), (50., True)]
+    assert posterior.memory() == saved
+    posterior.observe_stock(40.)
+    assert posterior.cdf(50.) == frozen_cdf(posterior, 50.)
+    assert len(calls) == 3
+    with pytest.raises(ValueError):
+        posterior.cdf(True)

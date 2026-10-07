@@ -1,5 +1,26 @@
 # Active work record
 
+## Ticket D execution: identical numerical speedup, 8 October 2026
+
+The implementation checkpoint
+`d3bf1bfda443b2eb8c9970686c8dc7e2a8ac5136` was pushed and remotely verified
+before the declared development run. The first two L0 cases exposed slow
+Python loops over long likelihood histories. No complete case had been saved
+when that incomplete process tree was stopped; no scientific outcome was used
+to revise an arm, prior, parameter, gate or measurement.
+
+Only the new social posterior now broadcasts likelihood terms and subtracts
+them in the original order, with exact CDF memoization within each posterior
+revision. Frozen Ticket C is unchanged. Long-history tests compare density,
+bin mass, normalization, mixed atoms, CDFs and quantiles bit for bit against
+the original arithmetic, including biased/fused densities. Synthetic
+five-quantile calculations speed up roughly 6–12 times. Caches do not enter
+serialized scientific memory. This is a computational repair, not a design
+revision. **420 checks pass**, including 100 posterior/controller checks and
+30 runner checks after this repair. Resume the same incomplete bank through
+the existing recovery path, with four workers; completed records, if present,
+must replay exactly before being preserved. Ticket E remains unstarted.
+
 ## Ticket D: approved communication design before development, 8 October 2026
 
 Roland authorized Ticket D after completed G2, then explicitly approved the
