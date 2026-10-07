@@ -32,6 +32,11 @@ development and fresh independent evaluation. Do not retune terminal weights,
 extend completed banks or restart ecology work. The small engineering fixture
 is kept in Git and needs no raw-bank download.
 
+Implementation commit `5ba4d498389c6052fa88842d411cbbc7261f4ca3` is pushed and
+independently verified by `git ls-remote origin refs/heads/main`; the
+[synchronization receipt](evidence/commons-v3-coordination-membership-v2/synchronization.json)
+binds its compact fixture and validation record.
+
 ## First institutional development comparison complete, 7 October 2026
 
 The [full report](docs/commons-v3-institutions-development-v1.md) retains all

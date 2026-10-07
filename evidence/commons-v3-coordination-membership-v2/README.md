@@ -32,3 +32,7 @@ The output refuses overwrites. These small fixtures remain in Git; there is no
 new bulk archive. Earlier experimental banks, raw archives, figures and verdicts
 are unchanged. A real institutional comparison requires a new prospective
 protocol and independent evaluation beyond these fixtures.
+
+[Synchronization](synchronization.json) records implementation commit
+`5ba4d498389c6052fa88842d411cbbc7261f4ca3` and independent remote verification
+after its push. The fixture and validation hashes are pinned there.
