@@ -1,5 +1,26 @@
 # Active work record
 
+## Ticket D recovery checkpoint, 8 October 2026
+
+Four complete L0 cases (moderate, need 1.2, q=0.25, seeds 90001–90004)
+are saved in `evidence/commons-v3-learning-development-v1/cases/`.
+The interrupted runner is no longer active. Preserve these files and verify
+their entire records through the existing recovery path before continuing.
+Quantile selection and G3 remain pending; no sharing cases have run.
+
+The first speedup was pushed and remotely verified at
+`468f40afa4f15614074f8939ea6b16a72941582e`. A further numerical speedup
+specializes the finite eight-value normalization used by posterior quantiles,
+with SciPy 1.18.1's exact operation order. Other versions or unsupported inputs
+use the original library routine. It passes bit-identical density, CDF,
+quantile, mixed-atom and continuation checks, including 10,003 synthetic
+reduction vectors. Worker heartbeats and immediate error reporting go only to
+stderr. Scientific records, parameters, gates and schedules are unchanged.
+**433 checks pass** across the implemented tickets, including 112 focused
+posterior/controller checks and 31 runner checks after these changes.
+Resume the same incomplete bank with six workers, preserving all saved bytes.
+Ticket E and independent evaluation remain unstarted.
+
 ## Ticket D execution: identical numerical speedup, 8 October 2026
 
 The implementation checkpoint

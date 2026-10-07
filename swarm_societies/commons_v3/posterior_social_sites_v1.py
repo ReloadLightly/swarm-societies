@@ -19,6 +19,7 @@ from copy import deepcopy
 import math
 
 import numpy as np
+import scipy
 from scipy.optimize import brentq
 from scipy.special import ndtri
 
@@ -29,6 +30,27 @@ from .evidence_sites_v1 import CleanTransition
 VERSION = "commons-v3-social-site-posterior-v1"
 MIN_LOG_SIGMA = math.log(100. / 8.) / 400
 _NORMAL_QUARTILE = float(ndtri(.75))
+_FAST_PARTIAL_LOGSUMEXP = scipy.__version__ == "1.18.1"
+
+
+def _partial_logsumexp(logs):
+    """Identical finite 1×8 reduction for the verified SciPy implementation.
+
+    SciPy 1.18.1 separates all tied maxima, then computes log1p(sum/m) +
+    log(m) + max. Preserve those operations and their order, skipping only
+    general array-API, complex, weighting and sign machinery. Other library
+    versions/shapes/nonfinite inputs retain the frozen public function.
+    """
+    if (not _FAST_PARTIAL_LOGSUMEXP or logs.shape != (1, 8)
+            or logs.dtype != np.dtype(float) or not np.isfinite(logs).all()):
+        return physical.logsumexp(logs)
+    maximum = np.max(logs, axis=None, keepdims=True)
+    mask = logs == maximum
+    remaining = np.where(mask, -np.inf, logs)
+    multiplicity = np.sum(mask, axis=None, keepdims=True, dtype=logs.dtype)
+    subtotal = np.sum(np.exp(remaining - maximum), axis=None, keepdims=True, dtype=logs.dtype)
+    subtotal = np.where(subtotal == 0, subtotal, subtotal / multiplicity)
+    return (np.log1p(subtotal) + np.log(multiplicity) + maximum).squeeze()[()]
 
 
 def belief_parameters(median, iqr):
@@ -137,8 +159,22 @@ class SocialSitePosterior(physical.SitePosterior):
             return super().cdf(value, left=left)
         key = (value, left)
         if key not in self._cdf_cache:
-            self._cdf_cache[key] = super().cdf(value, left=left)
+            self._cdf_cache[key] = self._cdf_uncached(value, left=left)
         return self._cdf_cache[key]
+
+    def _cdf_uncached(self, value, left=False):
+        # C's prefix sum, partial-bin integral, atom rules and clamp unchanged.
+        # Only the verified 1×8 reduction bypasses SciPy's general wrapper.
+        count = int(np.searchsorted(self._right, value, side="right"))
+        total = float(self._prefix[count])
+        if count < len(self._left) and value > self._left[count]:
+            _, logs = self._quadrature([self._left[count]], [value])
+            total += float(np.exp(_partial_logsumexp(logs)))
+        for capacity, mass in self.atoms.items():
+            if ((capacity < value and not physical._same(capacity, value))
+                    or (not left and physical._same(capacity, value))):
+                total += mass
+        return min(1., max(0., total))
 
     def update_event(self, event):
         """Apply/deduplicate canonical (site,tick,z,next-stock) evidence only."""

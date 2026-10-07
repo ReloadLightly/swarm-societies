@@ -14,7 +14,7 @@ from swarm_societies.commons_v3.evidence_sites_v1 import CleanTransition
 from swarm_societies.commons_v3.messages_sites_v1 import GrowthEvidence
 from swarm_societies.commons_v3.posterior_sites_v1 import SitePosterior
 from swarm_societies.commons_v3.posterior_social_sites_v1 import (
-    MIN_LOG_SIGMA, SocialSitePosterior, belief_parameters,
+    MIN_LOG_SIGMA, SocialSitePosterior, _partial_logsumexp, belief_parameters,
 )
 
 
@@ -323,13 +323,14 @@ def test_cdf_memoization_uses_exact_frozen_results_and_is_revision_private(monke
     posterior = SocialSitePosterior()
     saved = posterior.memory()
     frozen_cdf = SitePosterior.cdf
+    uncached_cdf = SocialSitePosterior._cdf_uncached
     calls = []
 
     def counted(self, value, left=False):
         calls.append((value, left))
-        return frozen_cdf(self, value, left=left)
+        return uncached_cdf(self, value, left=left)
 
-    monkeypatch.setattr(SitePosterior, "cdf", counted)
+    monkeypatch.setattr(SocialSitePosterior, "_cdf_uncached", counted)
     expected = frozen_cdf(posterior, 50.)
     assert posterior.cdf(50.) == posterior.cdf(50.) == expected
     assert calls == [(50., False)]
@@ -341,3 +342,26 @@ def test_cdf_memoization_uses_exact_frozen_results_and_is_revision_private(monke
     assert len(calls) == 3
     with pytest.raises(ValueError):
         posterior.cdf(True)
+
+
+@pytest.mark.parametrize("scale", [.001, 1., 100., 10000., 1e100])
+def test_partial_bin_reduction_matches_installed_scipy_bits_across_dynamic_ranges(scale):
+    from scipy.special import logsumexp
+    rng = np.random.default_rng(17)
+    rows = rng.normal(0., scale, (128, 8))
+    reference = logsumexp(rows, axis=1)
+    assert np.array_equal(reference, np.array([_partial_logsumexp(row.reshape(1, 8)) for row in rows]))
+    for row in rows[::13]:
+        assert _partial_logsumexp(row.reshape(1, 8)) == logsumexp(row.reshape(1, 8))
+
+
+@pytest.mark.parametrize("row", [
+    [0.] * 8, [1e300] * 8, [-1e300] * 8,
+    [5., 5., 3., 5., 0., -1e100, 4., 5.],
+    [0., -1e300, -1e300, -1e300, -1e300, -1e300, -1e300, -1e300],
+    [-math.inf] * 8, [math.inf] + [0.] * 7,
+])
+def test_partial_bin_reduction_preserves_tied_maxima_and_nonfinite_fallback(row):
+    from scipy.special import logsumexp
+    values = np.asarray([row], dtype=float)
+    assert _partial_logsumexp(values) == logsumexp(values)

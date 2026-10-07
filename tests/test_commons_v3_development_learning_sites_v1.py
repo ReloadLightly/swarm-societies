@@ -302,7 +302,7 @@ def test_recovery_replays_and_preserves_existing_case_bytes(monkeypatch, tmp_pat
     assert path.read_bytes() == before
 
 
-def test_episode_failure_preserves_case_identity_and_original_cause(monkeypatch):
+def test_episode_failure_preserves_case_identity_and_original_cause(monkeypatch, capsys):
     job = development.candidate_jobs()[0]
 
     def fail(*args):
@@ -312,6 +312,21 @@ def test_episode_failure_preserves_case_identity_and_original_cause(monkeypatch)
     with pytest.raises(RuntimeError, match=development.case_id(job)) as caught:
         development.run_episode(job)
     assert isinstance(caught.value.__cause__, ValueError)
+    output = capsys.readouterr()
+    assert output.out == ""
+    assert output.err == f"failed {development.case_id(job)}: ValueError('synthetic failure')\n"
+
+
+def test_full_horizon_worker_heartbeats_print_only_declared_ticks_to_stderr(capsys):
+    job = development.candidate_jobs()[0]
+    for tick in (0, 1, 127, 128, 129, 255, 256, 384, 511, 512):
+        development._worker_heartbeat(job, tick, development.HORIZON)
+    # Engineering fixtures and arbitrary shorter episodes have no heartbeat.
+    development._worker_heartbeat(job, 128, 128)
+    output = capsys.readouterr()
+    assert output.out == ""
+    assert output.err.splitlines() == [f"progress {development.case_id(job)} tick {tick}/512"
+                                     for tick in (128, 256, 384, 512)]
 
 
 @pytest.mark.parametrize("arm", ["L0", "L1", "L2", "L3", "L2-biased", "L3-biased"])

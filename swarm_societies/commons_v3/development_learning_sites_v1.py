@@ -183,6 +183,11 @@ def _material_frame(result, actions, patch_at, capacities, phi):
             "message_cost": ledger.message_cost}
 
 
+def _worker_heartbeat(job, tick, horizon):
+    if horizon == HORIZON and tick in (128, 256, 384, 512):
+        print(f"progress {case_id(job)} tick {tick}/{horizon}", file=sys.stderr, flush=True)
+
+
 def _record_episode(job, state, policies, horizon=HORIZON):
     from .observations_messages_sites_v1 import observations
     initial = engine.snapshot(state)
@@ -225,6 +230,7 @@ def _record_episode(job, state, policies, horizon=HORIZON):
                            *(abs(row.residual) for row in result.ledger.patches))
         if state.tick == 3 * horizon // 4:
             late_baseline = [agent.consumption for agent in state.agents]
+        _worker_heartbeat(job, state.tick, horizon)
     late_ticks = horizon - 3 * horizon // 4
     agents = [{"id": a.id, "biased": a.id in biased,
                "share_of_need": a.consumption / (horizon * job["need"]),
@@ -284,6 +290,7 @@ def run_episode(job):
                     biased=job["arm"].endswith("-biased") and agent.id in BIASED_IDS) for agent in state.agents]
         return _record_episode(job, state, policies)
     except Exception as error:
+        print(f"failed {case_id(job)}: {error!r}", file=sys.stderr, flush=True)
         raise RuntimeError("learning episode failed: " + case_id(job)) from error
 
 
