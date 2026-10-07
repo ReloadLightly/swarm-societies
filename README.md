@@ -13,6 +13,7 @@ must precede further experimental model spending.
 [Scientific review](docs/research-review-2026-10-07.md) ·
 [Physical commons](docs/commons-v3-foundation-v1.md) ·
 [Need-targeted baselines](docs/commons-v3-need-v1.md) ·
+[Local navigation and numerical baselines](docs/commons-v3-navigation-v1.md) ·
 [Implementation plan](docs/commons-v3-plan.md) ·
 [Current checkpoint](PROGRESS.md)
 
@@ -29,10 +30,11 @@ reported focal averages over the saved coevolved population, while slightly
 reducing outsiders' welfare. Numerical controls show supplied-law learning,
 a small allocation benefit dominated by wealth, and no clear active-selection
 benefit in posterior-update value. The new spatial prototype supports local
-depletion, but its development comparisons remain sensitive to navigation,
-storage and terminal inventory. Need-targeted harvesting raises reference
-consumption relative to greedy, but longer runs still deteriorate. A qualified social
-dilemma and stronger navigation baselines remain scientific requirements.
+depletion. Purposeful local foraging with a voluntary stock floor now sustains
+near-reference demand over longer runs; an 18-candidate numerical selection
+improves only slightly over the fixed-floor baseline. Private gains remain
+sensitive to storage, terminal inventory and environment. Ecological and
+incentive qualification remain scientific requirements.
 
 ## 1. Research question and present scope
 
@@ -166,6 +168,39 @@ reused-seed policy comparisons leave navigation and qualification unresolved.
 *Recorded four-seed development means, with saved v2 controls and unsmoothed
 reference trajectories. [Complete effects, sensitivities and provenance](figures/commons-v3-need-v1/README.md).*
 
+The [navigation and numerical-baseline study](docs/commons-v3-navigation-v1.md)
+adds purposeful observed-map routes, paid route-fuel saving and a finite sweep
+of buffers, stock floors and routing rules. Its 18 candidates use two tuning
+seeds; selection was frozen and pushed before evaluation on four disjoint
+seeds. The **660 episodes** are numerical evaluations, with **zero independent
+evolutionary runs or experimental model calls**. At reference need 1.2:
+
+| Fresh-seed population consumption per agent-tick | Reference | 512 ticks | Initial stock 22 |
+| --- | ---: | ---: | ---: |
+| Legacy need-2 | 1.083741 | 0.731003 | 0.723430 |
+| New forager, no floor | 1.097344 | 0.568493 | 0.460814 |
+| Fixed half-capacity floor | 1.197891 | **1.195943** | 1.195711 |
+| Selected: buffer 4, floor 0.5, nearest route | **1.199410** | 1.193929 | **1.195932** |
+| All aggressive | 0.163314 | 0.086676 | 0.096235 |
+
+The selected controller averages **88.01% of need** across the fresh grid,
+versus **87.61%** for the fixed floor and **65.30%** for legacy need-2. Its
+worst cell still meets only **49.28%** of need. At the reference, focal aggression
+gains **0.006815** consumption and **0.021253** private utility at weight 0.05;
+**67.93%** of that utility gain is terminal wealth. Peers lose **0.017507**
+consumption. All-aggressive terminal stock is only **0.173%** of capacity,
+unlike the earlier greedy policy's large unused stock. But capacity 8 removes
+the mean peer consumption loss, and one high-need focal case loses
+**0.567094** consumption per tick. Four-seed ranges remain descriptive;
+selection within this controller family is not a private optimum or a
+qualified social dilemma.
+
+![Fresh-seed navigation comparisons and access diagnostics](figures/commons-v3-navigation-v1/evaluation-performance.png)
+
+*All nine grid cells and five sensitivities, with paired observed ranges and
+unsmoothed reference trajectories. [Candidate scores, aggressive effects,
+complete CSVs and SVG/PDF/PNG provenance](figures/commons-v3-navigation-v1/README.md).*
+
 ## 5. Limitations and next experiments
 
 The legacy ecology uses additive renewal, often operates near the consumption
@@ -181,9 +216,10 @@ decisions. Additional allocation consumption occurred in only one arena;
 experiment selection chose Early in 71/72 states and did not establish repayment
 of its opportunity cost. These are integration and identification controls.
 
-The [ordered plan](docs/commons-v3-plan.md) next tests purposeful local foraging
-and numerical baselines, following the completed need-targeted comparison.
-Sustainable scarcity, robust private temptation and collective losses still
+The [ordered plan](docs/commons-v3-plan.md) next separates ecological and
+incentive qualification, following the completed local-forager and finite
+numerical comparison. Baseline limitations and adverse cases remain visible;
+sustainable scarcity, robust private temptation and collective losses still
 need a separate qualification panel. Optional institutions and costed enforcement then face
 hand-designed and numerical baselines. Replicated adaptation, cross-play,
 invasion and unfamiliar scarcity follow a new protocol and explicitly authorized
@@ -196,6 +232,9 @@ evidence is restored from [checksummed release archives](docs/evidence-archives-
 The [need-targeted public archive](artifacts/commons-v3-need-publication-v1/README.md)
 restores all 56 cases byte-identically; its report gives download, offline
 restoration and full regeneration commands.
+The navigation bank uses separate [tuning](artifacts/commons-v3-navigation-tuning-v1/README.md)
+and [evaluation](artifacts/commons-v3-navigation-evaluation-v1/README.md)
+catalogs; restore both before its exact 660-episode replay or figure regeneration.
 Git history is unchanged, so use `git clone --depth 1` for a smaller initial
 checkout; an ordinary full clone still downloads historical evidence blobs.
 

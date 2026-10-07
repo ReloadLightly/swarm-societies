@@ -26,9 +26,9 @@ shrink a full historical clone.
 
 The [physical foundation report](commons-v3-foundation-v1.md) documents the
 implemented mobile-agent engine and both development banks. There are no
-institutions or political memberships in these worlds. Development repeats four
-seeds across a scarcity grid, fixed sensitivities and four population conditions;
-each bank has **56 configurations and 224 episodes**, with zero evolutionary
+institutions or political memberships in these worlds. The two foundation banks
+repeat four seeds across a scarcity grid, fixed sensitivities and four population conditions;
+each has **56 configurations and 224 episodes**, with zero evolutionary
 runs and zero experimental model calls.
 Their separate archive catalog and restoration command are linked in the report.
 
@@ -37,6 +37,7 @@ Their separate archive catalog and restoration command are linked in the report.
 | Original development v1 | [Frozen protocol](commons-v3-foundation-protocol.md). A floating-point return-fuel boundary trapped some scouting agents despite recovering resources. Its complete results remain visible as a failed navigation control. | [Evidence inventory](../evidence/commons-v3-foundation-v1/manifest.json), [recorded gallery](../figures/commons-v3-foundation-v1/README.md), [original runner](../scripts/run_commons_v3_development.py). |
 | Repaired development v2 | [Repair protocol](commons-v3-foundation-protocol-v2.md). Prospective fuel margins fix the identified invariant without changing physics or scientific thresholds. All 224 episodes record zero unaffordable-return violations. The same cases were reused after inspecting v1; this is development, not fresh qualification. | [Evidence inventory](../evidence/commons-v3-foundation-v2/manifest.json), [recorded gallery](../figures/commons-v3-foundation-v2/README.md), [repaired runner](../scripts/run_commons_v3_development_v2.py), [restoration and replay commands](commons-v3-foundation-v1.md#reproduction-and-engineering-scope). |
 | Need-targeted development v1 | [Frozen protocol](commons-v3-need-protocol-v1.md). Zero/two-tick usable buffers and matching focal greedy replacements; 224 new episodes on the same 56 cases. Reference consumption improves, but longer horizons deteriorate and larger buffers hurt under lower starting stock. | [Report](commons-v3-need-v1.md), [evidence inventory](../evidence/commons-v3-need-v1/manifest.json), [gallery](../figures/commons-v3-need-v1/README.md), [runner](../scripts/run_commons_v3_need_v1.py), [public archive and restoration](../artifacts/commons-v3-need-publication-v1/README.md). |
+| Local navigation and numerical baseline v1 | [Frozen protocol](commons-v3-navigation-protocol-v1.md). 18 candidates on two tuning seeds, then six conditions on four disjoint evaluation seeds: 660 episodes, zero evolutionary runs/model calls. Floor-bearing controls sustain reference demand over longer runs; the finite winner only slightly improves on a fixed floor, and incentive sensitivities remain. | [Report](commons-v3-navigation-v1.md), [selection](../evidence/commons-v3-navigation-v1/selection.json), [evidence inventory](../evidence/commons-v3-navigation-v1/manifest.json), [gallery](../figures/commons-v3-navigation-v1/README.md), [runner](../scripts/run_commons_v3_navigation_v1.py), [tuning archive](../artifacts/commons-v3-navigation-tuning-v1/README.md), [evaluation archive](../artifacts/commons-v3-navigation-evaluation-v1/README.md). |
 
 At the v2 reference cell, mean restrained/greedy consumption is
 **1.200000/0.229769 per agent-tick**. Focal greedy replacement gains no
@@ -55,8 +56,12 @@ peers lose **0.336463/0.287450**. At 512 ticks, baseline consumption falls to
 **0.798804/0.804615**; lower initial stock makes the two-tick buffer worse by
 **0.254884**. Every sensitivity and adverse outcome remains in the new report.
 
-Ecological qualification and the strong-baseline gate remain open. The next
-local controls are purposeful foraging and numerical baselines;
+The subsequent local-forager selection achieves **1.199410** reference
+consumption and **1.193929** over 512 ticks on fresh comparison seeds. The
+fixed-floor anchor is nearly as strong. Reference focal utility gain remains
+**67.93%** terminal wealth; capacity 8 removes mean peer consumption losses,
+and one high-need focal case loses **0.567094** consumption per tick.
+Separate ecological and incentive qualification remain open;
 institutions and enforcement follow later. V3 presently runs
 audited built-in policies only. Generated-policy execution has not yet been
 integrated with its new action and observation interface.

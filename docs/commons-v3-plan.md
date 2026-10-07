@@ -31,8 +31,11 @@ snapshots. Two development banks preserve a failed navigation control and its
 separate numerical repair. Stage 1's scientific qualification remains open;
 the separately frozen [need-targeted comparison](commons-v3-need-v1.md) now
 adds zero/two-tick usable buffers under the same carrying capacity. It improves
-reference consumption but retains long-horizon failures; purposeful local
-foraging and numerical baselines are next. Optional institutions
+reference consumption but retains long-horizon failures. The later
+[local-forager and finite numerical comparison](commons-v3-navigation-v1.md)
+now sustains near-reference demand over 512 ticks. Its fixed-floor anchor is
+almost as strong as the selected policy, and incentive sensitivities remain
+substantial. Ecological and incentive qualification are next. Optional institutions
 and political transitions have not yet been implemented.
 
 ## What the target world must implement
@@ -179,9 +182,21 @@ consumption gains and peer losses. However, 512-tick mean consumption falls to
 0.798804/0.804615, and larger reserves are worse at lower starting stock.
 The reused four-seed development panel does not qualify the environment.
 
-**Immediate next step:** purposeful local foraging and numerical baselines,
-then separate ecological and incentive qualification. Retain the complete
-need-targeted bank, its adverse outcomes and both earlier banks; freeze every
+**Navigation checkpoint:** the separately frozen
+[local-forager comparison](commons-v3-navigation-v1.md) completes 324 tuning
+and 336 evaluation episodes with disjoint two/four-seed sets. The selected
+buffer-4/half-floor/nearest policy sustains reference consumption 1.199410 and
+512-tick consumption 1.193929, while the fixed-floor anchor is slightly better
+over 512 ticks. Reference focal utility gain is 67.93% terminal wealth;
+capacity 8 removes mean peer consumption losses, and one high-need focal case
+loses consumption. The finite population selection is not a private optimum.
+All-aggressive reference stock falls to 0.173% of capacity, but this outcome
+does not establish universal depletion or a qualified robust dilemma.
+
+**Immediate next step:** separate ecological and incentive qualification,
+retaining both fixed and selected baseline controls and their limitations.
+Retain the complete new bank, the need-targeted bank and both earlier banks;
+freeze every
 new comparison before execution. Do not adjust wealth weights or weaken
 baselines to obtain a preferred incentive pattern.
 

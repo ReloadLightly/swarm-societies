@@ -91,8 +91,30 @@ byte-identically from public release `commons-v3-need-2026-10-07`, targeting
 commit `536ed64`. Preserve the earlier local-only catalog and receipts in
 `artifacts/commons-v3-need-v1/` as the pre-publication record.
 
-Next: purposeful local foraging and numerical baselines, followed by separate
-ecological and incentive qualification. Keep institutions, their lifecycle and paid enforcement
+The local-navigation and finite numerical-baseline stage is complete; see
+`docs/commons-v3-navigation-v1.md` and its separately frozen protocol.
+Preserve `evidence/commons-v3-navigation-v1/`: 18 candidates on two tuning
+seeds (324 episodes), then six conditions on four disjoint evaluation seeds
+(336 episodes). Implementation/design and selection were pushed before their
+respective panels. The selected buffer-4/floor-0.5/nearest controller gives
+reference consumption 1.199410 versus fresh-seed legacy need-2 1.083741;
+512-tick consumption stays 1.193929. The fixed-floor anchor is almost as good
+and slightly better over 512 ticks. The hardest cell meets only 49.28% of need.
+Reference focal aggression gains 0.006815 consumption and 0.021253 private
+utility at weight 0.05; 67.93% of utility gain is terminal wealth. Peers lose
+0.017507 consumption. All-aggressive stock ends at 0.173% of capacity, unlike
+earlier greedy banks with large unused stock. Capacity 8 removes mean peer
+losses; one high-need focal case loses 0.567094 consumption. Keep these adverse
+and null results. Numerical population selection is not a private optimum;
+four-seed comparisons do not establish ecological or incentive qualification.
+All 660 episodes replay exactly, without model calls or evolutionary runs.
+Raw navigation evidence uses separate catalogs in
+`artifacts/commons-v3-navigation-tuning-v1/` and
+`artifacts/commons-v3-navigation-evaluation-v1/`; restore both for full replay
+or figures. Do not restart completed banks or revise their frozen sources.
+
+Next: separate ecological and incentive qualification, retaining the fixed
+and selected baselines and their limitations. Keep institutions, their lifecycle and paid enforcement
 as later work. Do not start model spending or tune utility weights to manufacture
 a dilemma; preserve all adverse development outcomes and version future changes.
 

@@ -1,5 +1,50 @@
 # Active work record
 
+## Navigation and numerical-baseline checkpoint completed, 7 October 2026
+
+The stronger local controller, predeclared finite sweep and disjoint-seed
+comparison are complete. See `docs/commons-v3-navigation-v1.md` and the
+recorded-data gallery `figures/commons-v3-navigation-v1/`. Preserve this bank
+and all three preceding development banks; do not restart them.
+
+**660 episodes / 175,104 physical ticks / 4,202,496 individual decisions**
+cover 18 candidates on two tuning seeds and six comparison conditions on four
+fresh evaluation seeds. The selected buffer-4/floor-0.5/nearest controller
+consumes **1.199410** per agent-tick at the reference, versus fresh-seed
+legacy need-2 **1.083741**; over 512 ticks it sustains **1.193929**. The
+fixed-floor anchor is nearly as strong and slightly better at 512 ticks.
+The hardest cell still meets only **49.28%** of need. Reference focal utility
+gain remains **67.93% terminal wealth**, capacity 8 removes the mean peer
+consumption loss, and one high-need focal case loses **0.567094** consumption.
+This is stronger baseline evidence, not ecological/incentive qualification,
+a private optimum or evidence for institutions. No experimental model calls
+or evolutionary runs occurred.
+
+All **660 episodes replay exactly** in separate 324/336-episode invocations.
+The full suite passes **842 tests and 123 subtests**. Independent reconstruction
+passes **163,114 exact and 93,983 numerical checks**. All episodes record zero
+unaffordable known returns; 655 have exactly zero extraction waste and five
+capacity-8 aggressive cases retain rounding-level totals no greater than
+**1.42e-14**. Maximum accounting residual is **4.40e-13**. All three PNGs were
+inspected, and all **18 gallery files** rerender byte-identically.
+
+Both public catalogs restore **380 raw files / 11,786,864 bytes** from release
+`commons-v3-navigation-2026-10-07`, byte-identically through unauthenticated
+empty-cache downloads and offline restoration. The tuning and evaluation
+catalogs are separate under `artifacts/commons-v3-navigation-{tuning,evaluation}-v1/`.
+Evaluation publication preserves the earlier tuning assets and catalogs.
+Implementation/design (`b16a239`), selection (`cc9c2fe`), tuning publication
+(`587a26b`), evaluation/audit (`9cf537d`), figures (`14e155c`) and evaluation
+publication/exact replay (`d28fa57`) were pushed and remote-verified as each
+stage finished. Continue prompt GitHub synchronization for future work.
+
+**Next:** separately specify ecological and incentive qualification, retaining
+the fixed and selected baselines, the full scarcity map, storage/wealth/horizon
+sensitivities and adverse focal outcomes. The current four-seed panel cannot
+be reused as untouched qualification. Institutions, their lifecycle and paid
+enforcement remain later stages. Do not alter weights or weaken baselines to
+manufacture a dilemma, and do not start model spending without a new budget.
+
 ## Navigation evaluation complete; exact replay underway, 7 October 2026
 
 The frozen 18-candidate tuning and four-fresh-seed evaluation are complete:
