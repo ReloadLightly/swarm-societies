@@ -1,5 +1,35 @@
 # Active work record
 
+## Separate qualification protocols frozen, 7 October 2026
+
+The ecological and incentive protocols are implemented and prepared, with no
+qualification episodes run at this checkpoint. See
+`docs/commons-v3-ecology-qualification-protocol-v1.md`,
+`docs/commons-v3-incentive-qualification-protocol-v1.md` and the conservative
+physical-bound derivation in `docs/commons-v3-feasibility-v1.md`.
+
+Both the fixed-floor and previously selected controller remain mandatory.
+Ecology uses 16 fresh seeds per cell at 512 ticks; incentives use 16 different
+fresh seeds, matched focal substitutions at 0/6/12/18/23 aggressive peers,
+and separately declared storage, horizon, initial-stock, contention and
+utility sensitivities. The two banks total **3,648 episodes / 1,032,192 ticks /
+24,772,608 individual decisions**, excluding replays. A fixed family of 194
+simultaneous scalar intervals governs the primary and robustness verdicts.
+Both protocols and complete source closures will be pushed before execution.
+Prepared banks are `evidence/commons-v3-{ecology,incentive}-qualification-v1/`.
+
+The rational physical certificates can establish insufficient supply for a
+specified target; a permissive upper bound remains unresolved unless a legal
+controller witnesses viability. No policy improvement, ecological result or
+incentive result is assumed in advance. Engineering failure preserves a failed
+bank; scientific failure does not trigger retries or threshold changes.
+
+All **437 commons tests** pass, including exact serial/parallel equivalence,
+recovery, conservative bounds, recorder and interval/gate checks. The full
+repository suite passes **979 tests and 123 subtests**. Validation receipts are in
+`evidence/commons-v3-qualification-validation-v1/`. No experimental model calls
+or evolutionary runs are authorized or used. Earlier frozen banks are intact.
+
 ## Navigation and numerical-baseline checkpoint completed, 7 October 2026
 
 The stronger local controller, predeclared finite sweep and disjoint-seed
