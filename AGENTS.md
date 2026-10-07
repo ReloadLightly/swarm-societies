@@ -27,10 +27,13 @@ The broader research program remains in `docs/research-roadmap.md`.
 The current cross-stage assessment and active task order are in
 `docs/research-state-and-next-steps-v1.md`; they supersede stale prospective
 "first ticket" ordering in earlier plans without changing frozen scientific
-gates. Close the outstanding incentive semantic replay and proceed to Stage 2
-capability design and full optional lifecycle with a strong decentralized
-coordination comparator. The unexecuted tipping v1 panel need not block that
-engineering. Preserve the distinction between scripted lifecycle validation,
+gates. The full incentive semantic replay is complete; its receipt is
+`evidence/commons-v3-qualification-validation-v1/incentive-replay-v1.json`.
+All 224 configurations / 3,360 episodes, exact aggregate reconstruction,
+17 frozen sources and 245 sealed artifacts verify unchanged. The original
+ecology bank was not replayed again. Proceed from the implemented Stage 2
+lifecycle/controllers to a fair, declared development comparison. The unexecuted
+tipping v1 panel need not block that engineering. Preserve the distinction between scripted lifecycle validation,
 behavior within supplied decision rules, and evidence of useful institutions.
 
 Stage 2's first political extension is now implemented separately in

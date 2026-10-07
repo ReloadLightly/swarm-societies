@@ -1,5 +1,33 @@
 # Active work record
 
+## Incentive replay obligation closed; political implementation synchronized, 7 October 2026
+
+The unchanged verifier exactly reproduces all **224 configurations / 3,360
+episodes / 884,736 physical ticks / 21,233,664 individual decisions** and
+reconstructs every saved aggregate and verdict. The new
+[semantic replay receipt](evidence/commons-v3-qualification-validation-v1/incentive-replay-v1.json)
+and [log](evidence/commons-v3-qualification-validation-v1/incentive-replay-v1.log)
+are outside the frozen bank. Four workers took 2,081.48 seconds; zero model calls
+or evolutionary runs. This replay did not restart or extend the completed bank.
+
+All 17 frozen source files and 245 sealed artifacts retain their manifest
+hashes. The manifest remains
+`a2d858cb15bf34860566d49bbb7c2d3115fecbd9dfa2fb88e23eb42203830c05`.
+The receipt's `ecology_original_verified: false` records the intentional absence
+of a new original-ecology replay: its copied, bound ecological input was checked.
+Earlier ecology verification remains valid. No new ecology audit, figure or
+publication layer was added. Primary joint qualification remains unresolved;
+broader qualification and reference robustness at all declared weights fail.
+
+Political runtime/controllers and full policy-memory continuation are now
+implemented and verified as described below. Commit
+`a120744e01581bfd836ec242e421f6c83fe6191e` is pushed and independently confirmed
+by `git ls-remote origin refs/heads/main`. The implementation adds no new
+scientific bank or claim of beneficial institutions. The next work package is
+the small declared institutional development comparison, with matched generic
+capabilities, explicit terminal custody accounting, and original-population /
+outsider outcomes. Freeze independent evaluation only after that development.
+
 ## Audited political controllers and full continuation verified, 7 October 2026
 
 `commons_v3/policies_institutions_v1.py` retains the competent frozen forager,

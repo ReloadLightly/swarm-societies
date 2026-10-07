@@ -1,11 +1,14 @@
 # Research state and next steps
 
 **Implementation update:** the initial political lifecycle and explicit custody
-extension are now implemented and tested under the
+extension, audited controllers and full policy-memory continuation are now
+implemented and tested under the
 [Stage 2 capability contract](commons-v3-institutions-contract-v1.md). The
+existing [incentive replay obligation](../evidence/commons-v3-qualification-validation-v1/incentive-replay-v1.json)
+is closed: all 3,360 episodes and saved aggregates reproduce exactly. The
 assessment below records the pre-implementation checkpoint; its scientific
 limitations and evaluation priorities remain in force. Follow `PROGRESS.md`
-for continuation and validation status.
+for current validation status and the next declared development comparison.
 
 Assessment of the repository after the 7 October 2026 review response, against
 checkpoint `773a299`. The project now has a credible physical testbed, strong

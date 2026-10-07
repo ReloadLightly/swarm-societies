@@ -12,8 +12,10 @@ tools, with no new experimental model spending authorized.
 
 At resumption the incentive bank had already completed all **224 configurations
 and 3,360 episodes**. It was not restarted, altered or extended. Its original
-source/artifact checks and exact reconstruction of saved-case aggregates pass;
-full semantic replay of the incentive episodes remains pending. The ecological
+source/artifact checks and exact reconstruction of saved-case aggregates pass.
+The subsequent [full semantic replay](../evidence/commons-v3-qualification-validation-v1/incentive-replay-v1.json)
+also reproduces all 3,360 episodes and reconstructs the aggregates/verdicts
+exactly, without changing the bank. The ecological
 bank's replay, independent audit and public restoration had already completed.
 No additional ecological publication, figure or audit layer is started here.
 The [separate incentive archive](../artifacts/commons-v3-incentive-qualification-v1/README.md)

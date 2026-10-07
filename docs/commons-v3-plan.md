@@ -3,8 +3,8 @@
 **Current sequencing:** [Research state and next steps](research-state-and-next-steps-v1.md)
 supersedes the original work-package order and planning horizon below. Stage 0
 and the physical foundation are complete; qualification returned unresolved
-primary and failed broader incentive verdicts. Close the outstanding incentive
-semantic replay and begin Stage 2 capability design. The full tipping panel or
+primary and failed broader incentive verdicts. Full incentive semantic replay
+and the first Stage 2 capability implementation are complete. The full tipping panel or
 a strict game label need not gate political implementation. Frozen protocols
 and their thresholds remain unchanged; the older proposed gates below are
 historical design rationale, not evidence that qualification passed.

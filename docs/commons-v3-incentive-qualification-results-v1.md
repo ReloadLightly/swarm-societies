@@ -389,5 +389,10 @@ now restores all **224 raw files / 453,051,247 bytes** byte-identically from
 an empty cache and through offline restoration. Its
 [publication receipts](../evidence/commons-v3-qualification-validation-v1/publication/incentive/README.md)
 bind source checkpoint `e895b72` and preserve earlier ecology asset identities.
-No new ecological audit or complete incentive semantic replay is claimed.
+The subsequent [complete semantic replay](../evidence/commons-v3-qualification-validation-v1/incentive-replay-v1.json)
+now verifies all 224 configurations / 3,360 episodes and reconstructs every
+aggregate/verdict exactly. It preserves all 17 frozen sources and 245 sealed
+artifacts. The original ecology bank was not replayed again; the incentive
+bank's bound ecological input supplies the dependency. No new ecological audit
+was performed.
 The finished bank remains preserved, including all null and adverse outcomes.

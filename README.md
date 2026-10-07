@@ -322,8 +322,9 @@ The navigation bank uses separate [tuning](artifacts/commons-v3-navigation-tunin
 and [evaluation](artifacts/commons-v3-navigation-evaluation-v1/README.md)
 catalogs; restore both before its exact 660-episode replay or figure regeneration.
 The [incentive qualification catalog](artifacts/commons-v3-incentive-qualification-v1/README.md)
-restores all 224 raw files separately from ecology. Source, artifact and exact
-aggregate checks pass; full incentive semantic replay remains pending.
+restores all 224 raw files separately from ecology. Source, artifact, exact
+aggregate and [complete 3,360-episode semantic replay](evidence/commons-v3-qualification-validation-v1/incentive-replay-v1.json)
+checks pass. The frozen bank and its qualification verdicts are unchanged.
 The supplied review probe has a [separate public catalog](artifacts/commons-v3-temptation-review-v1/README.md)
 for all 64 raw episodes, with exact replay and public/offline restoration verified.
 Git history is unchanged, so use `git clone --depth 1` for a smaller initial

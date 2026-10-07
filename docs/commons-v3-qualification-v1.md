@@ -298,8 +298,10 @@ recover unrecorded policy requests, reserves or every allocation choice.
 Exact policy execution and full physical-state continuation remain the
 separate semantic replay's responsibility. The certificate is conditional
 on its explicit arithmetic assumptions; neither audit is a formal hardware
-proof. Complete incentive semantic replay and independent raw auditing remain
-pending. The separate incentive review gallery has been inspected and repeats
+proof. [Complete incentive semantic replay](../evidence/commons-v3-qualification-validation-v1/incentive-replay-v1.json)
+now verifies all 3,360 episodes and exact aggregate/verdict reconstruction.
+No additional independent incentive raw audit was performed. The separate
+incentive review gallery has been inspected and repeats
 byte-identically; further ecology figure and audit layers remain deferred.
 
 Only audited built-in policies execute. Material residuals use the fixed

@@ -72,6 +72,8 @@ Separate [ecological](commons-v3-ecology-qualification-protocol-v1.md) and
 frozen at `b44ee25`, with 16 new seeds per cell in each bank, both strong
 controls, intermediate aggressive-peer fractions and reference sensitivities.
 Both banks are complete: 288 ecological and 3,360 incentive episodes.
+The [full incentive replay receipt](../evidence/commons-v3-qualification-validation-v1/incentive-replay-v1.json)
+now verifies all saved episodes and exact aggregate/verdict reconstruction.
 The [full incentive results](commons-v3-incentive-qualification-results-v1.md)
 retain primary unresolved and broader failed verdicts, all weights and peer
 curves. The [latest review response](commons-v3-review-2026-10-07.md) records
@@ -82,7 +84,7 @@ and audit layers are deferred; Stage 2 optional institutions is the next
 scientific priority after incentive framing.
 The [physical-bound derivation](commons-v3-feasibility-v1.md) distinguishes
 certified insufficient supply from unresolved feasible control.
-Institutions and enforcement follow later. V3 presently runs
+Institutional benefit remains untested. V3 presently runs
 audited built-in policies only. Generated-policy execution has not yet been
 integrated with its new action and observation interface.
 
