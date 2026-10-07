@@ -1,10 +1,16 @@
-"""Static legal-packet L0 fixtures; no closed-loop arena is executed here."""
+"""Static legal-packet checks and one engineering integration after G2 passed.
+
+The 32-tick seed-17 fixture is not a development/evaluation bank or a policy
+selection. It verifies the observation-to-action path and exact continuation.
+"""
 
 from copy import deepcopy
+from dataclasses import asdict, replace
 import json
 
 import pytest
 
+from swarm_societies.commons_v3 import engine_sites_v1 as engine
 from swarm_societies.commons_v3.evidence_sites_v1 import CleanTransition
 from swarm_societies.commons_v3.policies_learning_sites_v1 import AsocialForager
 from swarm_societies.commons_v3.policies_navigation_v1 import ForagerPolicy
@@ -196,3 +202,85 @@ def test_missing_declared_ecology_is_rejected(observation):
 def test_invalid_wrapper_parameters_are_rejected(kwargs):
     with pytest.raises(ValueError):
         AsocialForager(**kwargs)
+
+
+def test_post_g2_l0_engine_fixture_and_exact_midpoint_continuation():
+    """Engineering fixture only: one fixed seed, no scientific contrast."""
+    capacities = (12., 40., 70.)
+    config = engine.Config(width=7, height=3, n_agents=4, n_patches=3,
+                           sensing_radius=2, need=1.2, site_capacities=capacities,
+                           initial_site_stocks=tuple(.6 * capacity for capacity in capacities))
+    state = engine.initialize(config, seed=17)
+    state = replace(state,
+                    agents=tuple(replace(agent, x=x, y=1)
+                                 for agent, x in zip(state.agents, (1, 1, 3, 5))),
+                    patches=tuple(replace(site, x=x, y=1)
+                                  for site, x in zip(state.patches, (1, 3, 5))))
+    policies = [AsocialForager() for _ in state.agents]
+    resumed_state = resumed_policies = previous_ledger = None
+    moved = harvested = clean = shared_exclusions = 0
+    for tick in range(32):
+        observations = engine.observations(state)
+        originals = deepcopy(observations)
+        actions = []
+        for agent_id, (policy, observation) in enumerate(zip(policies, observations)):
+            old_keys = set(policy.evidence.seen)
+            previous = policy.evidence.memory()["previous"]
+            action = policy(observation)
+            assert type(action) is engine.Action
+            actions.append(action)
+            added = policy.evidence.seen - old_keys
+            clean += len(added)
+            for site_id, event_tick in added:
+                assert event_tick == tick - 1
+                assert previous_ledger.tick == event_tick
+                events = [operation["event"] for operation in policy.posteriors[site_id].memory()["operations"]
+                          if operation["kind"] == "transition" and operation["event"]["tick"] == event_tick]
+                assert len(events) == 1
+                event, row = events[0], previous_ledger.patches[site_id]
+                assert event["stock_before"] == row.stock_before
+                assert event["z"] == pytest.approx(row.stock_after_harvest, abs=1e-12)
+                assert event["stock_next"] == row.stock_after
+                assert event["own_harvest"] == pytest.approx(previous_ledger.agents[agent_id].harvested, abs=1e-12)
+            if previous is not None:
+                known_before = {site["id"] for site in previous["sites"]}
+                for site in observation["sites"]:
+                    on_site = (site["x"], site["y"]) == (observation["self"]["x"], observation["self"]["y"])
+                    if on_site and site["id"] in known_before and site["peer_count"] > 1:
+                        shared_exclusions += 1
+                        assert (site["id"], tick - 1) not in policy.evidence.seen
+                        assert not added
+        assert observations == originals
+        assert all("capacity" not in site for observation in observations for site in observation["sites"])
+        result = engine.step(state, tuple(actions))
+        moved += sum(row.moved for row in result.ledger.agents)
+        harvested += sum(row.harvested > 0 for row in result.ledger.agents)
+        before = result.ledger.inventory_before + result.ledger.stock_before + result.ledger.growth
+        after = (result.ledger.inventory_after + result.ledger.stock_after + result.ledger.consumption
+                 + result.ledger.movement_cost + result.ledger.message_cost
+                 + result.ledger.harvest_cost + result.ledger.waste)
+        assert before == pytest.approx(after, rel=0., abs=1e-10)
+        assert abs(result.ledger.residual) < 1e-10
+        assert all(abs(row.residual) < 1e-12 for row in result.ledger.agents)
+        if resumed_state is not None:
+            resumed_observations = engine.observations(resumed_state)
+            resumed_before = deepcopy(resumed_observations)
+            resumed_actions = tuple(policy(observation)
+                                    for policy, observation in zip(resumed_policies, resumed_observations))
+            assert resumed_actions == tuple(actions)
+            assert resumed_observations == resumed_before
+            continued = engine.step(resumed_state, resumed_actions)
+            assert asdict(continued.ledger) == asdict(result.ledger)
+            assert asdict(continued.metrics) == asdict(result.metrics)
+            assert engine.snapshot(continued.state) == engine.snapshot(result.state)
+            assert [policy.memory() for policy in resumed_policies] == [policy.memory() for policy in policies]
+            resumed_state = continued.state
+        state, previous_ledger = result.state, result.ledger
+        if state.tick == 16:
+            checkpoint = json.loads(json.dumps(engine.snapshot(state)))
+            resumed_state = engine.restore(checkpoint)
+            resumed_policies = deepcopy(policies)
+    assert moved > 0 and harvested > 0
+    assert clean > 0 and shared_exclusions > 0
+    assert engine.metrics(state).consumption > 0.
+    assert state.tick == resumed_state.tick == 32

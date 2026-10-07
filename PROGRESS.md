@@ -1,5 +1,65 @@
 # Active work record
 
+## Ticket C complete: site learning and Gate G2, 8 October 2026
+
+Implementation and G2 criteria were pushed before the panel at
+`746e8a69d30d4aeebda09e8926afbc8bd9e762d2`, with remote verification.
+The fixed [calibration bank](evidence/commons-v3-world-model-calibration-v1/)
+contains 1,024 independent synthetic sequences and 65,536 transitions:
+29,214 clipped and 36,322 unclipped. Generator truth, weather and clipping flags
+are retained for evaluation, never supplied to the learner.
+
+**G2 passes.** All eight ECDF checks satisfy the predeclared simultaneous DKW
+bound of **0.0600202**. These are independent-sequence checks, not a claim that
+65,536 observations are independent replications.
+
+| Tick | Posterior-rank distance | Predictive-PIT distance | Inclusive 90% coverage | Randomized 90% coverage |
+| ---: | ---: | ---: | ---: | ---: |
+| 1 | 0.027884 | 0.026852 | 90.53% | 90.53% |
+| 16 | 0.025616 | 0.024983 | 89.75% | 89.75% |
+| 32 | 0.051525 | 0.033239 | 91.99% | 88.77% |
+| 64 | 0.027700 | 0.041314 | 100.00% | 90.53% |
+
+Independent one-transition quadrature CDFs agree within **2.57e-14**; the
+predeclared tolerance was 0.002. The strongest CDF change relative to bound-only
+inference is 0.993812, and distinct repeated saturation identifies the exact
+off-grid capacity. Duplicate physical evidence leaves the posterior unchanged.
+The unupdated prior itself has a rank distance of 0.023543, illustrating why
+rank calibration alone would not establish evidence use.
+
+At tick 16, mean absolute log-median capacity error is 0.020648 versus 0.547356
+for bound-only inference. By tick 64 every no-harvest synthetic sequence has
+identified its capacity atom, so inclusive intervals cover 100%. This is a
+property of these fully observed renewal sequences, not evidence that learning
+is trivial for harvesting, co-located agents. G3 is not evaluated here.
+
+The posterior, local extractor and L0 wrapper are implemented. Continuous
+integration uses 400 log bins plus exact observation-generated atoms, with no
+inference from evaluator clipping labels. φ stays at 0.375; q remains untuned.
+Calibration is limited to the synthetic clean-transition model. It does not
+establish nominal coverage in the heterogeneous coupled arenas, where coverage
+will be measured in the contracted arm comparison.
+
+**All 1,024 sequences and 65,536 transitions replay exactly**, including
+posterior records and every reported statistic. Canonical summary SHA-256:
+`dcc015e686fa4357959ddd790de2f4bc96014182286a6f914ffeaed20eb5cad6`.
+
+All **126 implementation checks pass**. After G2 passed, a 32-tick engineering
+fixture with four agents and three sites verified real movement/harvesting,
+legal clean/shared evidence handling and conservation. A tick-16 physical JSON
+snapshot plus copied controller state reproduces every subsequent action,
+ledger, metric, physical digest and controller memory exactly. This adds no
+scientific L0 performance comparison or parameter choice.
+
+Ticket C is complete. No scientific L0 arena bank, message arm, quantile
+selection or fresh evaluation has run. Ticket D remains unstarted; it is the
+next contracted work item. Frozen engines, foragers and completed banks remain
+unchanged, with no experimental model calls.
+
+```bash
+.venv/bin/python scripts/run_commons_v3_calibration_sites_v1.py verify --workers 2
+```
+
 ## Ticket C resumed after G1: learner and prospective G2 checks, 8 October 2026
 
 Roland authorized the next ticket after the G1 report. Its result checkpoint
