@@ -51,8 +51,21 @@ Epistemic measurements include all 24×16 agent/site pairs, assigning untouched
 priors to unseen sites in the evaluator only. Belief tick128 means evidence has
 been processed from observation128; terminal512 receives an observation-only
 update. Seen-only summaries and own/receipt/relay evidence counts are separate.
-The implementation and its tests are in progress; no development episodes have
-started. Ticket E remains unstarted.
+Starvation next to food uses post-extraction stock before regrowth; local
+collapse uses post-regrowth stock, consistently with Ticket B. Development
+analogues of P3 and P5 average the two wide-world demand levels within each
+seed. P5 retains both time-average and terminal coverage, descriptively: its
+primary time endpoint is unspecified in the contract and remains a pre-freeze
+review item. No evaluation significance tests are run on these reused seeds.
+
+The approved amendments and initial pre-development choices were pushed at
+`9fa42f298134275d88405875fbc4485fee6cd3ce`, with remote verification.
+Implementation is complete and **411 checks pass**: 360 engine/learner/receipt/
+posterior checks, 21 controller checks and 30 development-runner checks.
+Small engineering fixtures cover all six regimes and exact continuation;
+paired initialization and weather must match before sharing can start.
+No declared development episodes have started at this checkpoint.
+Ticket E remains unstarted.
 
 ## Ticket C complete: site learning and Gate G2, 8 October 2026
 
