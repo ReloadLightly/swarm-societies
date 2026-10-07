@@ -1,0 +1,89 @@
+from pathlib import Path
+import hashlib
+import json
+import subprocess
+import sys
+import urllib.request
+
+ROOT=Path.cwd()
+SCRATCH=ROOT/'runs/commons-v3-need-publication-v1'
+PUBLIC=ROOT/'artifacts/commons-v3-need-publication-v1'
+RECEIPTS=ROOT/'evidence/commons-v3-need-publication-v1'
+SOURCE_COMMIT='536ed64cb733f2091afd9c9c7905531826519ff7'
+TAG='commons-v3-need-2026-10-07'
+
+def sha(path): return hashlib.sha256(path.read_bytes()).hexdigest()
+def write(path,value): path.write_text(json.dumps(value,sort_keys=True,indent=2,allow_nan=False)+'\n')
+def public_read(url):
+    request=urllib.request.Request(url,headers={'User-Agent':'swarm-societies-evidence-publication-verifier-v1'})
+    assert not request.has_header('Authorization')
+    with urllib.request.urlopen(request,timeout=120) as stream:
+        return stream.read()
+def run(arguments):
+    result=subprocess.run([sys.executable,'scripts/restore_evidence_v1.py',*arguments],cwd=ROOT,text=True,capture_output=True)
+    assert result.returncode==0, result.stderr
+    return json.loads(result.stdout)
+
+release=json.loads(public_read('https://api.github.com/repos/ReloadLightly/swarm-societies/releases/tags/'+TAG))
+assert release['draft'] is False
+assert release['target_commitish']==SOURCE_COMMIT, release['target_commitish']
+expected={
+    'commons-v3-need-v1.tar.gz':ROOT/'runs/commons-v3-need-v1-validation/commons-v3-need-v1.tar.gz',
+    'commons-v3-need-v1.json':PUBLIC/'commons-v3-need-v1.json',
+    'catalog.json':PUBLIC/'catalog.json',
+}
+assert {item['name'] for item in release['assets']}==set(expected)
+downloads=SCRATCH/'public-downloads'; downloads.mkdir(exist_ok=False)
+asset_rows=[]
+for asset in sorted(release['assets'],key=lambda row:row['name']):
+    local=expected[asset['name']]
+    downloaded=downloads/asset['name']
+    downloaded.write_bytes(public_read(asset['browser_download_url']))
+    assert downloaded.stat().st_size==asset['size']==local.stat().st_size
+    assert downloaded.read_bytes()==local.read_bytes()
+    asset_rows.append({'id':asset['id'],'name':asset['name'],'size':asset['size'],
+                       'browser_download_url':asset['browser_download_url'],
+                       'sha256':sha(downloaded),'matches_local_bytes':True})
+write(RECEIPTS/'release-assets-public.json',{'version':'commons-v3-need-public-assets-v1','authenticated_download':False,
+      'release_url':release['html_url'],'release_id':release['id'],'source_commit':SOURCE_COMMIT,'assets':asset_rows})
+
+restored=SCRATCH/'public-restored'; cache=SCRATCH/'public-cache'
+restored.mkdir(exist_ok=False); cache.mkdir(exist_ok=False)
+assert not any(restored.iterdir()) and not any(cache.iterdir())
+args=['--catalog',str(downloads/'catalog.json'),'--study','commons-v3-need-v1','--root',str(restored),'--cache',str(cache)]
+public_result=run([*args,'--receipt',str(RECEIPTS/'public-restoration.json')])
+manifest=json.loads((PUBLIC/'commons-v3-need-v1.json').read_text())
+rows=[]
+for item in manifest['files']:
+    target=restored/item['path']; original=ROOT/item['path']
+    assert target.read_bytes()==original.read_bytes()
+    assert target.stat().st_size==item['size'] and sha(target)==item['sha256']
+    rows.append({'path':item['path'],'size':item['size'],'sha256':item['sha256'],'byte_identical':True})
+write(RECEIPTS/'restored-byte-comparison.json',{'version':'commons-v3-need-restored-identity-v1','status':'ok',
+      'files':len(rows),'bytes':sum(row['size'] for row in rows),'all_byte_identical':True,'payload':rows})
+
+offline_result=run([*args,'--offline','--verify-only','--receipt',str(RECEIPTS/'offline-verification.json')])
+offline_root=SCRATCH/'offline-restored'; offline_root.mkdir(exist_ok=False)
+offline_args=['--catalog',str(downloads/'catalog.json'),'--study','commons-v3-need-v1','--root',str(offline_root),'--cache',str(cache)]
+run([*offline_args,'--offline','--receipt',str(RECEIPTS/'offline-restoration.json')])
+for item in manifest['files']:
+    assert (offline_root/item['path']).read_bytes()==(ROOT/item['path']).read_bytes()
+
+before=json.loads((SCRATCH/'original-local-metadata-sha256.json').read_text())
+after={name:sha(ROOT/name) for name in before}
+assert before==after
+write(RECEIPTS/'local-metadata-preservation.json',{'version':'commons-v3-need-local-metadata-preservation-v1',
+      'status':'ok','all_byte_identical':True,'before_sha256':before,'after_sha256':after})
+receipt={'version':'commons-v3-need-publication-verification-v1','status':'ok','source_commit':SOURCE_COMMIT,
+      'release_url':release['html_url'],'release_id':release['id'],'published_at':release['published_at'],
+      'draft':release['draft'],'release_immutable':release.get('immutable'),
+      'hosted_asset_count':len(asset_rows),'hosted_sizes_and_sha256_match':True,
+      'authenticated_download':False,'initial_cache_empty':True,'initial_restore_root_empty':True,
+      'preexisting_payload_files':0,'public_restored_files':len(rows),'public_restored_bytes':sum(row['size'] for row in rows),
+      'all_restored_bytes_match_original':True,'offline_archive_verification_passed':True,
+      'offline_restoration_into_second_empty_root_passed':True,'original_local_metadata_unchanged':True,
+      'archive_sha256':manifest['archive']['sha256'],'public_catalog_sha256':sha(PUBLIC/'catalog.json'),
+      'public_manifest_sha256':sha(PUBLIC/'commons-v3-need-v1.json'),
+      'publication_runs_simulation':False,'experimental_model_calls':0}
+write(RECEIPTS/'publication.json',receipt)
+print(json.dumps(receipt,sort_keys=True))

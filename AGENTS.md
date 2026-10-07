@@ -1,5 +1,11 @@
 # Swarm Societies working conventions
 
+Commit and push completed, verified increments to GitHub promptly as work
+progresses. The user explicitly requested continuous repository synchronization;
+do not defer all updates until the end of a research stage. Publish new raw
+evidence through separately versioned archives and verify public restoration.
+Preserve earlier archive identities and record remote commit verification.
+
 Read `PROGRESS.md` for the current experimental state,
 `docs/world-model-calibration-v1.md` for the independent calibration audit and
 implementation decision, and `docs/world-model-v1.md` for the implemented
@@ -79,9 +85,11 @@ consumption 1.123083/1.137248. Focal greedy consumption gains are
 0.105842/0.095690, with peer losses 0.336463/0.287450. At 512 ticks population
 consumption falls to 0.798804/0.804615; lower initial stock makes the two-tick
 buffer worse by 0.254884. These policy-bundle development results do not qualify
-the ecology or establish robust navigation. Its separate archive catalog is
-`artifacts/commons-v3-need-v1/catalog.json`: verified locally with offline
-restoration, not yet publicly published. Do not claim a remote download exists.
+the ecology or establish robust navigation. The public archive catalog is
+`artifacts/commons-v3-need-publication-v1/catalog.json`; all 56 cases restore
+byte-identically from public release `commons-v3-need-2026-10-07`, targeting
+commit `536ed64`. Preserve the earlier local-only catalog and receipts in
+`artifacts/commons-v3-need-v1/` as the pre-publication record.
 
 Next: purposeful local foraging and numerical baselines, followed by separate
 ecological and incentive qualification. Keep institutions, their lifecycle and paid enforcement

@@ -175,22 +175,27 @@ OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/run_commons_v3_need_v1.py verify
   --source runs/commons-v3-need-reproduction --output runs/commons-v3-need-figures
 ```
 
-The separate [case archive](../artifacts/commons-v3-need-v1/README.md) is a
-verified local checkpoint, with no public download URL yet. Compact designs,
+The separate [public case archive](../artifacts/commons-v3-need-publication-v1/README.md)
+is published in release `commons-v3-need-2026-10-07`, targeting implementation
+commit `536ed64`. All three public assets match their hashes; unauthenticated
+download into an empty cache restores all 56 files byte-identically, and offline
+verification passes. [Publication receipts](../evidence/commons-v3-need-publication-v1/README.md)
+preserve those checks. The earlier [local-only metadata](../artifacts/commons-v3-need-v1/README.md)
+and validation receipts remain unchanged as the pre-publication record. Compact designs,
 summaries, source snapshots, figures and validation records remain in the
-repository; raw cases remain ignored. This workspace's populated archive cache
-supports offline restoration and full semantic replay:
+repository; raw cases remain ignored. Download and replay with:
 
 ```bash
 .venv/bin/python scripts/restore_evidence_v1.py \
-  --catalog artifacts/commons-v3-need-v1/catalog.json --offline
+  --catalog artifacts/commons-v3-need-publication-v1/catalog.json
 OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/run_commons_v3_need_v1.py verify \
   --output evidence/commons-v3-need-v1 --receipt runs/need-replay.json
 ```
 
-A fresh checkout can regenerate the bank with the first command block; it
-cannot download the unpublished archive. Existing public foundation and legacy
-archives retain their original identities and restoration commands.
+Add `--offline` to restore from a verified cached archive. A fresh checkout
+can also regenerate the bank with the first command block. Existing foundation,
+legacy and pre-publication archive identities remain unchanged. Hashes detect
+altered assets; GitHub administrators can still remove or replace hosted files.
 
 ## Remaining scientific work
 

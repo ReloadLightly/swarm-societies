@@ -1,5 +1,29 @@
 # Active work record
 
+## GitHub synchronization and need-bank publication, 7 October 2026
+
+The user explicitly requested prompt GitHub updates throughout subsequent
+work. The completed need-targeted implementation, results, figures and
+validation are pushed as `536ed64cb733f2091afd9c9c7905531826519ff7`;
+remote `main` was independently verified at that commit. Continue pushing
+completed, verified increments instead of waiting until a research stage ends.
+
+The raw need-targeted bank is now public in release
+`commons-v3-need-2026-10-07`, targeting that implementation commit. A separate
+public catalog in `artifacts/commons-v3-need-publication-v1/catalog.json`
+preserves the earlier local-only metadata without alteration. All three
+hosted assets match their hashes. Public unauthenticated download into an empty
+cache restored all **56 files / 3,647,037 bytes** byte-identically into an empty
+directory; offline verification and another empty-directory restoration pass.
+Receipts are in `evidence/commons-v3-need-publication-v1/`. Earlier comments
+about unpublished data describe the preceding local checkpoint.
+
+Stronger local navigation and a finite numerical baseline sweep are the
+active implementation task. Keep the engine, utility weights and all prior
+sources/evidence frozen. The new policy, candidate grid and separated tuning
+and evaluation seeds must be fixed and pushed before running the new panel.
+No experimental model calls or evolutionary campaign are authorized.
+
 ## Need-targeted local baseline checkpoint completed, 7 October 2026
 
 Resumed from the completed physical-foundation checkpoint. The separate

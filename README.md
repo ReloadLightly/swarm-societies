@@ -193,9 +193,9 @@ inference budget. No gate requires institutions or coevolution to win.
 
 Compact records, source snapshots and figures stay in Git; full numerical
 evidence is restored from [checksummed release archives](docs/evidence-archives-v1.md).
-The newest [need-targeted archive](artifacts/commons-v3-need-v1/README.md) is
-verified locally and not yet published; its report gives offline restoration
-and full regeneration commands.
+The [need-targeted public archive](artifacts/commons-v3-need-publication-v1/README.md)
+restores all 56 cases byte-identically; its report gives download, offline
+restoration and full regeneration commands.
 Git history is unchanged, so use `git clone --depth 1` for a smaller initial
 checkout; an ordinary full clone still downloads historical evidence blobs.
 
