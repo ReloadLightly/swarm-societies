@@ -177,7 +177,7 @@ ecological/incentive sets, 3,648 episodes and a fixed 194-interval family.
 Do not edit their source closure, seeds, thresholds or selection after execution.
 A permissive consumption upper bound does not establish feasible control.
 Keep institutions, their lifecycle and paid enforcement
-as later work. Do not start model spending or tune utility weights to manufacture
+out of these frozen qualification banks. Do not start model spending or tune utility weights to manufacture
 a dilemma; preserve all adverse development outcomes and version future changes.
 
 The exploratory reconstructed greedy baseline reproduces the external review's

@@ -374,7 +374,8 @@ The supplied review probe has a [separate public catalog](artifacts/commons-v3-t
 for all 64 raw episodes, with exact replay and public/offline restoration verified.
 The [institutional development archive](artifacts/commons-v3-institutions-development-v1/README.md)
 contains all 144 raw episodes. The [study report](docs/commons-v3-institutions-development-v1.md#verification-and-reproduction)
-gives restoration, exact replay, figure and saved-frame diagnostic commands.
+gives restoration, exact replay, figure and saved-frame diagnostic commands;
+public and offline restoration each reproduce every raw file exactly.
 Git history is unchanged, so use `git clone --depth 1` for a smaller initial
 checkout; an ordinary full clone still downloads historical evidence blobs.
 

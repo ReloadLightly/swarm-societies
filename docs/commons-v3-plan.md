@@ -64,8 +64,10 @@ almost as strong as the selected policy, and incentive sensitivities remain
 substantial. Separate [ecological](commons-v3-ecology-qualification-protocol-v1.md)
 and [incentive](commons-v3-incentive-qualification-protocol-v1.md) protocols
 were frozen and pushed at `b44ee25` before their fresh-seed execution.
-Their results must determine the next scientific step. Optional institutions
-and political transitions have not yet been implemented.
+Both banks are complete, with primary joint qualification unresolved and broader
+incentive qualification failed. The separately versioned political lifecycle
+and first institutional development bank are now complete; the current plan
+above addresses its weak coordination comparator and mixed/adverse results.
 
 ## What the target world must implement
 

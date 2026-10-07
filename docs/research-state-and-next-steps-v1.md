@@ -190,9 +190,10 @@ must conserve resources as reliably as successful cooperation.
 Tests should protect these boundaries, legal local information and whole-process
 checkpoint continuation. The resulting traces establish a working lifecycle.
 They do not establish emergence, deterrence, beneficial governance or evolutionary
-stability. A possible implementation split is `politics_v1.py`, a separately
-versioned political episode runner and audited institutional policies; these
-are proposed module names, not capabilities already present in the repository.
+stability. This split is now implemented in `politics_v1.py`,
+`political_episode_v1.py` and the audited institutional policy modules; the
+[capability contract](commons-v3-institutions-contract-v1.md) records the exact
+semantics and engineering validation. The requirements above remain the rationale.
 
 ## The first institutional question and fair controls
 

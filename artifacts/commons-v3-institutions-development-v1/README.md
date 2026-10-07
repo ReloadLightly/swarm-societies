@@ -9,12 +9,20 @@ policy-memory midpoint continuations replay exactly.
 The raw files total 17,133,617 bytes; the archive is 15,473,215 bytes, SHA-256
 `1553e76b7f79e0b7640e98611f3a5a599ae3e956ff5103fbc83dc71f5b9f8d21`.
 The catalog pins the archive manifest, which pins each original path, size and
-hash. Local verification passes. Public publication and empty-root public/offline
-restoration are pending this verified-results commit.
+hash. Local archive verification, unauthenticated public restoration into an
+empty destination with an empty cache, and offline restoration into a second
+empty destination all pass: **144 restored files, zero pre-existing files**
+in each case. Both hosted metadata assets also match local bytes exactly.
 
-The intended new release identity is
-`commons-v3-institutions-development-2026-10-07`. Once published, restore from
-the repository root:
+The public release
+[commons-v3-institutions-development-2026-10-07](https://github.com/ReloadLightly/swarm-societies/releases/tag/commons-v3-institutions-development-2026-10-07)
+targets the completed-results commit
+`2c59d9e90e616a4e62c7c31b77e841986053c491`, verified through both the release
+metadata and remote tag. This differs intentionally from the earlier source
+freeze commit pinned in the catalog. The
+[validation receipts](../../evidence/commons-v3-institutions-development-validation-v1/README.md)
+retain publication, public/offline restoration and remote verification.
+Restore from the repository root:
 
 ```bash
 python3 scripts/restore_evidence_v1.py \

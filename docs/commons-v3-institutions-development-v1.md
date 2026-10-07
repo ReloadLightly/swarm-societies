@@ -200,8 +200,10 @@ manifest SHA-256:
 The separately identified [raw archive](../artifacts/commons-v3-institutions-development-v1/README.md)
 contains all 144 compressed episode files (17,133,617 original bytes;
 15,473,215 archive bytes). Compact evidence, complete sources, receipts,
-figures and this report remain in Git. The archive page records publication
-and restoration status. Existing archive identities are preserved.
+figures and this report remain in Git. Public and offline restoration each
+reproduce all 144 files byte-identically into empty destinations; hosted catalog
+and manifest bytes also match. The release targets results commit `2c59d9e`.
+The archive page links the receipts. Existing archive identities are preserved.
 
 From the repository root, restore raw evidence before full verification:
 

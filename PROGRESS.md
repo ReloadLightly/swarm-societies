@@ -30,8 +30,11 @@ checks every raw hash; it does not execute policies or alter the bank.
 
 The [new archive](artifacts/commons-v3-institutions-development-v1/README.md)
 packages all 144 raw files (17,133,617 bytes) into a 15,473,215-byte archive.
-Local archive verification passes; public publication/restoration is the final
-closure step. Earlier archive identities and frozen sources remain unchanged.
+Public and offline restoration each reproduce all 144 files into empty
+destinations; hosted metadata also matches exactly. The new release targets
+results commit `2c59d9e90e616a4e62c7c31b77e841986053c491`; remote main and tag
+were verified at that commit. Earlier archive identities and frozen sources
+remain unchanged. Publication and replay receipts are linked in the archive page.
 
 **Next scientific work:** consequential decentralized coordination/commitment
 controls, locally payoff-responsive refusal/exit, and prospective separation
