@@ -1,5 +1,55 @@
 # Active work record
 
+## Ticket C resumed after G1: learner and prospective G2 checks, 8 October 2026
+
+Roland authorized the next ticket after the G1 report. Its result checkpoint
+`b89fddfee055b44f5ff12afaf3c0186a8d775a42` was pushed and remotely verified.
+Ticket C implements the site posterior, legal local evidence and L0 wrapper;
+Ticket D's messages, development arms and quantile selection remain later work.
+
+The exact clipped-uniform likelihood is represented by a continuous posterior
+on 400 logarithmic bins with eight-point quadrature inside each surviving bin,
+plus explicit off-grid atoms at observed stocks. Support boundaries are solved
+analytically before integration. This is numerical integration of the contracted
+likelihood, not an analytically exact integration claim or a discrete-capacity
+prior. No observation is snapped, no sensor noise is invented, and no clipping
+flag comes from the evaluator. Repeated saturation can identify a capacity;
+replaying the same (site, tick) evidence cannot.
+
+The L0 extractor conservatively requires the observer to occupy the site during
+extraction, observe both consecutive stocks and have next-tick headcount one.
+Its own realized solitary harvest follows from the known request and old stock.
+It accepts stock bounds from all visible sites but does not use merely adjacent
+empty sites as transition evidence. Shared or skipped transitions are excluded.
+The wrapper keeps the selected φ = 0.375; q = 0.5 is an untuned implementation
+default, with both contracted q values available for Ticket D's later selection.
+
+Before any G2 panel outcomes, fix 1,024 independent synthetic sequences, seeds
+91001–92024, 64 transitions each: K drawn from log-uniform [8,100], exogenous
+initial stock 1, no harvest, and independent declared uniform weather. This
+avoids conditioning a synthetic initial stock on hidden K without modeling
+that selection. It is a synthetic likelihood check, not an arena run with the
+contract's U(0.3,0.9) initial fractions. Checkpoints are ticks 1, 16, 32 and 64.
+
+G2 requires finite, nonempty updates, at least 500 transitions including clipped
+and unclipped cases, and all eight randomized posterior-CDF/predictive-PIT ECDF
+distances within sqrt(log(1600)/(2×1024)) (family error bound 0.01). Inclusive
+and randomized 90% coverage are descriptive; exact atoms can make inclusive
+intervals conservative. Three independent quadrature references must agree in
+CDF within 0.002, with at least one CDF shift exceeding 0.05 relative to the
+bound-only prior; repeated saturation must yield the exact atom. These checks
+prevent accepting an unchanged prior merely because its ranks are calibrated.
+The fixed calibration harness reuses existing canonical storage and replay.
+
+All 125 implementation tests pass: 36 legal-evidence, 38 independently checked
+posterior, 12 calibration-harness and 39 static L0-wrapper checks. Analytic and
+independent quadrature references cover off-grid mixed atoms, narrow surviving
+support, predictive probabilities and serialized continuation; two input
+validation defects found by those checks were fixed before calibration.
+The calibration panel and all scientific L0 arena runs remain unstarted.
+No new protocol, audit or publication layer is
+introduced. G2 must pass before any arm run; the old calibration is not reused.
+
 ## Ticket B completed: G1 passes; stop before Ticket C, 8 October 2026
 
 The implementation/selection checkpoint
