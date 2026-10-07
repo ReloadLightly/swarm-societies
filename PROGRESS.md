@@ -1,5 +1,23 @@
 # Active work record
 
+## Navigation tuning sealed before evaluation, 7 October 2026
+
+All **324 tuning episodes** completed with no failed cases. The predeclared
+consumption objective selects **`r4-f50-nearest`**: four ticks of desired food
+buffer, a half-capacity voluntary stock floor, and nearest-site routing.
+Its mean normalized consumption is **0.8799445193**, versus **0.8797400412**
+for the otherwise matching travel-adjusted-yield candidate. The small margin
+is a two-seed development result, not evidence of route-rule superiority.
+All 18 candidates and their adverse cells are retained. The selected candidate's
+worst-cell mean is **0.493789** of need. No evaluation outcome has been seen.
+
+Tuning source/artifact hashes, aggregate reconstruction and the exact selection
+binding pass. Full semantic replay is next. This checkpoint pushes selection
+before evaluation begins; evaluation uses only the four predeclared disjoint
+seeds. The full repository suite passes **842 tests and 123 subtests**.
+The physical source and prospective protocol remain frozen at `b16a239`.
+No experimental model calls or evolutionary runs occurred.
+
 ## Navigation and numerical-baseline design frozen, 7 October 2026
 
 The new observed-map forager and staged numerical runner are implemented in
