@@ -14,6 +14,7 @@ must precede further experimental model spending.
 [Physical commons](docs/commons-v3-foundation-v1.md) ·
 [Need-targeted baselines](docs/commons-v3-need-v1.md) ·
 [Local navigation and numerical baselines](docs/commons-v3-navigation-v1.md) ·
+[Separate qualification protocols](docs/commons-v3-ecology-qualification-protocol-v1.md) ·
 [Implementation plan](docs/commons-v3-plan.md) ·
 [Current checkpoint](PROGRESS.md)
 
@@ -33,8 +34,10 @@ benefit in posterior-update value. The new spatial prototype supports local
 depletion. Purposeful local foraging with a voluntary stock floor now sustains
 near-reference demand over longer runs; an 18-candidate numerical selection
 improves only slightly over the fixed-floor baseline. Private gains remain
-sensitive to storage, terminal inventory and environment. Ecological and
-incentive qualification remain scientific requirements.
+sensitive to storage, terminal inventory and environment. A separately frozen,
+16-seed ecological panel now witnesses finite-horizon viability in five of
+nine cells, certifies insufficient supply in two and leaves two unresolved.
+Incentive qualification is being evaluated on its own fresh seed set.
 
 ## 1. Research question and present scope
 
@@ -76,6 +79,19 @@ consumption, transfers, costly messages and stock-dependent renewal with
 recovery. Actions commit simultaneously; ledgers record every material flow.
 Its development policies are audited local heuristics. There are no institutions,
 affiliations, mortality or evolutionary searches in these banks.
+
+The subsequent [ecological](docs/commons-v3-ecology-qualification-protocol-v1.md)
+and [incentive](docs/commons-v3-incentive-qualification-protocol-v1.md)
+protocols retain both the fixed floor and the earlier numerical winner. They
+were frozen and pushed before either fresh seed set ran. Ecology uses 512 ticks
+and 16 seeds per cell; incentives use 16 different seeds and matched focal
+substitutions at 0, 6, 12, 18 and 23 aggressive peers. A prespecified family
+of 194 scalar Student-t intervals with Bonferroni correction governs the gates.
+Coverage is approximate and model-based; seeds are the replication units.
+Storage, horizon, initial-stock, contention and utility sensitivities are
+separately reported. [Conservative physical certificates](docs/commons-v3-feasibility-v1.md)
+can prove insufficient supply; a permissive upper bound cannot prove feasible
+local control.
 
 Historical search accepts member replacements for private gains and institutions
 for society gains on fixed cases. The pilot has one run per arm; transplants
@@ -201,6 +217,26 @@ qualified social dilemma.
 unsmoothed reference trajectories. [Candidate scores, aggressive effects,
 complete CSVs and SVG/PDF/PNG provenance](figures/commons-v3-navigation-v1/README.md).*
 
+The completed ecological qualification bank contains **288 episodes** on
+16 fresh seeds per cell. Both controls pass all five ecological criteria in
+the same five cells, including two adjacent pairs containing the reference:
+
+| Renewal rate | Need 0.8 | Need 1.2 | Need 1.6 |
+| --- | --- | --- | --- |
+| 0.12 | Feasibility unresolved | Certified insufficient | Certified insufficient |
+| 0.24 | Witnessed viable | Witnessed viable | Feasibility unresolved |
+| 0.36 | Witnessed viable | Witnessed viable | Witnessed viable |
+
+At reference need 1.2, fixed/selected mean consumption is
+**1.192293/1.196167** per agent-tick; final-quarter consumption is
+**1.184978/1.190646**. Late ecological stock averages about **74.1%** of
+capacity, with no depleted-site time. For the two certified cells, the
+conservative 512-tick supply ceiling meets at most **77.50%/58.13%** of need,
+below the 95% target even under relaxed access assumptions. The other two
+failed cells remain unresolved: policy failure is not an impossibility proof.
+These are finite-horizon ecological findings. The separately frozen incentive
+bank is in progress; ecological success alone does not qualify a social dilemma.
+
 ## 5. Limitations and next experiments
 
 The legacy ecology uses additive renewal, often operates near the consumption
@@ -216,11 +252,11 @@ decisions. Additional allocation consumption occurred in only one arena;
 experiment selection chose Early in 71/72 states and did not establish repayment
 of its opportunity cost. These are integration and identification controls.
 
-The [ordered plan](docs/commons-v3-plan.md) next separates ecological and
-incentive qualification, following the completed local-forager and finite
-numerical comparison. Baseline limitations and adverse cases remain visible;
-sustainable scarcity, robust private temptation and collective losses still
-need a separate qualification panel. Optional institutions and costed enforcement then face
+The [ordered plan](docs/commons-v3-plan.md) now has separately frozen ecological
+and incentive qualification protocols. The ecological bank is complete; the
+incentive bank is running on its own new seeds. Baseline limitations and adverse
+cases remain visible, and ecological viability alone does not establish robust
+private temptation or collective harm. Optional institutions and costed enforcement then face
 hand-designed and numerical baselines. Replicated adaptation, cross-play,
 invasion and unfamiliar scarcity follow a new protocol and explicitly authorized
 inference budget. No gate requires institutions or coevolution to win.
