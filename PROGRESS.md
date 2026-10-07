@@ -1,5 +1,63 @@
 # Active work record
 
+## Ticket B completed: G1 passes; stop before Ticket C, 8 October 2026
+
+The implementation/selection checkpoint
+`15f2191ba8b1a69964fdc8616ce00683bc600fbe` was pushed and remotely verified before
+the panel. All 96 development episodes completed; all candidates are retained in
+[`evidence/commons-v3-world-model-consequence-v1/`](evidence/commons-v3-world-model-consequence-v1/).
+The [summary](evidence/commons-v3-world-model-consequence-v1/summary.json) includes
+selection scores, all four cells, paired seed differences, final-quarter results
+and material diagnostics. The cases include initial/final physical snapshots,
+per-tick measurements, per-agent consumption and trajectory/weather digests.
+
+One global **φ = 0.375** is selected (mean share of need 0.908820, versus 0.889410
+for φ = 0.5). At that φ, one global **fixed K = 40** is selected (0.791363,
+versus K = 30: 0.788010 and K = 20: 0.785445). These choices use all 16 cases,
+not separate tuning for each condition. The resulting 48 selected episodes give:
+
+| World | Need | Oracle share of need | Fixed share | Greedy share | Oracle − fixed |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Moderate | 1.2 | 0.994007 | 0.981941 | 0.236125 | +0.012066 |
+| Moderate | 1.6 | 0.842439 | 0.791464 | 0.083111 | +0.050975 |
+| Wide | 1.2 | 0.976038 | 0.772931 | 0.259440 | +0.203107 |
+| Wide | 1.6 | 0.822794 | 0.619117 | 0.104490 | +0.203677 |
+
+**G1 passes:** the wide/high-demand mean paired gap is **0.203677 ≥ 0.08**.
+The four differences, in seed order 90001–90004, are 0.173278, 0.165745,
+0.232807 and 0.242878. The ordinary 95% t-interval is [0.140372, 0.266981];
+it is descriptive, after selection on these same four reused development seeds.
+Final-quarter shares in that cell are oracle 0.834694, fixed 0.606824 and greedy
+0.014326. This establishes consequential knowledge for the supplied controller
+on this development panel; it does not establish learnability or sharing value.
+As a descriptive check using the retained candidates, the best fixed belief
+within that cell is K = 20 (0.621546); its oracle gap is still 0.201248, positive
+on every seed. This does not change the global selection or the G1 calculation.
+
+The same cell's shortfall beside food above the oracle floor accounts for
+0.349505 of need under the fixed belief, versus 0.003287 for the oracle.
+Local collapse occupies 0.000427, 0.024323 and 0.932434 of site-ticks for fixed,
+oracle and greedy respectively. Thus low consumption need not mean widespread
+ecological collapse. All communication costs/bytes are zero in these references;
+the maximum absolute accounting residual across all candidates is 2.154e-13.
+Neither terminal inventory nor utility weight enters selection or G1.
+
+**All 96 cases replay exactly**, including physical snapshots, policy/action
+trajectory digests and every saved measurement; reaggregation also matches.
+The canonical summary SHA-256 is
+`518da11c1c98fcf23f801b89e8fb845f15afdc9abe47a6896137bfa065ffdc23`.
+Ticket A's 204 checks and Ticket B's 91 checks pass. No fresh evaluation,
+learner, sharing arm, experimental model call
+or extension of a completed historical bank has run. **Stopped at G1 as
+instructed; Ticket C remains unstarted.** The two unavailable full articles
+remain pending for later checking under Roland's approved §17 access limitation.
+
+Reproduction (completed banks refuse `run`; `verify` replays without writes):
+
+```bash
+.venv/bin/python scripts/run_commons_v3_consequence_sites_v1.py verify --workers 2
+```
+
 ## Ticket B implementation before the development panel, 8 October 2026
 
 G4 checkpoint `65354fcfebd94dcdcea30ab4c2b252aa83ac7947` was pushed and verified
