@@ -25,28 +25,28 @@ The [7 October evening steering](commons-v3-exclusion-conventions-v1.md) now
 **pauses comparator refinement and mechanism splitting**. The first design has
 already-restrained members, harmful outsiders beyond its sanction reach and no
 adaptation. Better comparison controls cannot supply those missing mechanisms.
-The new sequence is costly physical exclusion with resistance, local numerical
-adaptation, then endogenous storage value through shocks and starvation/capability
-loss. The first physical extension is implemented in separate files with
-constructed fixtures; the latter two steps remain ahead. Use 4–8 development
-seeds and one complete freeze before independent evaluation. No new archive,
-receipt or audit layer before a decisive result. Earlier verdicts and completed
-banks remain unchanged; no model spending is authorized.
+Costly physical exclusion with resistance is implemented in separate files;
+local numerical imitation and shock/capability dynamics are not implemented.
 
-The paper target is ALIFE 2027, eight pages, on **when local exclusion conventions
-emerge, what they gain members and what they cost outsiders across storage and
-scarcity**. This is the question the next experiment must answer, not a finding
-of the old banks or the new engineering fixtures.
+The subsequent [literature/world-model review](commons-v3-world-model-reframing-review-v1.md)
+**pauses adaptive-exclusion ticket 1 and supersedes the exclusion paper design**.
+The generic headline overlaps existing work and deferred the original learning
+objective without sufficient reason. Restore consequential world-model learning
+and collective inference as the active scientific focus. The candidate question
+concerns whether costly local evidence sharing improves ecological knowledge
+and decisions when harvesting changes the resource and subsequent evidence.
+This remains a candidate contribution, not a frozen replacement experiment.
 
-The [revised experimental design](commons-v3-exclusion-experimental-plan-v1.md)
-now specifies a proposed four-cell/four-arm paper study: storage 8/80 crossed
-with two renewal levels; payoff-biased copying with/without exclusion, neutral
-copying and fixed parameters. It separates population effects from focal-claim
-continuation effects on fixed member/outsider cohorts. Complete scored epochs
-include communication costs; the first design uses standing variation without
-mutation. Development starts with four seeds and is capped at eight; independent
-evaluation proposes 32 fresh seeds, 512 full runs and at most 128 short branches.
-These are prospective design choices, not an executed panel or the final freeze.
+The next decision must establish an identifiable, legal observation model,
+a decision that ecological uncertainty changes, and a contribution beyond close
+sustainable-harvesting and collective-inference work. The original four-arm
+plan, 768-tick branch point and proposed seed ranges are inactive specifications;
+matched controls and identical-state interventions remain useful principles.
+Retain the user's bounded process (four development seeds, one freeze, 32 fresh
+evaluation seeds) as the planning envelope, with any change stated explicitly
+before execution. No panel starts from this review. ALIFE 2027 remains the target.
+Completed banks and frozen verdicts remain unchanged. No model spending or new
+archive, receipt or audit layer is authorized by the reframing.
 
 ## Position in the research program
 
@@ -112,9 +112,9 @@ that membership is attractive.
 Inventory has legitimate physical uses, including financing movement and
 buffering consumption. The unsupported inference is that a prescribed reward
 for inventory at the terminal tick demonstrates consequential welfare. Preserve
-the weight and report its contribution separately. The evening review now puts
-a new shock/starvation-capability extension after physical exclusion and numerical
-adaptation, precisely to test consequential storage value. It is a new physical
+the weight and report its contribution separately. A proposed shock/starvation-capability extension would make this storage value
+consequential for survival or function. Its role belongs in the revised
+world-model decision problem; its former exclusion-first ordering is paused. It is a new physical
 model, and the old incentive qualification does not transfer automatically.
 
 ## What is reusable and what is missing
@@ -157,12 +157,12 @@ to orient future work; earlier plans remain historical references.
 | Engineering complete | Implement consequential decentralized coordination and responsive membership decisions. | V2 paid messages change routes/material outcomes in constructed fixtures; own receipts and local forecasts govern refusal/exit. Strong population performance and binding commitment parity remain unqualified. |
 | Paused by evening review | Comparator refinement and separation of charter response, collateral, timing and monitoring. | Preserve completed code and results; these controls cannot repair fixed types or unreachable outsiders. |
 | Engineering complete | (a) Add costly physical exclusion and resistance in a new version. | Paid local guards forgo harvest, outsider resistance costs resources, rival force is finite, and member/outsider outcomes and material accounting are separate. Fixtures are not emergence. |
-| Next | (b) Add local numerical adaptation. | Bounded parameters, paid local performance information, synchronous copying from standing variation, full state/memory continuation and no model calls; mutation is deferred in the proposed first paper design. |
-| Then | (c) Give storage endogenous value. | Shocks cause starvation/capability loss that actual stores can buffer; demonstrate the physical consequence without terminal-weight tuning. |
-| Development | Small storage × scarcity comparison on 4–8 seeds. | Retain null formation, failures, member losses and outsider costs; fixed-policy and no-force controls; no extra archive/receipt/audit layer yet. |
-| After development | One complete freeze before independent evaluation. | Fresh seeds, fixed source/design/analysis and effect criteria; all development attempts remain development. |
-| Conditional | Implement and execute tipping v1 if its full surface changes the empirical design. | Separate executable/source freeze, unchanged panel, complete results including unresolved regions. Political implementation can proceed in parallel. |
-| Later | Model-driven adaptation and consequential learning. | Appropriate v3 execution/model contract and a separately authorized inference budget; distinct from the next numerical imitation stage. |
+| Paused | Adaptive-exclusion ticket 1 and its proposed experiment. | Preserve code and the superseded proposal; no imitation implementation or listed seed panel starts. |
+| Current | Scoped literature and world-model reframing. | Compare primary sources, distinguish the candidate contribution, and identify gaps in the legal observation/likelihood contract. See the linked review. |
+| Next design decision | Identify a consequential, learnable ecological problem. | Specify what is unknown, how peer extraction is treated, which actions change with beliefs, and matched reactive/frozen-belief/true-coefficient comparisons. No automatic known-law label for the half-capacity heuristic. |
+| After that decision | Write a minimal versioned experimental protocol. | Costed private learning/sharing, separate belief and welfare endpoints, physical storage consequences and common-state interventions; no terminal-inventory reward. |
+| Conditional on that protocol | Bounded development, then one freeze and fresh evaluation. | Four initial development seeds and 32 fresh evaluation seeds are the planning envelope, not an executed or frozen panel. No new archive/receipt/audit layer before a decisive result. |
+| Later, separate claims | Exclusion, demographic evolution, model-generated programs and structural discovery. | Each requires its own question and controls; program search additionally needs a budget and v3-compatible containment. Numerical Bayesian learning needs no model API calls. |
 
 The incentive replay is complete. For future reproduction, use the existing
 verifier without an ecology argument, since the bank contains its bound
@@ -320,42 +320,37 @@ reversals.
 Keep v1 unchanged. Before executing it, use the already recorded variation and
 runtime to assess precision and cost, and state which design choice the results
 will change. This is planning from existing data, not another simulation bank.
-Implementation and deterministic lifecycle work can proceed while that decision
-is made. A reduced decision-focused panel would require an explicit separate
-prospective version, retaining v1 as the earlier design; it cannot be a silent
-subset or adaptive extension.
+The earlier decision allowed political engineering without this full panel;
+that engineering and its first development bank are now complete. Adaptive
+exclusion is paused under the latest review. A reduced decision-focused panel
+would require an explicit separate prospective version, retaining v1 as the
+earlier design; it cannot be a silent subset or adaptive extension.
 
-Proceeding with Stage 2 engineering does not declare the failed Stage 1 incentive
-gate passed. It adopts a distinct coordination/resilience question whose own
-evaluation needs prospective criteria. The old scientific results remain
-fail/unresolved, and no model-driven search is authorized by this sequencing
-decision.
+The completed Stage 2 engineering did not declare the failed Stage 1 incentive
+gate passed. Its coordination/resilience framing required its own evaluation.
+The current world-model reframing likewise changes no previous fail/unresolved
+verdict and authorizes no model-driven search.
 
-## When to return to adaptation and learning
+## Learning is the current scientific focus
 
-Local numerical imitation is now the immediate next implementation after
-physical exclusion. It requires no model spending. The requirements below
-refer to later model-generated programs and the historical learning track.
+The historical world-model work supplies inference machinery, provenance,
+calibration methods and matched-decision controls. It is now central to the
+research question again. Its old additive likelihood, calibration conclusions
+and truthful report channel do not transfer automatically to v3. First resolve
+what a legal local transition reveals, and distinguish parameter estimation,
+supplied-family selection and structural law discovery.
 
-Model-driven evolution needs three things beyond a working political simulator:
-a consequential gap beyond strong simple and numerical baselines, a fair
-prospective admission/evaluation design, and v3-compatible bounded candidate
-execution. The legacy adapter is insufficient. Keep implementation, search,
-repeated admission validation and untouched final evaluation separate. Budget
-enough reciprocal updates to revisit members after institutional changes, retain
-failures and rejections, and infer reliability over independent search runs.
-Thousands of weather episodes do not replace replicated evolutionary runs.
-A new inference route or allowance requires its own explicit decision.
+Local imitation of exclusion parameters is paused. It would test selection
+among supplied traits, not establish learned ecological understanding. A small
+standing-variation population additionally requires founder/fixation controls
+if that extension is resumed. Method age is not a validity criterion; the
+missing alignment with the question and the prior literature are decisive.
 
-The world-model investment remains useful. Its learner, reporting, calibration
-and matched-decision controls provide methods for a later v3 study. Resume that
-track when a specified costly information problem changes a consequential
-action compared with a strong reactive controller and an appropriately scoped
-known-law reference. Re-derive the observation model and likelihood for v3;
-introduce unknown parameters before supplied-family selection and structural
-discovery. Do not port every historical component simply because it exists.
-This later track can proceed alongside institutional experiments once its own
-decision and baseline requirements are met.
+Model-generated program evolution remains separate from numerical Bayesian
+learning. It still needs a consequential gap beyond strong baselines, a fair
+admission/evaluation design, v3-compatible bounded execution and a separately
+authorized inference budget. Weather episodes cannot substitute for independent
+search runs. No new search campaign follows from restoring the world-model goal.
 
 ## Outcomes that should change the plan
 
@@ -369,8 +364,7 @@ scripted adoption schedule as emergence. Certified insufficient-supply cells
 remain physical limits, not challenges any government must be able to solve.
 
 The political lifecycle, first development comparison, controller engineering
-and new physical-exclusion primitive are implemented. The next concrete milestone
-is local numerical adaptation, followed by endogenous storage consequences.
-Preserve the mixed first-bank results; neither v2 nor exclusion fixtures are
-new welfare estimates. The active question concerns adaptive local conventions
-and their member/outsider tradeoffs, not a better score for the old charter.
+and physical-exclusion primitive remain implemented. The next concrete deliverable
+is the world-model observation and decision contract after the scoped review.
+Preserve the mixed first-bank results and keep inference quality, decision value,
+collective benefit and institutional emergence as separate claims.

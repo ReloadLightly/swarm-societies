@@ -1,6 +1,40 @@
 # Active work record
 
-## Revised paper experimental design proposed, 7 October 2026
+## Exclusion plan paused; world-model question restored, 7 October 2026
+
+The user's subsequent review rejects the exclusion-first paper framing.
+Ticket 1, the adaptive exclusion controller, is paused. The four-arm exclusion
+plan remains a superseded proposal; none of its development or evaluation
+runs has started. Physical exclusion remains implemented engineering, not a
+scientific result. All completed banks and frozen source closures stay closed.
+
+The scoped primary-source review and v3 information/learner assessment are
+recorded in
+[the reframing review](docs/commons-v3-world-model-reframing-review-v1.md).
+The original objective of consequential world-model learning and collective
+inference is restored. A candidate question is not a qualified novelty claim
+or permission to freeze another design. No numerical adaptation, new experiment,
+model spending, archive, receipt or additional audit layer is started.
+
+The review checks the supplied papers and adjacent adaptive-harvesting and
+strategic-information work. Territorial exclusion, collective inference and
+learning fishery dynamics all have close antecedents. Two especially close
+sources still need full-text comparison; adjacent abstract-only leads and the
+remaining decentralized-harvesting comparison are explicit;
+the narrower candidate contribution is provisional. The code assessment identifies
+observed capacity and a logistic-relevant floor, rather than a full known-law
+planner; hidden peer extraction confounds ordinary stock differences, while
+existing paid monitoring may supply usable local transitions. The historical
+likelihood and calibration cannot be transferred unchanged.
+
+The next deliverable is an identifiable observation-and-decision contract after
+resolving the remaining literature questions. README, roadmap and working
+instructions now reflect this order. This is a documentation-only increment;
+no simulator, policy, protocol source closure or evidence file changes.
+All 259 local document-link targets resolve, and `git diff --check` passes.
+Scientific tests were not rerun for this prose-only change.
+
+## Superseded exclusion paper design proposed, 7 October 2026
 
 The [new design plan](docs/commons-v3-exclusion-experimental-plan-v1.md) translates
 the evening review into a bounded ALIFE study. Four environmental cells
@@ -30,7 +64,8 @@ The official ALIFE 2027 pages confirm the July event; the pages checked do not
 yet establish submission dates or a 2027 page limit. Eight pages remains the
 user's working target. The plan links the official pages and selected primary
 literature, defines three intended figures and records the next implementation
-tickets. Numerical adaptation remains the next code change.
+tickets. At this checkpoint numerical adaptation was proposed next; the subsequent
+literature/world-model review pauses it.
 
 Design commit `b4e82495022edb450b9678a5a4f65f73544d278b` was pushed and
 independently verified with `git ls-remote origin refs/heads/main`. Local

@@ -1,7 +1,12 @@
 # Costly local exclusion and adaptive conventions, version 1
 
-7 October 2026, evening steering. This is the active research direction and
-supersedes the comparator/mechanism-splitting work package in the earlier plan.
+**Current status:** the subsequent [literature/world-model review](commons-v3-world-model-reframing-review-v1.md)
+pauses adaptive exclusion and supersedes the research sequence below. The
+implemented physical mechanism and its engineering contract remain preserved;
+this is now an optional extension, not the active paper question.
+
+Original 7 October 2026 evening steering: this sequence superseded the
+comparator/mechanism-splitting work package in the earlier plan.
 The completed 144-episode institutional bank, incentive bank and v2 controller
 fixtures remain unchanged. This document versions an extension and a research
 sequence; it does not freeze or launch an independent evaluation.

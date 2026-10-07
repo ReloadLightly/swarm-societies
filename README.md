@@ -15,11 +15,14 @@ fails. A new controller version now implements paid route coordination and
 payoff-responsive membership, checked on constructed fixtures. The evening
 review pauses comparator refinement: restrained members lack a qualified
 consumption temptation, harmful outsiders are beyond charter sanctions, and
-no agent adapts. The new research question is **when local exclusion conventions
-emerge, what they gain members, and what they cost outsiders across storage and
-scarcity**. A separate costly guarding/resistance extension now implements the
-physical mechanism. Local numerical adaptation and endogenous storage value
-come next; emergence and welfare benefits remain untested. No model calls.
+no agent adapts. Costly guarding and resistance are implemented separately,
+but their fixtures establish neither emergence nor welfare benefits.
+The subsequent literature review **pauses adaptive exclusion and supersedes
+its paper plan**. The research focus returns to learning useful ecological
+world models and collective inference: when does paid local evidence sharing
+improve decisions in a commons that agents themselves change? This is a
+candidate question, not an established novelty claim or an executed experiment.
+No new model spending or experimental runs accompanied this reframing.
 
 [Study index](docs/study-index.md) ·
 [Detailed archived report](docs/living-research-report-2026-10-07.md) ·
@@ -31,7 +34,8 @@ come next; emergence and welfare benefits remain untested. No model calls.
 [Institutional development results](docs/commons-v3-institutions-development-v1.md) ·
 [Coordination and membership v2](docs/commons-v3-coordination-membership-v2.md) ·
 [Evening steering and exclusion extension](docs/commons-v3-exclusion-conventions-v1.md) ·
-[Proposed paper experiment](docs/commons-v3-exclusion-experimental-plan-v1.md) ·
+[World-model reframing and scoped review](docs/commons-v3-world-model-reframing-review-v1.md) ·
+[Superseded exclusion proposal](docs/commons-v3-exclusion-experimental-plan-v1.md) ·
 [Physical commons](docs/commons-v3-foundation-v1.md) ·
 [Need-targeted baselines](docs/commons-v3-need-v1.md) ·
 [Local navigation and numerical baselines](docs/commons-v3-navigation-v1.md) ·
@@ -41,10 +45,11 @@ come next; emergence and welfare benefits remain untested. No model calls.
 
 ## Abstract
 
-When do local exclusion conventions emerge, what do they gain members and
-what do they cost outsiders, as storage and scarcity change? Swarm Societies
-develops executable environments for this question. Its current experiments
-establish accounting, program replacement, parameter learning and controlled
+How can locally informed agents learn a shared resource environment, and when
+does exchanging evidence improve their decisions or spread harmful errors?
+Swarm Societies develops executable environments for this research program.
+Its current experiments establish accounting, program replacement, parameter
+learning and controlled
 information sharing. **They do not establish an advantage for evolved
 governance:** an exploratory simple-harvesting baseline improves all four
 reported focal averages over the saved coevolved population, while slightly
@@ -107,17 +112,18 @@ pause further comparator/mechanism splitting. Physical exclusion now requires
 paid, stationary guarding that forgoes harvest; resistance costs resources and
 finite guard effort is divided across competing outsiders. Any individual can
 guard, while opening affiliation determines shared protection at a claimed site.
-A claim alone does nothing. The active sequence is physical exclusion, local
-numerical imitation, then starvation/capability consequences under shocks.
-The target is an eight-page ALIFE 2027 paper; it is not a claim of completed
-research or publication. The completed bank remains closed.
+A claim alone does nothing. This machinery is preserved as an optional extension.
+The completed bank remains closed, and adaptive-exclusion ticket 1 is paused.
 
-The [proposed experimental design](docs/commons-v3-exclusion-experimental-plan-v1.md)
-crosses storage and scarcity with adaptive exclusion, adaptive open access,
-neutral copying and fixed-parameter controls. Paired continuations from a
-common state will estimate member gains and outsider costs using identities
-fixed before the intervention. It proposes 4–8 development seeds and 32 fresh
-evaluation seeds after one complete freeze. No such panel has been run.
+The [world-model reframing review](docs/commons-v3-world-model-reframing-review-v1.md)
+compares close commons, sustainable-foraging and collective-inference work.
+The existing half-capacity forager receives capacity and encodes a useful
+logistic prior; it is not a known-law planning oracle. Learning hidden dynamics
+requires a new legal observation contract and likelihood, particularly because
+unobserved peer extraction confounds measured stock changes. Existing paid
+local monitoring may supply identifiable transitions without global knowledge.
+The next deliverable is that scientific design decision, before implementation
+or a new experimental freeze. ALIFE 2027 remains the paper target.
 
 ## 2. Related work
 
@@ -126,7 +132,13 @@ worlds, multilevel economic adaptation, program evolution and probabilistic
 world models. The [literature review](docs/world-model-literature.md),
 [scientific review](docs/research-review-2026-10-07.md) and
 [archived references](docs/living-research-report-2026-10-07.md#7-references)
-record attribution and scope. This is not a SwarmWorld reproduction.
+record attribution and scope. The subsequent
+[scoped primary-source review](docs/commons-v3-world-model-reframing-review-v1.md)
+finds established territorial exclusion, scarcity-driven aggression, distributed
+inference and model-based sustainable harvesting. The candidate contribution
+must distinguish how costly local evidence affects inference and material
+outcomes under harvesting feedback; none of those broad topics is novel alone.
+This is not a SwarmWorld reproduction.
 
 ## 3. Environment and methods
 
@@ -379,23 +391,18 @@ separately versioned [storage × aggressive-peer protocol](docs/commons-v3-tippi
 with consumption-only primary endpoints and unchanged terminal weights.
 It is a prospective specification, with no new panel executed. Further ecology
 publication, figure and audit layers are deferred. The
-[current assessment and plan](docs/research-state-and-next-steps-v1.md) advances
-[Stage 2](docs/commons-v3-plan.md#stage-2-make-institutions-optional-and-baselines-strong)
-development under a coordination/resilience question:
-optional institutional formation, exit, change and dissolution with local,
-paid enforcement and no supranational authority. The full tipping panel need
-not block political interface development; institutional claims require their
-own prospective comparison. The first development bank now identifies the next
-requirements. Consequential coordination and locally responsive membership now
-have a separately versioned engineering implementation. The evening review
-supersedes that comparator work package with costly physical exclusion,
-numerical local adaptation and endogenous storage value, in that order. Use
-four to eight development seeds and one complete freeze before fresh independent
-evaluation. Do not extend the completed bank or add archives, receipts or audit
-layers before a decisive result. Separate member gains from outsider costs;
-retain failure to form and harmful conventions. Numerical imitation needs no
-model calls; model-driven adaptation still needs a separate protocol and
-inference budget. No gate requires institutions to win.
+[current assessment](docs/research-state-and-next-steps-v1.md) preserves completed
+political engineering and the adverse first institutional comparison. The
+subsequent [literature/world-model review](docs/commons-v3-world-model-reframing-review-v1.md)
+pauses both comparator refinement and adaptive exclusion. It restores explicit,
+consequential ecological learning as the active objective, with paid local
+sharing as a candidate mechanism. Resolve the novelty and observation model
+before specifying a replacement experiment. Retain bounded development, one
+freeze before independent evaluation, physical storage value, matched controls
+and complete-state paired branches. No completed bank is extended; no archive,
+receipt or audit layer is added before a decisive result. Model-driven program
+search still requires a separate protocol and budget. Bayesian numerical
+learning does not require model API calls.
 
 ## 6. Reproducibility
 

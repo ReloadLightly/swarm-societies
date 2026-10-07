@@ -1,33 +1,26 @@
 # Research roadmap: interacting, evolving societies
 
-The [current repository assessment and execution plan](research-state-and-next-steps-v1.md)
-now supplies the active sequence after the completed qualification and review
-response. The research themes below remain a historical catalogue. Stage 2
-optional-institution development is next; the complete tipping experiment is
-a separate empirical work package, not a prerequisite for every political
-implementation task. No existing qualification verdict or model budget changes.
-
-The first [political capability extension](commons-v3-institutions-contract-v1.md)
-is now implemented and engineering-tested. Stage 2 next requires a declared
-development comparison and independent institutional evaluation. Implemented
-consent and escrow do not establish emergence or useful governance.
-
 **Current priority, updated 7 October 2026:** the
-[scientific review](research-review-2026-10-07.md) and
-[spatial commons implementation plan](commons-v3-plan.md) now govern the next
-stage: mobile individuals, optional changeable institutions, and no higher
-authority between societies. Ecological incentive and baseline gates precede
-new model spending. World models remain tools and a later research track.
+[scoped literature/world-model review](commons-v3-world-model-reframing-review-v1.md)
+restores consequential ecological learning and collective inference as the
+active scientific objective. The exclusion paper plan is superseded and its
+adaptive controller is paused. The [current assessment](research-state-and-next-steps-v1.md)
+records completed engineering, adverse results and the next design decision.
+The research themes below remain a historical catalogue, not an execution order.
 
-The earlier priority selected learnable world models, first
-parameter inference and then rule discovery. The
-[world-model proposal](world-model-proposal.md),
-[dedicated literature review](world-model-literature.md), and
-[implementation plan](world-model-implementation-plan.md) develop that feature.
-The first [stationary parameter-learning control](world-model-v1.md) is now
-implemented and evaluated on 24 independent arenas.
-The broader experiments below remain relevant; their earlier ranking does
-not supersede the new spatial-commons plan.
+Mobile individuals, local information, optional institutions and the absence
+of a supranational authority remain part of the research program. Institutions
+can later govern information acquisition and sharing; first establish what can
+be learned and whether using it changes material outcomes. Physical exclusion
+is preserved as an optional extension. No completed bank or scientific verdict
+changes, and no new model-driven search is authorized.
+
+The original [world-model proposal](world-model-proposal.md),
+[earlier literature review](world-model-literature.md) and completed parameter,
+sharing, decision and costed-experiment controls remain relevant. The new
+question must account for their small, mixed and inventory-dominated benefits,
+and re-derive the observation model for the spatial commons. The historical
+likelihood and calibration do not transfer automatically.
 
 Research reviewed **6 October 2026**. This is a technical synthesis and a
 proposed research program, not a new preregistration or authorization for

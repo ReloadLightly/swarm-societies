@@ -1,7 +1,13 @@
 # Experimental design for adaptive local exclusion, version 1
 
-**Status: proposed design, 7 October 2026. No experiment is launched or frozen
-by this document.** This translates the [evening steering and implemented
+**Status: superseded proposal, 7 October 2026. Adaptive-exclusion ticket 1
+is paused following the user's literature/world-model review.** Read the
+[reframing review](commons-v3-world-model-reframing-review-v1.md) before further
+work. The text below preserves the rejected proposal; its implementation order,
+arm counts, seed ranges and deferral of world-model learning are inactive.
+No experiment was launched or frozen by this document.
+
+Original proposal: This translates the [evening steering and implemented
 physical extension](commons-v3-exclusion-conventions-v1.md) into a bounded paper
 study. Numerical adaptation and the storage/capability extension still require
 implementation. All earlier banks, protocols and verdicts remain unchanged.

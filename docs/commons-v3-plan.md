@@ -1,5 +1,11 @@
 # Plan for a spatial commons with optional institutions
 
+**Latest steering:** the [literature/world-model review](commons-v3-world-model-reframing-review-v1.md)
+restores consequential ecological learning and collective inference as the
+current focus. Adaptive-exclusion ticket 1 and charter comparator refinement
+are paused. The stage numbering and institution-first paper question below
+remain historical design rationale, not the active implementation order.
+
 **Current sequencing:** [Research state and next steps](research-state-and-next-steps-v1.md)
 supersedes the original work-package order and planning horizon below. Stage 0
 and the physical foundation are complete; qualification returned unresolved
@@ -17,9 +23,9 @@ Deterministic fixtures verify these capabilities. The first
 is complete, with mixed/adverse outcomes and an almost inactive decentralized
 comparator. [Coordination and responsive membership v2](commons-v3-coordination-membership-v2.md)
 now implements consequential messages and refusal/exit decisions with private
-receipts and synthetic continuation checks. Commitment parity and separate
-mechanism controls are next; independent institutional evaluation and
-generated-policy execution remain future work.
+receipts and synthetic continuation checks. Commitment parity and separate mechanism controls remain unresolved; their
+work package and adaptive exclusion are paused. Independent institutional
+evaluation and generated-policy execution remain future work.
 
 ## Research objective
 
@@ -37,8 +43,9 @@ The first paper question is:
 
 This is a proposed research program, not a claimed finding or authorization
 for another model-driven campaign. The [review and reproduced baseline](research-review-2026-10-07.md)
-explain why the previous sequence must change. Existing world-model work remains
-an instrument for later experiments. The completed qualification banks now
+explain why the previous sequence must change. The original plan placed
+world-model work in later experiments; the subsequent review reverses that
+deferral (see the current review linked above). The completed qualification banks now
 require an explicit incentive interpretation: the primary joint verdict is
 unresolved and broader robustness fails. The
 [latest review response](commons-v3-review-2026-10-07.md) selects a prospective

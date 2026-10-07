@@ -46,7 +46,13 @@ adds consequential paid route intentions, equally supplied private receipts,
 and local refusal/exit rules. Its [constructed fixture](../evidence/commons-v3-coordination-membership-v2/fixture.json)
 verifies 18 continuation ticks and real material costs; all 110 new checks pass
 within a 680-test v3 suite. It is not a sampled study or a replacement for the
-first bank's results. A separate prospective mechanism comparison remains next.
+first bank's results. Subsequent reviews pause its proposed mechanism comparison
+and the adaptive-exclusion controller. The
+[world-model reframing review](commons-v3-world-model-reframing-review-v1.md)
+now records the active question, primary literature and information-contract
+issues. The [costly exclusion extension](commons-v3-exclusion-conventions-v1.md)
+remains engineering; its [experimental proposal](commons-v3-exclusion-experimental-plan-v1.md)
+is superseded and unexecuted.
 
 The [physical foundation report](commons-v3-foundation-v1.md) documents the
 implemented mobile-agent engine and both development banks. There are no
@@ -98,8 +104,9 @@ curves. The [latest review response](commons-v3-review-2026-10-07.md) records
 the supplied eight-seed diagnostic and selects a separate prospective
 [storage × aggressive-peer protocol](commons-v3-tipping-protocol-v1.md).
 No tipping-panel episodes have been run. Further ecology publication, figures
-and audit layers are deferred; Stage 2 optional institutions is the next
-scientific priority after incentive framing.
+and audit layers are deferred. Stage 2 subsequently produced the completed
+first institutional bank and separate engineering above; the latest world-model
+review now governs the research priority.
 The [physical-bound derivation](commons-v3-feasibility-v1.md) distinguishes
 certified insufficient supply from unresolved feasible control.
 Robust institutional benefit remains unestablished. V3 presently runs

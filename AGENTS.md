@@ -6,28 +6,23 @@ do not defer all updates until the end of a research stage. Publish new raw
 evidence through separately versioned archives and verify public restoration.
 Preserve earlier archive identities and record remote commit verification.
 
-The user's evening steering review on 7 October 2026 overrides the earlier
-archive-first and comparator-refinement ordering for the new extension. Read
-`docs/commons-v3-exclusion-conventions-v1.md`: pause charter response/collateral/
-timing/monitoring splitting. Implement costly physical exclusion with resistance,
-then local numerical adaptation without model calls, then endogenous storage
-value through starvation/capability loss under shocks (or reproduction in a
-separate version). Use 4–8 development seeds and one complete freeze before
-independent evaluation. Do not extend completed banks. Add no new archive,
-receipt or audit layer until a decisive result exists. Ordinary software tests
-and continuous Git synchronization continue. Target: an eight-page ALIFE 2027
-paper on convention emergence, member gains and outsider costs across storage
-and scarcity; this is a question, not an established finding.
-
-The proposed paper design is now in
-`docs/commons-v3-exclusion-experimental-plan-v1.md`. It is not the final source/
-evaluation freeze. It proposes four storage/scarcity cells and four arms,
-complete delayed payoff epochs, no mutation in the first standing-variation
-study, a capability-loss extension, and focal-claim checkpoint branches with
-fixed pre-branch cohorts. Development starts with four seeds (maximum eight);
-32 fresh evaluation seeds are proposed. Preserve the distinction between
-population effects and conditional member/outsider continuation effects.
-Do not launch an independent panel merely because seed ranges are listed there.
+The user's subsequent literature/world-model review on 7 October 2026
+supersedes the exclusion-first paper plan. Pause ticket 1 (adaptive exclusion),
+charter comparator refinement and mechanism splitting. Preserve the implemented
+costly-exclusion extension as optional future machinery. The proposed exclusion
+experimental plan is superseded, not a source/evaluation freeze or authority to
+run its listed seeds. Restore consequential world-model learning and collective
+inference as the research objective. Read
+`docs/commons-v3-world-model-reframing-review-v1.md` for the scoped primary-source
+review, information-contract findings and the remaining design decision.
+Do not implement or freeze a replacement experiment before its question,
+identifiability and closest prior work are resolved. No new model spending,
+completed-bank extensions, or archive/receipt/audit layers are authorized.
+Ordinary verification and continuous Git synchronization continue. Retain
+bounded development, one freeze before fresh evaluation, physical storage
+consequences, paired continuation interventions and separate inference/welfare
+claims as design principles; the superseded arm counts and seed ranges do not
+carry over automatically. ALIFE 2027 remains the target, not a novelty claim.
 
 Read `PROGRESS.md` for the current experimental state,
 `docs/world-model-calibration-v1.md` for the independent calibration audit and
@@ -39,13 +34,15 @@ documented in `docs/world-model-decision-v1.md`; its earlier design rationale
 remains in `docs/world-model-decision-plan.md`.
 The completed costed experiment-selection control is documented in
 `docs/world-model-experiment-v1.md`.
-The current priority is the scientific redesign in `docs/commons-v3-plan.md`,
-following `docs/research-review-2026-10-07.md`. The user specified mobile
+The active research priority is the world-model reframing above;
+`docs/commons-v3-plan.md` and `docs/research-review-2026-10-07.md` preserve
+the earlier spatial redesign and its scientific rationale. The user specified mobile
 individuals in an anarchic international system: institutions can emerge,
 be absent, change and disappear, with no supranational government. Qualify the
 ecology, incentives and strong baselines before further experimental model
-spending. Preserve parameter learning and rule discovery as tools and later
-research stages; their earlier design remains in `docs/world-model-proposal.md`.
+spending. Restore consequential parameter learning and collective inference as the
+current research focus; structural rule discovery remains a distinct later claim.
+Their earlier design remains in `docs/world-model-proposal.md`.
 The broader research program remains in `docs/research-roadmap.md`.
 The current cross-stage assessment and active task order are in
 `docs/research-state-and-next-steps-v1.md`; they supersede stale prospective
@@ -74,11 +71,12 @@ mechanism splitting. The separate `exclusion_v1.py` extension adds generic paid
 stationary guarding, harvest opportunity cost, costly resistance, crowd-diluted
 force, opening-affiliation protection and an explicit outer material ledger.
 Its constructed fixtures do not establish emergence. Local numerical adaptation
-is next, followed by endogenous storage value and a small development design.
+is now paused by the subsequent literature review; world-model reframing and
+an identifiable observation contract come next.
 Do not extend or tune the completed first bank or change its frozen sources.
-The unexecuted
-tipping v1 panel need not block that engineering. Preserve the distinction between scripted lifecycle validation,
-behavior within supplied decision rules, and evidence of useful institutions.
+The unexecuted tipping v1 panel remains separate. Preserve the distinction
+between scripted lifecycle validation, behavior within supplied decision rules,
+and evidence of useful institutions.
 
 Stage 2's first political extension is now implemented separately in
 `swarm_societies/commons_v3/politics_v1.py`; read
@@ -103,8 +101,9 @@ Do not retune terminal weights or infer a strict stag hunt from near-zero
 consumption gains. `docs/commons-v3-tipping-protocol-v1.md` specifies review
 option (b), storage × aggressor share; implementation/source freeze and future
 execution remain separate. Defer further ecology publication, figure and audit
-layers while framing is decided. Stage 2 optional institutions in v3 is the next
-scientific priority; keep paid local enforcement and no supranational authority.
+layers while framing is decided. Stage 2 political engineering and its first
+development bank are now complete; the active world-model priority is stated
+above. Keep paid local enforcement and no supranational authority.
 
 Foundation repairs are documented in `docs/foundation-repairs-v1.md`.
 Use `scripts/verify_calibration_portable_v1.py` for supplemental calibration
