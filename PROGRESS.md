@@ -1,5 +1,22 @@
 # Active work record
 
+## Ecological qualification bank complete, 7 October 2026
+
+All **144 configurations / 288 episodes** are sealed under the prospective
+`b44ee25` freeze. Source/artifact hashes and full aggregate reconstruction pass;
+exact semantic replay and independent raw-data auditing follow separately.
+Both frozen controllers pass all ecological criteria in **five of nine cells**,
+including the reference. Two adjacent reference-containing pairs pass the
+ecological conjunction. This is finite-horizon ecological evidence; incentive
+qualification still depends on the separately frozen bank.
+
+The conservative 512-tick physical bounds certify insufficient supply for the
+95%-of-need target in the low-renewal cells with need 1.2 and 1.6. The low-renewal,
+need-0.8 cell and the rate-0.24, need-1.6 cell remain feasibility-unresolved:
+both controllers fail, but their failure is not a physical impossibility proof.
+Maximum ledger residual is **2.22e-13**. All earlier banks and 882 protected
+pre-existing tracked files remain byte-identical. No model calls or evolution.
+
 ## Separate qualification protocols frozen, 7 October 2026
 
 The ecological and incentive protocols are implemented and prepared, with no
