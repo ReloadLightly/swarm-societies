@@ -16,8 +16,8 @@ all historical allowances are exhausted.
 
 Compact evidence records, source snapshots and figures remain in the checkout.
 Before full-bank verification or reproduction, follow the
-[release archive and restoration guide](evidence-archives-v1.md). Restore every
-published bank with `.venv/bin/python scripts/restore_evidence_v1.py --study all`,
+[release archive and restoration guide](evidence-archives-v1.md). Restore the
+legacy catalog with `.venv/bin/python scripts/restore_evidence_v1.py --study all`,
 or select one study ID. `--offline` uses verified cached archives. Repository
 history remains intact; removing bulky files from the current tree does not
 shrink a full historical clone.
@@ -30,6 +30,7 @@ institutions or political memberships in these worlds. Development repeats four
 seeds across a scarcity grid, fixed sensitivities and four population conditions;
 each bank has **56 configurations and 224 episodes**, with zero evolutionary
 runs and zero experimental model calls.
+Their separate archive catalog and restoration command are linked in the report.
 
 | Bank | Design and interpretation | Evidence and reproduction |
 | --- | --- | --- |

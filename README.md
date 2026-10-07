@@ -25,10 +25,9 @@ establish accounting, program replacement, parameter learning and controlled
 information sharing. **They do not establish an advantage for evolved
 governance:** an exploratory simple-harvesting baseline improves all four
 reported focal averages over the saved coevolved population, while slightly
-reducing outsiders' welfare. Separate numerical controls demonstrate learning
-within a supplied equation, a small allocation benefit dominated by terminal
-wealth, and no clear benefit from active experiment selection in the value of
-posterior updates. The new spatial prototype supports consequential local
+reducing outsiders' welfare. Numerical controls show supplied-law learning,
+a small allocation benefit dominated by wealth, and no clear active-selection
+benefit in posterior-update value. The new spatial prototype supports local
 depletion, but its development comparisons remain sensitive to navigation,
 storage and terminal inventory. A qualified social dilemma and strong fixed
 baselines remain scientific requirements.
@@ -49,13 +48,12 @@ institutional formation and political transitions remain future capabilities.
 
 ## 2. Related work
 
-The project draws on resource-world simulation, multilevel economic adaptation,
-program evolution and probabilistic world models. It uses an independently
-authored simulator and the upstream ShinkaEvolve search engine. It is not a
-SwarmWorld reproduction. The [annotated literature review](docs/world-model-literature.md)
-and [scientific review](docs/research-review-2026-10-07.md) record sources and
-scope; the [archived report](docs/living-research-report-2026-10-07.md#7-references)
-retains the full reference list.
+The independent simulator and upstream ShinkaEvolve engine draw on resource
+worlds, multilevel economic adaptation, program evolution and probabilistic
+world models. The [literature review](docs/world-model-literature.md),
+[scientific review](docs/research-review-2026-10-07.md) and
+[archived references](docs/living-research-report-2026-10-07.md#7-references)
+record attribution and scope. This is not a SwarmWorld reproduction.
 
 ## 3. Environment and methods
 
@@ -75,12 +73,10 @@ recovery. Actions commit simultaneously; ledgers record every material flow.
 Its development policies are audited local heuristics. There are no institutions,
 affiliations, mortality or evolutionary searches in these banks.
 
-The historical search accepts member replacements for private gains and
-institution replacements for society gains on fixed comparison cases. Its
-small pilot has only one run per arm. Saved-program transplants isolate
-conditional component effects within that lineage, not population-level search
-performance. The later baseline audit was exploratory and did not influence
-the completed search.
+Historical search accepts member replacements for private gains and institutions
+for society gains on fixed cases. The pilot has one run per arm; transplants
+estimate conditional component effects within its lineage. The later exploratory
+baseline audit did not influence search.
 
 The world-model controls estimate three coefficients of a supplied renewal
 equation. They retain 1,024 particles and four rejuvenation sweeps, explicit
@@ -200,7 +196,7 @@ OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/verify_calibration_portable_v1.p
 .venv/bin/python scripts/visualize_baseline_review.py
 ```
 
-Use `--study all` to restore every published bank, or `--offline` to use verified
+Use `--study all` to restore the legacy catalog, or `--offline` to use verified
 cached archives. The default test suite works without downloading the full banks.
 
 The supplemental verifier preserves exact source hashes and qualification/retry

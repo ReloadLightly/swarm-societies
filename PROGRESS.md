@@ -5,7 +5,7 @@
 The separate `commons-v3-physical-v1` engine now implements mobile individuals,
 local observations and actions, stock-dependent renewable sites, finite
 inventories, costed movement/extraction/messages, optional gifts, simultaneous
-commitment and resource-flow accounting. There are no mandatory institutions,
+commitment and resource-flow accounting. There are no institutions,
 memberships or supranational authority. Snapshot continuation covers physical
 state under the same future actions; private policy-memory recovery and bounded
 execution of generated v3 programs remain separate work.
@@ -41,9 +41,20 @@ institution experiments.
 Both recorded-data galleries include SVG/PDF/PNG, CSV inputs and source/output
 hashes. All four PNGs were inspected; all 24 gallery files rerender identically.
 Independent numerical audits confirm accounting residuals below 8.6e-13. Raw
-cases are packaged separately in `artifacts/commons-v3-foundation-v1/`; publication
-and clean-checkout validation are being finalized at this checkpoint. Earlier
-frozen implementations and study records remain unchanged.
+cases are published separately through `artifacts/commons-v3-foundation-v1/`
+in release `commons-v3-foundation-2026-10-07`, targeting implementation commit
+`e7c7cbb9b861ae5202324d2cee76fae8ad702381`. All five hosted assets match their
+sizes and hashes. Public download into an empty cache restored all **112 files /
+9,287,035 bytes** in a clean checkout, byte-identical to the originals; offline
+verification also passes. Raw cases remain ignored, and history is unchanged.
+
+The full default suite passed **704 tests and 123 subtests in 462.38 seconds**
+in that clean checkout before restoration, with all 112 v3 and 844 legacy bulk
+files absent. Implementation and test bytes remain unchanged after testing.
+The independent preservation audit confirms all earlier protected code,
+protocols and evidence unchanged. Compact receipts, preflight metadata and test
+logs are in `evidence/commons-v3-foundation-validation-v1/`. The implementation
+commit and this final validation checkpoint are synchronized to GitHub.
 
 
 ## Evidence publication and report consolidation completed, 7 October 2026

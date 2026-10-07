@@ -33,7 +33,7 @@ for parity and does not authorize a new campaign.
 Stage 0 data publication/restoration and README consolidation are complete.
 See `docs/evidence-archives-v1.md` and `evidence/data-packaging-v1/` for the
 verified public archives, clean-checkout restoration and offline checks.
-Restore full banks with `python3 scripts/restore_evidence_v1.py --study all`
+Restore legacy full banks with `python3 scripts/restore_evidence_v1.py --study all`
 before semantic replay or figure regeneration. Default tests retain their
 small fixtures and require no evidence download. Keep restored bulk files
 ignored; new evidence versions need new archive identities. Hashes detect
@@ -58,6 +58,9 @@ V2 records zero unaffordable known-return violations. This fixes one diagnostic
 policy failure; it does not establish strong navigation or scientific qualification.
 The same four seeds were reused after inspecting v1, so neither bank is an
 untouched qualification test. No experimental model calls or search runs occurred.
+V3 raw banks use the separate catalog
+`artifacts/commons-v3-foundation-v1/catalog.json`; follow the foundation report
+for its restoration command. Preserve both completed banks rather than restart them.
 
 At the v2 reference cell, restraint consumes 1.200000 versus greedy 0.229769
 per agent-tick. Focal greedy replacement gains zero consumption; utility gain

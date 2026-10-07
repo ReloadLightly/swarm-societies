@@ -1,0 +1,242 @@
+{
+  "archive_catalog": {
+    "path": "artifacts/commons-v3-foundation-v1/catalog.json",
+    "sha256": "a0245ec3f4f73305df26ed958f2659d27bbc858601d251531e6806a89df2f145",
+    "studies": [
+      {
+        "archive_path": "runs/commons-v3-foundation-v2/archive-build/commons-v3-foundation-v1.tar.gz",
+        "archive_verification": {
+          "archive_bytes": 4598907,
+          "archive_sha256": "488f8dc6ddb98c56b762f44b40183d88322ba76f3d3b4e7be9a4ee71dfe935f2",
+          "file_count": 56,
+          "manifest_sha256": "039c9d9fa5f3662f65c1707be56cb0f5953fcfc5791b90f6faf0fe11ed76d9e5",
+          "status": "ok",
+          "total_file_bytes": 4588051,
+          "version": "evidence-archive-v1"
+        },
+        "manifest": "artifacts/commons-v3-foundation-v1/commons-v3-foundation-v1.json",
+        "study": "commons-v3-foundation-v1",
+        "worktree_verification": {
+          "checked_worktree": true,
+          "existing": 56,
+          "file_count": 56,
+          "restored": 0,
+          "status": "ok",
+          "total_file_bytes": 4588051
+        }
+      },
+      {
+        "archive_path": "runs/commons-v3-foundation-v2/archive-build/commons-v3-foundation-v2.tar.gz",
+        "archive_verification": {
+          "archive_bytes": 4709686,
+          "archive_sha256": "b8bd2e1d383d447cd30b5737e90d86990fffef0cf70281a6100a9ad0c5afab20",
+          "file_count": 56,
+          "manifest_sha256": "0daaa540721fe7d360285e0e898955e58a5d6c67b2de1e369e92b55a6c7f36d8",
+          "status": "ok",
+          "total_file_bytes": 4698984,
+          "version": "evidence-archive-v1"
+        },
+        "manifest": "artifacts/commons-v3-foundation-v1/commons-v3-foundation-v2.json",
+        "study": "commons-v3-foundation-v2",
+        "worktree_verification": {
+          "checked_worktree": true,
+          "existing": 56,
+          "file_count": 56,
+          "restored": 0,
+          "status": "ok",
+          "total_file_bytes": 4698984
+        }
+      }
+    ]
+  },
+  "baseline_commit": "13b6cd8ddaa7a6c7aa0d9302091d08294a72187f",
+  "baseline_tree": {
+    "all_current_byte_differences": [
+      ".gitignore",
+      "AGENTS.md",
+      "PROGRESS.md",
+      "README.md",
+      "docs/commons-v3-plan.md",
+      "docs/study-index.md"
+    ],
+    "bytes": 36573499,
+    "files": 612
+  },
+  "current_head": "13b6cd8ddaa7a6c7aa0d9302091d08294a72187f",
+  "errors": [],
+  "figures": [
+    {
+      "manifest_sha256": "32040a43ea3b288116e79b4eae443b5927c0653f1730bb5332f360b59d6c8b71",
+      "mismatches": [],
+      "output_hashes": 11,
+      "path": "figures/commons-v3-foundation-v1",
+      "source_hashes": 69
+    },
+    {
+      "manifest_sha256": "08b46c4ac6972099277ad1e810bc6e379268925dbc2bf2295f426b70aa20e711",
+      "mismatches": [],
+      "output_hashes": 11,
+      "path": "figures/commons-v3-foundation-v2",
+      "source_hashes": 70
+    }
+  ],
+  "frozen_protocol_paths": [
+    "docs/protocol-consumption-v2.md",
+    "docs/protocol.md",
+    "docs/world-model-calibration-protocol.md",
+    "docs/world-model-decision-protocol.md",
+    "docs/world-model-experiment-protocol.md",
+    "docs/world-model-sharing-protocol.md"
+  ],
+  "limits": [
+    "Read-only byte and manifest audit; no simulation or full test rerun.",
+    "Pre-existing tracked files only are compared to the baseline; previously externalized bulk evidence is covered by its unchanged tracked manifests, not reread in this audit.",
+    "Living documentation and .gitignore may be intentionally edited after this receipt; protected implementation, tests, protocols and evidence are the preservation contract.",
+    "New local archives are verified; public hosting and empty-cache public restoration are separate root-owned checks.",
+    "Hash-valid evidence and exact source identity do not establish scientific qualification."
+  ],
+  "new_banks": [
+    {
+      "artifact_hashes_checked": 65,
+      "artifact_mismatches": [],
+      "case_count": 56,
+      "complete": true,
+      "design_manifest_actual_cases_match": true,
+      "manifest_sha256": "2914e432d03c4a516625cde382113d4d147c052efd9203952c20b40db618818f",
+      "path": "evidence/commons-v3-foundation-v1",
+      "source_declarations": [
+        {
+          "current_matches": true,
+          "path": "docs/commons-v3-foundation-protocol.md",
+          "sha256": "aae457119b88831357b887638f6ea2708bc6ee9558c33df07c3dd12e21e40ca9",
+          "snapshot_matches": true
+        },
+        {
+          "current_matches": true,
+          "path": "scripts/run_commons_v3_development.py",
+          "sha256": "18a21abf18fd98a70065f25b9b81b0d6ac7db63b3024c36cc6f22c049ec8e00f",
+          "snapshot_matches": true
+        },
+        {
+          "current_matches": true,
+          "path": "swarm_societies/commons_v3/__init__.py",
+          "sha256": "cfdbba129267f1d267af58b61946380340f92b7e2bf74906b07ad01b5effde01",
+          "snapshot_matches": true
+        },
+        {
+          "current_matches": true,
+          "path": "swarm_societies/commons_v3/development.py",
+          "sha256": "571f82b5fb8515881dbd1cbaede6493cb26cda196a2965492f12a47b23b877bf",
+          "snapshot_matches": true
+        },
+        {
+          "current_matches": true,
+          "path": "swarm_societies/commons_v3/engine.py",
+          "sha256": "3086b3f10c6e8b2cfbfc107caeb72c6598d464f7e0537971bd1d9264833fa9ac",
+          "snapshot_matches": true
+        },
+        {
+          "current_matches": true,
+          "path": "swarm_societies/commons_v3/policies.py",
+          "sha256": "3e4b510f8c6be68c252638550829df4e5fe35edfab7ff09490d89f9decfed45d",
+          "snapshot_matches": true
+        }
+      ]
+    },
+    {
+      "artifact_hashes_checked": 66,
+      "artifact_mismatches": [],
+      "case_count": 56,
+      "complete": true,
+      "design_manifest_actual_cases_match": true,
+      "manifest_sha256": "efc863872d0872ca3089628980c20cfacf1efe2eb2cca05c260d8a3906800947",
+      "path": "evidence/commons-v3-foundation-v2",
+      "source_declarations": [
+        {
+          "current_matches": true,
+          "path": "docs/commons-v3-foundation-protocol-v2.md",
+          "sha256": "9882deb9f9a7f244c09bd945cc7f516a95930d362c465d20d520d25c22de62a1",
+          "snapshot_matches": true
+        },
+        {
+          "current_matches": true,
+          "path": "docs/commons-v3-foundation-protocol.md",
+          "sha256": "aae457119b88831357b887638f6ea2708bc6ee9558c33df07c3dd12e21e40ca9",
+          "snapshot_matches": true
+        },
+        {
+          "current_matches": true,
+          "path": "scripts/run_commons_v3_development_v2.py",
+          "sha256": "6578fafb4b0a7bdcadf41e9d0a299113dc3d198f0afa8bd2baf06f2bc40e9869",
+          "snapshot_matches": true
+        },
+        {
+          "current_matches": true,
+          "path": "swarm_societies/commons_v3/__init__.py",
+          "sha256": "cfdbba129267f1d267af58b61946380340f92b7e2bf74906b07ad01b5effde01",
+          "snapshot_matches": true
+        },
+        {
+          "current_matches": true,
+          "path": "swarm_societies/commons_v3/development_v2.py",
+          "sha256": "d69923217e430ec6fb6e12be1b3a18cba6f3df5744d292c004be63ba38d0bab8",
+          "snapshot_matches": true
+        },
+        {
+          "current_matches": true,
+          "path": "swarm_societies/commons_v3/engine.py",
+          "sha256": "3086b3f10c6e8b2cfbfc107caeb72c6598d464f7e0537971bd1d9264833fa9ac",
+          "snapshot_matches": true
+        },
+        {
+          "current_matches": true,
+          "path": "swarm_societies/commons_v3/policies_v2.py",
+          "sha256": "f45ff9e8cc004c793f6a0602bbc14ccce38ee5e1a5c1a741cbbc64fe9a113439",
+          "snapshot_matches": true
+        }
+      ]
+    }
+  ],
+  "protected_categories": [
+    {
+      "baseline_bytes": 1318042,
+      "changed_or_missing": [],
+      "files": 87,
+      "scope": "swarm_societies/, tests/, scripts/, seeds/",
+      "sorted_paths_sha256": "9859f670cde0e4fb22fadcea46037653547d1b7a0bf330cddf210aedb64ace05"
+    },
+    {
+      "baseline_bytes": 19109810,
+      "changed_or_missing": [],
+      "files": 303,
+      "scope": "all pre-existing tracked evidence/",
+      "sorted_paths_sha256": "115d2c8e7b9126cb4a7c767a622d707bc631c80306fde6e0c68492eea3b9bbe2"
+    },
+    {
+      "baseline_bytes": 69547,
+      "changed_or_missing": [],
+      "files": 6,
+      "scope": "all pre-existing tracked docs/ filenames containing protocol",
+      "sorted_paths_sha256": "67645e7e0423794ed21f1ba5a90f82b6e382217ce6854667f5206929034e14ad"
+    },
+    {
+      "baseline_bytes": 186268,
+      "changed_or_missing": [],
+      "files": 10,
+      "scope": "all pre-existing tracked artifacts/",
+      "sorted_paths_sha256": "15e4f5e271788cb986b237f7fa3269877855d52eaa4129679bcc702e6c61acbd"
+    }
+  ],
+  "reviewed_at_utc": "2026-10-07T11:14:26.017948+00:00",
+  "source_freeze_declarations_checked": 13,
+  "status": "ok",
+  "test_collection": {
+    "collected_tests": 704,
+    "command": "python -m pytest --collect-only -q",
+    "executed_tests": false,
+    "exit_code": 0,
+    "reported_seconds": 8.71,
+    "subtests_not_counted_by_collection": true
+  },
+  "version": "commons-v3-foundation-preservation-review-v1"
+}

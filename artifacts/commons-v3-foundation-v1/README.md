@@ -14,14 +14,19 @@ documented numerical navigation repair.
 Total: **112 files, 9,287,035 original bytes; 9,308,593 archive bytes**.
 The archives are slightly larger because their input case files are already
 compressed. Each catalog entry pins the bank's design, completion manifest and
-source manifest; no source commit is claimed for the newly prepared banks.
+source manifest. The published release targets implementation commit
+`e7c7cbb9b861ae5202324d2cee76fae8ad702381`; the catalog's source hashes were
+recorded before that commit existed.
 The packager runtime is recorded in the catalog. Archive byte reproduction is
 scoped to the same Python/zlib toolchain; individual file checksums are exact.
 
 The manifests name assets in release
 [`commons-v3-foundation-2026-10-07`](https://github.com/ReloadLightly/swarm-societies/releases/tag/commons-v3-foundation-2026-10-07).
-Local archive verification and restoration were completed during preparation;
-publication and public-download validation are separate release steps. Release
+All five hosted archive/metadata assets match their local sizes and SHA-256
+digests. Public, unauthenticated download into an empty cache restored all 112
+files in an actual clean checkout, byte-identical to the originals. Offline
+verification also passed. [Validation records](../../evidence/commons-v3-foundation-validation-v1/README.md)
+preserve the receipts. Release
 assets are hash-pinned, not guaranteed server-immutable. Published archive
 identities must be preserved; corrections require a new version.
 

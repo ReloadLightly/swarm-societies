@@ -28,7 +28,7 @@ claim of swarm intelligence or successful governance.
 All actions are committed before any are resolved. Movement precedes messages,
 then transfers, extraction, storage overflow, consumption and renewal. Peers'
 actions cannot be observed and answered within the same tick. Recovery and
-growth are ecological inflows; consumption, movement, extraction and messaging
+growth are ecological inflows; consumption, movement, extraction costs and messaging
 are sinks. Transfers and harvesting relocate resources. Unrealized growth above
 capacity is distinct from material discarded from inventory.
 
@@ -168,6 +168,13 @@ physical-state snapshot continuation under identical future committed actions.
 
 ## Reproduction and engineering scope
 
+The full suite passed **704 tests and 123 subtests in 462.38 seconds** in a
+clean checkout with all 112 v3 and 844 legacy bulk files absent. The same checkout
+then restored both v3 banks from public URLs into an empty cache; all 112 files
+match the originals and offline archive verification passes. Implementation and
+test bytes did not change afterward. [Validation records](../evidence/commons-v3-foundation-validation-v1/README.md)
+include the clean-checkout context, replay, preservation and publication receipts.
+
 The two raw case banks are kept in [checksummed development archives](../artifacts/commons-v3-foundation-v1/README.md).
 Designs, summaries, source snapshots and figures remain in Git. Restore before
 semantic replay or figure regeneration; default tests use small synthetic worlds:
@@ -192,8 +199,10 @@ Create a separate reproduction bank, preserving the published one:
   --output runs/commons-v3-reproduction
 OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/run_commons_v3_development_v2.py run \
   --output runs/commons-v3-reproduction
+OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/run_commons_v3_development_v2.py verify \
+  --output runs/commons-v3-reproduction
 .venv/bin/python scripts/visualize_commons_v3_development.py \
-  --source evidence/commons-v3-foundation-v2 --output runs/commons-v3-figures
+  --source runs/commons-v3-reproduction --output runs/commons-v3-figures
 ```
 
 Completed and failed banks are preserved. Interrupted runs replay and compare
