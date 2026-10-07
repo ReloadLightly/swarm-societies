@@ -1,3 +1,5 @@
+**Current plan:** [Paper contract v1](paper-contract-world-models-v1.md) replaces the reframing review’s “Next decision” section and is the current binding plan.
+
 # World-model reframing: scoped literature review and decision, version 1
 
 7 October 2026. This is a research-direction review, not an experimental

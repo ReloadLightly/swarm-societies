@@ -1,3 +1,5 @@
+**Current plan:** [Paper contract v1](docs/paper-contract-world-models-v1.md) replaces the reframing review’s “Next decision” section and is the current binding plan.
+
 # Swarm Societies: A Research Testbed for Resources and Institutions
 
 **Living research report · 7 October 2026**
