@@ -1,5 +1,20 @@
 # Active work record
 
+## Ecological replay and independent audit complete, 7 October 2026
+
+All **288 ecological episodes replay exactly**, including source/artifact
+checks and aggregate reconstruction. A separate standard-library auditor
+reconstructs raw flows, agent endpoints, quarters, cohorts and all 90 ecological
+criteria, and verifies the 54 distinct conservative resource certificates.
+It passes 42,769,556 exact checks, 1,506,078 numerical diagnostics and
+17,994,052 inequalities, with a maximum numerical diagnostic difference of
+8.88e-16. No diagnostic tolerance changes a qualification decision. A second
+read-only review of the auditor and completed ecological data passes.
+
+Raw data publication and both restoration checks are already complete. The
+separate incentive bank continues under the original freeze; its complete
+results, exact replay, independent audit and figures remain pending.
+
 ## Ecological archive publicly verified, 7 October 2026
 
 The new `artifacts/commons-v3-ecology-qualification-v1/catalog.json` restores

@@ -1,13 +1,16 @@
 # Commons v3: separate ecological and incentive qualification
 
-**Ecological recording is complete; incentive qualification is in progress.**
+**Ecological recording, validation and publication are complete; incentive
+qualification is in progress.**
 Both protocols, designs and source closures were pushed before any qualification
 episode ran. Both frozen controls pass the ecological criteria in five of nine
 cells, including the reference. Two other cells are certified insufficient for
 the stated consumption target, and two remain physically unresolved. Two
-reference-containing adjacent pairs pass ecology. These results alone do not
-establish incentive qualification; combined verdicts, completed replay and
-public restoration are not yet claimed.
+reference-containing adjacent pairs pass ecology. All 288 ecological episodes
+replay exactly, the independent audit passes, and all 144 ecological case files
+restore byte-identically from the public archive and offline cache. These
+results alone do not establish incentive qualification; combined verdicts
+remain pending.
 
 This study tests the two strongest retained local controls from the
 [navigation stage](commons-v3-navigation-v1.md) on new seed banks. It asks
@@ -166,13 +169,16 @@ robustness gates; an uncertain effect is not evidence of no effect.
 
 ## Statistical contract and retained observations
 
-The prespecified family contains **194 scalar intervals**: 90 ecological,
+The prespecified family contains **194 named scalar intervals**: 90 ecological,
 54 primary incentive and 50 reference-robustness intervals. The frozen
 two-sided Student-t critical value is **4.750567324005865**, with 15 degrees
 of freedom and Bonferroni family alpha 0.05. Ordinary descriptive 95% intervals
 use **2.131449545559776**. Every interval is the seed mean plus/minus the
 critical value times the sample standard deviation divided by the square root
-of 16.
+of 16. Six primary-reference intervals recur in the robustness requirements,
+giving 188 distinct designated estimand intervals. The frozen denominator
+remains 194; this duplication makes the correction conservative and does not
+authorize a retrospective reduction.
 
 For a lower-bound criterion, lower ≥ threshold passes, upper < threshold
 fails, and the remainder is unresolved; upper-bound criteria reverse those
@@ -269,9 +275,31 @@ rerender before the gallery is described as complete.
 
 The pre-execution full repository suite passed **979 tests and 123 subtests**.
 The [validation directory](../evidence/commons-v3-qualification-validation-v1/)
-contains the source-freeze checks. Final semantic replay, independent numerical
-audit, image inspection and archive restoration receipts will be distinguished
-from these implementation tests as they complete.
+contains the source-freeze checks and completed ecological validation.
+The [ecological semantic replay](../evidence/commons-v3-qualification-validation-v1/ecology-replay.json)
+reproduces all **144 cases / 288 episodes** exactly, including recomputed
+aggregates, in **1,408.910 seconds with two workers**. That timing belongs to
+the replay invocation, not the original experiment.
+
+The separate standard-library
+[independent numerical audit](../evidence/commons-v3-qualification-validation-v1/ecology-independent-audit.json)
+reconstructs every ecological case and all **90 ecological gate entries**
+from recorded primitives, without importing the project or executing policies.
+It checks source/input/artifact bindings, initialization, keyed weather,
+material flows, movement and local discovery, cohort and agent endpoints,
+quarter/prefix summaries, intervals and exact rational certificate decisions.
+The audit's accumulation tolerances apply only to numerical diagnostics;
+qualification decisions use independently reconstructed strict comparisons.
+Its maximum observed numerical difference is **8.88 × 10⁻¹⁶**.
+
+The [independent audit review](../evidence/commons-v3-qualification-validation-v1/ecology-audit-review.json)
+confirms complete cell/gate inventories and the declared family accounting,
+with no unresolved material findings. Recorded flows do not independently
+recover unrecorded policy requests, reserves or every allocation choice.
+Exact policy execution and full physical-state continuation remain the
+separate semantic replay's responsibility. The certificate is conditional
+on its explicit arithmetic assumptions; neither audit is a formal hardware
+proof. Incentive replay/audit and figure inspection remain pending.
 
 Only audited built-in policies execute. Material residuals use the fixed
 relative tolerance 1e-9, per-tick extraction waste above 1e-9 halts the run,
@@ -285,8 +313,32 @@ overwrite a completed bank or silently resume one marked with an unexpected
 engineering failure. Scientific failure does not trigger retries, omitted
 cases, extra seeds or threshold changes. Earlier banks remain unchanged.
 
-Once the recorded banks are complete and their raw cases are present, verify
-the saved artifacts and recomputed aggregates without executing episodes:
+The ecological archive is public in the
+[qualification release](https://github.com/ReloadLightly/swarm-societies/releases/tag/commons-v3-qualification-2026-10-07),
+targeting source checkpoint
+[ead7cfc](https://github.com/ReloadLightly/swarm-societies/commit/ead7cfcec95decbdd8be213093f30b8ccec15d60).
+The separate
+[ecological catalog](../artifacts/commons-v3-ecology-qualification-v1/catalog.json)
+restores **144 files / 58,201,356 bytes**. Its archive occupies **57,406,528
+bytes**. All three public assets match local hashes.
+[Publication receipts](../evidence/commons-v3-qualification-validation-v1/publication/ecology/README.md)
+verify unauthenticated downloads, an empty-cache/empty-destination restoration,
+per-file byte identity, and offline restoration into a second empty destination.
+These operations run no simulations.
+
+Restore the ecological raw cases in a clean checkout:
+
+~~~bash
+python3 scripts/restore_evidence_v1.py \
+  --catalog artifacts/commons-v3-ecology-qualification-v1/catalog.json \
+  --study commons-v3-ecology-qualification-v1
+~~~
+
+Add --offline to use an already verified archive cache without network access.
+The incentive archive will have a separate catalog after completion; do not
+expect this ecological catalog to restore it. Once each bank is complete and
+its raw cases are present, verify saved artifacts and recomputed aggregates
+without executing episodes:
 
 ~~~bash
 .venv/bin/python scripts/run_commons_v3_qualification_v1.py verify \
@@ -307,8 +359,7 @@ ecological dependency to the original bank. Render only completed evidence:
   --output figures/commons-v3-qualification-v1
 ~~~
 
-Public raw-case archives require new identities and verified unauthenticated
-empty-cache and offline restoration. Those publication commands and receipts
-will be added after release; publication is not yet claimed. Hashes detect
-changed assets, but GitHub hosting is not administratively immutable. This
-study neither establishes useful governance nor authorizes model spending.
+Incentive publication and its restoration receipts remain pending. Ecological
+publication preserves earlier archive identities. Hashes detect changed assets,
+but GitHub hosting is not administratively immutable. This study neither
+establishes useful governance nor authorizes model spending.
