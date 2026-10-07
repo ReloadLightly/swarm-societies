@@ -24,6 +24,14 @@ ecology, incentives and strong baselines before further experimental model
 spending. Preserve parameter learning and rule discovery as tools and later
 research stages; their earlier design remains in `docs/world-model-proposal.md`.
 The broader research program remains in `docs/research-roadmap.md`.
+The current cross-stage assessment and active task order are in
+`docs/research-state-and-next-steps-v1.md`; they supersede stale prospective
+"first ticket" ordering in earlier plans without changing frozen scientific
+gates. Close the outstanding incentive semantic replay and proceed to Stage 2
+capability design and full optional lifecycle with a strong decentralized
+coordination comparator. The unexecuted tipping v1 panel need not block that
+engineering. Preserve the distinction between scripted lifecycle validation,
+behavior within supplied decision rules, and evidence of useful institutions.
 
 The latest incentive-framing review is implemented in
 `docs/commons-v3-review-2026-10-07.md`. The original incentive bank is complete:

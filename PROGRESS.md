@@ -1,5 +1,33 @@
 # Active work record
 
+## Overall assessment and Stage 2 execution plan, 7 October 2026
+
+The [current assessment](docs/research-state-and-next-steps-v1.md) distinguishes
+the implemented research instrument from the still-untested institutional
+question. Stage 0 and the v3 physical foundation are complete; ecological
+qualification is finite and partial, primary joint incentive qualification is
+unresolved, and broader incentive qualification fails. V3 has no implemented
+institutions or generated-policy execution adapter, and the old learner has
+not transferred to the new renewal/observation law.
+
+Next: close the existing incentive semantic replay, specify a versioned
+political/physical capability contract, implement the full optional lifecycle,
+and build a strong decentralized coordination comparator. Evaluate costly
+maintenance/recovery under harmful peer behavior and outsider effects, with
+universal restraint as a ceiling/overhead control. Scripted lifecycle traces
+are engineering evidence; supplied responsive behavior and institutional
+benefit require separate empirical stages. Member averages must retain the
+selection/exit caveat and report original-population cohorts.
+
+The 12,288-episode tipping protocol remains unchanged and unexecuted. Its full
+surface can inform the empirical study, but it need not block political
+interface development. This explicitly supersedes stale prospective ordering
+in earlier plans without passing the old failed gate. Full incentive replay
+remains pending; no new simulations, test-suite reruns or experimental model
+calls were made for this planning assessment. Further ecology reporting remains
+deferred, and model-driven adaptation still requires a new budget and baseline
+headroom. README and earlier roadmaps link the active plan.
+
 ## Latest external review: probe reproduced and incentive framing revised, 7 October 2026
 
 The supplied `scripts/v3_temptation_probe.py` reproduces on seeds 90001–90008:

@@ -7,14 +7,15 @@ stock-dependent renewal, with no institutions or supranational government.
 The earlier nonspatial studies remain frozen. Both fresh qualification banks
 are complete: ecological viability is witnessed in five of nine cells, but
 the primary joint verdict is unresolved and robust incentive qualification
-fails. Optional institutions are the next scientific stage after resolving
-the incentive framing; no new model spending is authorized.
+fails. The next development priority is optional institutions for a clearly
+stated coordination problem; no new model spending is authorized.
 
 [Study index](docs/study-index.md) ·
 [Detailed archived report](docs/living-research-report-2026-10-07.md) ·
 [Scientific review](docs/research-review-2026-10-07.md) ·
 [Incentive results](docs/commons-v3-incentive-qualification-results-v1.md) ·
 [Latest review response](docs/commons-v3-review-2026-10-07.md) ·
+[Research state and next steps](docs/research-state-and-next-steps-v1.md) ·
 [Physical commons](docs/commons-v3-foundation-v1.md) ·
 [Need-targeted baselines](docs/commons-v3-need-v1.md) ·
 [Local navigation and numerical baselines](docs/commons-v3-navigation-v1.md) ·
@@ -292,10 +293,14 @@ The [latest review response](docs/commons-v3-review-2026-10-07.md) chooses a
 separately versioned [storage × aggressive-peer protocol](docs/commons-v3-tipping-protocol-v1.md),
 with consumption-only primary endpoints and unchanged terminal weights.
 It is a prospective specification, with no new panel executed. Further ecology
-publication, figure and audit layers are deferred. After framing is settled,
-the next scientific priority is [Stage 2](docs/commons-v3-plan.md#stage-2-make-institutions-optional-and-baselines-strong):
+publication, figure and audit layers are deferred. The
+[current assessment and plan](docs/research-state-and-next-steps-v1.md) advances
+[Stage 2](docs/commons-v3-plan.md#stage-2-make-institutions-optional-and-baselines-strong)
+development under a coordination/resilience question:
 optional institutional formation, exit, change and dissolution with local,
-paid enforcement and no supranational authority. Hand-designed institutions,
+paid enforcement and no supranational authority. The full tipping panel need
+not block political interface development; institutional claims require their
+own prospective comparison. Hand-designed institutions,
 no-institution controls and strong decentralized coordination remain mandatory.
 Model-driven adaptation still needs a separate protocol and inference budget.
 No gate requires institutions or coevolution to win.

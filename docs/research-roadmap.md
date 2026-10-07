@@ -1,5 +1,12 @@
 # Research roadmap: interacting, evolving societies
 
+The [current repository assessment and execution plan](research-state-and-next-steps-v1.md)
+now supplies the active sequence after the completed qualification and review
+response. The research themes below remain a historical catalogue. Stage 2
+optional-institution development is next; the complete tipping experiment is
+a separate empirical work package, not a prerequisite for every political
+implementation task. No existing qualification verdict or model budget changes.
+
 **Current priority, updated 7 October 2026:** the
 [scientific review](research-review-2026-10-07.md) and
 [spatial commons implementation plan](commons-v3-plan.md) now govern the next
