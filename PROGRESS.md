@@ -1,5 +1,37 @@
 # Active work record
 
+## Complete-bin cache verified in tests; full G2 replay pending, 8 October 2026
+
+The persistent four-worker continuation remains active. One continued case has
+reached tick 512; the first high-demand progress milestone is tick 128. Records
+are saved in fixed job order. A second managed log follower exited with SIGTERM,
+but the persistent runner and all four scientific workers continued unaffected.
+The preceding checkpoint was pushed and remotely verified at
+`d613cceba8750e1eab03538ba5da443f7ad09364`.
+
+A short production-size engineering profile identified repeated complete-bin
+log-sum reductions in posterior CDF queries. The five-line implementation
+change retains the bin masses already computed by `_evaluate` and reuses those
+same values, preserving bin order and accumulation. Partial-bin integration,
+likelihoods, quadrature nodes, term blocking, priors and all scientific settings
+are unchanged. Existing cache invalidation also covers the retained array.
+
+**111 combined tests pass**, including 13 new exact-parity/cache checks.
+Independent code review found no material issue. A four-tick, 24-agent,
+16-site fixture at the production numerical resolution reproduces its complete
+record and private memories byte-for-byte (canonical SHA256
+`d7f954158847220ff0b30d3568ee7467cc47cf9e0af14cde21fa8f68b3cc6833`).
+In this one paired engineering check, CPU time falls from 14.69 to 9.94 seconds;
+retained evaluation arrays increase by 425,720 bytes. These are engineering
+measurements under concurrent load, not arena outcomes or a throughput guarantee.
+
+The complete saved 512-sequence G2 replay is running with one worker. Its PID,
+log and output are `/tmp/commons-v3-joint-bin-cache-g2-verify.{pid,log,json}`.
+**Do not adopt the optimization in fresh arena workers until this exact replay
+passes.** Current arena workers retain their previously loaded implementation;
+no live objects are being modified. The fixed 32-case bank and G3-prime remain
+unchanged and incomplete. No sharing or fresh evaluation has started.
+
 ## A2 execution interruption; remaining 30 cases resumed, 8 October 2026
 
 The six-worker runner and its separate log follower both exited with SIGTERM

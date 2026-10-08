@@ -239,6 +239,117 @@ def test_normalizer_only_callers_preserve_mixed_synthetic_record_bit_for_bit():
     assert records[0] == records[1]
 
 
+def _uncached_complete_bin_cdf(self, rates, value, left):
+    """The pre-cache CDF arithmetic, retained as an exact parity reference."""
+    from swarm_societies.commons_v3 import posterior_joint_sites_v1 as module
+    evaluation = self._evaluate(rates)
+    selected = evaluation["right"] <= value
+    total = np.full(len(rates), -np.inf)
+    np.logaddexp.at(total, evaluation["rows"][selected],
+                   module.logsumexp(evaluation["logs"][selected], axis=1))
+    partial = (evaluation["left"] < value) & (evaluation["right"] > value)
+    if partial.any():
+        lo = evaluation["left"][partial]
+        half = (value - lo) / 2
+        points = lo[:, None] + half[:, None] * (1 + module._KNODES)
+        rows = evaluation["rows"][partial]
+        logs = self._logdensity(rates[rows, None], points, self._terms)
+        logs = logs + np.log(half[:, None] * module._KWEIGHTS)
+        np.logaddexp.at(total, rows, module.logsumexp(logs, axis=1))
+    if self._atom is not None:
+        capacity = self._atom["capacity"]
+        if ((capacity < value and not module._same(capacity, value))
+                or (not left and module._same(capacity, value))):
+            total = np.logaddexp(total, evaluation["atom_logs"])
+    return total
+
+
+@pytest.mark.parametrize("biased", [False, True])
+@pytest.mark.parametrize("kind", ["bound", "learned", "mixed_atom", "pure_atom", "fused"])
+def test_cached_complete_bins_preserve_cdf_bits_including_partial_bins(biased, kind):
+    joint = JointPosterior(biased=biased, grid_size=32, rate_bins=8)
+    site = joint.site(0)
+    site.observe_stock(19.973)
+    if kind in ("learned", "fused"):
+        site.update_event(GrowthEvidence(0, 0, 20., 22.42))
+    elif kind in ("mixed_atom", "pure_atom"):
+        site.update_event(GrowthEvidence(0, 0, 19.973, 20.))
+        if kind == "pure_atom":
+            site.update_event(GrowthEvidence(0, 1, 20., 20.))
+    if kind == "fused":
+        site.fuse(40., 0.)
+    joint._refresh()
+    grids = [joint._rates, np.array([.37, .24, .14, .24]), np.array([])]
+    for rates in grids:
+        evaluation = site._evaluate(rates)
+        values = [8., 20., 22.42, 30., 40., 50., 100.]
+        if len(evaluation["left"]):
+            index = len(evaluation["left"]) // 2
+            lo, hi = evaluation["left"][index], evaluation["right"][index]
+            values.extend((hi, (lo + hi) / 2))
+        for value in values:
+            for left in (False, True):
+                expected = _uncached_complete_bin_cdf(site, rates, value, left)
+                actual = site._cdf_logmass(rates, value, left)
+                assert np.array_equal(expected.view(np.uint64), actual.view(np.uint64))
+
+
+def test_complete_bin_cdf_uses_cached_reductions_and_invalidates_on_local_update(monkeypatch):
+    from swarm_societies.commons_v3 import posterior_joint_sites_v1 as module
+    joint = JointPosterior(grid_size=32, rate_bins=8)
+    site = joint.site(0)
+    site.update_event(GrowthEvidence(0, 0, 20., 22.42))
+    joint._refresh()
+    rates = joint._rates
+    evaluation = site._evaluate(rates)
+    expected = _uncached_complete_bin_cdf(site, rates, 100., False)
+    with monkeypatch.context() as patch:
+        def unexpected_reduction(*args, **kwargs):
+            raise AssertionError("complete bins must reuse their existing reduction")
+        patch.setattr(module, "logsumexp", unexpected_reduction)
+        actual = site._cdf_logmass(rates, 100., False)
+    assert np.array_equal(expected.view(np.uint64), actual.view(np.uint64))
+    site.observe_stock(23.)
+    assert site._full_eval is None
+    refreshed = site._evaluate(rates)
+    assert refreshed is not evaluation
+    assert refreshed["bin_logs"] is not evaluation["bin_logs"]
+
+
+@pytest.mark.parametrize("biased", [False, True])
+def test_complete_bin_cache_preserves_joint_updates_and_full_marginal_records(biased):
+    from types import MethodType
+    records = []
+    for reference in (True, False):
+        joint = JointPosterior(biased=biased, grid_size=32, rate_bins=8)
+        for identity in range(4):
+            site = joint.site(identity)
+            site.observe_stock(1.)
+            if reference:
+                site._cdf_logmass = MethodType(_uncached_complete_bin_cdf, site)
+        joint.update_event(GrowthEvidence(0, 0, 20., 22.42))
+        joint.update_event(GrowthEvidence(1, 0, 19.973, 20.))
+        joint.site(2).fuse(40., .7)
+        frames = []
+        for step in range(4):
+            if step == 1:
+                joint.update_event(GrowthEvidence(3, 0, 1., 1.254))
+            elif step == 2:
+                joint.update_event(GrowthEvidence(1, 1, 20., 20.))
+            elif step == 3:
+                joint.observe_stock(0, 23.)
+            frames.append({
+                "rate_cdf": joint.rate_cdf(.24),
+                "sites": [{"quantiles": [site.quantile(q) for q in (.05, .25, .5, .95)],
+                           "cdf": [site.cdf(20., left=left) for left in (False, True)],
+                           "interval": site.interval(), "predictive": site.predictive_cdf(1.25, 1.)}
+                          for site in joint._sites.values()],
+                "rate_nodes": joint._rates.tolist(), "rate_weights": joint._log_weights.tolist(),
+                "memory": joint.memory()})
+        records.append(frames)
+    assert records[0] == records[1]
+
+
 def test_biased_prior_is_approved_mixture_with_nonzero_low_capacity_support():
     joint = JointPosterior(biased=True, grid_size=64, rate_bins=16)
     site = joint.site(0)

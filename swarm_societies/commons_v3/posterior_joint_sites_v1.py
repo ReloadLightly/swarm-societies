@@ -255,6 +255,7 @@ class JointSitePosterior:
             atom_logs[valid] = values
         normalizer = np.logaddexp(log_mass, atom_logs)
         cached = {"log_z": normalizer, "rows": rows, "points": points, "logs": logs,
+                  "bin_logs": binlogs,
                   "left": left[rows, columns], "right": right[rows, columns], "atom_logs": atom_logs}
         # Marginal-CDF refinements repeatedly query small rate arrays. Pin the
         # current full rate grid so they cannot evict its expensive integral;
@@ -427,8 +428,10 @@ class JointSitePosterior:
         evaluation = self._evaluate(rates)
         selected = evaluation["right"] <= value
         total = np.full(len(rates), -np.inf)
+        # These complete-bin reductions were already computed by _evaluate.
+        # Reuse them without changing partial-bin integration or bin order.
         np.logaddexp.at(total, evaluation["rows"][selected],
-                       logsumexp(evaluation["logs"][selected], axis=1))
+                       evaluation["bin_logs"][selected])
         partial = (evaluation["left"] < value) & (evaluation["right"] > value)
         if partial.any():
             lo = evaluation["left"][partial]
