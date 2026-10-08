@@ -1,5 +1,37 @@
 # Active work record
 
+## A2 execution interruption; remaining 30 cases resumed, 8 October 2026
+
+The six-worker runner and its separate log follower both exited with SIGTERM
+(exit 143). The termination reason is unavailable. No learner exception or
+scientific-gate failure was reported. No additional complete case was saved;
+the two earlier complete records still match their published SHA256 values.
+Their attempted replay was interrupted, so **no completed A2 arena replay is
+claimed**. The 98 passing tests and full 512-sequence joint-G2 replay remain
+the completed implementation checks.
+
+The fixed bank is continuing with **four workers**, preserving those two
+published records and executing only the other **30 prescribed cases** from
+tick 0. A one-off invocation in
+`/tmp/resume_commons_v3_joint_development_remaining.py` calls the existing
+prerequisite loader, case runner, serializer and aggregate builder unchanged.
+It verifies the two published hashes and complete-record fields before work,
+then requires the complete original 32-case inventory and paired-world checks
+before saving the aggregate. No scientific source, setting, seed or gate changed.
+There is no new protocol or evidence format.
+
+The persistent runner PID is recorded in
+`/tmp/commons-v3-joint-development-remaining.pid`; progress is in
+`/tmp/commons-v3-joint-development-remaining.log`. Earlier logs are preserved.
+Do not launch a duplicate runner. G3-prime remains pending; sharing and fresh
+evaluation remain unstarted. At completion, reconstruct the aggregate from all
+saved records and report verification scope explicitly. The contract does not
+require an additional full-bank replay at this development gate; Ticket E's
+later independent evaluation/replay remains separate.
+
+The preceding documentation checkpoint was pushed and remotely verified at
+`b651dec4a17ba5b9a2405e0ea756758a17114565`.
+
 ## A2 resumes with exact optimization; two records preserved, 8 October 2026
 
 The optimization was pushed and remotely verified at
