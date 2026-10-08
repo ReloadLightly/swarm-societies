@@ -13,7 +13,7 @@ the declared priors. No physical true-rate value is used by this module.
 """
 from __future__ import annotations
 
-from copy import deepcopy
+from copy import copy, deepcopy
 from dataclasses import asdict
 from functools import wraps
 import math
@@ -268,6 +268,31 @@ class JointSitePosterior:
             self._eval_cache[key] = cached
         return cached
 
+    def _log_evidence(self, rates):
+        """Return only conditional log Z, retaining the original arithmetic.
+
+        With no transition, atom or fusion, the integrand is independent of
+        rate. The original polygon projection nevertheless gives endpoints
+        with small rate-dependent floating-point differences. Group their
+        EXACT pairs and evaluate one representative per pair with the same
+        quadrature and ordered bin reduction; never replace them with an
+        analytic integral or rounded endpoints.
+
+        Even zero-z transitions take the full path: their density's term
+        blocking depends on array size, so grouping would alter summation.
+        Full payloads required for marginal/predictive calculations still
+        come from _evaluate. Temporary caches cannot replace those payloads.
+        """
+        if self._terms or self._atom is not None or self._fusion_count:
+            return self._evaluate(rates)["log_z"]
+        lower, upper = self._capacity_limits(rates)
+        pairs = np.stack((lower, upper), axis=1)
+        _, indices, inverse = np.unique(pairs, axis=0, return_index=True, return_inverse=True)
+        temporary = copy(self)
+        temporary._eval_cache = {}
+        temporary._full_eval_key = temporary._full_eval = None
+        return temporary._evaluate(rates[indices])["log_z"][inverse]
+
     @_transaction
     def observe_stock(self, stock):
         _number(stock, "stock")
@@ -496,7 +521,7 @@ class JointSitePosterior:
                 logs += self._cdf_logmass(rates, value, left)
                 for site in self.owner._sites.values():
                     if site is not self:
-                        logs += site._evaluate(rates)["log_z"]
+                        logs += site._log_evidence(rates)
                 total += float(np.exp(logsumexp(logs) - self.owner._log_normalizer))
             total -= float(per_rate[index * self.owner.rate_order:(index + 1) * self.owner.rate_order].sum())
         answer = min(1., max(0., total))
@@ -637,7 +662,7 @@ class JointPosterior:
         logs = np.log(half[:, None] * self._rweights / math.log(RATE_HIGH / RATE_LOW)).ravel()
         self._building_rate_grid = rates
         for site in self._sites.values():
-            logs = logs + site._evaluate(rates)["log_z"]
+            logs = logs + site._log_evidence(rates)
         total = float(logsumexp(logs))
         if not math.isfinite(total):
             raise ValueError("numerical quadrature lost joint support")
@@ -666,7 +691,7 @@ class JointPosterior:
                 rates = np.exp(log_lo + half * (1 + self._rnodes))
                 logs = np.log(half * self._rweights / math.log(RATE_HIGH / RATE_LOW))
                 for site in self._sites.values():
-                    logs += site._evaluate(rates)["log_z"]
+                    logs += site._log_evidence(rates)
                 total += float(np.exp(logsumexp(logs) - self._log_normalizer))
                 break
         return min(1., max(0., total))

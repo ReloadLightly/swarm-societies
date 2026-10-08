@@ -1,5 +1,32 @@
 # Active work record
 
+## Bit-identical joint-posterior optimization verified, 8 October 2026
+
+The first two fallback L0 cases remain active with the original loaded
+implementation, now beyond tick 384. Their cost exposed repeated conditional
+normalization for sites with stock bounds but no growth evidence. The new
+normalizer-only path groups **exact floating-point capacity-bound pairs** and
+uses the original quadrature on one representative per group. It does not
+round endpoints, change integration resolution, replace the likelihood or
+alter any prior. Growth histories, atoms and fused beliefs retain the full
+path; predictive calculations retain their complete node weights.
+
+**98 focused tests pass**, including 23 additional parity/guard/cache tests.
+The complete saved G2 panel also replays bit-for-bit under the optimization:
+512 sequences, 24,576 transitions and canonical summary
+`5caacfa557025a23561ddf6e2586025ada9974fb8f0896914f30c97c78ecc115`.
+No calibration seed or scientific result changed. A mixed synthetic fixture
+with two learned and fourteen bound-only sites reduces quantile-query CPU
+time from 29.10 to 19.76 seconds and retained numerical arrays from 38.65 to
+4.92 MB; these are engineering measurements, not arena welfare results or a
+guarantee of whole-run throughput.
+
+Publish this verified change, preserve completed initial arena records, then
+resume the same 32-case bank with the optimized implementation. Recovery must
+compare any saved records exactly. This changes computation only; A1/A2,
+G3-prime, all scientific settings and the single-fallback stopping rule remain
+unchanged. No contract amendment or new audit layer is introduced.
+
 ## A2 fallback comparison running, 8 October 2026
 
 Joint G2, its exact replay and public restoration are complete. The verified

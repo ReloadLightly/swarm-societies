@@ -151,6 +151,94 @@ def test_pinned_cache_preserves_synthetic_record_bit_for_bit():
     assert records[0] == records[1]
 
 
+@pytest.mark.parametrize("biased", [False, True])
+@pytest.mark.parametrize("bound", [0., 8., 19.973, 49.99999999999999, 50.00000000000001, 80., 99.99999999999999])
+def test_bound_only_log_evidence_preserves_every_bit(biased, bound):
+    joint = JointPosterior(biased=biased)
+    view = joint.site(0)
+    if bound:
+        view.observe_stock(bound)
+    grids = [np.geomspace(.12, .48, 65), np.geomspace(.197, .19700000000001, 64),
+             np.array([.48, .12, .24, .24000000000000002, .24]),
+             np.array([.11, .12, .4800000000000001, .49]), np.array([])]
+    for rates in grids:
+        expected = view._evaluate(rates)["log_z"]
+        actual = view._log_evidence(rates)
+        assert np.array_equal(expected.view(np.uint64), actual.view(np.uint64))
+
+
+@pytest.mark.parametrize("zeros", [1, 7, 64, 512])
+def test_zero_stock_transitions_keep_full_normalizer_arithmetic(zeros):
+    joint = JointPosterior(grid_size=32)
+    view = joint.site(0)
+    for tick in range(zeros):
+        view.update_event(GrowthEvidence(0, tick, 0., .02))
+    rates = np.geomspace(.12, .48, 37)
+    expected = view._evaluate(rates)["log_z"]
+    assert view._log_evidence(rates) is expected
+
+
+@pytest.mark.parametrize("kind", ["learned", "atom", "fused"])
+def test_informative_log_evidence_delegates_to_full_evaluation(kind):
+    joint = JointPosterior(grid_size=32)
+    view = joint.site(0)
+    if kind == "learned":
+        view.update_event(GrowthEvidence(0, 0, 20., 22.42))
+    elif kind == "atom":
+        view.update_event(GrowthEvidence(0, 0, 19.99, 20.))
+        view.update_event(GrowthEvidence(0, 1, 20., 20.))
+    else:
+        view.fuse(40., 0.)
+    rates = np.geomspace(.12, .48, 37)
+    expected = view._evaluate(rates)["log_z"]
+    assert view._log_evidence(rates) is expected
+
+
+def test_bound_only_normalizer_preserves_full_payload_cache_and_detaches_output():
+    joint = JointPosterior(grid_size=32)
+    view = joint.site(0)
+    rates = np.geomspace(.12, .48, 64)
+    joint._rates = rates
+    full = view._evaluate(rates)
+    for query in (np.array([.15, .2]), np.array([.3, .4])):
+        view._evaluate(query)
+    cached = dict(view._eval_cache)
+    output = view._log_evidence(rates)
+    assert view._evaluate(rates) is full
+    assert view._eval_cache.keys() == cached.keys()
+    assert all(view._eval_cache[key] is entry for key, entry in cached.items())
+    assert np.array_equal(output.view(np.uint64), full["log_z"].view(np.uint64))
+    output[0] = 999.
+    assert full["log_z"][0] != 999.
+    assert len(full["log_z"]) == len(rates)
+
+
+def test_normalizer_only_callers_preserve_mixed_synthetic_record_bit_for_bit():
+    from types import MethodType
+    reference = JointPosterior(grid_size=32, rate_bins=8)
+    optimized = JointPosterior(grid_size=32, rate_bins=8)
+    for joint in (reference, optimized):
+        for site, bound in enumerate((20., 1., 30., 70.)):
+            joint.observe_stock(site, bound)
+            if joint is reference:
+                def original_normalizer(self, rates):
+                    return self._evaluate(rates)["log_z"]
+                joint.site(site)._log_evidence = MethodType(original_normalizer, joint.site(site))
+    records = []
+    for joint in (reference, optimized):
+        joint.update_event(GrowthEvidence(0, 0, 20., 22.42))
+        joint.update_event(GrowthEvidence(1, 0, 1., 1.254))
+        record = {"rate_cdfs": [joint.rate_cdf(rate) for rate in (.16, .24, .36)],
+                  "rate_quantiles": [joint.rate_quantile(q) for q in (.05, .5, .95)],
+                  "site_quantiles": [[joint.site(site).quantile(q) for q in (.05, .25, .5, .95)]
+                                     for site in range(4)],
+                  "predictive": [joint.site(site).predictive_cdf(1.25, 1.) for site in range(3)],
+                  "rate_nodes": joint._rates.tolist(), "rate_log_weights": joint._log_weights.tolist(),
+                  "memory": joint.memory()}
+        records.append(record)
+    assert records[0] == records[1]
+
+
 def test_biased_prior_is_approved_mixture_with_nonzero_low_capacity_support():
     joint = JointPosterior(biased=True, grid_size=64, rate_bins=16)
     site = joint.site(0)
