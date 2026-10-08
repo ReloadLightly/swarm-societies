@@ -422,13 +422,15 @@ That panel remains unexecuted and is parked by the
 institutions, exclusion, storage/capability shocks, evolution and learning the
 law family. Further ecology publication, figure and audit layers remain deferred.
 
-The known-rate L0 comparison now triggers G3; the single unknown-rate fallback
-requires a specified prior and recalibration before a new arm pass. G1 uses
-reused development seeds, and G2 qualifies the synthetic clean-transition model
-only. No benefit or harm from sharing has been tested in the new site-capacity
-study. The current evidence does not establish the oracle reference as a
-consumption ceiling or complete-map learning as trivial.
-[PROGRESS.md](PROGRESS.md) records the results and pending prior clarification.
+The original G3 result is preserved; approved A1 replaces its decision rule
+with G3-prime. Free evidence pooling improves capacity estimates but reduces
+consumption on the known-rate development panel. The single A2 fallback now
+uses the approved rate prior and a calibrated joint learner; its arena comparison
+is running. G1 uses reused development seeds, and G2 qualifies the synthetic
+clean-transition model only. Paid local sharing remains untested in this study.
+The evidence does not establish the oracle reference as a consumption ceiling
+or complete-map learning as trivial.
+[PROGRESS.md](PROGRESS.md) records the results and active checkpoint.
 No completed bank is extended. Model-driven program search remains outside this
 paper and would require a separate protocol and budget.
 

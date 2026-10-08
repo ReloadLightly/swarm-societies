@@ -25,6 +25,12 @@ run and handoff logs remain in `/tmp`. Do not launch another active runner.
 G3-prime has no fallback verdict yet. Sharing and fresh evaluation remain
 unstarted, and the single-fallback stopping rule is unchanged.
 
+This checkpoint was pushed and remotely verified at
+`dbcaf9e91251229f9619086f5b5b8d69f3c1dc5e`. Both published initial records
+restore byte-identically from a public checkout pinned to that commit.
+README limitations now reflect the approved prior, completed joint calibration
+and known-rate pooling result; the old pending-prior wording was stale.
+
 ## Bit-identical joint-posterior optimization verified, 8 October 2026
 
 The first two fallback L0 cases remain active with the original loaded
