@@ -41,6 +41,38 @@ and naive belief exchange (L3), including the approved biased minorities.
 Each individual retains one private joint rate/capacity model. This is tested
 implementation; the sharing experiments await a complete, passing A2 result.
 
+| Contract stage | Current state |
+| --- | --- |
+| A: physical world and hidden observations | Implemented; physical parity G4 passes. |
+| B: consequential capacity knowledge | Completed; G1 passes on development seeds. |
+| C: calibrated inference | Known-rate and joint unknown-rate learners implemented; their respective G2 checks pass. |
+| D: learning and sharing comparison | A1 fails; the single A2 comparison is running. All five subsequent sharing arms and the gated 80-case runner are implemented. |
+| E: review, freeze, evaluation and paper | Recorded-results tables and three figure families implemented. Development review and the single freeze precede fresh evaluation. |
+
+The [recorded A1 results](figures/commons-v3-known-rate-pooling-v1/README.md)
+now include all four conditions, paired seed differences, learning trajectories,
+whole-run and final-quarter consumption, and SVG/PDF/PNG figures.
+Perfect pooling reduces capacity-estimation error without improving high-demand consumption.
+These remain four-seed development results; the oracle is a descriptive
+heuristic, not a consumption ceiling.
+
+![Recorded known-rate pooling consumption](figures/commons-v3-known-rate-pooling-v1/consequences.png)
+
+Reproduce the report from saved records, without running episodes:
+
+```bash
+.venv/bin/python scripts/visualize_commons_v3_world_models_v1.py \
+  --stage known-rate-pooling --output /tmp/swarm-known-rate-pooling
+```
+
+Use `--stage unknown-rate-pooling` after A2 completes, or
+`--stage unknown-rate-sharing` after its gated sharing bank completes, with
+a new output directory. The command reconstructs recorded aggregates and
+rejects incomplete banks. A failed A2 result remains reportable. The sharing
+report adds the belief-versus-evidence figure and descriptive P1–P5 tables,
+retaining both P5 time endpoints without choosing a fresh-evaluation test.
+Source and export hashes accompany the reports. Existing exports are preserved.
+
 An exact replay of the 16 selected L0 and 16 oracle cases measures effective
 floors at realized harvests. In the wide/high-demand cell, L0's mean floor is
 **34.49% of true capacity**, versus the oracle's **37.5%**. L0 has lower mean

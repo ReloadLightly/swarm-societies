@@ -1,5 +1,51 @@
 # Active work record
 
+## Recorded world-model results implemented, 8 October 2026
+
+The reporting implementation now spans the completed known-rate pooling bank,
+the unknown-rate fallback and its gated sharing development bank.
+`scripts/visualize_commons_v3_world_models_v1.py` reconstructs the saved
+aggregates, checks their prerequisites and terminal inventories, and exports
+condition means, descriptive intervals, paired seed differences and recorded
+learning checkpoints. The sharing report also retains both P5 time-average
+and terminal endpoints. Failed A2 gates remain reportable; incomplete banks
+are rejected before report output. It runs no episodes or physical transitions.
+
+`visualize_world_models_v1.py` implements the three contracted figure families:
+capacity learning/coverage/evidence access, consumption against references,
+and belief-versus-evidence sharing with biased minorities. Every plot identifies
+four reused development seeds. Conditions use labels, neutral tones and
+markers, reserving society colors for society identities. Existing descriptive
+intervals are preserved without clipping. Low between-agent dispersion alone
+is not labeled confident wrong consensus, and the oracle is not a consumption
+ceiling. No fresh evaluation test or endpoint is selected by this reporting code.
+
+The completed A1 report is now in
+`figures/commons-v3-known-rate-pooling-v1/`: two figures in SVG, PDF and PNG,
+three CSV tables, captions and the existing-style figure manifest. Both PNGs
+were visually inspected; all **109 input/source hashes and 10 output hashes**
+verify. It preserves G3-prime's negative wide/need-1.6 contrast:
+**R-pool minus L0 = −0.036122 of need**, despite reduced capacity-estimation
+error. No sharing figure is presented as a result before that bank exists.
+The README now shows the A–E implementation state and reproduction command.
+
+Review identified a missing terminal-record check for the older A1 loader.
+The new reporting script supplies it without modifying frozen study sources.
+All **30 reporting tests pass**. Regression fixtures cover truncated records, failed gates, paired signs,
+both P5 endpoints, source/export hashes and SVG/PDF/PNG rendering for all
+three stages. Synthetic galleries remain temporary test artifacts.
+
+The existing A2 workers continue unchanged. At this checkpoint **4 of 32
+complete records are saved**; the log has reached wide/need-1.2 L0 seed
+90002 tick 384 and seed 90003 tick 256. Tick heartbeats are not complete
+records. The real reporting command correctly refuses this incomplete bank
+without creating output. The 80-case sharing implementation is ready for a
+complete passing A2 result. Fresh evaluation still follows development review
+and the contract's single freeze; no experimental model calls occurred.
+
+The preceding sharing implementation was pushed and remotely verified at
+`9d7e53f5d1684ca99c1c548bfb9c1e1eef7392d5`.
+
 ## Unknown-rate sharing implemented; execution gated, 8 October 2026
 
 The next scientific implementation is now prepared in separate modules:

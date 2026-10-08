@@ -1,0 +1,521 @@
+{
+  "evidence_version": "commons-v3-pooling-development-sites-v1",
+  "figures": [
+    {
+      "caption": "Learning in all four development cells. Points are the recorded observation checkpoints (tick zero through the terminal observation); segments join checkpoints without implying additional measurements. Capacity error is the within-episode mean absolute log ratio of posterior median to true site capacity over all agent\u2013site pairs, including prior beliefs for sites an individual has not seen. Coverage is the fraction of those pairs whose 90% posterior interval contains true capacity; the dotted line is 0.90. The bottom panels show the recorded cumulative (clean own transitions + clean receipts) / eligible-transition fraction; an undefined denominator is omitted. For R-pool, receipt counters are privileged pooled transitions counted per recipient, not paid messages. Lines show four-seed means and bands the saved descriptive 95% Student-t intervals, without clipping them to fraction bounds. The same four reused development worlds occur in each arm; these are not fresh evaluation intervals or independent evolutionary runs.",
+      "files": [
+        "learning.svg",
+        "learning.pdf",
+        "learning.png"
+      ],
+      "id": "learning"
+    },
+    {
+      "caption": "Mean share of material need met over physical ticks 1\u2013512 (top) and 385\u2013512 (bottom), shown separately in all capacity-width and need cells. Each raw dot is an episode's total consumption divided by population, ticks and individual need. Hollow markers and whiskers give means and saved descriptive 95% Student-t intervals over four reused development seeds. Deterministic vertical jitter follows seed order, so the same seed has the same offset in each arm. Reference rows come from the selected, preserved consequence-map cases; the oracle is the supplied known-capacity policy, not an optimal controller or a consumption upper bound. Whole-run and final-quarter measures are never substituted for each other. The dotted line marks one unit of consumption per unit of need. No fresh evaluation or Holm-adjusted tests are represented.",
+      "files": [
+        "consequences.svg",
+        "consequences.pdf",
+        "consequences.png"
+      ],
+      "id": "consequences"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "README.md",
+      "sha256": "aff91921cd7e39dd5d287545b6b58462917cf8d9a5e8b24453a8b61cb8431298"
+    },
+    {
+      "path": "condition-means.csv",
+      "sha256": "3885607a0e8ba97f6b756aa7eaa5c83d75c6cbb7a29b1ac2eeb1f7bc036128f2"
+    },
+    {
+      "path": "consequences.pdf",
+      "sha256": "e20ae9c29559f29eb66710b88e86855560eac4065a66598b8890606999aacc84"
+    },
+    {
+      "path": "consequences.png",
+      "sha256": "bbd282a53a3890da4e1b60ff5aeadecc25cb80860373803e8e4a7ef81648a9a6"
+    },
+    {
+      "path": "consequences.svg",
+      "sha256": "9bf902e7d78ff2eca64d392362395351f15e60064203e01284a5a8b86a89faf4"
+    },
+    {
+      "path": "learning-trajectories.csv",
+      "sha256": "6845fc417a9392995d37ca98ca10991681b942bdaff017f7a6dbe09a6c237b6f"
+    },
+    {
+      "path": "learning.pdf",
+      "sha256": "53d608e83ee6dc69ab3af386ee3af17d583d8f14ccb4ed2a7ecacc67bf36ff44"
+    },
+    {
+      "path": "learning.png",
+      "sha256": "10bb5e68e8c98bf9dbaacfd87bd5de1e69066b09d756ae975c3ab1ebdbac8cb5"
+    },
+    {
+      "path": "learning.svg",
+      "sha256": "61517317458ede778a5d7a33333e0a8435b786e9ac29771fd5b123b8ab43d237"
+    },
+    {
+      "path": "paired-effects.csv",
+      "sha256": "0021ccfba5845e23b8d55b45b20e2c68058a287781cac03ec086c1a3de2a3a8c"
+    }
+  ],
+  "rendering_runs_simulation": false,
+  "seeds": [
+    90001,
+    90002,
+    90003,
+    90004
+  ],
+  "sources": [
+    {
+      "path": "docs/visual-reference.md",
+      "sha256": "58308075d6cabde383126d3ccd6ea5c14da9304f59c8ef8500c36ea398016409"
+    },
+    {
+      "path": "evidence/commons-v3-learning-development-v1/cases/moderate-n1.2-s90001-L0-phi0.375-q0.25.json.gz",
+      "sha256": "ac5cc0f64356f86d653ba37c47a544ec34a075dbaa7121df6d6281eccd1d9630"
+    },
+    {
+      "path": "evidence/commons-v3-learning-development-v1/cases/moderate-n1.2-s90001-L0-phi0.375-q0.5.json.gz",
+      "sha256": "6f67a4170f5ed4e6e5ab61e087b22c64b5b51ef9f88aeac3bf76bd09f6311d46"
+    },
+    {
+      "path": "evidence/commons-v3-learning-development-v1/cases/moderate-n1.2-s90002-L0-phi0.375-q0.25.json.gz",
+      "sha256": "37a5bcfaa55f8ab45166fbb329ea73bded47dcda9970b2f649b3dd5b0bf25681"
+    },
+    {
+      "path": "evidence/commons-v3-learning-development-v1/cases/moderate-n1.2-s90002-L0-phi0.375-q0.5.json.gz",
+      "sha256": "aa6097697735498f3a8e993b7cad336f16df02ee61f730b7146c774c9c490df0"
+    },
+    {
+      "path": "evidence/commons-v3-learning-development-v1/cases/moderate-n1.2-s90003-L0-phi0.375-q0.25.json.gz",
+      "sha256": "c49ed97c418fb6a0f2f9d9fa19af163725e2e6ce037373c82b0638551e38869f"
+    },
+    {
+      "path": "evidence/commons-v3-learning-development-v1/cases/moderate-n1.2-s90003-L0-phi0.375-q0.5.json.gz",
+      "sha256": "4ed58095f1ae1746bedfad571d0d2993438ce4c3506ca9407beae641c9ffdc59"
+    },
+    {
+      "path": "evidence/commons-v3-learning-development-v1/cases/moderate-n1.2-s90004-L0-phi0.375-q0.25.json.gz",
+      "sha256": "6a3b75d044ffbd9b1934e4ba311cdae3b0a49c0e79044be692624c8e96d9cb93"
+    },
+    {
+      "path": "evidence/commons-v3-learning-development-v1/cases/moderate-n1.2-s90004-L0-phi0.375-q0.5.json.gz",
+      "sha256": "301d356578e64bea1e64d4c54aa22b4b961ba9de2d1a3243d03c6eec8c5dde8e"
+    },
+    {
+      "path": "evidence/commons-v3-learning-development-v1/cases/moderate-n1.6-s90001-L0-phi0.375-q0.25.json.gz",
+      "sha256": "65070882242a4504165e40bb0ea1a75552d973c8723b54d2b60c4e7051161241"
+    },
+    {
+      "path": "evidence/commons-v3-learning-development-v1/cases/moderate-n1.6-s90001-L0-phi0.375-q0.5.json.gz",
+      "sha256": "98985e42057e1c4fb960cc830734737f296d225f3337940ef9c12ae879c786a3"
+    },
+    {
+      "path": "evidence/commons-v3-learning-development-v1/cases/moderate-n1.6-s90002-L0-phi0.375-q0.25.json.gz",
+      "sha256": "bd3bab971a4fc41b77181d5edae970dc94c76e56003bcaec7d37ad027d39f511"
+    },
+    {
+      "path": "evidence/commons-v3-learning-development-v1/cases/moderate-n1.6-s90002-L0-phi0.375-q0.5.json.gz",
+      "sha256": "6cce1d99ed223f6d6e9bd60c512295533608b5755df9c0897502c3da5e9c02d6"
+    },
+    {
+      "path": "evidence/commons-v3-learning-development-v1/cases/moderate-n1.6-s90003-L0-phi0.375-q0.25.json.gz",
+      "sha256": "bb47f061145ae75632eb61a9ab45c6df0d69c3b41222be8156631fd0905d354c"
+    },
+    {
+      "path": "evidence/commons-v3-learning-development-v1/cases/moderate-n1.6-s90003-L0-phi0.375-q0.5.json.gz",
+      "sha256": "1c7ef74c567d0307dfaf929f0d17e54bcf248da5f5d1f7215d62ca23a4103e01"
+    },
+    {
+      "path": "evidence/commons-v3-learning-development-v1/cases/moderate-n1.6-s90004-L0-phi0.375-q0.25.json.gz",
+      "sha256": "cc2425a89499f0a5e7ca8a24c0515f55034de17b112ec7eb0441f6370720818c"
+    },
+    {
+      "path": "evidence/commons-v3-learning-development-v1/cases/moderate-n1.6-s90004-L0-phi0.375-q0.5.json.gz",
+      "sha256": "469c39e1be2452175d85549b3b4d1132764d48648ac6f1ee1ea629010dd1cd41"
+    },
+    {
+      "path": "evidence/commons-v3-learning-development-v1/cases/wide-n1.2-s90001-L0-phi0.375-q0.25.json.gz",
+      "sha256": "16862de56cd1634c4638d8ea1cbc49a39f1716742e99aea89bbd32cd3995fa2d"
+    },
+    {
+      "path": "evidence/commons-v3-learning-development-v1/cases/wide-n1.2-s90001-L0-phi0.375-q0.5.json.gz",
+      "sha256": "c3a73815f1b45237de6d05bd7260b0e802ffbe136597b92aaf6d559e863f2400"
+    },
+    {
+      "path": "evidence/commons-v3-learning-development-v1/cases/wide-n1.2-s90002-L0-phi0.375-q0.25.json.gz",
+      "sha256": "b2d3ea4283129395c58bc81716a67c96c4acf966d11a26fb4c972af7c8ec0c70"
+    },
+    {
+      "path": "evidence/commons-v3-learning-development-v1/cases/wide-n1.2-s90002-L0-phi0.375-q0.5.json.gz",
+      "sha256": "64346913cde2a717c7d908d7ff37fca87331bc2ade887b88f6cc1728dcdadddd"
+    },
+    {
+      "path": "evidence/commons-v3-learning-development-v1/cases/wide-n1.2-s90003-L0-phi0.375-q0.25.json.gz",
+      "sha256": "3a8a79ff464d6d80171459c633208bdfdc47060803be818fd5e7cecf14de62e4"
+    },
+    {
+      "path": "evidence/commons-v3-learning-development-v1/cases/wide-n1.2-s90003-L0-phi0.375-q0.5.json.gz",
+      "sha256": "0450a5d0df0a6e3547864bcafc8847a52586edfedc89fe01679756f828b30838"
+    },
+    {
+      "path": "evidence/commons-v3-learning-development-v1/cases/wide-n1.2-s90004-L0-phi0.375-q0.25.json.gz",
+      "sha256": "71d51e2e735aa943e2a49d200005a842ff540a33460f838eddd3b8a2f92b6de0"
+    },
+    {
+      "path": "evidence/commons-v3-learning-development-v1/cases/wide-n1.2-s90004-L0-phi0.375-q0.5.json.gz",
+      "sha256": "6ace61db86e8ea44717fadb3abc5714b1ac05bba79bf8af60e1dcd40140c17cb"
+    },
+    {
+      "path": "evidence/commons-v3-learning-development-v1/cases/wide-n1.6-s90001-L0-phi0.375-q0.25.json.gz",
+      "sha256": "e0c1cd994656160f9b05e06dd11ee520c92b9c764fd090c094b56174d61f1da9"
+    },
+    {
+      "path": "evidence/commons-v3-learning-development-v1/cases/wide-n1.6-s90001-L0-phi0.375-q0.5.json.gz",
+      "sha256": "29e25f36b31d91b7011099134a023f1251c22f4eaf6dd18cda84d496be5ea2f0"
+    },
+    {
+      "path": "evidence/commons-v3-learning-development-v1/cases/wide-n1.6-s90002-L0-phi0.375-q0.25.json.gz",
+      "sha256": "cfe7486fd19df15b576f67edb0a5f7a19bc0c788a77ec1326efc6dd66c916833"
+    },
+    {
+      "path": "evidence/commons-v3-learning-development-v1/cases/wide-n1.6-s90002-L0-phi0.375-q0.5.json.gz",
+      "sha256": "009edcaddeedb946c79f64008bc319e14e1685606bdea7cab7cbe8e24d98e2a7"
+    },
+    {
+      "path": "evidence/commons-v3-learning-development-v1/cases/wide-n1.6-s90003-L0-phi0.375-q0.25.json.gz",
+      "sha256": "d904e5f22bdd25155477726718c9bc59a9bf4332652230d938ec832c3525a100"
+    },
+    {
+      "path": "evidence/commons-v3-learning-development-v1/cases/wide-n1.6-s90003-L0-phi0.375-q0.5.json.gz",
+      "sha256": "3f8304daf10cd737fb45fc7c79324934459ac03add8c9e320ecd0fbc84f53121"
+    },
+    {
+      "path": "evidence/commons-v3-learning-development-v1/cases/wide-n1.6-s90004-L0-phi0.375-q0.25.json.gz",
+      "sha256": "cac122b4bbe0bc57c6e17246dbf323403db6872a6e46f65d88f6f90f5325bdd3"
+    },
+    {
+      "path": "evidence/commons-v3-learning-development-v1/cases/wide-n1.6-s90004-L0-phi0.375-q0.5.json.gz",
+      "sha256": "139c2c39afac5cd349758a91cda7f991a45c906b8780e1b5e7caa048b1ef40f5"
+    },
+    {
+      "path": "evidence/commons-v3-learning-development-v1/summary.json",
+      "sha256": "201fd8a0ebe6eac04b4103120cac5adad406e6e8c8ba5c387cd93da42c601191"
+    },
+    {
+      "path": "evidence/commons-v3-pooling-development-v1/cases/moderate-n1.2-s90001-R-pool-phi0.375-q0.25.json.gz",
+      "sha256": "1a425b8a7301ed9d151acc94c6855f79de6499501ca497f01d41126e128fea0f"
+    },
+    {
+      "path": "evidence/commons-v3-pooling-development-v1/cases/moderate-n1.2-s90002-R-pool-phi0.375-q0.25.json.gz",
+      "sha256": "2d14685323dd10e04edac0e6e367692eebb3e51976486f55eec772f639432730"
+    },
+    {
+      "path": "evidence/commons-v3-pooling-development-v1/cases/moderate-n1.2-s90003-R-pool-phi0.375-q0.25.json.gz",
+      "sha256": "02115b1af3962ddd8d4d072ef05dcde3c4ebf6f2c1d67d8ce8bdd54437a36834"
+    },
+    {
+      "path": "evidence/commons-v3-pooling-development-v1/cases/moderate-n1.2-s90004-R-pool-phi0.375-q0.25.json.gz",
+      "sha256": "f4ed4b23e7e25f138fa97545cb36ebd24df41c3ca3d59d3108352e700e57d045"
+    },
+    {
+      "path": "evidence/commons-v3-pooling-development-v1/cases/moderate-n1.6-s90001-R-pool-phi0.375-q0.25.json.gz",
+      "sha256": "4465ad3a0d174be01cad10b99472b8c31c7fcf24e5b0ce542cb8c7bcf84a4a49"
+    },
+    {
+      "path": "evidence/commons-v3-pooling-development-v1/cases/moderate-n1.6-s90002-R-pool-phi0.375-q0.25.json.gz",
+      "sha256": "6d8ea6fd8d76d324b3472d0fa15191b3b2a657aa0b2833d1fab5853ecba52d57"
+    },
+    {
+      "path": "evidence/commons-v3-pooling-development-v1/cases/moderate-n1.6-s90003-R-pool-phi0.375-q0.25.json.gz",
+      "sha256": "e6854d16f2f274e7a2ae5d63abcbf1910129b5a4a60908980e3d664a2e90688a"
+    },
+    {
+      "path": "evidence/commons-v3-pooling-development-v1/cases/moderate-n1.6-s90004-R-pool-phi0.375-q0.25.json.gz",
+      "sha256": "b2ba6a1c837a8b68fff8e411f10b187b015c9be968045e70467a089351ec914d"
+    },
+    {
+      "path": "evidence/commons-v3-pooling-development-v1/cases/wide-n1.2-s90001-R-pool-phi0.375-q0.25.json.gz",
+      "sha256": "2aa4ffd35a358b8720fe0d3f1b809bd3197c40d9d44e4e3e55b18f44f7b68de2"
+    },
+    {
+      "path": "evidence/commons-v3-pooling-development-v1/cases/wide-n1.2-s90002-R-pool-phi0.375-q0.25.json.gz",
+      "sha256": "0dbfef1adbe161ae2a8f9706d1c72d7d1c6d14c8dacf310f29f6392d3a315be4"
+    },
+    {
+      "path": "evidence/commons-v3-pooling-development-v1/cases/wide-n1.2-s90003-R-pool-phi0.375-q0.25.json.gz",
+      "sha256": "0eece35da9a499f5c806f225c6ab9e892f881942cbc5f9db18282e43c8dfb947"
+    },
+    {
+      "path": "evidence/commons-v3-pooling-development-v1/cases/wide-n1.2-s90004-R-pool-phi0.375-q0.25.json.gz",
+      "sha256": "5e986c6105399491d986f471a1be1a876c3f5274706f81a4fec0121ad74cd74b"
+    },
+    {
+      "path": "evidence/commons-v3-pooling-development-v1/cases/wide-n1.6-s90001-R-pool-phi0.375-q0.25.json.gz",
+      "sha256": "b1b7679b4fe8b031d206b3cf949fdfa3f05d4cc7dd15e789c1334b80964cbef6"
+    },
+    {
+      "path": "evidence/commons-v3-pooling-development-v1/cases/wide-n1.6-s90002-R-pool-phi0.375-q0.25.json.gz",
+      "sha256": "5de3c0c434f8a48a9d5e3369895639c0d2e11bd31578965cf3a7250c57cdbe54"
+    },
+    {
+      "path": "evidence/commons-v3-pooling-development-v1/cases/wide-n1.6-s90003-R-pool-phi0.375-q0.25.json.gz",
+      "sha256": "e58e469366d980803d9b38dfdd12a5ed296d765659d1b32ca766ae5478eefec8"
+    },
+    {
+      "path": "evidence/commons-v3-pooling-development-v1/cases/wide-n1.6-s90004-R-pool-phi0.375-q0.25.json.gz",
+      "sha256": "a4b0cffb65aa088749c19546fcb1ab5ad0a9f0d7899aa29e68af41b85224b26c"
+    },
+    {
+      "path": "evidence/commons-v3-pooling-development-v1/summary.json",
+      "sha256": "9e570854dd8da48a57d3db654402713b65ed2138da54a3d7355d237449292071"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/moderate-n1.2-s90001-R-fixed-phi0.375-K40.0.json.gz",
+      "sha256": "7bdf7c977d38c0e8bdc2cae3cf5106cfa6545fb74f6de59cd4da345f551e3333"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/moderate-n1.2-s90001-R-greedy-phi0.375-KNone.json.gz",
+      "sha256": "732d41f496655fb15c46acfed7a57aac5a47aae5f08e077ab1759937f35de4dd"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/moderate-n1.2-s90001-R-oracle-phi0.375-KNone.json.gz",
+      "sha256": "462f5584a15e921080859f73d5e284922ed9383540ee10d07f04f1d6c2a7a0b0"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/moderate-n1.2-s90002-R-fixed-phi0.375-K40.0.json.gz",
+      "sha256": "ad9c92f2bc2b2d3b34033247bed38e6befe306fc2096d65f140a3903df78cdd7"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/moderate-n1.2-s90002-R-greedy-phi0.375-KNone.json.gz",
+      "sha256": "5b931b280b4cd2190c5a5f9989bdf30c82cd9b02cd65a0d4fbdbbe2381c3c7d4"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/moderate-n1.2-s90002-R-oracle-phi0.375-KNone.json.gz",
+      "sha256": "aa81dc748fa5e25b57294dc2271424bfcfd02e42bed123cad18210f2e278b024"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/moderate-n1.2-s90003-R-fixed-phi0.375-K40.0.json.gz",
+      "sha256": "0cf5e6bf3b722591f384e1489d845bfd34771ad8857f0cc7e74f61d5e2b7b30a"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/moderate-n1.2-s90003-R-greedy-phi0.375-KNone.json.gz",
+      "sha256": "6fc8f74b5536f518e66206c4ddacdd843880223cda69f6c56ea24b5ebead56ce"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/moderate-n1.2-s90003-R-oracle-phi0.375-KNone.json.gz",
+      "sha256": "230150950eee102cf27cb1cfa83ae2c535f02e5e1eb85f9cfb747d739bb50259"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/moderate-n1.2-s90004-R-fixed-phi0.375-K40.0.json.gz",
+      "sha256": "ff4e6c93d02fab233c945505740ed0cd62015afa77434539e93fc071b8c363cf"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/moderate-n1.2-s90004-R-greedy-phi0.375-KNone.json.gz",
+      "sha256": "4df54fd1a4544de59245a23030960267f453b5ec8a85921ccc63a52fa35bc109"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/moderate-n1.2-s90004-R-oracle-phi0.375-KNone.json.gz",
+      "sha256": "80d1c4a48f121202578ff241a0e0947aad7943849a5d729ae98c21c79bd8c213"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/moderate-n1.6-s90001-R-fixed-phi0.375-K40.0.json.gz",
+      "sha256": "edb35253a3cf6dde1cf58fa2e4bea19604daa38c5e3fba092542e7385cd77bf2"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/moderate-n1.6-s90001-R-greedy-phi0.375-KNone.json.gz",
+      "sha256": "bb50caa7843c6c9a270f8f2b7e217be9763b7bd467c822bb6ae313e534c3c408"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/moderate-n1.6-s90001-R-oracle-phi0.375-KNone.json.gz",
+      "sha256": "b6778fb2762285a1269b5192512d4ec89b5802650fe68249f12a7f3e1472fef0"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/moderate-n1.6-s90002-R-fixed-phi0.375-K40.0.json.gz",
+      "sha256": "4011b5cdb0bfd9ca88d4c5f5fe3e97e654d0aa200496a79e7b822f64e4288d5a"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/moderate-n1.6-s90002-R-greedy-phi0.375-KNone.json.gz",
+      "sha256": "06ad8f2a797afa1295be92bfc486714f9d38dcbb3c5f622242cb4a5c4c8f5317"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/moderate-n1.6-s90002-R-oracle-phi0.375-KNone.json.gz",
+      "sha256": "3b992e032990dc8538f456b0ca7aa8d43dfc759759ee5c4161ba427214f9f3fc"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/moderate-n1.6-s90003-R-fixed-phi0.375-K40.0.json.gz",
+      "sha256": "b63e8fe5d5cdf2eb728df87f4b4b32e038464f1de7c601eb44dfd90144737c10"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/moderate-n1.6-s90003-R-greedy-phi0.375-KNone.json.gz",
+      "sha256": "70f1489b7af2a3c194e3e2ed504dea33d0ea09123181caa93b02b8de07891aae"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/moderate-n1.6-s90003-R-oracle-phi0.375-KNone.json.gz",
+      "sha256": "8bcb26c1bebc14d74ae25184014ade2cd9905fb92d36785242b77eb4b1100426"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/moderate-n1.6-s90004-R-fixed-phi0.375-K40.0.json.gz",
+      "sha256": "00bc3c1eb2151c5e8c7b6f09319c0fec3bbbb4ba8c44928c5e028750c2b3e852"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/moderate-n1.6-s90004-R-greedy-phi0.375-KNone.json.gz",
+      "sha256": "3595edaf252b5755ffce975659f9bdfd5f62dd2b799b2ac9d365e5f3ab1b90f0"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/moderate-n1.6-s90004-R-oracle-phi0.375-KNone.json.gz",
+      "sha256": "ae9a54800aff6e2611b5668a77511255be14caeabc2eeeea3134112943a88cf8"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/wide-n1.2-s90001-R-fixed-phi0.375-K40.0.json.gz",
+      "sha256": "0f3a98705d162fa124ba7f9f88450b62c05aadcad2f1cf31cd853b0e5ab5a949"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/wide-n1.2-s90001-R-greedy-phi0.375-KNone.json.gz",
+      "sha256": "3f78a9be1be4c199f99fd1ec9c54845388934f1c4dabaa4cddf4f52007234fc1"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/wide-n1.2-s90001-R-oracle-phi0.375-KNone.json.gz",
+      "sha256": "e1e259ba409e0822c67d06bf112ec143fa8567196e92091ea0fcf9411ab524fc"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/wide-n1.2-s90002-R-fixed-phi0.375-K40.0.json.gz",
+      "sha256": "5e442b69c8b7e929377cdf1f5ee2b9a8089e6c677c96c45f9b3b1befea7b6ceb"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/wide-n1.2-s90002-R-greedy-phi0.375-KNone.json.gz",
+      "sha256": "8ffbb68fb8d79e75ea364401a94842c45bd9be2d9824992de6d146a50de19bf1"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/wide-n1.2-s90002-R-oracle-phi0.375-KNone.json.gz",
+      "sha256": "c4b34ebc86f7762b45efa154e834a45773b018daeb7a74521b6ab180879a32ae"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/wide-n1.2-s90003-R-fixed-phi0.375-K40.0.json.gz",
+      "sha256": "341e37208aa1219a1a04e9c99bb451a52c5863af3115384ae00368258907a329"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/wide-n1.2-s90003-R-greedy-phi0.375-KNone.json.gz",
+      "sha256": "c6a6bc825001e754067b75b3e7586863b27343611c1ffa9c476e084aec9df790"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/wide-n1.2-s90003-R-oracle-phi0.375-KNone.json.gz",
+      "sha256": "cb7227ecdd504097eeb3f4be1bf932f314eba8ded933e807846f71d06b4a5909"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/wide-n1.2-s90004-R-fixed-phi0.375-K40.0.json.gz",
+      "sha256": "a08f996c08cdcf9e41d8bb70e427c7bca82216492abb655e4e6b5f8230dbd204"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/wide-n1.2-s90004-R-greedy-phi0.375-KNone.json.gz",
+      "sha256": "106a1468ffeb79d2b9f16cac4e979530979b669f163e9e5a6e6afccae7d912e9"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/wide-n1.2-s90004-R-oracle-phi0.375-KNone.json.gz",
+      "sha256": "f411b989effb5cdf9444bc194e26b9b87da19949533789b6bc538cc6542d8b51"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/wide-n1.6-s90001-R-fixed-phi0.375-K40.0.json.gz",
+      "sha256": "bad6622f2fdcab856ed5afcc13a6939c2e6425c7988ea6510f0f97209c53d266"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/wide-n1.6-s90001-R-greedy-phi0.375-KNone.json.gz",
+      "sha256": "5ce16f9eff22d88fd423fb857e389a3b9bd3bd9b6917bf109c08c2e929c2612d"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/wide-n1.6-s90001-R-oracle-phi0.375-KNone.json.gz",
+      "sha256": "c6fb4ac1947547f2af97b6133da7988e6d3a2c5716887ce86da81d380d203068"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/wide-n1.6-s90002-R-fixed-phi0.375-K40.0.json.gz",
+      "sha256": "5ccc15285211b48eca19e8e3b205706264b1772363cac088a25ff63afb1092c3"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/wide-n1.6-s90002-R-greedy-phi0.375-KNone.json.gz",
+      "sha256": "0df9d52dcfb5249d687fe98bdc88ce4568f9a0b583006c568bf1a0c1c4c1110b"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/wide-n1.6-s90002-R-oracle-phi0.375-KNone.json.gz",
+      "sha256": "e444261165f6b749415420b62cb5f586f6e49d3321c61e451ad13d5faa729c97"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/wide-n1.6-s90003-R-fixed-phi0.375-K40.0.json.gz",
+      "sha256": "4075dfdc7a5d72be08e2821b6e7532a07568bef52b0b7c4ba4e1e32a9d74dcc9"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/wide-n1.6-s90003-R-greedy-phi0.375-KNone.json.gz",
+      "sha256": "2c9b8bb3ad854c3caa2fbdce817af5bfda1559f7304ae11b9bbb3da4dcb376cc"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/wide-n1.6-s90003-R-oracle-phi0.375-KNone.json.gz",
+      "sha256": "fe2a692656d9283a69ce58b2c644e8714c5dc6abcc9468209818746c130bf65e"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/wide-n1.6-s90004-R-fixed-phi0.375-K40.0.json.gz",
+      "sha256": "e30ff4fb7c49770b412c64cb7c2d56561377543bd6bf6450cdcc34efac91dd6d"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/wide-n1.6-s90004-R-greedy-phi0.375-KNone.json.gz",
+      "sha256": "8d82b6bd4251c9b20339f2331150c2bcf16f9cadcc1953d061c9b7f1f7b663cd"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/cases/wide-n1.6-s90004-R-oracle-phi0.375-KNone.json.gz",
+      "sha256": "7ff1031e4b5435311d64c934edbd573d553c119d430146b3280fd2eda1eb81b7"
+    },
+    {
+      "path": "evidence/commons-v3-world-model-consequence-v1/summary.json",
+      "sha256": "665b8e0fb87d0b37c167846b067984533ca7a9602271e131ac9f0ffb163f62b3"
+    },
+    {
+      "path": "scripts/visualize_commons_v3_world_models_v1.py",
+      "sha256": "11cf9d25dbe47f9ccebbae71c4d671bd872a285152a109ffc39642f28ba0be06"
+    },
+    {
+      "path": "swarm_societies/commons_v3/consequence_sites_v1.py",
+      "sha256": "96ed02d7e56bc87c7cb019917f1ba17f5f746b860a673302178a17d72b3ec27e"
+    },
+    {
+      "path": "swarm_societies/commons_v3/development_joint_sharing_sites_v1.py",
+      "sha256": "a5dce12358072e73de9493212c37428b356ce264248d14b47cb1ebeec64f9927"
+    },
+    {
+      "path": "swarm_societies/commons_v3/development_joint_sites_v1.py",
+      "sha256": "14443b6f10d1333f8f2c3c60ea2bb0d403674007a8bb997f5f329e394202958c"
+    },
+    {
+      "path": "swarm_societies/commons_v3/development_learning_sites_v1.py",
+      "sha256": "35b4484624a3582b309aa05806393c82551896d01e64f6cc872e9b3a790af964"
+    },
+    {
+      "path": "swarm_societies/commons_v3/development_pool_sites_v1.py",
+      "sha256": "c5b6d80fcf2c8215eaf82f45d346ba6b9db42753038d2cbab870a8e6f0bf9193"
+    },
+    {
+      "path": "swarm_societies/commons_v3/engine_sites_v1.py",
+      "sha256": "1b4ee66feb0fe6b339600440290390a1a477f8d7d9358de2b3abea6a62dfdca9"
+    },
+    {
+      "path": "swarm_societies/commons_v3/visualize_world_models_v1.py",
+      "sha256": "81b3986064c1226cce4e4dba0f5ddefead5c451d555618b3958e0c3b6845aeb6"
+    },
+    {
+      "path": "swarm_societies/visualize.py",
+      "sha256": "1cedaca8dbbe70aef2b763b7e4e9b67720c6a3783f6dcfe91971b6a4b141dae0"
+    }
+  ],
+  "stage": "known-rate-pooling",
+  "study_status": "development; four reused seeds; descriptive intervals after selection",
+  "style": "Chromatic Field v1",
+  "summary_sha256": "9e0ffa985a502f5151be902d8fa0738f63355cb577c2f0d755c7ac118f03eefc",
+  "verification": "saved aggregate reconstruction and declared prerequisite/inventory checks; not episode replay",
+  "version": "commons-v3-world-model-development-figures-v1",
+  "versions": {
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.3",
+    "python": "3.13.5"
+  }
+}
