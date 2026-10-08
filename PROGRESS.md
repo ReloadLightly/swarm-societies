@@ -1,5 +1,30 @@
 # Active work record
 
+## A2 resumes with exact optimization; two records preserved, 8 October 2026
+
+The optimization was pushed and remotely verified at
+`fdcbe0acfb7733c28002ae39656aae6f513419db`. Both initial moderate/need-1.2 L0
+episodes reached the full 512 ticks and their terminal observations. A scoped
+handoff validated their complete saved records before stopping only this task's
+old workers. Unfinished successor work was cancelled; no completed evidence
+was changed or removed. The old process's `BrokenProcessPool` exit is the
+intentional handoff, not a learner or scientific-gate failure.
+
+Preserved compressed-record SHA256 values are
+`32705498f3fe6c3a2c321b88bdb38839efd10ec0fb7387d61b9ddbffc58947ca`
+(seed 90001) and
+`256fd65b55edfffb1887dd0da5b0fbe6642250b55bc35df338896bb2bd00f09e`
+(seed 90002). Their scientific records have 513 belief observations each.
+Exact numerical comparison of these records is pending within recovery.
+
+The **same fixed 32-case bank** is now running with six workers, using the
+existing recovery command and unchanged scientific settings:
+`.venv/bin/python scripts/run_commons_v3_joint_development_v1.py run --workers 6`.
+The active log is `/tmp/commons-v3-joint-development-resume.log`; the earlier
+run and handoff logs remain in `/tmp`. Do not launch another active runner.
+G3-prime has no fallback verdict yet. Sharing and fresh evaluation remain
+unstarted, and the single-fallback stopping rule is unchanged.
+
 ## Bit-identical joint-posterior optimization verified, 8 October 2026
 
 The first two fallback L0 cases remain active with the original loaded
