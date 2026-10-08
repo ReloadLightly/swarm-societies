@@ -1,5 +1,39 @@
 # Active work record
 
+## A1 implementation ready for the declared R-pool bank, 8 October 2026
+
+The new `policies_pool_sites_v1.py` coordinator joins the union of local stock
+observations at consecutive ticks, including endpoints supplied by different
+observers. It uses only privileged total extraction to clean those transitions;
+an unobserved endpoint yields no transition. Unique (site,tick) events update
+the same 400-bin site posterior as L0 before new stock bounds. All agents
+receive the resulting beliefs instantly. Remote coordinates, stock values and
+navigation records remain absent from each agent's controller observations.
+The reference emits no messages and pays no message cost.
+
+`development_pool_sites_v1.py` adds the 16-case R-pool runner, unchanged G3-prime
+criterion and gated continuation of the already declared sharing arms. It
+reconstructs the completed L0 aggregate exactly before reusing its 16 selected
+cases and the 48 saved references. R-pool errors use all agent/site pairs and
+each agent's own directly seen pairs, with time-mean and terminal gaps.
+The reused `clean_receipts` counter denotes privileged pooled transitions
+per recipient in this reference; it does not imply paid receipt traffic.
+
+The separate effective-floor diagnostic instruments an exact replay of the
+16 selected L0 and 16 oracle cases. It counts one event per positive realized
+harvest agent-tick at the actual destination site, using decision-time
+floor/true-K. Each seed contributes equally to the descriptive cell mean;
+event-weighted means are secondary. Every complete original scientific record
+must remain identical. No saved bank is rewritten.
+
+**109 checks pass**, including 57 new pool/diagnostic/runner checks and 52
+existing sharing-controller/development checks. Original G3 summary digest
+remains `72b22a10d5f9222608623c6122da867a0238cfb7cef8b5f5b23bb9cd62f21400`.
+A1/A2 were pushed and remotely verified at
+`f279d65de7c5799ef9af1252e4ed641610096609`. Push this implementation before the
+16 declared R-pool episodes. No A1 scientific episode or A2 fallback has run
+at this checkpoint.
+
 ## Roland's approved G3 amendments A1/A2, 8 October 2026
 
 **Diagnosis supplied by Roland:** G3 assumed R-oracle is a consumption ceiling
