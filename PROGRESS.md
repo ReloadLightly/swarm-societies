@@ -1,5 +1,48 @@
 # Active work record
 
+## Unknown-rate sharing implemented; execution gated, 8 October 2026
+
+The next scientific implementation is now prepared in separate modules:
+`policies_joint_sharing_sites_v1.py` supplies L1 receipts, L2 event relay and
+L3 belief exchange, including the approved biased L2/L3 minorities.
+Each individual owns one joint posterior over its shared unknown rate and
+site capacities. Existing receipt timing, event deduplication, truthful
+contents, naive marginal-belief multiplication, byte budgets and navigation
+are reused. Evidence from one site updates the common rate and therefore
+the agent's other site marginals and remembered decision capacities.
+
+`development_joint_sharing_sites_v1.py` and its CLI
+`scripts/run_commons_v3_joint_sharing_development_v1.py` supply the fixed
+**80 sharing development cases**: five arms, four cells and the original
+four seeds. Before submitting a worker, the runner requires all 32 complete
+A2 records, reconstructs their aggregate using the original prerequisites,
+checks it against the saved summary and requires a passed G3-prime. It reuses
+the 16 saved unknown-rate L0 cases, preserves descriptive contrasts, and
+stops at the development review. Completed sharing banks cannot be restarted;
+the separate `verify` command performs exact episode and aggregate replay.
+
+**196 focused tests pass:** 23 new policy tests, 27 new runner tests and 146
+existing policy, receipt, joint-posterior and A2 regression tests. New fixtures
+cover paid receipt delivery, delayed relay deduplication, cross-site updates,
+private posterior ownership, biased truthful reports, matched message budgets,
+detached memories and continuation with copied policies and restored physical
+state. Four-agent/two-site/four-tick fixtures at the production numerical
+resolution replay exactly for L1, L2, L3 and L3-biased, including terminal
+observations and policy-memory digests. These are engineering checks, not
+sharing-benefit or welfare evidence. Independent review found no remaining
+scientific or gate defect.
+
+The real prerequisite check accepts the four published A2 records and rejects
+the still-incomplete comparison before any sharing execution. The original
+fallback workers continue unchanged; the log has reached wide/need-1.2 L0
+seed 90001 tick 384, with **4 of 32 complete records saved**. No sharing
+development episode, fresh evaluation or experimental model call has run.
+G3-prime, priors, decision parameters and the single-fallback stopping rule
+are unchanged. Preparation of this implementation does not imply a gate pass.
+
+The preceding recovery checkpoint was pushed and remotely verified at
+`e4f6b432bc4c4301749661a07268cb7ab8c23473`.
+
 ## A2 continues; interruption recovery verified, 8 October 2026
 
 The user authorized continuing the binding plan. The existing four-worker

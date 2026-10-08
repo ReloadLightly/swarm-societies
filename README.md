@@ -35,6 +35,12 @@ sequences / 24,576 transitions**, all reproduced exactly. The fallback arena
 comparison is running. Independent evaluation remains unstarted.
 [Results and paired gate values](PROGRESS.md).
 
+The unknown-rate sharing policies and their gated development runner are now
+implemented: paid extraction receipts (L1), deduplicated evidence relay (L2),
+and naive belief exchange (L3), including the approved biased minorities.
+Each individual retains one private joint rate/capacity model. This is tested
+implementation; the sharing experiments await a complete, passing A2 result.
+
 An exact replay of the 16 selected L0 and 16 oracle cases measures effective
 floors at realized harvests. In the wide/high-demand cell, L0's mean floor is
 **34.49% of true capacity**, versus the oracle's **37.5%**. L0 has lower mean
@@ -475,6 +481,17 @@ menu, saving each result as it completes. These preservation checks establish
 integrity and completeness; the [original runner](scripts/run_commons_v3_joint_development_v1.py)'s
 `verify` command remains the separate full scientific replay. The current
 [process and gate status](PROGRESS.md) determines whether any execution is due.
+
+The prepared unknown-rate sharing continuation uses:
+
+```bash
+.venv/bin/python scripts/run_commons_v3_joint_sharing_development_v1.py run --workers 4
+```
+
+It reconstructs the completed A2 gate before starting the fixed 80 sharing
+development cases, reuses saved L0 records, and stops at the development review.
+An incomplete or failed A2 comparison prevents execution. Use `verify` for a
+full exact replay of a completed sharing bank.
 
 Exercise the optional political lifecycle and full policy-memory continuation
 without an evidence download or experimental study:
