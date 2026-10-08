@@ -1,5 +1,27 @@
 # Active work record
 
+## Complete-bin cache: full G2 replay exact, 8 October 2026
+
+The complete-bin cache implementation at `ad16d77` now reproduces all **512
+saved calibration sequences / 24,576 transitions exactly**. The independently
+reconstructed calibration summary is unchanged, with canonical SHA256
+`5caacfa557025a23561ddf6e2586025ada9974fb8f0896914f30c97c78ecc115`;
+joint G2 remains passed. This completes the pending numerical replay alongside
+the 111 passing tests and the exact four-tick production-size record/private
+memory comparison. No calibration records, criteria or numerical settings
+were changed.
+
+The four-worker arena batch continues with its previously loaded implementation.
+Four complete moderate/need-1.2 L0 records remain preserved; all four active
+moderate/need-1.6 cases have passed tick 128. The newly verified cache is eligible
+for fresh workers, but no live posterior objects have been modified. A2's
+32-episode comparison and G3-prime verdict remain pending. Sharing and fresh
+evaluation remain unstarted.
+
+The preceding four-record checkpoint was pushed and remotely verified at
+`7e511ffbf3497c607f11e689149dad0755e194bc`; all four published raw files restore
+byte-identically from a checkout pinned to that commit.
+
 ## A2: four complete episodes preserved; comparison pending, 8 October 2026
 
 The moderate/need-1.2 L0 cell now has all four complete 512-tick records.
