@@ -1,5 +1,44 @@
 # Active work record
 
+## A1 exact replay complete; A2 joint implementation ready, 8 October 2026
+
+All **16 R-pool episodes and their aggregate replay exactly**. Canonical
+summary digest is
+`9e0ffa985a502f5151be902d8fa0738f63355cb577c2f0d755c7ac118f03eefc`;
+G3-prime remains failed at −0.036122. The floor diagnostic was pushed and
+remotely verified at `c42ae61cc6cefd2c0e466193feefb5f90e9a6603`; its public
+restoration is byte-identical. Both requested A1 replays are now complete.
+
+A2 uses separately versioned joint-posterior, observation and controller
+modules. One private rate couples each agent's conditional site posteriors;
+R-pool shares one joint posterior. The true physical rate is absent from
+agent packets. The approved LogUniform[0.12,0.48] prior, physical rate 0.24,
+K prior, φ=0.375, q=0.25 and arena seeds remain unchanged. This is declared
+factor-of-two uncertainty around the simulator rate, not an empirical prior.
+
+Likelihood support is retained as exact feasible regions, including explicit
+capacity-saturation atoms. Smooth densities use 400 log-capacity bins and
+32 log-rate bins with eight-point quadrature, split at support boundaries.
+Independent scalar integration, long-history support, cross-site coupling,
+hidden information, deduplication, terminal assimilation and exact replay are
+checked. Cache changes preserve bit-identical results against uncached
+computation; no numerical setting was chosen from arena outcomes.
+**All 75 joint learner, calibration, observation, controller and runner tests
+pass.** Tiny end-to-end fixtures use the same numerical settings as G2.
+
+Joint G2 is specified in the calibration implementation before execution:
+**512 independent synthetic sequences** (seeds 94001–94512), three sites with
+one shared prior-drawn rate, 16 transitions/site, and checkpoints 1/8/16.
+The 24,576 transitions include saturation. Rate ranks, site-specific capacity
+ranks and predictive ranks form 21 families, with the same DKW audit approach
+as Ticket C (family alpha 0.01, distance bound 0.090262). Correlated sites and
+ticks do not count as independent replicates. Coverage is descriptive.
+Independent likelihood references and evidence-use checks accompany G2.
+No joint calibration panel or fallback arena episode has run at this checkpoint.
+Publish the verified implementation before calibration; only a passed joint
+G2 permits the 32 fallback L0/R-pool episodes. A failed fallback G3-prime stops
+the contracted design without another fallback.
+
 ## Effective-floor diagnostic complete, 8 October 2026
 
 All **32 original episodes replay exactly** under instrumentation: the 16
