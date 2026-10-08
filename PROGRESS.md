@@ -1,5 +1,34 @@
 # Active work record
 
+## G3 review resolution: bounded fallback recommended, 8 October 2026
+
+Roland asked whether the review hold blocks the project and how to proceed
+rigorously. The review does **not** require a new oracle-controller work package
+before the single fallback already specified in contract §8. R-oracle remains
+an informed heuristic reference. Direct paired L2−L0 epistemic and consumption
+contrasts can test sharing without an optimal oracle. G3 remains the unchanged
+operational development stop; it does not establish complete learning or rule
+out all benefits of sharing.
+
+Recommendation pending approval of the missing prior: fix
+r∼LogUniform[0.12,0.48] once, describing it as factor-of-two uncertainty around
+the simulator's physical rate rather than an empirically established prior.
+Each agent has one unknown rate shared across its site beliefs, with the true
+rate hidden from its observation packet. Recalibrate the joint learner before
+16 selected-q fallback L0 episodes on the same four development seeds. Keep
+physical r=0.24, φ=0.375, q=0.25, the saved references and the G3 boundary.
+Do not search prior widths or retune the controller after inspecting outcomes.
+If G3 triggers again, stop this contracted design. If it clears, continue the
+declared sharing development arms, keeping fresh evaluation untouched until
+the contracted development review and freeze.
+
+Extra rate uncertainty may simply worsen control; whether sharing improves
+inference and consumption remains the question to test. Preserve the completed
+known-rate result regardless of the fallback outcome. No fallback code or
+episodes have been started, no contract amendment has been made, and the
+specific prior still requires Roland's explicit approval under §16. This
+concludes the requested scientific review; it creates no additional gate.
+
 ## Ticket D base design: G3 triggers the fallback, 8 October 2026
 
 All **32 declared L0 development episodes** are complete on the four reused
