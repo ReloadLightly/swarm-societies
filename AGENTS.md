@@ -2,6 +2,11 @@
 
 # Swarm Societies working conventions
 
+Local simulations, tests, saved-evidence analysis and Git synchronization do
+not require API-key setup. Do not gate this work on `api_key_settings`, request
+an API key, or enable an API integration to resume it. Experimental model calls
+remain out of scope under the current paper contract.
+
 Commit and push completed, verified increments to GitHub promptly as work
 progresses. The user explicitly requested continuous repository synchronization;
 do not defer all updates until the end of a research stage. Publish new raw

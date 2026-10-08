@@ -1,5 +1,25 @@
 # Active work record
 
+## Session resumed without API-key setup, 8 October 2026
+
+The checkpoint at `f4d3c54d35f789f71a3c0470bdce4fa198121648` matches
+GitHub's `main` branch. All four saved A2 records remain byte-identical to
+that commit and have complete 512-tick records and 513 belief observations.
+This is an integrity/completeness check, not a new episode replay.
+
+The existing host runner, PID `1068860`, and all four scientific workers
+remain active. All four moderate/need-1.6 L0 cases have reported tick 384;
+seed 90003 has reported tick 512. The fixed-order writer has not saved that
+next cell yet, so the complete saved inventory remains **4 of 32 episodes**.
+No duplicate runner was launched. Continue with the existing PID/log paths
+below; G3-prime remains pending.
+
+The user requested removal of an `api_key_settings` prerequisite. No such
+requirement was found in the repository or local Codex configuration. The
+working conventions now explicitly state that this local research work
+requires no API-key setup. No app-level setting was changed or experimental
+model call made.
+
 ## Complete-bin cache: full G2 replay exact, 8 October 2026
 
 The complete-bin cache implementation at `ad16d77` now reproduces all **512
