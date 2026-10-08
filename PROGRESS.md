@@ -1,5 +1,28 @@
 # Active work record
 
+## A2: four complete episodes preserved; comparison pending, 8 October 2026
+
+The moderate/need-1.2 L0 cell now has all four complete 512-tick records.
+This is **4 of the prescribed 32 fallback episodes**; no R-pool fallback
+episode or G3-prime verdict is complete. The two original records retain their
+published hashes. The two newly completed files have SHA256 values
+`b48e0f2ac396d84eb3d16db4b086476602c4831dd6c9d35d6218274aa9a7ea02`
+(seed 90003) and
+`aec2aef91f1d25da030b3e2f2a5971215f839d6d3d2f38216eecf35238c4eef0`
+(seed 90004).
+
+All four records have 512 material ticks, 513 belief observations, 24 agents,
+the approved hidden-rate prior, unchanged φ/q and zero message traffic/cost.
+This checks saved-record completeness and integrity; it is not a claim of full
+A2 episode replay. The persistent four-worker run continues on the remaining
+cases with its previously loaded code.
+
+The complete-bin cache implementation was pushed and remotely verified at
+`ad16d77200287cfe36f4601b780d46a2e290a0a2`. Its 111 tests pass; the full saved
+G2 replay is still underway, so it has not been adopted by the arena workers.
+The earlier A1 result, approved priors, seeds, measurements and stopping rule
+remain unchanged. No sharing or fresh evaluation has started.
+
 ## Complete-bin cache verified in tests; full G2 replay pending, 8 October 2026
 
 The persistent four-worker continuation remains active. One continued case has
