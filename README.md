@@ -34,6 +34,13 @@ fallback, beginning with joint-posterior calibration. Independent evaluation
 remains unstarted.
 [Results and paired gate values](PROGRESS.md).
 
+An exact replay of the 16 selected L0 and 16 oracle cases measures effective
+floors at realized harvests. In the wide/high-demand cell, L0's mean floor is
+**34.49% of true capacity**, versus the oracle's **37.5%**. L0 has lower mean
+floors in three cells; the moderate/low-demand means are nearly identical.
+This describes the decision difference without isolating its causal contribution
+from allocation and navigation.
+
 Earlier studies remain frozen. Ecological qualification witnesses viability in
 five of nine cells; robust incentive qualification fails, and the first optional
 institution comparison finds no robust charter advantage. Those results and the

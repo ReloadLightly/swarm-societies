@@ -1,5 +1,37 @@
 # Active work record
 
+## Effective-floor diagnostic complete, 8 October 2026
+
+All **32 original episodes replay exactly** under instrumentation: the 16
+selected L0 cases and 16 selected R-oracle cases. Their complete scientific
+records remain unchanged. The [diagnostic](evidence/commons-v3-pooling-development-v1/floor-diagnostics.json)
+reports one observation per positive realized harvest agent-tick, using the
+decision-time effective floor divided by true capacity at the harvested site.
+Cell means give each of the four seeds equal weight; event-weighted values,
+final-quarter results and per-seed counts are retained separately.
+
+| World | Need | L0 whole-run floor / K | R-oracle floor / K | L0 final-quarter floor / K |
+| --- | ---: | ---: | ---: | ---: |
+| Moderate | 1.2 | 0.375447 | 0.375000 | 0.373827 |
+| Moderate | 1.6 | 0.361429 | 0.375000 | 0.366878 |
+| Wide | 1.2 | 0.359344 | 0.375000 | 0.359481 |
+| Wide | 1.6 | 0.344925 | 0.375000 | 0.350651 |
+
+The harder cells have lower L0 floors, consistent with the supplied diagnosis.
+The moderate/low-demand whole-run mean is slightly higher than the oracle's.
+This descriptive diagnostic does not isolate floors from allocation, navigation
+or the selection of sites where harvest succeeds; it is not a causal proof or
+a new gate. Diagnostic file SHA256:
+`66be262373a50df8598fc8f5ad1809f6ca2935f77824902b4c086a754c3cc3dc`.
+
+The A1 result was pushed and remotely verified at
+`f783bd7910211e9037069485c36d52f144f68b88`. A public checkout pinned to that
+commit restored all 17 A1 evidence files byte-identically, including summary
+file SHA256 `9e570854dd8da48a57d3db654402713b65ed2138da54a3d7355d237449292071`.
+Its independent 16-case exact replay is still running. A2 implementation and
+engineering verification are in progress; no joint G2 panel or fallback arena
+has run yet.
+
 ## A1 R-pool complete: G3-prime fails; A2 is triggered, 8 October 2026
 
 All **16 R-pool development episodes** are complete. Implementation
