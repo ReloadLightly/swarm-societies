@@ -1,5 +1,42 @@
 # Active work record
 
+## A2 continues; interruption recovery verified, 8 October 2026
+
+The user authorized continuing the binding plan. The existing four-worker
+batch remains active, with **4 of 32 complete episodes saved**. The log has
+reached tick 512 for moderate/need-1.6 L0 seeds 90002 and 90003, and tick 256
+for wide/need-1.2 L0 seed 90001. A tick-512 heartbeat precedes terminal belief
+assimilation and does not establish a complete saved record. The active
+fixed-order writer is still waiting for earlier cases. No duplicate runner,
+sharing arm or fresh evaluation has started; G3-prime remains pending.
+
+A separate execution-only recovery command is now available at
+`scripts/resume_commons_v3_joint_development_v1.py`. It addresses the risk
+that the original submission-order writer leaves later completed cases
+unsaved behind a slow case. Future recovery saves each completed result
+immediately, retains the original job order for aggregation, and cancels
+queued work while preserving successful running results after a worker
+failure. It uses the existing episode runner, prerequisites, serializers,
+32-case menu and gate unchanged. No completed-study source was edited.
+
+**42 tests pass:** 27 new recovery tests and 15 existing A2 tests. Independent
+review found no remaining material issue. The real saved-record preflight
+preserves all four published files and identifies exactly 28 missing cases;
+the unchanged prerequisite loader confirms failed A1 and passed joint G2.
+The host process guard correctly refuses active PID `1068860`. These are
+execution/integrity checks, not an additional scientific replay.
+
+**Do not switch the live batch.** If it exits before completing the bank,
+review/publish any newly saved cases and verify the remote commit, then use
+the new script's `resume --published-commit FULL_SHA --workers 4` command.
+It requires exact published saved-file bytes and complete terminal records,
+refuses an already completed bank, and runs only prescribed missing cases.
+The original full `verify` path is retained separately. The old `/tmp`
+invocation expects only two saved files and must not be relaunched as-is.
+
+The preceding checkpoint was pushed and remotely verified at
+`ddd9f46a5b40e7b494e6cb9c28f9ff8dcc443f08`.
+
 ## Session resumed without API-key setup, 8 October 2026
 
 The checkpoint at `f4d3c54d35f789f71a3c0470bdce4fa198121648` matches

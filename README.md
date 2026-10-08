@@ -465,6 +465,17 @@ uv pip install --python .venv/bin/python -r requirements-world-model-v1.txt -e '
 .venv/bin/python -m pytest -q
 ```
 
+The active A2 development comparison has a separate
+[interruption-recovery runner](scripts/resume_commons_v3_joint_development_v1.py).
+Use it only after confirming on the host that the existing runner has exited.
+Review and publish all complete saved cases, refresh `origin/main`, then pass
+that verified full commit SHA with `resume --published-commit SHA --workers 4`.
+It preserves those records and runs only missing cases from the fixed 32-case
+menu, saving each result as it completes. These preservation checks establish
+integrity and completeness; the [original runner](scripts/run_commons_v3_joint_development_v1.py)'s
+`verify` command remains the separate full scientific replay. The current
+[process and gate status](PROGRESS.md) determines whether any execution is due.
+
 Exercise the optional political lifecycle and full policy-memory continuation
 without an evidence download or experimental study:
 
