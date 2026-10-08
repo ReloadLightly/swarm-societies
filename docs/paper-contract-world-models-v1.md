@@ -142,7 +142,8 @@ Do reuse two principles from `world_model_v1`:
 
 | Arm | Learning and communication |
 | --- | --- |
-| R-oracle | True K_j through the same wrapper. Knowledge ceiling for this decision rule. |
+| R-oracle | True K_j through the same wrapper. Descriptive true-capacity heuristic, not a consumption ceiling (A1). |
+| R-pool | Perfect-sharing ceiling (A1): same wrapper, φ=0.375, q=0.25 and site prior as L0; every transition observed by any agent is cleaned using total site extraction and applied instantly to each agent's site posterior, without message traffic or costs. Physical r=0.24 is known in the initial A1 comparison. |
 | R-fixed | Best single belief for all sites, chosen on development seeds from {20, 30, 40}. This is the competitor that does nothing clever. |
 | R-greedy | Floor 0. Collapse anchor. |
 | L0 asocial | Own clean transitions, saturation and maximum-stock bounds only. |
@@ -167,7 +168,12 @@ the biased-prior mixture weight are fixed before development outcomes.
 
 The design is 2 heterogeneity levels (moderate, wide) × 2 demand levels (1.2, 1.6) = 4 cells. The moderate world is the internal negative control for H2.
 
-Pre-declared fallback (G3 only): make r a single unknown global parameter with a 2-D posterior.
+Approved fallback (A2, only if G3-prime fails): r ~ LogUniform[0.12,0.48],
+one unknown rate shared across sites in each agent's joint posterior, with the
+true rate hidden. This is factor-of-two uncertainty around the simulator's
+rate, not an empirical prior. No search over prior widths. Recalibrate the
+joint learner under G2, then compare fallback L0 and R-pool using G3-prime;
+if it fails again, stop the contracted design. There are no further fallbacks.
 
 ## 9. Measurements
 
@@ -205,7 +211,7 @@ Everything else is descriptive, with ordinary 95% intervals. No large simultaneo
 | G0 | Literature closure finds no identical prior design. | Report to Roland before Ticket C. |
 | G1 | Ticket B, 4 development seeds, versioned engine: R-oracle − R-fixed ≥ 0.08 of need in the wide world at need 1.6. | Stop and report. |
 | G2 | Simulation-based calibration of the site posterior passes on at least 500 synthetic transitions, including clipped ones. | Fix the learner before any arm runs. |
-| G3 | Learning is not trivial: if L0 reaches R-oracle consumption within 0.02 by tick 64 in all four cells, sharing cannot matter. | Use the single pre-declared fallback (§8); if still trivial, stop. |
+| G3-prime (A1, replaces G3) | On the same four development seeds, mean whole-run share of need for R-pool minus L0 is at least 0.02 in the wide/need-1.6 cell. Report all four cells and all-pair/seen-pair epistemic gaps descriptively. | Use A2 once; if the fallback comparison fails, stop the contracted design. |
 | G4 | The engine parity test passes. | Fix the engine before Ticket B. |
 
 One documented revision is allowed after the development pass, using 4 more development seeds. Then the design freezes once.
@@ -217,7 +223,7 @@ One documented revision is allowed after the development pass, using 4 more deve
 | A | `engine_sites_v1`, observation contract v2, parity tests. | G4 |
 | B | Consequence map: R-oracle, R-fixed and R-greedy × 4 cells × 4 development seeds. Choose φ for the oracle and the single belief for R-fixed. | G1 |
 | C | Exact site posterior; clean-transition extraction from legal observations only; calibration; L0 wrapper. | G2 |
-| D | Message records (receipts, evidence with (site, tick) deduplication, beliefs); L1–L3; biased minority; development pass; choose q. | G3 |
+| D | Message records (receipts, evidence with (site, tick) deduplication, beliefs); L1–L3; biased minority; development pass; selected q=0.25. A1/A2 order and stopping rule are recorded in §17. | G3-prime |
 | E | Freeze design, seeds and contrasts. Run the 32-seed evaluation and replay. Produce three figures and the README as a paper draft. | — |
 
 Use the existing archive and replay tooling as it is. Add no new audit or
@@ -257,10 +263,48 @@ Possible follow-up after this paper: ShinkaEvolve over fusion and communication 
 ## 16. Process rules
 
 - Tickets run in order. Each ends with passing tests and a short PROGRESS.md entry.
-- Reviews happen only at G1, after the development pass (G3), before the freeze and after evaluation.
+- Reviews happen only at G1, after the development pass (G3-prime under A1), before the freeze and after evaluation.
 - Any deviation from this contract needs Roland's approval and an entry in §17.
 
 ## 17. Contract change log
+
+- **Roland, G3 review decision, 8 October 2026 — diagnosis:** G3 assumed
+  R-oracle is a consumption ceiling for the declared decision rule. Ticket D
+  falsifies that premise: selected L0 exceeds R-oracle in every cell, on the
+  first 64 ticks and on the whole run. G3 therefore measured the conservatism
+  of R-oracle's floor, not the room left for sharing. The completed G3 result
+  stays preserved and reported unchanged; R-oracle remains a descriptive
+  reference (a true-capacity heuristic), not a ceiling. The original G3 used
+  first-64-tick consumption within 0.02 of R-oracle in all four cells and
+  triggered its fallback; its source, evidence and reported verdict remain
+  unchanged.
+- **Amendment A1, approved by Roland, 8 October 2026:** add R-pool, the
+  perfect-sharing ceiling. Same wrapper, φ=0.375, q=0.25 and site prior as L0.
+  Each agent's site posteriors use every transition observed by any agent,
+  with total extraction at each site known (so every observed transition is
+  clean), applied instantly, with no message costs or message traffic.
+  Physical r=0.24 is known, as in L0. Replace G3 with G3-prime: on the same
+  four development seeds, mean whole-run share of need for R-pool minus L0
+  is at least 0.02 in the wide/need-1.6 cell. Report all four cells and the
+  epistemic gaps (all-pair and seen-pair errors) descriptively.
+- **Amendment A2, approved by Roland, 8 October 2026, used only if G3-prime
+  fails:** the §8 fallback uses r ~ LogUniform[0.12,0.48], one rate shared
+  across sites in each agent's joint posterior, with the true rate hidden.
+  Declare it as factor-of-two uncertainty around the simulator's rate, not an
+  empirical prior. No search over prior widths.
+- **Approved execution order for A1/A2:** (1) Implement R-pool and run the
+  four cells × four development seeds (16 episodes), reusing saved L0 and
+  reference episodes unchanged; evaluate G3-prime. (2) Also report,
+  descriptively without a new gate, mean effective floor at harvest events
+  as a fraction of true K for L0 and R-oracle. (3) If G3-prime passes, run
+  L1, L2, L3, L2-biased and L3-biased on the same four seeds, then stop at the
+  development review and report. (4) If it fails, recalibrate the joint
+  learner (G2), run fallback L0 and R-pool on the same four seeds and
+  re-evaluate G3-prime. If it passes, continue to (3); otherwise stop the
+  contracted design. There are no further fallbacks. φ=0.375, q=0.25, the K
+  prior, worlds, seeds, untouched fresh evaluation set, all primary contrasts
+  and the no-model-calls rule remain unchanged. No other amendments, gates
+  or protocols. Commit/push each step and verify the remote.
 
 - **Roland, Ticket D continuation, 8 October 2026:** approved replacing the
   dogmatic biased prior with 99% log-uniform [50,100] plus 1% log-uniform [8,100].

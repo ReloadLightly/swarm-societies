@@ -1,4 +1,4 @@
-**Current plan:** [Paper contract v1](docs/paper-contract-world-models-v1.md) replaces the reframing review’s “Next decision” section and is the current binding plan. Tickets A/G4, B/G1 and C/G2 are complete; Ticket D's base design triggers the G3 fallback. [Current checkpoint](PROGRESS.md).
+**Current plan:** [Paper contract v1](docs/paper-contract-world-models-v1.md), including Roland's approved A1/A2 amendments, is binding. Tickets A/G4, B/G1 and C/G2 are complete; Ticket D now compares perfect sharing against saved L0 at G3-prime. The completed original G3 result is preserved. [Current checkpoint](PROGRESS.md).
 
 # Swarm Societies: A Research Testbed for Resources and Institutions
 
@@ -26,8 +26,9 @@ Substantial capacity-estimation error remains. This establishes a limitation
 of the consumption benchmark, not accurate complete-map learning or a general
 verdict about sharing. The oracle is an informed heuristic rather than a
 consumption ceiling. All 32 records and their aggregate replay exactly. Sharing
-cases were not run. The prescribed unknown-rate fallback is held for review
-before choosing a rate prior; independent evaluation remains unstarted.
+cases were not run. Approved A1 now tests the perfect-sharing R-pool reference
+against saved L0 at G3-prime. Approved A2 supplies one unknown-rate fallback
+only if that comparison fails; independent evaluation remains unstarted.
 [Results and paired gate values](PROGRESS.md).
 
 Earlier studies remain frozen. Ecological qualification witnesses viability in
@@ -135,8 +136,9 @@ extraction receipts can identify growth transitions without global knowledge;
 incomplete shared extraction remains confounded. The frozen forager receives
 capacity beliefs through a wrapper. Its known-capacity reference is an informed
 heuristic, which the asocial learner exceeds in the current development means.
-Tickets A–C are complete. D's base design triggers G3 before sharing. At Roland's
-request, the unknown-rate fallback is held for review before choosing its prior.
+Tickets A–C are complete. D's base design triggered the original G3 before
+sharing. Roland's A1/A2 replace the prospective gate with G3-prime and specify
+the single conditional unknown-rate fallback.
 [Progress and gate evidence](PROGRESS.md).
 ALIFE 2027 remains the paper target.
 

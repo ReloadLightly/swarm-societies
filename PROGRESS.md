@@ -1,5 +1,31 @@
 # Active work record
 
+## Roland's approved G3 amendments A1/A2, 8 October 2026
+
+**Diagnosis supplied by Roland:** G3 assumed R-oracle is a consumption ceiling
+for the declared decision rule. Ticket D falsifies that premise: selected L0
+exceeds R-oracle in every cell, on the first 64 ticks and on the whole run.
+G3 therefore measured the conservatism of R-oracle's floor, not the room left
+for sharing. The completed G3 result stays preserved and reported unchanged;
+R-oracle remains a descriptive reference (a true-capacity heuristic), not a
+ceiling. The requested effective-floor diagnostic will quantify the floor
+difference descriptively; it adds no gate.
+
+A1/A2 are recorded in contract §17. Implement the perfect-sharing R-pool
+reference with the same known rate, φ=0.375, q=0.25 and site prior as L0.
+Run its 16 episodes on the existing four seeds, preserving saved L0 and
+references. G3-prime uses mean whole-run R-pool−L0 consumption/need ≥0.02 in
+wide/need1.6; report all cells and epistemic gaps. Report mean floor/true-K
+over positive-harvest agent-ticks for L0 and R-oracle, descriptively.
+
+If G3-prime passes, run the declared 80 sharing development episodes and stop
+at the development review. If it fails, the now-approved single fallback uses
+one unknown global rate per agent, LogUniform[0.12,0.48], with joint G2
+recalibration before fallback L0/R-pool and the same G3-prime. No prior-width
+search or further fallback. Fresh evaluation remains untouched. Implement
+separately versioned additions and use existing record/replay tooling;
+completed source and evidence banks remain unchanged.
+
 ## G3 review resolution: bounded fallback recommended, 8 October 2026
 
 Roland asked whether the review hold blocks the project and how to proceed
