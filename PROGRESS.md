@@ -1,5 +1,38 @@
 # Active work record
 
+## A1 R-pool complete: G3-prime fails; A2 is triggered, 8 October 2026
+
+All **16 R-pool development episodes** are complete. Implementation
+`acb1515ce01804619d6ecb5eef8390326a5b5c55` was pushed and remotely verified
+before execution. The original 32-case L0 bank, selected q=0.25 and all saved
+references remain unchanged. The new
+[summary](evidence/commons-v3-pooling-development-v1/summary.json) retains every
+paired seed contrast, all four cells, epistemic trajectories, and both all-pair
+and directly-seen-pair error gaps.
+
+| World | Need | Saved L0 consumption/need | R-pool consumption/need | R-pool − L0 |
+| --- | ---: | ---: | ---: | ---: |
+| Moderate | 1.2 | 0.994932 | 0.989764 | −0.005168 |
+| Moderate | 1.6 | 0.870312 | 0.849600 | −0.020712 |
+| Wide | 1.2 | 0.986909 | 0.980514 | −0.006396 |
+| Wide | 1.6 | 0.870962 | 0.834840 | −0.036122 |
+
+**G3-prime fails:** its target mean is −0.036122, below +0.02. Every target-cell
+seed loses consumption. Its descriptive 95% interval is [−0.068955,−0.003290];
+the gate uses the mean, not this interval. Pooling greatly reduces capacity
+error while consumption decreases in all four cell means. This is a result
+for the declared controller, not a mathematical ceiling on attainable welfare.
+No sharing arm has run.
+
+The 16-case exact replay is running. The separate 32-case floor instrumentation
+replay is also running and verifies each complete original scientific record
+before accepting its diagnostic; the final descriptive table remains pending.
+These read-only replays do not extend the old banks. A2's condition is now met:
+implement and recalibrate the approved joint rate–capacity learner, with no
+fallback development episodes until G2 passes. Preserve this A1 result
+regardless of the fallback outcome. The single A2 prior, unchanged parameters,
+same seeds and final stopping rule are already approved in contract §17.
+
 ## A1 implementation ready for the declared R-pool bank, 8 October 2026
 
 The new `policies_pool_sites_v1.py` coordinator joins the union of local stock

@@ -1,4 +1,4 @@
-**Current plan:** [Paper contract v1](docs/paper-contract-world-models-v1.md), including Roland's approved A1/A2 amendments, is binding. Tickets A/G4, B/G1 and C/G2 are complete; Ticket D now compares perfect sharing against saved L0 at G3-prime. The completed original G3 result is preserved. [Current checkpoint](PROGRESS.md).
+**Current plan:** [Paper contract v1](docs/paper-contract-world-models-v1.md) replaces the reframing review's “Next decision” section and remains binding, including Roland's approved A1/A2 amendments. A1's G3-prime comparison fails and triggers the single A2 fallback. The completed original G3 result is preserved. [Current checkpoint](PROGRESS.md).
 
 # Swarm Societies: A Research Testbed for Resources and Institutions
 
@@ -26,9 +26,12 @@ Substantial capacity-estimation error remains. This establishes a limitation
 of the consumption benchmark, not accurate complete-map learning or a general
 verdict about sharing. The oracle is an informed heuristic rather than a
 consumption ceiling. All 32 records and their aggregate replay exactly. Sharing
-cases were not run. Approved A1 now tests the perfect-sharing R-pool reference
-against saved L0 at G3-prime. Approved A2 supplies one unknown-rate fallback
-only if that comparison fails; independent evaluation remains unstarted.
+cases were not run. Approved A1's 16 R-pool episodes now fail G3-prime:
+perfect sharing meets **83.48% of need** in the wide/high-demand cell against
+L0's **87.10%**, a **−3.61 percentage-point** difference, despite much more
+accurate capacity estimates. This triggers the single approved A2 unknown-rate
+fallback, beginning with joint-posterior calibration. Independent evaluation
+remains unstarted.
 [Results and paired gate values](PROGRESS.md).
 
 Earlier studies remain frozen. Ecological qualification witnesses viability in
