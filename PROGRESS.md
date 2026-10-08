@@ -1,5 +1,21 @@
 # Active work record
 
+## A2 fallback comparison running, 8 October 2026
+
+Joint G2, its exact replay and public restoration are complete. The verified
+checkpoint was pushed and remotely checked at
+`394bb9914ee333f08869fa75806732bf1dc9243c`. The approved 32-episode fallback
+is now running with two workers: L0 and R-pool × four cells × the same four
+development seeds. The first episodes are still computing; **G3-prime has no
+fallback verdict yet**. This uses the published implementation unchanged.
+
+Command: `.venv/bin/python scripts/run_commons_v3_joint_development_v1.py run --workers 2`.
+Output is `evidence/commons-v3-joint-learning-development-v1/`; live process
+output is `/tmp/commons-v3-joint-development-run.log`. Avoid launching a second
+runner while this one is active. Recovery uses the same command only after
+the active process has stopped; completed records are verified and preserved.
+No sharing arm or fresh evaluation episode has started.
+
 ## A2 joint G2 passes and replays exactly, 8 October 2026
 
 The fixed joint calibration panel is complete: **512 independent sequences,
