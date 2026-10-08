@@ -30,8 +30,9 @@ cases were not run. Approved A1's 16 R-pool episodes now fail G3-prime:
 perfect sharing meets **83.48% of need** in the wide/high-demand cell against
 L0's **87.10%**, a **−3.61 percentage-point** difference, despite much more
 accurate capacity estimates. This triggers the single approved A2 unknown-rate
-fallback, beginning with joint-posterior calibration. Independent evaluation
-remains unstarted.
+fallback. Its joint posterior passes G2 on **512 independent synthetic
+sequences / 24,576 transitions**; exact numerical replay is underway before
+the fallback arena comparison. Independent evaluation remains unstarted.
 [Results and paired gate values](PROGRESS.md).
 
 An exact replay of the 16 selected L0 and 16 oracle cases measures effective

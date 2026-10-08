@@ -1,5 +1,24 @@
 # Active work record
 
+## A2 joint G2 passes; exact replay underway, 8 October 2026
+
+The fixed joint calibration panel is complete: **512 independent sequences,
+24,576 transitions, including 1,629 clipped transitions**. All 21 rate-rank,
+capacity-rank and predictive-rank checks pass. The maximum empirical CDF
+distance is **0.060685**, below the pre-execution DKW bound **0.090262**.
+The independent likelihood reference differs by at most **7.38×10⁻¹¹**;
+the evidence-use and repeated-saturation checks also pass. This is qualification
+on the declared synthetic panel, not universal calibration in harvesting arenas.
+
+The implementation was pushed and remotely verified before execution at
+`bb2ee1b5ff17cfff76371df3bf99537f1332715d`. Full cases and the reconstructible
+[summary](evidence/commons-v3-joint-site-calibration-v1/summary.json) are retained.
+Canonical summary digest:
+`5caacfa557025a23561ddf6e2586025ada9974fb8f0896914f30c97c78ecc115`.
+The aggregate independently reconstructs from saved cases, and exact numerical
+replay is running. No fallback arena episode has run yet. After replay, run
+the declared 32 L0/R-pool fallback episodes, with all scientific settings fixed.
+
 ## A1 exact replay complete; A2 joint implementation ready, 8 October 2026
 
 All **16 R-pool episodes and their aggregate replay exactly**. Canonical
@@ -94,6 +113,20 @@ the gate uses the mean, not this interval. Pooling greatly reduces capacity
 error while consumption decreases in all four cell means. This is a result
 for the declared controller, not a mathematical ceiling on attainable welfare.
 No sharing arm has run.
+
+Descriptive R-pool−L0 absolute-log-capacity-error gaps are negative when
+pooling improves accuracy. Each cell is the equal-weight mean of four paired
+seed contrasts; time means cover observations 1–512 and terminal values use
+observation 512. All-pair errors cover all 384 agent/site pairs. Seen-pair
+errors use each individual's own direct sightings, even in R-pool; the seen
+subsets can differ between arms.
+
+| World | Need | Terminal, all pairs | Time mean, all pairs | Terminal, seen pairs | Time mean, seen pairs |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Moderate | 1.2 | −0.363322 | −0.374927 | −0.201230 | −0.191973 |
+| Moderate | 1.6 | −0.147284 | −0.242975 | −0.115233 | −0.134507 |
+| Wide | 1.2 | −0.508034 | −0.562577 | −0.204419 | −0.204431 |
+| Wide | 1.6 | −0.228029 | −0.400123 | −0.132329 | −0.173114 |
 
 The 16-case exact replay is running. The separate 32-case floor instrumentation
 replay is also running and verifies each complete original scientific record
