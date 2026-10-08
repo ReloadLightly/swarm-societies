@@ -1,6 +1,6 @@
 # Active work record
 
-## A2 joint G2 passes; exact replay underway, 8 October 2026
+## A2 joint G2 passes and replays exactly, 8 October 2026
 
 The fixed joint calibration panel is complete: **512 independent sequences,
 24,576 transitions, including 1,629 clipped transitions**. All 21 rate-rank,
@@ -15,9 +15,15 @@ The implementation was pushed and remotely verified before execution at
 [summary](evidence/commons-v3-joint-site-calibration-v1/summary.json) are retained.
 Canonical summary digest:
 `5caacfa557025a23561ddf6e2586025ada9974fb8f0896914f30c97c78ecc115`.
-The aggregate independently reconstructs from saved cases, and exact numerical
-replay is running. No fallback arena episode has run yet. After replay, run
-the declared 32 L0/R-pool fallback episodes, with all scientific settings fixed.
+All **512 sequences / 24,576 transitions and the aggregate replay exactly**.
+The result was pushed and remotely verified at
+`72b92dd61471c2af11e934f42e477da4e6f08d74`. Both public files restore
+byte-identically: cases file SHA256
+`59889d24726aeda12d62ffc77c52d282525520d766585e849693405e4046a106`,
+summary file SHA256
+`409a856e633d7e1760a5ed7a2c4eec149272aa8f0531b3a9cc5eaf879582afcb`.
+Joint G2 is now complete and verified. Run the declared 32 L0/R-pool fallback
+episodes with two workers to bound memory, keeping all scientific settings fixed.
 
 ## A1 exact replay complete; A2 joint implementation ready, 8 October 2026
 
